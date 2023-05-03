@@ -1,4 +1,4 @@
-# Practice Lab: Using a Configuring Profile to configure iOS and iPadOS Wi-Fi settings
+# Practice Lab: Using a Configuration Profile to configure iOS and iPadOS Wi-Fi settings
 
 ## Summary
 
