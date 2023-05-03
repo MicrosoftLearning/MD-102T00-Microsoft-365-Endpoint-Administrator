@@ -1,4 +1,4 @@
-# Practice Lab: Using a Configuring Profile to configure Kiosk mode
+# Practice Lab: Using a Configuration Profile to configure Kiosk mode
 
 ## Summary
 
