@@ -46,25 +46,27 @@ You have been asked to create a Configuration profile to be used to automaticall
 
 1. In the Microsoft Endpoint Manager admin center, select **Devices** from the navigation bar.
 
-2. On the **Devices | Overview** page, select **Configuration Profiles**.
+2. On the **Devices | Overview** page, scroll down and select **Configuration Profiles**.
 
 3. On the **Devices | Configuration profiles** blade, in the details pane, select **Create profile**.
 
 4. In the **Create a profile** blade, select the following options, and then select **Create**:
 
 - Platform: **iOS/iPadOS**
-- Profile type: **Wi-Fi**
+- Profile type: **Templates**
 
-5. In the **Basics** blade, enter the following information, and then select **Next**:
+5. Select **Wi-Fi** from the list of templates, and then select **Create**.
+
+6. In the **Basics** blade, enter the following information, and then select **Next**:
 
 - Name: **iOS/iPadOS Wi-Fi Policy**
 - Description: **Wi-Fi settings for iOS/iPadOS Devices.**
 
-6. On the **Configuration settings** blade, next to **Wi-Fi type**, select **Basic**. 
+7. On the **Configuration settings** blade, next to **Wi-Fi type**, select **Basic**. 
 
    > Additional options display based upon the type selected.
 
-7. On the **Configuration settings** blade, select the following options, and then select **Next**:
+8. On the **Configuration settings** blade, select the following options, and then select **Next**:
 
 - Network name: **Contoso Wi-Fi**
 - SSID: **MainOffice**
@@ -72,13 +74,13 @@ You have been asked to create a Configuration profile to be used to automaticall
 - Security type: **WPA/WPA2-Personal**
 - Pre-Shared key: **ContosoWiFi123**
 
-8. On the **Assignments** blade, under **Included groups**, select **Add groups**.
+9. On the **Assignments** blade, under **Included groups**, select **Add groups**.
 
-9. In the **Select groups to include** window, select **iOS_iPadOS Devices**, and then click **Select**.
+10. In the **Select groups to include** window, select **iOS_iPadOS Devices**, and then click **Select**.
 
-10. Select **Next** until you reach the **Review + create** blade. Select **Create**.
+11. Select **Next** until you reach the **Review + create** blade. Select **Create**.
 
-11. In the navigation link at the top of the page, select Devices. 
+12. In the navigation link at the top of the page, select Devices. 
 
     > Verify that the iOS/iPadOS Wi-Fi Policy is listed.
 

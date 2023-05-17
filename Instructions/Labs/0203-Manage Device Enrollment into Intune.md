@@ -30,7 +30,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 4. In the Azure Active Directory admin center, in the navigation pane, select **Azure Active Directory**.
 
-5. On the **Contoso** page, under **Manage**, select **Licenses**.
+5. On the **Contoso** page, under **Billing**, select **Licenses**.
 
 6. On the **Licenses** page, under **Manage**, select **All products**. Take note of the licenses that are available in the tenant. 
 
