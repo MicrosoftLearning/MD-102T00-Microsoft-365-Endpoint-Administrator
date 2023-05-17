@@ -52,9 +52,9 @@ You've also been told that several more employees will be hired over the next co
 
 10. Select the **Navigation menu** and then select **Show all**.
 
-11. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Azure Active Directory admin center opens.
+11. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
 
-12. In the Azure Active Directory admin center, in the navigation pane, select **Users**.
+12. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
 
     > Take note of the users that already exist as members of the Azure AD domain. Each user is enabled as indicated on the **Account enabled** column. The **Directory synced** column states **No** for all current users. This indicates that each user was created directly in Azure AD and not synchronized from an on-premises directory service.
 
@@ -62,43 +62,72 @@ You've also been told that several more employees will be hired over the next co
 
 14. On the **New User** page, ensure that **Create user** is selected, enter the following:
 
-    - User Name: **`ereeve@yourtenant.onmicrosoft.com`**
-    - Name: **Edmund Reeve**
+    - User Principal Name: **`ereeve`**
+    - Display Name: **Edmund Reeve**
 
-15. Select **Let me create the password.**
+15. Uncheck **Auto-generated password**
 
-16. Next to **Initial password**, enter **Pa55w.rd**.
+16. Next to **Password**, enter **Pa55w.rd**.
 
-17. Under **Groups and roles**, take note that this new user will not be a member of any group, and will be assigned the **User** role.
+17. Select **Next:Properties** located at the bottom of the page.
 
-    > Note: The **User** role does not provide any administrative privileges
+18. Next to **Firt name**, enter **Edmund**.
 
-18. Under **Settings**, next to **Usage location**, select **United States**. If necessary, close the **Save password** prompt.
+19. Next to **Last name**, enter **Reeve**.
 
-19. Under **Job info**, next to **Job title**, enter **HR Rep**.
+20. Next to **User type**, make note that **Member** is selected.
+    > Note: The **Member** user type is the default user type. This user type is used for most users in an organization.
 
-20. Under **Job info**, next to **Department**, enter **HR** and then select **Create**.
+21. Next to **Job title**, enter **HR Rep**.
 
-21. On the **Users | All users** page, select **New user** then select **Create New User**.
+22. Next to **Department**, enter **HR**.
 
-22. On the **New User** page, ensure that **Create user** is selected, enter the following:
+23. Next to **Usage location**, select **United States**.
 
-    - User Name: **`msnider@yourtenant.onmicrosoft.com`**
-    - Name: **Miranda Snider**
+24. Select **Next:Assignments** located at the bottom of the page.
 
-23. Select **Let me create the password.**
+25. On the **Assignments** page, note that no assignments are selected.
+    > by default no groups are assigned to the user. This is because the user is not a member of any groups until you assign them.
 
-24. Next to **Initial password**, enter **Pa55w.rd**.
+26. Select **Next:Review + create** located at the bottom of the page.
+    > Review the information on this page to ensure that it is correct.
 
-25. Under **Groups and roles**, take note that this new user will not be a member of any group, and will be assigned the **User** role.
+27. Select **Create**.
 
-    > Note: The **User** role does not provide any administrative privileges.
+28. On the **Users | All users** page, select **New user** then select **Create new user**.
 
-26. Under **Settings**, next to **Usage location**, select **United States**. If necessary, close the **Save password** prompt.
+29. On the **New User** page, ensure that **Create user** is selected, enter the following:
 
-27. Under **Job info**, next to **Job title**, enter **Helpdesk Manager**.
+    - User Principal Name: **`msnider`**
+    - Display Name: **Miranda Snider**
 
-28. Under **Job info**, next to **Department**, enter **Operations** and then select **Create**.
+30. Uncheck **Auto-generated password**
+
+31. Next to **Password**, enter **Pa55w.rd**.
+
+32. Select **Next:Properties** located at the bottom of the page.
+
+33. Next to **Firt name**, enter **Miranda**.
+
+34. Next to **Last name**, enter **Snider**.
+
+35. Next to **User type**, make note that **Member** is selected.
+
+36. Next to **Job title**, enter **Helpdesk Manager**.
+
+37. Next to **Department**, enter **Operations**.
+
+38. Next to **Usage location**, select **United States**.
+
+39. Select **Next:Assignments** located at the bottom of the page.
+
+40. On the **Assignments** page, note that no assignments are selected.
+
+41. Select **Next:Review + create** located at the bottom of the page.
+
+42. Select **Create**.
+
+43. Minimize the **Microsoft Edge** window.
 
 ### Task 2: Create users by using PowerShell
 
@@ -152,43 +181,48 @@ You have been provided a list of users should have administrative roles assigned
 
 1. On SEA-SVR1, switch to Microsoft Edge.
 
-2. In the Azure Active Directory admin center, in the Navigation pane, select **Azure Active Directory**.
+2. In the Microsoft Entra admin center, in the Navigation pane, select **Show More**.
 
-3. On the **Contoso|Overview** page, under **Manage**, select **Roles and administrators**.
+3. In the Navigation pane, use the drop down arrow to select **Roles & admins**
 
-   > Take note of the various administrative roles available in Azure AD.
+4. In the Navigation pane, select **Roles & admins**.
+    > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
 
-4. On the **Contoso|Roles and administrators** page, select **Global administrator**. Ensure that **Assignments** is selected.
+5. Using the search box, search for **Global administrator**.
 
-   > Take note of the users that currently are assigned the Global administrator role. Isaiah Langer, Megan Bowan, and Nestor Wilke should not be assigned Global administrator privileges. Allan Deyoung needs to be assigned the Global administrator role.
+6. Select **Global administrator**.
 
-5. On the **Global administrator|Assignments** page, select the check box next to **Isaiah Langer**, **Megan Bowen**, and **Nestor Wilke** and then select **Remove assignments**. Select **Yes** at the message prompt.
+7. In the **Global administrator** pane, select **Add assignments**.
 
-6. On the **Global administrator|Assignments** page, select **Add assignments**.
+8. In the **Add assignments** pane, select **Allan Deyoung**.
 
-7. On the Add assignments page, select **Allan Deyoung** and then select **Add**.
+9. Select **Add**.
 
-8. At the top of the page, in the navigation link, select **Contoso**.
+10. In the navigation pane, select **Roles & admins**.
 
-9. On the **Contoso|Roles and administrators** page, select **User administrator**. Ensure that **Assignments** is selected.
+11. Using the search box, search for **User administrator**.
 
-   > Notice that there are no users currently assigned to the User administrator role.
+12. Select **User administrator**.
 
-10. On the **User administrator|Assignments** page, select **Add assignments**.
+13. In the **User administrator** pane, select **Add assignments**.
 
-11. On the Add assignments page, select **Edmund Reeve** and then select **Add**.
+14. In the **Add assignments** pane, select **Edmund Reeve**.
 
-12. At the top of the page, in the navigation link, select **Contoso**.
+15. Select **Add**.
 
-13. On the **Contoso|Roles and administrators** page, select **Helpdesk administrator**. Ensure that **Assignments** is selected.
+16. In the navigation pane, select **Roles & admins**.
 
-    > Notice that there are no users currently assigned to the Helpdesk administrator role.
+17. Using the search box, search for **Helpdesk administrator**.
 
-14. On the **User administrator|Assignments** page, select **Add assignments**.
+18. Select **Helpdesk administrator**.
 
-15. On the Add assignments page, select **Miranda Snider** and then select **Add**.
+19. In the **Helpdesk administrator** pane, select **Add assignments**.
 
-16. At the top of the page, in the navigation link, select **Contoso**.
+20. In the **Add assignments** pane, select **Miranda Snider**.
+
+21. Select **Add**.
+
+22. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 

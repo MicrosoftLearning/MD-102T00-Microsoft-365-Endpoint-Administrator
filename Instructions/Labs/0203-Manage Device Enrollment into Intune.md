@@ -58,7 +58,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 ### Task 2: Enable Windows Automatic Enrollment into Microsoft Intune
 
-1. In **SEA-SVR1**, open a new tab in **Microsoft Edge**, and then in the address bar type **https://endpoint.microsoft.com**, and then press **Enter**. 
+1. In **SEA-SVR1**, open a new tab in **Microsoft Edge**, and then in the address bar type **https://intune.microsoft.com**, and then press **Enter**. 
 
    > The Microsoft Endpoint Manager admin center opens.
 

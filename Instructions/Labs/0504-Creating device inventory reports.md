@@ -32,7 +32,7 @@ You've been asked to review the inventory for SEA-WS1. Use Intune to review the 
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://endpoint.microsoft.com** in the address bar, and then press **Enter**. 
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
@@ -98,7 +98,7 @@ Your organization uses Power BI for reporting. You need to set up Power BI on SE
 
 1. Sign in to **SEA-CL1** as **Contoso\Administrator** with the password of **Pa55w.rd**.
 
-2. Open Microsoft Edge, type **https://endpoint.microsoft.com** in the address bar, and then press **Enter**. 
+2. Open Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
 3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 

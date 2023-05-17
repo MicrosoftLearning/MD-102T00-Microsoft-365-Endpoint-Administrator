@@ -32,7 +32,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://endpoint.microsoft.com** in the  address bar, and then press **Enter**. 
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then press **Enter**. 
 
 4. Sign in as as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 

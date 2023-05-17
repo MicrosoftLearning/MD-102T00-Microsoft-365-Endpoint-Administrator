@@ -50,7 +50,7 @@ You have decided to integrate Microsoft Store for Business with Intune. You need
 
 11. Under Management tools, verify that **Microsoft Intune** Status is set to **Active**. If it is not, under **Action** select **Activate**.
 
-12. In Microsoft Edge, open a new tab and browse to https://endpoint.microsoft.com. The Microsoft Endpoint Manager admin center opens.
+12. In Microsoft Edge, open a new tab and browse to https://intune.microsoft.com. The Microsoft Endpoint Manager admin center opens.
 
 13. In the Microsoft Endpoint admin center, in the navigation pane, select **Tenant administration**.
 

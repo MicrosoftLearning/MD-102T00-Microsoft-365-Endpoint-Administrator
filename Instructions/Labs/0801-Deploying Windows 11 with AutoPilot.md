@@ -49,7 +49,6 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 ```
 (device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))
-
 ```
 14. Select **Save** to close **Dynamic membership rules**, and then select **Create** to create the group.
 
@@ -107,7 +106,7 @@ copy c:\computer.csv \\sea-svr2\labfiles
 
 1. Switch to **SEA-SVR1**.
 
-2. In **Microsoft Edge**, open a new tab and navigate to **https://endpoint.microsoft.com**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
+2. In **Microsoft Edge**, open a new tab and navigate to **https://intune.microsoft.com**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
 
 3. In the **Microsoft Endpoint Manager admin center**, select **Devices**.
 

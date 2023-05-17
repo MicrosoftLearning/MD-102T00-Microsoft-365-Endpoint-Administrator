@@ -25,7 +25,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 1. Switch to **SEA-SVR1**.
 
-2. In **Microsoft Edge**, open a new tab and navigate to **https://endpoint.microsoft.com**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
+2. In **Microsoft Edge**, open a new tab and navigate to **https://intune.microsoft.com**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
 
 3. In the **Microsoft Endpoint Manager admin center**, select **Devices**.
 

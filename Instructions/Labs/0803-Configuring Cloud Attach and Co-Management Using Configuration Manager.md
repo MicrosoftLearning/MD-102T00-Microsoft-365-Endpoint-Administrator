@@ -40,7 +40,6 @@ Contoso has both a Microsoft Endpoint Configuration Manager implementation and M
 
 ```
 Start-ADSyncSyncCycle -PolicyType Initial
-
 ```
 
 9. Close the PowerShell window.
@@ -165,7 +164,7 @@ dsregcmd /status
 
 6. Verify that **SEA-CL1** is listed and that **Join Type** is **Hybrid Azure AD Join**.
 
-7. In Microsoft Edge open another tab and type **https://endpoint.microsoft.com** in the address bar, and then press **Enter**. 
+7. In Microsoft Edge open another tab and type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
 8. In the navigation pane, select **Devices** and then select **All devices**.
 

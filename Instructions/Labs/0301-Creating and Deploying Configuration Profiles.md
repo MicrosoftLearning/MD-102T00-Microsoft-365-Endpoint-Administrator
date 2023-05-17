@@ -65,7 +65,7 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
 
 2. On **SEA-SVR1**, on the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://endpoint.microsoft.com** in the address bar, and then press **Enter**. 
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
@@ -144,7 +144,7 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
 5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
 ```
-    (device.deviceOSType -contains "Windows")
+(device.deviceOSType -contains "Windows")
 ```
 
 6. On the **Dynamic membership rules** blade, select **Save**.

@@ -37,7 +37,7 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://endpoint.microsoft.com** in the  address bar, and then press **Enter**. 
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then press **Enter**. 
 
 4. Sign in as as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 
@@ -149,7 +149,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://endpoint.microsoft.com** in the  address bar, and then 
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then 
    press **Enter**.
 
 4. Sign in as as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.

@@ -34,7 +34,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 1. On **SEA-SVR1**, on the taskbar, select **Microsoft Edge**.
 
-2. In Microsoft Edge, type **https://endpoint.microsoft.com** in the address bar, and then press **Enter**. 
+2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
 3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 

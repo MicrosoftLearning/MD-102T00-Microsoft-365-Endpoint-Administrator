@@ -115,7 +115,7 @@ _Note: These entries indicate that the device is enrolled in Intune._
 
 1. Switch to **SEA-SVR1**. 
 
-2. In Microsoft Edge, type **https://endpoint.microsoft.com** in the address bar, and then press **Enter**. Sign in with your Tenant administrator account.
+2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. Sign in with your Tenant administrator account.
 
 3. In the navigation pane, select **Devices**.
 

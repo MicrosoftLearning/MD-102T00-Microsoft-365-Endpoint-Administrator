@@ -24,7 +24,7 @@ To following lab(s) must be completed before this lab:
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
-2. On the taskbar select **Microsoft Edge**, in the address bar type  **https://endpoint.microsoft.com**, and then press **Enter**.
+2. On the taskbar select **Microsoft Edge**, in the address bar type  **https://intune.microsoft.com**, and then press **Enter**.
 
 3. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
