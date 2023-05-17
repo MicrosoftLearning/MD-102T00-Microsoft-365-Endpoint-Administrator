@@ -18,11 +18,11 @@ In this lab, you will use the Azure Active Directory admin center to create and 
 
 You need to create user accounts in Azure AD for new employees that will start next week. New users are listed in the following table:
 
-| Name           | User Name                             | Password | Job title        | Department |
-| -------------- | ------------------------------------- | -------- | ---------------- | ---------- |
-| Edmund Reeve   | `ereeve@yourtenant.onmicrosoft.com`   | Pa55w.rd | HR Rep           | HR         |
-| Miranda Snider | `msnider@yourtenant.onmicrosoft.com`  | Pa55w.rd | Helpdesk Manager | Operations |
-| Cody Godinez   | `cgodinez@yourtenant.onmicrosoft.com` | Pa55w.rd | Sales Rep        | Sales      |
+| Name           | User Name                             | Password   | Job title        | Department |
+| -------------- | ------------------------------------- | ---------- | ---------------- | ---------- |
+| Edmund Reeve   | `ereeve@yourtenant.onmicrosoft.com`   | Pa55-w.rd! | HR Rep           | HR         |
+| Miranda Snider | `msnider@yourtenant.onmicrosoft.com`  | Pa55-w.rd! | Helpdesk Manager | Operations |
+| Cody Godinez   | `cgodinez@yourtenant.onmicrosoft.com` | Pa55-w.rd! | Sales Rep        | Sales      |
 
 _Note: For location use either your local region or United States._
 
@@ -67,7 +67,7 @@ You've also been told that several more employees will be hired over the next co
 
 15. Uncheck **Auto-generated password**
 
-16. Next to **Password**, enter **Pa55w.rd**.
+16. Next to **Password**, enter **Pa55-w.rd!**.
 
 17. Select **Next:Properties** located at the bottom of the page.
 
@@ -103,7 +103,7 @@ You've also been told that several more employees will be hired over the next co
 
 30. Uncheck **Auto-generated password**
 
-31. Next to **Password**, enter **Pa55w.rd**.
+31. Next to **Password**, enter **Pa55-w.rd!**.
 
 32. Select **Next:Properties** located at the bottom of the page.
 
@@ -150,7 +150,7 @@ Connect-MsolService
 5. In the **Windows PowerShell** window, type the following code to create a new user, and then press **Enter**. Be sure to replace "yourtenant" with your assigned tenant name:
 
 ```
-New-MsolUser –UserPrincipalName cgodinez@yourtenant.onmicrosoft.com -DisplayName “Cody Godinez” -FirstName “Cody” -LastName “Godinez” -Password ‘Pa55w.rd’ -ForceChangePassword $false -UsageLocation “US” -Title "Sales Rep" -Department "Sales"
+New-MsolUser –UserPrincipalName cgodinez@yourtenant.onmicrosoft.com -DisplayName “Cody Godinez” -FirstName “Cody” -LastName “Godinez” -Password ‘Pa55-w.rd!’ -ForceChangePassword $false -UsageLocation “US” -Title "Sales Rep" -Department "Sales"
 ```
 
 6. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
