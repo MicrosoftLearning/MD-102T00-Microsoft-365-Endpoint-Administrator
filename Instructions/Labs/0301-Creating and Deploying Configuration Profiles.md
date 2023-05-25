@@ -69,7 +69,7 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-5. In the Microsoft Endpoint Manager admin center, select **Devices** from the navigation bar.
+5. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
 6. On the **Devices | Overview** page, select **Configuration Profiles**.
 
@@ -108,7 +108,7 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
 
 ### Task 3: Create the Contoso Developer device group
 
-1. In the Microsoft Endpoint Manager admin center, in the navigation pane, select **Groups**.
+1. In the Microsoft Intune admin center, in the navigation pane, select **Groups**.
 
 2. On the **Groups | All groups** blade, select **New group**.
 
@@ -133,9 +133,9 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
 
 2. On the **Group** blade, provide the following values:
 
-- Group type: **Security**
-- Group name: **Windows Devices**
-- Membership type: **Dynamic Device**
+   - Group type: **Security**
+   - Group name: **Windows Devices**
+   - Membership type: **Dynamic Device**
 
 3. Under the **Dynamic Device Members** section, select **Add dynamic query**. 
 
@@ -153,7 +153,7 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
 
 ### Task 5: Assign a Configuration profile to Windows devices
 
-1. In the Microsoft Endpoint Manager admin center, in the navigation pane, select **Devices**. 
+1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
 
 2. On the **Devices | Overview** blade, select **Configuration profiles**.
 
@@ -167,7 +167,7 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
 
 7. Back on the **Device restrictions** blade, select **Review + save**, then select **Save**.
 
-8. In the Microsoft Endpoint Manager admin center, select **Devices** in the breadcrumb navigation menu.
+8. In the Microsoft Intune admin center, select **Devices** in the breadcrumb navigation menu.
 
 ### Task 6: Verify that the Configuration profile is applied
 
@@ -217,7 +217,7 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, in the Microsoft Endpoint Manager admin center, select **Devices** and then select **Configuration Profiles**. 
+2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and then select **Configuration Profiles**. 
 
 3. On the **Devices | Configuration profiles** blade, in the details pane select **Contoso Developer -  standard**.
 
@@ -229,9 +229,9 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 7. Select **Review + save**, and then select **Save**.
 
-### Task 2: Force device synchronization from Microsoft Endpoint Manager admin center
+### Task 2: Force device synchronization from Intune Manager admin center
 
-1. On **SEA-SVR1**, in the Microsoft Endpoint Manager admin center, select **Devices** in the navigation pane and then select **All devices**.
+1. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** in the navigation pane and then select **All devices**.
     
 2. In the details pane, select **SEA-WS1**. 
     

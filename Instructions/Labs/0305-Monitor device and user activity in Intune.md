@@ -32,7 +32,7 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-4. On the **Microsoft Endpoint Manager admin center** page, select **Users**.
+4. On the **Microsoft Intune admin center** page, select **Users**.
 
 5. On the **Users|All users** pane, in the Activity section, select **Sign-ins logs**.
 
@@ -48,7 +48,7 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 ### Task 2: Monitor device activity
 
-1. In the Microsoft Endpoint Manager admin center, from the navigation pane, select **Devices**.
+1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
 2. In the Devices navigation pane, select **Overview**.
 
@@ -68,7 +68,7 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
    > The **State** should display **Succeeded** next to all of them.
 
-10. In the Microsoft Endpoint Manager admin center, from the navigation pane, select **Home**.
+10. In the Microsoft Intune admin center, from the navigation pane, select **Home**.
 
 11. Close Microsoft Edge.
 

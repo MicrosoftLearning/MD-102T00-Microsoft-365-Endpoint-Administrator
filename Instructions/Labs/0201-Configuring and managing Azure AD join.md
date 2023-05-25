@@ -46,7 +46,7 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 10. In the **Maximum number of devices per user** section, select **20**.
 
-11. In the **Additional local administrators on all Azure AD joined devices** section, select **Manage Additional local administrators on all Azure AD joined devices**. The Device Administrators page opens.
+11. In the **Local administrator settings** section, select **Manage Additional local administrators on all Azure AD joined devices**. The Device Administrators page opens.
 
 12. In the Device Administrators page, select **Add assignments**.
 
@@ -70,7 +70,7 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 4. On the Accounts page, select **Access work or school**.
 
-5. In the **Access work or school** page, select **Connect**.
+5. In the **Access work or school** page, select **Connect** in the **Add a work or school account** section.
 
 6. In the **Microsoft account** window, select **Join this device to Azure Active Directory**.
 

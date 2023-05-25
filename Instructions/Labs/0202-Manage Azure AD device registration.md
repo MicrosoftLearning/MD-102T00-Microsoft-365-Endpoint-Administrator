@@ -83,9 +83,9 @@ dsregcmd /status
 
 ### Task 4: Sign in to Windows and disconnect from the organization
 
-1. Switch to **SEA-WS1** and attempt to sign in as **`JoniS@yourtenant.onmicrosoft.com`**.
+1. Switch to **SEA-WS1** and attempt to switch users and sign in as **`JoniS@yourtenant.onmicrosoft.com`**.
 
-   Notice that unlike Azure AD Joined devices, an Azure AD registered device does not allow a user to sign in to the device with an Azure AD credential. 
+   Notice that unlike Azure AD Joined devices, an Azure AD registered device does not allow give you the option to sign-in with an Azure AD Account and credentials. 
 
 2. On SEA-WS1, sign in as **Admin** with the password of **Pa55w.rd**. 
 
