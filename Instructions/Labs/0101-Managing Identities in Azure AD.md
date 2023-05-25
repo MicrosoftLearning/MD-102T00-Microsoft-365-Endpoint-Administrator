@@ -181,48 +181,46 @@ You have been provided a list of users should have administrative roles assigned
 
 1. On SEA-SVR1, switch to Microsoft Edge.
 
-2. In the Microsoft Entra admin center, in the Navigation pane, select **Show More**.
+2. In the Microsoft Entra admin center, in the Navigation pane, select **Contoso|Overview**.
 
-3. In the Navigation pane, use the drop down arrow to select **Roles & admins**
-
-4. In the Navigation pane, select **Roles & admins**.
+3. In the Navigation pane, select **Roles & administrators**.
     > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
 
-5. Using the search box, search for **Global administrator**.
+4. Using the search box, search for **Global administrator**.
 
-6. Select **Global administrator**.
+5. Select **Global administrator**.
 
-7. In the **Global administrator** pane, select **Add assignments**.
+6. In the **Global administrator** pane, select **Add assignments**.
 
-8. In the **Add assignments** pane, select **Allan Deyoung**.
+7. In the **Add assignments** pane, select **Allan Deyoung**.
 
-9. Select **Add**.
+8. Select **Add**.
 
-10. In the navigation pane, select **Roles & admins**.
+9. In the navigation pane, select **Roles & administrators | All roles**.
 
-11. Using the search box, search for **User administrator**.
+10. Using the search box, search for **User administrator**.
 
-12. Select **User administrator**.
+11. Select **User administrator**.
 
-13. In the **User administrator** pane, select **Add assignments**.
+12. In the **User administrator** pane, select **Add assignments**.
 
-14. In the **Add assignments** pane, select **Edmund Reeve**.
+13. In the **Add assignments** pane, search for and select **Edmund Reeve**.
 
-15. Select **Add**.
+14. Select **Add**.
 
-16. In the navigation pane, select **Roles & admins**.
+15. In the navigation pane, select **Roles & administrators | All roles**.
 
-17. Using the search box, search for **Helpdesk administrator**.
+16. Using the search box, search for **Helpdesk administrator**.
 
-18. Select **Helpdesk administrator**.
+17. Select **Helpdesk administrator**.
 
-19. In the **Helpdesk administrator** pane, select **Add assignments**.
+18. In the **Helpdesk administrator** pane, select **Add assignments**.
 
-20. In the **Add assignments** pane, select **Miranda Snider**.
+19. In the **Add assignments** pane, search for and select **Miranda Snider**.
 
-21. Select **Add**.
+20. Select **Add**.
 
-22. In the navigation pane, select **Home**.
+21. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 
@@ -242,7 +240,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 ### Task 1: Create groups by using the Azure Active Directory admin center
 
-1. On **SEA-SVR1**, in the Azure Active Directory admin center, in the navigation pane, select **Azure Active Directory**.
+1. On **SEA-SVR1**, in the Azure Active Directory admin center, in the navigation pane, select **Contoso|Overview**.
 
 2. On the **Contoso|Overview** page, under **Manage**, select **Groups**.
 
@@ -311,7 +309,7 @@ Get-MsolGroupMember -GroupObjectId $group.ObjectId
 
 ### Task 3: Review licenses and modify company branding
 
-1. In the Azure Active Directory admin center, in the Navigation pane, select **Azure Active Directory**.
+1. In the Azure Active Directory admin center, select **Home**. Then select **Azure Active Directory**.
 
 2. On the **Contoso|Overview** page, under **Manage**, select **Licenses**.
 
@@ -319,56 +317,57 @@ Get-MsolGroupMember -GroupObjectId $group.ObjectId
 
    > Take note of the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-4. In the Azure Active Directory admin center, in the Navigation pane, select **Azure Active Directory**.
+4. In the Azure Active Directory admin center, in the Navigation pane, select **Contoso | Licenses**.
 
-5. On the **Contoso|Overview** page, under **Manage**, select **Company branding** and then select **Configure**.
+5. On the **Contoso|Overview** page, under **Manage**, select **Company branding** and then select **Customize** under the **Default sign-in experience**.
 
-6. On the Configure company branding page, configure the following settings and then select **Save**:
+6. On the Default sign-in experience page, navigate to the **Sign-in form** and configure the following settings and then select **Review + create**:
 
    - Sign-in page text: **Contoso Corp. Sign-in Page**
-   - Show option to remain signed in: **Selected**
 
-7. In the Azure Active Directory admin center, in the Navigation pane, select **Users**.
+7. Review the settings and then select **Create**.
 
-8. In the user list, select **Cody Godinez**.
+8. In the Azure Active Directory admin center, in the Navigation pane, select **Users**.
 
-9. In the Cody Godinez|Profile page, under Manage, select **Licenses**.
+9. In the user list, select **Cody Godinez**.
+
+10. In the Cody Godinez|Profile page, under Manage, select **Licenses**.
 
    > Notice that Cody does not have any current license assignments.
 
-10. Select **Assignments**.
+11. Select **Assignments**.
 
-11. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
+12. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-12. Select **Save**.
+13. Select **Save**.
 
-13. In the Azure Active Directory admin center, in the Navigation pane, select **Azure Active Directory**.
+14. In the Azure Active Directory admin center, in the Navigation pane, select **Contoso | Overview**.
 
-14. In the navigation pane, select **Groups**.
+15. In the navigation pane, select **Groups**.
 
-15. On the Groups|All groups page, select **Contoso_Managers**.
+16. On the Groups|All groups page, select **Contoso_Managers**.
 
-16. On the Contoso_Managers page, select **Licenses**.
+17. On the Contoso_Managers page, select **Licenses**.
 
     > Notice that the Contoso_Managers group does not have any current license assignments.
 
-17. Select **Assignments**.
+18. Select **Assignments**.
 
-18. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
+19. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-19. Select **Save**.
+20. Select **Save**.
 
-20. In the Azure Active Directory admin center, in the Navigation pane, select **Azure Active Directory**.
+21. In the Azure Active Directory admin center, in the Navigation pane, select **Contoso|Overview**.
 
-21. On the **Contoso|Overview** page, under **Manage**, select **Licenses**.
+22. On the **Contoso|Overview** page, under **Manage**, select **Licenses**.
 
-22. On the **Licenses|Overview** page, under **Manage**, select **All products**.
+23. On the **Licenses|Overview** page, under **Manage**, select **All products**.
 
-23. On the Licenses|All products page, select **Office 365 E5**.
+24. On the Licenses|All products page, select **Office 365 E5**.
 
    > Take note of the users that are assigned the Office 365 E5 license. Notice the Assignment Paths column which indicates how license assignment is configured for each user. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You may need to select **Refresh** a couple of times to update the Assignment path column.
 
-24. Close Microsoft Edge.
+25. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you should have successfully created and managed groups, modified company branding, and assigned licenses.
 

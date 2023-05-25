@@ -38,7 +38,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-4. In the Microsoft Endpoint Manager admin center, in the navigation pane, select **Devices**.
+4. In the Microsoft Intune admin center, in the navigation pane, select **Devices**.
 
 5. On the **Devices | Overview** page, in the **Policy** section, select **Group Policy analytics**.
 
@@ -50,21 +50,25 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
    > The Windows Client Policy GPO is immediately imported and analyzed.
 
-9. Close the **Import GPO files** page.
+9. Select Next twice, then select **Create**.
 
-10. On the **Devices | Group Policy analytics** blade, review the information next to **Windows Client Policy**.
+   > The Windows Client Policy GPO is imported and analyzed. It may take a few minutes to complete.
+
+10. Close the **Import GPO files** page.
+
+11. On the **Devices | Group Policy analytics** blade, review the information next to **Windows Client Policy**.
 
     > Notice that 89% of the settings have MDM support.
 
-11. Under MDM Support, select **89%**. 
+12. Under MDM Support, select **89%**. 
 
     > Notice each **Setting Name**, **MDM Support**, **CSP Name**, and the **CSP Mapping** for each supported setting. Take note of which settings do not have an equivalent CSP mapping.
 
-12. Close the **Windows Client Policy** window.
+13. Select Dashboard.
 
 ### Task 3: Review the Group Policy Analytics Summary Report
 
-1. In the Microsoft Endpoint Manager admin center, in the navigation pane, select **Reports**.
+1. In the Microsoft Intune admin center, in the navigation pane, select **Reports**.
 
 2. On the **Reports** page, in the **Device management** section, select **Group Policy analytics**.
 
@@ -78,7 +82,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 5. Select the **Reports** tab, and then select **Group policy migration readiness**.
 
-6. Select **Generate again**. 
+6. Select **Generate report**. 
 
 7. The Group policy migration readiness report provides information related to each setting, and the Profile Type supported.
 
