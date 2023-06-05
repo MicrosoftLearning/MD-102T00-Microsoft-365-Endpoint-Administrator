@@ -44,7 +44,7 @@ You've also been told that several more employees will be hired over the next co
 
    > Note: Check with your instructor on the password to use for signing in with the Admin account.
 
-7. At the Save password prompt, select **Save**.
+7. At the Save password prompt, select **Save & Turn on**.
 
 8. At the Stay signed in prompt, select **No**. The Office 365 portal opens.
 
@@ -54,13 +54,13 @@ You've also been told that several more employees will be hired over the next co
 
 11. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
 
-12. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
+12. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
 
-    > Take note of the users that already exist as members of the Azure AD domain. Each user is enabled as indicated on the **Account enabled** column. The **Directory synced** column states **No** for all current users. This indicates that each user was created directly in Azure AD and not synchronized from an on-premises directory service.
+    > Take note of the users that already exist as members of the Azure AD domain. The **On-premises sync enabled** column states **No** for all current users. This indicates that each user was created directly in Azure AD and not synchronized from an on-premises directory service.
 
 13. On the **Users | All users** page, select **New user** then select **Create new user**.
 
-14. On the **New User** page, ensure that **Create user** is selected, enter the following:
+14. On the **Create new user** page, enter the following:
 
     - User Principal Name: **`ereeve`**
     - Display Name: **Edmund Reeve**
@@ -71,7 +71,7 @@ You've also been told that several more employees will be hired over the next co
 
 17. Select **Next:Properties** located at the bottom of the page.
 
-18. Next to **Firt name**, enter **Edmund**.
+18. Next to **First name**, enter **Edmund**.
 
 19. Next to **Last name**, enter **Reeve**.
 
@@ -96,7 +96,7 @@ You've also been told that several more employees will be hired over the next co
 
 28. On the **Users | All users** page, select **New user** then select **Create new user**.
 
-29. On the **New User** page, ensure that **Create user** is selected, enter the following:
+29. On the **Create new user** page, enter the following:
 
     - User Principal Name: **`msnider`**
     - Display Name: **Miranda Snider**
@@ -107,7 +107,7 @@ You've also been told that several more employees will be hired over the next co
 
 32. Select **Next:Properties** located at the bottom of the page.
 
-33. Next to **Firt name**, enter **Miranda**.
+33. Next to **First name**, enter **Miranda**.
 
 34. Next to **Last name**, enter **Snider**.
 
@@ -131,33 +131,53 @@ You've also been told that several more employees will be hired over the next co
 
 ### Task 2: Create users by using PowerShell
 
-1. On **SEA-SVR1**, on the taskbar, right-click **Start**, and then select **Windows PowerShell (Admin)**.
+1. On **SEA-SVR1**, click into the **Windows Search** bar and then type **PWSH**. Right click on **PowerShell 7** and then select **Run as Administrator**.
 
-2. In the **Windows PowerShell** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
+2. In the **Windows PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
 
-```
-Install-Module MSOnline
-```
+    ```
+    Install-Module Microsoft.Graph -Scope CurrentUser
+    ```
 
-3. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
+3. In the **Windows PowerShell 7** window, type the following command, and then press **Enter**:
 
-```
-Connect-MsolService
-```
+    ```
+    Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
+    ```
 
-4. In the **Sign in to your account** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant password, and then select **Sign in**.
+4. A new tab in **Microsoft Edge** will appear prompting you to sign in. In the **Sign in to your account** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant password, and then select **Sign in**.
 
-5. In the **Windows PowerShell** window, type the following code to create a new user, and then press **Enter**. Be sure to replace "yourtenant" with your assigned tenant name:
+5. On the **Permissions Requested** prompt that appears, check **Consent on behalf of your organization** and then select **Accept**.
 
-```
-New-MsolUser –UserPrincipalName cgodinez@yourtenant.onmicrosoft.com -DisplayName “Cody Godinez” -FirstName “Cody” -LastName “Godinez” -Password ‘Pa55-w.rd!’ -ForceChangePassword $false -UsageLocation “US” -Title "Sales Rep" -Department "Sales"
-```
+6. Close out of the **Authentication complete** tab in and then minimize **Microsoft Edge**
 
-6. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
+7. Back In the **Windows PowerShell 7** window, type the following code to create a new profile object, and then press **enter**. Replace **Pa55w.rd** with a complex password of your choice:
 
-```
-Get-MsolUser
-```
+    ```
+    $PWProfile = @{
+      Password = "Pa55w.rd";
+      ForceChangePasswordNextSignIn = $false
+    }
+    ```
+
+8. Next, type the following code to create a new user, and then press **Enter**. Be sure to replace "yourtenant" with your assigned tenant name:
+
+    ```
+    New-MgUser `
+        -DisplayName “Cody Godinez” `
+        -GivenName "Code" -Surname "Godinez" `
+        -MailNickname "cgodinez" `
+        -UsageLocation "US" `
+        -UserPrincipalName "cgodinez@yourtenant.onmicrosoft.com" `
+        -PasswordProfile $PWProfile -AccountEnabled `
+        -Department "Sales" -JobTitle "Sales Rep"
+    ```
+
+9. To confirm that the user **Cody Godinez** was created, In the **Windows PowerShell 7** window, type the following command and then press **Enter**:
+
+    ```
+    Get-MgUser
+    ```
 
 > Verify that the list of users from your tenant is displayed. Also take note of which users have a license assigned. Any user with the **isLicensed** value of **False** has not been assigned a license.
 
@@ -181,9 +201,9 @@ You have been provided a list of users should have administrative roles assigned
 
 1. On SEA-SVR1, switch to Microsoft Edge.
 
-2. In the Microsoft Entra admin center, in the Navigation pane, select **Contoso|Overview**.
+2. In the Microsoft Entra admin center, in the Navigation pane, select **Show more**.
 
-3. In the Navigation pane, select **Roles & administrators**.
+3. In the Navigation pane, select **Roles & admins** > **Roles & admins**.
     > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
 
 4. Using the search box, search for **Global administrator**.
@@ -238,136 +258,125 @@ You need to add the three new users to a Security group and assign licenses as i
 
 You also been asked to modify the Company branding for the sign-in page.
 
-### Task 1: Create groups by using the Azure Active Directory admin center
+### Task 1: Create groups by using the Microsoft Entra admin center
 
-1. On **SEA-SVR1**, in the Azure Active Directory admin center, in the navigation pane, select **Contoso|Overview**.
+1. On **SEA-SVR1**, in the Microsoft Entra admin center, in the navigation pane, select **Groups** > **All groups**.
 
-2. On the **Contoso|Overview** page, under **Manage**, select **Groups**.
+2. Select **New group**.
 
-3. Select **New group**.
-
-4. On the **New Group** page, enter the following:
+3. On the **New Group** page, enter the following:
 
     - Group type: **Security**
     - Group name: **Contoso_Managers**
     - Membership type: **Assigned**
 
-5. Under Members, select **No members selected**.
+4. Under Members, select **No members selected**.
 
-6. In the Add members page add **Edmund Reeve**, **Miranda Snider**, and then click **Select**.
+5. In the Add members page add **Edmund Reeve**, **Miranda Snider**, and then click **Select**.
 
-7. Select **Create**.
+6. Select **Create**.
 
 ### Task 2: Create groups by using PowerShell
 
-1. On SEA-SVR1, switch to Windows PowerShell.
+1. On SEA-SVR1, switch to Windows PowerShell 7.
 
-2. In the **Windows PowerShell** window, type the following code to create a new group, and then press **Enter**:
+2. In the **Windows PowerShell 7** window, type the following code to create a new group, and then press **Enter**:
 
-```
-New-MsolGroup -DisplayName “Contoso_Sales” -Description “Contoso Sales team users”
-```
+    ```
+    New-MgGroup -DisplayName “Contoso_Sales” -Description “Contoso Sales team users” -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
+    ```
 
-3. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
+3. In the **Windows PowerShell 7** window, type the following command, and then press **Enter**:
 
-```
-Get-MsolGroup
-```
+    ```
+    Get-MgGroup
+    ```
 
 4. Verify that you get the list of groups in your tenant, including the Contoso_Sales group you just created.
 
-5. In the **Windows PowerShell** window, type the following code to define a variable as the Contoso_Sales group, and then press
-    **Enter**:
+5. In the **Windows PowerShell 7** window, type the following code to define a variable as the Contoso_Sales group, and then press **Enter**:
 
-```
-$group = Get-MsolGroup | Where-Object {$_.DisplayName -eq "Contoso_Sales"}
-```
+    ```
+    $group = Get-MgGroup | Where-Object {$_.DisplayName -eq "Contoso_Sales"}
+    ```
 
-6. In the **Windows PowerShell** window, type the following code to define another variable as the user, and then press
-    **Enter**:
+6. In the **Windows PowerShell 7** window, type the following code to define another variable as the user, and then press **Enter**:
 
-```
-$user = Get-MsolUser | Where-Object {$_.DisplayName -eq “Cody Godinez”}
-```
+    ```
+    $user = Get-MgUser | Where-Object {$_.DisplayName -eq “Cody Godinez”}
+    ```
 
-7. In the **Windows PowerShell** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
+7. In the **Windows PowerShell 7** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
 
-```
-Add-MsolGroupMember -GroupObjectId $group.ObjectId -GroupMemberType "User" -GroupMemberObjectId $user.ObjectId
-```
+    ```
+    New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
+    ```
 
 8. In the **Windows PowerShell** window, type the following code, and then press **Enter**:
 
-```
-Get-MsolGroupMember -GroupObjectId $group.ObjectId
+    ```
+    Get-MgGroupMember -GroupId $group.Id | FL
+    ```
 
-```
+9. Verify that you see **Cody Godinez** as value in **AdditionalProperties**.
 
-9. Verify that you get **Cody Godinez** as a result.
-
-10. Close Windows PowerShell.
+10. Close Windows PowerShell 7.
 
 ### Task 3: Review licenses and modify company branding
 
-1. In the Azure Active Directory admin center, select **Home**. Then select **Azure Active Directory**.
+1. In the Microsoft Entra admin center, in the navigation pane, select **Billing** > **Licenses**.
 
-2. On the **Contoso|Overview** page, under **Manage**, select **Licenses**.
-
-3. On the **Licenses|Overview** page, under **Manage**, select **All products**.
+2. On the **Licenses|Overview** page, under **Manage**, select **All products**.
 
    > Take note of the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-4. In the Azure Active Directory admin center, in the Navigation pane, select **Contoso | Licenses**.
+3. In the Microsoft Entra admin center, in the Navigation pane, select **User experiences** > **Company branding**.
 
-5. On the **Contoso|Overview** page, under **Manage**, select **Company branding** and then select **Customize** under the **Default sign-in experience**.
+4. On the **Company Branding** page, under **Default sign-in experiance**, select **Customize**.
 
-6. On the Default sign-in experience page, navigate to the **Sign-in form** and configure the following settings and then select **Review + create**:
+5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** and configure the following settings and then select **Review + create**:
 
    - Sign-in page text: **Contoso Corp. Sign-in Page**
 
-7. Review the settings and then select **Create**.
+6. Select **Review + Create**, review the settings and then select **Create**.
 
-8. In the Azure Active Directory admin center, in the Navigation pane, select **Users**.
+7. In the Microsoft Entra admin center, in the Navigation pane, select **Users** > **All users**.
 
-9. In the user list, select **Cody Godinez**.
+8. In the user list, select **Cody Godinez**.
 
-10. In the Cody Godinez|Profile page, under Manage, select **Licenses**.
+9. In the Cody Godinez Profile page, under Manage, select **Licenses**.
 
    > Notice that Cody does not have any current license assignments.
 
-11. Select **Assignments**.
+10. Select **Assignments**.
 
-12. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
+11. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-13. Select **Save**.
+12. Select **Save**.
 
-14. In the Azure Active Directory admin center, in the Navigation pane, select **Contoso | Overview**.
+13. In the Microsoft Entra admin center, in the Navigation pane, select **Groups** > **All groups**.
 
-15. In the navigation pane, select **Groups**.
+14. On the Groups|All groups page, select **Contoso_Managers**.
 
-16. On the Groups|All groups page, select **Contoso_Managers**.
-
-17. On the Contoso_Managers page, select **Licenses**.
+15. On the Contoso_Managers page, select **Licenses**.
 
     > Notice that the Contoso_Managers group does not have any current license assignments.
 
-18. Select **Assignments**.
+16. Select **Assignments**.
 
-19. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
+17. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-20. Select **Save**.
+18. Select **Save**.
 
-21. In the Azure Active Directory admin center, in the Navigation pane, select **Contoso|Overview**.
+19. In the Microsoft Entra admin center, in the Navigation pane, select **Billing** > **Licenses**.
 
-22. On the **Contoso|Overview** page, under **Manage**, select **Licenses**.
+20. On the **Licenses|Overview** page, under **Manage**, select **All products**.
 
-23. On the **Licenses|Overview** page, under **Manage**, select **All products**.
-
-24. On the Licenses|All products page, select **Office 365 E5**.
+21. On the Licenses|All products page, select **Office 365 E5**.
 
    > Take note of the users that are assigned the Office 365 E5 license. Notice the Assignment Paths column which indicates how license assignment is configured for each user. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You may need to select **Refresh** a couple of times to update the Assignment path column.
 
-25. Close Microsoft Edge.
+22. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you should have successfully created and managed groups, modified company branding, and assigned licenses.
 
