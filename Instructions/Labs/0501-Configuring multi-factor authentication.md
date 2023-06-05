@@ -24,7 +24,7 @@ To provide additional security for user sign on events, you need to configure an
 
 4. At the **Sign in** page, enter **`AlexW@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-5. On the **Enter password** page, enter the tenant password and select **Sign in**. At the Edge Save password prompt, select **Save**.
+5. On the **Enter password** page, enter **Pa55w.rd** and select **Sign in**. At the Edge Save password prompt, select **Save**.
 
 6. At the **Stay signed in** prompt, select **No**.
 
@@ -40,7 +40,7 @@ To provide additional security for user sign on events, you need to configure an
 
 2. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
-3. On the taskbar select **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+3. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.azure.com**, and then press **Enter**.
 
 4. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 

@@ -23,7 +23,7 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-5. On the **Microsoft Endpoint Manager admin center** page, select **Apps**.
+5. On the **Microsoft Intune admin center** page, select **Apps**.
 
 6. On the **Apps | Overview** blade, under **Policy**, select **App protection policies**. 
 
@@ -40,16 +40,16 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 
 11. On the **Data protection** tab, configure the following options and select **Next**:
 
-- Backup Org data to ITunes and iCloud backups: **Block**
-- Send Org data to other apps: **Policy managed apps**
-- Receive data from other apps: **Policy managed apps**
-- Restrict cut, copy, and paste between other apps: **Policy managed apps**
-- Save all other settings at default
+    - Backup Org data to ITunes and iCloud backups: **Block**
+    - Send Org data to other apps: **Policy managed apps**
+    - Receive data from other apps: **Policy managed apps**
+    - Restrict cut, copy, and paste between other apps: **Policy managed apps**
+    - Save all other settings at default
 
 12. On the **Access requirements** tab, configure the following options and select **Next**:
 
-- PIN for access: **Not required**
-- Work or school account credentials for access: **Require**
+    - PIN for access: **Not required**
+    - Work or school account credentials for access: **Require**
 
 13. On the **Conditional launch** tab, review the settings. Select **Next**.
 
