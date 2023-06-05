@@ -40,15 +40,15 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 ### Task 2: Enable self-service password reset
 
-1. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+1. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com/**, and then press **Enter**.
 
 2. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Azure Active Directory admin center opens.
+   > The Microsoft Entra admin center opens.
 
-3. In the Azure Active Directory admin center, in the navigation pane, select **Users**.
+3. In the Microsoft Entra admin center, Navigate to the Search resources section of the site.
 
-4. In the **Users** navigation pane, select **Password reset**.
+4. In the search box, type **password reset**, and then select **Password reset**.
 
 5. In the **Password reset | Properties** window, select **All** to enable self-service password reset to all users. Select **Save**.
 
@@ -60,7 +60,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 9. For the **Number of questions required to reset**, select **3**.
 
-10. In the **Select security questions** section, select **No security questions configured**, then select **Predefined**. Select three questions of your choice, and then select **OK** twice.
+10. In the **Select security questions** section, select **No security questions configured**, then select **Predefined**. Select three questions of your choice, and then select **OK**.
 
 11. Select **Save**.
 
