@@ -74,13 +74,15 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 3. In the details pane, under **Summary**, select **Refresh**.
 
-   > It may take a minute to refresh and build the summary report.
+   > It may take several minutes to refresh and build the summary report. You may need to refresh several times.
 
 4. Review the **Group policy migration readiness** information.
 
    > There should be a number of policies ready for migration and a number of policies not supported.
 
-5. Select the **Reports** tab, and then select **Group policy migration readiness**.
+5. On the **Reports | Group policy analytics** blade, select **Reports** tab, and then select **Group policy migration readiness**.
+
+   > The Group policy migration readiness report provides information related to each setting, and the Profile Type supported.
 
 6. Select **Generate report**. 
 

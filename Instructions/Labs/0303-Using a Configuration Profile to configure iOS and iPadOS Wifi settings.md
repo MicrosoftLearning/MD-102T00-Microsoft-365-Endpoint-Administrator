@@ -80,9 +80,9 @@ You have been asked to create a Configuration profile to be used to automaticall
 
 11. Select **Next** until you reach the **Review + create** blade. Select **Create**.
 
-12. In the navigation link at the top of the page, select Devices. 
+12. Refresh the **Devices | Configuration profiles** blade, and verify that the **iOS/iPadOS Wi-Fi Policy** is listed. 
 
-    > Verify that the iOS/iPadOS Wi-Fi Policy is listed.
+13. Close the Edge browser.
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile to configure Wi-Fi settings for iOS and iPadOS devices.
 

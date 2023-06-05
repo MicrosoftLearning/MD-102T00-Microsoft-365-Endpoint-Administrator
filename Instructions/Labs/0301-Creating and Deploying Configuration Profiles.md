@@ -183,7 +183,7 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
 
 6. Close the **Settings** app.
 
-   _Note: The sync progress may take up to 15 minutes before the profile is applied to the Windows 11 device. Signing out or restarting the device can accelerate this process._
+   _Note: The sync progress may take up to 15 minutes before the profile is applied to the Windows 11 device. Signing out or restarting the device can accelerate this process. PIN **102938**_
 
 7. On **SEA-WS1**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
 
