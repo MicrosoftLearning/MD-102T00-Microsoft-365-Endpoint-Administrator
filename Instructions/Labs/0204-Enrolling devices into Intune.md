@@ -59,7 +59,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 -   Microsoft Intune MDM Device CA
 -   MS-Organization-Access
--   MS-Organization-P2P-Access \[2021\]
+-   MS-Organization-P2P-Access \[2023\]
 
     This indicates that the device is enrolled in Azure AD and Intune.
 
@@ -83,7 +83,7 @@ mdmTouUrl:https://portal.manage.microsoft.com/TermsofUse.aspx
 mdmComplianceUrl:https://portal.manage.microsoft.com/?portalAction=Compliance
 ```
 
-_Note: These entries indicate that the device is enrolled in Intune._
+> Note: These entries indicate that the device is enrolled in Intune.
 
 ### Task 3: Sign in as an Azure AD user
 
@@ -127,11 +127,11 @@ _Note: These entries indicate that the device is enrolled in Intune._
 
    _Note: This view lists devices that are joined to Azure AD. Remember that you configured automatic enrollment between Azure AD and Intune, and because of that, any device that is joined to Azure AD is automatically enrolled to Intune. Any devices joined prior to setting up enrollment are only joined to Azure AD, but not enrolled in Intune._
 
-7. Open a new tab in **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+7. Open a new tab in **Microsoft Edge**, in the address bar type **https://microsoft.entra.com**, and then press **Enter**.
 
-8. In the Azure Active Directory admin center, select **Azure Active Directory**.
+8. In the Microsoft Entra admin center, expand **Azure Active Directory**.
 
-9. In the Contoso page, select **Devices**, then select **All devices**. 
+9. Select **Devices**, then select **All devices**. 
 
    > Take note of SEA-WS1. Notice that the Join Type column displays **Azure AD joined** and the MDM column displays **Microsoft Intune**.
 
