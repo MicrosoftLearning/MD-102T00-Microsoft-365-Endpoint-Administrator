@@ -14,23 +14,21 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
-2. On the taskbar select **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Azure Active Directory admin center opens.
+   > The Microsoft Entra admin center opens.
 
-4. In the Azure Active Directory admin center, in the navigation pane, select **Azure Active Directory**.
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Azure Active Directory**.
 
-5. In the **Contoso|Overview** page, under **Manage**, select **Devices**. 
+5. Select **Devices** > **All devices**. 
 
-6. On the **Devices** page, select **Device settings**.
+6. On the **Devices | All devices** page, select **Device settings**.
 
 7. On the **Devices|Device settings** page, in the details pane, verify that **Users may register their devices with Azure AD** is set to **All** and is greyed out.
 
    > This option is greyed out and set to **All** by default when Microsoft Intune is enable in the tenant. This ensures that all users are able to register Windows 10 or newer personal, iOS, Android, and macOS devices with Azure AD.
-
-8. In the Azure Active Directory admin center, select **Dashboard**.
 
 ### Task 2: Perform Azure AD registration
 
@@ -71,9 +69,9 @@ dsregcmd /status
 
 5. Switch to **SEA-SVR1**.
 
-6. In Microsoft Edge, in the Azure Active Directory admin center, select **Azure Active Directory**.
+6. In Microsoft Edge, in the Microsoft Entra admin center, expand **Azure Active Directory**.
 
-7. In the **Contoso** page, under **Manage**, select **Devices**, then select **All devices**. In the Devices pane, notice that SEA-WS1 is listed. 
+7. Select **Devices**, then select **All devices**. In the Devices pane, notice that SEA-WS1 is listed. 
 
 8. Verify that the **Join Type** is listed as **Azure AD registered** and that the owner is **Joni Sherman**. 
 
@@ -83,9 +81,9 @@ dsregcmd /status
 
 ### Task 4: Sign in to Windows and disconnect from the organization
 
-1. Switch to **SEA-WS1** and attempt to switch users and sign in as **`JoniS@yourtenant.onmicrosoft.com`**.
+1. Switch to **SEA-WS1** and attempt to sign in as **`JoniS@yourtenant.onmicrosoft.com`**.
 
-   Notice that unlike Azure AD Joined devices, an Azure AD registered device does not allow give you the option to sign-in with an Azure AD Account and credentials. 
+   Notice that unlike Azure AD Joined devices, an Azure AD registered device does not allow a user to sign in to the device with an Azure AD credential. 
 
 2. On SEA-WS1, sign in as **Admin** with the password of **Pa55w.rd**. 
 
