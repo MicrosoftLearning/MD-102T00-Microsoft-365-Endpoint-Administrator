@@ -78,13 +78,13 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 8. Select the **Navigation menu** and then select **Show all**.
 
-9. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Azure Active Directory admin center opens.
+9. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
 
-10. In the Azure Active Directory admin center, in the navigation pane, select **Users**.
+10. In the Microsoft Entra admin center, in the navigation pane, select **Users** > **All users**.
 
-11. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **Directory synced** column. 
+11. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
 
-12. In the Navigation pane, select **Azure Active Directory** and then select **Groups**. Verify that you see groups from your local AD DS.
+12. In the Navigation pane, select **Azure Active Directory** and then select **Groups** > **All groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
 
 13. Select the **Managers** group.
 
