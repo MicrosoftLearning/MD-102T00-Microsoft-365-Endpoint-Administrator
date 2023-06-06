@@ -88,7 +88,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 4. If necessary, at the **Welcome to Microsoft Edge** page, select **Confirm and continue**. Close the Welcome page.
 
-5. In the address bar browse to <https://portal.manage.microsoft.com>.
+5. In the address bar browse to **https://portal.manage.microsoft.com** and then press **Enter**.
 
 6. Sign in as **Aaron Nicholls**.
 
@@ -109,6 +109,8 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 12. On the Microsoft Remote Desktop page, select **Install**.
 
 13. On the **Install Microsoft Remote Desktop** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
+
+   >It may take a few minutes for the app to install.
 
 14. After the app is installed close all open windows.
 
@@ -146,7 +148,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
     - Suite Description: **Microsoft 365 Apps for the Research dept at Contoso** (Select **Edit Description** to enter this information.)
 
-5. On the **Configure app suite** tab, expand the **Select Office apps** dropdown, select the following Office apps:
+5. On the **Configure app suite** tab, expand the **Select Office apps** dropdown, and ensure that only the following apps are selected:
 
     - Excel
 
@@ -156,7 +158,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
     - Word
 
-6. On the **Configure app suite** tab, configure the following options and select **Next**:
+6. On the **App suite information** section, configure the following options:
 
      - Architecture: **64-bit**
 
@@ -164,17 +166,19 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
      - Update channel: **Current Channel**
 
+7. On the **properties** tab, configure the following options and select **Next**:
+
      - Accept the Microsoft Software License Terms on behalf of users: **Yes**
      
-7. On the **Assignments** tab, in the **Required** section, select **Add group.**
+8. On the **Assignments** tab, in the **Required** section, select **Add group.**
 
-8. On the **Select groups** blade, select **Research**, and then choose **Select**.
+9. On the **Select groups** blade, select **Research**, and then choose **Select**.
 
-9. Select **Next**. On the **Review + Create** tab, select **Create**.
+10. Select **Next**. On the **Review + Create** tab, select **Create**.
 
-10. On the **Microsoft 365 Apps (Research)** page, select **Properties**.
+11. On the **Microsoft 365 Apps (Research)** page, select **Properties**.
 
-11. In the details pane verify that **Research** is listed under **Required** in the **Assignments** section.
+12. In the details pane verify that **Research** is listed under **Required** in the **Assignments** section.
 
 ### Task 3: Force policy synchronization from the Intune console
 
@@ -216,7 +220,9 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 5. In the details pane, under **Monitor** and under **User install status**, verify that **1** is displayed under Installed.
 
-   _Note: This indicates that the app is installed on one device and for one user. Note that it may take some time for the information to display._
+   _Note: that it may take some time for the information to display._
+   
+   _Note: This indicates that the app is installed on one device and for one user._
 
 6. Select **Device install status**.
 

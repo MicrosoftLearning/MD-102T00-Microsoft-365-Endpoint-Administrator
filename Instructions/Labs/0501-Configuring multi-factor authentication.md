@@ -40,37 +40,41 @@ To provide additional security for user sign on events, you need to configure an
 
 2. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
-3. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.azure.com**, and then press **Enter**.
+3. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 4. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Azure Active Directory admin center opens.
+   > The Microsoft Entra admin center opens.
 
-5. In the Azure Active Directory admin center, in the navigation pane, select **Users**.
+5. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
 
-6. Select **All users** and then at the top of the results pane select **Per-user MFA**. You may need to select the ellipse first to view the **Per-user MFA** option.
+6. In the search resources box, type multifactor authentication and then select **multifactor authentication**.
 
-7. On the multi-factor authentication page, select **service settings**.
+   > The multi-factor authentication page opens.
 
-8. Scroll down to the **verification options** section. 
+7. Select **Additional cloud-based multifactor authentication settings**.
 
-   > Take note of the various methods that can be configured for user verification. 
+8. In the **multi-factor authentication** page, select **service settings**. Select **Allow users to remember multi-factor authentication on devices they trust**.
 
-9. In the **remember multi-factor authentication on trusted device** section, select the check box next to **Allow users to remember multi-factor authentication on devices they trust**.
+9. Next to **Number of days users can trust devices for**, enter **30** and then select **save**. 
 
-10. Next to **Number of days users can trust devices for**, enter **30** and then select **save**. Select **close** when prompted.
+10. Close the **multi-factor authentication** page.
 
-11. At the top of the page, under **multi-factor authentication**, select **users**.
+11. In the navigation pane, select **All users**.
 
-12. In the user list, select the check box next to **Alex Wilber**.
+12. At the top of the user list, select Per-user MFA.
 
-13. In the Alex Wilber page, select **Enable**.
+   > The Per-user MFA page opens.
 
-14. On the **About enabling multi-factor auth** message, select **enable multi-factor auth**.
+13. In the user list, select the check box next to **Alex Wilber**.
 
-15. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Enabled**.
+14. On the **quick steps** pane, select **enable**.
 
-16. Close Microsoft Edge.
+15. On the **About enabling multi-factor auth** message, select **enable multi-factor auth**.
+
+16. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Enabled**.
+
+17. Close Microsoft Edge.
 
 ### Task 3: Register and Validate MFA
 
@@ -88,15 +92,17 @@ To provide additional security for user sign on events, you need to configure an
 
    > Typically, you will want to use the Microsoft Authenticator app to manage multi-factor authentication. However for this lab scenario, you will use text messages.
 
-7. On the **Keep your account secure** page, select **I want to set up a different method**.
+7. On the **Keep your account secure** page, enter your mobile phone number which you can receive text messages, and then select **Next**.
 
-8. In the **Choose a different method** dialog box, select **Phone**, and then select **Confirm**.
+8. After you receive the verification code as a text message, enter the code where indicated on the **Keep your account secure** page and then select **Next**.
 
-9. On the **Phone** page, enter your mobile phone number which you can receive text messages, and then select **Next**.
+9. on the **Keep your account secure** page, you will recieve a mesage "Great job! You have successfully set up your account for multi-factor authentication. Choose **Done** to continue signing in." Select **Done**.
 
-10. After you receive the verification code as a text message, enter the code where indicated on the **Phone** page and then select **Next**.
+10. You will be redirected to a verification page.
 
-11. At the SMS verified message, select **Next** and then select **Done**.
+11. You will receive a text message with a verification code. Enter the code on the verification page and select **Verify**.
+
+    > The **Stay signed in** page opens.
 
 12. At the Stay signed in message, select **No**. 
 
@@ -106,35 +112,11 @@ To provide additional security for user sign on events, you need to configure an
 
 14. Close Microsoft Edge.
 
-_Note: Users only have to register the first time they use MFA. Subsequent sign-ins only require providing the validation code which it texted to the phone number that you entered during registration._
-
-15. On the taskbar, select **Microsoft Edge**.
-
-16. In the address bar, enter **outlook.office.com** and press Enter.
-
-17. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
-
-18. On the **Enter password** page, enter the tenant password and select **Sign in**. 
-
-    > The **Verify your identity** prompt opens. Notice that it contains the last two digits of your phone number.
-
-19. At the **Verify your identity** prompt, select your Text phone number.
-
-20. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
-
-    > Notice that you can select a check box to not ask for verification again for 30 days.
-
-21. At the Stay signed in message, select **No**. Outlook on the Web opens to Alex Wilber's inbox.
-
-22. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
-
-23. Close Microsoft Edge.
-
 ### Task 3: Remove per-user MFA
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
