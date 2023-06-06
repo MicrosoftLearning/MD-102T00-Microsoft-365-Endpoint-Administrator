@@ -22,43 +22,39 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
 
-2. On the taskbar select **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Azure Active Directory admin center opens.
+   > The Microsoft Entra admin center opens.
 
-4. In the Azure Active Directory admin center, in the navigation pane, select **Azure Active Directory**.
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Azure Active Directory**.
 
-5. In the **Contoso|Overview** page, under **Manage**, select **Devices**. 
-
-6. On the **Devices|Overview** page, select **All devices**. 
+5. Select **Devices** > **All devices**. 
 
    > Notice that there are no devices found, as you have not joined any devices yet.
 
-7. On the **Devices** page, select **Device settings**.
+6. On the **Devices | All devices** page, select **Device settings**.
 
-8. On the **Devices|Device settings** page, in the details pane, under **Users may join devices to Azure AD**, verify that **All** is selected. 
+7. On the **Devices|Device settings** page, in the details pane, under **Users may join devices to Azure AD**, verify that **All** is selected. 
 
    > This indicates that all Azure AD users are permitted to join Windows 10 or newer devices to Azure Active Directory. Note that this setting does not apply to hybrid Azure AD joined devices, or devices joined by using Windows Autopilot self-deployment mode.
 
-9. In the **Require Multi-factor Authentication to register or join devices with Azure AD** section, verify that the setting is set to **No**. 
+8. In the **Require Multi-factor Authentication to register or join devices with Azure AD** section, verify that the setting is set to **No**. 
 
-10. In the **Maximum number of devices per user** section, select **20**.
+9. In the **Maximum number of devices per user** section, select **20**.
 
-11. In the **Additional local administrators on all Azure AD joined devices** section, select **Manage Additional local administrators on all Azure AD joined devices**. The Device Administrators page opens.
+10. Under **Local administrator settings**, select **Manage Additional local administrators on all Azure AD joined devices**. The Device Administrators page opens.
 
-12. In the Device Administrators page, select **Add assignments**.
+11. In the Device Administrators page, select **Add assignments**.
 
-13. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
+12. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
 
     > Allan Deyoung will now be added as a Device Administrator on all Azure AD joined devices.
 
-14. Scroll back to or select the **Devices** navigation link at the top of the page.
+13. Scroll back to or select the **Devices | Device settings** navigation link at the top of the page.
 
-15. On the Device settings page, select **Save**.
-
-16. In the Azure Active Directory admin center, select **Dashboard**.
+14. On the Device settings page, select **Save**.
 
 ### Task 2: Perform an Azure AD Join
 
@@ -115,17 +111,15 @@ dsregcmd /status
 
 9. Switch to **SEA-SVR1**.
 
-10. In Microsoft Edge, in the Azure Active Directory admin center, select **Azure Active Directory**.
+10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Azure Active Directory**.
 
-11. In the **Contoso** page, under **Manage**, select **Devices**, and then select **All devices**. 
+11. Select **Devices**, and then select **All devices**. 
 
     > In the Devices pane, notice that SEA-WS1 is listed. 
 
 12. Verify that the **Join Type** is listed as **Azure AD joined** and that the owner is **Joni Sherman**. 
 
     > Also note that the MDM column shows None. This indicates that this device is not yet managed by Microsoft Intune.
-
-13. In the Azure Active Directory admin center, select **Azure Active Directory**.
 
 ### Task 4: Sign in to Windows as an Azure AD User
 
@@ -293,15 +287,13 @@ dsregcmd /status
 
 7. Close all windows on SEA-CL2 and sign out.
 
-8. Switch to **SEA-SVR1** and switch to the Azure Active Directory admin center.
+8. Switch to **SEA-SVR1** and switch to the Microsoft Entra admin center.
 
-9. Select **Azure Active Directory**, and then select **Devices**. 
+9. Expand **Azure Active Directory**, and then select **Devices** > **All devices**. 
 
-10. In the Devices page, select **All devices**.
+10. Verify that **SEA-CL2** has **Hybrid Azure AD joined** as value for the row **Join Type**. If necessary, select the **Refresh** button if SEA-CL2 is not listed.
 
-11. Verify that **SEA-CL2** has **Hybrid Azure AD joined** as value for the row **Join Type**. If necessary, select the **Refresh** button if SEA-CL2 is not listed.
-
-12. Close all windows on **SEA-SVR1**.
+11. Close all windows on **SEA-SVR1**.
 
 **Results**: After completing this exercise, you will have successfully configured and validated hybrid Azure AD join.
 
