@@ -124,31 +124,19 @@ To provide additional security for user sign on events, you need to configure an
 
 4. In the Azure Active Directory admin center, in the navigation pane, select **Users**.
 
-5. Select **All users** and then at the top of the results pane select **Per-user MFA**. You may need to select the ellipse first to view the **Per-user MFA** option.
+5. Select **All users** and then at the top of the results pane select **Per-user MFA**. 
+   
+   > The Per-user MFA page opens.
 
-6. At the top of the page, under **multi-factor authentication**, select **users**.
+6. In the user list, select the check box next to **Alex Wilber**.
 
-7. In the user list, select the check box next to **Alex Wilber**. 
+7. On the **quick steps** pane, select **disable**.
 
-   > Take note that the **Multi-Factor Auth Status** for Alex Wilber is now set to **Enforced** (was previously set to Enabled). This is because Alex has registered and is using MFA.
+8. On the **About disabling multi-factor auth** message, select **disable multi-factor auth**.
 
-8. In the Alex Wilber page, select **Manage user settings.**
+9. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Disabled**.
 
-9. On the Manage user settings box, select the check box next to all three options, select **save** and then select **close**.
-
-   > These options will remove all saved MFA settings for Alex.
-
-10. In the user list, select the check box next to **Alex Wilber**. 
-
-11. In the Alex Wilber page, select **Disable**.
-
-12. On the **Disable multi-factor authentication** message, select **yes**.
-
-13. On the **Updates successful** message, select **close**. 
-
-    > Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Disabled**.
-
-14. Close Microsoft Edge.
+10. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you will have successfully configured per-user multi-factor authentication.
 
@@ -182,31 +170,33 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Azure Active Directory admin center opens.
+   > The Microsoft Entra admin center opens.
 
-4. In the Azure Active Directory admin center, in the navigation pane, select **Azure Active Directory**.
+4. In the Microsoft Entra admin center, in the navigation pane, select **Protect and Secure**.
 
-5. On the **Contoso** navigation pane, select **Security**.
+5. On the **Protect and Secure** page, select **Conditional Access**.
 
-6. On the **Security** page, select **Conditional Access**.
+6. On the **Conditional Access** page, select **Policies**, select **New policy**, and then select **Create new policy**.
 
-7. On the **Conditional Access** page, select **Policies**, select **New policy**, and then select **Create new policy**.
+7. On the **New Conditional access policy** page, in the **Name** box, enter **Contoso MFA Policy**.
 
-8. On the **New Conditional access policy** page, in the **Name** box, enter **Contoso MFA Policy**.
+8. Under **Assignments**, select **0 users and groups selected**.
 
-9. Under **Assignments**, select **0 users or workload identities selected**.
+9. In the Users and groups pane, select the option next to **Select users and groups** and then select the check box next to **Users and groups**.
 
-10. In the Users and groups pane, select the option next to **Select users and groups** and then select the check box next to **Users and groups**.
-
-11. On the **Select** page, select **Alex Wilber** and then click **Select**. 
+10. On the **Select users and groups** page, select **Alex Wilber** and then select **Select**. 
 
     > Note that typically you would specify a group, however for this exercise we will just test the setting on Alex Wilber.
 
-12. Select **No cloud apps, actions, or authentication contexts selected** and then click **Select apps**.
+11. Select **No cloud apps, actions, or authentication contexts selected** and then click **Select apps**.
+
+    > Note the Control access based on client app setting. This setting allows you to specify the client app that is used to access the resource. For example, you can specify that only the Outlook app can be used to access Exchange Online. 
+
+12. On the **Select** section of the page, click **None**.
 
 13. On the **Select** page, select the check box next to **Office 365** and then click **Select**.
 
@@ -218,17 +208,7 @@ To provide additional security for user sign on events, you need to configure an
 
 17. Select **Create** to create the Contoso MFA Policy. Notice that the policy is listed with a State of **On**.
 
-18. In the Azure Active Directory admin center, select **Users**.
-
-19. In the User list, select **Alex Wilber**.
-
-20. On the Alex Wilber page, select **Authentication methods**. 
-
-    > Notice that a phone number has already been configured for Alex, but it is not enabled. This was because he registered MFA during the previous lab. However, you removed this method when you managed Alex's per-user MFA settings.
-
-21. In the message box, under your phone number, select **Enable**.
-
-22. Close Microsoft Edge.
+18. Close Microsoft Edge.
 
 ### Task 3: Validate conditional access MFA
 
@@ -244,7 +224,7 @@ To provide additional security for user sign on events, you need to configure an
 
 6. At the Verify your identity prompt, select your phone number.
 
-   > The Enter code dialog box opens. Notice that you can select a check box to specify Don't ask again for 30 days.
+   > The Enter code dialog box opens. Notice that "don't ask again for 90 days" is selected by default.
 
 7. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
 
@@ -260,23 +240,21 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https:EntAdmin.microsoft.com**, and then press **Enter**.
 
 3. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Azure Active Directory admin center opens.
+   > The EntAdmin admin center opens.
 
-4. In the Azure Active Directory admin center, in the navigation pane, select **Azure Active Directory**.
+4. In the Entrada admin center, in the navigation pane, under **protect and secure** select **Conditional Access**.
 
-5. On the **Contoso** navigation pane, select **Security**.
+5. On the **Conditional Access** page, select **Policies** and then select **Contoso MFA Policy**.
 
-6. On the **Security** page, select **Conditional Access**.
+6. On the **Contoso MFA Policy** page, select **Delete**.
 
-7. On the **Conditional Access** page, select **Policies** and then select **Contoso MFA Policy**.
+7. At the **Are you sure?** prompt, select **Yes**.
 
-8. On the **Contoso MFA Policy** page, select **Delete** and then select **Yes**.
-
-9. Close Microsoft Edge.
+8. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you will have successfully configured multi-factor authentication by using a conditional access policy.
 

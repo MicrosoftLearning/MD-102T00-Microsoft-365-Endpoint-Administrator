@@ -36,7 +36,7 @@ You've been asked to review the inventory for SEA-WS1. Use Intune to review the 
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-5. In the Microsoft Endpoint Manager admin center, select **Devices** from the navigation bar.
+5. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
 6. In the Devices navigation pane, select **All devices** and in the details pane, select the **SEA-WS1** entry. 
 
@@ -60,7 +60,7 @@ Management is requesting a report of all devices. They do not have access to the
 
 ### Task 1: Export Intune Data
 
-1. On **SEA-SVR1**, in the Microsoft Endpoint Manager admin center, select **Devices** and then select **All devices**.
+1. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and then select **All devices**.
 
 2. On the **Devices | All devices** blade, in the details pane, select **Export**.
 
@@ -102,7 +102,9 @@ Your organization uses Power BI for reporting. You need to set up Power BI on SE
 
 3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-4. In the Microsoft Endpoint Manager admin center, select **Reports** and then select **Data warehouse**.
+   > If you are prompted to stay signed in, select **Yes**.
+
+4. In the Microsoft Intune admin center, select **Reports** and then select **Data warehouse**.
 
 5. In the **OData feed for reporting service** field, copy the Odata URL to the clipboard.
 

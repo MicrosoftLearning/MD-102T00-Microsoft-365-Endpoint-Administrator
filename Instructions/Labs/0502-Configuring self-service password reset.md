@@ -60,7 +60,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 9. For the **Number of questions required to reset**, select **3**.
 
-10. In the **Select security questions** section, select **No security questions configured**, then select **Predefined**. Select three questions of your choice, and then select **OK**.
+10. In the **Select security questions** section, select **No security questions configured**, then select **Predefined**. Select three questions of your choice, and then select **Ok**.
 
 11. Select **Save**.
 
@@ -80,7 +80,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. Browse to **`https://myaccount.microsoft.com`**. 
+4. Browse to **https://myaccount.microsoft.com**. 
 
 5. On the **Pick an account** page, select **Use another account**.
 
@@ -92,8 +92,8 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 9. On the **Change password** page, enter the following information and then select **submit**:
      - Old password: **Pa55w.rd**
-     - Create new password: **Pa55w.rd1234**
-     - Confirm new password: **Pa55w.rd1234**
+     - Create new password: **Pa55w.rd1234!**
+     - Confirm new password: **Pa55w.rd1234!**
 
 10. If the Microsoft Edge prompts to save the password, select **Save**.
 
@@ -122,11 +122,9 @@ Start-ADSyncSyncCycle –PolicyType Delta
 
 2. On **SEA-CL1**, select **Other user**, and then attempt to sign in as **Contoso\\Aaron** with the password of **Pa55w.rd**.
 
-3. Attempt to sign in as **Contoso\\Aaron** with the password **Pa55w.rd**.
-
 4. Ensure that you get the message that the user name or password is incorrect.
 
-5. Sign in to **SEA-CL1** as **Contoso\\Aaron** with the password **Pa55w.rd1234**. 
+5. Sign in to **SEA-CL1** as **Contoso\\Aaron** with the password **Pa55w.rd1234!**. 
 
    > You should be able to sign in. This confirms that the password you changed in the Azure portal is written back to the local Active Directory Domain Services (AD DS) account.
 

@@ -47,7 +47,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 8. On the Basics tab, in the **Name** field, enter **Windows Security Settings**. Select **Next**.
 
-9. Under **Defender**, configure the following settings:
+9. On the Configuration setting tab, Under **Defender**, configure the following settings:
     - TamperProtection (Device): **On**
 
 10. Under **Windows Defender Security Center**, configure the following settings:
@@ -56,18 +56,17 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
      - Disable Device Security UI: **Enable**
      - Disable Family UI: **Enable**
      - Disable Health UI: **Enable**
+     - Enable Customized Toasts: **Enable**
 
-11. Next to **Enable Customized Toasts** select **Enable**.
+11. Under **Company name**, select **Configured**, and then enter **Contoso IT**.
 
-12. In the **Company name** field, select **Configured**, and then enter **Contoso IT**.
+12. For **Phone**, select **Configured** and then enter **555-1234** and then select **Next**.
 
-13. For **Phone**, select **Configured** and then enter **555-1234** and then select **Next**.
+13. On the **Scope tags** page, select **Next**.
 
-14. On the **Scope tags** page, select **Next**.
+14. On the **Assignments** tab, under **Included groups** select **Add groups**. Choose the **Contoso Developer Devices** group, click **Select** and then select **Next**.
 
-15. On the **Assignments** tab, under **Included groups** select **Add groups**. Choose the **Contoso Developer Devices** group, click **Select** and then select **Next**.
-
-16. On the **Review + create** tab, review the information and select **Create**.
+15. On the **Review + create** tab, review the information and select **Create**.
 
 ### Task 2: Configure Microsoft Defender Antivirus policy in Intune
 
@@ -86,23 +85,20 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
    - Allow Realtime Monitoring: **Allowed**
    - Check For Signatures Before Running Scan: **Enabled**
    - Days to Retain Cleaned Malware: **60**
-
    - Schedule Quick Scan Time: **60** (represents 1:00AM)
    - Submit samples consent: **Send safe samples automatically**
 
-6. On the **Configuration settings** tab, select **Next**.
+6. On the **Configuration settings** tab, select **Next** twice.
 
 7. On the **Assignments** tab, under **Included groups** select **Add groups**. 
 
 8. Choose the **Contoso Developer Devices** group and then choose **Select** and then select **Next**.
 
-9. On the **Scope tags** page, select **Next**.
-
-10. On the **Review + create** tab, review the information and select **Create**.
+9. On the **Review + create** tab, review the information and select **Create**.
 
 ### Task 3: Sync the managed devices
 
-1. In the Microsoft Endpoint Manager admin center, select **Devices** and then select **All devices**.  
+1. In the Microsoft Intune admin center, select **Devices** and then select **All devices**.  
 
 2. On the **Devices | All devices** pane, select **SEA-WS1** and then on the **SEA-WS1** blade, select **Sync** on the toolbar, and then select **Yes**. 
 

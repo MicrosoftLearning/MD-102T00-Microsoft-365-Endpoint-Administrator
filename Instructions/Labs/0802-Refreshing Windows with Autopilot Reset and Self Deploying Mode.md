@@ -27,7 +27,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 2. In **Microsoft Edge**, open a new tab and navigate to **https://intune.microsoft.com**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
 
-3. In the **Microsoft Endpoint Manager admin center**, select **Devices**.
+3. In the **Microsoft Intune admin center**, select **Devices**.
 
 4. In the **Device enrollment** section, select **Enroll devices**. 
 
@@ -53,10 +53,10 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 15. Ensure that the following options are set:
 
-- Language (Region): **Operating system default**
-- Automatically configure keyboard: **Yes**
-- Apply device name template: **Yes**
-- Enter a name: **Contoso-%RAND:2%**
+   - Language (Region): **Operating system default**
+   - Automatically configure keyboard: **Yes**
+   - Apply device name template: **Yes**
+   - Enter a name: **Contoso-%RAND:2%**
 
 16. Select **Next**.
 
@@ -68,13 +68,11 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 ### Task 2: Perform an Autopilot reset
 
-1. In the **Microsoft Endpoint Manager admin center**, select **Devices** and then select **All devices**.
+1. In the **Microsoft Intune admin center**, select **Devices** and then select **All devices**.
 
 2. Select the Autopilot PC (Begins with the name DESKTOP).
 
-3. In the **Reset this PC** section, select **Reset PC**.
-
-4. In the menu bar, select the ellipse and then select **Autopilot Reset**.
+3. In the menu bar, select the ellipse and then select **Autopilot Reset**.
 
 5. At the message prompt, select **Yes**.
 
@@ -88,7 +86,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 ### Task 3: Verify Autopilot deployment
 
-1. At the sign-in page, enter **`Aaron@yourtenant.onmicrosoft.com`** with the Password of **Pa55w.rd1234**.
+1. At the sign-in page, enter **`Aaron@yourtenant.onmicrosoft.com`** with the Password of **Pa55w.rd1234!**.
 
 2. At the **Use Windows Hello with your account**, select **OK**.
 

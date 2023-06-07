@@ -25,11 +25,11 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, in the address bar, type **https://aad.portal.azure.com**, and then press **Enter**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`** and the default tenant password.
+3. In Microsoft Edge, in the address bar, type **https://entra.microsoft.com**, and then press **Enter**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`** and the default tenant password.
 
-4. In the navigation pane, select **Azure Active Directory**.
+4. In the navigation pane, Expand **Azure Active Directory**.
 
-5. Under **Manage**, select **Groups**.
+5. Under **Groups**, select **All groups**.
 
 6. In the **Groups | All groups** blade, select **New group**.
 
@@ -108,7 +108,7 @@ copy c:\computer.csv \\sea-svr2\labfiles
 
 2. In **Microsoft Edge**, open a new tab and navigate to **https://intune.microsoft.com**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
 
-3. In the **Microsoft Endpoint Manager admin center**, select **Devices**.
+3. In the **Microsoft Intune admin center**, select **Devices**.
 
 4. In the **Device enrollment** section, select **Enroll devices**. 
 
@@ -136,21 +136,21 @@ copy c:\computer.csv \\sea-svr2\labfiles
 
 14. Ensure that the following options are set:
 
-- Microsoft Software License Terms: **Hide**
+    - Microsoft Software License Terms: **Hide**
 
-- Privacy Settings: **Hide**
+    - Privacy Settings: **Hide**
 
-- Hide change account options: **Hide**
+    - Hide change account options: **Hide**
 
-- User account type: **Administrator**.
+    - User account type: **Administrator**.
 
-- Allow pre-provisioned deployment: **No**
+    - Allow pre-provisioned deployment: **No**
 
-- Language (Region): **Operating system default**
+    - Language (Region): **Operating system default**
 
-- Automatically configure keyboard: **Yes**
+    - Automatically configure keyboard: **Yes**
 
-- Apply device name template: **No**
+    - Apply device name template: **No**
 
 15. Select **Next**.
 
@@ -180,7 +180,7 @@ copy c:\computer.csv \\sea-svr2\labfiles
 
 1. At the **Contoso Corp. Sign-in Page**, enter **`Aaron@yourtenant.onmicrosoft.com`** and select **Next**.
 
-2. At the Password page, enter **Pa55w.rd1234** and select **Sign in**.
+2. At the Password page, enter **Pa55w.rd1234!** and select **Sign in**.
 
 3. At the **Use Windows Hello with your account**, select **OK**.
 
@@ -195,31 +195,31 @@ copy c:\computer.csv \\sea-svr2\labfiles
 8. Select **Start** and select **Settings**. 
 
 
-8. Select **Accounts**, and then select **Access work or school**. Verify the device is connected to Contoso's Azure AD.
+9. Select **Accounts**, and then select **Access work or school**. Verify the device is connected to Contoso's Azure AD.
 
-9. Select **Connected to Contoso's Azure AD** and select **Info**.
+10. Select **Connected to Contoso's Azure AD** and select **Info**.
 
-10. On the **Managed by Contoso** page, scroll down and then select **Sync**.
+11. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
-11. On **SEA-WS4**, close the **Settings** window.
+12. On **SEA-WS4**, close the **Settings** window.
 
-12. Switch to **SEA-SVR1**.
+13. Switch to **SEA-SVR1**.
 
-13. In the Azure Active Directory admin center, select **Azure Active Directory**, select **Devices** and then select **All devices**. 
+14. In the Microsoft Entra admin center, select **Azure Active Directory**, select **Devices** and then select **All devices**. 
 
     > Note that the new device displays with an icon that indicates an Autopilot device. Also note that the Join Type is **Azure AD joined** with Aaron Nicholls as the owner.
 
-14. Select the Autopilot device and then select **Manage**. 
+15. Select the Autopilot device and then select **Manage**. 
 
-15. Again select the Autopilot device to review the management page. 
+16. Again select the Autopilot device to review the management page. 
 
     > Notice that you can Retire, Wipe, Sync, and Restart the device.
 
-16. Select the ellipse at the end of the menu bar and take notice of the additional management capabilities.
+17. Select the ellipse at the end of the menu bar and take notice of the additional management capabilities.
 
     > Additional capabilities include Fresh Start, Autopilot Reset, Quick scan, Full scan, as well as others.
 
-17. Close Microsoft Edge.
+18. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you will have provisioned a Windows 11 device with Autopilot using User-driven mode.
 

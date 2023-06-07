@@ -38,15 +38,15 @@ To following lab(s) must be completed before this lab:
 
 ### Task 2: Configure an App protection policy for Windows Information Protection
 
-1. In the Microsoft Endpoint Manager admin center, in the navigation pane, select **Apps**.
+1. In the Microsoft Intune admin center, in the navigation pane, select **Apps**.
 
 2. Select **App protection policies**, select **Create policy** and select **Windows Information Protection**.
 
-3. In the **Name** text box, type **Windows WIP policy**.
+3. In the **Name** text box, type **Windows WIP policy** and then select **Next**.
 
-4. In the **Enrollment state** list, select **With enrollment** and select **Next**.
+   > Note: Enrollment State is set to **With enrollment** by default. This means that the policy will only apply to devices that are enrolled in Intune. Creating new WIP without enrollment policies (WIP-WE) is no longer supported.
 
-5. On the **Targeted apps** tab, under **Protected apps**, select **Add**, select the following apps, and then select **OK**.
+5. On the **Targeted apps** tab, under **Protected apps**, select **+Add**, select the following apps, and then select **OK**.
 
    - **Office-365-ProPlus-1810-Allowed.xml** 
 
@@ -60,7 +60,7 @@ To following lab(s) must be completed before this lab:
 
 8. On the **Advanced settings** tab, in the **Network perimeter** section, select **Add**.
 
-9. On the **Add network boundary** pane, configure the following, replacing **_\<yourtenantPrefix\>_** with the tenant name provided to you, and then select **OK**:
+9. On the **Add network boundary** pane, configure the following, replacing **< yourtenantPrefix >** with the tenant name provided to you, and then select **OK**:
 
    - Boundary type: **Cloud resources**
    - Name: **SharePoint online**
@@ -124,7 +124,7 @@ To following lab(s) must be completed before this lab:
 
 8. On the taskbar, open **File Explorer** and browse to the **Downloads** folder.
 
-*Note: The briefcase icon in the file icon indicates that the file is protected.*
+    > Note: The briefcase icon in the file icon indicates that the file is protected.*
 
 9. Open the **Document.docx** file using **Word**. The file should open because Word is a managed app indicated in the policy. 
 
