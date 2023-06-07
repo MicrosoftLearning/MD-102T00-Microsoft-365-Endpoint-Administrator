@@ -32,19 +32,31 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 10. On the **Connect to Azure AD** page, in the **USERNAME** and **PASSWORD** boxes, enter **`admin@yourtenant.onmicrosoft.com`**, and your provided password, and then select **Next**.
 
-11. On the **Connect to AD DS** page, in the **USERNAME** and **PASSWORD** boxes, enter **Contoso\\Administrator**, and then type **Pa55w.rd** in the **PASSWORD** field. 
+11. On the **Connect your directories** page, ensure that **Contoso.com** is listed under **FOREST**, and then select **Add Directory**.
 
-12. On the **Azure AD sign-in configuration** page, ensure that in the **Active Directory UPN Suffix** shows **Contoso.com** listed.
+12. In the **AD forest account** window, select the **Create New AD Account** option, and in the **ENTERPRISE ADMIN USERNAME** field, type **Contoso\\Administrator**, and then type **Pa55w.rd** in the **PASSWORD** field. Select **OK**, and then select **Next**.
 
-13. Select **Continue without matching all UPN suffixes to verified domains** and then select **Next**.
+13. On the **Azure AD sign-in configuration** page, ensure that in the **USER PRINCIPAL NAME** drop-down list, the **userPrincipalName** value is selected. 
 
-14. On the **Ready to configure** page, ensure that **Start the synchronization process when configuration completes** is selected, and then select **Install**.
+14. Select **Continue without matching all UPN suffixes to verified domains** and then select **Next**.
 
-15. When configuration is complete, select **Exit**.  
+15. On the **Domain and OU filtering** page, select **Sync selected domains and OUs**.
+
+16. Expand **Contoso.com**, clear the checkbox next to **Contoso.com** and ensure that the only following check boxes are selected: **IT**, **Managers**, **Marketing**, **Research**, and **Sales**. Select **Next**.
+
+17. On the **Uniquely identifying your users** page, select **Next**.
+
+18. On the **Filter users and devices** page, select **Next**.
+
+19. On the **Optional features** page, review available options, but do not make any changes. Ensure that **Password hash synchronization** is selected, and then select **Next**.
+
+20. On the **Ready to configure** page, ensure that **Start the synchronization process when configuration completes** is selected, and then select **Install**.
+
+21. When configuration is complete, select **Exit**.  
 
       > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Azure AD begins. You should wait approximately 3-4 minutes for this process to complete.
 
-16. Close all open windows.
+22. Close all open windows.
 
 #### Task 2: Verify synchronization in Azure AD
 
@@ -66,13 +78,13 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 8. Select the **Navigation menu** and then select **Show all**.
 
-9. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Azure Active Directory admin center opens.
+9. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
 
-10. In the Azure Active Directory admin center, in the navigation pane, select **Users**.
+10. In the Microsoft Entra admin center, in the navigation pane, select **Users** > **All users**.
 
-11. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **Directory synced** column. 
+11. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
 
-12. In the Navigation pane, select **Azure Active Directory** and then select **Groups**. Verify that you see groups from your local AD DS.
+12. In the Navigation pane, select **Azure Active Directory** and then select **Groups** > **All groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
 
 13. Select the **Managers** group.
 
