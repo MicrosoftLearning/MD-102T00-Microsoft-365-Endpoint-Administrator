@@ -40,13 +40,13 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 7. In the details pane, select **Add**.
 
-8. On the **Select app type** page, click the drop-down menu and then select **Microsoft store app (new)**.
+8. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
 
-9. Read the information about Microsoft store app and then click **Seach the  Microsoft Store app (new)**, search for and select **Micorsoft Remote Desktop**. The **Add App** page opens.
+9. On the **Add App** page, click **Seach the  Microsoft Store app (new)**, search for and select **Microsoft Remote Desktop**. 
 
 10. On the **App information** page, verify the following information and then select **Next**:
     - Name: **Microsoft Remote Desktop**
-    - Publisher: **Microsoft**
+    - Publisher: **Microsoft Corporation**
     - Category: **Business**
     - Show this as a featured app in the Company Portal: **Yes**
 

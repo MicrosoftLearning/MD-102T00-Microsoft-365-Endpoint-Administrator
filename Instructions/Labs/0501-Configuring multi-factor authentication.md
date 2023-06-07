@@ -46,35 +46,33 @@ To provide additional security for user sign on events, you need to configure an
 
    > The Microsoft Entra admin center opens.
 
-5. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
-
-6. In the search resources box, type multifactor authentication and then select **multifactor authentication**.
+5. At the top of the web page, In the search resources box, type multifactor authentication and then select **multifactor authentication**.
 
    > The multi-factor authentication page opens.
 
-7. Select **Additional cloud-based multifactor authentication settings**.
+6. Select **Additional cloud-based multifactor authentication settings**.
 
-8. In the **multi-factor authentication** page, select **service settings**. Select **Allow users to remember multi-factor authentication on devices they trust**.
+7. In the **multi-factor authentication** page, select **service settings**. Select **Allow users to remember multi-factor authentication on devices they trust**.
 
-9. Next to **Number of days users can trust devices for**, enter **30** and then select **save**. 
+8. Next to **Number of days users can trust devices for**, enter **30** and then select **save**. 
 
-10. Close the **multi-factor authentication** page.
+9. Close the **multi-factor authentication** page.
 
-11. In the navigation pane, select **All users**.
+10. Navigate back to the **Microsoft Entra admin center** Edge tab and in the navigation pane, select **Users** > **All users**.
 
-12. At the top of the user list, select Per-user MFA.
+11. At the top of the user list, select Per-user MFA.
 
    > The Per-user MFA page opens.
 
-13. In the user list, select the check box next to **Alex Wilber**.
+12. In the user list, select the check box next to **Alex Wilber**.
 
-14. On the **quick steps** pane, select **enable**.
+13. On the **quick steps** pane, select **enable**.
 
-15. On the **About enabling multi-factor auth** message, select **enable multi-factor auth**.
+14. On the **About enabling multi-factor auth** message, select **enable multi-factor auth**.
 
-16. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Enabled**.
+15. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Enabled**.
 
-17. Close Microsoft Edge.
+16. Close Microsoft Edge.
 
 ### Task 3: Register and Validate MFA
 
@@ -92,25 +90,21 @@ To provide additional security for user sign on events, you need to configure an
 
    > Typically, you will want to use the Microsoft Authenticator app to manage multi-factor authentication. However for this lab scenario, you will use text messages.
 
-7. On the **Keep your account secure** page, enter your mobile phone number which you can receive text messages, and then select **Next**.
+7. On the **Keep your account secure** page, select **I want to set up a different method**. Chose **Phone** From the dropdown menu and then click **Confirm**.
 
-8. After you receive the verification code as a text message, enter the code where indicated on the **Keep your account secure** page and then select **Next**.
+8. Enter your mobile phone number which you can receive text messages, and then select **Next**.
 
-9. on the **Keep your account secure** page, you will recieve a mesage "Great job! You have successfully set up your account for multi-factor authentication. Choose **Done** to continue signing in." Select **Done**.
+9. After you receive the verification code as a text message, enter the code where indicated on the **Keep your account secure** page and then select **Next**.
 
-10. You will be redirected to a verification page.
+10. on the **Keep your account secure** page, you will receive a message "Great job! You have successfully set up your security info. Choose **Done** to continue signing in." Select **Done**.
 
-11. You will receive a text message with a verification code. Enter the code on the verification page and select **Verify**.
-
-    > The **Stay signed in** page opens.
-
-12. At the Stay signed in message, select **No**. 
+11. At the Stay signed in message, select **No**. 
 
     > Outlook on the Web opens to Alex Wilber's inbox.
 
-13. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
+12. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
 
-14. Close Microsoft Edge.
+13. Close Microsoft Edge.
 
 ### Task 3: Remove per-user MFA
 
@@ -120,9 +114,9 @@ To provide additional security for user sign on events, you need to configure an
 
 3. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Azure Active Directory admin center opens.
+   > The Microsoft Entra admin center opens.
 
-4. In the Azure Active Directory admin center, in the navigation pane, select **Users**.
+4. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
 
 5. Select **All users** and then at the top of the results pane select **Per-user MFA**. 
    
@@ -132,7 +126,7 @@ To provide additional security for user sign on events, you need to configure an
 
 7. On the **quick steps** pane, select **disable**.
 
-8. On the **About disabling multi-factor auth** message, select **disable multi-factor auth**.
+8. On the **Disable multi-factor authentication?** message, select **Yes**.
 
 9. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Disabled**.
 
@@ -176,7 +170,7 @@ To provide additional security for user sign on events, you need to configure an
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, select **Protect and Secure**.
+4. In the Microsoft Entra admin center, expand **Azure Active Directory**. In the navigation pane, select **Protect and Secure**.
 
 5. On the **Protect and Secure** page, select **Conditional Access**.
 
@@ -216,7 +210,7 @@ To provide additional security for user sign on events, you need to configure an
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In the address bar, enter **outlook.office.com** and press Enter.
+3. In the address bar, enter **https://outlook.office.com** and press Enter.
 
 4. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
 
@@ -224,7 +218,7 @@ To provide additional security for user sign on events, you need to configure an
 
 6. At the Verify your identity prompt, select your phone number.
 
-   > The Enter code dialog box opens. Notice that "don't ask again for 90 days" is selected by default.
+   > The Enter code dialog box opens. Notice that "don't ask again for 30 days" is selected by default.
 
 7. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
 
@@ -240,13 +234,13 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https:EntAdmin.microsoft.com**, and then press **Enter**.
+2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The EntAdmin admin center opens.
+   > The Microsoft Entra admin admin center opens.
 
-4. In the Entrada admin center, in the navigation pane, under **protect and secure** select **Conditional Access**.
+4. In the Microsoft Entra admin center, in the navigation pane, under **protect and secure** select **Conditional Access**.
 
 5. On the **Conditional Access** page, select **Policies** and then select **Contoso MFA Policy**.
 
