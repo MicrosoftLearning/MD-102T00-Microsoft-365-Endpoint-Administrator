@@ -1,4 +1,4 @@
-# Practice Lab: Deploying Windows 11 with Autopilot
+# Practice Lab: Deploying Windows with Autopilot
 
 ## Summary
 
@@ -18,6 +18,8 @@ To following lab(s) must be completed before this lab:
 ### Scenario
 
 Contoso IT is planning to roll out a deployment of new Windows 11 devices using Autopilot. The devices have a default installation of Windows 11. Users should be able to connect the device, turn it on, and answer minimal questions during the OOBE, using their Azure AD credentials to sign in. The process should automatically enroll and join the Azure AD domain. You have been asked to configure and test the experience using the SEA-WS4, which you recently installed and configured using Hyper-V.
+
+> **Important**: We cannot use Windows 11 Hyper-V based virtual machines for Autopilot testing (Which we configured in the previous lab, 0701). This is due to a physical Trusted Platform Module (TPM) requirement. In this lab, we will test autopilot using Windows 10, however in the real world you can follow the same process for deploying windows 11 via Autopilot. for more details, see [Troubleshooting Windows Enrollment Issues](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors#securing-your-hardware-failed-0x800705b4).
 
 ### Task 1: Create group in Azure AD
 
@@ -54,59 +56,45 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 ### Task 2: Generate a device-specific comma-separated value (CSV) file
 
-1. Switch to **SEA-SVR2** and sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
+1. Switch to **SEA-W10-CL3** and sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
 
-2. Select **Hyper-V Manager** in the taskbar.
+2. Right-click **Start**, select **Windows Terminal (Admin)**, and then select **Yes** at the **User Account Control** prompt.
 
-3. Under Virtual Machines, right-click **SEA-WS4** and select **Connect**.
+3. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
-4. On the **SEA-WS4** window, select **Start**. When the computer starts, maximize the window.
+    ```
+    Install-Script -Name Get-WindowsAutoPilotInfo
+    ```
 
-5. Sign in to **SEA-WS4** as **Administrator** with the password of **Pa55w.rd**.
+4. You will receive three prompts. Each time, type **Y**, and then press **Enter**.
 
-6. Right-click **Start**, select **Windows Terminal (Admin)**, and then select **Yes** at the **User Account Control** prompt.
+5. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
+
+    ```
+    Set-ExecutionPolicy RemoteSigned
+    ```
+
+6. When prompted, type **Y**, and then press Enter.
 
 7. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
-```
-Install-Script -Name Get-WindowsAutoPilotInfo
-```
+    ```
+    Get-WindowsAutoPilotInfo.ps1 -OutputFile C:\Computer.csv
+    ```
 
-8. You will receive three prompts. Each time, type **Y**, and then press **Enter**.
+8. At the Windows PowerShell command-line prompt, type the following command, press **Enter**, and then review the file content:
 
-9. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
+    ```
+    type C:\Computer.csv
+    ```
 
-```
-Set-ExecutionPolicy RemoteSigned
-```
-
-10. When prompted, type **Y**, and then press Enter.
-
-11. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
-
-```
-Get-WindowsAutoPilotInfo.ps1 -OutputFile C:\Computer.csv
-```
-
-12. At the Windows PowerShell command-line prompt, type the following command, press **Enter**, and then review the file content:
-
-```
-type C:\Computer.csv
-```
-
-13. At the Windows PowerShell command-line prompt, type the following command, press **Enter**. This will copy the file to SEA-SVR2:
-
-```
-copy c:\computer.csv \\sea-svr2\labfiles
-```
-
-14. Close the Windows PowerShell command prompt.
+9. Close out of **Windows Powershell**.
 
 ### Task 3: Work with a Windows Autopilot deployment profile
 
-1. Switch to **SEA-SVR1**.
+1. On **SEA-W10-CL3**, in the windows taskbar, select **Microsoft Edge**.
 
-2. In **Microsoft Edge**, open a new tab and navigate to **https://intune.microsoft.com**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
+2. In **Microsoft Edge**, navigate to **https://intune.microsoft.com**. Sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
 
 3. In the **Microsoft Intune admin center**, select **Devices**.
 
@@ -114,7 +102,7 @@ copy c:\computer.csv \\sea-svr2\labfiles
 
 5. In the details pane scroll down to **Windows Autopilot Deployment Program**, and then select **Devices**.
 
-6. In the **Windows Autopilot devices** blade on the menu bar, select **Import**, select the **folder icon** and then browse to **\\\\SEA-SVR2\\Labfiles**, select **Computer.csv**, select **Open**, and then select **Import**. 
+6. In the **Windows Autopilot devices** blade on the menu bar, select **Import**, select the **folder icon** and then browse to **C:\\**, select **Computer.csv**, select **Open**, and then select **Import**. 
 
    _Note: The import process can take up to 15 minutes, but normally takes around 5 minutes._  
 
@@ -160,21 +148,21 @@ copy c:\computer.csv \\sea-svr2\labfiles
 
 18. On the **Review + create** blade, review the information and then select **Create**.
 
+19. Close out of **Microsoft Edge**
+
 ### Task 4: Reset the PC
 
-1. Switch to **SEA-SVR2**. The SEA-WS4 computer should be still maximized.
+1. On **SEA-W10-CL3**, select **Start**, type **reset** and select **Reset this PC**.
 
-2. On **SEA-WS4**, select **Start**, type **reset** and select **Reset this PC**.
+2. In the **Reset this PC** section, select **Reset PC**.
 
-3. In the **Reset this PC** section, select **Reset PC**.
+3. Select **Remove everything**, and then select **Local reinstall**.
 
-4. Select **Remove everything**, and then select **Local reinstall**.
+4. Select **Next** and then select **Reset**.
 
-5. Select **Next** and then select **Reset**.
+   >Note: Normally this task is not required for new deployment of physical devices. The device’s autopilot info is either provided by the manufacturer or can be obtained from the device prior to the OOBE. For the purposes of this lab, we must initiate a reset to simulate a new device OOBE.
 
-   _Note: Normally this task is not required for new deployment of physical devices. The device’s autopilot info is either provided by the manufacturer or can be obtained from the device prior to the OOBE. For the purposes of this lab, we must initiate a reset to simulate a new device OOBE._
-
-   _Note: This process can take 30-45 minutes and will reboot several times during the process. Your instructor may continue with the next module while this task completes. Be sure to come back to complete Task 5 during your next lab session._ 
+   >Note: This process can take 30-45 minutes and will reboot several times during the process. Your instructor may continue with the next module while this task completes. Be sure to come back to complete Task 5 during your next lab session. 
 
 ### Task 5: Verify Autopilot deployment
 
@@ -201,7 +189,7 @@ copy c:\computer.csv \\sea-svr2\labfiles
 
 11. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
-12. On **SEA-WS4**, close the **Settings** window.
+12. On **SEA-W10-CL3**, close the **Settings** window.
 
 13. Switch to **SEA-SVR1**.
 
@@ -221,6 +209,6 @@ copy c:\computer.csv \\sea-svr2\labfiles
 
 18. Close Microsoft Edge.
 
-**Results**: After completing this exercise, you will have provisioned a Windows 11 device with Autopilot using User-driven mode.
+**Results**: After completing this exercise, you will have provisioned a Windows device with Autopilot using User-driven mode.
 
 **END OF LAB**

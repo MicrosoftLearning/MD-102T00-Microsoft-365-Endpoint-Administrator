@@ -45,12 +45,12 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 8. In the **Profile** list, select **Windows Security experience**. Then select **Create**.
 
 
-8. On the Basics tab, in the **Name** field, enter **Windows Security Settings**. Select **Next**.
+9. On the Basics tab, in the **Name** field, enter **Windows Security Settings**. Select **Next**.
 
-9. On the Configuration setting tab, Under **Defender**, configure the following settings:
+10. On the Configuration settings tab, Under **Defender**, configure the following settings:
     - TamperProtection (Device): **On**
 
-10. Under **Windows Defender Security Center**, configure the following settings:
+11. Under **Windows Defender Security Center**, configure the following settings:
      - Disable Account Protection UI: **Enable**
      - Disable App Browser UI: **Enable**
      - Disable Device Security UI: **Enable**
@@ -58,15 +58,15 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
      - Disable Health UI: **Enable**
      - Enable Customized Toasts: **Enable**
 
-11. Under **Company name**, select **Configured**, and then enter **Contoso IT**.
+12. Under **Company name**, select **Configured**, and then enter **Contoso IT**.
 
-12. For **Phone**, select **Configured** and then enter **555-1234** and then select **Next**.
+13. For **Phone**, select **Configured** and then enter **555-1234** and then select **Next**.
 
-13. On the **Scope tags** page, select **Next**.
+14. On the **Scope tags** page, select **Next**.
 
-14. On the **Assignments** tab, under **Included groups** select **Add groups**. Choose the **Contoso Developer Devices** group, click **Select** and then select **Next**.
+15. On the **Assignments** tab, under **Included groups** select **Add groups**. Choose the **Contoso Developer Devices** group, click **Select** and then select **Next**.
 
-15. On the **Review + create** tab, review the information and select **Create**.
+16. On the **Review + create** tab, review the information and select **Create**.
 
 ### Task 2: Configure Microsoft Defender Antivirus policy in Intune
 
@@ -80,7 +80,6 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 5. On the **Configuration settings** tab, configure the following settings:
 
-   - Allow Intrusion Prevention System: **Allowed**
    - Allow scanning of all downloaded files and attachments: **Allowed**
    - Allow Realtime Monitoring: **Allowed**
    - Check For Signatures Before Running Scan: **Enabled**

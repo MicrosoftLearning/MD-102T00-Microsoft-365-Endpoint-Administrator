@@ -76,13 +76,13 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 5. At the message prompt, select **Yes**.
 
-6. Switch to **SEA-SVR2** and maximize the SEA-WS4 window.
+6. Switch to **SEA-W10-CL3**.
 
-   _Note: SEA-WS4 should still be running from the previous lab._
+   > Note: SEA-W10-CL3 should still be running from the previous lab.
 
-7. Restart **SEA-WS4**.
+7. Restart **SEA-W10-CL3**.
 
-   _Note: This process can take 30 minutes and will reboot several times during the process. Your instructor may continue with the next module while this task completes. Be sure to come back to complete Task 3 during your next lab session._ 
+   > Note: This process can take 30 minutes and will reboot several times during the process. Your instructor may continue with the next module while this task completes. Be sure to come back to complete Task 3 during your next lab session.
 
 ### Task 3: Verify Autopilot deployment
 
@@ -106,12 +106,8 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 10. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
-11. On **SEA-WS4**, close the **Settings** window.
+11. On **SEA-W10-CL3*, close the **Settings** window.
 
-12. Shut down **SEA-WS4** and close the SEA-WS4 window.
-
-13. On SEA-SVR2, close Hyper-V Manager.
-
-    **Results**: After completing this exercise, you will have provisioned a Windows 11 device with Autopilot Reset using Self-Deploying mode.
+    **Results**: After completing this exercise, you will have provisioned a Windows device with Autopilot Reset using Self-Deploying mode.
 
 **END OF LAB**
