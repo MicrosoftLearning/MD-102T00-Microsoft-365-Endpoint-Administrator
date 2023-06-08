@@ -69,19 +69,19 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 5. In the PowerShell console, type the following and press **Enter**: 
 
-```
-dsregcmd /status
-```
+    ```
+    dsregcmd /status
+    ```
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed. This indicates that the device is Azure AD joined.
 
 7. In the output under **Tenant Details**, verify that the following three entries exist:
 
-```
-mdmUrl:https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc
-mdmTouUrl:https://portal.manage.microsoft.com/TermsofUse.aspx
-mdmComplianceUrl:https://portal.manage.microsoft.com/?portalAction=Compliance
-```
+    ```
+    mdmUrl:https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc
+    mdmTouUrl:https://portal.manage.microsoft.com/TermsofUse.aspx
+    mdmComplianceUrl:https://portal.manage.microsoft.com/?portalAction=Compliance
+    ```
 
 > Note: These entries indicate that the device is enrolled in Intune.
 

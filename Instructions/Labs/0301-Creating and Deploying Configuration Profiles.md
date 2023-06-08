@@ -143,9 +143,9 @@ You need to use Azure Active Directory (Azure AD) and Intune to manage members o
     
 5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
-```
-(device.deviceOSType -contains "Windows")
-```
+    ```
+    (device.deviceOSType -contains "Windows")
+    ```
 
 6. On the **Dynamic membership rules** blade, select **Save**.
 

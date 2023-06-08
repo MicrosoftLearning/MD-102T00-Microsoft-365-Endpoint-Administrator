@@ -34,15 +34,15 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 4. On the **Microsoft Intune admin center** page, select **Users**.
 
-5. On the **Users|All users** pane, in the Activity section, select **Sign-ins logs**.
+5. On the **Users|All users** pane, select **Sign-ins logs**.
 
 6. In the Details pane, user sign-ins are listed. Select the first entry where the **User** column displays **Aaron Nicholls**.
 
 7. In the **Details** pane, Aaron Nicholls´sign-in details are displayed.
 
-8. Select each of the main pages, including **Basic info**, **Location**, **Device info**, **Authentication Details**, and **Conditional Access**. Scroll to examine information on each page.
+8. Select each of the main pages, including **Basic info**, **Location**, **Device info**, **Authentication Details**, and **Conditional Access**. Scroll to examine information on each page and then select **X** in the top right hand corner to close out of the **Activity Details** page.
 
-9. In the Users navigation pane, in the Activity section, select **Audit logs**.
+9. In the Users navigation pane, select **Audit logs**.
 
 10. In the details pane, audit information is displayed about administrative changes to users. Examine the information by selecting the various entries.
 

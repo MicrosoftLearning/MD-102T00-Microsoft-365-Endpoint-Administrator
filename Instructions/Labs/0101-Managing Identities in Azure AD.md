@@ -332,7 +332,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 3. In the Microsoft Entra admin center, in the Navigation pane, select **User experiences** > **Company branding**.
 
-4. On the **Company Branding** page, under **Default sign-in experiance**, select **Customize**.
+4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
 5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** and configure the following settings and then select **Review + create**:
 

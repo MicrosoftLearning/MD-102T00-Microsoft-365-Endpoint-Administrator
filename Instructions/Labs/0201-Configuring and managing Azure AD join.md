@@ -88,10 +88,10 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 2. In the PowerShell console, type the following and press **Enter**: 
 
-```
-dsregcmd /status
-
-```
+    ```
+    dsregcmd /status
+    
+    ```
 
 3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed. 
 
@@ -215,10 +215,10 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 12. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
 
-```
-Start-ADSyncSyncCycle -PolicyType Initial
-
-```
+    ```
+    Start-ADSyncSyncCycle -PolicyType Initial
+    
+    ```
 
 13. Close the PowerShell window.
 
@@ -254,10 +254,10 @@ Start-ADSyncSyncCycle -PolicyType Initial
 
 14. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
 
-```
-Start-ADSyncSyncCycle -PolicyType Initial
-
-```
+    ```
+    Start-ADSyncSyncCycle -PolicyType Initial
+    
+    ```
 
 15. Close the PowerShell window.
 
@@ -277,9 +277,9 @@ Start-ADSyncSyncCycle -PolicyType Initial
 
 5. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
 
-```
-dsregcmd /status
-```
+    ```
+    dsregcmd /status
+    ```
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** and **DomainJoined : YES** are displayed.
 
