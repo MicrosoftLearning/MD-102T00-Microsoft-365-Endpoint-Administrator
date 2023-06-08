@@ -47,11 +47,11 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 7. On the **Create a policy** blade, provide the following value and select **Create**:
 
-- Platform: **Windows 10 and later**
+    - Platform: **Windows 10 and later**
 
 8. On the **Basics** tab, provide the following value and select **Next**:
 
-- Name: **Compliance1**
+    - Name: **Compliance1**
 
 9. On the **Compliance settings** tab, expand **Device Health** and review the available settings.
 
@@ -64,7 +64,7 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
     > Review how you can configure the number of days after which the device is marked as noncompliant, and configuration additional actions. 
 
-13. Select **Next**. On the **Assignments** tab, select **Add groups**. Select **Windows Devices**, choose **Select**, and then select **Next**. 
+13. Select **Next**. On the **Assignments** tab, under **Included groups** select **Add groups**. Select **Windows Devices**, choose **Select**, and then select **Next**. 
 
     _Note: The **Windows Devices** group was created in the Module 0301 lab._
 
@@ -93,7 +93,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 2. On the **Conditional Access | Overview** blade, select **Policies**.
 
-3. On the **Conditional Access | Policies** blade, select **New policy**.
+3. On the **Conditional Access | Policies** blade, select **Create new policy**.
 
 4. On the **New** blade, in the **Name** text box, type **Conditional1** and then select **0 users and groups selected**.
 
@@ -111,7 +111,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 11. Close Microsoft Edge.
 
-## Task 2: Verify that the conditional access policy is working
+### Task 2: Verify that the conditional access policy is working
 
 1. Switch to **SEA-WS3** and sign in as **Admin** with the password of **Pa55w.rd**.
 
@@ -121,7 +121,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 4. On the pick an account dialog box, select **`Aaron@yourtenant.onmicrosoft.com`**.
 
-5. On the **Enter password** page, enter **Pa55w.rd1234** and select **Sign in**. If the Microsoft Edge Save password prompt appears, select **Update**.
+5. On the **Enter password** page, enter **Pa55w.rd1234!** and select **Sign in**. If the Microsoft Edge Save password prompt appears, select **Update**.
 
 6. You should receive a message that ask you to switch Edge profile. Select **Switch Edge profile**.
 
@@ -129,25 +129,25 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 8. You will be required to enter your password again. Enter **Pa55w.rd1234!** and select **Sign in**.
 
-9. A message will appear stating, "**Stay signed in to all your Microsoft apps**". Select **no**.
+9. A message will appear stating, "**Stay signed in to all your Microsoft apps**". Select **no, sign in to this app only**.
 
-    > Note: A check bocks will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS3 is not joined to Azure AD and not managed by Intune.
+    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS3 is not joined to Azure AD and not managed by Intune.
 
-8. **Close**all windows and sign out of **SEA-WS3**.
+10. **Close** all windows and sign out of **SEA-WS3**.
 
-9. Switch to **SEA-WS1**, and sign in as as Aaron Nicholls with the PIN **102938**. 
+11. Switch to **SEA-WS1**, and sign in as as Aaron Nicholls with the PIN **102938**. 
 
-   > Note: SEA-WS1 is a managed Windows 11 device that is enrolled in Intune.
+    > Note: SEA-WS1 is a managed Windows 11 device that is enrolled in Intune.
 
-10. On the taskbar, select **Microsoft Edge**.
+12. On the taskbar, select **Microsoft Edge**.
 
-11. In Microsoft Edge, type **Outlook.office.com** and then press Enter. 
+13. In Microsoft Edge, type **Outlook.office.com** and then press Enter. 
 
-12. Verify that you can access Aaron's mailbox. 
+14. Verify that you can access Aaron's mailbox. 
 
-    _Note: This is because SEA-WS1 is a managed device and marked as compliant._
+    > Note: This is because SEA-WS1 is a managed device and marked as compliant._
 
-13. Close Microsoft Edge and sign out of SEA-WS1.
+15. Close Microsoft Edge and sign out of SEA-WS1.
 
 ### Task 3: Disable the conditional access policy
 
