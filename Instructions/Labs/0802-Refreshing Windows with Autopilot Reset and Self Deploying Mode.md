@@ -106,7 +106,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 10. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
-11. On **SEA-W10-CL3*, close the **Settings** window.
+11. On **SEA-W10-CL3**, close the **Settings** window.
 
     **Results**: After completing this exercise, you will have provisioned a Windows device with Autopilot Reset using Self-Deploying mode.
 
