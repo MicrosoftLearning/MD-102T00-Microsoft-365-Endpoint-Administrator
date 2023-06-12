@@ -219,6 +219,8 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
     Start-ADSyncSyncCycle -PolicyType Initial
     
     ```
+    
+    > **Note**: If you recieve an error running the command above, please wait 5 minutes for the previous re-configuration to fully synchronize. You can also view the current Sync status by opening the **Synchronization Service Manager**. In the windows taskbar select **Start**, expand **Azure AD Connect**, and then select **Synchronization Service**. In **Synchronization Service Manager**, verify all operations show a status of **Success** and not **In-Progress** before continuing. 
 
 13. Close the PowerShell window.
 
@@ -261,7 +263,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 15. Close the PowerShell window.
 
-    > Wait for approximately 5 minutes for the synchronization to complete.
+    > Wait for approximately 5 minutes for the synchronization to complete. You can also view the current Sync status by opening the **Synchronization Service Manager**. In the windows taskbar select **Start**, expand **Azure AD Connect**, and then select **Synchronization Service**. In **Synchronization Service Manager**, verify all operations show a status of **Success** and not **In-Progress** before continuing. 
 
 ### Task 4: Verify the Azure AD registration
 
@@ -283,7 +285,11 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** and **DomainJoined : YES** are displayed.
 
-   _Note: If the device is not yet joined to Azure AD wait for the Azure AD Connect sync to complete and restart SEA-CL2 again. It might take 5-10 minutes for the status to update._
+   > **Note**: If the device is not yet joined to Azure AD, switch back to **SEA-SRV1** and run the command below. Once completed, switch back to SEA-CL2 and restart the computer once more.
+   
+   ```
+   Start-ADSyncSyncCycle -PolicyType Delta
+   ```
 
 7. Close all windows on SEA-CL2 and sign out.
 
