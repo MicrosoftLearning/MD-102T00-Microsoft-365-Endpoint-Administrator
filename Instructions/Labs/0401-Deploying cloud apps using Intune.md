@@ -166,7 +166,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
      - Update channel: **Current Channel**
 
-7. On the **properties** tab, configure the following options and select **Next**:
+7. On the **properties** section, configure the following options and select **Next**:
 
      - Accept the Microsoft Software License Terms on behalf of users: **Yes**
      
