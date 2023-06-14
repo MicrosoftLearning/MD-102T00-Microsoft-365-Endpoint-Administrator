@@ -93,7 +93,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 2. On the **Conditional Access | Overview** blade, select **Policies**.
 
-3. On the **Conditional Access | Policies** blade, select **Create new policy**.
+3. On the **Conditional Access | Policies** blade, select **New policy**.
 
 4. On the **New** blade, in the **Name** text box, type **Conditional1** and then select **0 users and groups selected**.
 
