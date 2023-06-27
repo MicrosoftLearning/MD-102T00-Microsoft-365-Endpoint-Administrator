@@ -97,19 +97,21 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 4. On the **New** blade, in the **Name** text box, type **Conditional1** and then select **0 users and groups selected**.
 
-5. On the **Users and groups blade**, select the **All users** radio button.
+5. Under **Include**, select the **All users** radio button.
 
-6. On the **New** blade, select **No cloud apps, actions, or authentication contexts selected**, select the **Select apps** radio button, under the Select option select **None**, select **Office 365 Exchange Online**, and then click **Select**.
+6. On the **New** blade, in the **Target resources** section, select **No target resources selected**.
 
-7. On the **New** blade, in the **Conditions** section, select **0 conditions selected**. 
+7. Under **Include** choose the **Select apps** radio button, under the Select option select **None**, select **Office 365 Exchange Online**, and then click **Select**.
 
-8. In the list of conditions, under **Device platforms**, select **Not configured**. In the **Configure** section select **Yes**, select the **Select device platforms** radio button, select the **Windows** check box, and then select **Done**.
+8. On the **New** blade, in the **Conditions** section, select **0 conditions selected**. 
 
-9. On the **New** blade under **Access controls**, in the **Grant** section, select **0 controls selected**. Select the **Require device to be marked as compliant** check box, and then select **Select**.
+9. In the list of conditions, under **Device platforms**, select **Not configured**. In the **Configure** section select **Yes**, select the **Select device platforms** radio button, select the **Windows** check box, and then select **Done**.
 
-10. On the **New** blade, select **On** for the **Enable policy** option and then select **Create**.
+10. On the **New** blade under **Access controls**, in the **Grant** section, select **0 controls selected**. Select the **Require device to be marked as compliant** check box, and then select **Select**.
 
-11. Close Microsoft Edge.
+11. On the **New** blade, select **On** for the **Enable policy** option and then select **Create**.
+
+12. Close Microsoft Edge.
 
 ### Task 2: Verify that the conditional access policy is working
 
