@@ -85,7 +85,7 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 ### Scenario 
 
-When a user uses a device that is marked as non-compliant, they should not be able to access their e-mail. You've been asked to configure a conditional access policy that enforces this rule, and verify it functions as expected.
+When a user uses a device that is marked as non-compliant, they should not be able to access their e-mail. You've been asked to configure a conditional access policy that enforces this rule, and verify it functions as expected. In some cases, the user may experience a loop where they are prompted to sign in repeatedly.
 
 ### Task 1: Create a conditional access policy
 

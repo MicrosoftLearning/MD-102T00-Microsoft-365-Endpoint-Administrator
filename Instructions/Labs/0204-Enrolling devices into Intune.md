@@ -127,7 +127,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
    _Note: This view lists devices that are joined to Azure AD. Remember that you configured automatic enrollment between Azure AD and Intune, and because of that, any device that is joined to Azure AD is automatically enrolled to Intune. Any devices joined prior to setting up enrollment are only joined to Azure AD, but not enrolled in Intune._
 
-7. Open a new tab in **Microsoft Edge**, in the address bar type **https://microsoft.entra.com**, and then press **Enter**.
+7. Open a new tab in **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 8. In the Microsoft Entra admin center, expand **Azure Active Directory**.
 
