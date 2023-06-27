@@ -30,7 +30,7 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 4. Sign in as as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 
-5. In the Microsoft Endpoint Manager admin center, select **Endpoint security** from the navigation bar.
+5. In the Microsoft Intune admin center, select **Endpoint security** from the navigation bar.
 
 6. On the **Endpoint security| Overview** page, select **Disk encryption**.
 
@@ -47,7 +47,8 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
     -   Description: **Enable BitLocker for all devices**
 10. On the **Configurations settings** page, expand **BitLocker - Base Settings** and then configure the following options:
 
-     - Enable full disk encryption for OS and fixed data drives: **Yes**
+     - Enable Full disk or Used Space only encryption for OS and fixed data drives: **Yes**
+
 11. On the **Configurations settings** page, expand **BitLocker - OS Drive Settings** and then configure the following options:
      - BitLocker system drive policy: **Configure**
      - Startup authentication required: **Yes**

@@ -38,7 +38,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-4. In the Microsoft Endpoint Manager admin center, in the navigation pane, select **Devices**.
+4. In the Microsoft Intune admin center, in the navigation pane, select **Devices**.
 
 5. On the **Devices | Overview** page, in the **Policy** section, select **Group Policy analytics**.
 
@@ -50,35 +50,41 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
    > The Windows Client Policy GPO is immediately imported and analyzed.
 
-9. Close the **Import GPO files** page.
+9. Select Next twice, then select **Create**.
 
-10. On the **Devices | Group Policy analytics** blade, review the information next to **Windows Client Policy**.
+   > The Windows Client Policy GPO is imported and analyzed. It may take a few minutes to complete.
+
+10. Close the **Import GPO files** page.
+
+11. On the **Devices | Group Policy analytics** blade, review the information next to **Windows Client Policy**.
 
     > Notice that 89% of the settings have MDM support.
 
-11. Under MDM Support, select **89%**. 
+12. Under MDM Support, select **89%**. 
 
     > Notice each **Setting Name**, **MDM Support**, **CSP Name**, and the **CSP Mapping** for each supported setting. Take note of which settings do not have an equivalent CSP mapping.
 
-12. Close the **Windows Client Policy** window.
+13. Select Dashboard.
 
 ### Task 3: Review the Group Policy Analytics Summary Report
 
-1. In the Microsoft Endpoint Manager admin center, in the navigation pane, select **Reports**.
+1. In the Microsoft Intune admin center, in the navigation pane, select **Reports**.
 
 2. On the **Reports** page, in the **Device management** section, select **Group Policy analytics**.
 
 3. In the details pane, under **Summary**, select **Refresh**.
 
-   > It may take a minute to refresh and build the summary report.
+   > It may take several minutes to refresh and build the summary report. You may need to refresh several times.
 
 4. Review the **Group policy migration readiness** information.
 
    > There should be a number of policies ready for migration and a number of policies not supported.
 
-5. Select the **Reports** tab, and then select **Group policy migration readiness**.
+5. On the **Reports | Group policy analytics** blade, select **Reports** tab, and then select **Group policy migration readiness**.
 
-6. Select **Generate again**. 
+   > The Group policy migration readiness report provides information related to each setting, and the Profile Type supported.
+
+6. Select **Generate report**. 
 
 7. The Group policy migration readiness report provides information related to each setting, and the Profile Type supported.
 

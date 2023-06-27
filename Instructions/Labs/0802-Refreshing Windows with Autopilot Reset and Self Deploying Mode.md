@@ -27,7 +27,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 2. In **Microsoft Edge**, open a new tab and navigate to **https://intune.microsoft.com**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
 
-3. In the **Microsoft Endpoint Manager admin center**, select **Devices**.
+3. In the **Microsoft Intune admin center**, select **Devices**.
 
 4. In the **Device enrollment** section, select **Enroll devices**. 
 
@@ -53,10 +53,10 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 15. Ensure that the following options are set:
 
-- Language (Region): **Operating system default**
-- Automatically configure keyboard: **Yes**
-- Apply device name template: **Yes**
-- Enter a name: **Contoso-%RAND:2%**
+   - Language (Region): **Operating system default**
+   - Automatically configure keyboard: **Yes**
+   - Apply device name template: **Yes**
+   - Enter a name: **Contoso-%RAND:2%**
 
 16. Select **Next**.
 
@@ -68,27 +68,25 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 ### Task 2: Perform an Autopilot reset
 
-1. In the **Microsoft Endpoint Manager admin center**, select **Devices** and then select **All devices**.
+1. In the **Microsoft Intune admin center**, select **Devices** and then select **All devices**.
 
 2. Select the Autopilot PC (Begins with the name DESKTOP).
 
-3. In the **Reset this PC** section, select **Reset PC**.
-
-4. In the menu bar, select the ellipse and then select **Autopilot Reset**.
+3. In the menu bar, select the ellipse and then select **Autopilot Reset**.
 
 5. At the message prompt, select **Yes**.
 
-6. Switch to **SEA-SVR2** and maximize the SEA-WS4 window.
+6. Switch to **SEA-W10-CL3**.
 
-   _Note: SEA-WS4 should still be running from the previous lab._
+   > Note: SEA-W10-CL3 should still be running from the previous lab.
 
-7. Restart **SEA-WS4**.
+7. Restart **SEA-W10-CL3**.
 
-   _Note: This process can take 30 minutes and will reboot several times during the process. Your instructor may continue with the next module while this task completes. Be sure to come back to complete Task 3 during your next lab session._ 
+   > Note: This process can take 30 minutes and will reboot several times during the process. Your instructor may continue with the next module while this task completes. Be sure to come back to complete Task 3 during your next lab session.
 
 ### Task 3: Verify Autopilot deployment
 
-1. At the sign-in page, enter **`Aaron@yourtenant.onmicrosoft.com`** with the Password of **Pa55w.rd1234**.
+1. At the sign-in page, enter **`Aaron@yourtenant.onmicrosoft.com`** with the Password of **Pa55w.rd1234!**.
 
 2. At the **Use Windows Hello with your account**, select **OK**.
 
@@ -108,12 +106,8 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 10. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
-11. On **SEA-WS4**, close the **Settings** window.
+11. On **SEA-W10-CL3**, close the **Settings** window.
 
-12. Shut down **SEA-WS4** and close the SEA-WS4 window.
-
-13. On SEA-SVR2, close Hyper-V Manager.
-
-    **Results**: After completing this exercise, you will have provisioned a Windows 11 device with Autopilot Reset using Self-Deploying mode.
+    **Results**: After completing this exercise, you will have provisioned a Windows device with Autopilot Reset using Self-Deploying mode.
 
 **END OF LAB**

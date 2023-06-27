@@ -30,25 +30,23 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **<https://intune.microsoft.com>** in the address bar, and then press **Enter**.
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-5. On the **Microsoft Endpoint Manager admin center** page, select **Apps**.
+5. On the **Microsoft Intune admin center** page, select **Apps**.
 
 6. On the **Apps** page, in the navigation pane, select **All apps**.
 
 7. In the details pane, select **Add**.
 
-8. On the **Select app type** page, click the drop-down menu and then select **Microsoft store app**.
+8. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
 
-9. Read the information about Microsoft store app and then click **Select**. The **Add App** page opens.
+9. On the **Add App** page, click **Seach the  Microsoft Store app (new)**, search for and select **Microsoft Remote Desktop**. Click **Select**.
 
-10. On the **App information** page, enter the following information and then select **Next**:
+10. On the **App information** page, verify the following information and then select **Next**:
     - Name: **Microsoft Remote Desktop**
-    - Description: **Microsoft Remote Desktop for Research Department** (Select **Edit Description** to enter this information.)
-    - Publisher: **Microsoft**
-    - Appstore URL: `https://www.microsoft.com/p/microsoft-remote-desktop/9wzdncrfj3ps`
+    - Publisher: **Microsoft Corporation**
     - Category: **Business**
     - Show this as a featured app in the Company Portal: **Yes**
 
@@ -64,15 +62,15 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 2. In the details pane, scroll down to the **Assignments** section and then select **Edit**.
 
-3. On the **Assignments** page, select **Add group**.
+3. On the **Assignments** page, select **Add group** in the **Available for enrolled devices**.
 
-4. On the **Select groups** page, select the **Research** group and then click **Select**.
+4. On the **Select groups** page, search and select the **Research** group and then click **Select**.
 
 5. Select **Review + save** and then select **Save**.
 
 ### Task 3: Force policy synchronization from the Intune console
 
-1. In the **Microsoft Endpoint Manager admin center**, select **Devices** and then select **All devices**.
+1. In the **Microsoft Intune admin center**, select **Devices** and then select **All devices**.
 
 2. In the details pane, select **SEA-WS1**.
 
@@ -90,7 +88,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 4. If necessary, at the **Welcome to Microsoft Edge** page, select **Confirm and continue**. Close the Welcome page.
 
-5. In the address bar browse to <https://portal.manage.microsoft.com>.
+5. In the address bar browse to **https://portal.manage.microsoft.com** and then press **Enter**.
 
 6. Sign in as **Aaron Nicholls**.
 
@@ -108,17 +106,15 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 11. Select **Microsoft Remote Desktop**.
 
-12. On the Microsoft Remote Desktop page, select **Get in Store App**.
+12. On the Microsoft Remote Desktop page, select **Install**.
 
-13. On the **This site is trying to open Microsoft Store**, select **Open**.
+13. On the **Install Microsoft Remote Desktop** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
 
-14. On the **Microsoft Remote Desktop** page, select **Get**.
+   >It may take a few minutes for the app to install.
 
-    > The app starts to download and installs on SEA-WS1.
+14. After the app is installed close all open windows.
 
-15. After the app is installed close all open windows.
-
-17. Select **Start** and verify that **Remote Desktop** is displayed on the Start menu.
+15. Select **Start** and verify that **Remote Desktop** is displayed on the Start menu.
 
 **Results**: After completing this exercise, you will have successfully added and installed a Microsoft Store App from Intune.
 
@@ -140,7 +136,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 ### Task 2: Add Microsoft 365 apps to Intune
 
-1. On **SEA-SVR1**, in the **Microsoft Endpoint Manager admin center**, select **Apps**.
+1. On **SEA-SVR1**, in the **Microsoft Intune admin center**, select **Apps**.
 
 2. In the **Apps | Overview** blade, select **All Apps**. In the details pane, select **Add**.
 
@@ -152,7 +148,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
     - Suite Description: **Microsoft 365 Apps for the Research dept at Contoso** (Select **Edit Description** to enter this information.)
 
-5. On the **Configure app suite** tab, expand the **Select Office apps** dropdown, select the following Office apps:
+5. On the **Configure app suite** tab, expand the **Select Office apps** dropdown, and ensure that only the following apps are selected:
 
     - Excel
 
@@ -162,29 +158,31 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
     - Word
 
-6. On the **Configure app suite** tab, configure the following options and select **Next**:
+6. On the **App suite information** section, configure the following options:
 
      - Architecture: **64-bit**
 
+     - Default file format: **Office Open Document Format**
+
      - Update channel: **Current Channel**
 
+7. On the **properties** section, configure the following options and select **Next**:
+
      - Accept the Microsoft Software License Terms on behalf of users: **Yes**
-
-     - Default file format: **Office Open Document Format**
      
-7. On the **Assignments** tab, in the **Required** section, select **Add group.**
+8. On the **Assignments** tab, in the **Required** section, select **Add group.**
 
-8. On the **Select groups** blade, select **Research**, and then choose **Select**.
+9. On the **Select groups** blade, select **Research**, and then choose **Select**.
 
-9. Select **Next**. On the **Review + Create** tab, select **Create**.
+10. Select **Next**. On the **Review + Create** tab, select **Create**.
 
-10. On the **Microsoft 365 Apps (Research)** page, select **Properties**.
+11. On the **Microsoft 365 Apps (Research)** page, select **Properties**.
 
-11. In the details pane verify that **Research** is listed under **Required** in the **Assignments** section.
+12. In the details pane verify that **Research** is listed under **Required** in the **Assignments** section.
 
 ### Task 3: Force policy synchronization from the Intune console
 
-1. In the **Microsoft Endpoint Manager admin center**, select **Devices** and then select **All devices**.
+1. In the **Microsoft Intune admin center**, select **Devices** and then select **All devices**.
 
 2. In the details pane, select **SEA-WS1**.
 
@@ -214,21 +212,23 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 1. Switch to **SEA-SVR1**.
 
-2. In the **Microsoft Endpoint Manager admin center**, select **Apps**.
+2. In the **Microsoft Intune admin center**, select **Apps**.
 
 3. On the **Apps | Overview** blade, select **Monitor** and then select **App install status**.
 
 4. In the details pane, select **Microsoft 365 Apps \(Research\)**.
 
-5. In the details pane, under **Device status** and under **User status**, verify that **1** is displayed under Installed.
+5. In the details pane, under **Monitor** and under **User install status**, verify that **1** is displayed under Installed.
 
-   _Note: This indicates that the app is installed on one device and for one user. Note that it may take some time for the information to display._
+   _Note: that it may take some time for the information to display._
+   
+   _Note: This indicates that the app is installed on one device and for one user._
 
 6. Select **Device install status**.
 
    > In the details pane, you can see the devices that the app is installed on, and also the name of the user. The **Device Name** column should list **SEA-WS1** and the **Status** column should say **Installed**. This means that the app is installed on SEA-WS1.
 
-7. In the **Microsoft Endpoint Manager admin center**, select **Devices**.
+7. In the **Microsoft Intune admin center**, select **Devices**.
 
 8. On the **Devices | Overview** blade, select **All devices** and then in the details pane, select **SEA-WS1**.
 

@@ -53,13 +53,13 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 ### Task 2: Validate device enrollment into Azure AD And Intune
 
-1. On the **SEA-WS1** taskbar, select **Start**, type **certlm.msc**, press **Enter** and when prompted select **Yes**.
+1. On the **SEA-WS1** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**.
     
 2. In the **Certificates** console, in the navigation pane, expand **Personal** and select the **Certificate** node. Verify that the following certificates are listed in the details pane:
 
 -   Microsoft Intune MDM Device CA
 -   MS-Organization-Access
--   MS-Organization-P2P-Access \[2021\]
+-   MS-Organization-P2P-Access \[2023\]
 
     This indicates that the device is enrolled in Azure AD and Intune.
 
@@ -69,21 +69,21 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 5. In the PowerShell console, type the following and press **Enter**: 
 
-```
-dsregcmd /status
-```
+    ```
+    dsregcmd /status
+    ```
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed. This indicates that the device is Azure AD joined.
 
 7. In the output under **Tenant Details**, verify that the following three entries exist:
 
-```
-mdmUrl:https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc
-mdmTouUrl:https://portal.manage.microsoft.com/TermsofUse.aspx
-mdmComplianceUrl:https://portal.manage.microsoft.com/?portalAction=Compliance
-```
+    ```
+    mdmUrl:https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc
+    mdmTouUrl:https://portal.manage.microsoft.com/TermsofUse.aspx
+    mdmComplianceUrl:https://portal.manage.microsoft.com/?portalAction=Compliance
+    ```
 
-_Note: These entries indicate that the device is enrolled in Intune._
+> Note: These entries indicate that the device is enrolled in Intune.
 
 ### Task 3: Sign in as an Azure AD user
 
@@ -113,7 +113,7 @@ _Note: These entries indicate that the device is enrolled in Intune._
 
 ### Task 4: Verifying device enrollment in the Intune console
 
-1. Switch to **SEA-SVR1**. 
+1. Switch to **SEA-SVR1** as **Admin** with the password of **Pa55w.rd**. 
 
 2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. Sign in with your Tenant administrator account.
 
@@ -127,11 +127,11 @@ _Note: These entries indicate that the device is enrolled in Intune._
 
    _Note: This view lists devices that are joined to Azure AD. Remember that you configured automatic enrollment between Azure AD and Intune, and because of that, any device that is joined to Azure AD is automatically enrolled to Intune. Any devices joined prior to setting up enrollment are only joined to Azure AD, but not enrolled in Intune._
 
-7. Open a new tab in **Microsoft Edge**, in the address bar type **https://aad.portal.azure.com**, and then press **Enter**.
+7. Open a new tab in **Microsoft Edge**, in the address bar type **https://microsoft.entra.com**, and then press **Enter**.
 
-8. In the Azure Active Directory admin center, select **Azure Active Directory**.
+8. In the Microsoft Entra admin center, expand **Azure Active Directory**.
 
-9. In the Contoso page, select **Devices**, then select **All devices**. 
+9. Select **Devices**, then select **All devices**. 
 
    > Take note of SEA-WS1. Notice that the Join Type column displays **Azure AD joined** and the MDM column displays **Microsoft Intune**.
 
