@@ -36,7 +36,7 @@ You've also been told that several more employees will be hired over the next co
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. In the address bar, enter **<http://portal.office.com>**.
+4. In the address bar, enter **http://portal.office.com**.
 
 5. At the Sign-in prompt, enter **`admin@yourtenant.onmicrosoft.com`** and then select **Next**.
 
@@ -62,7 +62,7 @@ You've also been told that several more employees will be hired over the next co
 
 14. On the **Create new user** page, enter the following:
 
-    - User Principal Name: **`ereeve`**
+    - User Principal Name: **ereeve**
     - Display Name: **Edmund Reeve**
 
 15. Uncheck **Auto-generated password**
