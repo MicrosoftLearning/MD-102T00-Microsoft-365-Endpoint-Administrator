@@ -49,7 +49,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 13. For **Convert all targeted devices to Autopilot** select **No**, and then select **Next**.
 
-14. On the **Out-of-box experience (OOBE)** tab, ensure that the **Deployment mode** is set to **Self-Deploying**.
+14. On the **Out-of-box experience (OOBE)** tab, ensure that the **Deployment mode** is set to **Self-Deploying (preview)**.
 
 15. Ensure that the following options are set:
 
@@ -82,7 +82,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 7. Restart **SEA-W10-CL3**.
 
-   > Note: This process can take 30 minutes and will reboot several times during the process. Your instructor may continue with the next module while this task completes. Be sure to come back to complete Task 3 during your next lab session.
+   > Note: This process can take 30-45 minutes and will reboot several times during the process. 
 
 ### Task 3: Verify Autopilot deployment
 

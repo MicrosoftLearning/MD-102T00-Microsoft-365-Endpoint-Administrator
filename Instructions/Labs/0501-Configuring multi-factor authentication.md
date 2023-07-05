@@ -24,7 +24,7 @@ To provide additional security for user sign on events, you need to configure an
 
 4. At the **Sign in** page, enter **`AlexW@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-5. On the **Enter password** page, enter **Pa55w.rd** and select **Sign in**. At the Edge Save password prompt, select **Save**.
+5. On the **Enter password** page, enter the tenant password provided by your instructor and select **Sign in**. At the Edge Save password prompt, select **Save & Turn on**.
 
 6. At the **Stay signed in** prompt, select **No**.
 
@@ -66,7 +66,7 @@ To provide additional security for user sign on events, you need to configure an
 
 12. In the user list, select the check box next to **Alex Wilber**.
 
-13. On the **quick steps** pane, select **enable**.
+13. On the **quick steps** pane, select **Enable**.
 
 14. On the **About enabling multi-factor auth** message, select **enable multi-factor auth**.
 
@@ -86,7 +86,7 @@ To provide additional security for user sign on events, you need to configure an
 
 5. On the **Enter password** page, enter the tenant password and select **Sign in**.
 
-6. At the **More information required** page, select **Next**. The Keep you account secure page opens.
+6. At the **More information required** page, select **Next**. The Keep your account secure page opens.
 
    > Typically, you will want to use the Microsoft Authenticator app to manage multi-factor authentication. However for this lab scenario, you will use text messages.
 
@@ -96,7 +96,7 @@ To provide additional security for user sign on events, you need to configure an
 
 9. After you receive the verification code as a text message, enter the code where indicated on the **Keep your account secure** page and then select **Next**.
 
-10. on the **Keep your account secure** page, you will receive a message "Great job! You have successfully set up your security info. Choose **Done** to continue signing in." Select **Done**.
+10. On the **Keep your account secure** page, you will receive a message "Great job! You have successfully set up your security info. Choose **Done** to continue signing in." Select **Done**.
 
 11. At the Stay signed in message, select **No**. 
 
@@ -124,9 +124,9 @@ To provide additional security for user sign on events, you need to configure an
 
 6. In the user list, select the check box next to **Alex Wilber**.
 
-7. On the **quick steps** pane, select **disable**.
+7. On the **quick steps** pane, select **Disable**.
 
-8. On the **Disable multi-factor authentication?** message, select **Yes**.
+8. On the **Disable multi-factor authentication?** message, select **yes**.
 
 9. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Disabled**.
 
@@ -154,7 +154,7 @@ To provide additional security for user sign on events, you need to configure an
 
 6. On the **Stay signed in** page, select **No**. 
 
-   > Outlook opens to Alex's inbox. Take note that only the password was required to sign in to Outlook on the Web.
+   > Outlook opens to Alex's inbox. Take note that only the password was required to sign in to Outlook on the Web as you removed the MFA in the previous Exercise.
 
 7. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
 
@@ -170,11 +170,11 @@ To provide additional security for user sign on events, you need to configure an
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, expand **Azure Active Directory**. In the navigation pane, select **Protect and Secure**.
+4. In the Microsoft Entra admin center, expand **Azure Active Directory**.
 
-5. On the **Protect and Secure** page, select **Conditional Access**.
+5. In the navigation pane, expand **Protect & Secure** page, and then select **Conditional Access**.
 
-6. On the **Conditional Access** page, select **Policies**, select **New policy**, and then select **Create new policy**.
+6. On the **Conditional Access** page, select **Policies**, and then select **New policy**.
 
 7. On the **New Conditional access policy** page, in the **Name** box, enter **Contoso MFA Policy**.
 
@@ -186,7 +186,7 @@ To provide additional security for user sign on events, you need to configure an
 
     > Note that typically you would specify a group, however for this exercise we will just test the setting on Alex Wilber.
 
-11. Select **No cloud apps, actions, or authentication contexts selected** and then click **Select apps**.
+11. Select **No target resources selected** and then click **Select apps**.
 
     > Note the Control access based on client app setting. This setting allows you to specify the client app that is used to access the resource. For example, you can specify that only the Outlook app can be used to access Exchange Online. 
 
@@ -196,7 +196,7 @@ To provide additional security for user sign on events, you need to configure an
 
 14. Under **Access controls**, in the **Grant** section, select **0 controls selected**.
 
-15. On the **Grant** page, select **Grant access**, select the check box next to **Require multi-factor authentication**, and then click **Select**.
+15. On the **Grant** page, select **Grant access**, select the check box next to **Require multifactor authentication**, and then click **Select**.
 
 16. Under **Enable policy**, select **On**.
 
@@ -218,7 +218,7 @@ To provide additional security for user sign on events, you need to configure an
 
 6. At the Verify your identity prompt, select your phone number.
 
-   > The Enter code dialog box opens. Notice that "don't ask again for 30 days" is selected by default.
+   > The Enter code dialog box opens.
 
 7. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
 
@@ -238,9 +238,9 @@ To provide additional security for user sign on events, you need to configure an
 
 3. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Microsoft Entra admin admin center opens.
+   > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, under **protect and secure** select **Conditional Access**.
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Protect & secure** and then select **Conditional Access**.
 
 5. On the **Conditional Access** page, select **Policies** and then select **Contoso MFA Policy**.
 

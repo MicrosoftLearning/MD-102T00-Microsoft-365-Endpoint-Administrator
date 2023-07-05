@@ -64,8 +64,6 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
     > Notice each **Setting Name**, **MDM Support**, **CSP Name**, and the **CSP Mapping** for each supported setting. Take note of which settings do not have an equivalent CSP mapping.
 
-13. Select Dashboard.
-
 ### Task 3: Review the Group Policy Analytics Summary Report
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Reports**.
