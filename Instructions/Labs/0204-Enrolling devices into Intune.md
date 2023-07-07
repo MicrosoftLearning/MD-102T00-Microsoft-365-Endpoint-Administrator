@@ -113,7 +113,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 ### Task 4: Verifying device enrollment in the Intune console
 
-1. Switch to **SEA-SVR1** as **Admin** with the password of **Pa55w.rd**. 
+1. Switch to **SEA-SVR1** as **Contoso\Administrator** with the password of **Pa55w.rd**. 
 
 2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. Sign in with your Tenant administrator account.
 
