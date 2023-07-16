@@ -43,7 +43,7 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 5. From the navigation pane select **Devices**, then select **Compliance policies**.
 
-6. On the **Compliance policies | Policies** blade, in the details pane select **Create Policy**.
+6. On the **Compliance policies | Policies** blade, in the details pane select **Create policy**.
 
 7. On the **Create a policy** blade, provide the following value and select **Create**:
 
@@ -133,7 +133,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 9. A message will appear stating, "**Stay signed in to all your Microsoft apps**". Select **no, sign in to this app only**.
 
-    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS3 is not joined to Azure AD and not managed by Intune.
+    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS3 is not joined to Azure AD and not managed by Intune. As such, you are unable to access Aarons' mailbox from this device.
 
 10. **Close** all windows and sign out of **SEA-WS3**.
 
@@ -143,7 +143,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 12. On the taskbar, select **Microsoft Edge**.
 
-13. In Microsoft Edge, type **Outlook.office.com** and then press Enter. 
+13. In Microsoft Edge, type **outlook.office.com** and then press Enter. 
 
 14. Verify that you can access Aaron's mailbox. 
 

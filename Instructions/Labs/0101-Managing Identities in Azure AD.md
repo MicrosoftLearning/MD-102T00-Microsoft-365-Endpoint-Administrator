@@ -36,7 +36,7 @@ You've also been told that several more employees will be hired over the next co
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. In the address bar, enter **<http://portal.office.com>**.
+4. In the address bar, enter **<https://admin.microsoft.com>**.
 
 5. At the Sign-in prompt, enter **`admin@yourtenant.onmicrosoft.com`** and then select **Next**.
 
@@ -46,100 +46,98 @@ You've also been told that several more employees will be hired over the next co
 
 7. At the Save password prompt, select **Save & Turn on**.
 
-8. At the Stay signed in prompt, select **No**. The Office 365 portal opens.
+8. At the Stay signed in prompt, select **No**. The Microsoft 365 admin center opens.
 
-9. At the top left corner, select the **App launcher** and then select **Admin**. The Microsoft 365 admin center opens.
+9. Select the **Navigation menu** and then select **Show all**.
 
-10. Select the **Navigation menu** and then select **Show all**.
+10. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
 
-11. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
-
-12. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
+11. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
 
     > Take note of the users that already exist as members of the Azure AD domain. The **On-premises sync enabled** column states **No** for all current users. This indicates that each user was created directly in Azure AD and not synchronized from an on-premises directory service.
 
-13. On the **Users | All users** page, select **New user** then select **Create new user**.
+12. On the **Users | All users** page, select **New user** then select **Create new user**.
 
-14. On the **Create new user** page, enter the following:
+13. On the **Create new user** page, enter the following:
 
     - User Principal Name: **`ereeve`**
     - Display Name: **Edmund Reeve**
 
-15. Uncheck **Auto-generated password**
+14. Uncheck **Auto-generated password**
 
-16. Next to **Password**, enter **Pa55-w.rd!**.
+15. Next to **Password**, enter **Pa55-w.rd!**.
 
-17. Select **Next:Properties** located at the bottom of the page.
+16. Select **Next:Properties** located at the bottom of the page.
 
-18. Next to **First name**, enter **Edmund**.
+17. Next to **First name**, enter **Edmund**.
 
-19. Next to **Last name**, enter **Reeve**.
+18. Next to **Last name**, enter **Reeve**.
 
-20. Next to **User type**, make note that **Member** is selected.
+19. Next to **User type**, make note that **Member** is selected.
     > Note: The **Member** user type is the default user type. This user type is used for most users in an organization.
 
-21. Next to **Job title**, enter **HR Rep**.
+20. Next to **Job title**, enter **HR Rep**.
 
-22. Next to **Department**, enter **HR**.
+21. Next to **Department**, enter **HR**.
 
-23. Next to **Usage location**, select **United States**.
+22. Next to **Usage location**, select **United States**.
 
-24. Select **Next:Assignments** located at the bottom of the page.
+23. Select **Next:Assignments** located at the bottom of the page.
 
-25. On the **Assignments** page, note that no assignments are selected.
+24. On the **Assignments** page, note that no assignments are selected.
     > by default no groups are assigned to the user. This is because the user is not a member of any groups until you assign them.
 
-26. Select **Next:Review + create** located at the bottom of the page.
+25. Select **Next:Review + create** located at the bottom of the page.
     > Review the information on this page to ensure that it is correct.
 
-27. Select **Create**.
+26. Select **Create**.
 
-28. On the **Users | All users** page, select **New user** then select **Create new user**.
+27. On the **Users | All users** page, select **New user** then select **Create new user**.
 
-29. On the **Create new user** page, enter the following:
+28. On the **Create new user** page, enter the following:
 
     - User Principal Name: **`msnider`**
     - Display Name: **Miranda Snider**
 
-30. Uncheck **Auto-generated password**
+29. Uncheck **Auto-generated password**
 
-31. Next to **Password**, enter **Pa55-w.rd!**.
+30. Next to **Password**, enter **Pa55-w.rd!**.
 
-32. Select **Next:Properties** located at the bottom of the page.
+31. Select **Next:Properties** located at the bottom of the page.
 
-33. Next to **First name**, enter **Miranda**.
+32. Next to **First name**, enter **Miranda**.
 
-34. Next to **Last name**, enter **Snider**.
+33. Next to **Last name**, enter **Snider**.
 
-35. Next to **User type**, make note that **Member** is selected.
+34. Next to **User type**, make note that **Member** is selected.
 
-36. Next to **Job title**, enter **Helpdesk Manager**.
+35. Next to **Job title**, enter **Helpdesk Manager**.
 
-37. Next to **Department**, enter **Operations**.
+36. Next to **Department**, enter **Operations**.
 
-38. Next to **Usage location**, select **United States**.
+37. Next to **Usage location**, select **United States**.
 
-39. Select **Next:Assignments** located at the bottom of the page.
+38. Select **Next:Assignments** located at the bottom of the page.
 
-40. On the **Assignments** page, note that no assignments are selected.
+39. On the **Assignments** page, note that no assignments are selected.
 
-41. Select **Next:Review + create** located at the bottom of the page.
+40. Select **Next:Review + create** located at the bottom of the page.
 
-42. Select **Create**.
+41. Select **Create**.
 
-43. Minimize the **Microsoft Edge** window.
+42. Minimize the **Microsoft Edge** window.
 
 ### Task 2: Create users by using PowerShell
 
 1. On **SEA-SVR1**, click into the **Windows Search** bar and then type **PWSH**. Right click on **PowerShell 7** and then select **Run as Administrator**.
 
-2. In the **Windows PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
+2. In the **PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
 
     ```
     Install-Module Microsoft.Graph -Scope CurrentUser
     ```
 
-3. In the **Windows PowerShell 7** window, type the following command, and then press **Enter**:
+3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
 
     ```
     Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
@@ -149,9 +147,9 @@ You've also been told that several more employees will be hired over the next co
 
 5. On the **Permissions Requested** prompt that appears, check **Consent on behalf of your organization** and then select **Accept**.
 
-6. Close out of the **Authentication complete** tab in and then minimize **Microsoft Edge**
+6. Close out of the **Authentication complete** tab and then minimize **Microsoft Edge**
 
-7. Back In the **Windows PowerShell 7** window, type the following code to create a new profile object, and then press **enter**. Replace **Pa55w.rd** with a complex password of your choice:
+7. Back In the **PowerShell 7** window, type the following code to create a new profile object, and then press **enter**. Replace **Pa55w.rd** with a complex password of your choice:
 
     ```
     $PWProfile = @{
@@ -173,7 +171,7 @@ You've also been told that several more employees will be hired over the next co
         -Department "Sales" -JobTitle "Sales Rep"
     ```
 
-9. To confirm that the user **Cody Godinez** was created, In the **Windows PowerShell 7** window, type the following command and then press **Enter**:
+9. To confirm that the user **Cody Godinez** was created, In the **PowerShell 7** window, type the following command and then press **Enter**:
 
     ```
     Get-MgUser
@@ -216,7 +214,7 @@ You have been provided a list of users should have administrative roles assigned
 
 8. Select **Add**.
 
-9. In the navigation pane, select **Roles & administrators | All roles**.
+9. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
 10. Using the search box, search for **User administrator**.
 
@@ -228,7 +226,7 @@ You have been provided a list of users should have administrative roles assigned
 
 14. Select **Add**.
 
-15. In the navigation pane, select **Roles & administrators | All roles**.
+15. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
 16. Using the search box, search for **Helpdesk administrator**.
 
@@ -278,15 +276,15 @@ You also been asked to modify the Company branding for the sign-in page.
 
 ### Task 2: Create groups by using PowerShell
 
-1. On SEA-SVR1, switch to Windows PowerShell 7.
+1. On SEA-SVR1, switch to PowerShell 7.
 
-2. In the **Windows PowerShell 7** window, type the following code to create a new group, and then press **Enter**:
+2. In the **PowerShell 7** window, type the following code to create a new group, and then press **Enter**:
 
     ```
     New-MgGroup -DisplayName “Contoso_Sales” -Description “Contoso Sales team users” -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
     ```
 
-3. In the **Windows PowerShell 7** window, type the following command, and then press **Enter**:
+3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
 
     ```
     Get-MgGroup
@@ -294,25 +292,25 @@ You also been asked to modify the Company branding for the sign-in page.
 
 4. Verify that you get the list of groups in your tenant, including the Contoso_Sales group you just created.
 
-5. In the **Windows PowerShell 7** window, type the following code to define a variable as the Contoso_Sales group, and then press **Enter**:
+5. In the **PowerShell 7** window, type the following code to define a variable as the Contoso_Sales group, and then press **Enter**:
 
     ```
     $group = Get-MgGroup | Where-Object {$_.DisplayName -eq "Contoso_Sales"}
     ```
 
-6. In the **Windows PowerShell 7** window, type the following code to define another variable as the user, and then press **Enter**:
+6. In the **PowerShell 7** window, type the following code to define another variable as the user, and then press **Enter**:
 
     ```
     $user = Get-MgUser | Where-Object {$_.DisplayName -eq “Cody Godinez”}
     ```
 
-7. In the **Windows PowerShell 7** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
+7. In the **PowerShell 7** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
 
     ```
     New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
     ```
 
-8. In the **Windows PowerShell** window, type the following code, and then press **Enter**:
+8. In the **PowerShell 7** window, type the following code, and then press **Enter**:
 
     ```
     Get-MgGroupMember -GroupId $group.Id | FL
@@ -320,7 +318,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 9. Verify that you see **Cody Godinez** as value in **AdditionalProperties**.
 
-10. Close Windows PowerShell 7.
+10. Close PowerShell 7.
 
 ### Task 3: Review licenses and modify company branding
 
@@ -334,7 +332,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
-5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** and configure the following settings and then select **Review + create**:
+5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** and configure the following settings:
 
    - Sign-in page text: **Contoso Corp. Sign-in Page**
 

@@ -58,7 +58,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 1. Switch to **SEA-W10-CL3** and sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
 
-2. Right-click **Start**, select **Windows Terminal (Admin)**, and then select **Yes** at the **User Account Control** prompt.
+2. Right-click **Start**, select **Windows PowerShell (Admin)**, and then select **Yes** at the **User Account Control** prompt.
 
 3. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
@@ -94,7 +94,9 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 1. On **SEA-W10-CL3**, in the windows taskbar, select **Microsoft Edge**.
 
-2. In **Microsoft Edge**, navigate to **https://intune.microsoft.com**. Sign in with your **`Admin@yourtenant.onmicrosoft.com`**.
+2. In **Microsoft Edge**, navigate to **https://intune.microsoft.com**. Sign in with your **`Admin@yourtenant.onmicrosoft.com`** account.
+
+    >Note: You will be prompted to register for MFA. Follow the same procedures you used earlier in the course to add your phone number.
 
 3. In the **Microsoft Intune admin center**, select **Devices**.
 
@@ -106,7 +108,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
    _Note: The import process can take up to 15 minutes, but normally takes around 5 minutes._  
 
-   _**Important**: After the process is complete, the device may not show. If this is the case, select the **Sync** button, wait a few minutes, and then select **Refresh**._
+   _**Important**: After the process is complete, the device may not show automatically. If this is the case, select the **Refresh** button. If the device still does not appear, select the **Sync** button, wait a few minutes, and then select **Refresh**._
 
 7. Select **X** to close the **Windows Autopilot devices** blade. 
 
@@ -154,7 +156,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 1. On **SEA-W10-CL3**, select **Start**, type **reset** and select **Reset this PC**.
 
-2. In the **Reset this PC** section, select **Reset PC**.
+2. In the **Reset this PC** section, select **Get started**.
 
 3. Select **Remove everything**, and then select **Local reinstall**.
 
@@ -162,7 +164,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
    >Note: Normally this task is not required for new deployment of physical devices. The device’s autopilot info is either provided by the manufacturer or can be obtained from the device prior to the OOBE. For the purposes of this lab, we must initiate a reset to simulate a new device OOBE.
 
-   >Note: This process can take 30-45 minutes and will reboot several times during the process. Your instructor may continue with the next module while this task completes. Be sure to come back to complete Task 5 during your next lab session. 
+   >Note: This process can take 30-60 minutes and will reboot several times during the process.
 
 ### Task 5: Verify Autopilot deployment
 

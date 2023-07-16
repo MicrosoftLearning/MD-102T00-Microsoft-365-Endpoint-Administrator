@@ -164,9 +164,9 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
      - Architecture: **64-bit**
 
-     - Default file format: **Office Open Document Format**
+     - Default file format: **Office Open XML Format**
 
-     - Update channel: **Current Channel**
+     - Update channel: **Monthly Enterprise Channel**
 
 7. On the **properties** section, configure the following options and select **Next**:
 

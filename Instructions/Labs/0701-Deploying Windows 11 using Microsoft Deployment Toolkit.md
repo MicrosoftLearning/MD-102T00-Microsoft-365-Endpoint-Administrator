@@ -239,7 +239,7 @@ You need to deploy a new Windows 11 virtual machine named SEA-WS4. You decide to
 
 30. On the **Ready** page, select **Begin**. 
 
-    > The installation begins. It will take some time to complete and will reboot SEA-WS4 during the installation as needed.
+    > The installation begins. It will take 15-20 minutes to complete and will reboot SEA-WS4 during the installation as needed.
 
 31. Switch to the **Deployment Workbench**.
 

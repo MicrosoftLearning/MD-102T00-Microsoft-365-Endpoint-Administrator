@@ -95,7 +95,7 @@ The Help Desk has indicated that a large number of support tickets are related t
      - Create new password: **Pa55w.rd1234!**
      - Confirm new password: **Pa55w.rd1234!**
 
-10. If the Microsoft Edge prompts to save the password, select **Save**.
+10. If Microsoft Edge prompts to save the password, select **Save**.
 
 11. Close Microsoft Edge and sign out of SEA-WS3.
 

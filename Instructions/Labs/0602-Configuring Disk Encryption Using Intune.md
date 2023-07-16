@@ -49,6 +49,8 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
      - Enable Full disk or Used Space only encryption for OS and fixed data drives: **Yes**
 
+    > **Note** If you don't see the below settings, navigate to https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/CreateUpdate/templateId/d1174162-1dd2-4976-affc-6667049ab0ae/baselineVersion//platform/Windows%2010%20and%20later/templateName/BitLocker/feature~/2 and resume from Step 8
+
 11. On the **Configurations settings** page, expand **BitLocker - OS Drive Settings** and then configure the following options:
      - BitLocker system drive policy: **Configure**
      - Startup authentication required: **Yes**
