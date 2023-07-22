@@ -28,7 +28,7 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, expand **Azure Active Directory**.
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
 
 5. Select **Devices** > **All devices**. 
 
@@ -111,7 +111,7 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 9. Switch to **SEA-SVR1**.
 
-10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Azure Active Directory**.
+10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
 
 11. Select **Devices**, and then select **All devices**. 
 
@@ -189,44 +189,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 8. Close **Active Directory Users and Computers**.
 
-### Task 2: Re-configure Azure AD Connect
-
-1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
-
-2. In the **Microsoft Azure Active Directory Connect** window select **Configure**.
-
-3. On the **Additional tasks** page, select **Customize synchronization options** and select **Next**.
-
-4. On the **Connect to Azure AD** page enter the Admin Tenant password into the **PASSWORD** box, then select **Next**.
-
-5. On the **Connect your directories** page, select **Next**.
-
-6. On the **Domain and OU filtering** page, ensure that **Sync selected domains and OUs** is selected and then expand **Contoso.com**.
-
-7. Select the check box next to **Azure AD clients**. Do not make any other changes and then select **Next**.
-
-8. In the **Optional features** page, do not make any changes and then select **Next**.
-
-9. In the **Ready to configure** window, select **Configure** to run the configuration and start synchronization.
-
-10. When the configuration is complete, select **Exit**.
-
-11. On the taskbar, right-click **Start** and select **Windows Powershell (Admin)**.
-
-12. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
-
-    ```
-    Start-ADSyncSyncCycle -PolicyType Initial
-    
-    ```
-    
-    > **Note**: If you recieve an error running the command above, please wait 5 minutes for the previous re-configuration to fully synchronize. You can also view the current Sync status by opening the **Synchronization Service Manager**. In the windows taskbar select **Start**, expand **Azure AD Connect**, and then select **Synchronization Service**. In **Synchronization Service Manager**, verify all operations show a status of **Success** and not **In-Progress** before continuing. 
-
-13. Close the PowerShell window.
-
-    > Wait for approximately 5 minutes for the synchronization to complete.
-
-### Task 3: Configure hybrid Azure AD join in Azure Active Directory Connect
+### Task 2: Configure hybrid Azure AD join in Azure Active Directory Connect
 
 1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
 
@@ -252,18 +215,35 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 12. When the configuration is complete, select **Exit**.
 
-13. On the taskbar, right-click **Start** and select **Windows Powershell (Admin)**.
+13. Switch to **SEA-CL2**.
 
-14. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
+14. At the sign-in page, select the **Power** button and then select **Restart**.
 
-    ```
-    Start-ADSyncSyncCycle -PolicyType Initial
-    
-    ```
+    >**Note** Restarting **SEA-CL2** will enable quicker discovery of the SCP created by reconfiguring AAD Connect.
 
-15. Close the PowerShell window.
+### Task 3: Re-configure Azure AD Connect to sync the new OU
 
-    > Wait for approximately 5 minutes for the synchronization to complete. You can also view the current Sync status by opening the **Synchronization Service Manager**. In the windows taskbar select **Start**, expand **Azure AD Connect**, and then select **Synchronization Service**. In **Synchronization Service Manager**, verify all operations show a status of **Success** and not **In-Progress** before continuing. 
+1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
+
+2. In the **Microsoft Azure Active Directory Connect** window select **Configure**.
+
+3. On the **Additional tasks** page, select **Customize synchronization options** and select **Next**.
+
+4. On the **Connect to Azure AD** page enter the Admin Tenant password into the **PASSWORD** box, then select **Next**.
+
+5. On the **Connect your directories** page, select **Next**.
+
+6. On the **Domain and OU filtering** page, ensure that **Sync selected domains and OUs** is selected and then expand **Contoso.com**.
+
+7. Select the check box next to **Azure AD clients**. Do not make any other changes and then select **Next**.
+
+8. In the **Optional features** page, do not make any changes and then select **Next**.
+
+9. In the **Ready to configure** window, select **Configure** to run the configuration and start synchronization.
+
+10. When the configuration is complete, select **Exit**.
+
+    > **Note**: AAD Connect synchronizes automatically now when you modify the OUs being synced. You can use the **Synchronization Service** to monitor sync status.
 
 ### Task 4: Verify the Azure AD registration
 
@@ -295,7 +275,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 8. Switch to **SEA-SVR1** and switch to the Microsoft Entra admin center.
 
-9. Expand **Azure Active Directory**, and then select **Devices** > **All devices**. 
+9. Expand **Identity**, and then select **Devices** > **All devices**. 
 
 10. Verify that **SEA-CL2** has **Hybrid Azure AD joined** as value for the row **Join Type**. If necessary, select the **Refresh** button if SEA-CL2 is not listed.
 

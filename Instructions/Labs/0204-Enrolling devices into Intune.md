@@ -129,7 +129,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 7. Open a new tab in **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
-8. In the Microsoft Entra admin center, expand **Azure Active Directory**.
+8. In the Microsoft Entra admin center, expand **Identity**.
 
 9. Select **Devices**, then select **All devices**. 
 

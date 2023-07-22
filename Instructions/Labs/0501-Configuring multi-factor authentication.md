@@ -170,39 +170,37 @@ To provide additional security for user sign on events, you need to configure an
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, expand **Azure Active Directory**.
+4. In the navigation pane, expand **Protection** page, and then select **Conditional Access**.
 
-5. In the navigation pane, expand **Protect & Secure** page, and then select **Conditional Access**.
+5. On the **Conditional Access** page, select **Policies**, and then select **New policy**.
 
-6. On the **Conditional Access** page, select **Policies**, and then select **New policy**.
+6. On the **New Conditional access policy** page, in the **Name** box, enter **Contoso MFA Policy**.
 
-7. On the **New Conditional access policy** page, in the **Name** box, enter **Contoso MFA Policy**.
+7. Under **Assignments**, select **0 users and groups selected**.
 
-8. Under **Assignments**, select **0 users and groups selected**.
+8. In the Users and groups pane, select the option next to **Select users and groups** and then select the check box next to **Users and groups**.
 
-9. In the Users and groups pane, select the option next to **Select users and groups** and then select the check box next to **Users and groups**.
-
-10. On the **Select users and groups** page, select **Alex Wilber** and then select **Select**. 
+9. On the **Select users and groups** page, select **Alex Wilber** and then select **Select**. 
 
     > Note that typically you would specify a group, however for this exercise we will just test the setting on Alex Wilber.
 
-11. Select **No target resources selected** and then click **Select apps**.
+10. Select **No target resources selected** and then click **Select apps**.
 
     > Note the Control access based on client app setting. This setting allows you to specify the client app that is used to access the resource. For example, you can specify that only the Outlook app can be used to access Exchange Online. 
 
-12. On the **Select** section of the page, click **None**.
+11. On the **Select** section of the page, click **None**.
 
-13. On the **Select** page, select the check box next to **Office 365** and then click **Select**.
+12. On the **Select** page, select the check box next to **Office 365** and then click **Select**.
 
-14. Under **Access controls**, in the **Grant** section, select **0 controls selected**.
+13. Under **Access controls**, in the **Grant** section, select **0 controls selected**.
 
-15. On the **Grant** page, select **Grant access**, select the check box next to **Require multifactor authentication**, and then click **Select**.
+14. On the **Grant** page, select **Grant access**, select the check box next to **Require multifactor authentication**, and then click **Select**.
 
-16. Under **Enable policy**, select **On**.
+15. Under **Enable policy**, select **On**.
 
-17. Select **Create** to create the Contoso MFA Policy. Notice that the policy is listed with a State of **On**.
+16. Select **Create** to create the Contoso MFA Policy. Notice that the policy is listed with a State of **On**.
 
-18. Close Microsoft Edge.
+17. Close Microsoft Edge.
 
 ### Task 3: Validate conditional access MFA
 
@@ -240,7 +238,7 @@ To provide additional security for user sign on events, you need to configure an
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, expand **Protect & secure** and then select **Conditional Access**.
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Protection** and then select **Conditional Access**.
 
 5. On the **Conditional Access** page, select **Policies** and then select **Contoso MFA Policy**.
 

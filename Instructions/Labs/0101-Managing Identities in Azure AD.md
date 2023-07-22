@@ -10,7 +10,7 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 ## Summary
 
-In this lab, you will use the Azure Active Directory admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Azure AD.
+In this lab, you will use the Entra admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Azure AD.
 
 ## Exercise 1: Creating users in Azure AD
 
@@ -28,7 +28,7 @@ _Note: For location use either your local region or United States._
 
 You've also been told that several more employees will be hired over the next couple of months. You've decided that scripting would be a far more efficient method of adding a large number of new users. You've decided to create a PowerShell script and test it out when you create Cody Godinez's account.
 
-### Task 1: Create users by using the Azure Active Directory admin center
+### Task 1: Create users by using the Entra admin center
 
 1. On **SEA-SVR1**, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
@@ -50,7 +50,7 @@ You've also been told that several more employees will be hired over the next co
 
 9. Select the **Navigation menu** and then select **Show all**.
 
-10. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
+10. In the Navigation pane, under **Admin centers** select **Identity**. The Microsoft Entra admin center opens.
 
 11. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
 
@@ -158,12 +158,12 @@ You've also been told that several more employees will be hired over the next co
     }
     ```
 
-8. Next, type the following code to create a new user, and then press **Enter**. Be sure to replace "yourtenant" with your assigned tenant name:
+8. Next, type the following code to create a new user, and then press **Enter**. Ensure "yourtenant" matches your assigned tenant name:
 
     ```
     New-MgUser `
-        -DisplayName “Cody Godinez” `
-        -GivenName "Code" -Surname "Godinez" `
+        -DisplayName "Cody Godinez" `
+        -GivenName "Cody" -Surname "Godinez" `
         -MailNickname "cgodinez" `
         -UsageLocation "US" `
         -UserPrincipalName "cgodinez@yourtenant.onmicrosoft.com" `
@@ -281,7 +281,7 @@ You also been asked to modify the Company branding for the sign-in page.
 2. In the **PowerShell 7** window, type the following code to create a new group, and then press **Enter**:
 
     ```
-    New-MgGroup -DisplayName “Contoso_Sales” -Description “Contoso Sales team users” -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
+    New-MgGroup -DisplayName "Contoso_Sales" -Description "Contoso Sales team users" -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
     ```
 
 3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
@@ -301,7 +301,7 @@ You also been asked to modify the Company branding for the sign-in page.
 6. In the **PowerShell 7** window, type the following code to define another variable as the user, and then press **Enter**:
 
     ```
-    $user = Get-MgUser | Where-Object {$_.DisplayName -eq “Cody Godinez”}
+    $user = Get-MgUser | Where-Object {$_.DisplayName -eq "Cody Godinez"}
     ```
 
 7. In the **PowerShell 7** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
@@ -332,7 +332,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
-5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** and configure the following settings:
+5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** tab and configure the following settings:
 
    - Sign-in page text: **Contoso Corp. Sign-in Page**
 
