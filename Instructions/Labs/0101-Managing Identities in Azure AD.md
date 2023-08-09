@@ -36,7 +36,7 @@ You've also been told that several more employees will be hired over the next co
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. In the address bar, enter **`https://admin.microsoft.com`**.
+4. In the address bar, enter **https://admin.microsoft.com**.
 
 5. At the Sign-in prompt, enter **admin@yourtenant.onmicrosoft.com** and then select **Next**.
 
@@ -61,24 +61,24 @@ You've also been told that several more employees will be hired over the next co
 13. On the **Create new user** page, enter the following:
 
     - User Principal Name: **ereeve**
-    - Display Name: **`Edmund Reeve`**
+    - Display Name: **Edmund Reeve**
 
 14. Uncheck **Auto-generated password**
 
-15. Next to **Password**, enter **`Pa55-w.rd!`**.
+15. Next to **Password**, enter **Pa55-w.rd!**.
 
 16. Select **Next:Properties** located at the bottom of the page.
 
-17. Next to **First name**, enter **`Edmund`**.
+17. Next to **First name**, enter **Edmund**.
 
-18. Next to **Last name**, enter **`Reeve`**.
+18. Next to **Last name**, enter **Reeve**.
 
 19. Next to **User type**, make note that **Member** is selected.
     > Note: The **Member** user type is the default user type. This user type is used for most users in an organization.
 
-20. Next to **Job title**, enter **`HR Rep`**.
+20. Next to **Job title**, enter **HR Rep**.
 
-21. Next to **Department**, enter **`HR`**.
+21. Next to **Department**, enter **HR**.
 
 22. Next to **Usage location**, select **United States**.
 
@@ -97,7 +97,7 @@ You've also been told that several more employees will be hired over the next co
 28. On the **Create new user** page, enter the following:
 
     - User Principal Name: **msnider**
-    - Display Name: **`Miranda Snider`**
+    - Display Name: **Miranda Snider**
 
 29. Uncheck **Auto-generated password**
 
