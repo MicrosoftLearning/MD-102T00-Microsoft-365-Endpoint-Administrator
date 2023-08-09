@@ -2,15 +2,15 @@
 
 ## WWL Tenants - Terms of Use
 
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training. 
+If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension. 
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
 ## Summary
 
-In this lab, you will use the Azure Active Directory admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Azure AD.
+In this lab, you will use the Microsoft Entra admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Azure AD.
 
 ## Exercise 1: Creating users in Azure AD
 
@@ -28,7 +28,7 @@ _Note: For location use either your local region or United States._
 
 You've also been told that several more employees will be hired over the next couple of months. You've decided that scripting would be a far more efficient method of adding a large number of new users. You've decided to create a PowerShell script and test it out when you create Cody Godinez's account.
 
-### Task 1: Create users by using the Azure Active Directory admin center
+### Task 1: Create users by using the Microsoft Entra admin center
 
 1. On **SEA-SVR1**, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
@@ -36,9 +36,9 @@ You've also been told that several more employees will be hired over the next co
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. In the address bar, enter **<https://admin.microsoft.com>**.
+4. In the address bar, enter **`https://admin.microsoft.com`**.
 
-5. At the Sign-in prompt, enter **`admin@yourtenant.onmicrosoft.com`** and then select **Next**.
+5. At the Sign-in prompt, enter **admin@yourtenant.onmicrosoft.com** and then select **Next**.
 
 6. At the Enter password page, enter the password for the Admin account and then select **Sign in**.
 
@@ -50,35 +50,35 @@ You've also been told that several more employees will be hired over the next co
 
 9. Select the **Navigation menu** and then select **Show all**.
 
-10. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
+10. In the Navigation pane, under **Admin centers** select **Identity**. The Microsoft Entra admin center opens.
 
 11. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
 
-    > Take note of the users that already exist as members of the Azure AD domain. The **On-premises sync enabled** column states **No** for all current users. This indicates that each user was created directly in Azure AD and not synchronized from an on-premises directory service.
+    > Take note of the users that already exist as members of the Microsoft Entra ID. The **On-premises sync enabled** column states **No** for all current users. This indicates that each user was created directly in Microsoft Entra ID and not synchronized from an on-premises directory service.
 
 12. On the **Users | All users** page, select **New user** then select **Create new user**.
 
 13. On the **Create new user** page, enter the following:
 
     - User Principal Name: **`ereeve`**
-    - Display Name: **Edmund Reeve**
+    - Display Name: **`Edmund Reeve`**
 
 14. Uncheck **Auto-generated password**
 
-15. Next to **Password**, enter **Pa55-w.rd!**.
+15. Next to **Password**, enter **`Pa55-w.rd!`**.
 
 16. Select **Next:Properties** located at the bottom of the page.
 
-17. Next to **First name**, enter **Edmund**.
+17. Next to **First name**, enter **`Edmund`**.
 
-18. Next to **Last name**, enter **Reeve**.
+18. Next to **Last name**, enter **`Reeve`**.
 
 19. Next to **User type**, make note that **Member** is selected.
     > Note: The **Member** user type is the default user type. This user type is used for most users in an organization.
 
-20. Next to **Job title**, enter **HR Rep**.
+20. Next to **Job title**, enter **`HR Rep`**.
 
-21. Next to **Department**, enter **HR**.
+21. Next to **Department**, enter **`HR`**.
 
 22. Next to **Usage location**, select **United States**.
 
@@ -97,7 +97,7 @@ You've also been told that several more employees will be hired over the next co
 28. On the **Create new user** page, enter the following:
 
     - User Principal Name: **`msnider`**
-    - Display Name: **Miranda Snider**
+    - Display Name: **`Miranda Snider`**
 
 29. Uncheck **Auto-generated password**
 
@@ -162,8 +162,8 @@ You've also been told that several more employees will be hired over the next co
 
     ```
     New-MgUser `
-        -DisplayName “Cody Godinez” `
-        -GivenName "Code" -Surname "Godinez" `
+        -DisplayName "Cody Godinez" `
+        -GivenName "Cody" -Surname "Godinez" `
         -MailNickname "cgodinez" `
         -UsageLocation "US" `
         -UserPrincipalName "cgodinez@yourtenant.onmicrosoft.com" `
@@ -265,7 +265,7 @@ You also been asked to modify the Company branding for the sign-in page.
 3. On the **New Group** page, enter the following:
 
     - Group type: **Security**
-    - Group name: **Contoso_Managers**
+    - Group name: **`Contoso_Managers`**
     - Membership type: **Assigned**
 
 4. Under Members, select **No members selected**.
@@ -281,7 +281,7 @@ You also been asked to modify the Company branding for the sign-in page.
 2. In the **PowerShell 7** window, type the following code to create a new group, and then press **Enter**:
 
     ```
-    New-MgGroup -DisplayName “Contoso_Sales” -Description “Contoso Sales team users” -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
+    New-MgGroup -DisplayName "Contoso_Sales" -Description "Contoso Sales team users" -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
     ```
 
 3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
@@ -301,7 +301,7 @@ You also been asked to modify the Company branding for the sign-in page.
 6. In the **PowerShell 7** window, type the following code to define another variable as the user, and then press **Enter**:
 
     ```
-    $user = Get-MgUser | Where-Object {$_.DisplayName -eq “Cody Godinez”}
+    $user = Get-MgUser | Where-Object {$_.DisplayName -eq "Cody Godinez"}
     ```
 
 7. In the **PowerShell 7** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
@@ -332,9 +332,9 @@ You also been asked to modify the Company branding for the sign-in page.
 
 4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
-5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** and configure the following settings:
+5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** tab and configure the following settings:
 
-   - Sign-in page text: **Contoso Corp. Sign-in Page**
+   - Sign-in page text: **`Contoso Corp. Sign-in Page`**
 
 6. Select **Review + Create**, review the settings and then select **Create**.
 

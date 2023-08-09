@@ -76,7 +76,7 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 7. Select the **Navigation menu** and then select **Show all**.
 
-8. In the Navigation pane, under **Admin centers** select **Azure Active Directory**. The Microsoft Entra admin center opens.
+8. In the Navigation pane, under **Admin centers** select **Identity**. The Microsoft Entra admin center opens.
 
 9. In the Microsoft Entra admin center, in the navigation pane, select **Users** > **All users**.
 
