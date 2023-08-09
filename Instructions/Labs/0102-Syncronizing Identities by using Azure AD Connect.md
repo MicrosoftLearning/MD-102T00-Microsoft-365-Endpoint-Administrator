@@ -14,9 +14,9 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In the address bar, enter `http://www.microsoft.com/en-us/download/details.aspx?id=47594`.
+3. In the address bar, enter `http://www.microsoft.com/en-us/download/details.aspx?id=47594`
 
-4. On the Microsoft Azure Active Directory Connect page, select **Download**. 
+4. On the Microsoft Azure AD Connect V2 page, select **Download**.
 
     > Azure AD Connect automatically downloads to the **Downloads** folder on SEA-SVR1.
 
@@ -30,7 +30,7 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 9. On the **User sign-in** page, ensure that **Password Hash Synchronization** is selected, and then select **Next**.
 
-10. On the **Connect to Azure AD** page, in the **USERNAME** and **PASSWORD** boxes, enter **`admin@yourtenant.onmicrosoft.com`**, and your provided password, and then select **Next**.
+10. On the **Connect to Azure AD** page, in the **USERNAME** and **PASSWORD** boxes, enter **admin@yourtenant.onmicrosoft.com**, and your provided password, and then select **Next**.
 
 11. On the **Connect your directories** page, ensure that **Contoso.com** is listed under **FOREST**, and then select **Add Directory**.
 
@@ -54,17 +54,17 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 21. When configuration is complete, select **Exit**.  
 
-      > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Azure AD begins. You should wait approximately 3-4 minutes for this process to complete.
+      > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Microsoft Entra ID formally (Azure AD) begins. You should wait approximately 3-4 minutes for this process to complete.
 
 22. Close all open windows.
 
-#### Task 2: Verify synchronization in Azure AD
+#### Task 2: Verify synchronization in Microsoft Entra ID formally (Azure AD)
 
 1. On the taskbar, select **Microsoft Edge**.
 
 2. In the address bar, enter **https://admin.microsoft.com**.
 
-3. At the Sign-in prompt, enter **`admin@yourtenant.onmicrosoft.com`** and then select **Next**.
+3. At the Sign-in prompt, enter **admin@yourtenant.onmicrosoft.com** and then select **Next**.
 
 4. At the Enter password page, enter the password for the Admin account and then select **Sign in**. 
 
@@ -82,7 +82,7 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 10. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
 
-11. In the Navigation pane, under **Azure Active Directory**, select **Groups** > **All groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
+11. In the Navigation pane, under **Identity**, select **Groups** > **All groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
 
 12. Select the **Managers** group.
 
