@@ -265,7 +265,7 @@ You also been asked to modify the Company branding for the sign-in page.
 3. On the **New Group** page, enter the following:
 
     - Group type: **Security**
-    - Group name: **`Contoso_Managers`**
+    - Group name: **Contoso_Managers**
     - Membership type: **Assigned**
 
 4. Under Members, select **No members selected**.
@@ -334,7 +334,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** tab and configure the following settings:
 
-   - Sign-in page text: **`Contoso Corp. Sign-in Page`**
+   - Sign-in page text: **Contoso Corp. Sign-in Page**
 
 6. Select **Review + Create**, review the settings and then select **Create**.
 
