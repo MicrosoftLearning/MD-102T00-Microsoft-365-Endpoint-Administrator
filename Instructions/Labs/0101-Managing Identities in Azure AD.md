@@ -60,7 +60,7 @@ You've also been told that several more employees will be hired over the next co
 
 13. On the **Create new user** page, enter the following:
 
-    - User Principal Name: **`ereeve`**
+    - User Principal Name: **ereeve**
     - Display Name: **`Edmund Reeve`**
 
 14. Uncheck **Auto-generated password**
@@ -96,7 +96,7 @@ You've also been told that several more employees will be hired over the next co
 
 28. On the **Create new user** page, enter the following:
 
-    - User Principal Name: **`msnider`**
+    - User Principal Name: **msnider**
     - Display Name: **`Miranda Snider`**
 
 29. Uncheck **Auto-generated password**
