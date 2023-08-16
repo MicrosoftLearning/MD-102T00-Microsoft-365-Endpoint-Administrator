@@ -29,7 +29,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 3. In Microsoft Edge, in the address bar, type **https://entra.microsoft.com**, and then press **Enter**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`** and the default tenant password.
 
-4. In the navigation pane, Expand **Azure Active Directory**.
+4. In the navigation pane, Expand **Identity**.
 
 5. Under **Groups**, select **All groups**.
 
@@ -195,7 +195,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 13. Switch to **SEA-SVR1**.
 
-14. In the Microsoft Entra admin center, select **Azure Active Directory**, select **Devices** and then select **All devices**. 
+14. In the Microsoft Entra admin center, expand **Identity**, select **Devices** and then select **All devices**. 
 
     > Note that the new device displays with an icon that indicates an Autopilot device. Also note that the Join Type is **Azure AD joined** with Aaron Nicholls as the owner.
 

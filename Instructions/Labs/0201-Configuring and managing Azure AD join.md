@@ -28,19 +28,19 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, expand **Azure Active Directory**.
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
 
-5. Select **Devices** > **All devices**. 
+5. Select **Devices** > **All devices**.
 
    > Notice that there are no devices found, as you have not joined any devices yet.
 
 6. On the **Devices | All devices** page, select **Device settings**.
 
-7. On the **Devices|Device settings** page, in the details pane, under **Users may join devices to Azure AD**, verify that **All** is selected. 
+7. On the **Devices|Device settings** page, in the details pane, under **Users may join devices to Azure AD**, verify that **All** is selected.
 
    > This indicates that all Azure AD users are permitted to join Windows 10 or newer devices to Azure Active Directory. Note that this setting does not apply to hybrid Azure AD joined devices, or devices joined by using Windows Autopilot self-deployment mode.
 
-8. In the **Require Multi-factor Authentication to register or join devices with Azure AD** section, verify that the setting is set to **No**. 
+8. In the **Require Multi-factor Authentication to register or join devices with Azure AD** section, verify that the setting is set to **No**.
 
 9. In the **Maximum number of devices per user** section, select **20**.
 
@@ -70,7 +70,7 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 6. In the **Microsoft account** window, select **Join this device to Azure Active Directory**.
 
-7. On the **Sign in** page, type **`JoniS@yourtenant.onmicrosoft.com`** and then select **Next**.
+7. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
 
 8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
 
@@ -86,14 +86,14 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
 
-2. In the PowerShell console, type the following and press **Enter**: 
+2. In the PowerShell console, type the following and press **Enter**:
 
     ```
     dsregcmd /status
     
     ```
 
-3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed. 
+3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed.
 
    > This indicates that the device is Azure AD joined.
 
@@ -111,7 +111,7 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 9. Switch to **SEA-SVR1**.
 
-10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Azure Active Directory**.
+10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
 
 11. Select **Devices**, and then select **All devices**. 
 
@@ -141,7 +141,7 @@ You need to configure Azure Active Directory device settings to ensure that all 
 
 8. On the verification page, select **Next** and then select **Done**.
 
-9. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **102938** and then select **OK**.
+9. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **`102938`** and then select **OK**.
 
 10. On the **All set!** page, select **OK**.
 
@@ -179,7 +179,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 3. In **Active Directory Users and Computers**, right-click **Contoso.com**, point to **New**, and then select **Organizational Unit**.
 
-4. In the **New-Object - Organizational Unit** dialog box, type **Azure AD clients** and then select **OK**.
+4. In the **New-Object - Organizational Unit** dialog box, type **`Azure AD clients`** and then select **OK**.
 
 5. In the navigation pane, select **Seattle Clients**.
 

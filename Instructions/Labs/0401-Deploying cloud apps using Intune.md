@@ -182,7 +182,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 12. In the details pane verify that **Research** is listed under **Required** in the **Assignments** section.
 
-### Task 3: Force policy synchronization from the Intune console
+### Task 3: Request policy synchronization from the Intune console
 
 1. In the **Microsoft Intune admin center**, select **Devices** and then select **All devices**.
 
@@ -190,7 +190,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 3. On the **SEA-WS1** blade, select **Sync** and when prompted select **Yes**.
 
-   > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
+   > Intune will contact the device and tell it to synchronize all policies. This may take up to 15 minutes. You may choose to Sync from **SEA-WS1**
 
 ### Task 4: Verify Microsoft 365 apps are installed
 
