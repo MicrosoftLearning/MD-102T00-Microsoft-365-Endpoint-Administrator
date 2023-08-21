@@ -177,7 +177,7 @@ You've also been told that several more employees will be hired over the next co
     Get-MgUser
     ```
 
-> Verify that the list of users from your tenant is displayed. Also take note of which users have a license assigned. Any user with the **isLicensed** value of **False** has not been assigned a license.
+> Verify that the list of users from your tenant is displayed. 
 
 **Results**: After completing this exercise, you will have successfully created new user accounts in Azure AD.
 
