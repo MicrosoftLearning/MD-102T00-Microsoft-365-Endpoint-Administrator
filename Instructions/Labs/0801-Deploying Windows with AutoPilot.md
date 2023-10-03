@@ -58,7 +58,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 1. Switch to **SEA-W10-CL3** and sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
 
-2. Right-click **Start**, select **Windows Terminal (Admin)**, and then select **Yes** at the **User Account Control** prompt.
+2. Right-click **Start**, select **Windows Powershell (Admin)**, and then, if prompted, select **Yes** at the **User Account Control** prompt.
 
 3. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
@@ -88,7 +88,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
     type C:\Computer.csv
     ```
 
-9. Close out of **Windows Powershell**.
+9. Close **Windows Powershell**.
 
 ### Task 3: Work with a Windows Autopilot deployment profile
 
