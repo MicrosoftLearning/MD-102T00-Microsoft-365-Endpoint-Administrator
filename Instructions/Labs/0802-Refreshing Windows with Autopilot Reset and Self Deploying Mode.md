@@ -19,7 +19,7 @@ To following lab(s) must be completed before this lab:
 
 ### Scenario
 
-SEA-WS4 has been deployed by using Windows Autopilot. You need to test out another provisioning scenario that involves Autopilot Reset. You will create a new deployment profile configured with the Windows Autopilot Self-Deploying mode.
+SEA-W10-CL3 has been deployed by using Windows Autopilot. You need to test out another provisioning scenario that involves Autopilot Reset. You will create a new deployment profile configured with the Windows Autopilot Self-Deploying mode.
 
 ### Task 1: Configure a  Self-Deploying Windows Autopilot deployment profile
 
