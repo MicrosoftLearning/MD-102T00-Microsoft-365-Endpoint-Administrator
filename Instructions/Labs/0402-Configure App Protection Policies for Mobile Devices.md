@@ -34,7 +34,7 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 - Name: **Outlook – Developers**
 - Description: **Policy to prevent cut/copy and paste from Outlook**
 
-9. On the **Apps** tab, click **Select public apps**.
+9. On the **Apps** tab, click **+ Select public apps**.
 
 10. On the **Select apps to target** blade, in the text box, type **Outlook**. Select **Microsoft Outlook** and then select **Select**, and then select **Next**.
 
