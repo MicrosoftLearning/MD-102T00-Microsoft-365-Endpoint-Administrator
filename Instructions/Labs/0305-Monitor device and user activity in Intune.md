@@ -52,7 +52,7 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 2. In the Devices navigation pane, select **Overview**.
 
-3. In the details pane, take note of the device information for enrolled devices. Select the ellipse icon (if shown) to view all of the overview tabs. Available tabs include **Enrollment status**, **Enrollment alerts**, **Compliance status**, **Configuration status**, and **Software update status**. Select each tab to view information.
+3. In the details pane, take note of the device information for enrolled devices. Select the ellipsis icon (if shown) to view all of the overview tabs. Available tabs include **Enrollment status**, **Enrollment alerts**, **Compliance status**, **Configuration status**, and **Software update status**. Select each tab to view information.
 
 4. Select **All devices**, and in the details pane, select **SEA-WS1**. Information about the device such as name, Primary user, and operating system is displayed.
 

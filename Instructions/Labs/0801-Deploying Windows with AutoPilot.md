@@ -205,7 +205,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
     > Notice that you can Retire, Wipe, Sync, and Restart the device.
 
-17. Select the ellipse at the end of the menu bar and take notice of the additional management capabilities.
+17. Select the ellipsis at the end of the menu bar and take notice of the additional management capabilities.
 
     > Additional capabilities include Fresh Start, Autopilot Reset, Quick scan, Full scan, as well as others.
 
