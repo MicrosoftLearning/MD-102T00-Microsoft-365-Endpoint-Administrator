@@ -68,7 +68,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 13. In the navigation pane, select **On-premises integration**.
 
-14. Verify that your on-premises writeback client is running and Select the checkbox for **Write back passwords with Azure AD Connect cloud sync** and then click **Save**.
+14. click **Save**.
 
 15. Close Microsoft Edge.
 
