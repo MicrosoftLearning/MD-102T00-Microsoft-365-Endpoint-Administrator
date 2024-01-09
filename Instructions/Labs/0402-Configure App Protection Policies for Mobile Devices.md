@@ -1,4 +1,4 @@
-# Practice Lab: Configure App Protection Policies for Mobile Devices
+# Practice Lab 0402: Configure App Protection Policies for Mobile Devices
 
 ## Summary
 

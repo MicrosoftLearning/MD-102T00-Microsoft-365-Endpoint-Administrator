@@ -1,12 +1,12 @@
-# Practice Lab: Synchronizing Identities by using Azure AD Connect 
+# Practice Lab 0102: Synchronizing Identities by using Azure AD Connect 
 
 ## Summary
 
-In this lab, you will configure synchronization from Active Directory Domain Services to Azure Active Directory.
+In this lab, you will configure synchronization from Active Directory Domain Services to Entra ID.
 
 ### Scenario
 
-Contoso Corporation is currently managing users in both AD DS and Azure AD as separate processes. This is time consuming and has led to inconsistent information. You have been tasked with addressing this issue by connecting the two directories by using the Azure AD Connect synchronization tool.
+Contoso Corporation is currently managing users in both AD DS and Entra ID as separate processes. This is time consuming and has led to inconsistent information. You have been tasked with addressing this issue by connecting the two directories by using the Azure AD Connect synchronization tool.
 
 #### Task 1: Configure directory synchronization with Azure AD Connect
 
@@ -54,15 +54,15 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 21. When configuration is complete, select **Exit**.  
 
-      > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Azure AD begins. You should wait approximately 3-4 minutes for this process to complete.
+      > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Entra ID begins. You should wait approximately 3-4 minutes for this process to complete. Or check progress in the Synchronization Service application.
 
 22. Close all open windows.
 
-#### Task 2: Verify synchronization in Azure AD
+#### Task 2: Verify synchronization in Entra ID
 
 1. On the taskbar, select **Microsoft Edge**.
 
-2. In the address bar, enter **https://admin.microsoft.com**.
+2. In the address bar, enter **https://entra.microsoft.com**.
 
 3. At the Sign-in prompt, enter **`admin@yourtenant.onmicrosoft.com`** and then select **Next**.
 
@@ -72,26 +72,22 @@ Contoso Corporation is currently managing users in both AD DS and Azure AD as se
 
 5. At the Save password prompt, select **Save**.
 
-6. At the Stay signed in prompt, select **No**. The Microsoft 365 admin center opens.
+6. At the Stay signed in prompt, select **No**. The Entra admin center opens.
 
-7. Select the **Navigation menu** and then select **Show all**.
+7. In the Microsoft Entra admin center, in the navigation pane, select **Users** > **All users**.
 
-8. In the Navigation pane, under **Admin centers** select **Identity**. The Microsoft Entra admin center opens.
+8. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
 
-9. In the Microsoft Entra admin center, in the navigation pane, select **Users** > **All users**.
+9. In the Navigation pane, under **Identity**, select **Groups** > **All groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
 
-10. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
+10. Select the **Managers** group.
 
-11. In the Navigation pane, under **Azure Active Directory**, select **Groups** > **All groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
-
-12. Select the **Managers** group.
-
-13. On the **Managers** group page, select **Members** and then ensure that you see users. 
+11. On the **Managers** group page, select **Members** and then ensure that you see users. 
 
     > Note that you cannot add to or remove members from this group, as it is sourced from the local AD DS. 
 
-14. Close Microsoft Edge.
+12. Close Microsoft Edge.
 
-**Results**: After completing this exercise, you will have successfully configured Azure AD Connect to synchronize identity from Active Directory Domain Services to Azure Active Directory.
+**Results**: After completing this exercise, you will have successfully configured Azure AD Connect to synchronize identity from Active Directory Domain Services to Entra ID.
 
 **END OF LAB**

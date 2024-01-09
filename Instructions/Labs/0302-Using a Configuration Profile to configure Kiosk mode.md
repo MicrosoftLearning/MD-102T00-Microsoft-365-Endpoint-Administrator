@@ -1,4 +1,4 @@
-# Practice Lab: Using a Configuration Profile to configure Kiosk mode
+# Practice Lab 0302: Using a Configuration Profile to configure Kiosk mode
 
 ## Summary
 
@@ -22,7 +22,7 @@ You have been asked to configure SEA-WS2 as a Windows 11 kiosk to allow Contoso 
 
 -   A single app, full-screen kiosk.
 -   Auto logon.
--   Provides access to the Microsoft Edge browser, which is to be configured in Public Browsing (InPrivate) mode. The home page should be configured for http://bing.com.
+-   Provides access to the Microsoft Edge browser, which is to be configured in Public Browsing (InPrivate) mode. The home page should be configured for https://bing.com.
 
 ### Task 1: Enroll SEA-WS2 to Microsoft Intune
 

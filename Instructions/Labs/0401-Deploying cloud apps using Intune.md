@@ -1,4 +1,4 @@
-# Practice Lab: Deploying cloud apps using Intune
+# Practice Lab 0401: Deploying cloud apps using Intune
 
 ## Summary
 
@@ -8,7 +8,7 @@ In this lab, you create and deploy cloud-based apps using Intune and the Company
 
 To following lab(s) must be completed before this lab:
 
-- 0101-Managing Identities in Azure AD
+- 0101-Managing Identities in Entra ID
 
 - 0102-Synchronizing Identities by using Azure AD Connect
 
@@ -16,7 +16,7 @@ To following lab(s) must be completed before this lab:
 
 - 0204-Enrolling devices into Intune
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
+  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 1: Add a Microsoft Store App to Intune
 
@@ -206,6 +206,8 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 6. In the app list, scroll down to **W** and select **Word** and verify that the app opens.
 
+   > _Note: Recall in a previous lab, you removed recently added apps from the Start Menu._
+
 7. Close all open windows.
 
 8. Sign out of SEA-WS1.
@@ -222,7 +224,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 5. In the details pane, under **Monitor** and under **User install status**, verify that **1** is displayed under Installed.
 
-   _Note: that it may take some time for the information to display._
+   _Note: It may take some time for the information to display._
    
    _Note: This indicates that the app is installed on one device and for one user._
 

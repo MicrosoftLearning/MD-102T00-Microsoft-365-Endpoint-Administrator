@@ -1,4 +1,4 @@
-# Practice Lab: Configuring Multi-factor Authentication
+# Practice Lab 0501: Configuring Multi-factor Authentication
 
 ## Summary
 
@@ -6,7 +6,7 @@ In this lab, you will configure per-user multi-factor authentication (MFA) and a
 
 ### Prerequisites
 
-You will need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
+You will need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 1: Configure per-user multi-factor authentication
 

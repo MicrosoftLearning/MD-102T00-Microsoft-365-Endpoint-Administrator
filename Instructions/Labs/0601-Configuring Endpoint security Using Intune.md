@@ -1,4 +1,4 @@
-# Practice Lab: Configuring Endpoint security using Intune
+# Practice Lab 0601: Configuring Endpoint security using Intune
 
 ## Summary
 
