@@ -28,7 +28,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
    > The Microsoft Entra admin center opens.
 
-4. In the navigation pane, Expand **Identity** and then select **Show more**.
+4. In the navigation pane, expand **Identity** and then select **Show more**.
 
 5. Select **Billing** > **Licenses**.
 
@@ -40,7 +40,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 8. Under **General**, select **Service plan details**. Take note of the services included in the Enterprise Mobility + Security E5 license. Microsoft Intune is one of the supported services for this license.
 
-9. In the Entra admin center navigation pane, under **Identity**, select **Users** > **All users**.
+9. In the Microsoft Entra admin center navigation pane, under **Identity**, select **Users** > **All users**.
 
 10. Select **Aaron Nicholls**.
 

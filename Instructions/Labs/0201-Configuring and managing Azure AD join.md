@@ -30,7 +30,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
 
-5. Select **Devices** > **All devices**. 
+5. Select **Devices** > **All devices**.
 
    > Notice that there are no devices found, as you have not joined any devices yet.
 
@@ -70,7 +70,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 6. In the **Microsoft account** window, select **Join this device to Entra ID**.
 
-7. On the **Sign in** page, type **`JoniS@yourtenant.onmicrosoft.com`** and then select **Next**.
+7. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
 
 8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
 
@@ -86,14 +86,14 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
 
-2. In the PowerShell console, type the following and press **Enter**: 
+2. In the PowerShell console, type the following and press **Enter**:
 
     ```
     dsregcmd /status
     
     ```
 
-3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed. 
+3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed.
 
    > This indicates that the device is Entra joined.
 
@@ -141,7 +141,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 8. On the verification page, select **Next** and then select **Done**.
 
-9. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **102938** and then select **OK**.
+9. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **`102938`** and then select **OK**.
 
 10. On the **All set!** page, select **OK**.
 
@@ -179,7 +179,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 3. In **Active Directory Users and Computers**, right-click **Contoso.com**, point to **New**, and then select **Organizational Unit**.
 
-4. In the **New-Object - Organizational Unit** dialog box, type **Azure AD clients** and then select **OK**.
+4. In the **New-Object - Organizational Unit** dialog box, type **`Azure AD clients`** and then select **OK**.
 
 5. In the navigation pane, select **Seattle Clients**.
 

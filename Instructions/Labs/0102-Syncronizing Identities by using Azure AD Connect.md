@@ -14,9 +14,9 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In the address bar, enter `http://www.microsoft.com/en-us/download/details.aspx?id=47594`.
+3. In the address bar, enter `http://www.microsoft.com/en-us/download/details.aspx?id=47594`
 
-4. On the Microsoft Azure Active Directory Connect page, select **Download**. 
+4. On the Microsoft Azure AD Connect V2 page, select **Download**.
 
     > Azure AD Connect automatically downloads to the **Downloads** folder on SEA-SVR1.
 
@@ -30,7 +30,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 9. On the **User sign-in** page, ensure that **Password Hash Synchronization** is selected, and then select **Next**.
 
-10. On the **Connect to Azure AD** page, in the **USERNAME** and **PASSWORD** boxes, enter **`admin@yourtenant.onmicrosoft.com`**, and your provided password, and then select **Next**.
+10. On the **Connect to Azure AD** page, in the **USERNAME** and **PASSWORD** boxes, enter **admin@yourtenant.onmicrosoft.com**, and your provided password, and then select **Next**.
 
 11. On the **Connect your directories** page, ensure that **Contoso.com** is listed under **FOREST**, and then select **Add Directory**.
 
@@ -64,7 +64,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 2. In the address bar, enter **https://entra.microsoft.com**.
 
-3. At the Sign-in prompt, enter **`admin@yourtenant.onmicrosoft.com`** and then select **Next**.
+3. At the Sign-in prompt, enter **admin@yourtenant.onmicrosoft.com** and then select **Next**.
 
 4. At the Enter password page, enter the password for the Admin account and then select **Sign in**. 
 

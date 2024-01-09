@@ -19,7 +19,7 @@ To following lab(s) must be completed before this lab:
 
 Contoso IT is planning to roll out a deployment of new Windows 11 devices using Autopilot. The devices have a default installation of Windows 11. Users should be able to connect the device, turn it on, and answer minimal questions during the OOBE, using their Azure AD credentials to sign in. The process should automatically enroll and join the Azure AD domain. You have been asked to configure and test the experience using the SEA-WS4, which you recently installed and configured using Hyper-V.
 
-> **Important**: We cannot use Windows 11 Hyper-V based virtual machines for Autopilot testing (Which we configured in the previous lab, 0701). This is due to a physical Trusted Platform Module (TPM) requirement. In this lab, we will test autopilot using Windows 10, however in the real world you can follow the same process for deploying windows 11 via Autopilot. for more details, see [Troubleshooting Windows Enrollment Issues](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors#securing-your-hardware-failed-0x800705b4).
+> **Important**: We cannot use Windows 11 Hyper-V based virtual machines for Autopilot testing (Which we configured in the previous lab, 0701). This is due to a physical Trusted Platform Module (TPM) requirement. In this lab, we will test autopilot using Windows 10 which does not have the physical TPM requirment. In the real world you can follow the same process for deploying windows 11 via Autopilot. for more details, see [Troubleshooting Windows Enrollment Issues](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors#securing-your-hardware-failed-0x800705b4).
 
 ### Task 1: Create group in Azure AD
 
@@ -205,7 +205,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
     > Notice that you can Retire, Wipe, Sync, and Restart the device.
 
-17. Select the ellipse at the end of the menu bar and take notice of the additional management capabilities.
+17. Select the ellipsis at the end of the menu bar and take notice of the additional management capabilities.
 
     > Additional capabilities include Fresh Start, Autopilot Reset, Quick scan, Full scan, as well as others.
 

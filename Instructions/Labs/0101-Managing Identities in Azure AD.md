@@ -2,9 +2,9 @@
 
 ## WWL Tenants - Terms of Use
 
-If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training. 
+If you are being provided with a tenant as a part of an instructor-led training delivery, please note that the tenant is made available for the purpose of supporting the hands-on labs in the instructor-led training.
 
-Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension. 
+Tenants should not be shared or used for purposes outside of hands-on labs. The tenant used in this course is a trial tenant and cannot be used or accessed after the class is over and are not eligible for extension.
 
 Tenants must not be converted to a paid subscription. Tenants obtained as a part of this course remain the property of Microsoft Corporation and we reserve the right to obtain access and repossess at any time.
 
@@ -28,7 +28,7 @@ _Note: For location use either your local region or United States._
 
 You've also been told that several more employees will be hired over the next couple of months. You've decided that scripting would be a far more efficient method of adding a large number of new users. You've decided to create a PowerShell script and test it out when you create Cody Godinez's account.
 
-### Task 1: Create users by using the Entra admin center
+### Task 1: Create users by using the Microsoft Entra admin center
 
 1. On **SEA-SVR1**, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
@@ -36,9 +36,9 @@ You've also been told that several more employees will be hired over the next co
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. In the address bar, enter **<https://admin.microsoft.com>**.
+4. In the address bar, enter **https://admin.microsoft.com**.
 
-5. At the Sign-in prompt, enter **`admin@yourtenant.onmicrosoft.com`** and then select **Next**.
+5. At the Sign-in prompt, enter **admin@yourtenant.onmicrosoft.com** and then select **Next**.
 
 6. At the Enter password page, enter the password for the Admin account and then select **Sign in**.
 
@@ -54,13 +54,13 @@ You've also been told that several more employees will be hired over the next co
 
 11. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
 
-    > Take note of the users that already exist as members of the Azure AD domain. The **On-premises sync enabled** column states **No** for all current users. This indicates that each user was created directly in Azure AD and not synchronized from an on-premises directory service.
+    > Take note of the users that already exist as members of the Microsoft Entra ID. The **On-premises sync enabled** column states **No** for all current users. This indicates that each user was created directly in Microsoft Entra ID and not synchronized from an on-premises directory service.
 
 12. On the **Users | All users** page, select **New user** then select **Create new user**.
 
 13. On the **Create new user** page, enter the following:
 
-    - User Principal Name: **`ereeve`**
+    - User Principal Name: **ereeve**
     - Display Name: **Edmund Reeve**
 
 14. Uncheck **Auto-generated password**
@@ -96,7 +96,7 @@ You've also been told that several more employees will be hired over the next co
 
 28. On the **Create new user** page, enter the following:
 
-    - User Principal Name: **`msnider`**
+    - User Principal Name: **msnider**
     - Display Name: **Miranda Snider**
 
 29. Uncheck **Auto-generated password**
@@ -177,7 +177,7 @@ You've also been told that several more employees will be hired over the next co
     Get-MgUser
     ```
 
-> Verify that the list of users from your tenant is displayed. Also take note of which users have a license assigned. Any user with the **isLicensed** value of **False** has not been assigned a license.
+> Verify that the list of users from your tenant is displayed. 
 
 **Results**: After completing this exercise, you will have successfully created new user accounts in Entra ID.
 

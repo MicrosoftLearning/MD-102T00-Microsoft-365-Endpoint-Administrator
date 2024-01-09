@@ -72,7 +72,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 2. Select the Autopilot PC (Begins with the name DESKTOP).
 
-3. In the menu bar, select the ellipse and then select **Autopilot Reset**.
+3. In the menu bar, select the ellipsis and then select **Autopilot Reset**.
 
 5. At the message prompt, select **Yes**.
 
