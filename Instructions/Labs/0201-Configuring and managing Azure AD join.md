@@ -8,7 +8,7 @@ In this lab, you will configure Entra ID Join settings and perform both standard
 
 To following lab(s) must be completed before this lab:
 
-- 0102-Synchronizing Identities by using Azure AD Connect
+- 0102-Synchronizing Identities by using Microsoft Entra Connect
 
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
