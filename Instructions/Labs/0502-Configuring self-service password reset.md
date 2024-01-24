@@ -1,8 +1,8 @@
-# Practice Lab: Configuring Self-service password reset for user accounts in Azure AD
+# Practice Lab 0502: Configuring Self-service password reset for user accounts in Entra ID
 
 ## Summary
 
-In this lab, you will configure and validate self-service password reset (SSPR) for user accounts in Azure Active Directory.
+In this lab, you will configure and validate self-service password reset (SSPR) for user accounts in Entra ID.
 
 ### Prerequisites
 
@@ -14,7 +14,7 @@ To following lab(s) must be completed before this lab:
 
 ### Scenario
 
-The Help Desk has indicated that a large number of support tickets are related to password resets. You have been asked to propose a solution for users to reset their own password. For accounts that are synchronized from AD DS, the process should reset both their Azure AD and AD DS password. 
+The Help Desk has indicated that a large number of support tickets are related to password resets. You have been asked to propose a solution for users to reset their own password. For accounts that are synchronized from AD DS, the process should reset both their Entra ID and AD DS password. 
 
 ### Task 1: Configure password writeback
 
@@ -68,7 +68,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 13. In the navigation pane, select **On-premises integration**.
 
-14. click **Save**.
+14. Verify that your on-premises writeback client is running.
 
 15. Close Microsoft Edge.
 
@@ -101,7 +101,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 ### Task 4: Run AD Sync
 
-*Note that this step is normally not necessary for password writeback, but is recommended to address issues inherent in lab environments and ensure AD DS is synchronized with Azure AD.*
+*Note that this step is normally not necessary for password writeback, but is recommended to address issues inherent in lab environments and ensure AD DS is synchronized with Entra ID.*
 
 1. Switch to **SEA-SVR1**.
 
@@ -126,7 +126,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 5. Sign in to **SEA-CL1** as **Contoso\\Aaron** with the password **Pa55w.rd1234!**. 
 
-   > You should be able to sign in. This confirms that the password you changed in the Azure portal is written back to the local Active Directory Domain Services (AD DS) account.
+   > You should be able to sign in. This confirms that the password you changed in the MyAccount portal is written back to the local Active Directory Domain Services (AD DS) account.
 
 6. Sign out of **SEA-CL1**.
 

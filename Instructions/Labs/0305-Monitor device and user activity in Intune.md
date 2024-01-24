@@ -1,4 +1,4 @@
-# Practice Lab: Monitor device and user activity in Intune
+# Practice Lab 0305: Monitor device and user activity in Intune
 
 ## Summary
 
@@ -8,7 +8,7 @@ In this lab, you will monitor user Sign-in activity, Audit logs, and device acti
 
 To following lab(s) must be completed before this lab:
 
-- 0101-Managing Identities in Azure AD
+- 0101-Managing Identities in Entra ID
 
 - 0102-Synchronizing Identities by using Azure AD Connect
 
@@ -18,7 +18,7 @@ To following lab(s) must be completed before this lab:
 
 - 0301-Creating and Deploying Configuration Profiles
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
+  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ### Scenario
 

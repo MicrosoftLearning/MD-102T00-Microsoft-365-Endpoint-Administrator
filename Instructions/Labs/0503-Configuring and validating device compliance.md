@@ -1,4 +1,4 @@
-# Practice Lab: Configuring and validating device compliance
+# Practice Lab 0503: Configuring and validating device compliance
 
 ## Summary
 
@@ -8,7 +8,7 @@ In this lab, you validate device compliance by configuring a compliance policy a
 
 To following lab(s) must be completed before this lab:
 
-- 0101-Managing Identities in Azure AD
+- 0101-Managing Identities in Entra ID
 
 - 0102-Synchronizing Identities by using Azure AD Connect
 
@@ -18,7 +18,7 @@ To following lab(s) must be completed before this lab:
 
 - 0301-Creating and Deploying Configuration Profiles
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
+  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 1: Configuring compliance policies 
 
@@ -133,7 +133,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 9. A message will appear stating, "**Stay signed in to all your Microsoft apps**". Select **no, sign in to this app only**.
 
-    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS3 is not joined to Azure AD and not managed by Intune. As such, you are unable to access Aarons' mailbox from this device.
+    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS3 is not joined to Entra ID and not managed by Intune. As such, you are unable to access Aarons' mailbox from this device.
 
 10. **Close** all windows and sign out of **SEA-WS3**.
 

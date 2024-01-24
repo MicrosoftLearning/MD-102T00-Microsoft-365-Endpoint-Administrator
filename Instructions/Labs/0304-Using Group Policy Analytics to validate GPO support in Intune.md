@@ -1,4 +1,4 @@
-# Practice Lab: Using Group Policy Analytics to validate GPO support in Intune
+# Practice Lab 0304: Using Group Policy Analytics to validate GPO support in Intune
 
 ## Summary
 

@@ -1,4 +1,4 @@
-# Practice Lab: Creating and Deploying Configuration Profiles
+# Practice Lab 0301: Creating and Deploying Configuration Profiles
 
 ## Summary
 
@@ -8,7 +8,7 @@ In this lab, you will use Microsoft Intune to create and apply a Configuration p
 
 To following lab(s) must be completed before this lab:
 
-- 0101-Managing Identities in Azure AD
+- 0101-Managing Identities in Entra ID
 
 - 0102-Synchronizing Identities by using Azure AD Connect
 
@@ -16,13 +16,13 @@ To following lab(s) must be completed before this lab:
 
 - 0204-Enrolling devices into Intune
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
+  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 1: Create and apply a Configuration profile
 
 ### Scenario
 
-You need to use Azure Active Directory (Azure AD) and Intune to manage members of the Developers department at Contoso . You have been asked to evaluate the solutions that would enable the users to work effectively and securely on Windows 11 devices. Aaron Nicholls has volunteered to help you test and evaluate the solution and provide feedback. He has also given you some initial requirements that must be included and applied to the developer's Windows devices:
+You need to use Entra and Intune to manage members of the Developers department at Contoso . You have been asked to evaluate the solutions that would enable the users to work effectively and securely on Windows 11 devices. Aaron Nicholls has volunteered to help you test and evaluate the solution and provide feedback. He has also given you some initial requirements that must be included and applied to the developer's Windows devices:
 
 - The Gaming section in Settings should not be visible.
 - The Privacy section in Settings should be restricted as much as possible.

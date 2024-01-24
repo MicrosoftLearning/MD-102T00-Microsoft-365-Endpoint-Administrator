@@ -1,4 +1,4 @@
-# Practice Lab: Managing Identities in Azure AD
+# Practice Lab 0101: Managing Identities in Entra ID
 
 ## WWL Tenants - Terms of Use
 
@@ -10,9 +10,9 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 ## Summary
 
-In this lab, you will use the Microsoft Entra admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Azure AD.
+In this lab, you will use the Entra admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Entra ID.
 
-## Exercise 1: Creating users in Azure AD
+## Exercise 1: Creating users in Entra ID
 
 ### Scenario
 
@@ -158,7 +158,7 @@ You've also been told that several more employees will be hired over the next co
     }
     ```
 
-8. Next, type the following code to create a new user, and then press **Enter**. Be sure to replace "yourtenant" with your assigned tenant name:
+8. Next, type the following code to create a new user, and then press **Enter**. Ensure "yourtenant" matches your assigned tenant name:
 
     ```
     New-MgUser `
@@ -179,9 +179,9 @@ You've also been told that several more employees will be hired over the next co
 
 > Verify that the list of users from your tenant is displayed. 
 
-**Results**: After completing this exercise, you will have successfully created new user accounts in Azure AD.
+**Results**: After completing this exercise, you will have successfully created new user accounts in Entra ID.
 
-## Exercise 2: Assigning Administrative Roles in Azure AD
+## Exercise 2: Assigning Administrative Roles in Entra ID
 
 ### Scenario
 
