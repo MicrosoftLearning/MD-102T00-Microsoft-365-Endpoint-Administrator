@@ -172,7 +172,7 @@ To provide additional security for user sign on events, you need to configure an
 
 4. In the navigation pane, expand **Protection** page, and then select **Conditional Access**.
 
-5. On the **Conditional Access** page, select **Policies**, and then select **New policy**.
+5. On the **Conditional Access** page, select **Policies**, and then select **+ New policy**.
 
 6. On the **New Conditional access policy** page, in the **Name** box, enter **Contoso MFA Policy**.
 
