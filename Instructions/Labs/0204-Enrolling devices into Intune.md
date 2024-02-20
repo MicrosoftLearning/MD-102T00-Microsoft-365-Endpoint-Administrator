@@ -14,7 +14,7 @@ To following lab(s) must be completed before this lab:
 
 - 0203-Manage Device Enrollment into Intune
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
+  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ### Scenario
 
@@ -32,10 +32,9 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 5. In the **Access work or school** page, select **Connect**.
 
-6. In the **Microsoft account** window, select **Join this device to Azure Active Directory**.
+6. In the **Microsoft account** window, select **Join this device to Microsoft Entra ID**.
 
 7. On the **Sign in** page, type **`Aaron@yourtenant.onmicrosoft.com`** and then select **Next**.
-
 
 8. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**.
 
@@ -59,7 +58,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 -   Microsoft Intune MDM Device CA
 -   MS-Organization-Access
--   MS-Organization-P2P-Access \[2023\]
+-   MS-Organization-P2P-Access \[2024\]
 
     This indicates that the device is enrolled in Azure AD and Intune.
 
@@ -78,9 +77,9 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 7. In the output under **Tenant Details**, verify that the following three entries exist:
 
     ```
-    mdmUrl:https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc
-    mdmTouUrl:https://portal.manage.microsoft.com/TermsofUse.aspx
-    mdmComplianceUrl:https://portal.manage.microsoft.com/?portalAction=Compliance
+    mdmUrl : https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc
+    mdmTouUrl : https://portal.manage.microsoft.com/TermsofUse.aspx
+    mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
     ```
 
 > Note: These entries indicate that the device is enrolled in Intune.
