@@ -10,9 +10,7 @@ To following lab(s) must be completed before this lab:
 
 - 0203-Manage Device Enrollment into Intune
 
-
 > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
-
 
 ## Exercise 1: Create and apply a Configuration profile
 
@@ -36,10 +34,9 @@ You have been asked to configure SEA-WS2 as a Windows 11 kiosk to allow Contoso 
 
 5. In the **Access work or school** page, select **Connect**.
 
-6. In the **Microsoft account** window, select **Join this device to Azure Active Directory**.
+6. In the **Microsoft account** window, select **Join this device to Microsoft Entra ID**.
 
 7. On the **Sign in** page, type **`AllanD@yourtenant.onmicrosoft.com`** and then select **Next**.
-
 
 8. On the **Enter password** page, enter the Tenant password and then select **Sign in**.
 
@@ -87,9 +84,9 @@ You have been asked to configure SEA-WS2 as a Windows 11 kiosk to allow Contoso 
 
 1. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
-2. On the **Devices | Overview** page, select **Configuration Profiles**.
+2. On the **Devices | Overview** page, select **Configuration profiles**.
 
-3. On the **Devices | Configuration profiles** blade, in the details pane, select **Create profile**.
+3. On the **Devices | Configuration profiles** blade, in the details pane, select **Create** and finally **New Policy**.
 
 4. In the **Create a profile** blade, select the following options, and then select **Create**:
 
