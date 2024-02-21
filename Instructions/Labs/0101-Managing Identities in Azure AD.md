@@ -66,66 +66,68 @@ You've also been told that several more employees will be hired over the next co
 14. Uncheck **Auto-generated password**
 
 15. Next to **Password**, enter **Pa55-w.rd!**.
+    > Note: If you receive an error message stating that this password in weak or commonly used, enter the tenant password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
+    
+17. Select **Next:Properties** located at the bottom of the page.
 
-16. Select **Next:Properties** located at the bottom of the page.
+18. Next to **First name**, enter **Edmund**.
 
-17. Next to **First name**, enter **Edmund**.
+19. Next to **Last name**, enter **Reeve**.
 
-18. Next to **Last name**, enter **Reeve**.
-
-19. Next to **User type**, make note that **Member** is selected.
+20. Next to **User type**, make note that **Member** is selected.
     > Note: The **Member** user type is the default user type. This user type is used for most users in an organization.
 
-20. Next to **Job title**, enter **HR Rep**.
+21. Next to **Job title**, enter **HR Rep**.
 
-21. Next to **Department**, enter **HR**.
+22. Next to **Department**, enter **HR**.
 
-22. Next to **Usage location**, select **United States**.
+23. Next to **Usage location**, select **United States**.
 
-23. Select **Next:Assignments** located at the bottom of the page.
+24. Select **Next:Assignments** located at the bottom of the page.
 
-24. On the **Assignments** page, note that no assignments are selected.
+25. On the **Assignments** page, note that no assignments are selected.
     > by default no groups are assigned to the user. This is because the user is not a member of any groups until you assign them.
 
-25. Select **Next:Review + create** located at the bottom of the page.
+26. Select **Next:Review + create** located at the bottom of the page.
     > Review the information on this page to ensure that it is correct.
 
-26. Select **Create**.
+27. Select **Create**.
 
-27. On the **Users | All users** page, select **New user** then select **Create new user**.
+28. On the **Users | All users** page, select **New user** then select **Create new user**.
 
-28. On the **Create new user** page, enter the following:
+29. On the **Create new user** page, enter the following:
 
     - User Principal Name: **msnider**
     - Display Name: **Miranda Snider**
 
-29. Uncheck **Auto-generated password**
+30. Uncheck **Auto-generated password**
 
-30. Next to **Password**, enter **Pa55-w.rd!**.
+32. Next to **Password**, enter **Pa55-w.rd!**.
+    > Note: If you receive an error message stating that this password in weak or commonly used, enter the tenant password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
 
-31. Select **Next:Properties** located at the bottom of the page.
+34. Select **Next:Properties** located at the bottom of the page.
 
-32. Next to **First name**, enter **Miranda**.
+35. Next to **First name**, enter **Miranda**.
 
-33. Next to **Last name**, enter **Snider**.
+36. Next to **Last name**, enter **Snider**.
 
-34. Next to **User type**, make note that **Member** is selected.
+37. Next to **User type**, make note that **Member** is selected.
 
-35. Next to **Job title**, enter **Helpdesk Manager**.
+38. Next to **Job title**, enter **Helpdesk Manager**.
 
-36. Next to **Department**, enter **Operations**.
+39. Next to **Department**, enter **Operations**.
 
-37. Next to **Usage location**, select **United States**.
+40. Next to **Usage location**, select **United States**.
 
-38. Select **Next:Assignments** located at the bottom of the page.
+41. Select **Next:Assignments** located at the bottom of the page.
 
-39. On the **Assignments** page, note that no assignments are selected.
+42. On the **Assignments** page, note that no assignments are selected.
 
-40. Select **Next:Review + create** located at the bottom of the page.
+43. Select **Next:Review + create** located at the bottom of the page.
 
-41. Select **Create**.
+44. Select **Create**.
 
-42. Minimize the **Microsoft Edge** window.
+45. Minimize the **Microsoft Edge** window.
 
 ### Task 2: Create users by using PowerShell
 
