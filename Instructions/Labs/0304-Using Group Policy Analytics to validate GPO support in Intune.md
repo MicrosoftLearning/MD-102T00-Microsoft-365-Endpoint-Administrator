@@ -40,7 +40,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 4. In the Microsoft Intune admin center, in the navigation pane, select **Devices**.
 
-5. On the **Devices | Overview** page, in the **Policy** section, select **Group Policy analytics**.
+5. On the **Devices | Overview** page, in the **Manage devices** section, select **Group Policy analytics**.
 
 6. On the **Devices | Group Policy analytics** blade, select **Import**.
 
