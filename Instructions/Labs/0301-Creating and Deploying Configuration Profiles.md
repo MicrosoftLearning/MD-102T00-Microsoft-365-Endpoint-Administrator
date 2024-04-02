@@ -71,7 +71,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 5. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
-6. On the **Devices | Overview** page, select **Configuration Profiles**.
+6. On the **Devices | Overview** page, select **Configuration**.
 
 7. On the **Devices | Configuration profiles** blade, in the details pane, select **Create profile**.
 
