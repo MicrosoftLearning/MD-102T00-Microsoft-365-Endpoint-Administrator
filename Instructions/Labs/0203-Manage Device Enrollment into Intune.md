@@ -64,13 +64,11 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 2. In the Microsoft Intune admin center, select **Devices**.
 
-3. On the Devices pane, select **Enroll devices**.
+3. On the Devices pane, select **Enrollment**.
 
-4. In the Enroll devices pane, select **Windows enrollment**.
+4. In the General section, select **Automatic Enrollment**.
 
-5. In the General section, select **Automatic Enrollment**.
-
-6. On the **MDM user scope** row, select **All** and then select **Save**.
+5. On the **MDM user scope** row, select **All** and then select **Save**.
 
    _**Note**: By performing this step, you enabled automatic enrollment into Intune for any User that performs an Azure AD join with a Windows device._
 
