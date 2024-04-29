@@ -80,7 +80,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Task 4: Install an app from the Company Portal Website
 
-   > **Note**: It can take several minutes for the app to appear in the Company Portal Website. If the app does not appear, wait a few minutes and then refresh the page. If the app still does not appear, verify that you have assigned the app to the correct group and that the device is a member of the group. (This could take up to 30 minutes.)
+   > **Note**: It can take several minutes for the app to appear in the Company Portal Website. If the app does not appear, wait a few minutes and then refresh the page. If the app still does not appear, verify that you have assigned the app to the correct group and that the user is a member of the group. (This could take up to 30 minutes.)
 
 1. Switch to **SEA-WS1**.
 
