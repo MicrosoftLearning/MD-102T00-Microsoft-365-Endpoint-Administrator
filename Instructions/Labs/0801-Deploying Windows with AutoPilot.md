@@ -69,21 +69,19 @@ Install-Script -Name Get-WindowsAutoPilotInfo
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
 ```
 
-6. When prompted, type **Y**, and then press Enter.
-
-7. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
+6. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
 ```powershell
 Get-WindowsAutoPilotInfo.ps1 -OutputFile C:\Computer.csv
 ```
 
-8. At the Windows PowerShell command-line prompt, type the following command, press **Enter**, and then review the file content:
+7. At the Windows PowerShell command-line prompt, type the following command, press **Enter**, and then review the file content:
 
 ```cmd
 type C:\Computer.csv
 ```
 
-9. Close **Windows Terminal**.
+8. Close **Windows Terminal**.
 
 ### Task 3: Work with a Windows Autopilot deployment profile
 
