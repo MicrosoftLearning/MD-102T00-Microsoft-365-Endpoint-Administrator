@@ -41,9 +41,9 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 4. Sign in as as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 
-5. From the navigation pane select **Devices**, then select **Compliance policies**.
+5. From the navigation pane select **Devices**, then select **Compliance**.
 
-6. On the **Compliance policies | Policies** blade, in the details pane select **Create policy**.
+6. On the **Devices | Compliance** blade, in the details pane select **Create policy**.
 
 7. On the **Create a policy** blade, provide the following value and select **Create**:
 
@@ -70,11 +70,11 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 14. On the **Review + create** tab, review the settings and then select **Create**.
 
-15. In the navigation menu, select **Devices** and then in the Devices navigation pane, select **Compliance policies**.
+15. In the navigation menu, select **Devices** and then in the Devices navigation pane, select **Compliance**.
 
-16. On the **Compliance policies** page, select **Compliance policy settings**.
+16. On the **Devices | Compliance** blade, select the **Compliance settings** tab.
 
-17. On the **Compliance policy settings** page, next to **Mark devices with no compliance policy assigned as**, select **Not Compliant** and then select **Save**. 
+17. On the **Compliance settings** page, toggle **Mark devices with no compliance policy assigned as** so it reads **Not compliant** and then select **Save**. 
 
     > This setting will ensure that any device that does not have a compliance policy assigned will be set to **Not compliant**.
 
@@ -99,15 +99,15 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 5. Under **Include**, select the **All users** radio button.
 
-6. On the **New** blade, in the **Target resources** section, select **No target resources selected**.
+6. In the **Target resources** section, select **No target resources selected**.
 
 7. Under **Include** choose the **Select apps** radio button, under the Select option select **None**, select **Office 365 Exchange Online**, and then click **Select**.
 
-8. On the **New** blade, in the **Conditions** section, select **0 conditions selected**. 
+8. In the **Conditions** section, select **0 conditions selected**. 
 
 9. In the list of conditions, under **Device platforms**, select **Not configured**. In the **Configure** section select **Yes**, select the **Select device platforms** radio button, select the **Windows** check box, and then select **Done**.
 
-10. On the **New** blade under **Access controls**, in the **Grant** section, select **0 controls selected**. Select the **Require device to be marked as compliant** check box, and then select **Select**.
+10. In the **Grant** section, select **0 controls selected**. Select the **Require device to be marked as compliant** check box, and then select **Select**.
 
 11. On the **New** blade, select **On** for the **Enable policy** option and then select **Create**.
 

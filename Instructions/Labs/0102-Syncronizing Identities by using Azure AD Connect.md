@@ -54,7 +54,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 21. When configuration is complete, select **Exit**.  
 
-      > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Entra ID begins. You should wait approximately 3-4 minutes for this process to complete. Or check progress in the Synchronization Service application.
+    > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Entra ID begins. You should wait approximately 3-4 minutes for this process to complete. Or check progress in the Synchronization Service application.
 
 22. Close all open windows.
 

@@ -38,12 +38,11 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 5. From the navigation pane select **Endpoint security**, then select **Antivirus**.
 
-6. On the **Endpoint security |Antivirus** pane, select **Create Policy**.
+6. On the **Endpoint security | Antivirus** pane, select **Create Policy**.
 
 7. In the **Create a profile** pane, for **Platform**, select **Windows 10, Windows 11, and Windows Server**. 
 
 8. In the **Profile** list, select **Windows Security experience**. Then select **Create**.
-
 
 9. On the Basics tab, in the **Name** field, enter **Windows Security Settings**. Select **Next**.
 

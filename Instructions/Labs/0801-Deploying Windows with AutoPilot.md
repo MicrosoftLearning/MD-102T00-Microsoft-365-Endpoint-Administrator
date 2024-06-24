@@ -1,4 +1,4 @@
-# Practice Lab: Deploying Windows with Autopilot
+# Practice Lab 0801: Deploying Windows with Autopilot
 
 ## Summary
 
@@ -12,14 +12,9 @@ To following lab(s) must be completed before this lab:
 
 - 0102-Synchronizing Identities by using Azure AD Connect
 
-- 0701-Deploying Windows 11 using Microsoft Deployment Toolkit
-
-
 ### Scenario
 
-Contoso IT is planning to roll out a deployment of new Windows 11 devices using Autopilot. The devices have a default installation of Windows 11. Users should be able to connect the device, turn it on, and answer minimal questions during the OOBE, using their Azure AD credentials to sign in. The process should automatically enroll and join the Azure AD domain. You have been asked to configure and test the experience using the SEA-WS4, which you recently installed and configured using Hyper-V.
-
-> **Important**: We cannot use Windows 11 Hyper-V based virtual machines for Autopilot testing (Which we configured in the previous lab, 0701). This is due to a physical Trusted Platform Module (TPM) requirement. In this lab, we will test autopilot using Windows 10 which does not have the physical TPM requirment. In the real world you can follow the same process for deploying windows 11 via Autopilot. for more details, see [Troubleshooting Windows Enrollment Issues](https://learn.microsoft.com/en-us/troubleshoot/mem/intune/device-enrollment/troubleshoot-windows-enrollment-errors#securing-your-hardware-failed-0x800705b4).
+Contoso IT is planning to roll out a deployment of new Windows 11 devices using Autopilot. The devices have a default installation of Windows 11. Users should be able to connect the device, turn it on, and answer minimal questions during the OOBE, using their Azure AD credentials to sign in. The process should automatically enroll and join the Azure AD domain. You have been asked to configure and test the experience.
 
 ### Task 1: Create group in Azure AD
 
@@ -56,53 +51,53 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 ### Task 2: Generate a device-specific comma-separated value (CSV) file
 
-1. Switch to **SEA-W10-CL3** and sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
+1. Switch to **SEA-WS3** and sign in as **Admin** with the password of **Pa55w.rd**.
 
-2. Right-click **Start**, select **Windows PowerShell (Admin)**, and then select **Yes** at the **User Account Control** prompt.
+2. Right-click **Start**, select **Windows Terminal (Admin)**, and then select **Yes** at the **User Account Control** prompt.
 
 3. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
-    ```
-    Install-Script -Name Get-WindowsAutoPilotInfo
-    ```
+```powershell
+Install-Script -Name Get-WindowsAutoPilotInfo
+```
 
 4. You will receive three prompts. Each time, type **Y**, and then press **Enter**.
 
 5. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
-    ```
-    Set-ExecutionPolicy RemoteSigned
-    ```
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
 
 6. When prompted, type **Y**, and then press Enter.
 
 7. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
-    ```
-    Get-WindowsAutoPilotInfo.ps1 -OutputFile C:\Computer.csv
-    ```
+```powershell
+Get-WindowsAutoPilotInfo.ps1 -OutputFile C:\Computer.csv
+```
 
 8. At the Windows PowerShell command-line prompt, type the following command, press **Enter**, and then review the file content:
 
-    ```
-    type C:\Computer.csv
-    ```
+```cmd
+type C:\Computer.csv
+```
 
-9. Close out of **Windows Powershell**.
+9. Close **Windows Terminal**.
 
 ### Task 3: Work with a Windows Autopilot deployment profile
 
-1. On **SEA-W10-CL3**, in the windows taskbar, select **Microsoft Edge**.
+1. On **SEA-WS3**, in the windows taskbar, select **Microsoft Edge**.
 
 2. In **Microsoft Edge**, navigate to **https://intune.microsoft.com**. Sign in with your **`Admin@yourtenant.onmicrosoft.com`** account.
 
-    >Note: You will be prompted to register for MFA. Follow the same procedures you used earlier in the course to add your phone number.
+    >Note: You may be prompted to register for MFA. Follow the same procedures you used earlier in the course to add your phone number.
 
 3. In the **Microsoft Intune admin center**, select **Devices**.
 
-4. In the **Device enrollment** section, select **Enroll devices**. 
+4. In the **Device onboarding** section, select **Enrollment**. 
 
-5. In the details pane scroll down to **Windows Autopilot Deployment Program**, and then select **Devices**.
+5. In the **Windows** tab, scroll down to **Windows Autopilot**, and then select **Devices**.
 
 6. In the **Windows Autopilot devices** blade on the menu bar, select **Import**, select the **folder icon** and then browse to **C:\\**, select **Computer.csv**, select **Open**, and then select **Import**. 
 
@@ -122,13 +117,13 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 12. On the **Out-of-box experience (OOBE)** tab, ensure that the **Deployment mode** is set to **User-Driven**.
 
-13. Ensure that **Join to Azure AD as** is set to **Azure AD Joined**.
+13. Ensure that **Join to Entra ID as** is set to **Microsoft Entra joined**.
 
 14. Ensure that the following options are set:
 
     - Microsoft Software License Terms: **Hide**
 
-    - Privacy Settings: **Hide**
+    - Privacy settings: **Hide**
 
     - Hide change account options: **Hide**
 
@@ -148,15 +143,15 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 17. Select the **IT Devices** group and click **Select**. Select **Next**.
 
-18. On the **Review + create** blade, review the information and then select **Create**.
+18. On the **Review + create** tab, review the information and then select **Create**.
 
-19. Close out of **Microsoft Edge**
+19. Close **Microsoft Edge**
 
 ### Task 4: Reset the PC
 
-1. On **SEA-W10-CL3**, select **Start**, type **reset** and select **Reset this PC**.
+1. On **SEA-WS3**, select **Start**, type **reset** and select **Reset this PC**.
 
-2. In the **Reset this PC** section, select **Get started**.
+2. In the **System > Recovery** page, select **Reset PC**.
 
 3. Select **Remove everything**, and then select **Local reinstall**.
 
@@ -164,11 +159,11 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
    >Note: Normally this task is not required for new deployment of physical devices. The device’s autopilot info is either provided by the manufacturer or can be obtained from the device prior to the OOBE. For the purposes of this lab, we must initiate a reset to simulate a new device OOBE.
 
-   >Note: This process can take 30-60 minutes and will reboot several times during the process.
+   >Note: This process can take 30-45 minutes and will reboot several times during the process. 
 
 ### Task 5: Verify Autopilot deployment
 
-1. At the **Contoso Corp. Sign-in Page**, enter **`Aaron@yourtenant.onmicrosoft.com`** and select **Next**.
+1. At the **Let's set things up for your work or school** page, enter **`Aaron@yourtenant.onmicrosoft.com`** and select **Next**.
 
 2. At the Password page, enter **Pa55w.rd1234!** and select **Sign in**.
 
@@ -191,19 +186,17 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 11. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
-12. On **SEA-W10-CL3**, close the **Settings** window.
+12. On **SEA-WS3**, close the **Settings** window.
 
 13. Switch to **SEA-SVR1**.
 
-14. In the Microsoft Entra admin center, expand **Identity**, select **Devices** and then select **All devices**. 
+14. In the Microsoft Entra admin center, expand **Identity**, expand **Devices** and then select **All devices**. 
 
-    > Note that the new device displays with an icon that indicates an Autopilot device. Also note that the Join Type is **Azure AD joined** with Aaron Nicholls as the owner.
+    > Note that the new device displays with an icon that indicates an Autopilot device. Also note that the Join Type is **Microsoft Entra joined** with Aaron Nicholls as the owner.
 
 15. Select the Autopilot device and then select **Manage**. 
 
-16. Again select the Autopilot device to review the management page. 
-
-    > Notice that you can Retire, Wipe, Sync, and Restart the device.
+16. Notice that you can Retire, Wipe, Sync, and Restart the device.
 
 17. Select the ellipsis at the end of the menu bar and take notice of the additional management capabilities.
 
