@@ -135,13 +135,13 @@ You've also been told that several more employees will be hired over the next co
 
 2. In the **PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
 
-```
+```powershell
 Install-Module Microsoft.Graph -Scope CurrentUser
 ```
 
 3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
 
-```
+```powershell
 Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
 ```
 
