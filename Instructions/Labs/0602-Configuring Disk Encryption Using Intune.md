@@ -32,37 +32,33 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 5. In the Microsoft Intune admin center, select **Endpoint security** from the navigation bar.
 
-6. On the **Endpoint security| Overview** page, select **Disk encryption**.
+6. On the **Endpoint security | Overview** page, select **Disk encryption**.
 
-7. On the **Endpoint security| Disk encryption** blade, in the details pane, select **Create Policy**.
+7. On the **Endpoint security | Disk encryption** blade, in the details pane, select **Create Policy**.
 
 8. In the **Create a profile** page, select the following options, and then select **Create**:
 
     -   Platform: **Windows 10 and later**
     -   Profile: **BitLocker**
+
 9. On the **Basics** page, enter the following information, and then select **Next**:
 
     -   Name: **Contoso BitLocker**
-
     -   Description: **Enable BitLocker for all devices**
-10. On the **Configurations settings** page, expand **BitLocker - Base Settings** and then configure the following options:
 
-     - Enable Full disk or Used Space only encryption for OS and fixed data drives: **Yes**
+10. On the **Configurations settings** page, expand **BitLocker** and then configure the following option:
 
-    > **Note** If you don't see the below settings, navigate to https://intune.microsoft.com/#view/Microsoft_Intune_Workflows/CreateUpdate/templateId/d1174162-1dd2-4976-affc-6667049ab0ae/baselineVersion//platform/Windows%2010%20and%20later/templateName/BitLocker/feature~/2 and resume from Step 8
+     - Require Device Encyrption: **Enabled**
 
-11. On the **Configurations settings** page, expand **BitLocker - OS Drive Settings** and then configure the following options:
-     - BitLocker system drive policy: **Configure**
-     - Startup authentication required: **Yes**
-     - Compatible TPM startup: **Allowed**
-     - Compatible TPM startup PIN: **Allowed**
-     - System drive recovery: **Configure**
-     - Recovery key file creation: **Allowed**
-     - Require device to back up recovery information to Azure: **Yes**
-     - Recovery password creation: **Required**
-     - Hide recovery options during BitLocker setup: **Yes**
-     - Enable BitLocker after recovery information to store: **Yes**
-     - Minimum PIN length: **4**
+11. On the **Configurations settings** page, expand **Administrative Templates**, scroll down to **Windows Components > BitLocker Drive Encryption > Operating System Drives** and then configure the following options, leaving all other options to their defaults:
+
+     - Enforce drive encryption type on operating system drives: **Enabled**
+     - Require additional authentication at startup: **Enabled**
+     - Configure minimum PIN length for startup: **Enabled**
+     - Choose how Bitlocker-protected operating system drives can be recovered: **Enabled**
+     - Omit recovery options from the BitLocker setup wizard: **True**
+     - Do not enable Bitlocker until recovery info is stored to AD DS: **True**
+     - Save Bitlocker recovery info to AD DS: **True**
 
 12. On the **Configurations settings** page, select **Next**.
 
@@ -88,13 +84,13 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 5. Select the **Encryption needed** notification.
 
-   _Note: It may take some time until the notification shows up._
+   _Note: It may take some time until the notification shows up. Windows Focus Assist may also prevent the notification from appearing. You can check notifications manually._
 
 6. On the **Are you ready to start encryption?** dialog, select the checkbox next to **I don't have any other disk encryption software installed, encrypt all my disks**, and select **Yes**.
 
 7. On the **Choose how to unlock your drive at startup?** page, select **Enter a PIN**
 
-8. On the **Enter a PIN** page, in the **PIN** and **Reenter PIN** boxes, enter **1234**, and then select **Set PIN**.
+8. On the **Enter a PIN** page, in the **PIN** and **Reenter PIN** boxes, enter **123456**, and then select **Set PIN**.
 
 9. On the **Choose how much of your drive to encrypt** page, select **Encrypt used disk space only** and select **Next**.
    
@@ -104,7 +100,7 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 13. At the **Encryption of C: is complete** message, select **Close**, and then restart **SEA-WS1**.
 
-14. When **SEA-WS1** restarts, type **1234** and press **Enter** to unlock the drive.
+14. When **SEA-WS1** restarts, type **123456** and press **Enter** to unlock the drive.
 
 ### Task 3: Verify BitLocker protection
 

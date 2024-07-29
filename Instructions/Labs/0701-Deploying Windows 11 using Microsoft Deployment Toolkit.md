@@ -1,4 +1,4 @@
-# Practice Lab: Deploying Windows 11 using Microsoft Deployment Toolkit
+# Practice Lab 0701: Deploying Windows 11 using Microsoft Deployment Toolkit
 
 ## Summary
 

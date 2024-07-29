@@ -46,9 +46,9 @@ You have been asked to create a Configuration profile to be used to automaticall
 
 1. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
-2. On the **Devices | Overview** page, scroll down and select **Configuration Profiles**.
+2. On the **Devices | Overview** page, scroll down and select **Configuration**.
 
-3. On the **Devices | Configuration profiles** blade, in the details pane, select **Create profile**.
+3. On the **Devices | Configuration** blade, in the details pane, select **+ Create**, and then select **+ New Policy**.
 
 4. In the **Create a profile** blade, select the following options, and then select **Create**:
 
@@ -80,7 +80,7 @@ You have been asked to create a Configuration profile to be used to automaticall
 
 11. Select **Next** until you reach the **Review + create** blade. Select **Create**.
 
-12. Refresh the **Devices | Configuration profiles** blade, and verify that the **iOS/iPadOS Wi-Fi Policy** is listed. 
+12. Refresh the **Devices | Configuration** blade, and verify that the **iOS/iPadOS Wi-Fi Policy** is listed. 
 
 13. Close the Edge browser.
 

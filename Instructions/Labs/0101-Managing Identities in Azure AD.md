@@ -36,7 +36,7 @@ You've also been told that several more employees will be hired over the next co
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. In the address bar, enter **https://admin.microsoft.com**.
+4. In the address bar, enter **https://entra.microsoft.com**.
 
 5. At the Sign-in prompt, enter **admin@yourtenant.onmicrosoft.com** and then select **Next**.
 
@@ -46,88 +46,88 @@ You've also been told that several more employees will be hired over the next co
 
 7. At the Save password prompt, select **Save & Turn on**.
 
-8. At the Stay signed in prompt, select **No**. The Microsoft 365 admin center opens.
+8. At the Stay signed in prompt, select **No**. The Entra admin center opens.
 
-9. Select the **Navigation menu** and then select **Show all**.
-
-10. In the Navigation pane, under **Admin centers** select **Identity**. The Microsoft Entra admin center opens.
-
-11. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
+9. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
 
     > Take note of the users that already exist as members of the Microsoft Entra ID. The **On-premises sync enabled** column states **No** for all current users. This indicates that each user was created directly in Microsoft Entra ID and not synchronized from an on-premises directory service.
 
-12. On the **Users | All users** page, select **New user** then select **Create new user**.
+10. On the **Users | All users** page, select **New user** then select **Create new user**.
 
-13. On the **Create new user** page, enter the following:
+11. On the **Create new user** page, enter the following:
 
     - User Principal Name: **ereeve**
     - Display Name: **Edmund Reeve**
 
-14. Uncheck **Auto-generated password**
+12. Uncheck **Auto-generated password**
 
-15. Next to **Password**, enter **Pa55-w.rd!**.
+13. Next to **Password**, enter **Pa55-w.rd!**.
+
     > Note: If you receive an error message stating that this password in weak or commonly used, enter the tenant password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
     
-17. Select **Next:Properties** located at the bottom of the page.
+14. Select **Next:Properties** located at the bottom of the page.
 
-18. Next to **First name**, enter **Edmund**.
+15. Next to **First name**, enter **Edmund**.
 
-19. Next to **Last name**, enter **Reeve**.
+16. Next to **Last name**, enter **Reeve**.
 
-20. Next to **User type**, make note that **Member** is selected.
+17. Next to **User type**, make note that **Member** is selected.
+
     > Note: The **Member** user type is the default user type. This user type is used for most users in an organization.
 
-21. Next to **Job title**, enter **HR Rep**.
+18. Next to **Job title**, enter **HR Rep**.
 
-22. Next to **Department**, enter **HR**.
+19. Next to **Department**, enter **HR**.
 
-23. Next to **Usage location**, select **United States**.
+20. Next to **Usage location**, select **United States**.
 
-24. Select **Next:Assignments** located at the bottom of the page.
+21. Select **Next:Assignments** located at the bottom of the page.
 
-25. On the **Assignments** page, note that no assignments are selected.
-    > by default no groups are assigned to the user. This is because the user is not a member of any groups until you assign them.
+22. On the **Assignments** page, note that no assignments are selected.
 
-26. Select **Next:Review + create** located at the bottom of the page.
+    > By default, no groups are assigned to the user. This is because the user is not a member of any groups until you assign them.
+
+23. Select **Next:Review + create** located at the bottom of the page.
     > Review the information on this page to ensure that it is correct.
 
-27. Select **Create**.
+24. Select **Create**.
 
-28. On the **Users | All users** page, select **New user** then select **Create new user**.
+25. On the **Users | All users** page, select **New user** then select **Create new user**.
 
-29. On the **Create new user** page, enter the following:
+26. On the **Create new user** page, enter the following:
 
     - User Principal Name: **msnider**
     - Display Name: **Miranda Snider**
 
-30. Uncheck **Auto-generated password**
+27. Uncheck **Auto-generated password**
 
-32. Next to **Password**, enter **Pa55-w.rd!**.
+28. Next to **Password**, enter **Pa55-w.rd!**.
+
     > Note: If you receive an error message stating that this password in weak or commonly used, enter the tenant password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
 
-34. Select **Next:Properties** located at the bottom of the page.
+29. Select **Next:Properties** located at the bottom of the page.
 
-35. Next to **First name**, enter **Miranda**.
+30. Next to **First name**, enter **Miranda**.
 
-36. Next to **Last name**, enter **Snider**.
+31. Next to **Last name**, enter **Snider**.
 
-37. Next to **User type**, make note that **Member** is selected.
+32. Next to **User type**, make note that **Member** is selected.
 
-38. Next to **Job title**, enter **Helpdesk Manager**.
+33. Next to **Job title**, enter **Helpdesk Manager**.
 
-39. Next to **Department**, enter **Operations**.
+34. Next to **Department**, enter **Operations**.
 
-40. Next to **Usage location**, select **United States**.
+35. Next to **Usage location**, select **United States**.
 
-41. Select **Next:Assignments** located at the bottom of the page.
+36. Select **Next:Assignments** located at the bottom of the page.
 
-42. On the **Assignments** page, note that no assignments are selected.
+37. On the **Assignments** page, note that no assignments are selected.
 
-43. Select **Next:Review + create** located at the bottom of the page.
+38. Select **Next:Review + create** located at the bottom of the page.
 
-44. Select **Create**.
+39. Select **Create**.
 
-45. Minimize the **Microsoft Edge** window.
+40. Minimize the **Microsoft Edge** window.
 
 ### Task 2: Create users by using PowerShell
 
@@ -135,15 +135,15 @@ You've also been told that several more employees will be hired over the next co
 
 2. In the **PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
 
-    ```
-    Install-Module Microsoft.Graph -Scope CurrentUser
-    ```
+```powershell
+Install-Module Microsoft.Graph -Scope CurrentUser
+```
 
 3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
 
-    ```
-    Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
-    ```
+```powershell
+Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
+```
 
 4. A new tab in **Microsoft Edge** will appear prompting you to sign in. In the **Sign in to your account** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant password, and then select **Sign in**.
 
@@ -153,31 +153,31 @@ You've also been told that several more employees will be hired over the next co
 
 7. Back In the **PowerShell 7** window, type the following code to create a new profile object, and then press **enter**. Replace **Pa55w.rd** with a complex password of your choice:
 
-    ```
-    $PWProfile = @{
-      Password = "Pa55w.rd";
-      ForceChangePasswordNextSignIn = $false
-    }
-    ```
+```powershell
+$PWProfile = @{
+    Password = "Pa55w.rd";
+    ForceChangePasswordNextSignIn = $false
+}
+```
 
 8. Next, type the following code to create a new user, and then press **Enter**. Ensure "yourtenant" matches your assigned tenant name:
 
-    ```
-    New-MgUser `
-        -DisplayName "Cody Godinez" `
-        -GivenName "Cody" -Surname "Godinez" `
-        -MailNickname "cgodinez" `
-        -UsageLocation "US" `
-        -UserPrincipalName "cgodinez@yourtenant.onmicrosoft.com" `
-        -PasswordProfile $PWProfile -AccountEnabled `
-        -Department "Sales" -JobTitle "Sales Rep"
-    ```
+```powershell
+New-MgUser `
+    -DisplayName "Cody Godinez" `
+    -GivenName "Cody" -Surname "Godinez" `
+    -MailNickname "cgodinez" `
+    -UsageLocation "US" `
+    -UserPrincipalName "cgodinez@yourtenant.onmicrosoft.com" `
+    -PasswordProfile $PWProfile -AccountEnabled `
+    -Department "Sales" -JobTitle "Sales Rep"
+```
 
 9. To confirm that the user **Cody Godinez** was created, In the **PowerShell 7** window, type the following command and then press **Enter**:
 
-    ```
-    Get-MgUser
-    ```
+```powershell
+Get-MgUser
+```
 
 > Verify that the list of users from your tenant is displayed. 
 
@@ -282,41 +282,41 @@ You also been asked to modify the Company branding for the sign-in page.
 
 2. In the **PowerShell 7** window, type the following code to create a new group, and then press **Enter**:
 
-    ```
-    New-MgGroup -DisplayName "Contoso_Sales" -Description "Contoso Sales team users" -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
-    ```
+```powershell
+New-MgGroup -DisplayName "Contoso_Sales" -Description "Contoso Sales team users" -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
+```
 
 3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
 
-    ```
-    Get-MgGroup
-    ```
+```powershell
+Get-MgGroup
+```
 
 4. Verify that you get the list of groups in your tenant, including the Contoso_Sales group you just created.
 
 5. In the **PowerShell 7** window, type the following code to define a variable as the Contoso_Sales group, and then press **Enter**:
 
-    ```
-    $group = Get-MgGroup | Where-Object {$_.DisplayName -eq "Contoso_Sales"}
-    ```
+```powershell
+$group = Get-MgGroup | Where-Object {$_.DisplayName -eq "Contoso_Sales"}
+```
 
 6. In the **PowerShell 7** window, type the following code to define another variable as the user, and then press **Enter**:
 
-    ```
-    $user = Get-MgUser | Where-Object {$_.DisplayName -eq "Cody Godinez"}
-    ```
+```powershell
+$user = Get-MgUser | Where-Object {$_.DisplayName -eq "Cody Godinez"}
+```
 
 7. In the **PowerShell 7** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
 
-    ```
-    New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
-    ```
+```powershell
+New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
+```
 
 8. In the **PowerShell 7** window, type the following code, and then press **Enter**:
 
-    ```
-    Get-MgGroupMember -GroupId $group.Id | FL
-    ```
+```powershell
+Get-MgGroupMember -GroupId $group.Id | FL
+```
 
 9. Verify that you see **Cody Godinez** as value in **AdditionalProperties**.
 

@@ -60,7 +60,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 9. For the **Number of questions required to reset**, select **3**.
 
-10. In the **Select security questions** section, select **No security questions configured**, then select **Predefined**. Select three questions of your choice, and then select **Ok**.
+10. In the **Select security questions** section, select **No security questions configured**, then select **Predefined**. Select three questions of your choice, and then select **Ok** twice.
 
 11. Select **Save**.
 

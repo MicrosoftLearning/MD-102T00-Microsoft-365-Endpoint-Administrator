@@ -58,9 +58,9 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 2. In the PowerShell console, type the following and press **Enter**: 
 
-    ```
-    dsregcmd /status
-    ```
+```
+dsregcmd /status
+```
 
 3. In the output under **User State**, verify that **WorkplaceJoined : YES** is displayed. This indicates that the user has performed a device registration in Azure AD.
 

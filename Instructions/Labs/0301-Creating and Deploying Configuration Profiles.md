@@ -73,7 +73,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 6. On the **Devices | Overview** page, select **Configuration**.
 
-7. On the **Devices | Configuration profiles** blade, in the details pane, select **Create profile**.
+7. On the **Devices | Configuration** blade, in the details pane, select **+ Create**, and then select **+ New policy**.
 
 8. In the **Create a profile** blade, select the following options, and then select **Create**:
 
@@ -81,20 +81,20 @@ You need to use Entra and Intune to manage members of the Developers department 
    - Profile type: **Templates**
    - Template name: **Device restrictions**
 
-9. In the **Basics** blade, enter the following information, and then select **Next**:
+9. In the **Basics** tab, enter the following information, and then select **Next**:
 
 - Name: **Contoso Developer - standard**
 - Description: **Basic restrictions and configuration for Contoso Developers.**
 
-10. On the **Configurations settings** blade, expand **Control Panel and Settings**. 
+10. On the **Configurations settings** tab, expand **Control Panel and Settings**. 
 
 11. Select **Block** next to the **Gaming** and **Privacy** options.
 
-12. On the **Device restrictions** blade, expand **Start**. 
+12. On the **Device restrictions** tab, expand **Start**. 
 
 13. Scroll down and select **Block** next to **Most used apps**, **Recently added apps** and **Recently opened items in Jump Lists**.
 
-14. On the **Device restrictions** blade, scroll down and expand **Microsoft Defender Antivirus**. 
+14. On the **Device restrictions** tab, scroll down and expand **Microsoft Defender Antivirus**. 
 
 15. Under **Microsoft Defender Antivirus,** scroll down and expand **Microsoft Defender Antivirus Exclusions**.
 
@@ -143,9 +143,9 @@ You need to use Entra and Intune to manage members of the Developers department 
     
 5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
-    ```
-    (device.deviceOSType -contains "Windows")
-    ```
+```
+(device.deviceOSType -contains "Windows")
+```
 
 6. On the **Dynamic membership rules** blade, select **Save**.
 
@@ -155,9 +155,9 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
 
-2. On the **Devices | Overview** blade, select **Configuration profiles**.
+2. On the **Devices | Overview** blade, select **Configuration**.
 
-3. On the **Devices | Configuration profiles** blade, in the details pane, select the **Contoso Developer – standard** profile.
+3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer – standard** profile.
 
 4. On the **Contoso Developer – standard** blade, scroll down to the **Assignments** section, and select **Edit**.
 
@@ -217,9 +217,9 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and then select **Configuration Profiles**. 
+2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and then select **Configuration**. 
 
-3. On the **Devices | Configuration profiles** blade, in the details pane select **Contoso Developer -  standard**.
+3. On the **Devices | Configuration** blade, in the details pane select **Contoso Developer -  standard**.
 
 4. On the **Contoso Developer - standard** blade, scroll down to the **Configuration settings** section, and then select **Edit**.
 

@@ -88,10 +88,10 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 2. In the PowerShell console, type the following and press **Enter**:
 
-    ```
-    dsregcmd /status
-    
-    ```
+```
+dsregcmd /status
+
+```
 
 3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed.
 
@@ -261,17 +261,17 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 5. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
 
-    ```
-    dsregcmd /status
-    ```
+```
+dsregcmd /status
+```
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** and **DomainJoined : YES** are displayed.
 
    > **Note**: If the device is not yet joined to Azure AD, switch back to **SEA-SRV1** and run the command below. Once completed, switch back to SEA-CL2 and restart the computer once more.
    
-   ```
-   Start-ADSyncSyncCycle -PolicyType Delta
-   ```
+```powershell
+Start-ADSyncSyncCycle -PolicyType Delta
+```
 
 7. Close all windows on SEA-CL2 and sign out.
 
