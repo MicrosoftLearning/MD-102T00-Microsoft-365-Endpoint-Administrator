@@ -82,7 +82,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
    > The Group policy migration readiness report provides information related to each setting, and the Profile Type supported.
 
-6. Select **Generate report**. 
+6. Select **Generate again**. 
 
 7. The Group policy migration readiness report provides information related to each setting, and the Profile Type supported.
 

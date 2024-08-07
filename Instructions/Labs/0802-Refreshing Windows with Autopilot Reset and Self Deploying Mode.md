@@ -29,9 +29,9 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 3. In the **Microsoft Intune admin center**, select **Devices**.
 
-4. In the **Device enrollment** section, select **Enroll devices**. 
+4. In the **Device onboarding** section, select **Enrollment**. 
 
-5. On the Windows enrollment blade, in the details pane, select **Deployment Profiles**.
+5. On the Windows enrollment tab, scroll down to **Windows Autopilot** in the details pane, and then select **Deployment Profiles**.
 
 6. On the **Windows AutoPilot deployment profiles** blade, select **Contoso Profile 1** and then select **Properties**.
 
@@ -76,11 +76,11 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 5. At the message prompt, select **Yes**.
 
-6. Switch to **SEA-W10-CL3**.
+6. Switch to **SEA-WS3-GTL**.
 
-   > Note: SEA-W10-CL3 should still be running from the previous lab.
+   > Note: SEA-WS3-GTL should still be running from the previous lab.
 
-7. Restart **SEA-W10-CL3**.
+7. Restart **SEA-WS3-GTL**.
 
    > Note: This process can take 30-45 minutes and will reboot several times during the process. 
 
@@ -106,7 +106,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 10. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
-11. On **SEA-W10-CL3**, close the **Settings** window.
+11. On **SEA-WS3-GTL**, close the **Settings** window.
 
     **Results**: After completing this exercise, you will have provisioned a Windows device with Autopilot Reset using Self-Deploying mode.
 
