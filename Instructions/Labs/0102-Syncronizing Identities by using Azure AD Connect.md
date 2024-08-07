@@ -16,7 +16,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 3. In the address bar, enter `http://www.microsoft.com/en-us/download/details.aspx?id=47594`
 
-4. On the Microsoft Azure AD Connect V2 page, select **Download**.
+4. On the Microsoft Entra Connecta page, select **Download**.
 
     > Azure AD Connect automatically downloads to the **Downloads** folder on SEA-SVR1.
 

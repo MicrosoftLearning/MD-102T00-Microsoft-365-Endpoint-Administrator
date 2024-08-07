@@ -54,7 +54,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 14. In the Aaron Nicholls|Licenses pane, select **Assignments**.
 
-15. In the **Update license assignments** page, select both **Enterprise Mobility + Security E5** and **Office 365 E5**, and then select **Save**.
+15. In the **Update license assignments** page, select both **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**, and then select **Save**.
 
 ### Task 2: Enable Windows Automatic Enrollment into Microsoft Intune
 
