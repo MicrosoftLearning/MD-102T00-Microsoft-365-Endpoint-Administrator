@@ -22,39 +22,34 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
-2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+2. On the taskbar select **Microsoft Edge**, in the address bar type **https://admin.microsoft.com**, and then press **Enter**.
 
 3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Microsoft Entra admin center opens.
+   > The Microsoft 365 admin center opens.
 
-4. In the navigation pane, expand **Identity** and then select **Show more**.
+4. In the navigation pane, expand **Billing** and then select **Licenses**.
 
-5. Select **Billing** > **Licenses**.
+5. On the **Licenses | Subscriptions** page, take note of the licenses that are available in the tenant. 
 
-6. On the **Licenses | Overview** page, under **Manage**, select **All products**. Take note of the licenses that are available in the tenant. 
-
-7. Select **Enterprise Mobility + Security E5**. 
+6. Select **Enterprise Mobility + Security E5**. 
   
    > Notice all the users that have been assigned this license. You can assign and remove licenses from this location.
 
-8. Under **General**, select **Service plan details**. Take note of the services included in the Enterprise Mobility + Security E5 license. Microsoft Intune is one of the supported services for this license.
+7. Select the **View apps and services included with this subscription** link. Take note of the services included in the Enterprise Mobility + Security E5 license. Microsoft Intune is one of the supported services for this license.
 
-9. In the Microsoft Entra admin center navigation pane, under **Identity**, select **Users** > **All users**.
+8. In the Microsoft 365 admin center navigation pane, under **Users**, select **Active users**
 
-10. Select **Aaron Nicholls**.
+9. Click the Display name **Aaron Nicholls**.
 
-11. In the Aaron Nicholls pane, select **Edit properties**.
+10. Select the **Licenses and apps** tab.
 
-12. Under Settings, in the **Usage location** field, select **United States** and then select **Save**.
+11.  If the **Select location** field is not populated, select the correct location from the drop-down list.
 
-    > Note: Before you can assign a license to a user, the user must have a usage location set.
+12. Check the boxes for **Enterprise Mibility + Security E5** and the **Ofice 365 E5 (no Teams)**.
 
-13. In the Aaron Nicholls navigation pane, select **Licenses**.
+13. Select **Save Changes**
 
-14. In the Aaron Nicholls|Licenses pane, select **Assignments**.
-
-15. In the **Update license assignments** page, select both **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**, and then select **Save**.
 
 ### Task 2: Enable Windows Automatic Enrollment into Microsoft Intune
 
