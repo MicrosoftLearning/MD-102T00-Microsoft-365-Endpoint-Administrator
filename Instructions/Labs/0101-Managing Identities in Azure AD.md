@@ -208,39 +208,57 @@ You have been provided a list of users should have administrative roles assigned
 
 4. Using the search box, search for **Global administrator**.
 
-5. Select **Global administrator**.
+5. Select **Global administrator** (select the name, not the checkbox).
 
-6. In the **Global administrator** pane, select **Add assignments**.
+6. In the **Global administrator** pane, select **+ Add assignments**.
 
-7. In the **Add assignments** pane, select **Allan Deyoung**.
+7. In the **Add assignments** pane, select **No member selected**.
 
-8. Select **Add**.
+8. Search for and select **Allan Deyoung**.
 
-9. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+9. Select **Select**.
 
-10. Using the search box, search for **User administrator**.
+10. Select **Next**
 
-11. Select **User administrator**.
+11. Select **Assign**.
 
-12. In the **User administrator** pane, select **Add assignments**.
+12. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-13. In the **Add assignments** pane, search for and select **Edmund Reeve**.
+13. Using the search box, search for **User administrator**.
 
-14. Select **Add**.
+14. Select **User administrator**.
 
-15. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+15. In the **User administrator** pane, select **+ Add assignments**.
 
-16. Using the search box, search for **Helpdesk administrator**.
+16. In the **Add assignments** pane, select **No member selected**.
 
-17. Select **Helpdesk administrator**.
+17. Search for and select **Edmund Reeve**.
 
-18. In the **Helpdesk administrator** pane, select **Add assignments**.
+18. Select **Select**.
 
-19. In the **Add assignments** pane, search for and select **Miranda Snider**.
+19. Select **Next**
 
-20. Select **Add**.
+20. Select **Assign**.
 
-21. In the navigation pane, select **Home**.
+21. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+
+20. Using the search box, search for **Helpdesk administrator**.
+
+21. Select **Helpdesk administrator**.
+
+22. In the **Helpdesk administrator** pane, select **+ Add assignments**
+
+23. In the **Add assignments** pane, select **No member selected**.
+
+24. Search for and select **Miranda Snider**.
+
+25. Select **Select**.
+
+26. Select **Next**.
+
+27. Select **Assign**
+
+28. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 
