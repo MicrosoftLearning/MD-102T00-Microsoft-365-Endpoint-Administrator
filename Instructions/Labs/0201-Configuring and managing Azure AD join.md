@@ -18,7 +18,7 @@ To following lab(s) must be completed before this lab:
 
 You need to configure Entra ID device settings to ensure that all users are allowed to join devices to Entra ID. You also need to ensure that users can only join a maximum of 20 devices and that Allan Deyoung is added as a local administrator on all Entra joined devices. Finally, you will verify that Entra join works as expected by having Joni Sherman join SEA-WS1 to the tenant.
 
-### Task 1: Configure Azure AD join Device settings
+### Task 1: Configure Entra join Device settings
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
 

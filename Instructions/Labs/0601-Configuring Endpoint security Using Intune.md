@@ -40,7 +40,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 6. On the **Endpoint security | Antivirus** pane, select **Create Policy**.
 
-7. In the **Create a profile** pane, for **Platform**, select **Windows 10, Windows 11, and Windows Server**. 
+7. In the **Create a profile** pane, for **Platform**, select **Windows**. 
 
 8. In the **Profile** list, select **Windows Security experience**. Then select **Create**.
 
@@ -71,7 +71,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 1. On the **Endpoint security |Antivirus** pane, select **Create Policy**.
 
-2. In the **Create a profile** pane, for **Platform**, select **Windows 10, Windows 11, and Windows Server**. 
+2. In the **Create a profile** pane, for **Platform**, select **Windows**. 
 
 3. In the **Profile** list, select **Microsoft Defender Antivirus**, then select **Create**.
 
