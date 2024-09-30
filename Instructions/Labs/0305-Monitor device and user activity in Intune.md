@@ -50,27 +50,25 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
-2. In the Devices navigation pane, select **Overview**.
+1. In the Devices navigation pane, select **Overview**.
 
-3. In the details pane, take note of the device information for enrolled devices. Select the ellipsis icon (if shown) to view all of the overview tabs. Available tabs include **Enrollment status**, **Enrollment alerts**, **Compliance status**, **Configuration status**, and **Software update status**. Select each tab to view information.
+1. Select **All devices**, and in the details pane, select **SEA-WS1**. Information about the device such as name, Primary user, and operating system is displayed.
 
-4. Select **All devices**, and in the details pane, select **SEA-WS1**. Information about the device such as name, Primary user, and operating system is displayed.
+1. In the SEA-WS1 navigation pane, select **Hardware** and examine the hardware inventory.
 
-5. In the SEA-WS1 navigation pane, select **Hardware** and examine the hardware inventory.
+1. In the SEA-WS1 navigation pane, select **Discovered apps** and examine the app inventory.
 
-6. In the SEA-WS1 navigation pane, select **Discovered apps** and examine the app inventory.
+1. In the SEA-WS1 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
 
-7. In the SEA-WS1 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
+1. In the details pane, select **Contoso Developer – standard**.
 
-8. In the details pane, select **Contoso Developer – standard**.
-
-9. On the **Contoso Developer – standard** blade, take note of each setting you configured in the profile.
+1. On the **Contoso Developer – standard** blade, take note of each setting you configured in the profile.
 
    > The **State** should display **Succeeded** next to all of them.
 
-10. In the Microsoft Intune admin center, from the navigation pane, select **Home**.
+1. In the Microsoft Intune admin center, from the navigation pane, select **Home**.
 
-11. Close Microsoft Edge.
+1. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you will have successfully monitored user Sign-in activity, Audit logs, and device activity.
 

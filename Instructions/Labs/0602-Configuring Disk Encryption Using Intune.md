@@ -38,7 +38,7 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 8. In the **Create a profile** page, select the following options, and then select **Create**:
 
-    -   Platform: **Windows 10 and later**
+    -   Platform: **Windows**
     -   Profile: **BitLocker**
 
 9. On the **Basics** page, enter the following information, and then select **Next**:
@@ -46,18 +46,18 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
     -   Name: **Contoso BitLocker**
     -   Description: **Enable BitLocker for all devices**
 
-10. On the **Configurations settings** page, expand **BitLocker** and then configure the following option:
+10. On the **Configurations settings** tab, expand **BitLocker** and then configure the following option:
 
      - Require Device Encyrption: **Enabled**
 
-11. On the **Configurations settings** page, expand **Administrative Templates**, scroll down to **Windows Components > BitLocker Drive Encryption > Operating System Drives** and then configure the following options, leaving all other options to their defaults:
+11. On the **Configurations settings** tab, scroll down to **Operating System Drives** and then configure the following options, leaving all other options to their defaults:
 
      - Enforce drive encryption type on operating system drives: **Enabled**
      - Require additional authentication at startup: **Enabled**
      - Configure minimum PIN length for startup: **Enabled**
      - Choose how Bitlocker-protected operating system drives can be recovered: **Enabled**
-     - Omit recovery options from the BitLocker setup wizard: **True**
      - Do not enable Bitlocker until recovery info is stored to AD DS: **True**
+     - Omit recovery options from the BitLocker setup wizard: **True**
      - Save Bitlocker recovery info to AD DS: **True**
 
 12. On the **Configurations settings** page, select **Next**.
