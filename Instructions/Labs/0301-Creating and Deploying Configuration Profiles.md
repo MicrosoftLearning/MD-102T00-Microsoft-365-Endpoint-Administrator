@@ -127,7 +127,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. On the **Groups | All groups** blade, verify that the **Contoso developer devices** group is displayed.
 
-### Task 4: Create a dynamic Azure AD device group
+### Task 4: Create a dynamic Entra ID device group
 
 1. On the **Groups | All Groups** blade, on the details pane, select **New group**.
 

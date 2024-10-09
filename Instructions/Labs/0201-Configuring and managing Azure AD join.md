@@ -169,7 +169,7 @@ dsregcmd /status
 
 ### Scenario
 
-Some Contoso Windows devices are currently joined to the local Active Directory Domain Services. To enable those devices to seamlessly access cloud services you plan to enable hybrid Azure AD join. You will test hybrid Azure AD join by re-configuring Azure AD Connect and testing out the process on SEA-CL2.
+Some Contoso Windows devices are currently joined to the local Active Directory Domain Services. To enable those devices to seamlessly access cloud services you plan to enable Entra hybrid join. You will test Entra hybrid join by re-configuring Azure AD Connect and testing out the process on SEA-CL2.
 
 ### Task 1: Prepare the environment
 

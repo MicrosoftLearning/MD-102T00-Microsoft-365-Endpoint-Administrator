@@ -28,27 +28,27 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
    > The Microsoft 365 admin center opens.
 
-4. In the navigation pane, expand **Billing** and then select **Licenses**.
+4. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Your products**.
 
-5. On the **Licenses | Subscriptions** page, take note of the licenses that are available in the tenant. 
+5. On the **Your products** page, take note of the licenses that are available in the tenant. 
 
-6. Select **Enterprise Mobility + Security E5**. 
+6. Select **Enterprise Mobility + Security E5 Demo Trial**. 
   
-   > Notice all the users that have been assigned this license. You can assign and remove licenses from this location.
+7. Scroll down the page, and select the **View apps and services included with this subscription** link. Take note of the services included in the Enterprise Mobility + Security E5 license. Microsoft Intune is one of the supported services for this license.
 
-7. Select the **View apps and services included with this subscription** link. Take note of the services included in the Enterprise Mobility + Security E5 license. Microsoft Intune is one of the supported services for this license.
+8. In the Microsoft 365 admin center navigation pane, select **Users** > **Active users**.
 
-8. In the Microsoft 365 admin center navigation pane, under **Users**, select **Active users**
-
-9. Click the Display name **Aaron Nicholls**.
+9. Select **Aaron Nicholls** (select the name, not the checkbox).
 
 10. Select the **Licenses and apps** tab.
 
-11.  If the **Select location** field is not populated, select the correct location from the drop-down list.
+11. If the **Select location** field is not populated, select the a location from the drop-down list.
 
-12. Check the boxes for **Enterprise Mibility + Security E5** and the **Ofice 365 E5 (no Teams)**.
+12. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
 
-13. Select **Save Changes**
+13. Select **Save Changes**.
+
+14. Once the changes have been saved, close the **Microsoft 365 admin center** tab in Edge. 
 
 
 ### Task 2: Enable Windows Automatic Enrollment into Microsoft Intune
@@ -67,7 +67,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 6. On the **MDM user scope** row, select **All** and then select **Save**.
 
-   _**Note**: By performing this step, you enabled automatic enrollment into Intune for any User that performs an Azure AD join with a Windows device._
+   _**Note**: By performing this step, you enabled automatic enrollment into Intune for any User that performs an Entra join or Entra registration from a Windows device._
 
 ### Task 3: Configure Enrollment Restrictions
 
