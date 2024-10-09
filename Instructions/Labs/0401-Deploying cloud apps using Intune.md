@@ -78,9 +78,8 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
    > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
 
-### Task 4: Install an app from the Company Portal Website
 
-   > **Note**: It can take several minutes for the app to appear in the Company Portal Website. If the app does not appear, wait a few minutes and then refresh the page. If the app still does not appear, verify that you have assigned the app to the correct group and that the user is a member of the group. (This could take up to 30 minutes.)
+### Task 4: Install an app from the Company Portal Website
 
 1. Switch to **SEA-WS1**.
 
@@ -104,13 +103,13 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 10. At the top-left corner, select the navigation button and then select **Apps**.
 
-    > Take note of the Microsoft Remote Desktop app listed on the Apps page. It might take a few minutes for the app to appear.
+   > Take note of the Microsoft Remote Desktop app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
 
 11. Select **Microsoft Remote Desktop**.
 
 12. On the Microsoft Remote Desktop page, select **Install**.
 
-13. On the **Install Microsoft Remote Desktop** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
+13. If prompted, on the **Install Microsoft Remote Desktop** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
 
    >It may take a few minutes for the app to install.
 

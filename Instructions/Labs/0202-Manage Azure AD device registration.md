@@ -100,6 +100,6 @@ dsregcmd /status
 
 8. Sign out of SEA-WS1.
 
-**Results**: After completing this exercise, you will have configured Azure AD device registration.
+**Results**: After completing this exercise, you will have configured Entra device registration.
 
 **END OF LAB**
