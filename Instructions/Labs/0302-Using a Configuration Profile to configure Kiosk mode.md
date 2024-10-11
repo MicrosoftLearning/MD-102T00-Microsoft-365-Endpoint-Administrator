@@ -10,7 +10,7 @@ To following lab(s) must be completed before this lab:
 
 - 0203-Manage Device Enrollment into Intune
 
-> Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
+> Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 1: Create and apply a Configuration profile
 
