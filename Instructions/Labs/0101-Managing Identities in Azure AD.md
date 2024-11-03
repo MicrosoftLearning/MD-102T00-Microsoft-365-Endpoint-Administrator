@@ -394,7 +394,7 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
 1. In the upper-left corner of the **Enterprise Mobility + Security E5** page, select the **Back to licenses** link.
 
-1. In the **Subscriptions** list, select **Office 3265 E5 (no Teams)**.
+1. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
 
 1. Select the **Groups** tab, and then select **+ Assign licenses**.
 
@@ -406,7 +406,7 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
 1. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
 
-1. In the **Subscriptions** list, select **Office 3265 E5 (no Teams)**.
+1. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
 
    > Take note of the users that are assigned the Office 365 E5 license. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You can select the **Groups** tab see if the licenses assigned correctly. 
 
