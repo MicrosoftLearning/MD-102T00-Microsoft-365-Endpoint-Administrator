@@ -101,7 +101,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 6. In the **Target resources** section, select **No target resources selected**.
 
-7. Under **Include** choose the **Select apps** radio button, under the Select option select **None**, select **Office 365 Exchange Online**, and then click **Select**.
+7. Under **Include** choose the **Select resources** radio button, under the Select option select **None**, select **Office 365 Exchange Online**, and then click **Select**.
 
 8. In the **Conditions** section, select **0 conditions selected**. 
 
