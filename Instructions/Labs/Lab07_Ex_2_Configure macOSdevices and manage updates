@@ -1,10 +1,12 @@
-## Scenario
+# Practice Lab07: Manage macOS Devices
+
+## Summary
 
 In this lab, you use Microsoft Intune to create a device restriction profile and an update policy for macOS devices.
 
 ## Exercise 2: Configure macOS devices and manage updates
 
-## Scenario
+### Scenario
 
 Your company has recently deployed Mac devices. These devices need to be configured properly to ensure security and compliance. As part of this task, you are required to create a device restriction profile and an update policy for these Mac OS devices.
 
@@ -24,18 +26,18 @@ Your company has recently deployed Mac devices. These devices need to be configu
 
 1. On the **Devices | Configuration** page, in the **Policies** pane, select **+ Create** and then select **+ New Policy**.
 
-1. In the **Create a profile** blade, select the following options, and then select **Create**:
+1. In the **Create a profile** tab, select the following options, and then select **Create**:
 
    - Platform: **macOS**
    - Profile type: **Templates**
    - Template name: **Device restriction**
 
-1. In the **Basics** blade, enter the following information, and then select **Next**:
+1. In the **Basics** tab, enter the following information, and then select **Next**:
 
    - Name: **Contoso default macOS device restriction profile**
    - Description: **Default settings for macOS devices** 
 
-1. On the **Configuration settings** blade, expand **Password**.
+1. On the **Configuration settings** tab, expand **Password**.
 
 1. Select **Yes** next to **Require password** and **Block simple passwords**.
 
@@ -53,11 +55,11 @@ Your company has recently deployed Mac devices. These devices need to be configu
 
 1. Select **Next**.
 
-1. On the **Scope tags** blade, select **Next**.
+1. On the **Scope tags** tab, select **Next**.
 
-1. On the **Assignments** blade, select **Add all users** and select **Next**.
+1. On the **Assignments** tab, select **Add all users** and select **Next**.
 
-1. On the **Review + create** blade, select **Create**.
+1. On the **Review + create** tab, select **Create**.
 
 ### Task 2: Crate a macOS update profile ### 
 
@@ -69,22 +71,24 @@ Your company has recently deployed Mac devices. These devices need to be configu
 
 1. On the **macOS | macOS updates** page, select **+ Create profile**.
 
-1. In the **Basics** blade, enter the following information, and then select **Next**:
+1. In the **Basics** tab, enter the following information, and then select **Next**:
 
    - Name: **Contoso default macOS update profile**
    - Description: **Default settings for macOS updates**
 
-1. On the **Update policy settings** blade, under **Upadte policy behaviour settings, select the following settings:
+1. On the **Update policy settings** tab, under **Upadte policy behaviour settings**, select the following settings:
 
    - Critical updates: **Download only**
    - Firmware updates: **Install immediately**
    - Configuration file updates: **Install immediately**
    - All other updates (OS, built-in apps): **Install immediately**
 
-1. On the **Update policy settings** blade, under **Update policy schedule settings**, select **Update at next check-in** next to **Schedule type** and select **Next**.
+1. On the **Update policy settings** tab, under **Update policy schedule settings**, select **Update at next check-in** next to **Schedule type** and select **Next**.
 
-1. On the **Scope tags** blade, select **Next**.
+1. On the **Scope tags** tab, select **Next**.
 
-1. On the **Assignments** blade, select **Add all users** and select **Next**.
+1. On the **Assignments** tab, select **Add all users** and select **Next**.
 
-1. On the **Review + create** blade, select **Create**.
+1. On the **Review + create** tab, select **Create**.
+
+**END OF THE LAB**
