@@ -10,9 +10,6 @@ To complete all tasks successfully, an Apple account is necessary. This account 
 
 The instructions below are only intended to simulate a real-life scenario for training purposes and assume that a valid Apple account already exists. Students are not required to create an Apple account or a certificate in the Apple Push Certificates Portal. If users choose to create an Apple account, they are solely responsible for ensuring that their actions comply with Apple's applicable terms and conditions, including but not limited to the Apple MDM Certificate Agreement. The authors of this guide assume no responsibility for the creation or use of Apple accounts outside of these terms.
 
-This section describes how to create an enrollment program token in Intune. The enrollment program token (sometimes referred to as an automated device enrollment token) is a necessary component of automated device enrollment. It enables the communication and device management capabilities between Intune and your chosen Apple enrollment program. It allows Intune to sync information from your Apple Business Manager or Apple School Manager account, and apply profiles to devices.
-
-
 ## Exercise 1: Manage macOS Device Enrollment into Intune
 
 ### Scenario
@@ -130,7 +127,7 @@ Your organization has recently acquired multiple macOS devices and has chosen to
 
 ### Task 4: Assign an enrollment profile to a device
 
-> To finish tis task, devices must be assigned to the right MDM server in Apple Business Manager
+> To finish tis task, devices must be assigned to the right MDM server in Apple Business Manager.
 
 1. In the Microsoft Intune admin center, in the left navigation pane select **Devices**.
 
@@ -140,7 +137,16 @@ Your organization has recently acquired multiple macOS devices and has chosen to
 
 1. On the **macOS | Enrollment** page, under **Bulk Enrollment Methods**, select **Enrollment program tokens**.
 
-1. ....
+1. On the **Enrollment program tokens** page, select your token.
 
+1. On the tokens page, under **Manage**, select **Profiles** and then select the profile **Contoso ADE profile for macOS**.
+
+1. On the **Contoso ADE profile for macOS** page, under **Manage**, select **Assign devices**.
+
+1. On the **Contoso ADE profile for macOS | Assign devices** page select **+ Add Devices**.
+
+1. On the **Add Devices** blade, select a device and then select **Add**.
+
+1. On the **Contoso ADE profile for macOS | Assign devices** page, select **Save**.
 
 **END OF THE LAB**
