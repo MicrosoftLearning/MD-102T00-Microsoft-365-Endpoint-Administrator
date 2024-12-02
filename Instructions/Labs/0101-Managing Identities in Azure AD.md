@@ -65,7 +65,7 @@ You've also been told that several more employees will be hired over the next co
 
     > Note: If you receive an error message stating that this password in weak or commonly used, enter the tenant password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
     
-14. Select **Next:Properties** located at the bottom of the page.
+14. Select **Next: Properties** located at the bottom of the page.
 
 15. Next to **First name**, enter **Edmund**.
 
@@ -81,13 +81,13 @@ You've also been told that several more employees will be hired over the next co
 
 20. Next to **Usage location**, select **United States**.
 
-21. Select **Next:Assignments** located at the bottom of the page.
+21. Select **Next: Assignments** located at the bottom of the page.
 
 22. On the **Assignments** page, note that no assignments are selected.
 
     > By default, no groups are assigned to the user. This is because the user is not a member of any groups until you assign them.
 
-23. Select **Next:Review + create** located at the bottom of the page.
+23. Select **Next: Review + create** located at the bottom of the page.
     > Review the information on this page to ensure that it is correct.
 
 24. Select **Create**.
@@ -105,7 +105,7 @@ You've also been told that several more employees will be hired over the next co
 
     > Note: If you receive an error message stating that this password in weak or commonly used, enter the tenant password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
 
-29. Select **Next:Properties** located at the bottom of the page.
+29. Select **Next: Properties** located at the bottom of the page.
 
 30. Next to **First name**, enter **Miranda**.
 
@@ -119,11 +119,11 @@ You've also been told that several more employees will be hired over the next co
 
 35. Next to **Usage location**, select **United States**.
 
-36. Select **Next:Assignments** located at the bottom of the page.
+36. Select **Next: Assignments** located at the bottom of the page.
 
 37. On the **Assignments** page, note that no assignments are selected.
 
-38. Select **Next:Review + create** located at the bottom of the page.
+38. Select **Next: Review + create** located at the bottom of the page.
 
 39. Select **Create**.
 
@@ -208,39 +208,57 @@ You have been provided a list of users should have administrative roles assigned
 
 4. Using the search box, search for **Global administrator**.
 
-5. Select **Global administrator**.
+5. Select **Global administrator** (select the name, not the checkbox).
 
-6. In the **Global administrator** pane, select **Add assignments**.
+6. In the **Global administrator** pane, select **+ Add assignments**.
 
-7. In the **Add assignments** pane, select **Allan Deyoung**.
+7. In the **Add assignments** pane, select **No member selected**.
 
-8. Select **Add**.
+8. Search for and select **Allan Deyoung**.
 
-9. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+9. Select **Select**.
 
-10. Using the search box, search for **User administrator**.
+10. Select **Next**
 
-11. Select **User administrator**.
+11. Select **Assign**.
 
-12. In the **User administrator** pane, select **Add assignments**.
+12. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-13. In the **Add assignments** pane, search for and select **Edmund Reeve**.
+13. Using the search box, search for **User administrator**.
 
-14. Select **Add**.
+14. Select **User administrator**.
 
-15. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+15. In the **User administrator** pane, select **+ Add assignments**.
 
-16. Using the search box, search for **Helpdesk administrator**.
+16. In the **Add assignments** pane, select **No member selected**.
 
-17. Select **Helpdesk administrator**.
+17. Search for and select **Edmund Reeve**.
 
-18. In the **Helpdesk administrator** pane, select **Add assignments**.
+18. Select **Select**.
 
-19. In the **Add assignments** pane, search for and select **Miranda Snider**.
+19. Select **Next**
 
-20. Select **Add**.
+20. Select **Assign**.
 
-21. In the navigation pane, select **Home**.
+21. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+
+20. Using the search box, search for **Helpdesk administrator**.
+
+21. Select **Helpdesk administrator**.
+
+22. In the **Helpdesk administrator** pane, select **+ Add assignments**
+
+23. In the **Add assignments** pane, select **No member selected**.
+
+24. Search for and select **Miranda Snider**.
+
+25. Select **Select**.
+
+26. Select **Next**.
+
+27. Select **Assign**
+
+28. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 
@@ -326,57 +344,73 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
 1. In the Microsoft Entra admin center, in the navigation pane, select **Billing** > **Licenses**.
 
-2. On the **Licenses|Overview** page, under **Manage**, select **All products**.
+1. On the **Licenses|Overview** page, under **Manage**, select **All products**.
 
    > Take note of the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-3. In the Microsoft Entra admin center, in the Navigation pane, select **User experiences** > **Company branding**.
+1. In the Microsoft Entra admin center, in the Navigation pane, select **User experiences** > **Company branding**.
 
-4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
+1. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
-5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** tab and configure the following settings:
+1. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** tab and configure the following settings:
 
    - Sign-in page text: **Contoso Corp. Sign-in Page**
 
-6. Select **Review + Create**, review the settings and then select **Create**.
+1. Select **Review + Create**, review the settings and then select **Create**.
 
-7. In the Microsoft Entra admin center, in the Navigation pane, select **Users** > **All users**.
+1. In the Microsoft Entra admin center, in the Navigation pane, select **Users** > **All users**.
 
-8. In the user list, select **Cody Godinez**.
+1. In the user list, select **Cody Godinez**.
 
-9. In the Cody Godinez Profile page, under Manage, select **Licenses**.
+1. In the Cody Godinez Profile page, under Manage, select **Licenses**.
 
-   > Notice that Cody does not have any current license assignments.
+   > Notice that Cody does not have any current license assignments. And that licensing must now be performed in the 365 Admin center.
 
-10. Select **Assignments**.
+1. Open a new tab in **Microsoft Edge**, in the address bar, enter **https://admin.microsoft.com**.
 
-11. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
+1. In the navigation pane on the left, select **Users** > **Active users**.
 
-12. Select **Save**.
+1. In the user list, select **Cody Godinez** (select the name, not the checkbox).
 
-13. In the Microsoft Entra admin center, in the Navigation pane, select **Groups** > **All groups**.
+1. Select the **Licenses and apps** tab.
 
-14. On the Groups|All groups page, select **Contoso_Managers**.
+1. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
 
-15. On the Contoso_Managers page, select **Licenses**.
+1. Select **Save changes**.
 
-    > Notice that the Contoso_Managers group does not have any current license assignments.
+1. Once the changes have been saved, select the **X** in the upper-right corner to close the **Cody Godinez** pane. 
 
-16. Select **Assignments**.
+1. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
 
-17. In the Update license assignments page, select the check box next to **Enterprise Mobility + Security E5** and **Office 365 E5**.
+1. In the **Subscriptions** list, select **Enterprise Mobility + Security E5**.
 
-18. Select **Save**.
+1. Select the **Groups** tab, and then select **+ Assign licenses**.
 
-19. In the Microsoft Entra admin center, in the Navigation pane, select **Billing** > **Licenses**.
+1. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
 
-20. On the **Licenses|Overview** page, under **Manage**, select **All products**.
+1. Select **Assign**.
 
-21. On the Licenses|All products page, select **Office 365 E5**.
+1. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
 
-   > Take note of the users that are assigned the Office 365 E5 license. Notice the Assignment Paths column which indicates how license assignment is configured for each user. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You may need to select **Refresh** a couple of times to update the Assignment path column.
+1. In the upper-left corner of the **Enterprise Mobility + Security E5** page, select the **Back to licenses** link.
 
-22. Close Microsoft Edge.
+1. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
+
+1. Select the **Groups** tab, and then select **+ Assign licenses**.
+
+1. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
+
+1. Select **Assign**.
+
+1. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
+
+1. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
+
+1. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
+
+   > Take note of the users that are assigned the Office 365 E5 license. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You can select the **Groups** tab see if the licenses assigned correctly. 
+
+1. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you should have successfully created and managed groups, modified company branding, and assigned licenses.
 
