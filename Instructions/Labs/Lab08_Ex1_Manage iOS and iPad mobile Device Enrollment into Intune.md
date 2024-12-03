@@ -2,7 +2,7 @@
 
 ## Summary
 
-In this lab, you use Microsoft Intune manage device enrollment for iOS/iPadOS and Android devices. You will create configuraiton profile and app protection polciies for these mobile devices.
+In this lab, you use Microsoft Intune manage device enrollment for iOS/iPadOS and Android devices.
 
 ### Prerequisites
 
