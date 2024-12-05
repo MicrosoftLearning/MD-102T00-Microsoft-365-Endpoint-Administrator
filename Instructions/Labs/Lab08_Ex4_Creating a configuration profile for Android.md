@@ -32,7 +32,7 @@
 
 1. On the **Managed Google Play** page, in the search box, enter **Microsoft 365** and select the search button.
 
-1. Select **Microsoft 365 (offiec)** from the list.
+1. Select **Microsoft 365 (office)** from the list.
 
 1. On the details pageof the applicytion, select **Select** and then on the upper left side, select **Sync**
 
@@ -52,4 +52,28 @@
 
 1. In the **Review + save** tab, select **Save**.
 
-### Task 2
+### Task 2 Create a configuration profile based on scenario requirements
+
+1. In the Microsoft Intune admin center, in the left navigation pane select **Devices**.
+
+1. On the **Devices | Overview** page, under **Manage devices**, select **Configuration**.
+
+1. On the **Devices | Configuration** page, in the **Policies** tab, select **+ Create** and then select **+ New Policy**.
+
+1. In the **Create a profile** blade, select the following options and then select **Create**:
+
+  - Platform: **Android Enterprise**
+  - Profile type: **Device restrictions** under **Fully Managed, Dedicated, and Corporate-Owned Work Profile
+
+1. In the **Basics** tab enter the following information and select **Next**:
+
+  - Name: **Prod_Marketing_ Android Enterprise_Fully Managed_Device Restriction profile**
+  - Description: **This Intune profile is designed for fully managed Android Enterprise devices used by the Marketing department in the Production environment. The profile enforces specific device restriction policies**
+
+1. In the **Configuration settings** tab, 
+
+1. 
+
+1. 
+
+**END OF LAB**
