@@ -2,13 +2,13 @@
 
 ## Summary
 
-### Prerequisites
-
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
+In this lab, you deploy apps and configure Android devices.
 
 ### Exercise 4: Deploy apps and create a configuration profile for Android
 
 ### Scenario
+
+Your organization is rolling out fully managed Android devices to the Marketing department to enhance productivity and ensure secure access to company resources. As an Intune administrator, you are tasked with deploying the Microsoft 365 (Office) app to these devices and configuring device restriction policies tailored to the department's requirements.
 
 ### Task 1: Deploy apps to android devices
 
@@ -46,7 +46,7 @@
 
 1. In the **Assignments** tab, under **Required**, select **+ Add group**.
 
-1. On the **Select groups** blade, enter the following group **Prod_Intune_Android Fully Managed User Devices_Marketing**, then select the listed group and select **Select**.
+1. On the **Select groups** blade, in the search field, enter the following group **Prod_Intune_Android Fully Managed User Devices_Marketing**, then select the listed group and select **Select**.
 
 1. In the **Assignments** tab, select **Review + save**.
 
@@ -70,10 +70,26 @@
   - Name: **Prod_Marketing_ Android Enterprise_Fully Managed_Device Restriction profile**
   - Description: **This Intune profile is designed for fully managed Android Enterprise devices used by the Marketing department in the Production environment. The profile enforces specific device restriction policies**
 
-1. In the **Configuration settings** tab, 
+1. In the **Configuration settings** tab, expand **General** and then configure the following option:
 
-1. 
+  - System update: **Maintenance window**
+  - Start time: **7:00 PM**
+  - End time: **5:00 AM**
 
-1. 
+1. Expand **System security** and select **Require** next **Threat scan on apps** if not already selected.
+
+1. Expand **Power Settings** and select **1 Minute** next to **Time to lock screen (work profile-level)**.
+
+1. In the **Basics** tab, select **Next**.
+
+1. In the **Scope tags** tab, select **Next**.
+
+1. In the **Assignments** tab, select **Add groups**
+
+1. On the **Select groups** blade, in the search field, enter the following group **Prod_Intune_Android Fully Managed User Devices_Marketing**, then select the listed group and select **Select**.
+
+1. In the **Assignments** tab, select **Next**.
+
+1. In the **Review + create** tab, select **Create**.
 
 **END OF LAB**

@@ -6,14 +6,9 @@ In this lab, you use Microsoft Intune manage device enrollment for iOS/iPadOS an
 
 ### Prerequisites
 
-To successfully complete all tasks, a Google account is required. This is essential for setting up a Managed Google Play account, which acts as a bridge between Intune and Android devices. The Managed Google Play account enables secure communication, allowing Intune to deploy apps, enforce policies, and manage updates. Without this integration, Intune cannot effectively manage Android devices. 
+To successfully complete all tasks, a Google account is required. This is necessary for setting up a Managed Google Play account, which acts as a bridge between Intune and Android devices. The Managed Google Play account enables Intune to securely deploy apps, enforce policies, and manage updates. Without this integration, Intune cannot fully manage Android devices.
 
-.
-.
-.
-
-
-The instructions below are only intended to simulate a real-life scenario for training purposes and assume that a valid Apple account already exists. Students are not required to create an Apple account or a certificate in the Apple Push Certificates Portal. If users choose to create an Apple account, they are solely responsible for ensuring that their actions comply with Apple's applicable terms and conditions, including but not limited to the Apple MDM Certificate Agreement. The authors of this guide assume no responsibility for the creation or use of Apple accounts outside of these terms.
+The instructions provided are intended to simulate a real-world scenario for training purposes and assume that a valid Google account already exists. Students are not required to create a Google account or set up a Managed Google Play account. If users choose to create an account, they are solely responsible for ensuring compliance with Google's terms and conditions. The authors of this guide assume no responsibility for the creation or use of Google accounts outside these terms
 
 ## Exercise 2: Manage Android mobile Device Enrollment into Intune
 
