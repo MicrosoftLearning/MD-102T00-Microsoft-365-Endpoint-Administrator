@@ -6,10 +6,6 @@ In this lab, you use Microsoft Intune to create and apply a Configuration profil
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
-
-- 0203-Manage Device Enrollment into Intune
-
 > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 3: Create and apply a Configuration profile

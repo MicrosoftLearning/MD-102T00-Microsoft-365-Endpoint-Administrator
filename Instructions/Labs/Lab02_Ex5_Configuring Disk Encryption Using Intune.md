@@ -6,14 +6,6 @@ In this lab, you will configure BitLocker disk encryption using Intune.
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
-
-- 0203-Manage Device Enrollment into Intune
-
-- 0204-Enrolling devices into Intune
-
-- 0301-Creating and Deploying Configuration Profiles
-
   Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 5: Configuring Disk Encryption Using Intune

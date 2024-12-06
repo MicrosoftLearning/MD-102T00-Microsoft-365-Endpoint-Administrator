@@ -6,16 +6,6 @@ In this lab, you will use Microsoft Intune to create and apply a Configuration p
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
-
-- 0101-Managing Identities in Entra ID
-
-- 0102-Synchronizing Identities by using Azure AD Connect
-
-- 0203-Manage Device Enrollment into Intune
-
-- 0204-Enrolling devices into Intune
-
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 1: Create and apply a Configuration profile
