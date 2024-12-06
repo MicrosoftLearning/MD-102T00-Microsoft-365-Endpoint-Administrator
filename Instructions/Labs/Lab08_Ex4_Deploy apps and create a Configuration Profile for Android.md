@@ -65,18 +65,18 @@ Your organization is rolling out fully managed Android devices to the Marketing 
   - Platform: **Android Enterprise**
   - Profile type: **Device restrictions** under **Fully Managed, Dedicated, and Corporate-Owned Work Profile
 
-1. In the **Basics** tab enter the following information and select **Next**:
+5. In the **Basics** tab enter the following information and select **Next**:
 
   - Name: **Prod_Marketing_ Android Enterprise_Fully Managed_Device Restriction profile**
   - Description: **This Intune profile is designed for fully managed Android Enterprise devices used by the Marketing department in the Production environment. The profile enforces specific device restriction policies**
 
-1. In the **Configuration settings** tab, expand **General** and then configure the following option:
+6. In the **Configuration settings** tab, expand **General** and then configure the following option:
 
   - System update: **Maintenance window**
   - Start time: **7:00 PM**
   - End time: **5:00 AM**
 
-1. Expand **System security** and select **Require** next **Threat scan on apps** if not already selected.
+7. Expand **System security** and select **Require** next **Threat scan on apps** if not already selected.
 
 1. Expand **Power Settings** and select **1 Minute** next to **Time to lock screen (work profile-level)**.
 
