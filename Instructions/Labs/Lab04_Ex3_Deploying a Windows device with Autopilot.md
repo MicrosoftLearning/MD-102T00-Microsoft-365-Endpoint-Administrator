@@ -66,6 +66,6 @@
 
 ### Task 5:Verify Autopilot deployment
 
-**Results**: After completing this exercise, you will have successfully opend and modifyed a Windows Autopilot deployment profile to use a device name template.
+**Results**: After completing this exercise, you will have successfully opened and modified a Windows Autopilot deployment profile to use a device name template.
 
 **END OF LAB**

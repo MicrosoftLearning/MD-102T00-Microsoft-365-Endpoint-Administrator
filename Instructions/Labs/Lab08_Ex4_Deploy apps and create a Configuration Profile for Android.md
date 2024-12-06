@@ -28,7 +28,7 @@ Your organization is rolling out fully managed Android devices to the Marketing 
 
 1. On the **Select app type**, select **Managed Google Play app** as app type and select **Select**.
 
-1. If the **This site uses cookis** prompt appears, select **Got it**.
+1. If the **This site uses cookies** prompt appears, select **Got it**.
 
 1. On the **Managed Google Play** page, in the search box, enter **Microsoft 365** and select the search button.
 
