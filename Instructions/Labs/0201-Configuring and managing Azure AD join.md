@@ -179,13 +179,13 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 3. In **Active Directory Users and Computers**, right-click **Contoso.com**, point to **New**, and then select **Organizational Unit**.
 
-4. In the **New-Object - Organizational Unit** dialog box, type **`Azure AD clients`** and then select **OK**.
+4. In the **New-Object - Organizational Unit** dialog box, type **`Entra ID clients`** and then select **OK**.
 
 5. In the navigation pane, select **Seattle Clients**.
 
 6. Right-click **SEA-CL2** and then select **Move**.
 
-7. In the **Move** dialog box, select **Azure AD clients** and then select **OK**.
+7. In the **Move** dialog box, select **Entra ID clients** and then select **OK**.
 
 8. Close **Active Directory Users and Computers**.
 
@@ -193,59 +193,63 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
 
-2. In the **Microsoft Azure Active Directory Connect** window select **Configure**.
+1. In the **Microsoft Entra Connect Sync** window select **Configure**.
 
-3. On the **Additional tasks** page, select **Configure device options** and select **Next**.
+1. On the **Additional tasks** page, select **Configure device options** and select **Next**.
 
-4. On the **Overview** page, select **Next**.
+1. On the **Overview** page, select **Next**.
 
-5. On the **Connect to Azure AD** page, enter the Admin Tenant password into the **PASSWORD** box, then select **Next**.
+1. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-6. On the **Device options** page, select **Configure Hybrid Azure AD join**, and then select **Next**.
+1. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
 
-7. On the **Device operating systems** page, select **Windows 10 or later domain-joined devices**, and then select **Next**.
+1. On the **Device options** page, select **Configure Hybrid Microsoft Entra ID join**, and then select **Next**.
 
-8. On the **SCP configuration** page, select the check box next to **Contoso.com**. 
+1. On the **Device operating systems** page, select **Windows 10 or later domain-joined devices**, and then select **Next**.
 
-9. Select **Azure Active Directory** from the **Authentication Service** dropdown and select **Add**. 
+1. On the **SCP configuration** page, select the check box next to **Contoso.com**. 
 
-10. In the **Enterprise Admin Credentials** window enter **Contoso\\Administrator** as **User name** and **Pa55w.rd** as **Password**. Select **OK** and select **Next**.
+1. Select **Microsoft Entra ID** from the **Authentication Service** dropdown and select **Add**. 
 
-11. In the **Ready to configure** page, select **Configure** to run the configuration.
+1. In the **Enterprise Admin Credentials** window enter **Contoso\\Administrator** as **User name** and **Pa55w.rd** as **Password**. Select **OK** and select **Next**.
 
-12. When the configuration is complete, select **Exit**.
+1. In the **Ready to configure** page, select **Configure** to run the configuration.
 
-13. Switch to **SEA-CL2**.
+1. When the configuration is complete, select **Exit**.
 
-14. At the sign-in page, select the **Power** button and then select **Restart**.
+1. Switch to **SEA-CL2**.
+
+1. At the sign-in page, select the **Power** button and then select **Restart**.
 
     >**Note** Restarting **SEA-CL2** will enable quicker discovery of the SCP created by reconfiguring AAD Connect.
 
-15. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
+1. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
 ### Task 3: Re-configure Azure AD Connect to sync the new OU
 
 1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
 
-2. In the **Microsoft Azure Active Directory Connect** window select **Configure**.
+1. In the **Microsoft Entra Connect Sync** window select **Configure**.
 
-3. On the **Additional tasks** page, select **Customize synchronization options** and select **Next**.
+1. On the **Additional tasks** page, select **Customize synchronization options** and select **Next**.
 
-4. On the **Connect to Azure AD** page enter the Admin Tenant password into the **PASSWORD** box, then select **Next**.
+1. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-5. On the **Connect your directories** page, select **Next**.
+1. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
 
-6. On the **Domain and OU filtering** page, ensure that **Sync selected domains and OUs** is selected and then expand **Contoso.com**.
+1. On the **Connect your directories** page, select **Next**.
 
-7. Select the check box next to **Azure AD clients**. Do not make any other changes and then select **Next**.
+1. On the **Domain and OU filtering** page, ensure that **Sync selected domains and OUs** is selected and then expand **Contoso.com**.
 
-8. In the **Optional features** page, do not make any changes and then select **Next**.
+1. Select the check box next to **Entra ID clients**. Do not make any other changes and then select **Next**.
 
-9. In the **Ready to configure** window, select **Configure** to run the configuration and start synchronization.
+1. In the **Optional features** page, do not make any changes and then select **Next**.
 
-10. When the configuration is complete, select **Exit**.
+1. In the **Ready to configure** window, select **Configure** to run the configuration and start synchronization.
 
-    > **Note**: AAD Connect synchronizes automatically now when you modify the OUs being synced. You can use the **Synchronization Service** to monitor sync status.
+1. When the configuration is complete, select **Exit**.
+
+    > **Note**: Entra Connect Sync synchronizes automatically now when you modify the OUs being synced. You can use the **Synchronization Service** to monitor sync status.
 
 ### Task 4: Verify the Entra hybrid join
 
@@ -253,7 +257,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 2. Right-click **Start**, select **Shut down or sign out**, and then select **Restart**.
 
-    _Note: The reboot will trigger the hybrid Azure AD join on SEA-CL2._
+    _Note: The reboot will trigger the Entra hybrid join on SEA-CL2._
    
 3. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
     
@@ -267,7 +271,7 @@ dsregcmd /status
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** and **DomainJoined : YES** are displayed.
 
-   > **Note**: If the device is not yet joined to Azure AD, switch back to **SEA-SRV1** and run the command below. Once completed, switch back to SEA-CL2 and restart the computer once more.
+   > **Note**: If the device is not yet joined to Entra ID, switch back to **SEA-SRV1** and run the command below. Once completed, switch back to SEA-CL2 and restart the computer once more.
    
 ```powershell
 Start-ADSyncSyncCycle -PolicyType Delta
