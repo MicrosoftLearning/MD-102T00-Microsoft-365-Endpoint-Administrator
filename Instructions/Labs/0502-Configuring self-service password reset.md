@@ -20,23 +20,25 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 1. Sign in to **SEA-SVR1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
-2. On the desktop, double-click **Azure AD Connect**.
+1. On the desktop, double-click **Azure AD Connect**.
 
-3. On the **Welcome to Azure AD Connect** page, select **Configure**.
+1. On the **Welcome to Microsoft Entra Connect Sync** page, select **Configure**.
 
-4. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
+1. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
 
-5. On the **Connect to Azure AD** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, type your Admin tenant password in the **PASSWORD** text box, and then select **Next**.
+1. On the **Connect to Microsoft Entra ID** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, then select **Next**.
 
-6. On the **Connect to your directories** page, select **Next**.
+1. On the **Sign in to your account** dialog, select your admin account and enter your Admin tenant password, and then select **Sign in**.
 
-7. On the **Domain and OU filtering** page, select **Next**.
+1. On the **Connect to your directories** page, select **Next**.
 
-8. On the **Optional features** page, select **Password writeback**, and then select **Next**.
+1. On the **Domain and OU filtering** page, select **Next**.
 
-9. On the **Ready to configure** page, select **Configure**.
+1. On the **Optional features** page, select **Password writeback**, and then select **Next**.
 
-10. On the **Configuration complete** page, select **Exit**.
+1. On the **Ready to configure** page, select **Configure**.
+
+1. On the **Configuration complete** page, select **Exit**.
 
 ### Task 2: Enable self-service password reset
 

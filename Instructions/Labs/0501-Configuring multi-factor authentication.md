@@ -38,41 +38,37 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
+1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
-3. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+1. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
-4. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
+1. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
    > The Microsoft Entra admin center opens.
 
-5. At the top of the web page, In the search resources box, type multifactor authentication and then select **multifactor authentication**.
+1. At the top of the web page, In the search resources box, type multifactor authentication and then select **Multifactor authentication**.
 
    > The multi-factor authentication page opens.
 
-6. Select **Additional cloud-based multifactor authentication settings**.
+1. Select **Additional cloud-based multifactor authentication settings**.
 
-7. In the **multi-factor authentication** page, select **service settings**. Select **Allow users to remember multi-factor authentication on devices they trust**.
+1. In the **Per-user multifactor authentication** page, select **Service settings**. 
 
-8. Next to **Number of days users can trust devices for**, enter **30** and then select **save**. 
+1. On the **Service settings** page, scroll down and select the checkbox for **Allow users to remember multi-factor authentication on devices they trust**.
 
-9. Close the **multi-factor authentication** page.
+1. Next to **Number of days users can trust devices for**, enter **30** and then select **Save**. 
 
-10. Navigate back to the **Microsoft Entra admin center** Edge tab and in the navigation pane, select **Users** > **All users**.
+1. Once saved, scroll back to the top of the **Service settings** page, and select **Users**.
 
-11. At the top of the user list, select Per-user MFA.
+1. In the user list, select the check box next to **Alex Wilber**.
 
-   > The Per-user MFA page opens.
+1. Above the user list, select **Enable MFA**.
 
-12. In the user list, select the check box next to **Alex Wilber**.
+1. On the **Enable multifactor authentication** message, select **Enable**.
 
-13. On the **quick steps** pane, select **Enable**.
+1. Once Enabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Enforced**.
 
-14. On the **About enabling multi-factor auth** message, select **enable multi-factor auth**.
-
-15. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Enabled**.
-
-16. Close Microsoft Edge.
+1. Close Microsoft Edge.
 
 ### Task 3: Register and Validate MFA
 
@@ -124,11 +120,11 @@ To provide additional security for user sign on events, you need to configure an
 
 6. In the user list, select the check box next to **Alex Wilber**.
 
-7. On the **quick steps** pane, select **Disable**.
+7. Above the user list, select **Disable MFA**.
 
-8. On the **Disable multi-factor authentication?** message, select **yes**.
+8. On the **Disable multifactor authentication** message, select **Disable**.
 
-9. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Disabled**.
+9. Once Disabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Disabled**.
 
 10. Close Microsoft Edge.
 

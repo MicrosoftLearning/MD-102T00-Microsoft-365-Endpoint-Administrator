@@ -2,7 +2,7 @@
 
 ## Summary
 
-In this lab, you will monitor user Sign-in activity, Audit logs, and device activity.
+In this lab, you will monitor user Sign-in activity, Audit logs, and device information.
 
 ### Prerequisites
 
