@@ -92,6 +92,6 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 12. Close Microsoft Edge.
 
-**Results**: After completing this exercise, you will have successfully configured Azure AD Connect to synchronize identity from Active Directory Domain Services to Entra ID.
+**Results**: After completing this exercise, you will have successfully configured Entra ID Connect to synchronize identity from Active Directory Domain Services to Entra ID.
 
 **END OF LAB**
