@@ -10,9 +10,9 @@ In this lab, you will perform Entra registration using a Windows device.
 
 Several users have asked to use their personal iOS, Android, and Windows devices to access Contoso cloud resources. Since Contoso does not own the devices, you do not want to have the users perform an Entra join for full device management. Instead, you need to ensure that users are able to register their devices with Entra, which still allows you to apply company policy to apps as needed, and still permit users to access Contoso resources. You will test out Entra device registration using a Windows 11 device.
 
-### Task 1: Configure Azure AD device registration
+### Task 1: Configure Entra device registration
 
-1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
+1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
@@ -32,7 +32,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 ### Task 2: Perform Entra registration
 
-1. Switch to **SEA-WS1** and sign in as **Admin** with the password of **Pa55w.rd**.
+1. Switch to **SEA-WS2** and sign in as **Admin** with the password of **Pa55w.rd**.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
@@ -54,7 +54,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 ### Task 3: Validate Entra registration
 
-1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
+1. On SEA-WS2, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
 
 2. In the PowerShell console, type the following and press **Enter**: 
 
@@ -66,7 +66,7 @@ dsregcmd /status
 
 4. Close PowerShell and then sign out of SEA-WS1.
 
-5. Switch to **SEA-SVR1**.
+5. Switch to **SEA-WS1**.
 
 6. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
 
@@ -80,11 +80,11 @@ dsregcmd /status
 
 ### Task 4: Sign in to Windows and disconnect from the organization
 
-1. Switch to **SEA-WS1** and attempt to sign in as **`JoniS@yourtenant.onmicrosoft.com`**.
+1. Switch to **SEA-WS2** and attempt to sign in as **`JoniS@yourtenant.onmicrosoft.com`**.
 
    Notice that unlike Entra Joined devices, an Entra registered device does not allow a user to sign in to the device with an Entra credential. 
 
-2. On SEA-WS1, sign in as **Admin** with the password of **Pa55w.rd**. 
+2. On SEA-WS2, sign in as **Admin** with the password of **Pa55w.rd**. 
 
 3. Select **Start** and then select **Settings**.
 
@@ -98,7 +98,7 @@ dsregcmd /status
 
    > Notice that you do not have to restart to disconnect a registered device from Entra ID.
 
-8. Sign out of SEA-WS1.
+8. Sign out of SEA-WS2.
 
 **Results**: After completing this exercise, you will have configured Entra device registration.
 
