@@ -98,7 +98,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
     > Notice the Android Personal Device Restriction assigned with a priority of 1.
 
-13. On the **Enrollment** pane, select **Device limit restrictions**. 
+13. Go back to the **Enrollment** pane, select **Device limit restrictions**. 
 
     > Notice that there is a Default device limit restriction that is assigned to **All Users**. This default restriction sets a device enrollment limit to 5 devices per user.
 
@@ -124,11 +124,11 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 2. On the Devices pane, select **Enrollment**.
 
-3. On the **Enroll devices** pane, select **Device enrollment managers**. 
+3. Select **Device enrollment managers** pane. 
 
    > Notice that, by default, there are no Device enrollment managers configured.
 
-4. On the **Devices|Device enrollment managers** page, select **+ Add**.
+4. Select **+ Add**.
 
 5. In the **Add user** page, under User name, enter `AllanD@yourtenant.onmicrosoft.com` and then select **Add**.
 

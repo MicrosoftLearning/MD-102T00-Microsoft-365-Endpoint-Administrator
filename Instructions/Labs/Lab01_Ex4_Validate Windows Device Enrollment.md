@@ -11,7 +11,7 @@ In this lab, you will join a Windows client to Entra ID and verify that the devi
 
 ### Scenario
 
-You have assigned Aaron Nicholls appropriate licenses and will now test the process of joining a Windows device to Entra ID and have it automatically enroll in Microsoft Intune.
+You have assigned Megan Bowen appropriate licenses and will now test the process of joining a Windows device to Entra ID and have it automatically enroll in Microsoft Intune.
 
 ### Task 1: Automatically enroll a Windows device to Microsoft Intune
 
@@ -27,7 +27,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 6. In the **Microsoft account** window, select **Join this device to Microsoft Entra ID**.
 
-7. On the **Sign in** page, type **`Aaron@yourtenant.onmicrosoft.com`** and then select **Next**.
+7. On the **Sign in** page, type **`MeganB@yourtenant.onmicrosoft.com`** and then select **Next**.
 
 8. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**.
 
@@ -65,7 +65,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 dsregcmd /status
 ```
 
-6. In the output under **Device State**, verify that **EntraJoined : YES** is displayed. This indicates that the device is Entra ID joined.
+6. In the output under **Device State**, verify that **AzureADJoined : YES** is displayed. This indicates that the device is Entra ID joined.
 
 7. In the output under **Tenant Details**, verify that the following three entries exist:
 
@@ -81,7 +81,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 1. Sign out of **SEA-WS2**.
 
-2. Select **Other user**, and sign in as **`Aaron@yourtenant.onmicrosoft.com`** with the password **Pa55w.rd**. Wait for the profile to be created.
+2. Select **Other user**, and sign in as **`MeganB@yourtenant.onmicrosoft.com`** with the password **Pa55w.rd**. Wait for the profile to be created.
 
 3. At the **Use Windows Hello with your account** page, select **OK**.
 
