@@ -10,7 +10,7 @@
 
 ### Scenario
 
-### Task 1: Create group in Azure AD
+### Task 1: Create group in Entra ID
 
 1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
 

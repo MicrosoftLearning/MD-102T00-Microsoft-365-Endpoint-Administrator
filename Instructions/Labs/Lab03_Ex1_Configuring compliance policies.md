@@ -54,7 +54,7 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 13. Select **Next**. On the **Assignments** tab, under **Included groups** select **Add groups**. Select **Windows Devices**, choose **Select**, and then select **Next**. 
 
-    _Note: The **Windows Devices** group was created in the Module 0301 lab._
+    > [!CAUTION] The **Windows Devices** group was created in the Module 0301 lab._
 
 14. On the **Review + create** tab, review the settings and then select **Create**.
 

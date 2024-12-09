@@ -89,7 +89,7 @@ dsregcmd /status
 
 ```
 
-3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed.
+3. In the output under **Device State**, verify that **EntraJoined : YES** is displayed.
 
    > This indicates that the device is Entra joined.
 

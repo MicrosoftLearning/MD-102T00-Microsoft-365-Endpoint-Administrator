@@ -62,7 +62,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 dsregcmd /status
 ```
 
-3. In the output under **User State**, verify that **WorkplaceJoined : YES** is displayed. This indicates that the user has performed a device registration in Azure AD.
+3. In the output under **User State**, verify that **WorkplaceJoined : YES** is displayed. This indicates that the user has performed a device registration in Entra ID.
 
 4. Close PowerShell and then sign out of SEA-WS1.
 
@@ -96,7 +96,7 @@ dsregcmd /status
 
 7. Next to Disconnect this account, select **Disconnect** and then select **Yes**.
 
-   > Notice that you do not have to restart to disconnect a registered device from Azure AD.
+   > Notice that you do not have to restart to disconnect a registered device from Entra ID.
 
 8. Sign out of SEA-WS1.
 

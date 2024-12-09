@@ -53,7 +53,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 -   MS-Organization-Access
 -   MS-Organization-P2P-Access \[2024\]
 
-    This indicates that the device is enrolled in Azure AD and Intune.
+    This indicates that the device is enrolled in Entra ID and Intune.
 
 3. Close the Certificates window.
 
@@ -65,7 +65,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 dsregcmd /status
 ```
 
-6. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed. This indicates that the device is Azure AD joined.
+6. In the output under **Device State**, verify that **EntraJoined : YES** is displayed. This indicates that the device is Entra ID joined.
 
 7. In the output under **Tenant Details**, verify that the following three entries exist:
 

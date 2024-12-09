@@ -6,7 +6,7 @@ In this lab, you will create a policy to configure Microsoft Defender for manage
 
 ### Prerequisites
 
-  Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Azure AD.
+  Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 4: Configuring Endpoint security using intune
 

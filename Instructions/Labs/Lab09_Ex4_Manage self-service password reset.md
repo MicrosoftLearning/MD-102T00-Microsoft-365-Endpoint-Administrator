@@ -22,7 +22,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 4. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
 
-5. On the **Connect to Azure AD** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, type your Admin tenant password in the **PASSWORD** text box, and then select **Next**.
+5. On the **Connect to Entra ID** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, type your Admin tenant password in the **PASSWORD** text box, and then select **Next**.
 
 6. On the **Connect to your directories** page, select **Next**.
 
