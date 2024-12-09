@@ -125,7 +125,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 9. Select **Devices**, then select **All devices**. 
 
-   > Take note of SEA-WS1. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
+   > Take note of SEA-WS2. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
 
 10. Close all open Windows.
 
