@@ -15,7 +15,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 ### Task 1: Automatically enroll a Windows device to Microsoft Intune
 
-1. Sign in to **SEA-WS1** as **Admin** with the password of **Pa55w.rd**.
+1. Sign in to **SEA-WS2** as **Admin** with the password of **Pa55w.rd**.
 
 2. Select **Start** and then select **Settings**.
 
@@ -45,7 +45,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 ### Task 2: Validate device enrollment into Entra ID And Intune
 
-1. On the **SEA-WS1** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**.
+1. On the **SEA-WS2** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**.
     
 2. In the **Certificates** console, in the navigation pane, expand **Personal** and select the **Certificate** node. Verify that the following certificates are listed in the details pane:
 
@@ -79,7 +79,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 ### Task 3: Sign in as an Entra user
 
-1. Sign out of **SEA-WS1**.
+1. Sign out of **SEA-WS2**.
 
 2. Select **Other user**, and sign in as **`Aaron@yourtenant.onmicrosoft.com`** with the password **Pa55w.rd**. Wait for the profile to be created.
 
@@ -101,11 +101,11 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 11. On the **All set!** page, select **OK**.
 
-12. Sign out of **SEA-WS1**.
+12. Sign out of **SEA-WS2**.
 
 ### Task 4: Verifying device enrollment in the Intune console
 
-1. Switch to **SEA-SVR1** as **Contoso\Administrator** with the password of **Pa55w.rd**. 
+1. Switch to **SEA-WS1** as **Contoso\Administrator** with the password of **Pa55w.rd**. 
 
 2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. Sign in with your Tenant administrator account.
 
@@ -115,7 +115,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 5. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS1** is listed.
 
-6. Note that for SEA-WS1, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**. 
+6. Note that for SEA-WS2, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**. 
 
    _Note: This view lists devices that are enrolled to Intune. Remember that you configured automatic enrollment between Entra and Intune, and because of that, any device that is joined or registered to Entra is automatically enrolled to Intune. Any devices joined prior to setting up enrollment are only joined or registered to Entra, but not enrolled in Intune._
 

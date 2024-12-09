@@ -119,7 +119,7 @@ dsregcmd /status
 
 ### Task 4: Sign in to Windows as an Entra User
 
-1. Switch to **SEA-WS1** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the Tenant password as provided by your instructor. 
+1. Switch to **SEA-WS2** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the Tenant password as provided by your instructor. 
 
    > Wait for the profile to be created.
 
@@ -141,7 +141,7 @@ dsregcmd /status
 
 ### Task 5: Remove a Windows device from Entra
 
-1. On SEA-WS1, signed in as **azuread\jonisherman**, select **Start** and then select **Settings**.
+1. On SEA-WS2, signed in as **azuread\jonisherman**, select **Start** and then select **Settings**.
 
 2. In the **Settings** window, select **Accounts**.
 

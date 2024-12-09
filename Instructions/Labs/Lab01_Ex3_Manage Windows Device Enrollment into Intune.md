@@ -16,7 +16,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 ### Task 1: Review and assign licenses for device management
 
-1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
+1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://admin.microsoft.com**, and then press **Enter**.
 
@@ -49,7 +49,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 ### Task 2: Enable Windows Automatic Enrollment into Microsoft Intune
 
-1. In **SEA-SVR1**, open a new tab in **Microsoft Edge**, and then in the address bar type **https://intune.microsoft.com**, and then press **Enter**. 
+1. In **SEA-WS1**, open a new tab in **Microsoft Edge**, and then in the address bar type **https://intune.microsoft.com**, and then press **Enter**. 
 
    > The Microsoft Intune admin center opens.
 
