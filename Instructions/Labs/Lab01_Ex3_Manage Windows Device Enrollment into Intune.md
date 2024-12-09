@@ -12,11 +12,11 @@ In this lab, you prepare for device management using Microsoft Intune by reviewi
 
 ### Scenario
 
-You need to prepare for device management using Microsoft Intune. First of all, you need to ensure that users are assigned appropriate licenses for device management. As a verification test, you will assign Aaron Nicholls the required licenses. You also need to ensure that any Windows device that is joined or registered to Entra ID will automatically be enrolled into Intune. You have also been asked to ensure that members of the Sales group are restricted from enrolling personal Android and iOS devices into Intune and that the Enrollment Device Limit is increased to 10 devices. Finally, you need to configure Allan Deyoung as a Device enrollment manager to allow him to enroll 1000 devices.
+You need to prepare for device management using Microsoft Intune. First of all, you need to ensure that users are assigned appropriate licenses for device management. As a verification test, you will assign Megan Bowen the required licenses. You also need to ensure that any Windows device that is joined or registered to Entra ID will automatically be enrolled into Intune. You have also been asked to ensure that members of the Sales group are restricted from enrolling personal Android and iOS devices into Intune and that the Enrollment Device Limit is increased to 10 devices. Finally, you need to configure Allan Deyoung as a Device enrollment manager to allow him to enroll 1000 devices.
 
 ### Task 1: Review and assign licenses for device management
 
-1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
+1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://admin.microsoft.com**, and then press **Enter**.
 
@@ -34,7 +34,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 8. In the Microsoft 365 admin center navigation pane, select **Users**, select **Active users**.
 
-9. Select **Aaron Nicholls** (select the name, not the checkbox).
+9. Select **Megan Bowen** (select the name, not the checkbox).
 
 10. Select the **Licenses and apps** tab.
 
