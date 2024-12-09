@@ -12,7 +12,7 @@ In this lab, you will use Microsoft Intune to create and apply a Configuration p
 
 ### Scenario
 
-You need to use Entra and Intune to manage members of the Developers department at Contoso . You have been asked to evaluate the solutions that would enable the users to work effectively and securely on Windows 11 devices. Aaron Nicholls has volunteered to help you test and evaluate the solution and provide feedback. He has also given you some initial requirements that must be included and applied to the developer's Windows devices:
+You need to use Entra and Intune to manage Windows devices at Contoso . You have been asked to evaluate the solutions that would enable the users to work effectively and securely on Windows 11 devices. Megan Bowen has volunteered to help you test and evaluate the solution and provide feedback. He has also given you some initial requirements that must be included and applied to the developer's Windows devices:
 
 - The Gaming section in Settings should not be visible.
 - The Privacy section in Settings should be restricted as much as possible.
@@ -23,7 +23,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 ### Task 1: Verify device settings
 
-1. Sign in to **SEA-WS1** as **Aaron Nicholls** with the PIN **102938**.
+1. Sign in to **SEA-WS2** as Contoso\Administrator with the password of Pa55w.rd.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
@@ -51,9 +51,9 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 ### Task 2: Create a Configuration profile based on scenario requirements
 
-1. Switch to **SEA-SVR1**.
+1. Switch to **SEA-WS1**.
 
-2. On **SEA-SVR1**, on the taskbar, select **Microsoft Edge**.
+2. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
 
 3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
@@ -73,7 +73,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 9. In the **Basics** tab, enter the following information, and then select **Next**:
 
-- Name: **Contoso Developer - standard**
+- Name: **Contoso Windows - standard**
 - Description: **Basic restrictions and configuration for Contoso Developers.**
 
 10. On the **Configurations settings** tab, expand **Control Panel and Settings**. 
@@ -96,28 +96,11 @@ You need to use Entra and Intune to manage members of the Developers department 
     **DevBuild.exe**. 
 18. Select **Next** three times until you reach the **Review + create** blade. Select **Create**.
 
-### Task 3: Create the Contoso Developer device group
+### Task 3: Create a dynamic Entra ID device group
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Groups**.
 
-2. On the **Groups | All groups** blade, select **New group**.
-
-3. On the **New Group** blade, enter the following information:
-
-- Group type: **Security**
-- Group name: **Contoso Developer devices**
-- Group description: **All Windows devices in Contoso Developer department**
-- Membership type: **Assigned**
-
-4. Under **Members**, select **No members selected**. 
-
-5. On the **Add members** blade, in the **Search** box type **Sea**. Select **SEA-WS1** and then choose **Select**.
-
-6. On the **New Group** blade, select **Create**. 
-
-7. On the **Groups | All groups** blade, verify that the **Contoso developer devices** group is displayed.
-
-### Task 4: Create a dynamic Entra ID device group
+1. On the **Groups | Overview** blade, select **All groups**.
 
 1. On the **Groups | All Groups** blade, on the details pane, select **New group**.
 
@@ -141,29 +124,31 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. On the **New Group** page, select **Create**.
 
-### Task 5: Assign a Configuration profile to Windows devices
+### Task 4: Assign a Configuration profile to Windows devices
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
 
 2. On the **Devices | Overview** blade, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer – standard** profile.
+3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Windows - standard** profile.
 
 4. On the **Contoso Developer – standard** blade, scroll down to the **Assignments** section, and select **Edit**.
 
 5. On the Assignments page, under **Included groups** select **Add groups**.
 
-6. On the **Select groups to include** blade, in the **Search** box, select **Contoso Developer devices** and then select **Select**.
+6. On the **Select groups to include** blade, in the **Search** box, select **Windows Devices** and then select **Select**.
 
 7. Back on the **Device restrictions** blade, select **Review + save**, then select **Save**.
 
 8. In the Microsoft Intune admin center, select **Devices** in the breadcrumb navigation menu.
 
-### Task 6: Verify that the Configuration profile is applied
+### Task 5: Verify that the Configuration profile is applied (Optional)
 
-1. Switch to **SEA-WS1**.
+> Note: To complete this task, a device must be registered in Intune. Finish Lab01 to register a device in Intune.
 
-2. On **SEA-WS1**, on the taskbar, select **Start** and then select **Settings**.
+1. Switch to **SEA-WS2**.
+
+2. On **SEA-WS2**, on the taskbar, select **Start** and then select **Settings**.
 
 3. In **Settings**, select **Accounts** and then select **Access work or school**.
 
@@ -175,7 +160,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
    _Note: The sync progress may take up to 15 minutes before the profile is applied to the Windows 11 device. Signing out or restarting the device can accelerate this process. PIN **102938**_
 
-7. On **SEA-WS1**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
+7. On **SEA-WS2**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
 
 8. Select **Privacy & security** and notice that many of the privacy settings are now hidden. 
 
