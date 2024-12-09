@@ -6,8 +6,26 @@
 
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
-### Exercise 2: Creating a Update Ring Deployment Profile
+## Exercise 2: Creating a Update Ring Deployment Profile
 
 ### Scenario
 
-### Task 1:
+### Task 1: Create a Update Ring Profile
+
+1. Sign in to **SEA-WS2** as **Admin** with the password **Pa55w.rd**.
+
+2. On the taskbar, select **Microsoft Edge**.
+
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then press **Enter**. 
+
+4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
+
+5. 
+
+### Taks 2: Review the creation and verify the assignemnt in the report
+
+1. 
+
+**Results**: After completing this exercise, you will have successfully opend and modifyed a Windows Autopilot deployment profile to use a device name template.
+
+**END OF LAB**

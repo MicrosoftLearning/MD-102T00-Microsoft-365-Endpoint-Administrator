@@ -25,7 +25,7 @@ The following are specifications are required:
 
 3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then press **Enter**. 
 
-4. Sign in as as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
+4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 
 5. From the navigation pane select **Devices**, then select **Enrollment**. Make sure you are on the page for the Windows Operating System.
 
@@ -51,7 +51,7 @@ The following are specifications are required:
 
 6. Delete the **-** behind **Contoso** to make the template fit.
 
-7. Now a green tick is visible.
+7. Now a green checkmark is visible.
 
 8. Select **Review + Save** to go to the review page.
 
