@@ -16,7 +16,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 1: Configure Entra join Device settings
 
-1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
+1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
@@ -55,7 +55,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 2: Perform an Entra Join
 
-1. Switch to **SEA-WS1** and sign in as **Admin** with the password of **Pa55w.rd**.
+1. Switch to **SEA-WS2** and sign in as **Admin** with the password of **Pa55w.rd**.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
@@ -81,7 +81,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 3: Validate Entra Join
 
-1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
+1. On SEA-WS2, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
 
 2. In the PowerShell console, type the following and press **Enter**:
 
@@ -102,15 +102,18 @@ dsregcmd /status
 
 7. Double-click the **Administrators** group.
 
-   > Notice that Joni Sherman has been added as a local Administrator on SEA-WS1. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role. 
 
-8.  In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
+   > Notice that Joni Sherman has been added as a local Administrator on SEA-WS2. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role. 
 
-9.  Select **Devices**, and then select **All devices**. 
+8. Switch to **SEA-WS1**.
 
-    > In the Devices pane, notice that SEA-WS1 is listed. 
+9. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
 
-10. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
+10. Select **Devices**, and then select **All devices**. 
+
+    > In the Devices pane, notice that SEA-WS2 is listed. 
+
+11. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
 
     > Also note that the MDM column shows None. This indicates that this device is not yet managed by Microsoft Intune.
 
