@@ -10,7 +10,7 @@
 
 ### Scenario
 
-### Task 1: Create a group in Azure AD
+### Task 1: Create group in Entra ID
 
 1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
 
@@ -153,32 +153,6 @@ Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
 
 ### Task 5:Verify Autopilot deployment
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
-
-2. In the taskbar, select **Microsoft Edge**.
-
-3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then press **Enter**. 
-
-4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
-
-5. Select **Devices** in the navigation, then select **Enrollment**, scroll down and select **Devices**.
-
-6. In the overview you will see your device. Select your device by selecting the serial number.
-
-7. In the information overview you see the **Profile status**. It should say **Assigned** or **Assigning *Profile...***
-
-8. Now go back to **SEA-WS2** and review that the reset is in progress. 
-
-9. After a while you will see the **OOBE** (Out-of-box experience)
-
-10. Sign in with the email address from Joni Sherman **JoniS@M365x35851949.OnMicrosoft.com** and the default user password to start the Autopilot process and enroll this device into the tenant. 
-
-11. Follow the on screen instructions to setup Windows Hello.
-
-12. Now type in a PIN and note it down, then select **OK**
-
-13. Congratulations your device is now done with the enrollement via a Autopilot Profile. As you noted, you haven't seen the License Terms, privacy settings and account options. And if you check it. Joni is just a normal user and do not have local administrator rights. 
-
-**Results**: After completing this exercise, you will have successfully opend and modifyed a Windows Autopilot deployment profile to use a device name template.
+**Results**: After completing this exercise, you will have successfully opened and modified a Windows Autopilot deployment profile to use a device name template.
 
 **END OF LAB**

@@ -16,7 +16,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 1: Configure Entra join Device settings
 
-1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
+1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
@@ -40,21 +40,22 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 9. In the **Maximum number of devices per user** section, select **20**.
 
-10. Under **Local administrator settings**, select **Manage Additional local administrators on all Entra joined devices**. The Device Administrators page opens.
+10. On the Device settings page, select **Save**.
 
-11. In the Device Administrators page, select **Add assignments**.
+11. Under **Local administrator settings**, select **Manage Additional local administrators on all Entra joined devices**. The Device Administrators page opens.
 
-12. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
+12. In the Device Administrators page, select **Add assignments**.
+
+13. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
 
     > Allan Deyoung will now be added as a Device Administrator on all Entra joined devices.
 
-13. Scroll back to or select the **Devices | Device settings** navigation link at the top of the page.
+14. Scroll back to or select the **Devices | Device settings** navigation link at the top of the page.
 
-14. On the Device settings page, select **Save**.
 
 ### Task 2: Perform an Entra Join
 
-1. Switch to **SEA-WS1** and sign in as **Admin** with the password of **Pa55w.rd**.
+1. Switch to **SEA-WS2** and sign in as **Admin** with the password of **Pa55w.rd**.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
@@ -80,7 +81,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 3: Validate Entra Join
 
-1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
+1. On SEA-WS2, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
 
 2. In the PowerShell console, type the following and press **Enter**:
 
@@ -101,25 +102,24 @@ dsregcmd /status
 
 7. Double-click the **Administrators** group.
 
-   > Notice that Joni Sherman has been added as a local Administrator on SEA-WS1. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role. 
 
-8. Close all open windows and sign out of SEA-WS1.
+   > Notice that Joni Sherman has been added as a local Administrator on SEA-WS2. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role. 
 
-9. Switch to **SEA-SVR1**.
+8. Switch to **SEA-WS1**.
 
-10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
+9. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
 
-11. Select **Devices**, and then select **All devices**. 
+10. Select **Devices**, and then select **All devices**. 
 
-    > In the Devices pane, notice that SEA-WS1 is listed. 
+    > In the Devices pane, notice that SEA-WS2 is listed. 
 
-12. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
+11. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
 
     > Also note that the MDM column shows None. This indicates that this device is not yet managed by Microsoft Intune.
 
 ### Task 4: Sign in to Windows as an Entra User
 
-1. Switch to **SEA-WS1** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the Tenant password as provided by your instructor. 
+1. Switch to **SEA-WS2** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the Tenant password as provided by your instructor. 
 
    > Wait for the profile to be created.
 
@@ -129,21 +129,19 @@ dsregcmd /status
 
 4. On the **Keep your account secure** page, select **I want to set up a different method**.
 
-5. In the **Choose a different method** dialog box, select **Phone** and then select **Confirm**.
+5. On the **Keep your account secure** page, select **Next**.
 
-6. On the **Phone** page, in the **Enter phone number** field, enter your mobile phone number which is able to receive text messages. Select **Next**.
+6. Select **Next**, scan the QR code and **finish** the Authenticator setup.
 
-7. When you receive the verification code, enter the code on the Phone page and then select **Next**.
+7. On the verification page, select **Next** and then select **Done**.
 
-8. On the verification page, select **Next** and then select **Done**.
+8. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **`102938`** and then select **OK**.
 
-9. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **`102938`** and then select **OK**.
-
-10. On the **All set!** page, select **OK**.
+9. On the **All set!** page, select **OK**.
 
 ### Task 5: Remove a Windows device from Entra
 
-1. On SEA-WS1, signed in as **azuread\jonisherman**, select **Start** and then select **Settings**.
+1. On SEA-WS2, signed in as **azuread\jonisherman**, select **Start** and then select **Settings**.
 
 2. In the **Settings** window, select **Accounts**.
 

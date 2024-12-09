@@ -6,10 +6,6 @@ In this lab, you use Microsoft Intune to create and apply a Configuration profil
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
-
-- 0203-Manage Device Enrollment into Intune
-
 > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 3: Create and apply a Configuration profile
@@ -128,7 +124,7 @@ You have been asked to configure SEA-WS2 as a Windows 11 kiosk to allow Contoso 
 
 3. In **Settings**, select **Accounts** and then select **Access work or school**.
 
-4. In the **Access work or school** section, select the **Connected to Contoso's Azure AD** link and then select **Info**.
+4. In the **Access work or school** section, select the **Connected to Contoso's Entra ID** link and then select **Info**.
 
 5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
 

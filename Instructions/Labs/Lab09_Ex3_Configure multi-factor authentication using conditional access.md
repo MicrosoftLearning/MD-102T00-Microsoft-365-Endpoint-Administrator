@@ -6,7 +6,7 @@ In this lab, you will configure per-user multi-factor authentication (MFA) and a
 
 ### Prerequisites
 
-You will need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
+> Note: You will need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 3: Configure multi-factor authentication using conditional access
 

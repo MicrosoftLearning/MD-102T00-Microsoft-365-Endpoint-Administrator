@@ -6,11 +6,6 @@ In this lab, you will configure and validate self-service password reset (SSPR) 
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
-
-- 0102-Synchronizing Identities by using Azure AD Connect
-- 0203-Manage Device Enrollment into Intune
-
 ### Exercise 4: Manage self-service password reset
 
 ### Scenario
@@ -27,7 +22,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 4. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
 
-5. On the **Connect to Azure AD** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, type your Admin tenant password in the **PASSWORD** text box, and then select **Next**.
+5. On the **Connect to Entra ID** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, type your Admin tenant password in the **PASSWORD** text box, and then select **Next**.
 
 6. On the **Connect to your directories** page, select **Next**.
 

@@ -6,18 +6,6 @@ In this lab, you validate device compliance by configuring a compliance policy a
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
-
-- 0101-Managing Identities in Entra ID
-
-- 0102-Synchronizing Identities by using Azure AD Connect
-
-- 0203-Manage Device Enrollment into Intune
-
-- 0204-Enrolling devices into Intune
-
-- 0301-Creating and Deploying Configuration Profiles
-
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 2: Creating a conditional access policy to enforce compliance
