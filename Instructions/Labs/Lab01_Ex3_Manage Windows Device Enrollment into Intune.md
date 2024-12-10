@@ -65,6 +65,20 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
    _**Note**: By performing this step, you enabled automatic enrollment into Intune for any User that performs an Entra join or Entra registration from a Windows device._
 
+### Task 3: Create Group
+
+1. In the Microsoft 365 admin center, in the Navigation pane, select **Teams & groups**, select **Active teams & groups**.
+
+2. Select **Security groups** and click an **Add a security group**
+   
+3. In the name box enter **Sales** in the Name field.
+
+4. Select **Next**.
+
+6. Select **Next**.
+
+7. Select **Create group**.
+
 ### Task 3: Configure Enrollment Restrictions
 
 1. In the Microsoft Intune admin center, select **Devices**.
