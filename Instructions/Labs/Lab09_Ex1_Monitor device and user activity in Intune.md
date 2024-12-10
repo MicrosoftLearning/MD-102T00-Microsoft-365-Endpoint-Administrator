@@ -36,6 +36,7 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 10. In the details pane, audit information is displayed about administrative changes to users. Examine the information by selecting the various entries.
 
+<!-- MOVED TO Lab02-Ex1
 ### Task 2: Monitor device activity
 
 1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
@@ -59,7 +60,7 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 9.  In the Microsoft Intune admin center, from the navigation pane, select **Home**.
 
 10. Close Microsoft Edge.
-
+>
 **Results**: After completing this exercise, you will have successfully monitored user Sign-in activity, Audit logs, and device activity.
 
 **END OF LAB**

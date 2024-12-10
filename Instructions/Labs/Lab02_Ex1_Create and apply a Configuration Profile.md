@@ -180,6 +180,28 @@ You need to use Entra and Intune to manage Windows devices at Contoso . You have
 
 16. Close the **Windows Security** page and then close the **Settings** app.
 
+<!-- 
+### Task 6: Verify that the Configuration profile is applied
+
+1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
+
+2. In the Devices navigation pane, select **Overview**.
+
+3. Select **All devices**, and in the details pane, select **SEA-WS2**. Information about the device such as name, Primary user, and operating system is displayed.
+
+4. In the SEA-WS2 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
+
+5. In the details pane, select **Contoso Developer – standard**.
+
+6. On the **Contoso Developer – standard** blade, take note of each setting you configured in the profile.
+
+   > The **State** should display **Succeeded** next to all of them.
+
+7.  In the Microsoft Intune admin center, from the navigation pane, select **Home**.
+
+8.  Close Microsoft Edge.
+>
+
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile for a Windows 11 device.
 
 
