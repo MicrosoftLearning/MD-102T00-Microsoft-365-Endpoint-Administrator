@@ -40,7 +40,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 11. If the **Select location** field is not populated, select the a location from the drop-down list.
 
-12. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
+12. Check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
 
 13. Select **Save Changes**.
 

@@ -16,7 +16,7 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 ### Task 1: Monitor user activity
 
-1. On **SEA-SVR1**, on the taskbar, select **Microsoft Edge**.
+1. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
 
 2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
 
@@ -42,13 +42,13 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 1. In the Devices navigation pane, select **Overview**.
 
-1. Select **All devices**, and in the details pane, select **SEA-WS1**. Information about the device such as name, Primary user, and operating system is displayed.
+1. Select **All devices**, and in the details pane, select **SEA-WS2**. Information about the device such as name, Primary user, and operating system is displayed.
 
-1. In the SEA-WS1 navigation pane, select **Hardware** and examine the hardware inventory.
+1. In the SEA-WS2 navigation pane, select **Hardware** and examine the hardware inventory.
 
-1. In the SEA-WS1 navigation pane, select **Discovered apps** and examine the app inventory.
+1. In the SEA-WS2 navigation pane, select **Discovered apps** and examine the app inventory.
 
-1. In the SEA-WS1 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
+1. In the SEA-WS2 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
 
 1. In the details pane, select **Contoso Developer – standard**.
 
