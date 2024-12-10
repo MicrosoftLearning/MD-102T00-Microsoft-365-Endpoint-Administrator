@@ -81,7 +81,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 1. Sign out of **SEA-WS2**.
 
-2. Select **Other user**, and sign in as **`MeganB@yourtenant.onmicrosoft.com`** with the password **Pa55w.rd**. Wait for the profile to be created.
+2. Select **Other user**, and sign in as **`MeganB@yourtenant.onmicrosoft.com`**. Wait for the profile to be created.
 
 3. At the **Use Windows Hello with your account** page, select **OK**.
 
