@@ -207,7 +207,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 8. On the **SCP configuration** page, select the check box next to **Contoso.com**. 
 
-9. Select **Azure Active Directory** from the **Authentication Service** dropdown and select **Add**. 
+9. Select **Entra ID** from the **Authentication Service** dropdown and select **Add**. 
 
 10. In the **Enterprise Admin Credentials** window enter **Contoso\\Administrator** as **User name** and **Pa55w.rd** as **Password**. Select **OK** and select **Next**.
 
