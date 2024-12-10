@@ -24,29 +24,39 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-5. On the **Microsoft Intune admin center** page, select **Apps**.
+5. Select **Devices**.
+   
+6. On the Devices pane, under the **Device onboarding** section, select **Enrollment**.
 
-6. On the **Apps** page, in the navigation pane, select **All apps**.
+7. In the Enroll devices pane, ensure **Windows** is selected.
 
-7. In the details pane, select **Add**.
+8. In the **Enrollment options** section, select **Automatic Enrollment**.
 
-8. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
+9.  On the **MDM user scope** row, select **All** and then select **Save**.
 
-9. On the **Add App** page, click **Search the  Microsoft Store app (new)**, search for and select **Microsoft Remote Desktop**. Click **Select**.
+10. On the **Microsoft Intune admin center** page, select **Apps**.
 
-10. On the **App information** page, verify the following information and then select **Next**:
+11. On the **Apps** page, in the navigation pane, select **All apps**.
+
+12. In the details pane, select **Add**.
+
+13. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
+
+14. On the **Add App** page, click **Search the  Microsoft Store app (new)**, search for and select **Microsoft Remote Desktop**. Click **Select**.
+
+15. On the **App information** page, verify the following information and then select **Next**:
     - Name: **Microsoft Remote Desktop**
     - Publisher: **Microsoft Corporation**
     - Category: **Business**
     - Show this as a featured app in the Company Portal: **Yes**
 
-11. Select **Next** twice and then select **Create**.
+16. Select **Next** twice and then select **Create**.
 
-12. The Microsoft Remote Desktop page opens.
+17. The Microsoft Remote Desktop page opens.
 
     > Take note of the Properties, Device install status, and User install status nodes.
 
-### Task 2: Perform an Entra Join
+### Task 2: Enroll Device and Perform an Entra Join
 
 1. Switch to **SEA-WS2** and sign in as **Admin** with the password of **Pa55w.rd**.
 
@@ -74,7 +84,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 13. Sign out the **Admin** user.
 
-### Task 2: Assign a Group to the App
+### Task 3: Assign a Group to the App
 
 1. Switch to **SEA-WS1**.
 
@@ -84,22 +94,22 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 4. On the **Assignments** page, select **Add group** in the **Available for enrolled devices**.
 
-5. On the **Select groups** page, search and select the **Research** group and then click **Select**.
+5. On the **Select groups** page, search and select the **Contoso** group and then click **Select**.
 
-6. Select **Review + save** and then select **Save**.
+6. Select **Review + save** and then select **Create**.
 
-### Task 3: Force policy synchronization from the Intune console
+### Task 4: Force policy synchronization from the Intune console
 
 1. In the **Microsoft Intune admin center**, select **Devices** and then select **All devices**.
 
-2. In the details pane, select **SEA-WS1**.
+2. In the details pane, select **SEA-WS2**.
 
 3. On the **SEA-WS2** blade, select **Sync** and when prompted select **Yes**.
 
    > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
 
 
-### Task 4: Install an app from the Company Portal Website
+### Task 5: Install an app from the Company Portal Website
 
 1. Switch to **SEA-WS2** and sign in with **Megan Bowen**.
 
