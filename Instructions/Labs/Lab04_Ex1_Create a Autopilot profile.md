@@ -44,7 +44,7 @@ The following are specifications are required:
 
 1. In the section **Out-of-box experience (OOBW)** leave everything as it is and select **Next** on the bottom of the page.
 
-2. In the section **Assignments**, leave everything as it is and select **Next** on the bottom of the page.
+2. In the section **Assignments**, select **Next** on the bottom of the page.
 
 3. Select **Create**.
 
