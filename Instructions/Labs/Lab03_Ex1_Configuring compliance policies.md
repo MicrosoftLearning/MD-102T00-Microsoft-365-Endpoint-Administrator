@@ -21,7 +21,7 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 ### Task 1: Create and assign a compliance policy
 
-1. Sign in to **SEA-SVR1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
+1. Sign in to **SEA-WS1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
 2. On the taskbar, select **Microsoft Edge**.
 

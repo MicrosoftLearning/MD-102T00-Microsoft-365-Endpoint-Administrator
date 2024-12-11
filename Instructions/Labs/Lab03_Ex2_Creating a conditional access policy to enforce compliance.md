@@ -16,7 +16,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 ### Task 1: Create a conditional access policy
 
-1. On **SEA-SVR1**, in the **Intune admin center** select **Devices**, then select **Conditional access**.
+1. On **SEA-WS1**, in the **Intune admin center** select **Devices**, then select **Conditional access**.
 
 2. On the **Conditional Access | Overview** blade, select **Policies**.
 
@@ -80,7 +80,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 ### Task 3: Disable the conditional access policy
 
-1. Switch to **SEA-SVR1** and enter the password **Pa55w.rd**.
+1. Switch to **SEA-WS1** and enter the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
