@@ -4,10 +4,6 @@
 
 In this lab, you use Microsoft Intune to create and apply a Configuration profile to run single-app Kiosk mode on a Windows 11 device.
 
-### Prerequisites
-
-> Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
-
 ## Exercise 3: Create and apply a Configuration profile
 
 ### Scenario
@@ -111,21 +107,21 @@ You have been asked to configure SEA-WS3 as a Windows 11 kiosk to allow Contoso 
 
 ### Task 4: Verify that the Configuration profile is applied
 
-1. Switch to **SEA-WS2**.
+1. Switch to **SEA-WS3**.
 
 2. On **SEA-WS2**, on the taskbar, select **Start** and then select **Settings**.
 
 3. In **Settings**, select **Accounts** and then select **Access work or school**.
 
-4. In the **Access work or school** section, select the **Connected to Contoso's Entra ID** link and then select **Info**.
+4. In the **Access work or school** section, select the **Connected to Contoso MDM** link and then select **Info**.
 
 5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
 
 6. Close the **Settings** app.
 
-7. Restart **SEA-WS2**.
+7. Restart **SEA-WS3**.
 
-   > Notice that SEA-WS2 automatically signs in and creates a profile. After the sign-in is complete, Microsoft Edge is displayed configured with InPrivate browsing. If SEA-WS2 does not sign in automatically, repeat steps 1-7 to ensure that the policy has refreshed on the device.
+   > Notice that SEA-WS3 automatically signs in and creates a profile. After the sign-in is complete, Microsoft Edge is displayed configured with InPrivate browsing. If SEA-WS2 does not sign in automatically, repeat steps 1-7 to ensure that the policy has refreshed on the device.
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile to configure a Windows 11 device as a single-app kiosk.
 
