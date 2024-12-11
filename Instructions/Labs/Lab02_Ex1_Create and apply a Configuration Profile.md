@@ -49,23 +49,23 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 1. On the **SEA-WS2** taskbar, select **Start** and then select **Settings**.
 
-1. Select **Start** and then select **Settings**.
+2. Select **Start** and then select **Settings**.
 
-1. In **Settings**, select **Accounts**.
+3. In **Settings**, select **Accounts**.
 
-1. On the Accounts page, select **Access work or school**.
+4. On the Accounts page, select **Access work or school**.
 
-1. In the **Access work or school** page, select **Enroll only in device management**.
+5. In the **Access work or school** page, select **Enroll only in device management**.
 
-1. In the **Microsoft account** window, type **`DiegoS@yourtenant.onmicrosoft.com`** and then select **Next**.
+6. In the **Microsoft account** window, type **`DiegoS@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-1. On the **Enter password** page, enter your user password provided by your instructor and then select **Sign in**.
+7. On the **Enter password** page, enter your user password provided by your instructor and then select **Sign in**.
 
-1. On the **Stay signed in?** page, select **No**.
+8. On the **Stay signed in?** page, select **No**.
 
-1. On the **Setting up your device** page, select **Got it**. 
+9.  On the **Setting up your device** page, select **Got it**. 
 
-1. Close the **Settings** window.
+10. Close the **Settings** window.
 
 ### Task 3: Create a Configuration profile based on scenario requirements
 
@@ -151,43 +151,43 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. Back on the **Device restrictions** blade, select **Review + save**, then select **Save**.
 
-### Task 6: Verify that the Configuration profile is applied
+### Task 6: Verify that the Configuration profile is applied on the SEA-WS2
 
 1. Switch to **SEA-WS2**.
 
-1. On **SEA-WS2**, on the taskbar, select **Start** and then select **Settings**.
+2. On **SEA-WS2**, on the taskbar, select **Start** and then select **Settings**.
 
-1. In **Settings**, select **Accounts** and then select **Access work or school**.
+3. In **Settings**, select **Accounts** and then select **Access work or school**.
 
-1. In the **Access work or school** section, select the **Connected to Contoso MDM** link and then select **Info**.
+4. In the **Access work or school** section, select the **Connected to Contoso MDM** link and then select **Info**.
 
-1. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
+5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
 
-1. Close the **Settings** app.
+6. Close the **Settings** app.
 
    _Note: The sync progress may take up to 15 minutes before the profile is applied to the Windows 11 device. Signing out or restarting the device can accelerate this process.
 
-1. On **SEA-WS2**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
+7. On **SEA-WS2**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
 
-1. Select **Privacy & security** and notice that many of the privacy settings are now hidden. 
+8. Select **Privacy & security** and notice that many of the privacy settings are now hidden. 
 
-1. Select the **Personalization** setting and then select **Start**. Verify that **Show recently added apps** and **Show most used apps** are set to **Off**. 
+9.  Select the **Personalization** setting and then select **Start**. Verify that **Show recently added apps** and **Show most used apps** are set to **Off**. 
 
-1. In the **Settings** app, select **Privacy and Security**.
+10. In the **Settings** app, select **Privacy and Security**.
 
-1. On the **Privacy & Security** page, select **Windows Security** and then select **Open Windows Security**.
+11. On the **Privacy & Security** page, select **Windows Security** and then select **Open Windows Security**.
 
-1. On the **Windows Security** page, select **Virus & threat protection**.
+12. On the **Windows Security** page, select **Virus & threat protection**.
 
-1. On the **Virus & threat protection** page, select **Manage settings** under **Virus & threat protection settings**. 
+13. On the **Virus & threat protection** page, select **Manage settings** under **Virus & threat protection settings**. 
 
-1. Scroll down to **Exclusions** and select **Add or remove exclusions**. Select **Yes** at the User Account Control message.
+14. Scroll down to **Exclusions** and select **Add or remove exclusions**. Select **Yes** at the User Account Control message.
 
-1. On the **Exclusions** page, verify that **C:\\DevProjects** and **DevBuild.exe** are displayed.
+15. On the **Exclusions** page, verify that **C:\\DevProjects** and **DevBuild.exe** are displayed.
 
-1. Close the **Windows Security** page and then close the **Settings** app.
+16. Close the **Windows Security** page and then close the **Settings** app.
  
-### Task 7: Verify that the Configuration profile is applied
+### Task 7: Verify that the Configuration profile is applied in Intune
 
 1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
