@@ -151,7 +151,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. Back on the **Device restrictions** blade, select **Review + save**, then select **Save**.
 
-### Task 6: Verify that the Configuration profile is applied
+### Task 6: Verify that the Configuration profile is applied on the SEA-WS2
 
 1. Switch to **SEA-WS2**.
 
@@ -187,7 +187,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 1. Close the **Windows Security** page and then close the **Settings** app.
  
-### Task 7: Verify that the Configuration profile is applied
+### Task 7: Verify that the Configuration profile is applied in Intune
 
 1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
