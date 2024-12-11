@@ -109,7 +109,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 4. On the **Devices | Overview** blade under **Intune enrolled devices**, verify that **1** is displayed next to **Windows**. It may take a while to display.
 
-5. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS1** is listed.
+5. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS2** is listed.
 
 6. Note that for SEA-WS2, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**. 
 
@@ -125,6 +125,28 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 10. Close all open Windows.
 
-**Results**: After completing this exercise, you will have successfully joined a Windows client to Entra ID and verified that the device has automatically enrolled in to Microsoft Intune.
+### Task 5: Getting more Information about the enrolled device and user
+
+1. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
+
+2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
+
+3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
+
+4. On the **Microsoft Intune admin center** page, select **Users**.
+
+5. On the **Users|All users** pane, select **Sign-ins logs**.
+
+6. In the Details pane, user sign-ins are listed. Select the first entry where the **User** column displays **Megan Bowen**.
+
+7. In the **Details** pane, Megan Bowen´sign-in details are displayed.
+
+8. Select each of the main pages, including **Basic info**, **Location**, **Device info**, **Authentication Details**, and **Conditional Access**. Scroll to examine information on each page and then select **X** in the top right hand corner to close out of the **Activity Details** page.
+
+9. In the Users navigation pane, select **Audit logs**.
+
+10. In the details pane, audit information is displayed about administrative changes to users. Examine the information by selecting the various entries.
+
+**Results**: After completing this exercise, you will have successfully joined a Windows client to Entra ID. verified that the device has automatically enrolled in to Microsoft Intune and get informations about the enrolled Device and user.
 
 **END OF LAB**
