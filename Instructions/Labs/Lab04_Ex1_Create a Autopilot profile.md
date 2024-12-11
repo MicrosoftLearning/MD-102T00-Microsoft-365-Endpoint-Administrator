@@ -48,12 +48,22 @@ The following are specifications are required:
 
 3. In the section **Assignments** you could assign groups to include or exclude. For now leave it empty and select **Next** on the bottom of the page. 
 
-### Task 3: Review + Create
+4. In the last section **Review + Create** go over all your settings and make sure they are like you want them to be. 
 
-1. In the last section **Review + Create** go over all your settings and make sure they are like you want them to be. 
+5. When everything is set up correct select **Create** and create the Windows Autopilot deployment profile.
 
-2. When everything is set up correct select **Create** and create the Windows Autopilot deployment profile.
+### Task 3: Modify MDM user scope
 
-**Results**: After completing this exercise, you will have successfully created a Windows Autopilot deployment profile to enroll windows devices into your tenant.
+1. From the navigation pane select **Devices**, then select **Enrollment**. Make sure you are on the page for the Windows Operating System.
+
+2. Select **Automatic Enrollemnt** in the Section **Enrollment options**
+
+3. Make sure the setting **All** is set for the MDM user scope.
+
+4. Everything else we will leave as it is. 
+
+5. Select **Save** to save your changes.
+
+**Results**: After completing this exercise, you will have successfully created a Windows Autopilot deployment profile and modified the Automatic Enrollment to enroll windows devices into your tenant.
 
 **END OF LAB**
