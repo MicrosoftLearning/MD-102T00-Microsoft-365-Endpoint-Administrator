@@ -1,4 +1,4 @@
-# Practice Lab09: Manage User & Device Security in Intune
+# Practice Lab09: Manage User & Device Security in Entra & Intune
 
 ## Summary
 
