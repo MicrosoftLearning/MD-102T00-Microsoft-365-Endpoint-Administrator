@@ -40,7 +40,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 11. If the **Select location** field is not populated, select the a location from the drop-down list.
 
-12. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
+12. Check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
 
 13. Select **Save Changes**.
 
@@ -64,6 +64,20 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 6. On the **MDM user scope** row, select **All** and then select **Save**.
 
    _**Note**: By performing this step, you enabled automatic enrollment into Intune for any User that performs an Entra join or Entra registration from a Windows device._
+
+### Task 3: Create Group
+
+1. In the Microsoft 365 admin center, in the Navigation pane, select **Teams & groups**, select **Active teams & groups**.
+
+2. Select **Security groups** and click an **Add a security group**
+   
+3. In the name box enter **Sales** in the Name field.
+
+4. Select **Next**.
+
+6. Select **Next**.
+
+7. Select **Create group**.
 
 ### Task 3: Configure Enrollment Restrictions
 

@@ -10,8 +10,8 @@ In this lab, you will configure and validate self-service password reset (SSPR) 
 
 ### Scenario
 
-The Help Desk has indicated that a large number of support tickets are related to password resets. You have been asked to propose a solution for users to reset their own password. For accounts that are synchronized from AD DS, the process should reset both their Entra ID and AD DS password. 
-
+The Help Desk has indicated that a large number of support tickets are related to password resets. You have been asked to propose a solution for users to reset their own password. 
+<!-- 
 ### Task 1: Configure password writeback
 
 1. Sign in to **SEA-SVR1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
@@ -33,10 +33,10 @@ The Help Desk has indicated that a large number of support tickets are related t
 9. On the **Ready to configure** page, select **Configure**.
 
 10. On the **Configuration complete** page, select **Exit**.
-
+-->
 ### Task 2: Enable self-service password reset
 
-1. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com/**, and then press **Enter**.
+1. On **SEA-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com/**, and then press **Enter**.
 
 2. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
@@ -62,15 +62,11 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 12. Select **Registration** Select **No** for **Require users to register when signing in**, and the select **Save**.
 
-13. In the navigation pane, select **On-premises integration**.
-
-14. Verify that your on-premises writeback client is running.
-
 15. Close Microsoft Edge.
 
 ### Task 3: Validate self-service password reset
 
-1. Switch to **SEA-WS3**.
+1. Switch to **SEA-WS2**.
 
 2. If necessary, sign in as **Admin** with the password of **Pa55w.rd**.
 
@@ -80,21 +76,20 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 5. On the **Pick an account** page, select **Use another account**.
 
-6. On the **Sign in** page, enter **`Aaron@yourtenant.onmicrosoft.com`** and then select **Next**.
+6. On the **Sign in** page, sign in as **`DiegoS@yourtenant.onmicrosoft.com`**.
 
-7. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**. If the Microsoft Edge prompts to save the password, select **Save**.
+7. On the **My Account** page, in the navigation pane, select **Password**.
 
-8. On the **My Account** page, in the navigation pane, select **Password**.
-
-9. On the **Change password** page, enter the following information and then select **submit**:
-     - Old password: **Pa55w.rd**
+8. On the **Change password** page, enter the following information and then select **submit**:
+     - Old password: **Enter User password** 
      - Create new password: **Pa55w.rd1234!**
      - Confirm new password: **Pa55w.rd1234!**
 
-10. If Microsoft Edge prompts to save the password, select **Save**.
+9.  If Microsoft Edge prompts to save the password, select **Save**.
 
-11. Close Microsoft Edge and sign out of SEA-WS3.
+10. Close Microsoft Edge and sign out of SEA-WS2.
 
+<!-- 
 ### Task 4: Run AD Sync
 
 *Note that this step is normally not necessary for password writeback, but is recommended to address issues inherent in lab environments and ensure AD DS is synchronized with Entra ID.*
@@ -111,7 +106,9 @@ The Help Desk has indicated that a large number of support tickets are related t
     ```
 
 4. Close Windows PowerShell, and then wait for approximately 3-4 minutes.
+-->
 
+<!--
 ### Task 5: Verify password writeback
 
 1. Switch to **SEA-CL1** and sign out if necessary.
@@ -125,7 +122,7 @@ The Help Desk has indicated that a large number of support tickets are related t
    > You should be able to sign in. This confirms that the password you changed in the MyAccount portal is written back to the local Active Directory Domain Services (AD DS) account.
 
 6. Sign out of **SEA-CL1**.
-
+-->
 **Results**: After completing this exercise, you will have successfully configured and validated self-service password reset.
 
 **END OF LAB**

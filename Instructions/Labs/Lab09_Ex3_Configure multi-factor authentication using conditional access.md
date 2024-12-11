@@ -16,7 +16,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 1: Validate sign-in before enabling conditional access with MFA
 
-1. Sign in to **SEA-WS3** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **SEA-WS2** as **Admin** with the password **Pa55w.rd**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -36,9 +36,9 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 2: Configure conditional access with MFA
 
-1. Switch to **SEA-SVR1**.
+1. Switch to **SEA-WS1**.
 
-2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+2. On **SEA-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
@@ -78,7 +78,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 3: Validate conditional access MFA
 
-1. Switch to **SEA-WS3**. 
+1. Switch to **SEA-WS2**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -88,25 +88,19 @@ To provide additional security for user sign on events, you need to configure an
 
 5. On the **Enter password** page, enter the tenant password and select **Sign in**. 
 
-6. At the Verify your identity prompt, select your phone number.
-
-   > The Enter code dialog box opens.
-
-7. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
-
-8. At the Stay signed in message, select **No**. 
+6. At the Stay signed in message, select **No**. 
 
    > Outlook on the Web opens to Alex Wilber's inbox.
 
-9. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
+7. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
 
-10. Close Microsoft Edge.
+8.  Close Microsoft Edge.
 
 ### Task 4: Remove conditional access MFA
 
-1. Switch to **SEA-SVR1**.
+1. Switch to **SEA-WS1**.
 
-2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+2. On **SEA-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
