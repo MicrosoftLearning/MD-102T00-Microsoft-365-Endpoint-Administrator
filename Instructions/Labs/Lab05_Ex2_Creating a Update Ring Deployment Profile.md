@@ -20,12 +20,54 @@
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 
-5. 
+5. Select **Devices**, then select **Windows**
 
-### Taks 2: Review the creation and verify the assignemnt in the report
+6. Select **Windows Updates**, then select **Update rings**, then select **+Create Profile** to start the creation of a new Feature update deployment profile. 
 
-1. 
+7. Type **Windows Update Ring** in the Name.
 
-**Results**: After completing this exercise, you will have successfully opend and modifyed a Windows Autopilot deployment profile to use a device name template.
+8. Select **Next**.
+
+9. View the settings and scroll down to the **Use deadline settings** section.
+
+10. Select **Allow** on the deadline settings.
+
+11. Type **10** in the Deadline for feature updates.
+
+12. Type **5** in the Deadline for quality updates.
+
+13. Select **Next**
+
+14. On the next screen select **Add groups**, then search for the group **Windows Update Devices**.
+
+15. Select the group, then select **Select** on the bottom of the page.
+
+16. Select **Next**.
+
+17. Review the settings you have made and select **Create** to create the Update ring.
+
+### Taks 2: Verify the assignemnt in the Intune admin center
+
+1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+
+2. On the taskbar, select **Microsoft Edge**.
+
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then press **Enter**. 
+
+4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
+
+5. Select **Devices**, then select **Windows**.
+
+6. Select **Windows updates**, then select **Update rings**
+
+7. Select the update ring called **Windows Update Ring**.
+
+8. In the overview you will see a short report of the status form all the devices assigned.
+
+9. Select **View report**.
+
+10. It will take time for some information to show up here. When the data has been process you will see the status of each device in here. 
+
+**Results**: After completing this exercise, you will have successfully created and assigned a Windows Update Ring. Also you have the knowledge to check the status of the devices in the report. 
 
 **END OF LAB**

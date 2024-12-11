@@ -10,7 +10,29 @@
 
 ### Scenario
 
-### Task 1: Create a device group with device to update
+### Taks 1: Enroll a device
+
+1. Sign in to **SEA-WS3** as **Admin** with the password **Pa55w.rd**.
+
+2. On the **SEA-WS3** taskbar, select **Start** and then select **Settings**.
+
+3. In **Settings**, select **Accounts**.
+
+4. On the Accounts page, select **Access work or school**.
+
+5. In the **Access work or school** page, select **Enroll only in device management**.
+
+6. In the **Microsoft account** window, type **`DiegoS@yourtenant.onmicrosoft.com`** and then select **Next**.
+
+7. On the **Enter password** page, enter your user password provided by your instructor and then select **Sign in**.
+
+8. On the **Stay signed in?** page, select **No**.
+
+9.  On the **Setting up your device** page, select **Got it**. 
+
+10. Close the **Settings** window.
+
+### Task 2: Create a device group with device to update
 
 1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
 
@@ -24,9 +46,13 @@
 
 6. Type **Windows Update Devices** as the group name.
 
-7. Select **Create** to create the group.
+7. On Members select **No members selected**, then search for the **SEA-WS3** we enrolled in Task 1 and select it.
 
-### Task 2: Create Feature Update deployment Profile
+8. Select **Select** to add the member.
+
+9. Select **Create** to create the group.
+
+### Task 3: Create Feature Update deployment Profile
 
 1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
 
@@ -54,7 +80,7 @@
 
 13. On the page **Review + Create** select **Create** to create the Windows Feature Update Profile.
 
-### Taks 3: Review the creation and verify the assignemnt in the report
+### Task 4: Verify the assignemnt in the Intune admin center
 
 1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
 
@@ -64,10 +90,18 @@
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 
-5. Select **Reports**, then select **Windows updates**.
+5. Select **Devices**, then select **Windows**.
 
-6. On the top select **Reports**, then select **Windows Feature Update Report**
+6. Select the device **SEA-WS3**.
 
-**Results**: After completing this exercise, you will have successfully opend and modifyed a Windows Autopilot deployment profile to use a device name template.
+7. On the top bar select **Sync** to start a synchronisation cycle for this device, then select **Yes**.
+
+8. On the left side select **Device configuration**.
+
+9. After this short period of time there wont be shown anything. As you can see in the top of the screen it can take time to show any data. But here you would see the Feature Update Profile assigned. 
+
+**`Recently updated information can take up to 20 minutes to be available in this report.`**
+
+**Results**: After completing this exercise, you will have successfully created and assigned a Windows Feature Update Profile. Also you have the knowledge to check the status of the assignment to the device.
 
 **END OF LAB**
