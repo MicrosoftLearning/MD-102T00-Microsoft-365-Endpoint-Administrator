@@ -12,11 +12,11 @@ In this lab, you will configure BitLocker disk encryption using Intune.
 
 ### Scenario
 
-It's been determined that all the information on SEA-WS1 should be encrypted. You've been asked to configure full disk encryption on SEA-WS1 and require additional PIN authentication at startup.
+It's been determined that all the information on SEA-WS2 should be encrypted. You've been asked to configure full disk encryption on SEA-WS2 and require additional PIN authentication at startup.
 
 ### Task 1: Configure device configuration policy in Intune
 
-1. Sign in to **SEA-WS1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
+1. Sign in to **SEA-WS2** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
 2. On the taskbar, select **Microsoft Edge**.
 

@@ -135,35 +135,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. On the **Groups | All groups** blade, verify that the **Contoso Developer devices** group is displayed.
 
-### Task 5: Create a dynamic Entra ID device group
-
-1. In the Microsoft Intune admin center, in the navigation pane, select **Groups**.
-
-1. On the **Groups | Overview** blade, select **All groups**.
-
-1. On the **Groups | All Groups** blade, on the details pane, select **New group**.
-
-2. On the **Group** blade, provide the following values:
-
-   - Group type: **Security**
-   - Group name: **Windows Devices**
-   - Membership type: **Dynamic Device**
-
-3. Under the **Dynamic Device Members** section, select **Add dynamic query**. 
-
-4. On the **Dynamic membership rules** blade, in the **Rule syntax** section, select **Edit**. 
-    
-5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
-
-```
-(device.deviceOSType -contains "Windows")
-```
-
-6. On the **Dynamic membership rules** blade, select **Save**.
-
-7. On the **New Group** page, select **Create**.
-
-### Task 6: Assign a Configuration profile to Windows devices
+### Task 5: Assign a Configuration profile to Windows devices
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
 
@@ -179,7 +151,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. Back on the **Device restrictions** blade, select **Review + save**, then select **Save**.
 
-### Task 7: Verify that the Configuration profile is applied
+### Task 6: Verify that the Configuration profile is applied
 
 1. Switch to **SEA-WS2**.
 
@@ -214,9 +186,8 @@ You need to use Entra and Intune to manage members of the Developers department 
 1. On the **Exclusions** page, verify that **C:\\DevProjects** and **DevBuild.exe** are displayed.
 
 1. Close the **Windows Security** page and then close the **Settings** app.
-
-<!-- 
-### Task 6: Verify that the Configuration profile is applied
+ 
+### Task 7: Verify that the Configuration profile is applied
 
 1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
@@ -235,7 +206,6 @@ You need to use Entra and Intune to manage members of the Developers department 
 7.  In the Microsoft Intune admin center, from the navigation pane, select **Home**.
 
 8.  Close Microsoft Edge.
->
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile for a Windows 11 device.
 
