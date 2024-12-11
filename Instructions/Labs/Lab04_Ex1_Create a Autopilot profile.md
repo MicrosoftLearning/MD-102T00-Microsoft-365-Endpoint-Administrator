@@ -52,7 +52,7 @@ The following are specifications are required:
 
 5. When everything is set up correct select **Create** and create the Windows Autopilot deployment profile.
 
-### Task 3: Modify MDM user scope
+### Task 3: Enable Windows Automatic Enrollment
 
 1. From the navigation pane select **Devices**, then select **Enrollment**. Make sure you are on the page for the Windows Operating System.
 

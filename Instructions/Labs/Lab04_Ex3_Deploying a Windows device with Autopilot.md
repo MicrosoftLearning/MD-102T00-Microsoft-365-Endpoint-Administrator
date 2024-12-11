@@ -151,8 +151,34 @@ Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
 
 7. This will take a while.
 
-### Task 5:Verify Autopilot deployment
+8. The device will reboot. When the reboot is done login with the user **`JoniS@M365x35851949.OnMicrosoft.com`** and the default user password. 
 
-**Results**: After completing this exercise, you will have successfully opened and modified a Windows Autopilot deployment profile to use a device name template.
+9. Setup Windows Hello and MFA after the login in OOBE.
+
+10. On the desktop, select the **Start Menu**, then select **Settings**.
+
+11. On the left side select **Accounts**, then select **Access Work or School**.
+
+12. Select the **Connected by JoniS** tab, then select **Info**.
+
+13. Here you can see that the device is now managed by the company and is enrolled into Intune.
+
+### Task 5: Verify Autopilot deployment in Intune admin center
+
+1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+
+2. On the taskbar, select **Microsoft Edge**.
+
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the  address bar, and then press **Enter**. 
+
+4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
+
+5. From the navigation pane select **Devices**, then select **Windows**.
+
+6. Select the device you enrolled in Task 4, then select 
+
+7. Select **Hardware**, on the right side you see **Enrollment profile**. Here you can see that this device was enrolled with the profile you created earlier. 
+
+**Results**: After completing this exercise, you will have successfully created a autopilot .csv file, uploaded it and resettet a device to run thought the Autopilot process. 
 
 **END OF LAB**
