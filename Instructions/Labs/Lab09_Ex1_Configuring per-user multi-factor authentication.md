@@ -1,4 +1,4 @@
-# Practice Lab09: Manage User & Device Security in Intune
+# Practice Lab09: Manage User & Device Security in Entra & Intune
 
 ## Summary
 
@@ -16,7 +16,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 1: Validate sign-in before enabling MFA
 
-1. Sign in to **SEA-WS3** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **SEA-WS2** as **Admin** with the password **Pa55w.rd**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -36,7 +36,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 2: Enable MFA for a user
 
-1. Switch to **SEA-SVR1**.
+1. Switch to **SEA-WS1**.
 
 2. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
@@ -76,7 +76,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 3: Register and Validate MFA
 
-1. Switch to **SEA-WS3**. 
+1. Switch to **SEA-WS2**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -88,29 +88,25 @@ To provide additional security for user sign on events, you need to configure an
 
 6. At the **More information required** page, select **Next**. The Keep your account secure page opens.
 
-   > Typically, you will want to use the Microsoft Authenticator app to manage multi-factor authentication. However for this lab scenario, you will use text messages.
+7. On the **Keep your account secure** page, select **Next**.
 
-7. On the **Keep your account secure** page, select **I want to set up a different method**. Chose **Phone** From the dropdown menu and then click **Confirm**.
+8. Select **Next**, scan the QR code and **finish** the Authenticator setup.
 
-8. Enter your mobile phone number which you can receive text messages, and then select **Next**.
+9.  On the verification page, select **Next** and then select **Done**.
 
-9. After you receive the verification code as a text message, enter the code where indicated on the **Keep your account secure** page and then select **Next**.
-
-10. On the **Keep your account secure** page, you will receive a message "Great job! You have successfully set up your security info. Choose **Done** to continue signing in." Select **Done**.
-
-11. At the Stay signed in message, select **No**. 
+10. At the Stay signed in message, select **No**. 
 
     > Outlook on the Web opens to Alex Wilber's inbox.
 
-12. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
+11. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
 
-13. Close Microsoft Edge.
+12. Close Microsoft Edge.
 
 ### Task 3: Remove per-user MFA
 
-1. Switch to **SEA-SVR1**.
+1. Switch to **SEA-WS1**.
 
-2. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+2. On **SEA-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 

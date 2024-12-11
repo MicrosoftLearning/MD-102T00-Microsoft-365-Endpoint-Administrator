@@ -12,11 +12,11 @@ In this lab, you prepare for device management using Microsoft Intune by reviewi
 
 ### Scenario
 
-You need to prepare for device management using Microsoft Intune. First of all, you need to ensure that users are assigned appropriate licenses for device management. As a verification test, you will assign Aaron Nicholls the required licenses. You also need to ensure that any Windows device that is joined or registered to Entra ID will automatically be enrolled into Intune. You have also been asked to ensure that members of the Sales group are restricted from enrolling personal Android and iOS devices into Intune and that the Enrollment Device Limit is increased to 10 devices. Finally, you need to configure Allan Deyoung as a Device enrollment manager to allow him to enroll 1000 devices.
+You need to prepare for device management using Microsoft Intune. First of all, you need to ensure that users are assigned appropriate licenses for device management. As a verification test, you will assign Megan Bowen the required licenses. You also need to ensure that any Windows device that is joined or registered to Entra ID will automatically be enrolled into Intune. You have also been asked to ensure that members of the Sales group are restricted from enrolling personal Android and iOS devices into Intune and that the Enrollment Device Limit is increased to 10 devices. Finally, you need to configure Allan Deyoung as a Device enrollment manager to allow him to enroll 1000 devices.
 
 ### Task 1: Review and assign licenses for device management
 
-1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
+1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://admin.microsoft.com**, and then press **Enter**.
 
@@ -34,13 +34,13 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 8. In the Microsoft 365 admin center navigation pane, select **Users**, select **Active users**.
 
-9. Select **Aaron Nicholls** (select the name, not the checkbox).
+9. Select **Megan Bowen** (select the name, not the checkbox).
 
 10. Select the **Licenses and apps** tab.
 
 11. If the **Select location** field is not populated, select the a location from the drop-down list.
 
-12. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
+12. Check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
 
 13. Select **Save Changes**.
 
@@ -64,6 +64,20 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 6. On the **MDM user scope** row, select **All** and then select **Save**.
 
    _**Note**: By performing this step, you enabled automatic enrollment into Intune for any User that performs an Entra join or Entra registration from a Windows device._
+
+### Task 3: Create Group
+
+1. In the Microsoft 365 admin center, in the Navigation pane, select **Teams & groups**, select **Active teams & groups**.
+
+2. Select **Security groups** and click an **Add a security group**
+   
+3. In the name box enter **Sales** in the Name field.
+
+4. Select **Next**.
+
+6. Select **Next**.
+
+7. Select **Create group**.
 
 ### Task 3: Configure Enrollment Restrictions
 
@@ -98,7 +112,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
     > Notice the Android Personal Device Restriction assigned with a priority of 1.
 
-13. On the **Enrollment** pane, select **Device limit restrictions**. 
+13. Go back to the **Enrollment** pane, select **Device limit restrictions**. 
 
     > Notice that there is a Default device limit restriction that is assigned to **All Users**. This default restriction sets a device enrollment limit to 5 devices per user.
 
@@ -124,11 +138,11 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 2. On the Devices pane, select **Enrollment**.
 
-3. On the **Enroll devices** pane, select **Device enrollment managers**. 
+3. Select **Device enrollment managers** pane. 
 
    > Notice that, by default, there are no Device enrollment managers configured.
 
-4. On the **Devices|Device enrollment managers** page, select **+ Add**.
+4. Select **+ Add**.
 
 5. In the **Add user** page, under User name, enter `AllanD@yourtenant.onmicrosoft.com` and then select **Add**.
 

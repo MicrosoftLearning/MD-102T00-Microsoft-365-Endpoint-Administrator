@@ -52,7 +52,6 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 14. Scroll back to or select the **Devices | Device settings** navigation link at the top of the page.
 
-
 ### Task 2: Perform an Entra Join
 
 1. Switch to **SEA-WS2** and sign in as **Admin** with the password of **Pa55w.rd**.
@@ -127,17 +126,15 @@ dsregcmd /status
 
 3. On the **More information required** page, select **Next**.
 
-4. On the **Keep your account secure** page, select **I want to set up a different method**.
+4. On the **Keep your account secure** page, select **Next**.
 
-5. On the **Keep your account secure** page, select **Next**.
+5. Select **Next**, scan the QR code and **finish** the Authenticator setup.
 
-6. Select **Next**, scan the QR code and **finish** the Authenticator setup.
+6. On the verification page, select **Next** and then select **Done**.
 
-7. On the verification page, select **Next** and then select **Done**.
+7. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **`102938`** and then select **OK**.
 
-8. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **`102938`** and then select **OK**.
-
-9. On the **All set!** page, select **OK**.
+8. On the **All set!** page, select **OK**.
 
 ### Task 5: Remove a Windows device from Entra
 

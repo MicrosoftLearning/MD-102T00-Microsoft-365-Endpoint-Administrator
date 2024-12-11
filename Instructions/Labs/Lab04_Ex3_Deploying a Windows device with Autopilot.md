@@ -113,7 +113,7 @@ Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
 
 16. On the right side scroll down until you are able to see the section **Windows Autopilot**, select **Deployment profiles** in that section.
 
-17. Select your privously created deployment profile.
+17. Select the previously created deployment profile **Contoso autopilot profile**.
 
 18. In the navigation area, select **Properties**, then select **Edit** right next to **Assignments** to edit the assignemnts and add a group.
 

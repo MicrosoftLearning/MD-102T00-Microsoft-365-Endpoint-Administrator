@@ -34,7 +34,7 @@ The following are specifications are required:
 
 7. Select **+ Create profile** and then select **Windows PC**.
 
-8. Fill in the Name as you like and add a description if you want. 
+8. Enter the name **Contoso Autopilot profile**. 
 
 9. Make sure the **Convert all targeted devices to Autopilot** is switched to **No**.
 
@@ -44,9 +44,9 @@ The following are specifications are required:
 
 1. In the section **Out-of-box experience (OOBW)** leave everything as it is and select **Next** on the bottom of the page.
 
-2. In the section **Scope tags** leave everything as it is and select **Next** on the bottom of the page.
+2. In the section **Assignments**, select **Next** on the bottom of the page.
 
-3. In the section **Assignments** you could assign groups to include or exclude. For now leave it empty and select **Next** on the bottom of the page. 
+3. Select **Create**.
 
 4. In the last section **Review + Create** go over all your settings and make sure they are like you want them to be. 
 

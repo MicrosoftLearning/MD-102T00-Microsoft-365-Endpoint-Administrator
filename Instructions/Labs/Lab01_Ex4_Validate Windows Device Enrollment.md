@@ -11,7 +11,7 @@ In this lab, you will join a Windows client to Entra ID and verify that the devi
 
 ### Scenario
 
-You have assigned Aaron Nicholls appropriate licenses and will now test the process of joining a Windows device to Entra ID and have it automatically enroll in Microsoft Intune.
+You have assigned Megan Bowen appropriate licenses and will now test the process of joining a Windows device to Entra ID and have it automatically enroll in Microsoft Intune.
 
 ### Task 1: Automatically enroll a Windows device to Microsoft Intune
 
@@ -27,7 +27,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 6. In the **Microsoft account** window, select **Join this device to Microsoft Entra ID**.
 
-7. On the **Sign in** page, type **`Aaron@yourtenant.onmicrosoft.com`** and then select **Next**.
+7. On the **Sign in** page, type **`MeganB@yourtenant.onmicrosoft.com`** and then select **Next**.
 
 8. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**.
 
@@ -65,7 +65,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 dsregcmd /status
 ```
 
-6. In the output under **Device State**, verify that **EntraJoined : YES** is displayed. This indicates that the device is Entra ID joined.
+6. In the output under **Device State**, verify that **AzureADJoined : YES** is displayed. This indicates that the device is Entra ID joined.
 
 7. In the output under **Tenant Details**, verify that the following three entries exist:
 
@@ -81,27 +81,23 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 1. Sign out of **SEA-WS2**.
 
-2. Select **Other user**, and sign in as **`Aaron@yourtenant.onmicrosoft.com`** with the password **Pa55w.rd**. Wait for the profile to be created.
+2. Select **Other user**, and sign in as **`MeganB@yourtenant.onmicrosoft.com`**. Wait for the profile to be created.
 
 3. At the **Use Windows Hello with your account** page, select **OK**.
 
 4. On the **More information required** page, select **Next**.
 
-5. On the **Keep your account secure** page, select **I want to set up a different method**.
+5. On the **Keep your account secure** page, select **Next**.
 
-6. In the **Choose a different method** dialog box, select **Phone** and then select **Confirm**.
+6. Select **Next**, scan the QR code and **finish** the Authenticator setup.
 
-7. On the **Phone** page, in the **Enter phone number** field, enter your mobile phone number which is able to receive text messages. Select **Next**.
+7. On the verification page, select **Next** and then select **Done**.
 
-8. When you receive the verification code, enter the code on the Phone page and then select **Next**.
+8.  On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **102938** and then select **OK**.
 
-9. On the verification page, select **Next** and then select **Done**.
+9.  On the **All set!** page, select **OK**.
 
-10. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **102938** and then select **OK**.
-
-11. On the **All set!** page, select **OK**.
-
-12. Sign out of **SEA-WS2**.
+10. Sign out of **SEA-WS2**.
 
 ### Task 4: Verifying device enrollment in the Intune console
 
@@ -113,7 +109,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 4. On the **Devices | Overview** blade under **Intune enrolled devices**, verify that **1** is displayed next to **Windows**. It may take a while to display.
 
-5. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS1** is listed.
+5. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS2** is listed.
 
 6. Note that for SEA-WS2, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**. 
 
@@ -125,10 +121,32 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 9. Select **Devices**, then select **All devices**. 
 
-   > Take note of SEA-WS1. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
+   > Take note of SEA-WS2. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
 
 10. Close all open Windows.
 
-**Results**: After completing this exercise, you will have successfully joined a Windows client to Entra ID and verified that the device has automatically enrolled in to Microsoft Intune.
+### Task 5: Getting more Information about the enrolled device and user
+
+1. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
+
+2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
+
+3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
+
+4. On the **Microsoft Intune admin center** page, select **Users**.
+
+5. On the **Users|All users** pane, select **Sign-ins logs**.
+
+6. In the Details pane, user sign-ins are listed. Select the first entry where the **User** column displays **Megan Bowen**.
+
+7. In the **Details** pane, Megan Bowen´sign-in details are displayed.
+
+8. Select each of the main pages, including **Basic info**, **Location**, **Device info**, **Authentication Details**, and **Conditional Access**. Scroll to examine information on each page and then select **X** in the top right hand corner to close out of the **Activity Details** page.
+
+9. In the Users navigation pane, select **Audit logs**.
+
+10. In the details pane, audit information is displayed about administrative changes to users. Examine the information by selecting the various entries.
+
+**Results**: After completing this exercise, you will have successfully joined a Windows client to Entra ID. verified that the device has automatically enrolled in to Microsoft Intune and get informations about the enrolled Device and user.
 
 **END OF LAB**

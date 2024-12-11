@@ -12,11 +12,11 @@ In this lab, you will configure BitLocker disk encryption using Intune.
 
 ### Scenario
 
-It's been determined that all the information on SEA-WS1 should be encrypted. You've been asked to configure full disk encryption on SEA-WS1 and require additional PIN authentication at startup.
+It's been determined that all the information on SEA-WS2 should be encrypted. You've been asked to configure full disk encryption on SEA-WS2 and require additional PIN authentication at startup.
 
 ### Task 1: Configure device configuration policy in Intune
 
-1. Sign in to **SEA-SVR1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
+1. Sign in to **SEA-WS2** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -28,9 +28,9 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 6. On the **Endpoint security | Overview** page, select **Disk encryption**.
 
-7. On the **Endpoint security | Disk encryption** blade, in the details pane, select **Create Policy**.
+7. On the **Endpoint security | Disk encryption** page, in the details pane, select **Create Policy**.
 
-8. In the **Create a profile** page, select the following options, and then select **Create**:
+8. On the **Create a profile** page, select the following options, and then select **Create**:
 
     -   Platform: **Windows**
     -   Profile: **BitLocker**
@@ -40,39 +40,39 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
     -   Name: **Contoso BitLocker**
     -   Description: **Enable BitLocker for all devices**
 
-10. On the **Configurations settings** tab, expand **BitLocker** and then configure the following option:
+10. In the **Configurations settings** tab, expand **BitLocker** and then configure the following option:
 
      - Require Device Encyrption: **Enabled**
 
-11. On the **Configurations settings** tab, scroll down to **Operating System Drives** and then configure the following options, leaving all other options to their defaults:
+11. In the **Configurations settings** tab, scroll down to **Operating System Drives** and then configure the following options, leaving all other options to their defaults:
 
      - Enforce drive encryption type on operating system drives: **Enabled**
      - Require additional authentication at startup: **Enabled**
      - Configure minimum PIN length for startup: **Enabled**
      - Choose how Bitlocker-protected operating system drives can be recovered: **Enabled**
-     - Do not enable Bitlocker until recovery info is stored to AD DS: **True**
+     - Do not enable Bitlocker until recovery information is stored to AD DS for operating system drives: **True**
      - Omit recovery options from the BitLocker setup wizard: **True**
-     - Save Bitlocker recovery info to AD DS: **True**
+     - Save Bitlocker recovery info to AD DS for operating system drives: **True**
 
-12. On the **Configurations settings** page, select **Next**.
+12. In the **Configurations settings** tab, select **Next**.
 
-13. On the **Scope tags** page, select **Next**.
+13. In the **Scope tags** tab, select **Next**.
 
-14. On the **Assignments** tab, search for **Contoso** and then select **Contoso Developer devices**, and then select **Next**.
+14. In the **Assignments** tab, type **Contoso** in the search box and then select **Contoso Developer devices**, and then select **Next**.
 
-16. On the **Review + create** page, select **Save**.
+16. In the **Review + create** tab, select **Save**.
 
-17. Close all open windows on **SEA-SVR1**.
+17. Close all open windows on **SEA-WS1**.
 
 ### Task 2: Verify and enable BitLocker settings
 
-1. On **SEA-WS1**, sign in as **Aaron Nicholls** with the PIN **102938**.
+1. On **SEA-WS2**, sign in as as Contoso\Administrator with the password of Pa55w.rd.
     
 2. On the taskbar, select **Start** and then select the **Settings** app.
 
 3. In the **Settings** app, select **Accounts** and then select **Access work or school**.
 
-4. In the **Access work or school** section, select the **Connected to Contoso's Azure AD** link and then select **Info**. Select **Sync**.
+4. In the **Access work or school** section, select the **Connected to Contoso MDM** link and then select **Info**. Select **Sync**.
 
 5. Select the **Encryption needed** notification.
 
