@@ -112,9 +112,9 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 6. Select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
 
-   > Notice that all of the restricted areas as configured in the Intune policy are not displayed. SEA-WS1 is enrolled in Intune, which has applied the security settings.
+   > Notice that all of the restricted areas as configured in the Intune policy are not displayed. SEA-WS2 is enrolled in Intune, which has applied the security settings.
 
-7. Close **Windows Security** and sign out of **SEA-WSs**.
+7. Close **Windows Security** and sign out of **SEA-WS2**.
 
 **Results**: After completing this exercise, you will have successfully created and applied a policy to configure Microsoft Defender for managed devices in Intune.
 
