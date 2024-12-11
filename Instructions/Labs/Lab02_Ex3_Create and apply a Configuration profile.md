@@ -26,7 +26,7 @@ You have been asked to configure SEA-WS3 as a Windows 11 kiosk to allow Contoso 
 
 1. In the **Access work or school** page, select **Enroll only in device management**.
 
-1. In the **Microsoft account** window, type **`DiegoS@yourtenant.onmicrosoft.com`** and then select **Next**.
+1. In the **Microsoft account** window, type **`AllanD@yourtenant.onmicrosoft.com`** and then select **Next**.
 
 1. On the **Enter password** page, enter your user password provided by your instructor and then select **Sign in**.
 
