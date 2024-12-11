@@ -11,30 +11,8 @@ In this lab, you will configure and validate self-service password reset (SSPR) 
 ### Scenario
 
 The Help Desk has indicated that a large number of support tickets are related to password resets. You have been asked to propose a solution for users to reset their own password. 
-<!-- 
-### Task 1: Configure password writeback
 
-1. Sign in to **SEA-SVR1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
-
-2. On the desktop, double-click **Azure AD Connect**.
-
-3. On the **Welcome to Azure AD Connect** page, select **Configure**.
-
-4. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
-
-5. On the **Connect to Entra ID** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, type your Admin tenant password in the **PASSWORD** text box, and then select **Next**.
-
-6. On the **Connect to your directories** page, select **Next**.
-
-7. On the **Domain and OU filtering** page, select **Next**.
-
-8. On the **Optional features** page, select **Password writeback**, and then select **Next**.
-
-9. On the **Ready to configure** page, select **Configure**.
-
-10. On the **Configuration complete** page, select **Exit**.
--->
-### Task 2: Enable self-service password reset
+### Task 1: Enable self-service password reset
 
 1. On **SEA-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com/**, and then press **Enter**.
 
@@ -64,7 +42,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 15. Close Microsoft Edge.
 
-### Task 3: Validate self-service password reset
+### Task 2: Validate self-service password reset
 
 1. Switch to **SEA-WS2**.
 
@@ -89,40 +67,6 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 10. Close Microsoft Edge and sign out of SEA-WS2.
 
-<!-- 
-### Task 4: Run AD Sync
-
-*Note that this step is normally not necessary for password writeback, but is recommended to address issues inherent in lab environments and ensure AD DS is synchronized with Entra ID.*
-
-1. Switch to **SEA-SVR1**.
-
-2. Right-click **Start** and then select **Windows PowerShell (Admin)**.
-
-3. At the **Windows PowerShell** command prompt, type the following command, and
-    then press **Enter**:
-
-    ```
-    Start-ADSyncSyncCycle –PolicyType Delta
-    ```
-
-4. Close Windows PowerShell, and then wait for approximately 3-4 minutes.
--->
-
-<!--
-### Task 5: Verify password writeback
-
-1. Switch to **SEA-CL1** and sign out if necessary.
-
-2. On **SEA-CL1**, select **Other user**, and then attempt to sign in as **Contoso\\Aaron** with the password of **Pa55w.rd**.
-
-4. Ensure that you get the message that the user name or password is incorrect.
-
-5. Sign in to **SEA-CL1** as **Contoso\\Aaron** with the password **Pa55w.rd1234!**. 
-
-   > You should be able to sign in. This confirms that the password you changed in the MyAccount portal is written back to the local Active Directory Domain Services (AD DS) account.
-
-6. Sign out of **SEA-CL1**.
--->
 **Results**: After completing this exercise, you will have successfully configured and validated self-service password reset.
 
 **END OF LAB**
