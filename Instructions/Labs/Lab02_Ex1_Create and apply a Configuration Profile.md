@@ -4,15 +4,11 @@
 
 In this lab, you will use Microsoft Intune to create and apply a Configuration profile for a Windows 11 device.
 
-### Prerequisites
-
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
-
 ## Exercise 1: Create and apply a Configuration profile
 
 ### Scenario
 
-You need to use Entra and Intune to manage Windows devices at Contoso . You have been asked to evaluate the solutions that would enable the users to work effectively and securely on Windows 11 devices. Megan Bowen has volunteered to help you test and evaluate the solution and provide feedback. He has also given you some initial requirements that must be included and applied to the developer's Windows devices:
+You need to use Entra and Intune to manage members of the Developers department at Contoso. You have been asked to evaluate the solutions that would enable the users to work effectively and securely on Windows 11 devices. Diego Siciliani has volunteered to help you test and evaluate the solution and provide feedback. He has also given you some initial requirements that must be included and applied to the developer's Windows devices:
 
 - The Gaming section in Settings should not be visible.
 - The Privacy section in Settings should be restricted as much as possible.
@@ -49,7 +45,29 @@ You need to use Entra and Intune to manage Windows devices at Contoso . You have
 
 13. Close the **Settings** window.
 
-### Task 2: Create a Configuration profile based on scenario requirements
+### Task 2: Enroll the device
+
+1. On the **SEA-WS2** taskbar, select **Start** and then select **Settings**.
+
+1. Select **Start** and then select **Settings**.
+
+1. In **Settings**, select **Accounts**.
+
+1. On the Accounts page, select **Access work or school**.
+
+1. In the **Access work or school** page, select **Enroll only in device management**.
+
+1. In the **Microsoft account** window, type **`DiegoS@yourtenant.onmicrosoft.com`** and then select **Next**.
+
+1. On the **Enter password** page, enter your user password provided by your instructor and then select **Sign in**.
+
+1. On the **Stay signed in?** page, select **No**.
+
+1. On the **Setting up your device** page, select **Got it**. 
+
+1. Close the **Settings** window.
+
+### Task 3: Create a Configuration profile based on scenario requirements
 
 1. Switch to **SEA-WS1**.
 
@@ -73,7 +91,7 @@ You need to use Entra and Intune to manage Windows devices at Contoso . You have
 
 9. In the **Basics** tab, enter the following information, and then select **Next**:
 
-- Name: **Contoso Windows - standard**
+- Name: **Contoso Developer - standard**
 - Description: **Basic restrictions and configuration for Contoso Developers.**
 
 10. On the **Configurations settings** tab, expand **Control Panel and Settings**. 
@@ -96,7 +114,28 @@ You need to use Entra and Intune to manage Windows devices at Contoso . You have
     **DevBuild.exe**. 
 18. Select **Next** three times until you reach the **Review + create** blade. Select **Create**.
 
-### Task 3: Create a dynamic Entra ID device group
+### Task 4: Create the Contoso Developer device group
+
+1. In the Microsoft Intune admin center, in the navigation pane, select **Groups**.
+
+2. On the **Groups | All groups** blade, select **New group**.
+
+3. On the **New Group** blade, enter the following information:
+
+- Group type: **Security**
+- Group name: **Contoso Developer devices**
+- Group description: **All Windows devices in Contoso Developer department**
+- Membership type: **Assigned**
+
+4. Under **Members**, select **No members selected**. 
+
+5. On the **Add members** blade, in the **Search** box type **SEA-WS2**, then select **SEA-WS2** and then select **Select**.
+
+6. On the **New Group** page, select **Create**. 
+
+7. On the **Groups | All groups** blade, verify that the **Contoso Developer devices** group is displayed.
+
+### Task 5: Create a dynamic Entra ID device group
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Groups**.
 
@@ -124,61 +163,57 @@ You need to use Entra and Intune to manage Windows devices at Contoso . You have
 
 7. On the **New Group** page, select **Create**.
 
-### Task 4: Assign a Configuration profile to Windows devices
+### Task 6: Assign a Configuration profile to Windows devices
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
 
 2. On the **Devices | Overview** blade, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Windows - standard** profile.
+3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer – standard** profile.
 
 4. On the **Contoso Developer – standard** blade, scroll down to the **Assignments** section, and select **Edit**.
 
 5. On the Assignments page, under **Included groups** select **Add groups**.
 
-6. On the **Select groups to include** blade, in the **Search** box, select **Windows Devices** and then select **Select**.
+6. On the **Select groups to include** blade, in the **Search** box, type **Contoso Developer devices**, then select **Contoso Developer devices** and then select **Select**.
 
 7. Back on the **Device restrictions** blade, select **Review + save**, then select **Save**.
 
-8. In the Microsoft Intune admin center, select **Devices** in the breadcrumb navigation menu.
-
-### Task 5: Verify that the Configuration profile is applied (Optional)
-
-> Note: To complete this task, a device must be registered in Intune. Finish Lab01 to register a device in Intune.
+### Task 7: Verify that the Configuration profile is applied
 
 1. Switch to **SEA-WS2**.
 
-2. On **SEA-WS2**, on the taskbar, select **Start** and then select **Settings**.
+1. On **SEA-WS2**, on the taskbar, select **Start** and then select **Settings**.
 
-3. In **Settings**, select **Accounts** and then select **Access work or school**.
+1. In **Settings**, select **Accounts** and then select **Access work or school**.
 
-4. In the **Access work or school** section, select the **Connected to Contoso's Azure AD** link and then select **Info**.
+1. In the **Access work or school** section, select the **Connected to Contoso MDM** link and then select **Info**.
 
-5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
+1. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
 
-6. Close the **Settings** app.
+1. Close the **Settings** app.
 
-   _Note: The sync progress may take up to 15 minutes before the profile is applied to the Windows 11 device. Signing out or restarting the device can accelerate this process. PIN **102938**_
+   _Note: The sync progress may take up to 15 minutes before the profile is applied to the Windows 11 device. Signing out or restarting the device can accelerate this process.
 
-7. On **SEA-WS2**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
+1. On **SEA-WS2**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
 
-8. Select **Privacy & security** and notice that many of the privacy settings are now hidden. 
+1. Select **Privacy & security** and notice that many of the privacy settings are now hidden. 
 
-9. Select the **Personalization** setting and then select **Start**. Verify that **Show recently added apps** and **Show most used apps** are set to **Off**. 
+1. Select the **Personalization** setting and then select **Start**. Verify that **Show recently added apps** and **Show most used apps** are set to **Off**. 
 
-10. In the **Settings** app, select **Privacy and Security**.
+1. In the **Settings** app, select **Privacy and Security**.
 
-11. On the **Privacy & Security** page, select **Windows Security** and then select **Open Windows Security**.
+1. On the **Privacy & Security** page, select **Windows Security** and then select **Open Windows Security**.
 
-12. On the **Windows Security** page, select **Virus & threat protection**.
+1. On the **Windows Security** page, select **Virus & threat protection**.
 
-13. On the **Virus & threat protection** page, select **Manage settings** under **Virus & threat protection settings**. 
+1. On the **Virus & threat protection** page, select **Manage settings** under **Virus & threat protection settings**. 
 
-14. Scroll down to **Exclusions** and select **Add or remove exclusions**. Select **Yes** at the User Account Control message.
+1. Scroll down to **Exclusions** and select **Add or remove exclusions**. Select **Yes** at the User Account Control message.
 
-15. On the **Exclusions** page, verify that **C:\\DevProjects** and **DevBuild.exe** are displayed.
+1. On the **Exclusions** page, verify that **C:\\DevProjects** and **DevBuild.exe** are displayed.
 
-16. Close the **Windows Security** page and then close the **Settings** app.
+1. Close the **Windows Security** page and then close the **Settings** app.
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile for a Windows 11 device.
 
