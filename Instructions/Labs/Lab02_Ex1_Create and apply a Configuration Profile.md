@@ -213,4 +213,6 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile for a Windows 11 device.
 
+**END OF LAB**
+
 

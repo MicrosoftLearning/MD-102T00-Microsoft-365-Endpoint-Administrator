@@ -1,4 +1,5 @@
 # Practice Lab02: Manage Windows Device Configuration
+
 ## Summary
 
 In this lab, you will use Microsoft Intune to create and apply a Configuration profile for a Windows 11 device.
@@ -29,7 +30,7 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 1. On **SEA-WS1**, in the Microsoft Intune admin center, select **Devices** in the navigation pane and then select **All devices**.
     
-2. In the details pane, select **SEA-WS2**. 
+2. On the **Devices | All devices** page, in the details pane, select **SEA-WS2**. 
     
 3. On the **SEA-WS2** page, select **Sync** and when prompted select **Yes**. 
 

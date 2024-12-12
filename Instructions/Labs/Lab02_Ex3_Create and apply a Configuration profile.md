@@ -16,9 +16,9 @@ You have been asked to configure SEA-WS3 as a Windows 11 kiosk to allow Contoso 
 
 ### Task 1: Enroll SEA-WS3 to Microsoft Intune
 
-1. On the **SEA-WS3** taskbar, select **Start** and then select **Settings**.
+1. Sign in to **SEA-WS3** as Contoso\Administrator with the password of Pa55w.rd.
 
-1. Select **Start** and then select **Settings**.
+1. On the **SEA-WS3** taskbar, select **Start** and then select **Settings**.
 
 1. In **Settings**, select **Accounts**.
 
@@ -38,7 +38,7 @@ You have been asked to configure SEA-WS3 as a Windows 11 kiosk to allow Contoso 
 
 ### Task 2: Create the Contoso Kiosk device group
 
-1. Switch to **SEA-WS1** and sign in as **Contoso\Administrator** with the password of **Pa55w.rd**. Close Server Manager.
+1. Switch to **SEA-WS1** and if necessary, sign in as **Contoso\Administrator** with the password of **Pa55w.rd**. Close Server Manager.
 
 2. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
 
@@ -67,7 +67,7 @@ You have been asked to configure SEA-WS3 as a Windows 11 kiosk to allow Contoso 
 
 ### Task 3: Create a Configuration profile based on scenario requirements
 
-1. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
+1. In the Microsoft Intune admin center, select **Devices** from the left navigation bar.
 
 2. On the **Devices | Overview** page, select **Configuration**.
 
@@ -97,7 +97,7 @@ You have been asked to configure SEA-WS3 as a Windows 11 kiosk to allow Contoso 
      - Refresh browser after idle time: **5**
    - Specify Maintenance Window for App Restarts: **Not configured**
 
-8. On the **Assignments** blade, under **Included groups**, select **Add groups**.
+8. In the **Assignments** tab, under **Included groups**, select **Add groups**.
 
 9. In the **Select groups to include** window, select **Contoso Kiosk Devices**, and then select **Select**.
 
@@ -109,7 +109,7 @@ You have been asked to configure SEA-WS3 as a Windows 11 kiosk to allow Contoso 
 
 1. Switch to **SEA-WS3**.
 
-2. On **SEA-WS2**, on the taskbar, select **Start** and then select **Settings**.
+2. On **SEA-WS3**, on the taskbar, select **Start** and then select **Settings**.
 
 3. In **Settings**, select **Accounts** and then select **Access work or school**.
 
@@ -121,7 +121,7 @@ You have been asked to configure SEA-WS3 as a Windows 11 kiosk to allow Contoso 
 
 7. Restart **SEA-WS3**.
 
-   > Notice that SEA-WS3 automatically signs in and creates a profile. After the sign-in is complete, Microsoft Edge is displayed configured with InPrivate browsing. If SEA-WS2 does not sign in automatically, repeat steps 1-7 to ensure that the policy has refreshed on the device.
+   > Notice that SEA-WS3 automatically signs in and creates a profile. After the sign-in is complete, Microsoft Edge is displayed configured with InPrivate browsing. If SEA-WS3 does not sign in automatically, sign in to SEA-WS3 and repeat steps 1-7 to ensure that the policy has refreshed on the device.
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile to configure a Windows 11 device as a single-app kiosk.
 
