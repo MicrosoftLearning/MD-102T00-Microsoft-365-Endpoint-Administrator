@@ -87,6 +87,8 @@ To provide additional security for user sign on events, you need to configure an
 4. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
 
 5. On the **Enter password** page, enter the tenant password and select **Sign in**. 
+   
+   > Notice, that even is MFA is disabled on Alex Wilbers User, Multifactor authentication is triggered.
 
 6. At the Stay signed in message, select **No**. 
 
