@@ -84,7 +84,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
    - Check For Signatures Before Running Scan: **Enabled**
    - Days to Retain Cleaned Malware: **60**
    - Schedule Quick Scan Time: **60** (represents 1:00AM)
-   - Submit samples consent: **Send safe samples automatically**
+   - Submit samples consent: **Submit Samples Consent**
 
 6. On the **Configuration settings** tab, select **Next** twice.
 
