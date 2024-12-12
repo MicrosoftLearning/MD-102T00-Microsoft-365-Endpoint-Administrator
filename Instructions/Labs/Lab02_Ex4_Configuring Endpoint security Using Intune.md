@@ -18,7 +18,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 ### Task 1: Configure Windows Security Experience in Intune
 
-1. Sign in to **SEA-WS1** as **Contoso\\Administrator** with the password **Pa55w.rd**. 
+1. Switch to **SEA-WS1** and if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -28,38 +28,38 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 5. From the left navigation pane select **Endpoint security**, then select **Antivirus**.
 
-6. On the **Endpoint security | Antivirus** blade, in the **Summary** tab, select **Create Policy**.
+6. On the **Endpoint security | Antivirus** blade, in the **Summary** tab, under **AV policies**, select **Create Policy**.
 
 7. In the **Create a profile** blade, for **Platform**, select **Windows**. 
 
-8. In the **Profile** list, select **Windows Security experience** and then select **Create**.
+8. In the **Profile** list, select **Windows Security Experience** and then select **Create**.
 
-9. In the **Basics** tab, in the **Name** field, enter **Windows Security Settings**. Select **Next**.
+9. In the **Basics** tab, in the **Name** field, enter **Windows Security Settings**, then select **Next**.
 
 10. In the **Configuration settings** tab, under **Defender**, configure the following settings:
     - TamperProtection (Device): **On**
 
 11. Under **Windows Defender Security Center**, configure the following settings:
-     - Disable Account Protection UI: **Enable**
-     - Disable App Browser UI: **Enable**
-     - Disable Device Security UI: **Enable**
-     - Disable Family UI: **Enable**
-     - Disable Health UI: **Enable**
-     - Enable Customized Toasts: **Enable**
+     - Disable Account Protection UI: **(Enable) The users cannot see the display of the Account protection area in Windows Defender Security Center.**
+     - Disable App Browser UI: **(Enable) The users cannot see the display of the app and browser protection area in Windows Defender Security Center.**
+     - Disable Device Security UI: **(Enable) The users cannot see the display of the Device security area in Windows Defender Security Center.**
+     - Disable Family UI: **(Enable) The users cannot see the display of the family options area in Windows Defender Security Center.**
+     - Disable Health UI: **(Enable) The users cannot see the display of the device performance and health area in Windows Defender Security Center.**
+     - Enable Customized Toasts: **(Enable) Notifications contain the company name and contact options.**
 
-12. Next to **Company Name**, select the switch to change it to **Configured**, and then type **Contoso IT** in the text box.
+12. Next to **Company Name**, toggle the settintg to **Configured**, and then type **Contoso IT** in the text box.
 
-13. Next to **Phone**, select the switch to change it to **Configured**, then type **555-1234** in the text box and then select **Next**.
+13. Next to **Phone**, toggle the setting to **Configured**, then type **555-1234** in the text box and then select **Next**.
 
 14. In the **Scope tags** tab, select **Next**.
 
-15. In the **Assignments** tab, type **Contoso** in the search box and choose the **Contoso Developer Devices** group, and then select **Next**.
+15. In the **Assignments** tab, type **Contoso** in the search box and select the **Contoso Developer Devices** group, and then select **Next**.
 
 16. In the **Review + create** tab, review the information and select **Save**.
 
 ### Task 2: Configure Microsoft Defender Antivirus policy in Intune
 
-1. On the **Endpoint security |Antivirus** blade, select **Create Policy**.
+1. On the **Endpoint security |Antivirus** page, under **AV policies**, select **Create Policy**.
 
 2. In the **Create a profile** blade, for **Platform**, select **Windows**. 
 
@@ -69,16 +69,16 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 5. In the **Configuration settings** tab, configure the following settings:
 
-   - Allow scanning of all downloaded files and attachments: **Allowed (Default)**
-   - Allow Realtime Monitoring: **Allowed**
+   - Allow scanning of all downloaded files and attachments: **Allowed. (Default)**
+   - Allow Realtime Monitoring: **Allowed. Turns on and runs the real-time monitoring service. (Default)**
    - Check For Signatures Before Running Scan: **Enabled**
-   - Days to Retain Cleaned Malware: Select the switch and type **60** in the text box
-   - Schedule Quick Scan Time: Select the switch and type **60** (represents 1:00AM)
-   - Submit samples consent: **Send safe samples automatically**
+   - Days to Retain Cleaned Malware: Toggle the setting to **Configured** and type **60** in the text box
+   - Schedule Quick Scan Time: Toggle the setting to **Configured** and **60** (represents 1:00AM)
+   - Submit Samples Consent: **Send safe samples automatically.**
 
 6. In the **Configuration settings** tab, select **Next** twice.
 
-7. In the **Assignments** tab, type **Contoso** and then select the **Contoso Developer Devices** group, and then select **Next**.
+7. In the **Assignments** tab, type **Contoso** in the search box and then select the **Contoso Developer Devices** group, and then select **Next**.
 
 9. In the **Review + create** tab, review the information and select **Save**.
 
@@ -94,23 +94,21 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 ### Task 4: Verify the configuration
 
-1. Switch to **SEA-CL1**.
+1. Sign in to **SEA-WS4** as Contoso\Administrator with the password of Pa55w.rd.
 
-2. If necessary, sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
-
-3. On **SEA-CL1**, select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
+2. On **SEA-WS4**, select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
 
    > Notice that all security options are displayed. This is because SEA-CL1 is not enrolled to Intune.
 
-4. Close **Windows Security** and sign out of SEA-CL1.
+3. Close **Windows Security** and sign out of SEA-WS4.
 
-5. Switch to **SEA-WS2**, and if necessary, sign in as Contoso\Administrator with the password of Pa55w.rd.
+4. Switch to **SEA-WS2**, and if necessary, sign in as Contoso\Administrator with the password of Pa55w.rd.
 
-6. Select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
+5. Select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
 
    > Notice that all of the restricted areas as configured in the Intune policy are not displayed. SEA-WS2 is enrolled in Intune, which has applied the security settings.
 
-7. Close **Windows Security** and sign out of **SEA-WS2**.
+6. Close **Windows Security** and sign out of **SEA-WS2**.
 
 **Results**: After completing this exercise, you will have successfully created and applied a policy to configure Microsoft Defender for managed devices in Intune.
 
