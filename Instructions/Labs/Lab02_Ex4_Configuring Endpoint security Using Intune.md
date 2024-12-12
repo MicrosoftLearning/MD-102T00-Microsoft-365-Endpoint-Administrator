@@ -98,7 +98,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 2. On **SEA-WS4**, select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
 
-   > Notice that all security options are displayed. This is because SEA-CL1 is not enrolled to Intune.
+   > Notice that all security options are displayed. This is because SEA-WS4 is not enrolled to Intune.
 
 3. Close **Windows Security** and sign out of SEA-WS4.
 
