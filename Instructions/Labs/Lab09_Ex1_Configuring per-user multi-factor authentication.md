@@ -38,7 +38,7 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **SEA-WS1**.
 
-2. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
+2. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
 3. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
@@ -66,11 +66,11 @@ To provide additional security for user sign on events, you need to configure an
 
 12. In the user list, select the check box next to **Alex Wilber**.
 
-13. On the **quick steps** pane, select **Enable**.
+13. On the **quick steps** pane, select **Enable MFA**.
 
-14. On the **About enabling multi-factor auth** message, select **enable multi-factor auth**.
+14. On the **About enabling multi-factor auth** message, select **enable multi-factor authentication**.
 
-15. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Enabled**.
+15. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **enabled**.
 
 16. Close Microsoft Edge.
 
