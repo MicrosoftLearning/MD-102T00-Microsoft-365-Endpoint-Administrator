@@ -55,7 +55,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 4. On the Accounts page, select **Access work or school**.
 
-5. In the **Access work or school** page, select **Enroll only in device management**.
+5. On the **Access work or school** page, select **Enroll only in device management**.
 
 6. In the **Microsoft account** window, type **`DiegoS@yourtenant.onmicrosoft.com`** and then select **Next**.
 
@@ -69,19 +69,19 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 ### Task 3: Create a Configuration profile based on scenario requirements
 
-1. Switch to **SEA-WS1**.
+1. Sign in to **SEA-WS1** as Contoso\Administrator with the password of Pa55w.rd.
 
 2. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
 
 3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
-4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
+4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**.
 
 5. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
 6. On the **Devices | Overview** page, select **Configuration**.
 
-7. On the **Devices | Configuration** blade, in the details pane, select **+ Create**, and then select **+ New policy**.
+7. On the **Devices | Configuration** page, in the **Policies** tab, select **+ Create**, and then select **+ New policy**.
 
 8. In the **Create a profile** blade, select the following options, and then select **Create**:
 
@@ -91,18 +91,18 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 9. In the **Basics** tab, enter the following information, and then select **Next**:
 
-- Name: **Contoso Developer - standard**
-- Description: **Basic restrictions and configuration for Contoso Developers.**
+   - Name: **Contoso Developer - standard**
+   - Description: **Basic restrictions and configuration for Contoso Developers.**
 
-10. On the **Configurations settings** tab, expand **Control Panel and Settings**. 
+10. In the **Configurations settings** tab, expand **Control Panel and Settings**. 
 
 11. Select **Block** next to the **Gaming** and **Privacy** options.
 
-12. On the **Device restrictions** tab, expand **Start**. 
+12. In the **Device restrictions** tab, expand **Start**. 
 
 13. Scroll down and select **Block** next to **Most used apps**, **Recently added apps** and **Recently opened items in Jump Lists**.
 
-14. On the **Device restrictions** tab, scroll down and expand **Microsoft Defender Antivirus**. 
+14. In the **Device restrictions** tab, scroll down and expand **Microsoft Defender Antivirus**. 
 
 15. Under **Microsoft Defender Antivirus,** scroll down and expand **Microsoft Defender Antivirus Exclusions**.
 
@@ -112,15 +112,15 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 17. In the **Processes** box, type the following:
     **DevBuild.exe**. 
-18. Select **Next** three times until you reach the **Review + create** blade. Select **Create**.
+18. Select **Next** three times until you reach the **Review + create** tab, then in the **Review + create** tab select **Create**.
 
 ### Task 4: Create the Contoso Developer device group
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Groups**.
 
-2. On the **Groups | All groups** blade, select **New group**.
+2. On the **Groups | Overview** page, select **New group**.
 
-3. On the **New Group** blade, enter the following information:
+3. On the **New Group** page, enter the following information:
 
 - Group type: **Security**
 - Group name: **Contoso Developer devices**
@@ -129,21 +129,23 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 4. Under **Members**, select **No members selected**. 
 
-5. On the **Add members** blade, in the **Search** box type **SEA-WS2**, then select **SEA-WS2** and then select **Select**.
+5. On the **Add members** blade, in the search box type **SEA-WS2**, then select **SEA-WS2** and then select **Select**.
 
 6. On the **New Group** page, select **Create**. 
 
-7. On the **Groups | All groups** blade, verify that the **Contoso Developer devices** group is displayed.
+7. On the **Groups | Overview** page, select **All groups**.
+
+8. On the **Groups | All groups** page, verify that the **Contoso Developer devices** group is displayed.
 
 ### Task 5: Assign a Configuration profile to Windows devices
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
 
-2. On the **Devices | Overview** blade, select **Configuration**.
+2. On the **Devices | Overview** page, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer – standard** profile.
+3. On the **Devices | Configuration** blade, in the **Policies** tab, select the **Contoso Developer – standard** profile.
 
-4. On the **Contoso Developer – standard** blade, scroll down to the **Assignments** section, and select **Edit**.
+4. On the **Contoso Developer – standard** page, scroll down to the **Assignments** section, and select **Edit**.
 
 5. On the Assignments page, under **Included groups** select **Add groups**.
 
@@ -161,7 +163,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 4. In the **Access work or school** section, select the **Connected to Contoso MDM** link and then select **Info**.
 
-5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
+5. On the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
 
 6. Close the **Settings** app.
 
@@ -189,23 +191,25 @@ You need to use Entra and Intune to manage members of the Developers department 
  
 ### Task 7: Verify that the Configuration profile is applied in Intune
 
-1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
+1. Switch to **SEA-WS1**.
 
-2. In the Devices navigation pane, select **Overview**.
+2. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
-3. Select **All devices**, and in the details pane, select **SEA-WS2**. Information about the device such as name, Primary user, and operating system is displayed.
+3. On the **Devices | Overview** page, select **All devices**.
 
-4. In the SEA-WS2 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
+4. On the **Devices | All devices** page, select **SEA-WS2**. Information about the device such as name, Primary user, and operating system is displayed.
 
-5. In the details pane, select **Contoso Developer – standard**.
+5. In the SEA-WS2 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profile is applied successfully to the device.
 
-6. On the **Contoso Developer – standard** blade, take note of each setting you configured in the profile.
+6. In the details pane, select **Contoso Developer – standard**.
 
-   > The **State** should display **Succeeded** next to all of them.
+7. On the **SEA-WS2-Profile Settings** blade, take note of each setting you configured in the profile.
 
-7.  In the Microsoft Intune admin center, from the navigation pane, select **Home**.
+   > The **Setting status** should display **Succeeded** next to all of them.
 
-8.  Close Microsoft Edge.
+8.  In the Microsoft Intune admin center, from the navigation pane, select **Home**.
+
+9.  Close Microsoft Edge.
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile for a Windows 11 device.
 
