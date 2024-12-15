@@ -75,9 +75,9 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 2. On the Devices pane, under the **Device onboarding** section, select **Enrollment**.
 
-3. On the **Enroll devices** pane, note that you can create enrollment device limit and platform restrictions. 
+3. On the **Devices | Enrollment** page, in the **Enrollment options** section, note that you can create enrollment device limit and platform restrictions. 
 
-4. Select **Device platform restrictions**. 
+4. Select **Device platform restriction**. 
 
    > Notice that there is a Default device type restriction that is assigned to **All Users**. This default restriction allows all device types.
 

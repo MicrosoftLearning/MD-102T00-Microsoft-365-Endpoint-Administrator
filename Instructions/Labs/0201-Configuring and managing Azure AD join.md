@@ -60,27 +60,27 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 1. Switch to **SEA-WS1** and sign in as **Admin** with the password of **Pa55w.rd**.
 
-2. On the taskbar, select **Start** and then select **Settings**.
+1. On the taskbar, select **Start** and then select **Settings**.
 
-3. In the **Settings** window, select **Accounts**.
+1. In the **Settings** window, select **Accounts**.
 
-4. On the Accounts page, select **Access work or school**.
+1. On the Accounts page, select **Access work or school**.
 
-5. In the **Access work or school** page, select **Connect**.
+1. In the **Access work or school** page, select **Connect**.
 
-6. In the **Microsoft account** window, select **Join this device to Entra ID**.
+1. In the **Microsoft account** window, select **Join this device to Entra ID**.
 
-7. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
+1. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
 
-8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
+1. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
 
-9. On the **Make sure this is your organization** dialog box, select **Join**.
+1. On the **Make sure this is your organization** dialog box, select **Join**.
 
-10. On the **You're all set!** page, select **Done**.
+1. On the **You're all set!** page, select **Done**.
 
-11. On the **Access work or school** page, verify that **Connected to Contoso's Azure AD** is displayed.
+1. On the **Access work or school** page, verify that **Connected to Contoso's Azure AD** is displayed.
 
-12. Close the **Settings** page.
+1. Close the **Settings** page.
 
 ### Task 3: Validate Entra Join
 

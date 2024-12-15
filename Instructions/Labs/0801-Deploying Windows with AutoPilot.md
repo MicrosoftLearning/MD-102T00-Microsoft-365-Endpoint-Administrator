@@ -8,7 +8,7 @@ In this lab you will learn how provision a Windows 11 device with Autopilot usin
 
 To following lab(s) must be completed before this lab:
 
-- 0101-Managing Identities in Azure AD
+- 0101-Managing Identities in Entra ID
 
 - 0102-Synchronizing Identities by using Azure AD Connect
 

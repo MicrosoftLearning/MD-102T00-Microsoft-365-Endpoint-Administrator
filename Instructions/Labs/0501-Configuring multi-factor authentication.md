@@ -180,7 +180,7 @@ To provide additional security for user sign on events, you need to configure an
 
     > Note that typically you would specify a group, however for this exercise we will just test the setting on Alex Wilber.
 
-10. Select **No target resources selected** and then click **Select apps**.
+10. Select **No target resources selected** and then click **Select resources**.
 
     > Note the Control access based on client app setting. This setting allows you to specify the client app that is used to access the resource. For example, you can specify that only the Outlook app can be used to access Exchange Online. 
 
@@ -202,27 +202,29 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **SEA-WS3**. 
 
-2. On the taskbar, select **Microsoft Edge**.
+1. On the taskbar, select **Microsoft Edge**.
 
-3. In the address bar, enter **https://outlook.office.com** and press Enter.
+1. In the address bar, enter **https://outlook.office.com** and press Enter.
 
-4. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
+1. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
 
-5. On the **Enter password** page, enter the tenant password and select **Sign in**. 
+1. On the **Enter password** page, enter the tenant password and select **Sign in**. 
 
-6. At the Verify your identity prompt, select your phone number.
+1. At the Verify your identity prompt, select your phone number.
 
    > The Enter code dialog box opens.
 
-7. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
+1. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
 
-8. At the Stay signed in message, select **No**. 
+1. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
+
+1. At the Stay signed in message, select **No**. 
 
    > Outlook on the Web opens to Alex Wilber's inbox.
 
-9. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
+1. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
 
-10. Close Microsoft Edge.
+1. Close Microsoft Edge.
 
 ### Task 4: Remove conditional access MFA
 
