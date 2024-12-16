@@ -8,11 +8,11 @@ In this lab, you use Microsoft Intune to create a device restriction profile and
 
 ### Scenario
 
-Your company has recently deployed Mac devices. These devices need to be configured properly to ensure security and compliance. As part of this task, you are required to create a device restriction profile and an update policy for these Mac OS devices.
+Your company has recently deployed Mac devices. These devices need to be configured properly to ensure security. As part of this task, you are required to create a device restriction profile and an update policy for these Mac OS devices.
 
 ### Task 1: Create a device restriction profile
 
-1. Sign in to **SEA-WS3** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**. 
 
 1. On the taskbar, select **Microsoft Edge**.
 
@@ -61,7 +61,7 @@ Your company has recently deployed Mac devices. These devices need to be configu
 
 1. On the **Review + create** tab, select **Create**.
 
-### Task 2: Crate a macOS update profile ### 
+### Task 2: Crate a macOS update profile
 
 1. In the Microsoft Intune admin center, in the left navigation pane select **Devices**.
 
