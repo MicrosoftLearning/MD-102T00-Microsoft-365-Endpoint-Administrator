@@ -56,13 +56,9 @@ The following are specifications are required:
 
 1. From the navigation pane select **Devices**, then select **Enrollment**. Make sure you are on the page for the Windows Operating System.
 
-2. Select **Automatic Enrollemnt** in the Section **Enrollment options**
+2. In the **Enrollment options** section, select **Automatic Enrollment**.
 
-3. Make sure the setting **All** is set for the MDM user scope.
-
-4. Everything else we will leave as it is. 
-
-5. Select **Save** to save your changes.
+3. On the **MDM user scope** row, select **All** and then select **Save**.
 
 **Results**: After completing this exercise, you will have successfully created a Windows Autopilot deployment profile and modified the Automatic Enrollment to enroll windows devices into your tenant.
 

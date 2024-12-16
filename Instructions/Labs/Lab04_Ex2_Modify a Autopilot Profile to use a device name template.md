@@ -53,6 +53,6 @@ The following are specifications are required:
 
 17. Now select **Save** to save the changes you have made.
 
-**Results**: After completing this exercise, you will have successfully opend and modifyed a Windows Autopilot deployment profile. The profile now use a device name template on the enrolled devices.
+**Results**: After completing this exercise, you will have successfully opened and modified a Windows Autopilot deployment profile. The profile now use a device name template on the enrolled devices.
 
 **END OF LAB**
