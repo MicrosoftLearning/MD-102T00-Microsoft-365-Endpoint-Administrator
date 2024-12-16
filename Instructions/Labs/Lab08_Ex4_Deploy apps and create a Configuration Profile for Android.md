@@ -2,7 +2,7 @@
 
 ## Summary
 
-In this lab, you will use Microsoft Intune to configure, deploy, and manage mobile devices and applications for iOS/iPadOS and Android platforms.
+In this lab, you will use Microsoft Intune to configure, deploy, and manage mobile devices and applications for iOS/iPadOS and Android devices.
 
 ### Exercise 4: Deploy apps and create a configuration profile for Android
 
