@@ -2,7 +2,7 @@
 
 ## Summary
 
-In this lab, you use Microsoft Intune manage device enrollment for iOS/iPadOS and Android devices.
+In this lab, you will use Microsoft Intune to configure, deploy, and manage mobile devices and applications for iOS/iPadOS and Android platforms.
 
 ### Prerequisites
 
@@ -20,7 +20,7 @@ Additionally, your company has decided to implement a Bring Your Own Device (BYO
 
 ### Task 1: Create an Apple push certificate
 
-1. Sign in to **SEA-WS3** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**. 
 
 1. On the taskbar, select **Microsoft Edge**.
 
@@ -127,9 +127,9 @@ Additionally, your company has decided to implement a Bring Your Own Device (BYO
 1. On the **Setup Assistant** tab, enter the following information:  and then select **Next**.
 
     - **Department**: Sales
-    - **Department Phone**: 0000 (TBD)
+    - **Department Phone**: 555-1234
 
-1. On the **Setup Assistant** tab, select **Hide** for the switches of the following settings and then select **Next**:
+1. On the **Setup Assistant** tab, toggle the following settings to **Hide** and then select **Next**:
 
     - Passcode
     - Apple ID

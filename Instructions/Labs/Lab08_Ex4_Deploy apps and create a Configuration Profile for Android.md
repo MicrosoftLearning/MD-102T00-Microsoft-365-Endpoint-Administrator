@@ -2,7 +2,7 @@
 
 ## Summary
 
-In this lab, you deploy apps and configure Android devices.
+In this lab, you will use Microsoft Intune to configure, deploy, and manage mobile devices and applications for iOS/iPadOS and Android platforms.
 
 ### Exercise 4: Deploy apps and create a configuration profile for Android
 
@@ -12,7 +12,7 @@ Your organization is rolling out fully managed Android devices to the Marketing 
 
 ### Task 1: Deploy apps to android devices
 
-1. Sign in to **SEA-WS3** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**. 
 
 1. On the taskbar, select **Microsoft Edge**.
 

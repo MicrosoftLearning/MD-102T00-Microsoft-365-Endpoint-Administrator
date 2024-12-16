@@ -2,7 +2,7 @@
 
 ## Summary
 
-In this lab, you will configure an App protection policy for a mobile device.
+In this lab, you will use Microsoft Intune to configure, deploy, and manage mobile devices and applications for iOS/iPadOS and Android platforms.
 
 ### Exercise 5: Configure App Protection Policies for Mobile Devices
 
@@ -17,7 +17,7 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 
 ### Task 1: Create an App protection policy for iOS/iPadOS devices
 
-1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
+1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**.
     
 2. On the taskbar, select **Microsoft Edge**.
 
