@@ -16,7 +16,7 @@ It's been determined that all the information on SEA-WS2 should be encrypted. Yo
 
 ### Task 1: Configure device configuration policy in Intune
 
-1. Sign in to **SEA-WS2** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
+1. Switch to **SEA-WS1** and if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -90,13 +90,13 @@ It's been determined that all the information on SEA-WS2 should be encrypted. Yo
     
 12. On the **Are you ready to encrypt this drive** page, select **Continue**. Wait for the encryption to complete.
 
-13. At the **Encryption of C: is complete** message, select **Close**, and then restart **SEA-WS1**.
+13. At the **Encryption of C: is complete** message, select **Close**, and then restart **SEA-WS2**.
 
-14. When **SEA-WS1** restarts, type **123456** and press **Enter** to unlock the drive.
+14. When **SEA-WS2** restarts, type **123456** and press **Enter** to unlock the drive.
 
 ### Task 3: Verify BitLocker protection
 
-1. Sign in to **SEA-WS1** as **Aaron Nicholls** with the PIN **102938**.
+1. Sign in to **SEA-WS2** as **Contoso\\Administrator** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **File Explorer** and then select **This PC**.
 
@@ -104,7 +104,7 @@ It's been determined that all the information on SEA-WS2 should be encrypted. Yo
 
 4. In the **BitLocker Drive Encryption** window, ensure that you see **C: BitLocker on** status. This means that drive is encrypted. 
 
-5. Close all open windows and sign out of **SEA-WS1**.
+5. Close all open windows and sign out of **SEA-WS2**.
 
 **Results**: After completing this exercise, you will have successfully configured disk encryption by using Intune.
 
