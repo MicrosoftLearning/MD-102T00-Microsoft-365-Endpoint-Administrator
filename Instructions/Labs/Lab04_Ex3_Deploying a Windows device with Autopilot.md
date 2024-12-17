@@ -26,7 +26,7 @@
 
 7. For now we do not need to a members into the group. So select **Create** to create the group. 
 
-8. No in the group overview make sure the group was created successfully. This you can check in the top right corner by selecting the **Bell symbol** to see the notifications.
+8. No in the group overview make sure the group was created successfully. This you can check in the top right corner by selecting the **Bell symbol** to see the notifications .
 
 ### Task 2: Generate a device-specific comma-separated value (CSV) file
 
