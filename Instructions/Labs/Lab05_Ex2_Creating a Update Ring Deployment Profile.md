@@ -12,7 +12,7 @@
 
 ### Task 1: Create a Update Ring Profile
 
-1. Sign in to **SEA-WS2** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
