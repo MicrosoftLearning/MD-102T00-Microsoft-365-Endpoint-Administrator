@@ -10,14 +10,14 @@ In this lab, you validate device compliance by configuring a compliance policy a
 
 Contoso would like to ensure that Windows devices that are enrolled in Intune meet a minimum configuration specification. The following are specifications are required:
 
-- Minimum Windows operating system version: 10.0.19041.329
+- Minimum Windows operating system version: 10.0.19045.4529
 - Microsoft Defender Antimalware required
 
 If a device meets these requirements, it will be marked as compliant. If the device does not meet these requirements, the device should be marked as non-compliant.
 
 ### Task 1: Create a dynamic Entra ID device group
 
-Sign in to **SEA-WS1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
+Sign in to **MD102-WS1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
 1. On the taskbar, select **Microsoft Edge**.
 
@@ -37,7 +37,7 @@ Sign in to **SEA-WS1** as **Contoso\\Administrator** with the password **Pa55w.r
    - Group name: **Windows Devices**
    - Membership type: **Dynamic Device**
 
-3. Under the **Dynamic Device Members** section, select **Add dynamic query**. 
+3. Under the **Dynamic device members** section, select **Add dynamic query**. 
 
 4. On the **Dynamic membership rules** blade, in the **Rule syntax** section, select **Edit**. 
     

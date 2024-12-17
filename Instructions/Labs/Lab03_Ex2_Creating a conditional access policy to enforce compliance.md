@@ -150,7 +150,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 13. In Microsoft Edge, type **outlook.office.com** and then press Enter. 
 
-14. Verify that you can access Aaron's mailbox. 
+14. Verify that you can access Lynne's mailbox. 
 
     > Note: This is because MD102-WS5 is a managed device and marked as compliant._
 
