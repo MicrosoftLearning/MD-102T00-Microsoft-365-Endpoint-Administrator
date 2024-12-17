@@ -19,9 +19,9 @@ You have been asked to create a Configuration profile to be used to automaticall
 
 ### Task 1: Create a device device group
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
-2. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
+2. On **MD102-WS1**, on the taskbar, select **Microsoft Edge**.
 
 3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 

@@ -4,10 +4,6 @@
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
-
-- Lab04: Manage Windows Autopilot - Exercise 1: Create a Autopilot profile
-
 ## Exercise 2: Modify a Autopilot Profile to use a device name template
 
 ### Scenario
@@ -19,7 +15,7 @@ The following are specifications are required:
 
 ### Task 1: Open the Windows autopilot deployment profile
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 

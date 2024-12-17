@@ -12,7 +12,7 @@ Your company has recently deployed Mac devices. These devices need to be configu
 
 ### Task 1: Create a device restriction profile
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**. 
 
 1. On the taskbar, select **Microsoft Edge**.
 

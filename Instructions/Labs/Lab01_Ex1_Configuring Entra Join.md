@@ -12,11 +12,11 @@ In this lab, you will configure Entra ID Join settings and perform a standard sc
 
 ### Scenario
 
-You need to configure Entra ID device settings to ensure that all users are allowed to join devices to Entra ID. You also need to ensure that users can only join a maximum of 20 devices and that Allan Deyoung is added as a local administrator on all Entra joined devices. Finally, you will verify that Entra join works as expected by having Joni Sherman join SEA-WS2 to the tenant.
+You need to configure Entra ID device settings to ensure that all users are allowed to join devices to Entra ID. You also need to ensure that users can only join a maximum of 20 devices and that Allan Deyoung is added as a local administrator on all Entra joined devices. Finally, you will verify that Entra join works as expected by having Joni Sherman join MD102-WS2 to the tenant.
 
 ### Task 1: Configure Entra join Device settings
 
-1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
+1. On **MD102-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
@@ -54,7 +54,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 2: Perform an Entra Join
 
-1. Switch to **SEA-WS2** and sign in as **Admin** with the password of **Pa55w.rd**.
+1. Switch to **MD102-WS2** and sign in as **Admin** with the password of **Pa55w.rd**.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
@@ -80,7 +80,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 3: Validate Entra Join
 
-1. On SEA-WS2, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
+1. On MD102-WS2, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
 
 2. In the PowerShell console, type the following and press **Enter**:
 
@@ -102,15 +102,15 @@ dsregcmd /status
 7. Double-click the **Administrators** group.
 
 
-   > Notice that Joni Sherman has been added as a local Administrator on SEA-WS2. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role. 
+   > Notice that Joni Sherman has been added as a local Administrator on MD102-WS2. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role. 
 
-8. Switch to **SEA-WS1**.
+8. Switch to **MD102-WS1**.
 
 9. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
 
 10. Select **Devices**, and then select **All devices**. 
 
-    > In the Devices pane, notice that SEA-WS2 is listed. 
+    > In the Devices pane, notice that MD102-WS2 is listed. 
 
 11. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
 
@@ -118,7 +118,7 @@ dsregcmd /status
 
 ### Task 4: Sign in to Windows as an Entra User
 
-1. Switch to **SEA-WS2** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the Tenant password as provided by your instructor. 
+1. Switch to **MD102-WS2** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the Tenant password as provided by your instructor. 
 
    > Wait for the profile to be created.
 
@@ -138,7 +138,7 @@ dsregcmd /status
 
 ### Task 5: Remove a Windows device from Entra
 
-1. On SEA-WS2, signed in as **azuread\jonisherman**, select **Start** and then select **Settings**.
+1. On MD102-WS2, signed in as **azuread\jonisherman**, select **Start** and then select **Settings**.
 
 2. In the **Settings** window, select **Accounts**.
 
@@ -152,6 +152,6 @@ dsregcmd /status
 
 7. On the **Windows Security** dialog box, in the **Email address** box, enter **Admin** and in the **Password** box, type **Pa55w.rd**. Select **OK**.
 
-8. In the **Restart your PC** dialog box, select **Restart now**. SEA-WS1 restarts.
+8. In the **Restart your PC** dialog box, select **Restart now**. MD102-WS1 restarts.
 
 **Results**: After completing this exercise, you will have configured Microsoft Entra device settings, joined a device to Entra, and removed a device from Entra.

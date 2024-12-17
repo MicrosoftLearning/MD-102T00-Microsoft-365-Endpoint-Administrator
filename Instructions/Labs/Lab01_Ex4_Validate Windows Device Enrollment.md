@@ -15,7 +15,7 @@ You have assigned Megan Bowen appropriate licenses and will now test the process
 
 ### Task 1: Automatically enroll a Windows device to Microsoft Intune
 
-1. Sign in to **SEA-WS2** as **Admin** with the password of **Pa55w.rd**.
+1. Sign in to **MD102-WS2** as **Admin** with the password of **Pa55w.rd**.
 
 2. Select **Start** and then select **Settings**.
 
@@ -45,7 +45,7 @@ You have assigned Megan Bowen appropriate licenses and will now test the process
 
 ### Task 2: Validate device enrollment into Entra ID And Intune
 
-1. On the **SEA-WS2** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**.
+1. On the **MD102-WS2** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**.
     
 2. In the **Certificates** console, in the navigation pane, expand **Personal** and select the **Certificate** node. Verify that the following certificates are listed in the details pane:
 
@@ -79,7 +79,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 ### Task 3: Sign in as an Entra user
 
-1. Sign out of **SEA-WS2**.
+1. Sign out of **MD102-WS2**.
 
 2. Select **Other user**, and sign in as **`MeganB@yourtenant.onmicrosoft.com`**. Wait for the profile to be created.
 
@@ -97,11 +97,11 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 9.  On the **All set!** page, select **OK**.
 
-10. Sign out of **SEA-WS2**.
+10. Sign out of **MD102-WS2**.
 
 ### Task 4: Verifying device enrollment in the Intune console
 
-1. Switch to **SEA-WS1** as **Contoso\Administrator** with the password of **Pa55w.rd**. 
+1. Switch to **MD102-WS1** as **Contoso\Administrator** with the password of **Pa55w.rd**. 
 
 2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. Sign in with your Tenant administrator account.
 
@@ -109,9 +109,9 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 4. On the **Devices | Overview** blade under **Intune enrolled devices**, verify that **1** is displayed next to **Windows**. It may take a while to display.
 
-5. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS2** is listed.
+5. On the **Devices | Overview** blade, select **All devices** and verify that **MD102-WS2** is listed.
 
-6. Note that for SEA-WS2, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**. 
+6. Note that for MD102-WS2, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**. 
 
    _Note: This view lists devices that are enrolled to Intune. Remember that you configured automatic enrollment between Entra and Intune, and because of that, any device that is joined or registered to Entra is automatically enrolled to Intune. Any devices joined prior to setting up enrollment are only joined or registered to Entra, but not enrolled in Intune._
 
@@ -121,13 +121,13 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 9. Select **Devices**, then select **All devices**. 
 
-   > Take note of SEA-WS2. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
+   > Take note of MD102-WS2. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
 
 10. Close all open Windows.
 
 ### Task 5: Getting more Information about the enrolled device and user
 
-1. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
+1. On **MD102-WS1**, on the taskbar, select **Microsoft Edge**.
 
 2. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
 

@@ -12,7 +12,7 @@ Your organization is rolling out fully managed Android devices to the Marketing 
 
 ### Task 1: Deploy apps to android devices
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**. 
 
 1. On the taskbar, select **Microsoft Edge**.
 

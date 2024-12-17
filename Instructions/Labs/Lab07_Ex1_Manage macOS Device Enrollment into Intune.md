@@ -18,7 +18,7 @@ Your organization has recently acquired multiple macOS devices and has chosen to
 
 ### Task 1: Create an Apple push certificate
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**. 
 
 1. On the taskbar, select **Microsoft Edge**.
 

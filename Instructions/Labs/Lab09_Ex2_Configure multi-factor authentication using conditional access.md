@@ -16,7 +16,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 1: Validate sign-in before enabling conditional access with MFA
 
-1. Sign in to **SEA-WS9** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **MD102-WS9** as **Admin** with the password **Pa55w.rd**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -36,9 +36,9 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 2: Configure conditional access with MFA
 
-1. Switch to **SEA-WS1**.
+1. Switch to **MD102-WS1**.
 
-2. On **SEA-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+2. On **MD102-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
@@ -78,7 +78,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 3: Validate conditional access MFA
 
-1. Switch to **SEA-WS9**. 
+1. Switch to **MD102-WS9**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -100,9 +100,9 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 4: Remove conditional access MFA
 
-1. Switch to **SEA-WS1**.
+1. Switch to **MD102-WS1**.
 
-2. On **SEA-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+2. On **MD102-WS1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
 3. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
