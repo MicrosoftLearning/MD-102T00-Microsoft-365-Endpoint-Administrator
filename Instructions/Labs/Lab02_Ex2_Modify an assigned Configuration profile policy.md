@@ -12,9 +12,9 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 ### Task 1: Change settings in an assigned Configuration profile
 
-1. Switch to **SEA-WS1**.
+1. Switch to **MD102-WS1** and if necessary, sign in as Contoso\Administrator with the password of Pa55w.rd.
 
-2. On **SEA-WS1**, in the Microsoft Intune admin center, select **Devices** and then select **Configuration**. 
+2. On **MD102-WS1**, in the Microsoft Intune admin center, select **Devices** and then select **Configuration**. 
 
 3. On the **Devices | Configuration** page, in the **Policies** tab, select **Contoso Developer -  standard**.
 
@@ -28,25 +28,25 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 ### Task 2: Force device synchronization from Intune Manager admin center
 
-1. On **SEA-WS1**, in the Microsoft Intune admin center, select **Devices** in the navigation pane and then select **All devices**.
+1. On **MD102-WS1**, in the Microsoft Intune admin center, select **Devices** in the navigation pane and then select **All devices**.
     
-2. On the **Devices | All devices** page, in the details pane, select **SEA-WS3**. 
+2. On the **Devices | All devices** page, in the details pane, select **MD102-WS3**. 
     
-3. On the **SEA-WS3** page, select **Sync** and when prompted select **Yes**. 
+3. On the **MD102-WS3** page, select **Sync** and when prompted select **Yes**. 
 
    _Note: Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes._
 
 4. Close Microsoft Edge.
 
-### Task 3: Verify changes on SEA-WS3
+### Task 3: Verify changes on MD102-WS3
 
-1. Switch to **SEA-WS3**.
+1. Switch to **MD102-WS3** and if necessary, sign in as Contoso\Administrator with the password of Pa55w.rd.
 
-2. On **SEA-WS3** and on the taskbar, select **Start** and then select the **Settings** app.
+2. On **MD102-WS3** and on the taskbar, select **Start** and then select the **Settings** app.
 
 3. In the **Settings** app, select **Privacy & security** and verify that all of the customization options are back.
 
-4. Close all open windows and sign out of **SEA-WS3**.
+4. Close all open windows and sign out of **MD102-WS3**.
 
 **Results**: After completing this exercise, you will have successfully modified an assigned a Configuration profile, modified a Configuration profile, and verified the changes.
 
