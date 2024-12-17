@@ -18,7 +18,7 @@ Your organization has recently procured several Android devices for the marketin
 
 ### Task 1: Connect to a Managed google play account
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**. 
 
 1. On the taskbar, select **Microsoft Edge**.
 

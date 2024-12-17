@@ -17,7 +17,7 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 
 ### Task 1: Create an App protection policy for iOS/iPadOS devices
 
-1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**.
+1. On **MD102-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**.
     
 2. On the taskbar, select **Microsoft Edge**.
 

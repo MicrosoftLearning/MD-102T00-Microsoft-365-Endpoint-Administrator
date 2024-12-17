@@ -16,7 +16,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Task 1: Add Microsoft Remote Desktop to Intune
 
-1. On **SEA-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
+1. On **MD102-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -58,7 +58,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Task 2: Enroll Device and Perform an Entra Join
 
-1. Switch to **SEA-WS8** and sign in as **Admin** with the password of **Pa55w.rd**.
+1. Switch to **MD102-WS8** and sign in as **Admin** with the password of **Pa55w.rd**.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
@@ -86,7 +86,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Task 3: Assign a Group to the App
 
-1. Switch to **SEA-WS1**.
+1. Switch to **MD102-WS1**.
 
 2. In the Microsoft Remote Desktop page, select **Properties**.
 
@@ -94,7 +94,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 4. On the **Assignments** page, select **Add group** in the **Available for enrolled devices**.
 
-5. On the **Select groups** page, search and select the **Contoso** group and then click **Select**.
+5. On the **Select groups** page, MD102rch and select the **Contoso** group and then click **Select**.
 
 6. Select **Review + save** and then select **Create**.
 
@@ -102,16 +102,16 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 1. In the **Microsoft Intune admin center**, select **Devices** and then select **All devices**.
 
-2. In the details pane, select **SEA-WS8**.
+2. In the details pane, select **MD102-WS8**.
 
-3. On the **SEA-WS8** blade, select **Sync** and when prompted select **Yes**.
+3. On the **MD102-WS8** blade, select **Sync** and when prompted select **Yes**.
 
    > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
 
 
 ### Task 5: Install an app from the Company Portal Website
 
-1. Switch to **SEA-WS8** and sign in with **Megan Bowen**.
+1. Switch to **MD102-WS8** and sign in with **Megan Bowen**.
 
 2. At the **Use Windows Hello with your account** page, select **OK**.
 
@@ -139,9 +139,9 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 14. On the Devices page, select **Tap here to tell us which device you're using or add a new device**.
 
-15. On the **Which device are you using** dialog box, select the option next to **SEA-WS8**, and then select **Select**.
+15. On the **Which device are you using** dialog box, select the option next to **MD102-WS8**, and then select **Select**.
 
-   > Notice that the message now changes to Apps will be installed onto: SEA-WS8
+   > Notice that the message now changes to Apps will be installed onto: MD102-WS8
 
 16. At the top-left corner, select the navigation button and then select **Apps**.
 
