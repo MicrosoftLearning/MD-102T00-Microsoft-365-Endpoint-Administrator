@@ -74,7 +74,7 @@ Install-Script -Name Get-WindowsAutopilotInfo
 10. When you now see a warning for a **Untrusted repository** you need to approve this as well. You do this by typing **y** in the PowerShell and hit enter. 
 
 ```Powershell
-Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
+Get-WindowsAutopilotInfo -OutputFile "C:\HWID\AutopilotHWID.csv"
 ```
 
 11. Now you have created a .csv file to import this device into Intune to get used in a Autopilot Profile. 
@@ -134,6 +134,8 @@ Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
 26. Type or paste the serial number of your imported virtual machine to search for it. Select the virtual machine and then select **Select** to add it to the group.
 
 27. This will now cause the deployment profile to be assigned to this device. This will take some time. We will check the status later.
+
+28. Close all Windows.
 
 ### Task 4: Reset the PC
 
