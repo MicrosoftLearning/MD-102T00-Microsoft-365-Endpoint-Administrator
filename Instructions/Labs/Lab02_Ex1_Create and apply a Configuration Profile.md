@@ -19,7 +19,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 ### Task 1: Verify device settings
 
-1. Sign in to **SEA-WS3** as Contoso\Administrator with the password of Pa55w.rd.
+1. Sign in to **MD102-WS3** as Contoso\Administrator with the password of Pa55w.rd.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
@@ -47,7 +47,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 ### Task 2: Enroll the device
 
-1. On the **SEA-WS3** taskbar, select **Start** and then select **Settings**.
+1. On the **MD102-WS3** taskbar, select **Start** and then select **Settings**.
 
 2. Select **Start** and then select **Settings**.
 
@@ -69,9 +69,9 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 ### Task 3: Create a Configuration profile based on scenario requirements
 
-1. Sign in to **SEA-WS1** as Contoso\Administrator with the password of Pa55w.rd.
+1. Sign in to **MD102-WS1** as Contoso\Administrator with the password of Pa55w.rd.
 
-2. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
+2. On **MD102-WS1**, on the taskbar, select **Microsoft Edge**.
 
 3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
@@ -122,14 +122,14 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 3. On the **New Group** page, enter the following information:
 
-- Group type: **Security**
-- Group name: **Contoso Developer devices**
-- Group description: **All Windows devices in Contoso Developer department**
-- Membership type: **Assigned**
+   - Group type: **Security**
+   - Group name: **Contoso Developer devices**
+   - Group description: **All Windows devices in Contoso Developer department**
+   - Membership type: **Assigned**
 
 4. Under **Members**, select **No members selected**. 
 
-5. On the **Add members** blade, in the search box type **SEA-WS3**, then select **SEA-WS3** and then select **Select**.
+5. On the **Add members** blade, in the search box type **MD102-WS3**, then select **MD102-WS3** and then select **Select**.
 
 6. On the **New Group** page, select **Create**. 
 
@@ -153,11 +153,11 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. Back on the **Device restrictions** blade, select **Review + save**, then select **Save**.
 
-### Task 6: Verify that the Configuration profile is applied on the SEA-WS3
+### Task 6: Verify that the Configuration profile is applied on the MD102-WS3
 
-1. Switch to **SEA-WS3**.
+1. Switch to **MD102-WS3**.
 
-2. On **SEA-WS3**, on the taskbar, select **Start** and then select **Settings**.
+2. On **MD102-WS3**, on the taskbar, select **Start** and then select **Settings**.
 
 3. In **Settings**, select **Accounts** and then select **Access work or school**.
 
@@ -169,7 +169,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
    _Note: The sync progress may take up to 15 minutes before the profile is applied to the Windows 11 device. Signing out or restarting the device can accelerate this process.
 
-7. On **SEA-WS3**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
+7. On **MD102-WS3**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
 
 8. Select **Privacy & security** and notice that many of the privacy settings are now hidden. 
 
@@ -191,19 +191,19 @@ You need to use Entra and Intune to manage members of the Developers department 
  
 ### Task 7: Verify that the Configuration profile is applied in Intune
 
-1. Switch to **SEA-WS1**.
+1. Switch to **MD102-WS1**.
 
 2. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
 3. On the **Devices | Overview** page, select **All devices**.
 
-4. On the **Devices | All devices** page, select **SEA-WS3**. Information about the device such as name, Primary user, and operating system is displayed.
+4. On the **Devices | All devices** page, select **MD102-WS3**. Information about the device such as name, Primary user, and operating system is displayed.
 
-5. In the SEA-WS3 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profile is applied successfully to the device.
+5. In the MD102-WS3 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profile is applied successfully to the device.
 
 6. In the details pane, select **Contoso Developer – standard**.
 
-7. On the **SEA-WS3-Profile Settings** blade, take note of each setting you configured in the profile.
+7. On the **MD102-WS3-Profile Settings** blade, take note of each setting you configured in the profile.
 
    > The **Setting status** should display **Succeeded** next to all of them.
 
