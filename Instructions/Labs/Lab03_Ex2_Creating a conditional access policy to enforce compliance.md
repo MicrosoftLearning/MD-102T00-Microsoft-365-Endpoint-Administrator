@@ -34,7 +34,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 ### Task 2: Automatically enroll a Windows device to Microsoft Intune
 
-1. Sign in to **SEA-WS2** as **Admin** with the password of **Pa55w.rd**.
+1. Sign in to **SEA-WS5** as **Admin** with the password of **Pa55w.rd**.
 
 2. Select **Start** and then select **Settings**.
 
@@ -64,7 +64,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 ### Task 3: Sign in as an Entra user
 
-1. Sign out of **SEA-WS2**.
+1. Sign out of **SEA-WS5**.
 
 2. Select **Other user**, and sign in as **`LynneR@yourtenant.onmicrosoft.com`** with the user password provided by your lab instroctur. Wait for the profile to be created.
 
@@ -120,9 +120,9 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 ### Task 4: Verify that the conditional access policy is working
 
-1. Sign-in to **SEA-WS3** and sign in as **Admin** with the password of **Pa55w.rd**.
+1. Sign-in to **SEA-WS6** and sign in as **Admin** with the password of **Pa55w.rd**.
 
-2. On **SEA-WS3**, on the taskbar, select **Microsoft Edge**.
+2. On **SEA-WS6**, on the taskbar, select **Microsoft Edge**.
 
 3. In Microsoft Edge, type **outlook.office.com** and then press Enter.
 
@@ -138,13 +138,13 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 9. A message will appear stating, "**Stay signed in to all your apps**". Select **no, sign in to this app only**.
 
-    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS2 is not joined to Entra ID and not managed by Intune. As such, you are unable to access Aarons' mailbox from this device.
+    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS6 is not joined to Entra ID and not managed by Intune. As such, you are unable to access Aarons' mailbox from this device.
 
-10. **Close** all windows and sign out of **SEA-WS3**.
+10. **Close** all windows and sign out of **SEA-WS6**.
 
-11. Switch to **SEA-WS2**, and sign in as as Lynee Robbins with the PIN **102938**. 
+11. Switch to **SEA-WS5**, and sign in as as Lynee Robbins with the PIN **102938**. 
 
-    > Note: SEA-WS2 is a managed Windows 11 device that is enrolled in Intune.
+    > Note: SEA-WS5 is a managed Windows 11 device that is enrolled in Intune.
 
 12. On the taskbar, select **Microsoft Edge**.
 
@@ -152,9 +152,9 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 14. Verify that you can access Aaron's mailbox. 
 
-    > Note: This is because SEA-WS2 is a managed device and marked as compliant._
+    > Note: This is because SEA-WS5 is a managed device and marked as compliant._
 
-15. Close Microsoft Edge and sign out of SEA-WS2.
+15. Close Microsoft Edge and sign out of SEA-WS5.
 
 ### Task 3: Disable the conditional access policy
 
