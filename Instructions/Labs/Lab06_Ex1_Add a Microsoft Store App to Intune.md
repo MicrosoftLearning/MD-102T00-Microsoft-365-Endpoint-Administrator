@@ -58,7 +58,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Task 2: Enroll Device and Perform an Entra Join
 
-1. Switch to **SEA-WS2** and sign in as **Admin** with the password of **Pa55w.rd**.
+1. Switch to **SEA-WS8** and sign in as **Admin** with the password of **Pa55w.rd**.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
@@ -102,16 +102,16 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 1. In the **Microsoft Intune admin center**, select **Devices** and then select **All devices**.
 
-2. In the details pane, select **SEA-WS2**.
+2. In the details pane, select **SEA-WS8**.
 
-3. On the **SEA-WS2** blade, select **Sync** and when prompted select **Yes**.
+3. On the **SEA-WS8** blade, select **Sync** and when prompted select **Yes**.
 
    > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
 
 
 ### Task 5: Install an app from the Company Portal Website
 
-1. Switch to **SEA-WS2** and sign in with **Megan Bowen**.
+1. Switch to **SEA-WS8** and sign in with **Megan Bowen**.
 
 2. At the **Use Windows Hello with your account** page, select **OK**.
 
@@ -139,9 +139,9 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 14. On the Devices page, select **Tap here to tell us which device you're using or add a new device**.
 
-15. On the **Which device are you using** dialog box, select the option next to **SEA-WS2**, and then select **Select**.
+15. On the **Which device are you using** dialog box, select the option next to **SEA-WS8**, and then select **Select**.
 
-   > Notice that the message now changes to Apps will be installed onto: SEA-WS2
+   > Notice that the message now changes to Apps will be installed onto: SEA-WS8
 
 16. At the top-left corner, select the navigation button and then select **Apps**.
 

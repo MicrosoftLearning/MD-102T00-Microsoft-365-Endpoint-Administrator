@@ -16,7 +16,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 1: Validate sign-in before enabling MFA
 
-1. Sign in to **SEA-WS2** as **Admin** with the password **Pa55w.rd**. 
+1. Sign in to **SEA-WS9** as **Admin** with the password **Pa55w.rd**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -76,7 +76,7 @@ To provide additional security for user sign on events, you need to configure an
 
 ### Task 3: Register and Validate MFA
 
-1. Switch to **SEA-WS2**. 
+1. Switch to **SEA-WS9**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
