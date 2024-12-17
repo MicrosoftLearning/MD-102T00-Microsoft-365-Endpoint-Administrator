@@ -12,9 +12,9 @@
 
 ### Taks 1: Enroll a device
 
-1. Sign in to **SEA-WS9** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS9** as **Admin** with the password **Pa55w.rd**.
 
-2. On the **SEA-WS9** taskbar, select **Start** and then select **Settings**.
+2. On the **MD102-WS9** taskbar, select **Start** and then select **Settings**.
 
 3. In **Settings**, select **Accounts**.
 
@@ -34,7 +34,7 @@
 
 ### Task 2: Create a device group with device to update
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -46,7 +46,7 @@
 
 6. Type **Windows Update Devices** as the group name.
 
-7. On Members select **No members selected**, then search for the **SEA-WS9** we enrolled in Task 1 and select it.
+7. On Members select **No members selected**, then search for the **MD102-WS9** we enrolled in Task 1 and select it.
 
 8. Select **Select** to add the member.
 
@@ -54,7 +54,7 @@
 
 ### Task 3: Create Feature Update deployment Profile
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -72,7 +72,7 @@
 
 9. Select **Next**.
 
-10. In the next screen select **+Add groups** and select the group you created in Task 1. 
+10. In the next screen select **+Add groups** and select the group **Windows Update Devices**. 
 
 11. Select **Select** to add the group to the assignemnt.
 
@@ -82,7 +82,7 @@
 
 ### Task 4: Verify the assignemnt in the Intune admin center
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -92,7 +92,7 @@
 
 5. Select **Devices**, then select **Windows**.
 
-6. Select the device **SEA-WS9**.
+6. Select the device **MD102-WS9**.
 
 7. On the top bar select **Sync** to start a synchronisation cycle for this device, then select **Yes**.
 

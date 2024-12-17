@@ -20,7 +20,7 @@ The following are specifications are required:
 
 ### Task 1: Create a Autopilot Profile
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 

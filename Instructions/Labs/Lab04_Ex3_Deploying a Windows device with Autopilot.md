@@ -12,7 +12,7 @@
 
 ### Task 1: Create group in Entra ID
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -30,7 +30,7 @@
 
 ### Task 2: Generate a device-specific comma-separated value (CSV) file
 
-1. Sign in to **SEA-WS7** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS7** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Start**.
 
@@ -139,7 +139,7 @@ Get-WindowsAutopilotInfo -OutputFile "C:\HWID\AutopilotHWID.csv"
 
 ### Task 4: Reset the PC
 
-1. Sign in to **SEA-WS7** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS7** as **Admin** with the password **Pa55w.rd**.
 
 2. Open the Start menu and select **Settings**
 
@@ -167,7 +167,7 @@ Get-WindowsAutopilotInfo -OutputFile "C:\HWID\AutopilotHWID.csv"
 
 ### Task 5: Verify Autopilot deployment in Intune admin center
 
-1. Sign in to **SEA-WS1** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
