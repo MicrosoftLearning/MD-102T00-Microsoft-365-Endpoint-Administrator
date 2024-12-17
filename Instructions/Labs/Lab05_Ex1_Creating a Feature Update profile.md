@@ -12,9 +12,9 @@
 
 ### Taks 1: Enroll a device
 
-1. Sign in to **SEA-WS3** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **SEA-WS9** as **Admin** with the password **Pa55w.rd**.
 
-2. On the **SEA-WS3** taskbar, select **Start** and then select **Settings**.
+2. On the **SEA-WS9** taskbar, select **Start** and then select **Settings**.
 
 3. In **Settings**, select **Accounts**.
 
@@ -92,7 +92,7 @@
 
 5. Select **Devices**, then select **Windows**.
 
-6. Select the device **SEA-WS3**.
+6. Select the device **SEA-WS9**.
 
 7. On the top bar select **Sync** to start a synchronisation cycle for this device, then select **Yes**.
 
