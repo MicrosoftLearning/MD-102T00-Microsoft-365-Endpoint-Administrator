@@ -8,7 +8,7 @@ In this lab, you will configure BitLocker disk encryption using Intune.
 
 ### Scenario
 
-It's been determined that all the information on SEA-WS2 should be encrypted. You've been asked to configure full disk encryption on SEA-WS2 and require additional PIN authentication at startup.
+It's been determined that all the information on SEA-WS3 should be encrypted. You've been asked to configure full disk encryption on SEA-WS3 and require additional PIN authentication at startup.
 
 ### Task 1: Configure device configuration policy in Intune
 
@@ -62,7 +62,7 @@ It's been determined that all the information on SEA-WS2 should be encrypted. Yo
 
 ### Task 2: Verify and enable BitLocker settings
 
-1. On **SEA-WS2**, sign in as as Contoso\Administrator with the password of Pa55w.rd.
+1. On **SEA-WS3**, sign in as as Contoso\Administrator with the password of Pa55w.rd.
     
 2. On the taskbar, select **Start** and then select the **Settings** app.
 
@@ -86,13 +86,13 @@ It's been determined that all the information on SEA-WS2 should be encrypted. Yo
     
 12. On the **Are you ready to encrypt this drive** page, select **Continue**. Wait for the encryption to complete.
 
-13. At the **Encryption of C: is complete** message, select **Close**, and then restart **SEA-WS2**.
+13. At the **Encryption of C: is complete** message, select **Close**, and then restart **SEA-WS3**.
 
-14. When **SEA-WS2** restarts, type **123456** and press **Enter** to unlock the drive.
+14. When **SEA-WS3** restarts, type **123456** and press **Enter** to unlock the drive.
 
 ### Task 3: Verify BitLocker protection
 
-1. Sign in to **SEA-WS2** as **Contoso\\Administrator** with the password **Pa55w.rd**.
+1. Sign in to **SEA-WS3** as **Contoso\\Administrator** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **File Explorer** and then select **This PC**.
 
@@ -100,7 +100,7 @@ It's been determined that all the information on SEA-WS2 should be encrypted. Yo
 
 4. In the **BitLocker Drive Encryption** window, ensure that you see **C: BitLocker on** status. This means that drive is encrypted. 
 
-5. Close all open windows and sign out of **SEA-WS2**.
+5. Close all open windows and sign out of **SEA-WS3**.
 
 **Results**: After completing this exercise, you will have successfully configured disk encryption by using Intune.
 

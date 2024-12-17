@@ -86,7 +86,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 1. In the Microsoft Intune admin center, select **Devices** and then select **All devices**.  
 
-2. On the **Devices | All devices** page, select **SEA-WS2** and then on the **SEA-WS2** page, select **Sync** on the toolbar, and then select **Yes**. 
+2. On the **Devices | All devices** page, select **SEA-WS3** and then on the **SEA-WS3** page, select **Sync** on the toolbar, and then select **Yes**. 
 
    > Wait for 3-4 minutes for the sync to complete.
 
@@ -94,21 +94,21 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 ### Task 4: Verify the configuration
 
-1. Sign in to **SEA-WS4** as Contoso\Administrator with the password of Pa55w.rd.
+1. Sign in to **SEA-WS5** as Contoso\Administrator with the password of Pa55w.rd.
 
-2. On **SEA-WS4**, select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
+2. On **SEA-WS5**, select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
 
-   > Notice that all security options are displayed. This is because SEA-WS4 is not enrolled to Intune.
+   > Notice that all security options are displayed. This is because SEA-WS5 is not enrolled to Intune.
 
-3. Close **Windows Security** and sign out of SEA-WS4.
+3. Close **Windows Security** and sign out of SEA-WS5.
 
-4. Switch to **SEA-WS2**, and if necessary, sign in as Contoso\Administrator with the password of Pa55w.rd.
+4. Switch to **SEA-WS3**, and if necessary, sign in as Contoso\Administrator with the password of Pa55w.rd.
 
 5. Select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
 
-   > Notice that all of the restricted areas as configured in the Intune policy are not displayed. SEA-WS2 is enrolled in Intune, which has applied the security settings.
+   > Notice that all of the restricted areas as configured in the Intune policy are not displayed. SEA-WS3 is enrolled in Intune, which has applied the security settings.
 
-6. Close **Windows Security** and sign out of **SEA-WS2**.
+6. Close **Windows Security** and sign out of **SEA-WS3**.
 
 **Results**: After completing this exercise, you will have successfully created and applied a policy to configure Microsoft Defender for managed devices in Intune.
 
