@@ -38,7 +38,7 @@ You have been asked to configure SEA-WS4 as a Windows 11 kiosk to allow Contoso 
 
 ### Task 2: Create the Contoso Kiosk device group
 
-1. Switch to **SEA-WS1** and if necessary, sign in as **Contoso\Administrator** with the password of **Pa55w.rd**. Close Server Manager.
+1. Switch to **SEA-WS1** and if necessary, sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
 
 2. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
 
@@ -61,7 +61,7 @@ You have been asked to configure SEA-WS4 as a Windows 11 kiosk to allow Contoso 
 
 9. On the **Add members** blade, in the **Search** box type **SEA-WS4**, then select **SEA-WS4** and then select **Select**.
 
-10. On the **New Group** pblade, select **Create**. 
+10. On the **New Group** blade, select **Create**. 
 
 11. On the **Groups | overview** page, select **All groups** and verify that the **Contoso Kiosk Devices** group is displayed. You may need to select the Refresh button for the new group to become visible.
 
