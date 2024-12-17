@@ -12,7 +12,7 @@ In this lab, you will configure Entra ID Join settings and perform a standard sc
 
 ### Scenario
 
-You need to configure Entra ID device settings to ensure that all users are allowed to join devices to Entra ID. You also need to ensure that users can only join a maximum of 20 devices and that Allan Deyoung is added as a local administrator on all Entra joined devices. Finally, you will verify that Entra join works as expected by having Joni Sherman join SEA-WS1 to the tenant.
+You need to configure Entra ID device settings to ensure that all users are allowed to join devices to Entra ID. You also need to ensure that users can only join a maximum of 20 devices and that Allan Deyoung is added as a local administrator on all Entra joined devices. Finally, you will verify that Entra join works as expected by having Joni Sherman join SEA-WS2 to the tenant.
 
 ### Task 1: Configure Entra join Device settings
 

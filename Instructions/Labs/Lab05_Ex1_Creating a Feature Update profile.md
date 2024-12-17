@@ -46,7 +46,7 @@
 
 6. Type **Windows Update Devices** as the group name.
 
-7. On Members select **No members selected**, then search for the **SEA-WS3** we enrolled in Task 1 and select it.
+7. On Members select **No members selected**, then search for the **SEA-WS9** we enrolled in Task 1 and select it.
 
 8. Select **Select** to add the member.
 
