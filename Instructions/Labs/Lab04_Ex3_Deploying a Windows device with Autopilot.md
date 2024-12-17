@@ -30,7 +30,7 @@
 
 ### Task 2: Generate a device-specific comma-separated value (CSV) file
 
-1. Sign in to **SEA-WS2** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **SEA-WS7** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Start**.
 
@@ -38,7 +38,7 @@
 
 4. You now will see **Windows PowerShell** will be shown as the **Best match** section. 
 
-5. On the right side, select **Run as Administartor**.
+5. On the right side, select **Run as Administrator**.
 
 6. Notify the User Account Control request, select **Yes** to open the PowerShell as Administrator.
 
@@ -81,7 +81,7 @@ Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
 
 ### Task 3: Work with a Windows Autopilot deployment profile
 
-1. Sign in to **SEA-WS2** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **SEA-WS7** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -89,7 +89,7 @@ Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the default tenant password.
 
-5. From the navigation pane select **Devices**, then select **Enrollment** in the section **Device onbaoarding**.
+5. From the navigation pane select **Devices**, then select **Enrollment** in the section **Device onboarding**.
 
 6. On the right side scroll down until you are able to see the section **Windows Autopilot**, select **Devices** in that section.
 
@@ -101,7 +101,7 @@ Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
 
 10. In the explorer navigate to C:\HWID and select your created **AutopilotHWID.csv** file and select **Open**.
 
-11. There should no be a green checkmark visible, now select **Import**.
+11. There should not be a green checkmark visible, now select **Import**.
 
 12. This process will take some time. You can see the result in the notification area, accessible via the bell symbol in the top of the page. 
 
@@ -137,7 +137,7 @@ Get-WindowsAutopilotInfo -OutputFile AutopilotHWID.csv
 
 ### Task 4: Reset the PC
 
-1. Sign in to **SEA-WS2** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **SEA-WS7** as **Admin** with the password **Pa55w.rd**.
 
 2. Open the Start menu and select **Settings**
 
