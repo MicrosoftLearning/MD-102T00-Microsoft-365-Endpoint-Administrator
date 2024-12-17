@@ -68,7 +68,7 @@ It's been determined that all the information on SEA-WS3 should be encrypted. Yo
 
 3. In the **Settings** app, select **Accounts** and then select **Access work or school**.
 
-4. In the **Access work or school** section, select the **Connected to Contoso MDM** link and then select **Info**. Select **Sync**.
+4. In the **Access work or school** section, select the **Connected to Contoso MDM** link, then select **Info** and then select **Sync**.
 
 5. Select the **Encryption needed** notification.
 
