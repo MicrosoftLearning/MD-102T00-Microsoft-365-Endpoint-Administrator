@@ -25,17 +25,17 @@ You have assigned Megan Bowen appropriate licenses and will now test the process
 
 5. In the **Access work or school** page, select **Connect**.
 
-6. In the **Microsoft account** window, select **Join this device to Microsoft Entra ID**.
+6. In the **Microsoft account** window, under **Alternate actions:** select **Join this device to Microsoft Entra ID**.
 
 7. On the **Sign in** page, type **`MeganB@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-8. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**.
+8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
 
 9. On the **Make sure this is your organization** dialog box, select **Join**.
 
 10. On the **You're all set!** page, read the information and then select **Done**.
 
-11. In the **Access work or school** section, verify that **Connected to Contoso's Azure AD** displays.
+11. In the **Access work or school** section, verify that **Connected to Contoso's Entra ID** displays.
 
 12. Select **Connected to Contoso's Azure AD** and then select **Info**.
 

@@ -28,7 +28,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 7. On the **Devices|Device settings** page, in the details pane, verify that **Users may register their devices with Microsoft Entra** is set to **All** and is greyed out.
 
-   > This option is greyed out and set to **All** by default when Microsoft Intune is enable in the tenant. This ensures that all users are able to register Windows 10 or newer personal, iOS, Android, and macOS devices with Entra.
+   > This option is greyed out and set to **All** by default when Microsoft Intune is enabled in the tenant. This ensures that all users are able to register Windows 10 or newer personal, iOS, Android, and macOS devices with Entra.
 
 ### Task 2: Perform Entra registration
 

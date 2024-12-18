@@ -70,7 +70,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
 
-9. On the **Make sure this is your organization** dialog box, select **Join**.
+9.  On the **Make sure this is your organization** dialog box, select **Join**.
 
 10. On the **You're all set!** page, select **Done**.
 
@@ -152,6 +152,8 @@ dsregcmd /status
 
 7. On the **Windows Security** dialog box, in the **Email address** box, enter **Admin** and in the **Password** box, type **Pa55w.rd**. Select **OK**.
 
-8. In the **Restart your PC** dialog box, select **Restart now**. MD102-WS1 restarts.
+8. In the **Restart your PC** dialog box, select **Restart now**. MD102-WS2 restarts.
 
 **Results**: After completing this exercise, you will have configured Microsoft Entra device settings, joined a device to Entra, and removed a device from Entra.
+
+**END OF LAB**
