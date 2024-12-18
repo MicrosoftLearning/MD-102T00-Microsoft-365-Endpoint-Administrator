@@ -242,4 +242,6 @@ Additionally, your company has decided to implement a Bring Your Own Device (BYO
 
 9.  On the **Review + Create** tab, select **Create**
 
+**Results**: After completing this exercise, you will have successfully created Apple Push certificate, created and assigned enrollment profile to iOS/iPadOS devices and set up device enrollment.
+
 **END OF THE LAB**

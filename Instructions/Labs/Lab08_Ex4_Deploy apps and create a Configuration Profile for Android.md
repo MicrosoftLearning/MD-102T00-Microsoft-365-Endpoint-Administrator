@@ -62,7 +62,7 @@ Your organization is rolling out fully managed Android devices to the Marketing 
 
 4. In the **Create a profile** blade, select the following options and then select **Create**:
    - Platform: **Android Enterprise**
-   - Profile type: **Device restrictions** under **Fully Managed, Dedicated, and Corporate-Owned Work Profile
+   - Profile type: **Device restrictions** under **Fully Managed, Dedicated, and Corporate-Owned Work Profile**.
 
 5. In the **Basics** tab enter the following information and select **Next**:
 
@@ -90,5 +90,7 @@ Your organization is rolling out fully managed Android devices to the Marketing 
 13. In the **Assignments** tab, select **Next**.
 
 14. In the **Review + create** tab, select **Create**.
+
+**Results**: After completing this exercise, you will have successfully deployed the Microsoft 365 (Office) app and configured a device restriction profile for android devices.
 
 **END OF LAB**

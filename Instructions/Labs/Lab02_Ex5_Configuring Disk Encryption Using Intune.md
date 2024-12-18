@@ -60,43 +60,81 @@ It's been determined that all the information on SEA-WS3 should be encrypted. Yo
 
 17. Close all open windows on **SEA-WS1**.
 
-### Task 2: Verify and enable BitLocker settings
+### Task 2: Perform Entra Join and sign in to MD102-WS3 as Diego Siciliani
 
-1. On **SEA-WS3**, sign in as as Contoso\Administrator with the password of Pa55w.rd.
-    
-2. On the taskbar, select **Start** and then select the **Settings** app.
+1. Switch to **MD102-WS3** and sign in as **Admin** with the password of **Pa55w.rd**.
 
-3. In the **Settings** app, select **Accounts** and then select **Access work or school**.
+2. On the taskbar, select **Start** and then select **Settings**.
 
-4. In the **Access work or school** section, select the **Connected to Contoso MDM** link, then select **Info** and then select **Sync**.
+3. In the **Settings** window, select **Accounts**.
 
-5. Select the **Encryption needed** notification.
+4. On the Accounts page, select **Access work or school**.
+
+5. In the **Access work or school** page, select **Connect**.
+
+6. In the **Microsoft account** window, select **Join this device to Entra ID**.
+
+7. On the **Sign in** page, type **`DiegoS@yourtenant.onmicrosoft.com`** and then select **Next**.
+
+8. On the **Enter password** page, enter the user password provided by your instructor and then select **Sign in**.
+
+9. On the **Make sure this is your organization** dialog box, select **Join**.
+
+10. On the **You're all set!** page, select **Done**.
+
+11. Sign out of **MD102-WS3**.
+
+12. Select **Other user**, and sign in as **`Diego@yourtenant.onmicrosoft.com`**. Wait for the profile to be created.
+
+13. At the **Use Windows Hello with your account** page, select **OK**.
+
+14. On the **More information required** page, select **Next**.
+
+15. On the **Keep your account secure** page, select **Next**.
+
+16. Select **Next**, scan the QR code and **finish** the Authenticator setup.
+
+17. On the verification page, select **Next** and then select **Done**.
+
+18.  On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **102938** and then select **OK**.
+
+9.  On the **All set!** page, select **OK**.
+
+### Task 3: Verify and enable BitLocker settings
+
+1. On **SEA-WS3**, select **Start** and then select the **Settings** app.
+
+2. In the **Settings** app, select **Accounts** and then select **Access work or school**.
+
+3. In the **Access work or school** section, select the **Connected to Contoso MDM** link, then select **Info** and then select **Sync**.
+
+4. Select the **Encryption needed** notification.
 
    _Note: It may take some time until the notification shows up. Windows Focus Assist may also prevent the notification from appearing. You can check notifications manually._
 
-6. On the **Are you ready to start encryption?** dialog, select the checkbox next to **I don't have any other disk encryption software installed, encrypt all my disks**, and select **Yes**.
+5. On the **Are you ready to start encryption?** dialog, select the checkbox next to **I don't have any other disk encryption software installed, encrypt all my disks**, and select **Yes**.
 
-7. On the **Choose how to unlock your drive at startup?** page, select **Enter a PIN**
+6. On the **Choose how to unlock your drive at startup?** page, select **Enter a PIN**
 
-8. On the **Enter a PIN** page, in the **PIN** and **Reenter PIN** boxes, enter **123456**, and then select **Set PIN**.
+7. On the **Enter a PIN** page, in the **PIN** and **Reenter PIN** boxes, enter **123456**, and then select **Set PIN**.
 
-9. On the **Choose how much of your drive to encrypt** page, select **Encrypt used disk space only** and select **Next**.
+8. On the **Choose how much of your drive to encrypt** page, select **Encrypt used disk space only (faster and best for new PCs and drives)** and select **Next**.
    
-11. On the **Choose which encryption mode to use** page, ensure that **New encryption mode (best for fixed drives on this device)** is selected, and then select **Next**.
+9. On the **Choose which encryption mode to use** page, ensure that **New encryption mode (best for fixed drives on this device)** is selected, and then select **Next**.
     
-12. On the **Are you ready to encrypt this drive** page, select **Continue**. Wait for the encryption to complete.
+10. On the **Are you ready to encrypt this drive** page, select **Continue**. Wait for the encryption to complete.
 
-13. At the **Encryption of C: is complete** message, select **Close**, and then restart **SEA-WS3**.
+11. At the **Encryption of C: is complete** message, select **Close**, and then restart **SEA-WS3**.
 
-14. When **SEA-WS3** restarts, type **123456** and press **Enter** to unlock the drive.
+12. When **SEA-WS3** restarts, type **123456** and press **Enter** to unlock the drive.
 
 ### Task 3: Verify BitLocker protection
 
-1. Sign in to **SEA-WS3** as **Contoso\\Administrator** with the password **Pa55w.rd**.
+1. Sign in to **SEA-WS3** as **Diego Siciliani** with the PIN **102938**.
 
 2. On the taskbar, select **File Explorer** and then select **This PC**.
 
-3. In the navigation pane, right-click **Local Disk (C:)**, select **Show more options**, and then select **Manage BitLocker**.
+3. In the navigation pane, right-click **Local Disk (C:)**, and then select **Manage BitLocker**.
 
 4. In the **BitLocker Drive Encryption** window, ensure that you see **C: BitLocker on** status. This means that drive is encrypted. 
 

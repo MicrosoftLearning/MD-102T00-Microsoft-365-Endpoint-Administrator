@@ -91,4 +91,6 @@ Your company has recently deployed Mac devices. These devices need to be configu
 
 10. On the **Review + create** tab, select **Create**.
 
+**Results**: After completing this exercise, you will have successfully configured MacOS devices and update policies.
+
 **END OF THE LAB**

@@ -149,4 +149,6 @@ Your organization has recently acquired multiple macOS devices and has chosen to
 
 10. On the **Contoso ADE profile for macOS | Assign devices** page, select **Save**.
 
+**Results**: After completing this exercise, you will have successfully configured device enrollment for MacOS devices.
+
 **END OF THE LAB**

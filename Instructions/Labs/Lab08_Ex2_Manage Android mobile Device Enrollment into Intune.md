@@ -94,4 +94,6 @@ Your organization has recently procured several Android devices for the marketin
 
 5. On the **New Group** page, select **Create**.
 
+**Results**: After completing this exercise, you will have successfully set up the environment to manage android devices in Intune.
+
 **END OF THE LAB**
