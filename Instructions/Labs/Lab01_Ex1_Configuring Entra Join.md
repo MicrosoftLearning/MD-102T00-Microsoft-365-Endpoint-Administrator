@@ -64,7 +64,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 5. In the **Access work or school** page, select **Connect**.
 
-6. In the **Microsoft account** window, select **Join this device to Entra ID**.
+6. In the **Microsoft account** window, under **Alternate actions:** select **Join this device to Entra ID**.
 
 7. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
 
@@ -74,7 +74,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 10. On the **You're all set!** page, select **Done**.
 
-11. On the **Access work or school** page, verify that **Connected to Contoso's Azure AD** is displayed.
+11. On the **Access work or school** page, verify that **Connected to Contoso's Entra ID** is displayed.
 
 12. Close the **Settings** page.
 
