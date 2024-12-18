@@ -128,7 +128,7 @@ It's been determined that all the information on SEA-WS3 should be encrypted. Yo
 
 12. When **SEA-WS3** restarts, type **123456** and press **Enter** to unlock the drive.
 
-### Task 3: Verify BitLocker protection
+### Task 4: Verify BitLocker protection
 
 1. Sign in to **SEA-WS3** as **Diego Siciliani** with the PIN **102938**.
 
