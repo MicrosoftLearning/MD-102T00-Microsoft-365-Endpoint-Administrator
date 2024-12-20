@@ -64,7 +64,21 @@ It's been determined that all the information on MD102-WS3 should be encrypted. 
 
 17. Close all open windows on **MD102-WS1**.
 
-### Task 2: Perform Entra Join and sign in to MD102-WS3 as Diego Siciliani
+### Task 2: Disable Windows Automatic Enrollment into Microsoft Intune
+
+1. In the Microsoft Intune admin center, select **Devices**.
+
+2. On the Devices pane, under the **Device onboarding** section, select **Enrollment**.
+
+3. In the Enroll devices pane, ensure **Windows** is selected.
+
+4. In the **Enrollment options** section, select **Automatic Enrollment**.
+
+5. On the **MDM user scope** row, make sure **None** is selected and if required, select **Save**.
+
+   _**Note**: By performing this step, you disabled automatic enrollment into Intune for any User that performs an Entra join or Entra registration from a Windows device._
+
+### Task 3: Perform Entra Join and sign in to MD102-WS3 as Diego Siciliani
 
 1. Switch to **MD102-WS3** and sign in as **Admin** with the password of **Pa55w.rd**.
 
@@ -106,7 +120,7 @@ It's been determined that all the information on MD102-WS3 should be encrypted. 
 
 9.  On the **All set!** page, select **OK**.
 
-### Task 3: Verify and enable BitLocker settings
+### Task 4: Verify and enable BitLocker settings
 
 1. On **MD102-WS3**, select **Start** and then select the **Settings** app.
 
@@ -134,7 +148,7 @@ It's been determined that all the information on MD102-WS3 should be encrypted. 
 
 12. When **MD102-WS3** restarts, type **123456** and press **Enter** to unlock the drive.
 
-### Task 4: Verify BitLocker protection
+### Task 5: Verify BitLocker protection
 
 1. Sign in to **MD102-WS3** as **Diego Siciliani** with the PIN **102938**.
 
