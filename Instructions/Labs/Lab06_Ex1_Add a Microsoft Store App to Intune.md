@@ -12,7 +12,7 @@ In this lab, you create and deploy cloud-based apps using Intune and the Company
 
 ### Scenario
 
-You use Microsoft Intune to manage desktops and apps for Contoso Corporation. The Research department often connects to various servers to perform tasks and has asked for the Microsoft Remote Desktop app to be available for Research members to install as needed. The Microsoft Remote Desktop is available from the Microsoft Store, but you decide to add the app to Intune so that users can access it from the Company Portal website. A Research member named Aaron Nicholls has agreed to test the installation process after you have published the app to the portal.
+You use Microsoft Intune to manage desktops and apps for Contoso Corporation. The Research department often connects to various servers to perform tasks and has asked for the Microsoft Remote Desktop app to be available for Research members to install as needed. The Microsoft Remote Desktop is available from the Microsoft Store, but you decide to add the app to Intune so that users can access it from the Company Portal website. A Research member named Megan Bowen has agreed to test the installation process after you have published the app to the portal.
 
 ### Task 1: Add Microsoft Remote Desktop to Intune
 
@@ -96,7 +96,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 5. On the **Select groups** page, search and select the **Contoso** group and then click **Select**.
 
-6. Select **Review + save** and then select **Create**.
+6. Select **Review + save** and then select **Save**.
 
 ### Task 4: Force policy synchronization from the Intune console
 
