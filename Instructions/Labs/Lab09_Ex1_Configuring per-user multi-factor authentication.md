@@ -38,7 +38,7 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **MD102-WS1**.
 
-2. On **MD102-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
+2. On **MD102-WS1**, if necessary, sign in as **Admin** with the password of **Pa55w.rd**.
 
 3. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
