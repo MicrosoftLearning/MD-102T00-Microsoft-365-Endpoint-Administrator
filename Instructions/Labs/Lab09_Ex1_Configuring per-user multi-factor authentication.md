@@ -60,7 +60,7 @@ To provide additional security for user sign on events, you need to configure an
 
 10. Navigate back to the **Microsoft Entra admin center** Edge tab and in the navigation pane, select **Users** > **All users**.
 
-11. At the top of the user list, select Per-user MFA.
+11. At the top of the user list, select the three dots to expand the menu, and then select Per-user MFA.
 
    > The Per-user MFA page opens.
 
