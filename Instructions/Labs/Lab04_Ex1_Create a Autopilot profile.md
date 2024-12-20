@@ -2,9 +2,7 @@
 
 ## Summary
 
-### Prerequisites
-
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
+In this lab, you will use Microsoft Intune to create and deploy a Windows Autopilot deployment profile.
 
 ## Exercise 1: Create a Autopilot profile
 

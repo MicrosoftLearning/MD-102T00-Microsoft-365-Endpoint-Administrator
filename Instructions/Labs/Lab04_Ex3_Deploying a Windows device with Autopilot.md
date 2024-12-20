@@ -2,6 +2,8 @@
 
 ## Summary
 
+In this lab, you will use Microsoft Intune to create and deploy a Windows Autopilot deployment profile.
+
 ### Prerequisites
 
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
@@ -9,6 +11,13 @@
 ## Exercise 3: Deploying a Windows device with Autopilot
 
 ### Scenario
+
+You need to be able to enroll devices in the user driven mode. In the end you can hand over devices to your users and they can do the login steps to enroll and automatically set up the device. 
+The following specifications are required:
+
+- The enrollment needs to be user driven
+- The device needs to be joined to Entra ID
+- The device needs to be enrolled into Intune
 
 ### Task 1: Create group in Entra ID
 

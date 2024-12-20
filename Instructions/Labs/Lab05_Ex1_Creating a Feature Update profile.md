@@ -2,6 +2,8 @@
 
 ## Summary
 
+In this lab, you will use Microsoft Intune to create profiles for Windows feature updates and for Windows quality updates.
+
 ### Prerequisites
 
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
@@ -9,6 +11,13 @@
 ## Exercise 1: Creating a Feature Update profile
 
 ### Scenario
+
+You need to manage feature updates for your Windows devices in a centralized way.
+The following specifications are required:
+
+- The latest feature update must be deployed
+- The update must be installed as soon as possible
+- The update must be mandatory
 
 ### Taks 1: Enroll a device
 

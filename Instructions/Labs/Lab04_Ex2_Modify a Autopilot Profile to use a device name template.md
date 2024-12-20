@@ -2,16 +2,16 @@
 
 ## Summary
 
-### Prerequisites
+In this lab, you will use Microsoft Intune to create and deploy a Windows Autopilot deployment profile.
 
 ## Exercise 2: Modify a Autopilot Profile to use a device name template
 
 ### Scenario
 
-In order to identify the devices, which are enrolled with Autopilot, easier you must establish a function to give them a recognisable name. 
-The following are specifications are required:
+In order to identify devices enrolled with Autopilot more easily, you must establish a function to assign them a recognizable name.
+The following specifications are required:
 
-- The Windows Autopilot deployment profile needs to apply a device name template
+- The Windows Autopilot deployment profile must apply a device name template
 
 ### Task 1: Open the Windows autopilot deployment profile
 

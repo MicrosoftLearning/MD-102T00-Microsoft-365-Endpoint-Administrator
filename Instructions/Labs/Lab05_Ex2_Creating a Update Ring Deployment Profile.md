@@ -2,6 +2,8 @@
 
 ## Summary
 
+In this lab, you will use Microsoft Intune to create profiles for Windows feature updates and for Windows quality updates.
+
 ### Prerequisites
 
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
@@ -9,6 +11,13 @@
 ## Exercise 2: Creating a Update Ring Deployment Profile
 
 ### Scenario
+
+You need to manage quality updates for your Windows devices in a centralized and automated way.
+The following specifications are required:
+
+- Users need to be able to pause updates to suit their needs
+- Users should be able to check for updates themselves
+- Deadlines must be set to ensure updates are completed
 
 ### Task 1: Create a Update Ring Profile
 
