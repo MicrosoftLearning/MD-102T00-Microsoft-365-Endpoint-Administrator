@@ -58,7 +58,7 @@ To provide additional security for user sign on events, you need to configure an
 
     > Note that typically you would specify a group, however for this exercise we will just test the setting on Alex Wilber.
 
-10. Select **No target resources selected** and then click **Select apps**.
+10. Select **No target resources selected** and then click **Select resource**.
 
     > Note the Control access based on client app setting. This setting allows you to specify the client app that is used to access the resource. For example, you can specify that only the Outlook app can be used to access Exchange Online. 
 
