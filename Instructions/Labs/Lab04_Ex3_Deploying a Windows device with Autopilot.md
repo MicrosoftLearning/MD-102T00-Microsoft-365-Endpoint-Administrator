@@ -90,7 +90,7 @@ Get-WindowsAutopilotInfo -OutputFile "C:\HWID\AutopilotHWID.csv"
 
 ### Task 3: Work with a Windows Autopilot deployment profile
 
-1. Sign in to **SEA-WS7** as **Admin** with the password **Pa55w.rd**.
+1. Sign in to **MD102-WS7** as **Admin** with the password **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -122,7 +122,7 @@ Get-WindowsAutopilotInfo -OutputFile "C:\HWID\AutopilotHWID.csv"
 
 16. On the right side scroll down until you are able to see the section **Windows Autopilot**, select **Deployment profiles** in that section.
 
-17. Select the previously created deployment profile **Contoso autopilot profile**.
+17. Select the previously created deployment profile **Contoso Autopilot Profile**.
 
 18. In the navigation area, select **Properties**, then select **Edit** right next to **Assignments** to edit the assignemnts and add a group.
 
@@ -190,6 +190,6 @@ Get-WindowsAutopilotInfo -OutputFile "C:\HWID\AutopilotHWID.csv"
 
 7. Select **Hardware**, on the right side you see **Enrollment profile**. Here you can see that this device was enrolled with the profile you created earlier. 
 
-**Results**: After completing this exercise, you will have successfully created a autopilot .csv file, uploaded it and resettet a device to run thought the Autopilot process. 
+**Results**: After completing this exercise, you will have successfully created aa autopilot .csv file, uploaded it and reset a device to run the Autopilot process. 
 
 **END OF LAB**
