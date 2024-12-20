@@ -116,7 +116,7 @@ All the users at Contoso require Microsoft 365 Apps. You've been asked to deploy
 
 6. Select **Device install status**.
 
-   > In the details pane, you can see the devices that the app is installed on, and also the name of the user. The **Device Name** column should list **MD102-WS8** and the **Status** column should say **Installed**. This means that the app is installed on MD102-WS1.
+   > In the details pane, you can see the devices that the app is installed on, and also the name of the user. The **Device Name** column should list **MD102-WS8** and the **Status** column should say **Installed**. This means that the app is installed on MD102-WS8.
 
 7. In the **Microsoft Intune admin center**, select **Devices**.
 
