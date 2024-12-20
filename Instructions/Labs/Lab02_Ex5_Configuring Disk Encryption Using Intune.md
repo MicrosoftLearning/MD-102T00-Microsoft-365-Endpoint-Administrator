@@ -12,11 +12,11 @@ In this lab, you will configure BitLocker disk encryption using Intune.
 
 ### Scenario
 
-It's been determined that all the information on SEA-WS3 should be encrypted. You've been asked to configure full disk encryption on SEA-WS3 and require additional PIN authentication at startup.
+It's been determined that all the information on MD102-WS3 should be encrypted. You've been asked to configure full disk encryption on MD102-WS3 and require additional PIN authentication at startup.
 
 ### Task 1: Configure device configuration policy in Intune
 
-1. Switch to **SEA-WS1** and if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**. 
+1. Switch to **MD102-WS1** and if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -62,7 +62,7 @@ It's been determined that all the information on SEA-WS3 should be encrypted. Yo
 
 16. In the **Review + create** tab, select **Save**.
 
-17. Close all open windows on **SEA-WS1**.
+17. Close all open windows on **MD102-WS1**.
 
 ### Task 2: Perform Entra Join and sign in to MD102-WS3 as Diego Siciliani
 
@@ -108,7 +108,7 @@ It's been determined that all the information on SEA-WS3 should be encrypted. Yo
 
 ### Task 3: Verify and enable BitLocker settings
 
-1. On **SEA-WS3**, select **Start** and then select the **Settings** app.
+1. On **MD102-WS3**, select **Start** and then select the **Settings** app.
 
 2. In the **Settings** app, select **Accounts** and then select **Access work or school**.
 
@@ -130,13 +130,13 @@ It's been determined that all the information on SEA-WS3 should be encrypted. Yo
     
 10. On the **Are you ready to encrypt this drive** page, select **Continue**. Wait for the encryption to complete.
 
-11. At the **Encryption of C: is complete** message, select **Close**, and then restart **SEA-WS3**.
+11. At the **Encryption of C: is complete** message, select **Close**, and then restart **MD102-WS3**.
 
-12. When **SEA-WS3** restarts, type **123456** and press **Enter** to unlock the drive.
+12. When **MD102-WS3** restarts, type **123456** and press **Enter** to unlock the drive.
 
 ### Task 4: Verify BitLocker protection
 
-1. Sign in to **SEA-WS3** as **Diego Siciliani** with the PIN **102938**.
+1. Sign in to **MD102-WS3** as **Diego Siciliani** with the PIN **102938**.
 
 2. On the taskbar, select **File Explorer** and then select **This PC**.
 
@@ -144,7 +144,7 @@ It's been determined that all the information on SEA-WS3 should be encrypted. Yo
 
 4. In the **BitLocker Drive Encryption** window, ensure that you see **C: BitLocker on** status. This means that drive is encrypted. 
 
-5. Close all open windows and sign out of **SEA-WS3**.
+5. Close all open windows and sign out of **MD102-WS3**.
 
 **Results**: After completing this exercise, you will have successfully configured disk encryption by using Intune.
 
