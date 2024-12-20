@@ -70,11 +70,9 @@ It's been determined that all the information on MD102-WS3 should be encrypted. 
 
 2. On the Devices pane, under the **Device onboarding** section, select **Enrollment**.
 
-3. In the Enroll devices pane, ensure **Windows** is selected.
+3. On the **Devices | Enrollment** page, in the **Windows** tab, select **Automatic Enrollment** under **Enrollment options**.
 
-4. In the **Enrollment options** section, select **Automatic Enrollment**.
-
-5. On the **MDM user scope** row, make sure **None** is selected and if required, select **Save**.
+4. On the **MDM user scope** row, make sure **None** is selected and if required, select **Save**.
 
    _**Note**: By performing this step, you disabled automatic enrollment into Intune for any User that performs an Entra join or Entra registration from a Windows device._
 
