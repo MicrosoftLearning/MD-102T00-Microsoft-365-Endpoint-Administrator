@@ -94,7 +94,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 4. On the **Assignments** page, select **Add group** in the **Available for enrolled devices**.
 
-5. On the **Select groups** page, MD102rch and select the **Contoso** group and then click **Select**.
+5. On the **Select groups** page, search and select the **Contoso** group and then click **Select**.
 
 6. Select **Review + save** and then select **Create**.
 

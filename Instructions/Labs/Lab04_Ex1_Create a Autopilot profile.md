@@ -32,7 +32,7 @@ The following are specifications are required:
 
 7. Select **+ Create profile** and then select **Windows PC**.
 
-8. Enter the name **Contoso Autopilot profile**. 
+8. Enter the name **Contoso Autopilot Profile**. 
 
 9. Make sure the **Convert all targeted devices to Autopilot** is switched to **No**.
 
