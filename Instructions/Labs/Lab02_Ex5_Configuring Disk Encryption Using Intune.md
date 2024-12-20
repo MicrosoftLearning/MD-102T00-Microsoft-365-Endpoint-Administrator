@@ -86,9 +86,11 @@ It's been determined that all the information on SEA-WS3 should be encrypted. Yo
 
 10. On the **You're all set!** page, select **Done**.
 
+11. On the **Access work or school** page, verify that **Connected to Contoso's Entra ID** is displayed.
+
 11. Sign out of **MD102-WS3**.
 
-12. Select **Other user**, and sign in as **`Diego@yourtenant.onmicrosoft.com`**. Wait for the profile to be created.
+12. Select **Other user**, and sign in as **`DiegoS@yourtenant.onmicrosoft.com`**. Wait for the profile to be created.
 
 13. At the **Use Windows Hello with your account** page, select **OK**.
 

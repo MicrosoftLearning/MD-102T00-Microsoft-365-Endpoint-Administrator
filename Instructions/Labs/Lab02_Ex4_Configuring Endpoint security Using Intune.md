@@ -14,11 +14,11 @@ You've been asked to ensure that the Contoso Developers Group have Microsoft Def
 * Company name and phone number must be added. 
 * Real-time protection, Remediation, and scan settings are also to be configured.
 
-Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-enrolled device, SEA-CL1.
+Settings will be verified by testing on an enrolled device, MD102-WS1 and a non-enrolled device, MD102-WS5.
 
 ### Task 1: Configure Windows Security Experience in Intune
 
-1. Switch to **SEA-WS1** and if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**. 
+1. Switch to **MD102-WS1** and if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd**. 
 
 2. On the taskbar, select **Microsoft Edge**.
 
@@ -86,7 +86,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 1. In the Microsoft Intune admin center, select **Devices** and then select **All devices**.  
 
-2. On the **Devices | All devices** page, select **SEA-WS3** and then on the **SEA-WS3** page, select **Sync** on the toolbar, and then select **Yes**. 
+2. On the **Devices | All devices** page, select **MD102-WS3** and then on the **MD102-WS3** page, select **Sync** on the toolbar, and then select **Yes**. 
 
    > Wait for 3-4 minutes for the sync to complete.
 
@@ -94,21 +94,21 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 ### Task 4: Verify the configuration
 
-1. Sign in to **SEA-WS5** as Contoso\Administrator with the password of Pa55w.rd.
+1. Sign in to **MD102-WS5** as Contoso\Administrator with the password of Pa55w.rd.
 
-2. On **SEA-WS5**, select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
+2. On **MD102-WS5**, select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
 
-   > Notice that all security options are displayed. This is because SEA-WS5 is not enrolled to Intune.
+   > Notice that all security options are displayed. This is because MD102-WS5 is not enrolled to Intune.
 
-3. Close **Windows Security** and sign out of SEA-WS5.
+3. Close **Windows Security** and sign out of MD102-WS5.
 
-4. Switch to **SEA-WS3**, and if necessary, sign in as Contoso\Administrator with the password of Pa55w.rd.
+4. Switch to **MD102-WS3**, and if necessary, sign in as Contoso\Administrator with the password of Pa55w.rd.
 
 5. Select **Start**, type **Windows Security**, and then under the Windows Security icon select **Open**.
 
-   > Notice that all of the restricted areas as configured in the Intune policy are not displayed. SEA-WS3 is enrolled in Intune, which has applied the security settings.
+   > Notice that all of the restricted areas as configured in the Intune policy are not displayed. MD102-WS3 is enrolled in Intune, which has applied the security settings.
 
-6. Close **Windows Security** and sign out of **SEA-WS3**.
+6. Close **Windows Security** and sign out of **MD102-WS3**.
 
 **Results**: After completing this exercise, you will have successfully created and applied a policy to configure Microsoft Defender for managed devices in Intune.
 

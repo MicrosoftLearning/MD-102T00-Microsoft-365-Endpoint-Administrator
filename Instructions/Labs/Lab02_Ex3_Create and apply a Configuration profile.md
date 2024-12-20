@@ -8,17 +8,17 @@ In this lab, you use Microsoft Intune to create and apply a Configuration profil
 
 ### Scenario
 
-You have been asked to configure SEA-WS4 as a Windows 11 kiosk to allow Contoso visitors the ability to browse the Internet. You need to ensure that the kiosk is configured as follows:
+You have been asked to configure MD102-WS4 as a Windows 11 kiosk to allow Contoso visitors the ability to browse the Internet. You need to ensure that the kiosk is configured as follows:
 
 -   A single app, full-screen kiosk.
 -   Auto logon.
 -   Provides access to the Microsoft Edge browser, which is to be configured in Public Browsing (InPrivate) mode. The home page should be configured for https://bing.com.
 
-### Task 1: Enroll SEA-WS4 to Microsoft Intune
+### Task 1: Enroll MD102-WS4 to Microsoft Intune
 
-1. Sign in to **SEA-WS4** as Contoso\Administrator with the password of Pa55w.rd.
+1. Sign in to **MD102-WS4** as Contoso\Administrator with the password of Pa55w.rd.
 
-1. On the **SEA-WS4** taskbar, select **Start** and then select **Settings**.
+1. On the **MD102-WS4** taskbar, select **Start** and then select **Settings**.
 
 1. In **Settings**, select **Accounts**.
 
@@ -38,9 +38,9 @@ You have been asked to configure SEA-WS4 as a Windows 11 kiosk to allow Contoso 
 
 ### Task 2: Create the Contoso Kiosk device group
 
-1. Switch to **SEA-WS1** and if necessary, sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
+1. Switch to **MD102-WS1** and if necessary, sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
 
-2. On **SEA-WS1**, on the taskbar, select **Microsoft Edge**.
+2. On **MD102-WS1**, on the taskbar, select **Microsoft Edge**.
 
 3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
@@ -59,7 +59,7 @@ You have been asked to configure SEA-WS4 as a Windows 11 kiosk to allow Contoso 
 
 8. Under **Members**, select **No members selected**. 
 
-9. On the **Add members** blade, in the **Search** box type **SEA-WS4**, then select **SEA-WS4** and then select **Select**.
+9. On the **Add members** blade, in the **Search** box type **MD102-WS4**, then select **MD102-WS4** and then select **Select**.
 
 10. On the **New Group** blade, select **Create**. 
 
@@ -107,9 +107,9 @@ You have been asked to configure SEA-WS4 as a Windows 11 kiosk to allow Contoso 
 
 ### Task 4: Verify that the Configuration profile is applied
 
-1. Switch to **SEA-WS4**.
+1. Switch to **MD102-WS4**.
 
-2. On **SEA-WS4**, on the taskbar, select **Start** and then select **Settings**.
+2. On **MD102-WS4**, on the taskbar, select **Start** and then select **Settings**.
 
 3. In **Settings**, select **Accounts** and then select **Access work or school**.
 
@@ -119,9 +119,9 @@ You have been asked to configure SEA-WS4 as a Windows 11 kiosk to allow Contoso 
 
 6. Close the **Settings** app.
 
-7. Restart **SEA-WS4**.
+7. Restart **MD102-WS4**.
 
-   > Notice that SEA-WS4 automatically signs in and creates a profile. After the sign-in is complete, Microsoft Edge is displayed configured with InPrivate browsing. If SEA-WS4 does not sign in automatically, sign in to SEA-WS4 and repeat steps 1-7 to ensure that the policy has refreshed on the device.
+   > Notice that MD102-WS4 automatically signs in and creates a profile. After the sign-in is complete, Microsoft Edge is displayed configured with InPrivate browsing. If MD102-WS4 does not sign in automatically, sign in to MD102-WS4 and repeat steps 1-7 to ensure that the policy has refreshed on the device.
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile to configure a Windows 11 device as a single-app kiosk.
 
