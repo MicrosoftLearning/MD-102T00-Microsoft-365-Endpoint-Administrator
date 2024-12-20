@@ -138,7 +138,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 9. A message will appear stating, "**Stay signed in to all your apps**". Select **no, sign in to this app only**.
 
-    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because MD102-WS6 is not joined to Entra ID and not managed by Intune. As such, you are unable to access Aarons' mailbox from this device.
+    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because MD102-WS6 is not joined to Entra ID and not managed by Intune. As such, you are unable to access Lynnes' mailbox from this device.
 
 10. **Close** all windows and sign out of **MD102-WS6**.
 
