@@ -82,7 +82,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 9. On the **All set!** page, select **OK**.
 
-### Task 3: Create a conditional access policy
+### Task 4: Create a conditional access policy
 
 1. Switch to **MD102-WS1** and if necessary, sign in as **Admin** with the password of **Pa55w.rd**.
 
@@ -104,7 +104,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 9. In the **Target resources** section, select **No target resources selected**.
 
-10. Under **Include** choose the **Select resources** radio button, under the Select heading, select **None**, select **Office 365 Exchange Online**, and then select **Select**.
+10. Under **Include** choose the **Select resources** radio button, under the **Select** heading, select **None**, select **Office 365 Exchange Online**, and then select **Select**.
 
 11. In the **Conditions** section, select **0 conditions selected**. 
 
@@ -118,7 +118,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 16. Close Microsoft Edge.
 
-### Task 4: Verify that the conditional access policy is working
+### Task 5: Verify that the conditional access policy is working
 
 1. Sign-in to **MD102-WS6** and sign in as **Admin** with the password of **Pa55w.rd**.
 
@@ -156,7 +156,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 15. Close Microsoft Edge and sign out of MD102-WS5.
 
-### Task 3: Disable the conditional access policy
+### Task 6: Disable the conditional access policy
 
 1. Switch to **MD102-WS1** and enter the password **Pa55w.rd**.
 
@@ -169,7 +169,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 5. From the navigation pane select **Devices**, then select **All devices**.
 
-   > Notice that MD102-WS1 is compliant, which is why Aaron was allowed to access his mailbox.
+   > Notice that MD102-WS1 is compliant, which is why Lynne was allowed to access his mailbox.
 
 6. From the navigation pane select **Devices**, then select **Conditional access**.
 
