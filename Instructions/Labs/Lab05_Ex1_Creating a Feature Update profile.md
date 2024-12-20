@@ -39,7 +39,13 @@ The following specifications are required:
 
 9.  On the **Setting up your device** page, select **Got it**. 
 
-10. Close the **Settings** window.
+10. In the **Access work or school** section, verify that **Connected to Contoso's Entra ID** displays.
+
+11. Select **Connected to Contoso's Azure AD** and then select **Info**.
+
+12. Take note of the information regarding the areas managed by Contoso, scroll down, and then select **Sync**. This will force a Device sync with Intune.
+
+13. Close the **Settings** window.
 
 ### Task 2: Create a device group with device to update
 
@@ -83,7 +89,7 @@ The following specifications are required:
 
 10. In the next screen select **+Add groups** and select the group **Windows Update Devices**. 
 
-11. Select **Select** to add the group to the assignemnt.
+11. Select **Select** to add the group to the assignment.
 
 12. Select **Next**.
 
@@ -107,10 +113,10 @@ The following specifications are required:
 
 8. On the left side select **Device configuration**.
 
-9. After this short period of time there wont be shown anything. As you can see in the top of the screen it can take time to show any data. But here you would see the Feature Update Profile assigned. 
+9. After this short period, nothing will be displayed. As shown at the top of the screen, it may take some time for any data to appear. However, this is where the Feature Update Profile assignment would be visible.
 
 **`Recently updated information can take up to 20 minutes to be available in this report.`**
 
-**Results**: After completing this exercise, you will have successfully created and assigned a Windows Feature Update Profile. Also you have the knowledge to check the status of the assignment to the device.
+**Results**: After completing this exercise, you have successfully created and assigned a Windows Feature Update Profile. Also you have the knowledge to check the status of the status of devices.
 
 **END OF LAB**

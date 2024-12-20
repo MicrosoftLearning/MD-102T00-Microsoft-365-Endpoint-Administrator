@@ -55,7 +55,7 @@ The following specifications are required:
 
 17. Review the settings you have made and select **Create** to create the Update ring.
 
-### Taks 2: Verify the assignemnt in the Intune admin center
+### Taks 2: Verify the assignment in the Intune admin center
 
 1. Sign in to **MD102-WS1** as **Admin** with the password **Pa55w.rd**.
 
@@ -71,11 +71,11 @@ The following specifications are required:
 
 7. Select the update ring called **Windows Update Ring**.
 
-8. In the overview you will see a short report of the status form all the devices assigned.
+8. In the overview you will see a short report of the status of all assigned devices.
 
 9. Select **View report**.
 
-10. It will take time for some information to show up here. When the data has been process you will see the status of each device in here. 
+10. It will take time for some information to show up here. When the data has been processed you will see the status of each device in here. 
 
 **Results**: After completing this exercise, you will have successfully created and assigned a Windows Update Ring. Also you have the knowledge to check the status of the devices in the report. 
 
