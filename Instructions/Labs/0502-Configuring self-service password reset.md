@@ -20,25 +20,25 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 1. Sign in to **SEA-SVR1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
-1. On the desktop, double-click **Azure AD Connect**.
+2. On the desktop, double-click **Azure AD Connect**.
 
-1. On the **Welcome to Microsoft Entra Connect Sync** page, select **Configure**.
+3. On the **Welcome to Microsoft Entra Connect Sync** page, select **Configure**.
 
-1. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
+4. On the **Additional tasks** page, select **Customize synchronization options**, and then select **Next**.
 
-1. On the **Connect to Microsoft Entra ID** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, then select **Next**.
+5. On the **Connect to Microsoft Entra ID** page, if needed type **`admin@yourtenant.onmicrosoft.com`** in the **USERNAME** text box, then select **Next**.
 
-1. On the **Sign in to your account** dialog, select your admin account and enter your Admin tenant password, and then select **Sign in**.
+6. On the **Sign in to your account** dialog, select your admin account and enter your Admin tenant password, and then select **Sign in**.
 
-1. On the **Connect to your directories** page, select **Next**.
+7. On the **Connect to your directories** page, select **Next**.
 
-1. On the **Domain and OU filtering** page, select **Next**.
+8. On the **Domain and OU filtering** page, select **Next**.
 
-1. On the **Optional features** page, select **Password writeback**, and then select **Next**.
+9. On the **Optional features** page, select **Password writeback**, and then select **Next**.
 
-1. On the **Ready to configure** page, select **Configure**.
+10. On the **Ready to configure** page, select **Configure**.
 
-1. On the **Configuration complete** page, select **Exit**.
+11. On the **Configuration complete** page, select **Exit**.
 
 ### Task 2: Enable self-service password reset
 
@@ -78,30 +78,30 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 1. Switch to **SEA-WS3**.
 
-1. If necessary, sign in as **Admin** with the password of **Pa55w.rd**.
+2. If necessary, sign in as **Admin** with the password of **Pa55w.rd**.
 
-1. On the taskbar, select **Microsoft Edge**.
+3. On the taskbar, select **Microsoft Edge**.
 
-1. Browse to **https://myaccount.microsoft.com**. 
+4. Browse to **https://myaccount.microsoft.com**. 
 
-1. On the **Pick an account** page, select **Use another account**.
+5. On the **Pick an account** page, select **Use another account**.
 
-1. On the **Sign in** page, enter **`Aaron@yourtenant.onmicrosoft.com`** and then select **Next**.
+6. On the **Sign in** page, enter **`Aaron@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-1. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**. If the Microsoft Edge prompts to save the password, select **Save**.
+7. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**. If the Microsoft Edge prompts to save the password, select **Save**.
 
-1. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
+8. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
 
-1. On the **My Account** page, in the navigation pane, select **Password**.
+9. On the **My Account** page, in the navigation pane, select **Password**.
 
-1. On the **Change password** page, enter the following information and then select **submit**:
+10. On the **Change password** page, enter the following information and then select **submit**:
      - Old password: **Pa55w.rd**
      - Create new password: **Pa55w.rd1234!**
      - Confirm new password: **Pa55w.rd1234!**
 
-1. If Microsoft Edge prompts to save the password, select **Save**.
+11. If Microsoft Edge prompts to save the password, select **Save**.
 
-1. Close Microsoft Edge and sign out of SEA-WS3.
+12. Close Microsoft Edge and sign out of SEA-WS3.
 
 ### Task 4: Run AD Sync
 

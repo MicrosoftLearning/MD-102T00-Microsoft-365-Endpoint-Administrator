@@ -38,37 +38,37 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **SEA-SVR1**.
 
-1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
+2. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
-1. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+3. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
-1. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
+4. Sign in as user **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
    > The Microsoft Entra admin center opens.
 
-1. At the top of the web page, In the search resources box, type multifactor authentication and then select **Multifactor authentication**.
+5. At the top of the web page, In the search resources box, type multifactor authentication and then select **Multifactor authentication**.
 
    > The multi-factor authentication page opens.
 
-1. Select **Additional cloud-based multifactor authentication settings**.
+6. Select **Additional cloud-based multifactor authentication settings**.
 
-1. In the **Per-user multifactor authentication** page, select **Service settings**. 
+7. In the **Per-user multifactor authentication** page, select **Service settings**. 
 
-1. On the **Service settings** page, scroll down and select the checkbox for **Allow users to remember multi-factor authentication on devices they trust**.
+8. On the **Service settings** page, scroll down and select the checkbox for **Allow users to remember multi-factor authentication on devices they trust**.
 
-1. Next to **Number of days users can trust devices for**, enter **30** and then select **Save**. 
+9. Next to **Number of days users can trust devices for**, enter **30** and then select **Save**. 
 
-1. Once saved, scroll back to the top of the **Service settings** page, and select **Users**.
+10. Once saved, scroll back to the top of the **Service settings** page, and select **Users**.
 
-1. In the user list, select the check box next to **Alex Wilber**.
+11. In the user list, select the check box next to **Alex Wilber**.
 
-1. Above the user list, select **Enable MFA**.
+12. Above the user list, select **Enable MFA**.
 
-1. On the **Enable multifactor authentication** message, select **Enable**.
+13. On the **Enable multifactor authentication** message, select **Enable**.
 
-1. Once Enabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Enforced**.
+14. Once Enabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Enforced**.
 
-1. Close Microsoft Edge.
+15. Close Microsoft Edge.
 
 ### Task 3: Register and Validate MFA
 
@@ -202,29 +202,29 @@ To provide additional security for user sign on events, you need to configure an
 
 1. Switch to **SEA-WS3**. 
 
-1. On the taskbar, select **Microsoft Edge**.
+2. On the taskbar, select **Microsoft Edge**.
 
-1. In the address bar, enter **https://outlook.office.com** and press Enter.
+3. In the address bar, enter **https://outlook.office.com** and press Enter.
 
-1. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
+4. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
 
-1. On the **Enter password** page, enter the tenant password and select **Sign in**. 
+5. On the **Enter password** page, enter the tenant password and select **Sign in**. 
 
-1. At the Verify your identity prompt, select your phone number.
+6. At the Verify your identity prompt, select your phone number.
 
    > The Enter code dialog box opens.
 
-1. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
+7. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
 
-1. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
+8. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
 
-1. At the Stay signed in message, select **No**. 
+9. At the Stay signed in message, select **No**. 
 
    > Outlook on the Web opens to Alex Wilber's inbox.
 
-1. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
+10. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
 
-1. Close Microsoft Edge.
+11. Close Microsoft Edge.
 
 ### Task 4: Remove conditional access MFA
 

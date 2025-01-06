@@ -60,27 +60,27 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 1. Switch to **SEA-WS1** and sign in as **Admin** with the password of **Pa55w.rd**.
 
-1. On the taskbar, select **Start** and then select **Settings**.
+2. On the taskbar, select **Start** and then select **Settings**.
 
-1. In the **Settings** window, select **Accounts**.
+3. In the **Settings** window, select **Accounts**.
 
-1. On the Accounts page, select **Access work or school**.
+4. On the Accounts page, select **Access work or school**.
 
-1. In the **Access work or school** page, select **Connect**.
+5. In the **Access work or school** page, select **Connect**.
 
-1. In the **Microsoft account** window, select **Join this device to Entra ID**.
+6. In the **Microsoft account** window, select **Join this device to Entra ID**.
 
-1. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
+7. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
 
-1. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
+8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
 
-1. On the **Make sure this is your organization** dialog box, select **Join**.
+9. On the **Make sure this is your organization** dialog box, select **Join**.
 
-1. On the **You're all set!** page, select **Done**.
+10. On the **You're all set!** page, select **Done**.
 
-1. On the **Access work or school** page, verify that **Connected to Contoso's Azure AD** is displayed.
+11. On the **Access work or school** page, verify that **Connected to Contoso's Azure AD** is displayed.
 
-1. Close the **Settings** page.
+12. Close the **Settings** page.
 
 ### Task 3: Validate Entra Join
 
@@ -193,61 +193,61 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
 
-1. In the **Microsoft Entra Connect Sync** window select **Configure**.
+2. In the **Microsoft Entra Connect Sync** window select **Configure**.
 
-1. On the **Additional tasks** page, select **Configure device options** and select **Next**.
+3. On the **Additional tasks** page, select **Configure device options** and select **Next**.
 
-1. On the **Overview** page, select **Next**.
+4. On the **Overview** page, select **Next**.
 
-1. On the **Connect to Microsoft Entra ID** page, select **Next**.
+5. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-1. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
+6. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
 
-1. On the **Device options** page, select **Configure Hybrid Microsoft Entra ID join**, and then select **Next**.
+7. On the **Device options** page, select **Configure Hybrid Microsoft Entra ID join**, and then select **Next**.
 
-1. On the **Device operating systems** page, select **Windows 10 or later domain-joined devices**, and then select **Next**.
+8. On the **Device operating systems** page, select **Windows 10 or later domain-joined devices**, and then select **Next**.
 
-1. On the **SCP configuration** page, select the check box next to **Contoso.com**. 
+9. On the **SCP configuration** page, select the check box next to **Contoso.com**. 
 
-1. Select **Microsoft Entra ID** from the **Authentication Service** dropdown and select **Add**. 
+10. Select **Microsoft Entra ID** from the **Authentication Service** dropdown and select **Add**. 
 
-1. In the **Enterprise Admin Credentials** window enter **Contoso\\Administrator** as **User name** and **Pa55w.rd** as **Password**. Select **OK** and select **Next**.
+11. In the **Enterprise Admin Credentials** window enter **Contoso\\Administrator** as **User name** and **Pa55w.rd** as **Password**. Select **OK** and select **Next**.
 
-1. In the **Ready to configure** page, select **Configure** to run the configuration.
+12. In the **Ready to configure** page, select **Configure** to run the configuration.
 
-1. When the configuration is complete, select **Exit**.
+13. When the configuration is complete, select **Exit**.
 
-1. Switch to **SEA-CL2**.
+14. Switch to **SEA-CL2**.
 
-1. At the sign-in page, select the **Power** button and then select **Restart**.
+15. At the sign-in page, select the **Power** button and then select **Restart**.
 
     >**Note** Restarting **SEA-CL2** will enable quicker discovery of the SCP created by reconfiguring AAD Connect.
 
-1. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
+16. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
 ### Task 3: Re-configure Azure AD Connect to sync the new OU
 
 1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
 
-1. In the **Microsoft Entra Connect Sync** window select **Configure**.
+2. In the **Microsoft Entra Connect Sync** window select **Configure**.
 
-1. On the **Additional tasks** page, select **Customize synchronization options** and select **Next**.
+3. On the **Additional tasks** page, select **Customize synchronization options** and select **Next**.
 
-1. On the **Connect to Microsoft Entra ID** page, select **Next**.
+4. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-1. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
+5. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
 
-1. On the **Connect your directories** page, select **Next**.
+6. On the **Connect your directories** page, select **Next**.
 
-1. On the **Domain and OU filtering** page, ensure that **Sync selected domains and OUs** is selected and then expand **Contoso.com**.
+7. On the **Domain and OU filtering** page, ensure that **Sync selected domains and OUs** is selected and then expand **Contoso.com**.
 
-1. Select the check box next to **Entra ID clients**. Do not make any other changes and then select **Next**.
+8. Select the check box next to **Entra ID clients**. Do not make any other changes and then select **Next**.
 
-1. In the **Optional features** page, do not make any changes and then select **Next**.
+9. In the **Optional features** page, do not make any changes and then select **Next**.
 
-1. In the **Ready to configure** window, select **Configure** to run the configuration and start synchronization.
+10. In the **Ready to configure** window, select **Configure** to run the configuration and start synchronization.
 
-1. When the configuration is complete, select **Exit**.
+11. When the configuration is complete, select **Exit**.
 
     > **Note**: Entra Connect Sync synchronizes automatically now when you modify the OUs being synced. You can use the **Synchronization Service** to monitor sync status.
 
