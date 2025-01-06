@@ -8,7 +8,7 @@ In this lab, you will perform Entra registration using a Windows device.
 
 ### Scenario
 
-Several users have asked to use their personal iOS, Android, and Windows devices to access Contoso cloud resources. Since Contoso does not own the devices, you do not want to have the users perform an Entra join for full device management. Instead, you need to ensure that users are able to register their devices with Entra, which still allows you to apply company policy to apps as needed, and still permit users to access Contoso resources. You will test out Entra device registration using a Windows 11 device.
+Several users have asked to use their personal iOS, Android, and Windows devices to access Contoso cloud resources. Since Contoso does not own the Windows devices, you do not want to have the users perform an Entra join (only WIndows devices can be Entra joined). Instead, you need to ensure that users are able to register their devices with Entra, which still allows you to apply company policy to apps as needed, and still permit users to access Contoso resources. You will test out Entra device registration using a Windows 11 device.
 
 ### Task 1: Configure Azure AD device registration
 

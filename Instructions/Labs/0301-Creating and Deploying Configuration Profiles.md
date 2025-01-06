@@ -43,7 +43,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 5. In the **Settings** app, select **Privacy & security**.
 
-6. On the **Privacy & security** page, take note of the options under **Security**, **Windows permissions**, and **App permissions**.
+6. On the **Privacy & security** page, take note of the available options under the **Security** section, **Windows permissions** section, and **App permissions** section.
 
 7. On the **Privacy & security** page, select **Windows Security** and then select **Open Windows Security**.
 

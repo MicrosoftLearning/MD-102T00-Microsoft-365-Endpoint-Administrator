@@ -46,33 +46,29 @@ To provide additional security for user sign on events, you need to configure an
 
    > The Microsoft Entra admin center opens.
 
-5. At the top of the web page, In the search resources box, type multifactor authentication and then select **multifactor authentication**.
+5. At the top of the web page, In the search resources box, type multifactor authentication and then select **Multifactor authentication**.
 
    > The multi-factor authentication page opens.
 
 6. Select **Additional cloud-based multifactor authentication settings**.
 
-7. In the **multi-factor authentication** page, select **service settings**. Select **Allow users to remember multi-factor authentication on devices they trust**.
+7. In the **Per-user multifactor authentication** page, select **Service settings**. 
 
-8. Next to **Number of days users can trust devices for**, enter **30** and then select **save**. 
+8. On the **Service settings** page, scroll down and select the checkbox for **Allow users to remember multi-factor authentication on devices they trust**.
 
-9. Close the **multi-factor authentication** page.
+9. Next to **Number of days users can trust devices for**, enter **30** and then select **Save**. 
 
-10. Navigate back to the **Microsoft Entra admin center** Edge tab and in the navigation pane, select **Users** > **All users**.
+10. Once saved, scroll back to the top of the **Service settings** page, and select **Users**.
 
-11. At the top of the user list, select Per-user MFA.
+11. In the user list, select the check box next to **Alex Wilber**.
 
-   > The Per-user MFA page opens.
+12. Above the user list, select **Enable MFA**.
 
-12. In the user list, select the check box next to **Alex Wilber**.
+13. On the **Enable multifactor authentication** message, select **Enable**.
 
-13. On the **quick steps** pane, select **Enable**.
+14. Once Enabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Enforced**.
 
-14. On the **About enabling multi-factor auth** message, select **enable multi-factor auth**.
-
-15. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Enabled**.
-
-16. Close Microsoft Edge.
+15. Close Microsoft Edge.
 
 ### Task 3: Register and Validate MFA
 
@@ -124,11 +120,11 @@ To provide additional security for user sign on events, you need to configure an
 
 6. In the user list, select the check box next to **Alex Wilber**.
 
-7. On the **quick steps** pane, select **Disable**.
+7. Above the user list, select **Disable MFA**.
 
-8. On the **Disable multi-factor authentication?** message, select **yes**.
+8. On the **Disable multifactor authentication** message, select **Disable**.
 
-9. On the **Updates successful** message, select **close**. Take note that the **Multi-Factor Auth Status** for Alex Wilber is now **Disabled**.
+9. Once Disabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Disabled**.
 
 10. Close Microsoft Edge.
 
@@ -184,7 +180,7 @@ To provide additional security for user sign on events, you need to configure an
 
     > Note that typically you would specify a group, however for this exercise we will just test the setting on Alex Wilber.
 
-10. Select **No target resources selected** and then click **Select apps**.
+10. Select **No target resources selected** and then click **Select resources**.
 
     > Note the Control access based on client app setting. This setting allows you to specify the client app that is used to access the resource. For example, you can specify that only the Outlook app can be used to access Exchange Online. 
 
@@ -220,13 +216,15 @@ To provide additional security for user sign on events, you need to configure an
 
 7. At the **Enter code** page, enter the code sent to your mobile phone, and then select **Verify**.
 
-8. At the Stay signed in message, select **No**. 
+8. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
+
+9. At the Stay signed in message, select **No**. 
 
    > Outlook on the Web opens to Alex Wilber's inbox.
 
-9. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
+10. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
 
-10. Close Microsoft Edge.
+11. Close Microsoft Edge.
 
 ### Task 4: Remove conditional access MFA
 
