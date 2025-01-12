@@ -56,6 +56,16 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 14. On the Device settings page, select **Save**.
 
+15. In the Microsoft Entra admin center, in the navigation pane, select **Manage | Security** .
+
+16. Click **Authentication methods** .
+
+17. Click **Policies | SMS** .
+
+18. Click **Enable** .
+
+19. Place check for All users under **Use for Sign-in** .
+
 ### Task 2: Perform an Entra Join
 
 1. Switch to **SEA-WS1** and sign in as **Admin** with the password of **Pa55w.rd**.
