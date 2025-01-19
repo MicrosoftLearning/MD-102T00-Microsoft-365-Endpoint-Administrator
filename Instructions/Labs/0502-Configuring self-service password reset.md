@@ -88,6 +88,8 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 6. On the **Sign in** page, enter **`Aaron@yourtenant.onmicrosoft.com`** and then select **Next**.
 
+   >**Note**: Please ensure you sign in as Aaron, not Alex.
+
 7. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**. If the Microsoft Edge prompts to save the password, select **Save**.
 
 8. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.

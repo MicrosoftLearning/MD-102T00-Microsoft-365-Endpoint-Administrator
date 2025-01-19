@@ -98,7 +98,7 @@ dsregcmd /status
 
    > Notice that you do not have to restart to disconnect a registered device from Azure AD.
 
-8. Sign out of SEA-WS1.
+8. To prepare for the next lab, select **Start**, then select the **Power** icon, and then select **Restart**.
 
 **Results**: After completing this exercise, you will have configured Entra device registration.
 
