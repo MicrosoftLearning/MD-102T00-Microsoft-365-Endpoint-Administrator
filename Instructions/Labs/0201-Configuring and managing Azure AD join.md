@@ -273,9 +273,9 @@ dsregcmd /status
 
    > **Note**: If the device is not yet joined to Entra ID, switch back to **SEA-SRV1** and run the command below. Once completed, switch back to SEA-CL2 and restart the computer once more.
    
-```powershell
-Start-ADSyncSyncCycle -PolicyType Delta
-```
+   ```powershell
+   Start-ADSyncSyncCycle -PolicyType Delta
+   ```
 
 7. Close all windows on SEA-CL2 and sign out.
 
