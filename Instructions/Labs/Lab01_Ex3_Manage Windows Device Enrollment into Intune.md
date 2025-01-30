@@ -16,7 +16,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 ### Task 1: Review and assign licenses for device management
 
-1. On **MD102-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
+1. On **MD102-WS1**, if necessary, sign in as **Admin** with the password of **Pa55w.rd**.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://admin.microsoft.com**, and then press **Enter**.
 
