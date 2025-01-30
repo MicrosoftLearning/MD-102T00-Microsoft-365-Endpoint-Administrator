@@ -23,6 +23,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
    > The Microsoft Entra admin center opens.
+   > You will get prompted to save your password and to sync data to Microsoft Edge. Say (No,thanks/Not now) to both of these.
 
 4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
 
