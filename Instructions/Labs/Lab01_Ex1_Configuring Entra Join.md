@@ -16,7 +16,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 1: Configure Entra join Device settings
 
-1. On **MD102-WS1**, if necessary, sign in as **Contoso\\Admin** with the password of **Pa55w.rd** and close Server Manager if necessary.
+1. On **MD102-WS1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager if necessary.
 
 2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
