@@ -22,7 +22,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Microsoft 365 admin center opens.
+   > The Microsoft 365 admin center opens. If prompted to save password, select **Not now**.
 
 4. In the Microsoft 365 admin center, in the Navigation pane, select **Billing**, select **Your products**.
 
