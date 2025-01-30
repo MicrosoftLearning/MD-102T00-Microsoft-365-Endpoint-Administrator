@@ -90,7 +90,7 @@ dsregcmd /status
 
 ```
 
-3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed.
+3. In the output under **Device State**, scroll to top of the screen and verify that **AzureAdJoined : YES** is displayed.
 
    > This indicates that the device is Entra joined.
 
@@ -103,19 +103,21 @@ dsregcmd /status
 7. Double-click the **Administrators** group.
 
 
-   > Notice that Joni Sherman has been added as a local Administrator on MD102-WS2. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role. 
+   > Notice that Joni Sherman has been added as a local Administrator on MD102-WS2. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role.
 
-8. Switch to **MD102-WS1**.
+8. Close all open windows and sign out of windows.
 
-9. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
+9. Switch to **MD102-WS1**.
 
-10. Select **Devices**, and then select **All devices**. 
+10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
+
+11. Select **Devices**, and then select **All devices**. 
 
     > In the Devices pane, notice that MD102-WS2 is listed. 
 
-11. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
+12. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
 
-    > Also note that the MDM column shows None. This indicates that this device is not yet managed by Microsoft Intune.
+    > If you scroll to the right, note that the MDM column shows None. This indicates that this device is not yet managed by Microsoft Intune.
 
 ### Task 4: Sign in to Windows as an Entra User
 
@@ -145,7 +147,7 @@ dsregcmd /status
 
 3. On the Accounts page, select **Access work or school**.
 
-4. In the **Access work or school** page, select **Connected to Contoso's Azure AD**.
+4. In the **Access work or school** page, select **Connected to Contoso's Entra ID**.
 
 5. Select **Disconnect** and then select **Yes**.
 
