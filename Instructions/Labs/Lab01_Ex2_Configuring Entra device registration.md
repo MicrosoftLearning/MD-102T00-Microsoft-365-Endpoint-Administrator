@@ -62,19 +62,19 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 dsregcmd /status
 ```
 
-3. In the output under **User State**, verify that **WorkplaceJoined : YES** is displayed. This indicates that the user has performed a device registration in Entra ID.
+3. Scroll up to the top of the screen. In the output under **User State**, verify that **WorkplaceJoined : YES** is displayed. This indicates that the user has performed a device registration in Entra ID.
 
-4. Close PowerShell and then sign out of MD102-WS1.
+4. Close PowerShell and then sign out of MD102-WS2.
 
 5. Switch to **MD102-WS1**.
 
 6. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
 
-7. Select **Devices**, then select **All devices**. In the Devices pane, notice that MD102-WS1 is listed. 
+7. Select **Devices**, then select **All devices**. In the Devices pane, notice that MD102-WS2 is listed. 
 
 8. Verify that the **Join Type** is listed as **Microsoft Entra registered** and that the owner is **Joni Sherman**. 
 
-   Notice that the device is Microsoft Entra registered, NOT Microsoft Entra joined. Entra registered devices are typically devices that cannot be Entra joined, or devices that are personally owned by the user. Registering a device will provide access to Cloud based resources.
+   > Scroll to the right and notice that the device is Microsoft Entra registered, NOT Microsoft Entra joined. Entra registered devices are typically devices that cannot be Entra joined, or devices that are personally owned by the user. Registering a device will provide access to Cloud based resources.
 
 9. Close Microsoft Edge.
 
