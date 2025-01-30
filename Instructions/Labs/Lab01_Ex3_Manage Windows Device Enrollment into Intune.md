@@ -30,7 +30,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 6. Select **Enterprise Mobility + Security E5 Demo Trial**. 
   
-7. Scroll down the page, and select the **View apps and services included with this subscription** link. Take note of the services included in the Enterprise Mobility + Security E5 license. Microsoft Intune is one of the supported services for this license.
+7. Scroll down the page, and under **Product details and upgrades** select the **View apps and services included with this subscription** link. Take note of the services included in the Enterprise Mobility + Security E5 license. Microsoft Intune is one of the supported services for this license.
 
 8. In the Microsoft 365 admin center navigation pane, select **Users**, select **Active users**.
 
