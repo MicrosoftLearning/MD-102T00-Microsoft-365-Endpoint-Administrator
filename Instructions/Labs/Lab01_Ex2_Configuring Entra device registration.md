@@ -18,7 +18,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-   > The Microsoft Entra admin center opens.
+   > The Microsoft Entra admin center opens. If you get prompted to save your password and to sync data to Microsoft Edge. Say (No,thanks/Not now) to both of these.
 
 4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
 
