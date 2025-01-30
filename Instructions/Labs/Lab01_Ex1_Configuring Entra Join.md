@@ -119,6 +119,8 @@ dsregcmd /status
 
     > If you scroll to the right, note that the MDM column shows None. This indicates that this device is not yet managed by Microsoft Intune.
 
+13. Sign out of **MD102-WS1**
+
 ### Task 4: Sign in to Windows as an Entra User
 
 1. Switch to **MD102-WS2** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the Tenant password as provided by your instructor. 
