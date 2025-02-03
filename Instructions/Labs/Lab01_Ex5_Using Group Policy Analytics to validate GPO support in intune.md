@@ -10,7 +10,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 ### Task 1: Analyze the Windows Client GPO using Group Policy Analytics
 
-1. Switch to **MD102-WS1** and, if necessary, sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
+1. Log on to **MD102-WS1** and, if necessary, sign in as **Contoso\Administrator** with the password of **Pa55w.rd**.
 
 1. On **MD102-WS1**, on the taskbar, select **Microsoft Edge**.
 
