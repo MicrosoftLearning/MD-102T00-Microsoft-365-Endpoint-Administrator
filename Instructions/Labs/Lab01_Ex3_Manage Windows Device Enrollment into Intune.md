@@ -44,8 +44,6 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 13. Select **Save Changes**.
 
-14. Once the changes have been saved, close the **Microsoft 365 admin center** tab in Edge. 
-
 
 ### Task 2: Enable Windows Automatic Enrollment into Microsoft Intune
 
@@ -53,21 +51,25 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
    > The Microsoft Intune admin center opens.
 
-2. In the Microsoft Intune admin center, select **Devices**.
+2. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
-3. On the Devices pane, under the **Device onboarding** section, select **Enrollment**.
+   > The Microsoft 365 admin center opens. If prompted to save password, select **Not now**.
 
-4. In the Enroll devices pane, ensure **Windows** is selected.
+3. In the Microsoft Intune admin center, select **Devices**.
 
-5. In the **Enrollment options** section, select **Automatic Enrollment**.
+4. On the Devices pane, under the **Device onboarding** section, select **Enrollment**.
 
-6. On the **MDM user scope** row, select **All** and then select **Save**.
+5. In the Enroll devices pane, ensure **Windows** is selected.
+
+6. In the **Enrollment options** section, select **Automatic Enrollment**.
+
+7. On the **MDM user scope** row, select **All** and then select **Save**.
 
    _**Note**: By performing this step, you enabled automatic enrollment into Intune for any User that performs an Entra join or Entra registration from a Windows device._
 
 ### Task 3: Create Group
 
-1. In the Microsoft 365 admin center, in the Navigation pane, select **Teams & groups**, select **Active teams & groups**.
+1. Switch to the Microsoft 365 admin center tab, in the Navigation pane, select **Teams & groups**, select **Active teams & groups**.
 
 2. Select **Security groups** and click an **Add a security group**
    
@@ -78,10 +80,12 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 6. Select **Next**.
 
 7. Select **Create group**.
+  
+8. Select **Close**
 
 ### Task 3: Configure Enrollment Restrictions
 
-1. In the Microsoft Intune admin center, select **Devices**.
+1. Switch to the Microsoft Intune admin center tab, select **Devices**.
 
 2. On the Devices pane, under the **Device onboarding** section, select **Enrollment**.
 
@@ -114,7 +118,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 13. Go back to the **Enrollment** pane, select **Device limit restrictions**. 
 
-    > Notice that there is a Default device limit restriction that is assigned to **All Users**. This default restriction sets a device enrollment limit to 5 devices per user.
+    > Notice that there is a Default device limit restriction that is assigned to **All Users and all devices**. This default restriction sets a device enrollment limit to 5 devices per user.
 
 14. In the details pane, select **Create restriction**.
 
