@@ -31,23 +31,21 @@ You have assigned Megan Bowen appropriate licenses and will now test the process
 
 8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
 
-9. You will be prompted to setup the Microsoft Authenticator App. **This will require a mobile device.**
+9. On the **Make sure this is your organization** dialog box, select **Join**.
 
-10. On the **Make sure this is your organization** dialog box, select **Join**.
+10. On the **You're all set!** page, read the information and then select **Done**.
 
-11. On the **You're all set!** page, read the information and then select **Done**.
+11. In the **Access work or school** section, verify that **Connected to Contoso's Entra ID** displays.
 
-12. In the **Access work or school** section, verify that **Connected to Contoso's Entra ID** displays.
+12. Select **Connected to Contoso's Azure AD** and then select **Info**.
 
-13. Select **Connected to Contoso's Azure AD** and then select **Info**.
+13. Take note of the information regarding the areas managed by Contoso, scroll down, and then select **Sync**. This will force a Device sync with Intune.
 
-14. Take note of the information regarding the areas managed by Contoso, scroll down, and then select **Sync**. This will force a Device sync with Intune.
-
-15. Close the **Settings** window.
+14. Close the **Settings** window.
 
 ### Task 2: Validate device enrollment into Entra ID And Intune
 
-1. On the **MD102-WS2** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**.
+1. On the **MD102-WS2** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**. When prompted select **Yes**
     
 2. In the **Certificates** console, in the navigation pane, expand **Personal** and select the **Certificate** node. Verify that the following certificates are listed in the details pane:
 
@@ -67,7 +65,7 @@ You have assigned Megan Bowen appropriate licenses and will now test the process
 dsregcmd /status
 ```
 
-6. In the output under **Device State**, verify that **AzureADJoined : YES** is displayed. This indicates that the device is Entra ID joined.
+6. Scroll up. In the output under **Device State**, verify that **AzureADJoined : YES** is displayed. This indicates that the device is Entra ID joined.
 
 7. In the output under **Tenant Details**, verify that the following three entries exist:
 
@@ -78,6 +76,8 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 ```
 
 > Note: These entries indicate that the device is enrolled in Intune.
+
+8. Close the Windows Terminal Window.
 
 ### Task 3: Sign in as an Entra user
 
@@ -109,7 +109,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 3. In the navigation pane, select **Devices**.
 
-4. On the **Devices | Overview** blade under **Intune enrolled devices**, verify that **1** is displayed next to **Windows**. It may take a while to display.
+4. On the **Devices | Overview** blade under **Manage devices by platform**, verify that **1** is displayed next to **Windows**. It may take a while to display.
 
 5. On the **Devices | Overview** blade, select **All devices** and verify that **MD102-WS2** is listed.
 
@@ -123,7 +123,7 @@ mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance
 
 9. Select **Devices**, then select **All devices**. 
 
-   > Take note of MD102-WS2. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
+   > Scroll to the right and take note of MD102-WS2. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
 
 10. Close all open Windows.
 
