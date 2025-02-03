@@ -31,17 +31,19 @@ You have assigned Megan Bowen appropriate licenses and will now test the process
 
 8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
 
-9. On the **Make sure this is your organization** dialog box, select **Join**.
+9. You will be prompted to setup the Microsoft Authenticator App. **This will require a mobile device.**
 
-10. On the **You're all set!** page, read the information and then select **Done**.
+10. On the **Make sure this is your organization** dialog box, select **Join**.
 
-11. In the **Access work or school** section, verify that **Connected to Contoso's Entra ID** displays.
+11. On the **You're all set!** page, read the information and then select **Done**.
 
-12. Select **Connected to Contoso's Azure AD** and then select **Info**.
+12. In the **Access work or school** section, verify that **Connected to Contoso's Entra ID** displays.
 
-13. Take note of the information regarding the areas managed by Contoso, scroll down, and then select **Sync**. This will force a Device sync with Intune.
+13. Select **Connected to Contoso's Azure AD** and then select **Info**.
 
-14. Close the **Settings** window.
+14. Take note of the information regarding the areas managed by Contoso, scroll down, and then select **Sync**. This will force a Device sync with Intune.
+
+15. Close the **Settings** window.
 
 ### Task 2: Validate device enrollment into Entra ID And Intune
 
