@@ -1,1 +1,560 @@
+<?xml version="1.0" encoding="utf-16"?>
+<GPO xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.microsoft.com/GroupPolicy/Settings">
+  <Identifier>
+    <Identifier xmlns="http://www.microsoft.com/GroupPolicy/Types">{1D034C82-47E8-422A-8845-5C10E06CEDEB}</Identifier>
+    <Domain xmlns="http://www.microsoft.com/GroupPolicy/Types">Contoso.com</Domain>
+  </Identifier>
+  <Name>Windows Client Policy</Name>
+  <IncludeComments>true</IncludeComments>
+  <CreatedTime>2022-04-10T19:40:44</CreatedTime>
+  <ModifiedTime>2022-04-10T19:40:44</ModifiedTime>
+  <ReadTime>2024-12-06T14:09:49.3046242Z</ReadTime>
+  <SecurityDescriptor>
+    <SDDL xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">O:DAG:DAD:PAI(OA;CI;CR;edacfd8f-ffb3-11d1-b41d-00a0c968f939;;AU)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;CI;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;CI;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-1191480315-2938555597-1904682470-519)(A;CI;LCRPLORC;;;ED)(A;CI;LCRPLORC;;;AU)(A;CI;CCDCLCSWRPWPDTLOSDRCWDWO;;;SY)(A;CIIO;CCDCLCSWRPWPDTLOSDRCWDWO;;;CO)S:AI(OU;CIIDSA;WPWD;;f30e3bc2-9ff0-11d1-b603-0000f80367c1;WD)(OU;CIIOIDSA;WP;f30e3bbe-9ff0-11d1-b603-0000f80367c1;bf967aa5-0de6-11d0-a285-00aa003049e2;WD)(OU;CIIOIDSA;WP;f30e3bbf-9ff0-11d1-b603-0000f80367c1;bf967aa5-0de6-11d0-a285-00aa003049e2;WD)</SDDL>
+    <Owner xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">
+      <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-21-1191480315-2938555597-1904682470-512</SID>
+      <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">CONTOSO\Domain Admins</Name>
+    </Owner>
+    <Group xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">
+      <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-21-1191480315-2938555597-1904682470-512</SID>
+      <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">CONTOSO\Domain Admins</Name>
+    </Group>
+    <PermissionsPresent xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">true</PermissionsPresent>
+    <Permissions xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">
+      <InheritsFromParent>false</InheritsFromParent>
+      <TrusteePermissions>
+        <Trustee>
+          <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-21-1191480315-2938555597-1904682470-512</SID>
+          <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">CONTOSO\Domain Admins</Name>
+        </Trustee>
+        <Type xsi:type="PermissionType">
+          <PermissionType>Allow</PermissionType>
+        </Type>
+        <Inherited>false</Inherited>
+        <Applicability>
+          <ToSelf>true</ToSelf>
+          <ToDescendantObjects>false</ToDescendantObjects>
+          <ToDescendantContainers>true</ToDescendantContainers>
+          <ToDirectDescendantsOnly>false</ToDirectDescendantsOnly>
+        </Applicability>
+        <Standard>
+          <GPOGroupedAccessEnum>Edit, delete, modify security</GPOGroupedAccessEnum>
+        </Standard>
+        <AccessMask>0</AccessMask>
+      </TrusteePermissions>
+      <TrusteePermissions>
+        <Trustee>
+          <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-9</SID>
+          <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">NT AUTHORITY\ENTERPRISE DOMAIN CONTROLLERS</Name>
+        </Trustee>
+        <Type xsi:type="PermissionType">
+          <PermissionType>Allow</PermissionType>
+        </Type>
+        <Inherited>false</Inherited>
+        <Applicability>
+          <ToSelf>true</ToSelf>
+          <ToDescendantObjects>false</ToDescendantObjects>
+          <ToDescendantContainers>true</ToDescendantContainers>
+          <ToDirectDescendantsOnly>false</ToDirectDescendantsOnly>
+        </Applicability>
+        <Standard>
+          <GPOGroupedAccessEnum>Read</GPOGroupedAccessEnum>
+        </Standard>
+        <AccessMask>0</AccessMask>
+      </TrusteePermissions>
+      <TrusteePermissions>
+        <Trustee>
+          <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-18</SID>
+          <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">NT AUTHORITY\SYSTEM</Name>
+        </Trustee>
+        <Type xsi:type="PermissionType">
+          <PermissionType>Allow</PermissionType>
+        </Type>
+        <Inherited>false</Inherited>
+        <Applicability>
+          <ToSelf>true</ToSelf>
+          <ToDescendantObjects>false</ToDescendantObjects>
+          <ToDescendantContainers>true</ToDescendantContainers>
+          <ToDirectDescendantsOnly>false</ToDirectDescendantsOnly>
+        </Applicability>
+        <Standard>
+          <GPOGroupedAccessEnum>Edit, delete, modify security</GPOGroupedAccessEnum>
+        </Standard>
+        <AccessMask>0</AccessMask>
+      </TrusteePermissions>
+      <TrusteePermissions>
+        <Trustee>
+          <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-21-1191480315-2938555597-1904682470-519</SID>
+          <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">CONTOSO\Enterprise Admins</Name>
+        </Trustee>
+        <Type xsi:type="PermissionType">
+          <PermissionType>Allow</PermissionType>
+        </Type>
+        <Inherited>false</Inherited>
+        <Applicability>
+          <ToSelf>true</ToSelf>
+          <ToDescendantObjects>false</ToDescendantObjects>
+          <ToDescendantContainers>true</ToDescendantContainers>
+          <ToDirectDescendantsOnly>false</ToDirectDescendantsOnly>
+        </Applicability>
+        <Standard>
+          <GPOGroupedAccessEnum>Edit, delete, modify security</GPOGroupedAccessEnum>
+        </Standard>
+        <AccessMask>0</AccessMask>
+      </TrusteePermissions>
+      <TrusteePermissions>
+        <Trustee>
+          <SID xmlns="http://www.microsoft.com/GroupPolicy/Types">S-1-5-11</SID>
+          <Name xmlns="http://www.microsoft.com/GroupPolicy/Types">NT AUTHORITY\Authenticated Users</Name>
+        </Trustee>
+        <Type xsi:type="PermissionType">
+          <PermissionType>Allow</PermissionType>
+        </Type>
+        <Inherited>false</Inherited>
+        <Applicability>
+          <ToSelf>true</ToSelf>
+          <ToDescendantObjects>false</ToDescendantObjects>
+          <ToDescendantContainers>true</ToDescendantContainers>
+          <ToDirectDescendantsOnly>false</ToDirectDescendantsOnly>
+        </Applicability>
+        <Standard>
+          <GPOGroupedAccessEnum>Apply Group Policy</GPOGroupedAccessEnum>
+        </Standard>
+        <AccessMask>0</AccessMask>
+      </TrusteePermissions>
+    </Permissions>
+    <AuditingPresent xmlns="http://www.microsoft.com/GroupPolicy/Types/Security">false</AuditingPresent>
+  </SecurityDescriptor>
+  <FilterDataAvailable>true</FilterDataAvailable>
+  <Computer>
+    <VersionDirectory>16</VersionDirectory>
+    <VersionSysvol>16</VersionSysvol>
+    <Enabled>true</Enabled>
+    <ExtensionData>
+      <Extension xmlns:q1="http://www.microsoft.com/GroupPolicy/Settings/Security" xsi:type="q1:SecuritySettings">
+        <q1:SecurityOptions>
+          <q1:KeyName>MACHINE\System\CurrentControlSet\Control\Lsa\NoLMHash</q1:KeyName>
+          <q1:SettingNumber>1</q1:SettingNumber>
+          <q1:Display>
+            <q1:Name>Network security: Do not store LAN Manager hash value on next password change</q1:Name>
+            <q1:Units />
+            <q1:DisplayBoolean>true</q1:DisplayBoolean>
+          </q1:Display>
+        </q1:SecurityOptions>
+        <q1:SecurityOptions>
+          <q1:SystemAccessPolicyName>EnableGuestAccount</q1:SystemAccessPolicyName>
+          <q1:SettingNumber>0</q1:SettingNumber>
+        </q1:SecurityOptions>
+        <q1:Blocked>false</q1:Blocked>
+      </Extension>
+      <Name>Security</Name>
+    </ExtensionData>
+    <ExtensionData>
+      <Extension xmlns:q2="http://www.microsoft.com/GroupPolicy/Settings/Registry" xsi:type="q2:RegistrySettings">
+        <q2:Policy>
+          <q2:Name>Settings Page Visibility</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>Specifies the list of pages to show or hide from the System Settings app.
 
+This policy allows an administrator to block a given set of pages from the System Settings app. Blocked pages will not be visible in the app, and if all pages in a category are blocked the category will be hidden as well. Direct navigation to a blocked page via URI, context menu in Explorer or other means will result in the front page of Settings being shown instead.
+
+This policy has two modes: it can either specify a list of settings pages to show or a list of pages to hide. To specify a list of pages to show, the policy string must begin with "showonly:" (without quotes), and to specify a list of pages to hide, it must begin with "hide:". If a page in a showonly list would normally be hidden for other reasons (such as a missing hardware device), this policy will not force that page to appear. After this, the policy string must contain a semicolon-delimited list of settings page identifiers. The identifier for any given settings page is the published URI for that page, minus the "ms-settings:" protocol part.
+
+Example: to specify that only the About and Bluetooth pages should be shown (their respective URIs are ms-settings:about and ms-settings:bluetooth) and all other pages hidden:
+
+showonly:about;bluetooth
+
+Example: to specify that only the Bluetooth page (which has URI ms-settings:bluetooth) should be hidden:
+
+hide:bluetooth
+
+The availability of per-user support is documented here: https://go.microsoft.com/fwlink/?linkid=2102995</q2:Explain>
+          <q2:Supported>At least Windows Server 2016, Windows 10 Version 1703</q2:Supported>
+          <q2:Category>Control Panel</q2:Category>
+          <q2:EditText>
+            <q2:Name>Settings Page Visibility:</q2:Name>
+            <q2:State>Enabled</q2:State>
+            <q2:Value>showonly:about;bluetooth</q2:Value>
+          </q2:EditText>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Configure user Group Policy loopback processing mode</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>This policy setting directs the system to apply the set of Group Policy objects for the computer to any user who logs on to a computer affected by this setting. It is intended for special-use computers, such as those in public places, laboratories, and classrooms, where you must modify the user setting based on the computer that is being used.
+
+By default, the user's Group Policy Objects determine which user settings apply. If this setting is enabled, then, when a user logs on to this computer, the computer's Group Policy Objects determine which set of Group Policy Objects applies.
+
+If you enable this setting, you can select one of the following modes from the Mode box:
+
+"Replace" indicates that the user settings defined in the computer's Group Policy Objects replace the user settings normally applied to the user.
+
+"Merge" indicates that the user settings defined in the computer's Group Policy Objects and the user settings normally applied to the user are combined. If the settings conflict, the user settings in the computer's Group Policy Objects take precedence over the user's normal settings.
+
+If you disable this setting or do not configure it, the user's Group Policy Objects determines which user settings apply.
+
+Note: This setting is effective only when both the computer account and the user account are in at least Windows 2000 domains.</q2:Explain>
+          <q2:Supported>At least Windows 2000</q2:Supported>
+          <q2:Category>System/Group Policy</q2:Category>
+          <q2:DropDownList>
+            <q2:Name>Mode:</q2:Name>
+            <q2:State>Enabled</q2:State>
+            <q2:Value>
+              <q2:Name>Replace</q2:Name>
+            </q2:Value>
+          </q2:DropDownList>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>History</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>This setting specifies the number of past PINs that can be associated to a user account that can’t be reused. This policy enables administrators to enhance security by ensuring that old PINs are not reused continually. PIN history is not preserved through PIN reset.
+
+The value must be between 0 to 50 PINs. If this policy is set to 0, then storage of previous PINs is not required.
+
+Default: 0.
+        </q2:Explain>
+          <q2:Supported>At least Windows 10</q2:Supported>
+          <q2:Category>System/PIN Complexity</q2:Category>
+          <q2:Numeric>
+            <q2:Name>PIN History</q2:Name>
+            <q2:State>Enabled</q2:State>
+            <q2:Value>3</q2:Value>
+          </q2:Numeric>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Maximum PIN length</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>Maximum PIN length configures the maximum number of characters allowed for the PIN.  The largest number you can configure for this policy setting is 127. The lowest number you can configure must be larger than the number configured in the Minimum PIN length policy setting or the number 4, whichever is greater.
+
+If you configure this policy setting, the PIN length must be less than or equal to this number.
+
+If you disable or do not configure this policy setting, the PIN length must be less than or equal to 127.
+
+NOTE: If the above specified conditions for the maximum PIN length are not met, default values will be used for both the maximum and minimum PIN lengths.
+        </q2:Explain>
+          <q2:Supported>At least Windows 10</q2:Supported>
+          <q2:Category>System/PIN Complexity</q2:Category>
+          <q2:Numeric>
+            <q2:Name>Maximum PIN length</q2:Name>
+            <q2:State>Enabled</q2:State>
+            <q2:Value>4</q2:Value>
+          </q2:Numeric>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Minimum PIN length</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>Minimum PIN length configures the minimum number of characters required for the PIN.  The lowest number you can configure for this policy setting is 4.  The largest number you can configure must be less than the number configured in the Maximum PIN length policy setting or the number 127, whichever is the lowest.
+
+If you configure this policy setting, the PIN length must be greater than or equal to this number.
+
+If you disable or do not configure this policy setting, the PIN length must be greater than or equal to 4.
+
+NOTE: If the above specified conditions for the minimum PIN length are not met, default values will be used for both the maximum and minimum PIN lengths.
+        </q2:Explain>
+          <q2:Supported>At least Windows 10</q2:Supported>
+          <q2:Category>System/PIN Complexity</q2:Category>
+          <q2:Numeric>
+            <q2:Name>Minimum PIN length</q2:Name>
+            <q2:State>Enabled</q2:State>
+            <q2:Value>4</q2:Value>
+          </q2:Numeric>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Only display the private store within the Microsoft Store</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>Denies access to the retail catalog in the Microsoft Store, but displays the private store.
+
+If you enable this setting, users will not be able to view the retail catalog in the Microsoft Store, but they will be able to view apps in the private store.
+
+If you disable or don't configure this setting, users can access the retail catalog in the Microsoft Store.</q2:Explain>
+          <q2:Supported>At least Windows Server 2016, Windows 10</q2:Supported>
+          <q2:Category>Windows Components/Store</q2:Category>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Hide the Account protection area</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>
+        Hide the Account protection area in Windows Security.
+
+        Enabled:
+        The Account protection area will be hidden.
+
+        Disabled:
+        The Account protection area will be shown.
+
+        Not configured:
+        Same as Disabled.
+    </q2:Explain>
+          <q2:Supported>At least Windows Server 2016, Windows 10 Version 1803</q2:Supported>
+          <q2:Category>Windows Components/Windows Security/Account protection</q2:Category>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Hide the Family options area</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>
+        Hide the Family options area in Windows Security.
+
+        Enabled:
+        The Family options area will be hidden.
+
+        Disabled:
+        The Family options area will be shown.
+
+        Not configured:
+        Same as Disabled.
+    </q2:Explain>
+          <q2:Supported>At least Windows Server 2016, Windows 10 Version 1709</q2:Supported>
+          <q2:Category>Windows Components/Windows Security/Family options</q2:Category>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Hide non-critical notifications</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>
+        Only show critical notifications from Windows Security.
+
+        If the Suppress all notifications GP setting has been enabled, this setting will have no effect.
+
+        Enabled:
+        Local users will only see critical notifications from Windows Security. They will not see other types of notifications, such as regular PC or device health information.
+
+        Disabled:
+        Local users will see all types of notifications from Windows Security.
+
+        Not configured:
+        Same as Disabled.
+    </q2:Explain>
+          <q2:Supported>At least Windows Server 2016, Windows 10 Version 1709</q2:Supported>
+          <q2:Category>Windows Components/Windows Security/Notifications</q2:Category>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Configure Automatic Updates</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>Specifies whether this computer will receive security updates and other important downloads through the Windows automatic updating service.
+
+Note: This policy does not apply to Windows RT.
+
+This setting lets you specify whether automatic updates are enabled on this computer. If the service is enabled, you must select one of the four options in the Group Policy Setting:
+
+        2 = Notify before downloading and installing any updates.
+
+        When Windows finds updates that apply to this computer, users will be notified that updates are ready to be downloaded. After going to Windows Update, users can download and install any available updates.
+
+        3 = (Default setting) Download the updates automatically and notify when they are ready to be installed
+
+        Windows finds updates that apply to the computer and downloads them in the background (the user is not notified or interrupted during this process). When the downloads are complete, users will be notified that they are ready to install. After going to Windows Update, users can install them.
+
+        4 = Automatically download updates and install them on the schedule specified below.
+
+        When "Automatic" is selected as the scheduled install time, Windows will automatically check, download, and install updates. The device will reboot as per Windows default settings unless configured by group policy. (Applies to Windows 10, version 1809 and higher)
+
+        Specify the schedule using the options in the Group Policy Setting. For version 1709 and above, there is an additional choice of limiting updating to a weekly, bi-weekly, or monthly occurrence. If no schedule is specified, the default schedule for all installations will be every day at 3:00 AM. If any updates require a restart to complete the installation, Windows will restart the computer automatically. (If a user is signed in to the computer when Windows is ready to restart, the user will be notified and given the option to delay the restart.)
+
+        On Windows 8 and later, you can set updates to install during automatic maintenance instead of a specific schedule. Automatic maintenance will install updates when the computer is not in use and avoid doing so when the computer is running on battery power. If automatic maintenance is unable to install updates for 2 days, Windows Update will install updates right away. Users will then be notified about an upcoming restart, and that restart will only take place if there is no potential for accidental data loss.
+
+        5 = Allow local administrators to select the configuration mode that Automatic Updates should notify and install updates. (This option has not been carried over to any Win 10 Versions)
+
+        With this option, local administrators will be allowed to use the Windows Update control panel to select a configuration option of their choice. Local administrators will not be allowed to disable the configuration for Automatic Updates.
+
+        7 = Notify for install and notify for restart. (Windows Server only)
+
+        With this option from Windows Server 2016, applicable only to Server SKU devices, local administrators will be allowed to use Windows Update to proceed with installations or reboots manually.
+
+If the status for this policy is set to Disabled, any updates that are available on Windows Update must be downloaded and installed manually. To do this, search for Windows Update using Start.
+
+If the status is set to Not Configured, use of Automatic Updates is not specified at the Group Policy level. However, an administrator can still configure Automatic Updates through Control Panel.</q2:Explain>
+          <q2:Supported>Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3
+Option 7 only supported on servers of at least Windows Server 2016 edition​</q2:Supported>
+          <q2:Category>Windows Components/Windows Update</q2:Category>
+          <q2:DropDownList>
+            <q2:Name>Configure automatic updating:</q2:Name>
+            <q2:State>Enabled</q2:State>
+            <q2:Value>
+              <q2:Name>3 - Auto download and notify for install</q2:Name>
+            </q2:Value>
+          </q2:DropDownList>
+          <q2:Text>
+            <q2:Name>The following settings are only required and applicable if 4 is selected.</q2:Name>
+          </q2:Text>
+          <q2:CheckBox>
+            <q2:Name>Install during automatic maintenance</q2:Name>
+            <q2:State>Disabled</q2:State>
+          </q2:CheckBox>
+          <q2:DropDownList>
+            <q2:Name>Scheduled install day: </q2:Name>
+            <q2:State>Enabled</q2:State>
+            <q2:Value>
+              <q2:Name>0 - Every day</q2:Name>
+            </q2:Value>
+          </q2:DropDownList>
+          <q2:DropDownList>
+            <q2:Name>Scheduled install time:</q2:Name>
+            <q2:State>Enabled</q2:State>
+            <q2:Value>
+              <q2:Name>03:00</q2:Name>
+            </q2:Value>
+          </q2:DropDownList>
+          <q2:Text>
+            <q2:Name>If you have selected “4 – Auto download and schedule the install” for your scheduled install day and specified a schedule, you also have the option to limit updating to a weekly, bi-weekly or monthly occurrence, using the options below:</q2:Name>
+          </q2:Text>
+          <q2:CheckBox>
+            <q2:Name>Every week</q2:Name>
+            <q2:State>Enabled</q2:State>
+          </q2:CheckBox>
+          <q2:CheckBox>
+            <q2:Name>First week of the month</q2:Name>
+            <q2:State>Disabled</q2:State>
+          </q2:CheckBox>
+          <q2:CheckBox>
+            <q2:Name>Second week of the month</q2:Name>
+            <q2:State>Disabled</q2:State>
+          </q2:CheckBox>
+          <q2:CheckBox>
+            <q2:Name>Third week of the month</q2:Name>
+            <q2:State>Disabled</q2:State>
+          </q2:CheckBox>
+          <q2:CheckBox>
+            <q2:Name>Fourth week of the month</q2:Name>
+            <q2:State>Disabled</q2:State>
+          </q2:CheckBox>
+          <q2:Text>
+            <q2:Name> </q2:Name>
+          </q2:Text>
+          <q2:CheckBox>
+            <q2:Name>Install updates for other Microsoft products</q2:Name>
+            <q2:State>Disabled</q2:State>
+          </q2:CheckBox>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>No auto-restart with logged on users for scheduled automatic updates installations</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>Specifies that to complete a scheduled installation, Automatic Updates will wait for the computer to be restarted by any user who is logged on, instead of causing the computer to restart automatically.
+
+If the status is set to Enabled, Automatic Updates will not restart a computer automatically during a scheduled installation if a user is logged in to the computer. Instead, Automatic Updates will notify the user to restart the computer.
+
+Be aware that the computer needs to be restarted for the updates to take effect.
+
+If the status is set to Disabled or Not Configured, Automatic Updates will notify the user that the computer will automatically restart in 5 minutes to complete the installation.
+
+Note: This policy applies only when Automatic Updates is configured to perform scheduled installations of updates. If the "Configure Automatic Updates" policy is disabled, this policy has no effect.</q2:Explain>
+          <q2:Supported>Windows XP Professional Service Pack 1 or At least Windows 2000 Service Pack 3</q2:Supported>
+          <q2:Category>Windows Components/Windows Update</q2:Category>
+        </q2:Policy>
+        <q2:Policy>
+          <q2:Name>Remove access to "Pause updates" feature</q2:Name>
+          <q2:State>Enabled</q2:State>
+          <q2:Explain>This setting allows to remove access to "Pause updates" feature.
+
+Once enabled user access to pause updates is removed.
+      </q2:Explain>
+          <q2:Supported>At least Windows Server 2016, Windows 10 Version 1809</q2:Supported>
+          <q2:Category>Windows Components/Windows Update</q2:Category>
+        </q2:Policy>
+        <q2:Blocked>false</q2:Blocked>
+      </Extension>
+      <Name>Registry</Name>
+    </ExtensionData>
+  </Computer>
+  <User>
+    <VersionDirectory>8</VersionDirectory>
+    <VersionSysvol>8</VersionSysvol>
+    <Enabled>true</Enabled>
+    <ExtensionData>
+      <Extension xmlns:q3="http://www.microsoft.com/GroupPolicy/Settings/Registry" xsi:type="q3:RegistrySettings">
+        <q3:Policy>
+          <q3:Name>Remove the Desktop Cleanup Wizard</q3:Name>
+          <q3:State>Enabled</q3:State>
+          <q3:Explain>Prevents users from using the Desktop Cleanup Wizard.
+
+If you enable this setting, the Desktop Cleanup wizard does not automatically run on a users workstation every 60 days. The user will also not be able to access the Desktop Cleanup Wizard.
+
+If you disable this setting or do not configure it, the default behavior of the Desktop Clean Wizard running every 60 days occurs.
+
+Note: When this setting is not enabled, users can run the Desktop Cleanup Wizard, or have it run automatically every 60 days from Display, by clicking the Desktop tab and then clicking the Customize Desktop button.</q3:Explain>
+          <q3:Supported>Windows Server 2003 and Windows XP only</q3:Supported>
+          <q3:Category>Desktop</q3:Category>
+        </q3:Policy>
+        <q3:Policy>
+          <q3:Name>Remove the People Bar from the taskbar</q3:Name>
+          <q3:State>Enabled</q3:State>
+          <q3:Explain>This policy allows you to remove the People Bar from the taskbar and disables the My People experience.
+
+If you enable this policy the people icon will be removed from the taskbar, the corresponding settings toggle is removed from the taskbar settings page, and users will not be able to pin people to the taskbar.</q3:Explain>
+          <q3:Supported>At least Windows Server 2016, Windows 10 Version 1703</q3:Supported>
+          <q3:Category>Start Menu and Taskbar</q3:Category>
+        </q3:Policy>
+        <q3:Policy>
+          <q3:Name>Show Windows Store apps on the taskbar</q3:Name>
+          <q3:State>Enabled</q3:State>
+          <q3:Explain>
+This policy setting allows users to see Windows Store apps on the taskbar.
+ 
+If you enable this policy setting, users will see Windows Store apps on the taskbar.
+ 
+If you disable this policy setting, users won’t see Windows Store apps on the taskbar.
+ 
+If you don’t configure this policy setting, the default setting for the user’s device will be used, and the user can choose to change it.</q3:Explain>
+          <q3:Supported>At least Windows Server 2012 R2, Windows 8.1 or Windows RT 8.1</q3:Supported>
+          <q3:Category>Start Menu and Taskbar</q3:Category>
+        </q3:Policy>
+        <q3:Policy>
+          <q3:Name>Prevent access to the command prompt</q3:Name>
+          <q3:State>Enabled</q3:State>
+          <q3:Explain>This policy setting prevents users from running the interactive command prompt, Cmd.exe.  This policy setting also determines whether batch files (.cmd and .bat) can run on the computer.
+
+If you enable this policy setting and the user tries to open a command window, the system displays a message explaining that a setting prevents the action.
+
+If you disable this policy setting or do not configure it, users can run Cmd.exe and batch files normally.
+
+Note: Do not prevent the computer from running batch files if the computer uses logon, logoff, startup, or shutdown batch file scripts, or for users that use Remote Desktop Services.</q3:Explain>
+          <q3:Supported>At least Windows 2000</q3:Supported>
+          <q3:Category>System</q3:Category>
+          <q3:DropDownList>
+            <q3:Name>Disable the command prompt script processing also?</q3:Name>
+            <q3:State>Enabled</q3:State>
+            <q3:Value>
+              <q3:Name>No</q3:Name>
+            </q3:Value>
+          </q3:DropDownList>
+        </q3:Policy>
+        <q3:Policy>
+          <q3:Name>All Removable Storage classes: Deny all access</q3:Name>
+          <q3:State>Enabled</q3:State>
+          <q3:Explain>Configure access to all removable storage classes.
+
+This policy setting takes precedence over any individual removable storage policy settings. To manage individual classes, use the policy settings available for each class.
+
+If you enable this policy setting, no access is allowed to any removable storage class.
+
+If you disable or do not configure this policy setting, write and read accesses are allowed to all removable storage classes.</q3:Explain>
+          <q3:Supported>At least Windows Vista</q3:Supported>
+          <q3:Category>System/Removable Storage Access</q3:Category>
+        </q3:Policy>
+        <q3:Policy>
+          <q3:Name>Allow Diagnostic Data</q3:Name>
+          <q3:State>Enabled</q3:State>
+          <q3:Explain>By configuring this policy setting you can adjust what diagnostic data is collected from Windows. This policy setting also restricts the user from increasing the amount of diagnostic data collection via the Settings app. The diagnostic data collected under this policy impacts the operating system and apps that are considered part of Windows and does not apply to any additional apps installed by your organization.
+
+    - Diagnostic data off (not recommended). Using this value, no diagnostic data is sent from the device. This value is only supported on Enterprise, Education, and Server editions.
+    - Send required diagnostic data. This is the minimum diagnostic data necessary to keep Windows secure, up to date, and performing as expected. Using this value disables the "Optional diagnostic data" control in the Settings app.
+    - Send optional diagnostic data. Additional diagnostic data is collected that helps us to detect, diagnose and fix issues, as well as make product improvements. Required diagnostic data will always be included when you choose to send optional diagnostic data.  Optional diagnostic data can also include diagnostic log files and crash dumps. Use the "Limit Dump Collection" and the "Limit Diagnostic Log Collection" policies for more granular control of what optional diagnostic data is sent.
+
+If you disable or do not configure this policy setting, the device will send required diagnostic data and the end user can choose whether to send optional diagnostic data from the Settings app.
+
+Note:
+The "Configure diagnostic data opt-in settings user interface" group policy can be used to prevent end users from changing their data collection settings.
+      </q3:Explain>
+          <q3:Supported>At least Windows Server 2016, Windows 10</q3:Supported>
+          <q3:Category>Windows Components/Data Collection and Preview Builds</q3:Category>
+          <q3:DropDownList>
+            <q3:Name />
+            <q3:State>Enabled</q3:State>
+            <q3:Value>
+              <q3:Name>Send required diagnostic data</q3:Name>
+            </q3:Value>
+          </q3:DropDownList>
+        </q3:Policy>
+        <q3:Blocked>false</q3:Blocked>
+      </Extension>
+      <Name>Registry</Name>
+    </ExtensionData>
+  </User>
+</GPO>
