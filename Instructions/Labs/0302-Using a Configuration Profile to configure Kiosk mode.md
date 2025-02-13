@@ -132,7 +132,7 @@ You have been asked to configure SEA-WS2 as a Windows 11 kiosk to allow Contoso 
 
 5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
 
-   > **Note**: It could take 3-5 minutes before a sync will retrieve the kiosk policy. You may wish to wait 3-5 minutes before selecting **Sync**.
+   > **Note**: It could take 5 minutes before the kiosk policy is available to a sync. You may wish to wait the 5 minutes before selecting **Sync**.
 
 6. Close the **Settings** app.
 

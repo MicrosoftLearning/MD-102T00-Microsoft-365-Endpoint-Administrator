@@ -10,7 +10,7 @@ To following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 
-- 0102-Synchronizing Identities by using Azure AD Connect
+- 0102-Synchronizing identities by using Entra Connect
 
 - 0203-Manage Device Enrollment into Intune
 
@@ -147,7 +147,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
     - Suite Name: **Microsoft 365 Apps (Research)**
 
-    - Suite Description: **Microsoft 365 Apps for the Research dept at Contoso** (Select **Edit Description** to enter this information.)
+    - Suite Description: **Microsoft 365 Apps for the Research dept at Contoso**
 
 5. On the **Configure app suite** tab, expand the **Select Office apps** dropdown, and ensure that only the following apps are selected:
 
@@ -167,11 +167,11 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
      - Update channel: **Monthly Enterprise Channel**
 
-7. On the **properties** section, configure the following options and select **Next**:
+7. On the **Properties** section, configure the following options and select **Next**:
 
      - Accept the Microsoft Software License Terms on behalf of users: **Yes**
      
-8. On the **Assignments** tab, in the **Required** section, select **Add group.**
+8. On the **Assignments** tab, in the **Required** section, select **Add group**.
 
 9. On the **Select groups** blade, select **Research**, and then choose **Select**.
 

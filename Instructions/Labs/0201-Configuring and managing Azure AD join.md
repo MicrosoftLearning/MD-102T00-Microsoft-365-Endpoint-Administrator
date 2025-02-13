@@ -56,15 +56,15 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 14. On the Device settings page, select **Save**.
 
-15. In the Microsoft Entra admin center, in the navigation pane, select **Manage | Security** .
+15. In the Microsoft Entra admin center, in the navigation pane, expand **Protection**.
 
-16. Click **Authentication methods** .
+16. Select **Authentication methods**.
 
-17. Click **Policies | SMS** .
+17. Select **SMS**.
 
-18. Click **Enable** .
+18. Select **Enable**.
 
-19. Place check for All users under **Use for Sign-in** .
+19. At the bottom of the page, select **Save**.
 
 ### Task 2: Perform an Entra Join
 
@@ -211,7 +211,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 5. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-6. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
+6. On the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
 
 7. On the **Device options** page, select **Configure Hybrid Microsoft Entra ID join**, and then select **Next**.
 
@@ -231,11 +231,11 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 15. At the sign-in page, select the **Power** button and then select **Restart**.
 
-    >**Note** Restarting **SEA-CL2** will enable quicker discovery of the SCP created by reconfiguring AAD Connect.
+    >**Note** Restarting **SEA-CL2** will enable quicker discovery of the SCP created by reconfiguring Entra Connect Sync.
 
 16. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
-### Task 3: Re-configure Azure AD Connect to sync the new OU
+### Task 3: Re-configure Entra Connect Sync to sync the new OU
 
 1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
 

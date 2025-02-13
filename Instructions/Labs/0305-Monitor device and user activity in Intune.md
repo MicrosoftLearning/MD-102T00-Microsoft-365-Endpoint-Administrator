@@ -10,7 +10,7 @@ To following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 
-- 0102-Synchronizing Identities by using Azure AD Connect
+- 0102-Synchronizing identities by using Entra Connect
 
 - 0203-Manage Device Enrollment into Intune
 
@@ -46,7 +46,7 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 10. In the details pane, audit information is displayed about administrative changes to users. Examine the information by selecting the various entries.
 
-### Task 2: Monitor device activity
+### Task 2: Monitor device information
 
 1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
@@ -70,6 +70,6 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 10. Close Microsoft Edge.
 
-**Results**: After completing this exercise, you will have successfully monitored user Sign-in activity, Audit logs, and device activity.
+**Results**: After completing this exercise, you will have successfully monitored user Sign-in activity, Audit logs, and device information.
 
 **END OF LAB**

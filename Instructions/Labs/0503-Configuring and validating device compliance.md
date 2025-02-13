@@ -10,7 +10,7 @@ To following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 
-- 0102-Synchronizing Identities by using Azure AD Connect
+- 0102-Synchronizing identities by using Entra Connect
 
 - 0203-Manage Device Enrollment into Intune
 
@@ -147,7 +147,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 14. Verify that you can access Aaron's mailbox. 
 
-    > Note: This is because SEA-WS1 is a managed device and marked as compliant._
+    > Note: This is because SEA-WS1 is a managed device and marked as compliant.
 
 15. Close Microsoft Edge and sign out of SEA-WS1.
 

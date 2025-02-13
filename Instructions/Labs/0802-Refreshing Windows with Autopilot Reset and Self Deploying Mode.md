@@ -10,7 +10,7 @@ To following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Azure AD
 
-- 0102-Synchronizing Identities by using Azure AD Connect
+- 0102-Synchronizing identities by using Entra Connect
 
 - 0701-Deploying Windows 11 using Microsoft Deployment Toolkit
 

@@ -10,7 +10,7 @@ To following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 
-- 0102-Synchronizing Identities by using Azure AD Connect
+- 0102-Synchronizing identities by using Entra Connect
 
 - 0203-Manage Device Enrollment into Intune
 
