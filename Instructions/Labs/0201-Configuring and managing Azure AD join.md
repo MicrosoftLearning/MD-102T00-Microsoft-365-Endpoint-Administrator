@@ -18,6 +18,25 @@ To following lab(s) must be completed before this lab:
 
 You need to configure Entra ID device settings to ensure that all users are allowed to join devices to Entra ID. You also need to ensure that users can only join a maximum of 20 devices and that Allan Deyoung is added as a local administrator on all Entra joined devices. Finally, you will verify that Entra join works as expected by having Joni Sherman join SEA-WS1 to the tenant.
 
+### Task 0: Configure Authentication Methods
+1. On SEA-SVR1, if necessary, sign in as Administrator with the password of Pa55w.rd and close Server Manager.
+
+2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press Enter.
+
+3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
+
+   > The Microsoft Entra admin center opens.
+
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Protection**.
+
+5. Select **Authentication Methods** and then select **SMS**.
+
+6. **Enable** SMS and ensure Target is set to **ALL USERS**.
+
+7. Select **Save** at the bottom of the page.
+
+8. Close the page.
+   
 ### Task 1: Configure Entra join Device settings
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
