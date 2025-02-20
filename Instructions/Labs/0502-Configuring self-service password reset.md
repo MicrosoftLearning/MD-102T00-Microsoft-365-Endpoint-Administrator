@@ -56,7 +56,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 6. On the **Password reset | Properties** blade, select **Authentication methods**.
 
-7. For the methods available to users, ensure that **Mobile Phone** and **Email** are selected, and then select **Security Questions**.
+7. Check the **Security questions** box
 
 8. For the **Number of questions required to register**, select **3**.
 
