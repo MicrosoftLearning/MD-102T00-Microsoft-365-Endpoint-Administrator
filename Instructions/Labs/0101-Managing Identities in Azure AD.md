@@ -212,53 +212,35 @@ You have been provided a list of users should have administrative roles assigned
 
 6. In the **Global administrator** pane, select **+ Add assignments**.
 
-7. In the **Add assignments** pane, select **No member selected**.
+7. Search for and select **Allan Deyoung**.
 
-8. Search for and select **Allan Deyoung**.
+8. Select **Add**.
 
-9. Select **Select**.
+9. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-10. Select **Next**
+10. Using the search box, search for **User administrator**.
 
-11. Select **Assign**.
+11. Select **User administrator**.
 
-12. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+12. In the **User administrator** pane, select **+ Add assignments**.
 
-13. Using the search box, search for **User administrator**.
+13. Search for and select **Edmund Reeve**.
 
-14. Select **User administrator**.
+14. Select **Add**.
 
-15. In the **User administrator** pane, select **+ Add assignments**.
+15. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-16. In the **Add assignments** pane, select **No member selected**.
+16. Using the search box, search for **Helpdesk administrator**.
 
-17. Search for and select **Edmund Reeve**.
+17. Select **Helpdesk administrator**.
 
-18. Select **Select**.
+18. In the **Helpdesk administrator** pane, select **+ Add assignments**
 
-19. Select **Next**
+19. Search for and select **Miranda Snider**.
 
-20. Select **Assign**.
+20. Select **Add**.
 
-21. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
-
-20. Using the search box, search for **Helpdesk administrator**.
-
-21. Select **Helpdesk administrator**.
-
-22. In the **Helpdesk administrator** pane, select **+ Add assignments**
-
-23. In the **Add assignments** pane, select **No member selected**.
-
-24. Search for and select **Miranda Snider**.
-
-25. Select **Select**.
-
-26. Select **Next**.
-
-27. Select **Assign**
-
-28. In the navigation pane, select **Home**.
+21. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 
