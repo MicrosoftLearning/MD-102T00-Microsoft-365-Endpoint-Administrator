@@ -201,64 +201,46 @@ You have been provided a list of users should have administrative roles assigned
 
 1. On SEA-SVR1, switch to Microsoft Edge.
 
-2. In the Microsoft Entra admin center, in the Navigation pane, select **Show more**.
+1. In the Microsoft Entra admin center, in the Navigation pane, select **Show more**.
 
-3. In the Navigation pane, select **Roles & admins** > **Roles & admins**.
+1. In the Navigation pane, select **Roles & admins** > **Roles & admins**.
     > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
 
-4. Using the search box, search for **Global administrator**.
+1. Using the search box, search for **Global administrator**.
 
-5. Select **Global administrator** (select the name, not the checkbox).
+1. Select **Global administrator** (select the name, not the checkbox).
 
-6. In the **Global administrator** pane, select **+ Add assignments**.
+1. In the **Global administrator** pane, select **+ Add assignments**.
 
-7. In the **Add assignments** pane, select **No member selected**.
+1. Search for and select **Allan Deyoung**.
 
-8. Search for and select **Allan Deyoung**.
+1. Select **Add**.
 
-9. Select **Select**.
+1. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-10. Select **Next**
+1. Using the search box, search for **User administrator**.
 
-11. Select **Assign**.
+1. Select **User administrator**.
 
-12. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+1. In the **User administrator** pane, select **+ Add assignments**.
 
-13. Using the search box, search for **User administrator**.
+1. Search for and select **Edmund Reeve**.
 
-14. Select **User administrator**.
+1. Select **Add**.
 
-15. In the **User administrator** pane, select **+ Add assignments**.
+1. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-16. In the **Add assignments** pane, select **No member selected**.
+1. Using the search box, search for **Helpdesk administrator**.
 
-17. Search for and select **Edmund Reeve**.
+1. Select **Helpdesk administrator**.
 
-18. Select **Select**.
+1. In the **Helpdesk administrator** pane, select **+ Add assignments**
 
-19. Select **Next**
+1. Search for and select **Miranda Snider**.
 
-20. Select **Assign**.
+1. Select **Add**.
 
-21. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
-
-20. Using the search box, search for **Helpdesk administrator**.
-
-21. Select **Helpdesk administrator**.
-
-22. In the **Helpdesk administrator** pane, select **+ Add assignments**
-
-23. In the **Add assignments** pane, select **No member selected**.
-
-24. Search for and select **Miranda Snider**.
-
-25. Select **Select**.
-
-26. Select **Next**.
-
-27. Select **Assign**
-
-28. In the navigation pane, select **Home**.
+1. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 

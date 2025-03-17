@@ -66,7 +66,7 @@ To provide additional security for user sign on events, you need to configure an
 
 13. On the **Enable multifactor authentication** message, select **Enable**.
 
-14. Once Enabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Enforced**.
+14. Once Enabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Enabled**.
 
 15. Close Microsoft Edge.
 
@@ -86,7 +86,7 @@ To provide additional security for user sign on events, you need to configure an
 
    > Typically, you will want to use the Microsoft Authenticator app to manage multi-factor authentication. However for this lab scenario, you will use text messages.
 
-7. On the **Keep your account secure** page, select **I want to set up a different method**. Chose **Phone** From the dropdown menu and then click **Confirm**.
+7. On the **Keep your account secure** page, select **I want to set up a different method**. Choose **Phone** the list of available choices.
 
 8. Enter your mobile phone number which you can receive text messages, and then select **Next**.
 
@@ -102,7 +102,7 @@ To provide additional security for user sign on events, you need to configure an
 
 13. Close Microsoft Edge.
 
-### Task 3: Remove per-user MFA
+### Task 4: Remove per-user MFA
 
 1. Switch to **SEA-SVR1**.
 
