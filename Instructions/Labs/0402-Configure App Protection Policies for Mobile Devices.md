@@ -25,7 +25,7 @@ All of the developers at Contoso have iPhones and iPads running the latest iOS/i
 
 5. On the **Microsoft Intune admin center** page, select **Apps**.
 
-6. On the **Apps | Overview** blade, under **Policy**, select **App protection policies**. 
+6. On the **Apps | Overview** blade, under **Manage apps**, select **Protection**. 
 
 7. In the details pane, select **Create policy** and then select **iOS/iPadOS**.
 
