@@ -58,9 +58,9 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 -   Microsoft Intune MDM Device CA
 -   MS-Organization-Access
--   MS-Organization-P2P-Access \[2024\]
+-   MS-Organization-P2P-Access \[2025\]
 
-    This indicates that the device is enrolled in Azure AD and Intune.
+    This indicates that the device is enrolled in Entra and Intune.
 
 3. Close the Certificates window.
 
@@ -68,7 +68,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 5. In the PowerShell console, type the following and press **Enter**: 
 
-```
+```powershell
 dsregcmd /status
 ```
 
@@ -76,7 +76,7 @@ dsregcmd /status
 
 7. In the output under **Tenant Details**, verify that the following three entries exist:
 
-```
+```cmd
 mdmUrl : https://enrollment.manage.microsoft.com/enrollmentserver/discovery.svc
 mdmTouUrl : https://portal.manage.microsoft.com/TermsofUse.aspx
 mdmComplianceUrl : https://portal.manage.microsoft.com/?portalAction=Compliance

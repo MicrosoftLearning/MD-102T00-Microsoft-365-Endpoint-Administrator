@@ -143,7 +143,7 @@ You need to use Entra and Intune to manage members of the Developers department 
     
 5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
-```
+```powershell
 (device.deviceOSType -contains "Windows")
 ```
 

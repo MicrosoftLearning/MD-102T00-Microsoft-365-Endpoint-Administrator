@@ -74,7 +74,9 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 
 16. On the **Devices | Compliance** blade, select the **Compliance settings** tab.
 
-17. On the **Compliance settings** page, toggle **Mark devices with no compliance policy assigned as** so it reads **Not compliant** and then select **Save**. 
+17. On the **Compliance settings** page, ensure **30** is visible in the **Compliance status validity period**. If it is not, enter that value.
+
+18. On the **Compliance settings** page, toggle **Mark devices with no compliance policy assigned as** so it reads **Not compliant** and then select **Save**. 
 
     > This setting will ensure that any device that does not have a compliance policy assigned will be set to **Not compliant**.
 
@@ -123,17 +125,19 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 4. On the pick an account dialog box, select **`Aaron@yourtenant.onmicrosoft.com`**.
 
-5. On the **Enter password** page, enter **Pa55w.rd1234!** and select **Sign in**. If the Microsoft Edge Save password prompt appears, select **Update**.
+5. On the **Enter password** page, enter **Pa55w.rd1234!** and select **Sign in**.
 
-6. You should receive a message that ask you to switch Edge profile. Select **Switch Edge profile**.
+    > **Note** If the Microsoft Edge Save password prompt appears, select **Update**.
 
-7. You will be prompted with a message stating, "**Continue with your work or school account**". Select Sign in to sync data.
+6. You should receive a message that asks you to switch Edge profile. Select **Switch Edge profile**.
+
+7. You will be prompted with a message stating, "**Continue with your work or school account**". Select **Sign in to sync data**.
 
 8. You will be required to enter your password again. Enter **Pa55w.rd1234!** and select **Sign in**.
 
-9. A message will appear stating, "**Stay signed in to all your Microsoft apps**". Select **no, sign in to this app only**.
+9. A dialog box will appear asking, "**Automatically sign in to all desktops apps and websites on this device?**". Select **No, sign in to this app only**.
 
-    > Note: A prompt will appear stating, "**Allow my organization to manage my device**". This is because SEA-WS3 is not joined to Entra ID and not managed by Intune. As such, you are unable to access Aarons' mailbox from this device.
+    > Note: A dialog will appear stating, "**Let's set up your profile to access org resources**". This is because SEA-WS3 is not joined to Entra ID and not managed by Intune. As such, you are unable to access Aarons' mailbox from this device.
 
 10. **Close** all windows and sign out of **SEA-WS3**.
 
