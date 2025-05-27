@@ -390,7 +390,7 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
 1. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
 
-   > Take note of the users that are assigned the Office 365 E5 license. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You can select the **Groups** tab see if the licenses assigned correctly. 
+   > Take note of the users that are assigned the Office 365 E5 license. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You can select the **Groups** tab see if the licenses assigned correctly. It may take 3-5 minutes for the licenses to reprocess.
 
 1. Close Microsoft Edge.
 
