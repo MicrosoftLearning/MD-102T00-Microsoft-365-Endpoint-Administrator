@@ -80,9 +80,7 @@ dsregcmd /status
 
 ### Task 4: Sign in to Windows and disconnect from the organization
 
-1. Switch to **SEA-WS1** and attempt to sign in as **`JoniS@yourtenant.onmicrosoft.com`**.
-
-   Notice that unlike Entra Joined devices, an Entra registered device does not allow a user to sign in to the device with an Entra credential. 
+1. Switch to **SEA-WS1** and notice that unlike Entra Joined or Entra Hybrid Joined devices, an Entra registered device only allows local accounts to be selected. 
 
 2. On SEA-WS1, sign in as **Admin** with the password of **Pa55w.rd**. 
 

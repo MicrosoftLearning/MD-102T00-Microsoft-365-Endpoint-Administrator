@@ -50,7 +50,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 14. Close the **Settings** window.
 
-### Task 2: Validate device enrollment into Entra ID And Intune
+### Task 2: Validate device enrollment into Entra ID and Intune
 
 1. On the **SEA-WS1** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**.
     

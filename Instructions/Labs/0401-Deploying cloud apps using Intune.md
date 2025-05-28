@@ -38,7 +38,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 6. On the **Apps** page, in the navigation pane, select **All apps**.
 
-7. In the details pane, select **Add**.
+7. In the details pane, select **Create**.
 
 8. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
 
@@ -139,7 +139,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 1. On **SEA-SVR1**, in the **Microsoft Intune admin center**, select **Apps**.
 
-2. In the **Apps | Overview** blade, select **All Apps**. In the details pane, select **Add**.
+2. In the **Apps | Overview** blade, select **All Apps**. In the details pane, select **Create**.
 
 3. In the **Select app type** blade, under **Microsoft 365 Apps**, select **Windows 10 and later** , and then click **Select**.
 
