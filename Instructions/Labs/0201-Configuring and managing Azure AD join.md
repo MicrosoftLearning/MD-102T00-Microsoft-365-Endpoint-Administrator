@@ -98,9 +98,8 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 2. In the PowerShell console, type the following and press **Enter**:
 
-```
+```powershell
 dsregcmd /status
-
 ```
 
 3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed.

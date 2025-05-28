@@ -22,9 +22,9 @@ To following lab(s) must be completed before this lab:
 
 ### Scenario
 
-You use Microsoft Intune to manage desktops and apps for Contoso Corporation. The Research department often connects to various servers to perform tasks and has asked for the Microsoft Remote Desktop app to be available for Research members to install as needed. The Microsoft Remote Desktop is available from the Microsoft Store, but you decide to add the app to Intune so that users can access it from the Company Portal website. A Research member named Aaron Nicholls has agreed to test the installation process after you have published the app to the portal.
+You use Microsoft Intune to manage desktops and apps for Contoso Corporation. The Research department often connects to various servers to perform tasks and has asked for the Windows App to be available for Research members to install as needed. The Windows App is available from the Microsoft Store, but you decide to add the app to Intune so that users can access it from the Company Portal website. A Research member named Aaron Nicholls has agreed to test the installation process after you have published the app to the portal.
 
-### Task 1: Add Microsoft Remote Desktop to Intune
+### Task 1: Add Windows App to Intune
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
@@ -42,17 +42,17 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 8. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
 
-9. On the **Add App** page, click **Seach the  Microsoft Store app (new)**, search for and select **Microsoft Remote Desktop**. Click **Select**.
+9. On the **Add App** page, click **Seach the  Microsoft Store app (new)**, search for and select **Windows App**. Click **Select**.
 
 10. On the **App information** page, verify the following information and then select **Next**:
-    - Name: **Microsoft Remote Desktop**
-    - Publisher: **Microsoft Corporation**
+    - Name: **Windows App**
+    - Publisher: **Microsoft Corp.**
     - Category: **Business**
     - Show this as a featured app in the Company Portal: **Yes**
 
 11. Select **Next** twice and then select **Create**.
 
-12. The Microsoft Remote Desktop page opens.
+12. The Windows App page opens.
 
     > Take note of the Properties, Device install status, and User install status nodes.
 
@@ -105,17 +105,17 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
    > Take note of the Microsoft Remote Desktop app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
 
-11. Select **Microsoft Remote Desktop**.
+11. Select **Windows App**.
 
 12. On the Microsoft Remote Desktop page, select **Install**.
 
-13. If prompted, on the **Install Microsoft Remote Desktop** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
+13. If prompted, on the **Install Windows App** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
 
    >It may take a few minutes for the app to install.
 
 14. After the app is installed close all open windows.
 
-15. Select **Start** and verify that **Remote Desktop** is displayed on the Start menu.
+15. Select **Start** and verify that **Windows App** is displayed on the Start menu.
 
 **Results**: After completing this exercise, you will have successfully added and installed a Microsoft Store App from Intune.
 
