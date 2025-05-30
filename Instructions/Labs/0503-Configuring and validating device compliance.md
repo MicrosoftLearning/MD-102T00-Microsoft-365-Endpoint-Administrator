@@ -48,6 +48,7 @@ If a device meets these requirements, it will be marked as compliant. If the dev
 7. On the **Create a policy** blade, provide the following value and select **Create**:
 
     - Platform: **Windows 10 and later**
+    - Profile type: **Windows 10/11 compliance policy**
 
 8. On the **Basics** tab, provide the following value and select **Next**:
 

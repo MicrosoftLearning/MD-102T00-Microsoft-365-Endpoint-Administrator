@@ -69,7 +69,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 ### Task 2: Configure Microsoft Defender Antivirus policy in Intune
 
-1. On the **Endpoint security |Antivirus** pane, select **Create Policy**.
+1. On the **Endpoint security | Antivirus** pane, select **Create Policy**.
 
 2. In the **Create a profile** pane, for **Platform**, select **Windows**. 
 
