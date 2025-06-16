@@ -201,46 +201,46 @@ You have been provided a list of users should have administrative roles assigned
 
 1. On SEA-SVR1, switch to Microsoft Edge.
 
-1. In the Microsoft Entra admin center, in the Navigation pane, select **Show more**.
+2. In the Microsoft Entra admin center, in the Navigation pane, select **Show more**.
 
-1. In the Navigation pane, select **Roles & admins** > **Roles & admins**.
+3. In the Navigation pane, select **Roles & admins** > **Roles & admins**.
     > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
 
-1. Using the search box, search for **Global administrator**.
+4. Using the search box, search for **Global administrator**.
 
-1. Select **Global administrator** (select the name, not the checkbox).
+5. Select **Global administrator** (select the name, not the checkbox).
 
-1. In the **Global administrator** pane, select **+ Add assignments**.
+6. In the **Global administrator** pane, select **+ Add assignments**.
 
-1. Search for and select **Allan Deyoung**.
+7. Search for and select **Allan Deyoung**.
 
-1. Select **Add**.
+8. Select **Add**.
 
-1. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+9. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-1. Using the search box, search for **User administrator**.
+10. Using the search box, search for **User administrator**.
 
-1. Select **User administrator**.
+11. Select **User administrator**.
 
-1. In the **User administrator** pane, select **+ Add assignments**.
+12. In the **User administrator** pane, select **+ Add assignments**.
 
-1. Search for and select **Edmund Reeve**.
+13. Search for and select **Edmund Reeve**.
 
-1. Select **Add**.
+14. Select **Add**.
 
-1. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+15. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-1. Using the search box, search for **Helpdesk administrator**.
+16. Using the search box, search for **Helpdesk administrator**.
 
-1. Select **Helpdesk administrator**.
+17. Select **Helpdesk administrator**.
 
-1. In the **Helpdesk administrator** pane, select **+ Add assignments**
+18. In the **Helpdesk administrator** pane, select **+ Add assignments**
 
-1. Search for and select **Miranda Snider**.
+19. Search for and select **Miranda Snider**.
 
-1. Select **Add**.
+20. Select **Add**.
 
-1. In the navigation pane, select **Home**.
+21. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 
@@ -326,73 +326,73 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
 1. In the Microsoft Entra admin center, in the navigation pane, select **Billing** > **Licenses**.
 
-1. On the **Licenses|Overview** page, under **Manage**, select **All products**.
+2. On the **Licenses|Overview** page, under **Manage**, select **All products**.
 
    > Take note of the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-1. In the Microsoft Entra admin center, in the Navigation pane, select **User experiences** > **Company branding**.
+3. In the Microsoft Entra admin center, in the Navigation pane, select **User experiences** > **Company branding**.
 
-1. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
+4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
-1. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** tab and configure the following settings:
+5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** tab and configure the following settings:
 
    - Sign-in page text: **Contoso Corp. Sign-in Page**
 
-1. Select **Review + Create**, review the settings and then select **Create**.
+6. Select **Review + Create**, review the settings and then select **Create**.
 
-1. In the Microsoft Entra admin center, in the Navigation pane, select **Users** > **All users**.
+7. In the Microsoft Entra admin center, in the Navigation pane, select **Users** > **All users**.
 
-1. In the user list, select **Cody Godinez**.
+8. In the user list, select **Cody Godinez**.
 
-1. In the Cody Godinez Profile page, under Manage, select **Licenses**.
+9. In the Cody Godinez Profile page, under Manage, select **Licenses**.
 
    > Notice that Cody does not have any current license assignments. And that licensing must now be performed in the 365 Admin center.
 
-1. Open a new tab in **Microsoft Edge**, in the address bar, enter **https://admin.microsoft.com**.
+10. Open a new tab in **Microsoft Edge**, in the address bar, enter **https://admin.microsoft.com**.
 
-1. In the navigation pane on the left, select **Users** > **Active users**.
+11. In the navigation pane on the left, select **Users** > **Active users**.
 
-1. In the user list, select **Cody Godinez** (select the name, not the checkbox).
+12. In the user list, select **Cody Godinez** (select the name, not the checkbox).
 
-1. Select the **Licenses and apps** tab.
+13. Select the **Licenses and apps** tab.
 
-1. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
+14. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
 
-1. Select **Save changes**.
+15. Select **Save changes**.
 
-1. Once the changes have been saved, select the **X** in the upper-right corner to close the **Cody Godinez** pane. 
+16. Once the changes have been saved, select the **X** in the upper-right corner to close the **Cody Godinez** pane. 
 
-1. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
+17. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
 
-1. In the **Subscriptions** list, select **Enterprise Mobility + Security E5**.
+18. In the **Subscriptions** list, select **Enterprise Mobility + Security E5**.
 
-1. Select the **Groups** tab, and then select **+ Assign licenses**.
+19. Select the **Groups** tab, and then select **+ Assign licenses**.
 
-1. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
+20. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
 
-1. Select **Assign**.
+21. Select **Assign**.
 
-1. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
+22. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
 
-1. In the upper-left corner of the **Enterprise Mobility + Security E5** page, select the **Back to licenses** link.
+23. In the upper-left corner of the **Enterprise Mobility + Security E5** page, select the **Back to licenses** link.
 
-1. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
+24. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
 
-1. Select the **Groups** tab, and then select **+ Assign licenses**.
+25. Select the **Groups** tab, and then select **+ Assign licenses**.
 
-1. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
+26. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
 
-1. Select **Assign**.
+27. Select **Assign**.
 
-1. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
+28. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
 
-1. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
+29. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
 
-1. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
+30. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
 
    > Take note of the users that are assigned the Office 365 E5 license. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You can select the **Groups** tab see if the licenses assigned correctly. It may take 3-5 minutes for the licenses to reprocess.
 
-1. Close Microsoft Edge.
+31. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you should have successfully created and managed groups, modified company branding, and assigned licenses.
 
