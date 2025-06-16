@@ -212,7 +212,7 @@ You have been provided a list of users should have administrative roles assigned
 
 6. In the **Global administrator** pane, select **+ Add assignments**.
 
-7. Search for and select **Allan Deyoung**.
+7. Under **Select members**, select **No member selected**, then search for and select **Allan Deyoung**.
 
 8. Select **Add**.
 
@@ -224,7 +224,7 @@ You have been provided a list of users should have administrative roles assigned
 
 12. In the **User administrator** pane, select **+ Add assignments**.
 
-13. Search for and select **Edmund Reeve**.
+13. Under **Select members**, select **No member selected**, then search for and select **Edmund Reeve**.
 
 14. Select **Add**.
 
@@ -236,7 +236,7 @@ You have been provided a list of users should have administrative roles assigned
 
 18. In the **Helpdesk administrator** pane, select **+ Add assignments**
 
-19. Search for and select **Miranda Snider**.
+19. Under **Select members**, select **No member selected**, then search for and select **Miranda Snider**.
 
 20. Select **Add**.
 
