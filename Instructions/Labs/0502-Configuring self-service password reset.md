@@ -44,35 +44,35 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 1. On **SEA-SVR1**, on the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com/**, and then press **Enter**.
 
-1. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
+2. Sign in as **`Admin@yourtenant.onmicrosoft.com`**, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
    > The Microsoft Entra admin center opens.
 
-1. In the navigation pane, under **Protection**, select **Authentication methods**. 
+3. In the navigation pane, under **Protection**, select **Authentication methods**. 
 
-1. Ensure that **SMS** and **Email OTP** show **Yes**** in the **Enabled** \(third\) column. 
+4. Ensure that **SMS** and **Email OTP** show **Yes**** in the **Enabled** \(third\) column. 
 
-1. In the Microsoft Entra admin center, in the navigation pane, under **Protection**, select **Password reset**.
+5. In the Microsoft Entra admin center, in the navigation pane, under **Protection**, select **Password reset**.
 
-1. In the **Password reset | Properties** window, select **All** to enable self-service password reset to all users. Select **Save**.
+6. In the **Password reset | Properties** window, select **All** to enable self-service password reset to all users. Select **Save**.
 
-1. In the **Password reset | Properties** window, select **Authentication methods** and then select **Security questions**.
+7. In the **Password reset | Properties** window, select **Authentication methods** and then select **Security questions**.
 
-1. For the **Number of questions required to register**, select **3**.
+8. For the **Number of questions required to register**, select **3**.
 
-1. For the **Number of questions required to reset**, select **3**.
+9. For the **Number of questions required to reset**, select **3**.
 
-1. In the **Select security questions** section, select **No security questions configured**, then select **Predefined**. Select three questions of your choice, and then select **Ok** twice.
+10. In the **Select security questions** section, select **No security questions configured**, then select **Predefined**. Select three questions of your choice, and then select **Ok** twice.
 
-1. Select **Save**.
+11. Select **Save**.
 
-1. Select **Registration** Select **No** for **Require users to register when signing in**, and then select **Save**.
+12. Select **Registration** Select **No** for **Require users to register when signing in**, and then select **Save**.
 
-1. In the navigation pane, select **On-premises integration**.
+13. In the navigation pane, select **On-premises integration**.
 
-1. Verify that your on-premises writeback client is running.
+14. Verify that your on-premises writeback client is running.
 
-1. Close Microsoft Edge.
+15. Close Microsoft Edge.
 
 ### Task 3: Validate self-service password reset
 

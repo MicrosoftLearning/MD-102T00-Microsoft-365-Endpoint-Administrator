@@ -14,51 +14,65 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In the address bar, enter `http://www.microsoft.com/en-us/download/details.aspx?id=47594`
+3. In the address bar, enter `https://entra.microsoft.com`
 
-4. On the Microsoft Entra Connect page, select **Download**.
+4. In the left navigantion pane, expand **Identity** and the select **Show more**.
+
+5. In the left navigation pane, expand **Hybrid management** and then select **Microsoft Entra Connect**.
+
+6. On the **Microsoft Entra Connect | Get started** pane, select the **Manage** tab.
+
+7. In the **Manage your infrastructure** page, select **Download Connect Sync Agent**.
+
+8. Select **Accept terms & download**. 
+
+    >**Note**: The AzureAConnect.msi file will now download in the background. You **will not** see the download occur. 
+
+9. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+On the Microsoft Entra Connect page, select **Download**.
 
     > Azure AD Connect automatically downloads to the **Downloads** folder on SEA-SVR1.
 
-5. Select **Open downloads folder** and then in the **Downloads** window, double-click **AzureADConnect.msi**.
+10. Select **Open downloads folder** and then in the **Downloads** window, double-click **AzureAdConnect.msi**.
 
-6. In the **Microsoft Entra Connect Sync** wizard, on the **Welcome to Microsoft Entra Connect Sync** page, select the **I agree to the license terms and privacy notice** check box, and then select **Continue**.
+11. In the **Microsoft Entra Connect Sync** wizard, on the **Welcome to Microsoft Entra Connect Sync** page, select the **I agree to the license terms and privacy notice** check box, and then select **Continue**.
 
-7. On the **Express Settings** page, select **Customize**.
+12. On the **Express Settings** page, select **Customize**.
 
-8. On the **Install required components** page, select **Install**.
+13. On the **Install required components** page, select **Install**.
 
-9. On the **User sign-in** page, ensure that **Password Hash Synchronization** is selected, and then select **Next**.
+14. On the **User sign-in** page, ensure that **Password Hash Synchronization** is selected, and then select **Next**.
 
-10. On the **Connect to Microsoft Entra ID** page, in the **USERNAME** boxes, enter **admin@yourtenant.onmicrosoft.com**, and then select **Next**.
+15. On the **Connect to Microsoft Entra ID** page, in the **USERNAME** boxes, enter **admin@yourtenant.onmicrosoft.com**, and then select **Next**.
 
-11. In the **Sign in to your account** window, enter **admin@yourtenant.onmicrosoft.com**, select **Next**, then enter your tenant password, and select **Sign in**.
+16. In the **Sign in to your account** window, enter **admin@yourtenant.onmicrosoft.com**, select **Next**, then enter your tenant password, and select **Sign in**.
 
-12. On the **Connect your directories** page, ensure that **Contoso.com** is listed under **FOREST**, and then select **Add Directory**.
+17. On the **Connect your directories** page, ensure that **Contoso.com** is listed under **FOREST**, and then select **Add Directory**.
 
-13. In the **AD forest account** window, select the **Create New AD Account** option, and in the **ENTERPRISE ADMIN USERNAME** field, type **Contoso\\Administrator**, and then type **Pa55w.rd** in the **PASSWORD** field. Select **OK**, and then select **Next**.
+18. In the **AD forest account** window, select the **Create New AD Account** option, and in the **ENTERPRISE ADMIN USERNAME** field, type **Contoso\\Administrator**, and then type **Pa55w.rd** in the **PASSWORD** field. Select **OK**, and then select **Next**.
 
-14. On the **Microsoft Entra sign-in configuration** page, ensure that in the **USER PRINCIPAL NAME** drop-down list, the **userPrincipalName** value is selected. 
+19. On the **Microsoft Entra sign-in configuration** page, ensure that in the **USER PRINCIPAL NAME** drop-down list, the **userPrincipalName** value is selected. 
 
-15. Select **Continue without matching all UPN suffixes to verified domains** and then select **Next**.
+20. Select **Continue without matching all UPN suffixes to verified domains** and then select **Next**.
 
-16. On the **Domain and OU filtering** page, select **Sync selected domains and OUs**.
+21. On the **Domain and OU filtering** page, select **Sync selected domains and OUs**.
 
-17. Expand **Contoso.com**, clear the checkbox next to **Contoso.com** and ensure that the only following check boxes are selected: **IT**, **Managers**, **Marketing**, **Research**, and **Sales**. Select **Next**.
+22. Expand **Contoso.com**, clear the checkbox next to **Contoso.com** and ensure that the only following check boxes are selected: **IT**, **Managers**, **Marketing**, **Research**, and **Sales**. Select **Next**.
 
-18. On the **Uniquely identifying your users** page, select **Next**.
+23. On the **Uniquely identifying your users** page, select **Next**.
 
-19. On the **Filter users and devices** page, select **Next**.
+24. On the **Filter users and devices** page, select **Next**.
 
-20. On the **Optional features** page, review available options, but do not make any changes. Ensure that **Password hash synchronization** is selected, and then select **Next**.
+25. On the **Optional features** page, review available options, but do not make any changes. Ensure that **Password hash synchronization** is selected, and then select **Next**.
 
-21. On the **Ready to configure** page, ensure that **Start the synchronization process when configuration completes** is selected, and then select **Install**.
+26. On the **Ready to configure** page, ensure that **Start the synchronization process when configuration completes** is selected, and then select **Install**.
 
-22. When configuration is complete, select **Exit**.  
+27. When configuration is complete, select **Exit**.  
 
     > Note: At this time, synchronization of objects from your local Active Directory Domain Services (AD DS) and Entra ID begins. You should wait approximately 3-4 minutes for this process to complete. Or check progress in the Synchronization Service application.
 
-23. Close all open windows.
+28. Close all open windows.
 
 #### Task 2: Verify synchronization in Entra ID
 

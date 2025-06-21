@@ -58,7 +58,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 2. In the PowerShell console, type the following and press **Enter**: 
 
-```
+```powershell
 dsregcmd /status
 ```
 
@@ -74,15 +74,13 @@ dsregcmd /status
 
 8. Verify that the **Join Type** is listed as **Microsoft Entra registered** and that the owner is **Joni Sherman**. 
 
-   Notice that the device is Microsoft Entra registered, NOT Microsoft Entra joined. Entra registered devices are typically devices that cannot be Entra joined, or devices that are personally owned by the user. Registering a device will provide access to Cloud based resources.
+   > Notice that the device is Microsoft Entra registered, NOT Microsoft Entra joined. Entra registered devices are typically devices that cannot be Entra joined, or devices that are personally owned by the user. Registering a device will provide access to Cloud based resources.
 
 9. Close Microsoft Edge.
 
 ### Task 4: Sign in to Windows and disconnect from the organization
 
-1. Switch to **SEA-WS1** and attempt to sign in as **`JoniS@yourtenant.onmicrosoft.com`**.
-
-   Notice that unlike Entra Joined devices, an Entra registered device does not allow a user to sign in to the device with an Entra credential. 
+1. Switch to **SEA-WS1** and notice that unlike Entra Joined or Entra Hybrid Joined devices, an Entra registered device only allows local accounts to be selected. 
 
 2. On SEA-WS1, sign in as **Admin** with the password of **Pa55w.rd**. 
 

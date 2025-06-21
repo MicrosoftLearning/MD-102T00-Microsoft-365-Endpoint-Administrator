@@ -98,9 +98,8 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 2. In the PowerShell console, type the following and press **Enter**:
 
-```
+```powershell
 dsregcmd /status
-
 ```
 
 3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed.
@@ -179,7 +178,7 @@ dsregcmd /status
 
 ### Scenario
 
-Some Contoso Windows devices are currently joined to the local Active Directory Domain Services. To enable those devices to seamlessly access cloud services you plan to enable Entra hybrid join. You will test Entra hybrid join by re-configuring Azure AD Connect and testing out the process on SEA-CL2.
+Some Contoso Windows devices are currently joined to the local Active Directory Domain Services. To enable those devices to seamlessly access cloud services you plan to enable Entra hybrid join. You will test Entra hybrid join by re-configuring Entra Connect sync and testing out the process on SEA-CL2.
 
 ### Task 1: Prepare the environment
 
@@ -199,7 +198,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 8. Close **Active Directory Users and Computers**.
 
-### Task 2: Configure Entra hybrid join in Azure Active Directory Connect
+### Task 2: Configure Entra hybrid join in Entra Connect sync
 
 1. On **SEA-SVR1**, on the **Desktop**, double-click **Azure AD Connect**.
 
@@ -231,7 +230,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 15. At the sign-in page, select the **Power** button and then select **Restart**.
 
-    >**Note** Restarting **SEA-CL2** will enable quicker discovery of the SCP created by reconfiguring Entra Connect Sync.
+    > **Note** Restarting **SEA-CL2** will enable quicker discovery of the SCP created by reconfiguring Entra Connect Sync.
 
 16. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
 
@@ -275,7 +274,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 5. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
 
-```
+```powershell
 dsregcmd /status
 ```
 

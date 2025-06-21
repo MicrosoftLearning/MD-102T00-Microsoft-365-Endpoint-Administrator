@@ -143,7 +143,7 @@ You need to use Entra and Intune to manage members of the Developers department 
     
 5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
-```
+```powershell
 (device.deviceOSType -contains "Windows")
 ```
 
@@ -179,11 +179,9 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 4. In the **Access work or school** section, select the **Connected to Contoso's Azure AD** link and then select **Info**.
 
-5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
+5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. **Wait** for the synchronization to complete. 
 
-6. Close the **Settings** app.
-
-   _Note: The sync progress may take up to 15 minutes before the profile is applied to the Windows 11 device. Signing out or restarting the device can accelerate this process. PIN **102938**_
+6. Once the sync has completed, close the **Settings** app.
 
 7. On **SEA-WS1**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
 

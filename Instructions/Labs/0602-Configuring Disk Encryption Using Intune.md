@@ -48,7 +48,7 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 10. On the **Configurations settings** tab, expand **BitLocker** and then configure the following option:
 
-     - Require Device Encyrption: **Enabled**
+     - Require Device Encryption: **Enabled**
 
 11. On the **Configurations settings** tab, scroll down to **Operating System Drives** and then configure the following options, leaving all other options to their defaults:
 
