@@ -48,7 +48,7 @@ You've also been told that several more employees will be hired over the next co
 
 8. At the Stay signed in prompt, select **No**. The Entra admin center opens.
 
-9. In the Microsoft Entra admin center, in the navigation pane, select **Users** and in the expanded menu that appears select **All users**.
+9. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
 
     > Take note of the users that already exist as members of the Microsoft Entra ID. The **On-premises sync enabled** column states **No** for all current users. This indicates that each user was created directly in Microsoft Entra ID and not synchronized from an on-premises directory service.
 
@@ -135,15 +135,15 @@ You've also been told that several more employees will be hired over the next co
 
 2. In the **PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
 
-```powershell
-Install-Module Microsoft.Graph -Scope CurrentUser
-```
+    ```powershell
+    Install-Module Microsoft.Graph -Scope CurrentUser
+    ```
 
 3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
 
-```powershell
-Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
-```
+    ```powershell
+    Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
+    ```
 
 4. A new tab in **Microsoft Edge** will appear prompting you to sign in. In the **Sign in to your account** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant password, and then select **Sign in**.
 
@@ -153,31 +153,31 @@ Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
 
 7. Back In the **PowerShell 7** window, type the following code to create a new profile object, and then press **enter**. Replace **Pa55w.rd** with a complex password of your choice:
 
-```powershell
-$PWProfile = @{
-    Password = "Pa55w.rd";
-    ForceChangePasswordNextSignIn = $false
-}
-```
+    ```powershell
+    $PWProfile = @{
+        Password = "Pa55w.rd";
+        ForceChangePasswordNextSignIn = $false
+    }
+    ```
 
 8. Next, type the following code to create a new user, and then press **Enter**. Ensure "yourtenant" matches your assigned tenant name:
 
-```powershell
-New-MgUser `
-    -DisplayName "Cody Godinez" `
-    -GivenName "Cody" -Surname "Godinez" `
-    -MailNickname "cgodinez" `
-    -UsageLocation "US" `
-    -UserPrincipalName "cgodinez@yourtenant.onmicrosoft.com" `
-    -PasswordProfile $PWProfile -AccountEnabled `
-    -Department "Sales" -JobTitle "Sales Rep"
-```
+    ```powershell
+    New-MgUser `
+        -DisplayName "Cody Godinez" `
+        -GivenName "Cody" -Surname "Godinez" `
+        -MailNickname "cgodinez" `
+        -UsageLocation "US" `
+        -UserPrincipalName "cgodinez@yourtenant.onmicrosoft.com" `
+        -PasswordProfile $PWProfile -AccountEnabled `
+        -Department "Sales" -JobTitle "Sales Rep"
+    ```
 
 9. To confirm that the user **Cody Godinez** was created, In the **PowerShell 7** window, type the following command and then press **Enter**:
 
-```powershell
-Get-MgUser
-```
+    ```powershell
+    Get-MgUser
+    ```
 
 > Verify that the list of users from your tenant is displayed. 
 
@@ -201,46 +201,44 @@ You have been provided a list of users should have administrative roles assigned
 
 1. On SEA-SVR1, switch to Microsoft Edge.
 
-2. In the Microsoft Entra admin center, in the Navigation pane, select **Show more**.
-
-3. In the Navigation pane, select **Roles & admins** > **Roles & admins**.
+2. In the Microsoft Entra admin center, in the Navigation pane, select **Roles & admins**.
     > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
 
-4. Using the search box, search for **Global administrator**.
+3. Using the search box, search for **Global administrator**.
 
-5. Select **Global administrator** (select the name, not the checkbox).
+4. Select **Global administrator** (select the name, not the checkbox).
 
-6. In the **Global administrator** pane, select **+ Add assignments**.
+5. In the **Global administrator** pane, select **+ Add assignments**.
 
-7. Under **Select members**, select **No member selected**, then search for and select **Allan Deyoung**.
+6. Under **Select members**, select **No member selected**, then search for and select **Allan Deyoung**.
 
-8. Select **Add**.
+7. Select **Add**.
 
-9. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+8. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-10. Using the search box, search for **User administrator**.
+9. Using the search box, search for **User administrator**.
 
-11. Select **User administrator**.
+10. Select **User administrator**.
 
-12. In the **User administrator** pane, select **+ Add assignments**.
+11. In the **User administrator** pane, select **+ Add assignments**.
 
-13. Under **Select members**, select **No member selected**, then search for and select **Edmund Reeve**.
+12. Under **Select members**, select **No member selected**, then search for and select **Edmund Reeve**.
 
-14. Select **Add**.
+13. Select **Add**.
 
-15. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+14. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-16. Using the search box, search for **Helpdesk administrator**.
+15. Using the search box, search for **Helpdesk administrator**.
 
-17. Select **Helpdesk administrator**.
+16. Select **Helpdesk administrator**.
 
-18. In the **Helpdesk administrator** pane, select **+ Add assignments**
+17. In the **Helpdesk administrator** pane, select **+ Add assignments**
 
-19. Under **Select members**, select **No member selected**, then search for and select **Miranda Snider**.
+18. Under **Select members**, select **No member selected**, then search for and select **Miranda Snider**.
 
-20. Select **Add**.
+19. Select **Add**.
 
-21. In the navigation pane, select **Home**.
+20. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 
@@ -260,7 +258,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 ### Task 1: Create groups by using the Microsoft Entra admin center
 
-1. On **SEA-SVR1**, in the Microsoft Entra admin center, in the navigation pane, select **Groups** > **All groups**.
+1. On **SEA-SVR1**, in the Microsoft Entra admin center, in the navigation pane, select **Groups**.
 
 2. Select **New group**.
 
@@ -282,41 +280,41 @@ You also been asked to modify the Company branding for the sign-in page.
 
 2. In the **PowerShell 7** window, type the following code to create a new group, and then press **Enter**:
 
-```powershell
-New-MgGroup -DisplayName "Contoso_Sales" -Description "Contoso Sales team users" -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
-```
+    ```powershell
+    New-MgGroup -DisplayName "Contoso_Sales" -Description "Contoso Sales team users" -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
+    ```
 
 3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
 
-```powershell
-Get-MgGroup
-```
+    ```powershell
+    Get-MgGroup
+    ```
 
 4. Verify that you get the list of groups in your tenant, including the Contoso_Sales group you just created.
 
 5. In the **PowerShell 7** window, type the following code to define a variable as the Contoso_Sales group, and then press **Enter**:
 
-```powershell
-$group = Get-MgGroup | Where-Object {$_.DisplayName -eq "Contoso_Sales"}
-```
+    ```powershell
+    $group = Get-MgGroup | Where-Object {$_.DisplayName -eq "Contoso_Sales"}
+    ```
 
 6. In the **PowerShell 7** window, type the following code to define another variable as the user, and then press **Enter**:
 
-```powershell
-$user = Get-MgUser | Where-Object {$_.DisplayName -eq "Cody Godinez"}
-```
+    ```powershell
+    $user = Get-MgUser | Where-Object {$_.DisplayName -eq "Cody Godinez"}
+    ```
 
 7. In the **PowerShell 7** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
 
-```powershell
-New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
-```
+    ```powershell
+    New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
+    ```
 
 8. In the **PowerShell 7** window, type the following code, and then press **Enter**:
 
-```powershell
-Get-MgGroupMember -GroupId $group.Id | FL
-```
+    ```powershell
+    Get-MgGroupMember -GroupId $group.Id | FL
+    ```
 
 9. Verify that you see **Cody Godinez** as value in **AdditionalProperties**.
 
@@ -330,7 +328,7 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
    > Take note of the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-3. In the Microsoft Entra admin center, in the Navigation pane, select **User experiences** > **Company branding**.
+3. In the Microsoft Entra admin center, in the Navigation pane, select **Custom branding**.
 
 4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
@@ -340,7 +338,7 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
 6. Select **Review + Create**, review the settings and then select **Create**.
 
-7. In the Microsoft Entra admin center, in the Navigation pane, select **Users** > **All users**.
+7. In the Microsoft Entra admin center, in the Navigation pane, select **Users**.
 
 8. In the user list, select **Cody Godinez**.
 

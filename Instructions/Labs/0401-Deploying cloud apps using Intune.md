@@ -58,7 +58,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Task 2: Assign a Group to the App
 
-1. In the Microsoft Remote Desktop page, select **Properties**.
+1. In the Windows App page, select **Properties**.
 
 2. In the details pane, scroll down to the **Assignments** section and then select **Edit**.
 
@@ -93,7 +93,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 6. Sign in as **Aaron Nicholls**.
 
-7. On the Contoso web portal, select **Devices**.
+7. On the Contoso web portal, select **View Devices**.
 
 8. On the Devices page, select **Tap here to tell us which device you're using or add a new device**.
 
@@ -103,11 +103,11 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 10. At the top-left corner, select the navigation button and then select **Apps**.
 
-   > Take note of the Microsoft Remote Desktop app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
+   > Take note of the Windows app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
 
 11. Select **Windows App**.
 
-12. On the Microsoft Remote Desktop page, select **Install**.
+12. On the Windows App page, select **Install**.
 
 13. If prompted, on the **Install Windows App** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
 

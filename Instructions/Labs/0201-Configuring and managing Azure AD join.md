@@ -28,43 +28,41 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
-
-5. Select **Devices** > **All devices**.
+4. In the Microsoft Entra admin center, in the navigation pane, select **Devices**, and then select **All devices**.
 
    > Notice that there are no devices found, as you have not joined any devices yet.
 
-6. On the **Devices | All devices** page, select **Device settings**.
+5. On the **Devices | All devices** page, select **Device settings**.
 
-7. On the **Devices|Device settings** page, in the details pane, under **Users may join devices to Microsoft Entra**, verify that **All** is selected. 
+6. On the **Devices|Device settings** page, in the details pane, under **Users may join devices to Microsoft Entra**, verify that **All** is selected. 
 
    > This indicates that all Entra users are permitted to join Windows 10 or newer devices to Microsoft Entra. Note that this setting does not apply to Entra hybrid  joined devices, or devices joined by using Windows Autopilot self-deployment mode.
 
-8. In the **Require Multi-factor Authentication to register or join devices with Microsoft Entra** section, verify that the setting is set to **No**. 
+7. In the **Require Multi-factor Authentication to register or join devices with Microsoft Entra** section, verify that the setting is set to **No**. 
 
-9. In the **Maximum number of devices per user** section, select **20**.
+8. In the **Maximum number of devices per user** section, select **20**.
 
-10. Under **Local administrator settings**, select **Manage Additional local administrators on all Entra joined devices**. The Device Administrators page opens.
+9. Under **Local administrator settings**, select **Manage Additional local administrators on all Entra joined devices**. The Device Administrators page opens.
 
-11. In the Device Administrators page, select **Add assignments**.
+10. In the Device Administrators page, select **Add assignments**.
 
-12. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
+11. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
 
     > Allan Deyoung will now be added as a Device Administrator on all Entra joined devices.
 
-13. Scroll back to or select the **Devices | Device settings** navigation link at the top of the page.
+12. Scroll back to or select the **Devices | Device settings** navigation link at the top of the page.
 
-14. On the Device settings page, select **Save**.
+13. On the Device settings page, select **Save**.
 
-15. In the Microsoft Entra admin center, in the navigation pane, expand **Protection**.
+14. In the Microsoft Entra admin center, in the navigation pane, expand **Protection**.
 
-16. Select **Authentication methods**.
+15. Select **Authentication methods**.
 
-17. Select **SMS**.
+16. Select **SMS**.
 
-18. Select **Enable**.
+17. Select **Enable**.
 
-19. At the bottom of the page, select **Save**.
+18. At the bottom of the page, select **Save**.
 
 ### Task 2: Perform an Entra Join
 
@@ -290,7 +288,7 @@ dsregcmd /status
 
 8. Switch to **SEA-SVR1** and switch to the Microsoft Entra admin center.
 
-9. Expand **Identity**, and then select **Devices** > **All devices**. 
+9. Select **Devices** > **All devices**. 
 
 10. Verify that **SEA-CL2** has **Microsoft Entra hybrid joined** as value for the row **Join Type**. If necessary, select the **Refresh** button if SEA-CL2 is not listed.
 

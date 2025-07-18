@@ -44,9 +44,10 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 13. In the Edit rule syntax text box, add the following simple membership rule and select **OK**.
 
-```
-(device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))
-```
+    ```cmd
+    (device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))
+    ```
+
 14. Select **Save** to close **Dynamic membership rules**, and then select **Create** to create the group.
 
 ### Task 2: Generate a device-specific comma-separated value (CSV) file
@@ -57,29 +58,29 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 3. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
-```powershell
-Install-Script -Name Get-WindowsAutoPilotInfo
-```
+    ```powershell
+    Install-Script -Name Get-WindowsAutoPilotInfo
+    ```
 
 4. You will receive three prompts. Each time, type **Y**, and then press **Enter**.
 
 5. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
-```powershell
-Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
-```
+    ```powershell
+    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+    ```
 
 6. At the Windows PowerShell command-line prompt, type the following cmdlet, and then press **Enter**:
 
-```powershell
-Get-WindowsAutoPilotInfo.ps1 -OutputFile C:\Computer.csv
-```
+    ```powershell
+    Get-WindowsAutoPilotInfo.ps1 -OutputFile C:\Computer.csv
+    ```
 
 7. At the Windows PowerShell command-line prompt, type the following command, press **Enter**, and then review the file content:
 
-```cmd
-type C:\Computer.csv
-```
+    ```cmd
+    type C:\Computer.csv
+    ```
 
 8. Close **Windows Terminal**.
 

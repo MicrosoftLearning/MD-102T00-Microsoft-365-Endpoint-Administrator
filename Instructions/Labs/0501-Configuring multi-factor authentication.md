@@ -82,7 +82,7 @@ To provide additional security for user sign on events, you need to configure an
 
 5. On the **Enter password** page, enter the tenant password and select **Sign in**.
 
-6. At the **More information required** page, select **Next**. The Keep your account secure page opens.
+6. At the **Let's keep your account secure** page, select **Next**. The Keep your account secure page opens.
 
    > Typically, you will want to use the Microsoft Authenticator app to manage multi-factor authentication. However for this lab scenario, you will use text messages.
 
@@ -92,15 +92,19 @@ To provide additional security for user sign on events, you need to configure an
 
 9. After you receive the verification code as a text message, enter the code where indicated on the **Keep your account secure** page and then select **Next**.
 
-10. On the **Keep your account secure** page, you will receive a message "Great job! You have successfully set up your security info. Choose **Done** to continue signing in." Select **Done**.
+10. On the **Keep your account secure** page, you will receive a message "Verification complete. Your phone has been registered". Select **Next**.
 
-11. At the Stay signed in message, select **No**. 
+11. On the **Keep your account secure** page, you will receive a message "Great job! You have successfully set up your security info". Select **Done**.
+
+12. At the Stay signed in message, select **No**. 
 
     > Outlook on the Web opens to Alex Wilber's inbox.
 
-12. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
+13. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
 
-13. Close Microsoft Edge.
+14. At the top-right corner, select the **Account manager for Alex Wilber** and then select **Sign out**.
+
+15. Close Microsoft Edge.
 
 ### Task 4: Remove per-user MFA
 
@@ -166,7 +170,7 @@ To provide additional security for user sign on events, you need to configure an
 
    > The Microsoft Entra admin center opens.
 
-4. In the navigation pane, expand **Protection** page, and then select **Conditional Access**.
+4. In the navigation pane, under **Entra ID**, select **Conditional Access**.
 
 5. On the **Conditional Access** page, select **Policies**, and then select **+ New policy**.
 
@@ -236,7 +240,7 @@ To provide additional security for user sign on events, you need to configure an
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, expand **Protection** and then select **Conditional Access**.
+4. In the Microsoft Entra admin center, in the navigation pane, under **Entra ID**, select **Conditional Access**.
 
 5. On the **Conditional Access** page, select **Policies** and then select **Contoso MFA Policy**.
 

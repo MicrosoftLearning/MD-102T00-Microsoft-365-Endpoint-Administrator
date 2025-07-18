@@ -10,7 +10,7 @@ In this lab, you will perform Entra registration using a Windows device.
 
 Several users have asked to use their personal iOS, Android, and Windows devices to access Contoso cloud resources. Since Contoso does not own the Windows devices, you do not want to have the users perform an Entra join (only WIndows devices can be Entra joined). Instead, you need to ensure that users are able to register their devices with Entra, which still allows you to apply company policy to apps as needed, and still permit users to access Contoso resources. You will test out Entra device registration using a Windows 11 device.
 
-### Task 1: Configure Azure AD device registration
+### Task 1: Configure Entra ID device registration
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
@@ -20,13 +20,11 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
+4. In the Microsoft Entra admin center, in the navigation pane, select **Devices**, and then select **All devices**. 
 
-5. Select **Devices** > **All devices**. 
+5. On the **Devices | All devices** page, select **Device settings**.
 
-6. On the **Devices | All devices** page, select **Device settings**.
-
-7. On the **Devices|Device settings** page, in the details pane, verify that **Users may register their devices with Microsoft Entra** is set to **All** and is greyed out.
+6. On the **Devices|Device settings** page, in the details pane, verify that **Users may register their devices with Microsoft Entra** is set to **All** and is greyed out.
 
    > This option is greyed out and set to **All** by default when Microsoft Intune is enable in the tenant. This ensures that all users are able to register Windows 10 or newer personal, iOS, Android, and macOS devices with Entra.
 
