@@ -103,7 +103,7 @@ You have been asked to configure SEA-WS2 as a Windows 11 kiosk to allow Contoso 
 
    > Additional options display based upon the mode selected.
 
-7. On the **Configuration settings** blade, select the following options, and then select **Next**:
+7. On the **Configuration settings** blade, select the following options (making sure to overtype the Kiosk URL), and then select **Next**:
 
    - User logon type: **Auto logon (Windows 10, version 1803 and later, or Windows 11)**
    - Application type: **Add Microsoft Edge browser**

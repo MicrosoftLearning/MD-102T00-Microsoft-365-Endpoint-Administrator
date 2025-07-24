@@ -24,9 +24,9 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 3. In Microsoft Edge, in the address bar, type **https://entra.microsoft.com**, and then press **Enter**. If prompted, sign in with your **`Admin@yourtenant.onmicrosoft.com`** and the default tenant password.
 
-4. In the navigation pane, Expand **Identity**.
+4. In the navigation pane, Expand **Entra ID**.
 
-5. Under **Groups**, select **All groups**.
+5. Select **Groups** and then select **All groups**.
 
 6. In the **Groups | All groups** blade, select **New group**.
 

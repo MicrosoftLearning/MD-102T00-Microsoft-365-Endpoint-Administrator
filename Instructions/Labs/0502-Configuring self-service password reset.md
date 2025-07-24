@@ -66,13 +66,15 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 11. Select **Save**.
 
-12. Select **Registration** Select **No** for **Require users to register when signing in**, and then select **Save**.
+12. Select **Registration**.
 
-13. In the navigation pane, select **On-premises integration**.
+13. In the **Registration** page, ensure the checkbox for **Require users to register when signing in?** is unchecked \(empty\) and then select **Save**.
 
-14. Verify that your on-premises writeback client is running.
+14. In the navigation pane, select **On-premises integration**.
 
-15. Close Microsoft Edge.
+15. Verify that your on-premises writeback client is running.
+
+16. Close Microsoft Edge.
 
 ### Task 3: Validate self-service password reset
 

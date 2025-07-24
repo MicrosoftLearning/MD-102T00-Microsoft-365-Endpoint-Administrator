@@ -54,15 +54,13 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 13. On the Device settings page, select **Save**.
 
-14. In the Microsoft Entra admin center, in the navigation pane, expand **Protection**.
+14. Select **Authentication methods**.
 
-15. Select **Authentication methods**.
+15. Select **SMS**.
 
-16. Select **SMS**.
+16. Select **Enable**.
 
-17. Select **Enable**.
-
-18. At the bottom of the page, select **Save**.
+17. At the bottom of the page, select **Save**.
 
 ### Task 2: Perform an Entra Join
 
@@ -96,9 +94,9 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 2. In the PowerShell console, type the following and press **Enter**:
 
-```powershell
-dsregcmd /status
-```
+   ```powershell
+   dsregcmd /status
+   ```
 
 3. In the output under **Device State**, verify that **AzureAdJoined : YES** is displayed.
 
@@ -118,13 +116,11 @@ dsregcmd /status
 
 9. Switch to **SEA-SVR1**.
 
-10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
-
-11. Select **Devices**, and then select **All devices**. 
+10. In Microsoft Edge, in the Microsoft Entra admin center, select **Devices**, and then select **All devices**. 
 
     > In the Devices pane, notice that SEA-WS1 is listed. 
 
-12. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
+11. Verify that the **Join Type** is listed as **Microsoft Entra joined** and that the owner is **Joni Sherman**. 
 
     > Also note that the MDM column shows None. This indicates that this device is not yet managed by Microsoft Intune.
 
@@ -248,7 +244,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 7. On the **Domain and OU filtering** page, ensure that **Sync selected domains and OUs** is selected and then expand **Contoso.com**.
 
-8. Select the check box next to **Entra ID clients**. Do not make any other changes and then select **Next**.
+8. Select the check box next to **Entra ID clients**. **Do not make any other changes** and then select **Next**.
 
 9. In the **Optional features** page, do not make any changes and then select **Next**.
 
@@ -272,9 +268,9 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 5. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
 
-```powershell
-dsregcmd /status
-```
+   ```powershell
+   dsregcmd /status
+   ```
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** and **DomainJoined : YES** are displayed.
 
