@@ -34,7 +34,7 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 6. On the **Endpoint security | Overview** page, select **Disk encryption**.
 
-7. On the **Endpoint security | Disk encryption** blade, in the details pane, select **Create Policy**.
+7. On the **Endpoint security | Disk encryption** blade, in the details pane, select **+ Create Policy**.
 
 8. In the **Create a profile** page, select the following options, and then select **Create**:
 
@@ -56,9 +56,9 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
      - Require additional authentication at startup: **Enabled**
      - Configure minimum PIN length for startup: **Enabled**
      - Choose how Bitlocker-protected operating system drives can be recovered: **Enabled**
-     - Do not enable Bitlocker until recovery info is stored to AD DS: **True**
+     - Do not enable Bitlocker until recovery information is stored to AD DS for operating system drives: **True**
      - Omit recovery options from the BitLocker setup wizard: **True**
-     - Save Bitlocker recovery info to AD DS: **True**
+     - Save Bitlocker recovery information to AD DS for operating system drives: **True**
 
 12. On the **Configurations settings** page, select **Next**.
 

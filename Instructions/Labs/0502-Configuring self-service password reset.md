@@ -48,15 +48,15 @@ The Help Desk has indicated that a large number of support tickets are related t
 
    > The Microsoft Entra admin center opens.
 
-3. In the navigation pane, under **Protection**, select **Authentication methods**. 
+3. In the navigation pane, under **Entra ID**, select **Authentication methods**. 
 
-4. Ensure that **SMS** and **Email OTP** show **Yes**** in the **Enabled** \(third\) column. 
+4. Ensure that **SMS** and **Email OTP** show **Yes** in the **Enabled** \(third\) column. 
 
-5. In the Microsoft Entra admin center, in the navigation pane, under **Protection**, select **Password reset**.
+5. In the Microsoft Entra admin center, in the navigation pane, under **Entra ID**, select **Password reset**.
 
 6. In the **Password reset | Properties** window, select **All** to enable self-service password reset to all users. Select **Save**.
 
-7. In the **Password reset | Properties** window, select **Authentication methods** and then select **Security questions**.
+7. In the **Password reset | Properties** window, select **Authentication methods** and then select the **Security questions** checkbox.
 
 8. For the **Number of questions required to register**, select **3**.
 
@@ -94,7 +94,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 8. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
 
-9. On the **My Account** page, in the navigation pane, select **Password**.
+9. On the **My Account** page, in the navigation pane, select **Change Password**.
 
 10. On the **Change password** page, enter the following information and then select **submit**:
      - Old password: **Pa55w.rd**

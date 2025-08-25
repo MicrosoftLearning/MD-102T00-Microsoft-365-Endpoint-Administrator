@@ -38,7 +38,7 @@ Settings will be verified by testing on an enrolled device, SEA-WS1 and a non-en
 
 5. From the navigation pane select **Endpoint security**, then select **Antivirus**.
 
-6. On the **Endpoint security | Antivirus** pane, select **Create Policy**.
+6. On the **Endpoint security | Antivirus** pane, select **+ Create Policy**.
 
 7. In the **Create a profile** pane, for **Platform**, select **Windows**. 
 

@@ -220,9 +220,9 @@ You have been provided a list of users should have administrative roles assigned
 
 2. In the Microsoft Entra admin center, in the Navigation pane, select **Show more**.
 
-3. In the Navigation pane, select **Roles & admins** > **Roles & admins**.
-    > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
+3. In the Navigation pane, under **Entra ID**, select **Roles & admins**, and select **All roles**.
 
+    > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
 4. Using the search box, search for **Global administrator**.
 
 5. Select **Global administrator** (select the name, not the checkbox).
@@ -231,33 +231,45 @@ You have been provided a list of users should have administrative roles assigned
 
 7. Under **Select members**, select **No member selected**, then search for and select **Allan Deyoung**.
 
-8. Select **Add**.
+8. Click **Select** and then **Next**.
 
-9. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+9. in the **A assignments | setting** page, under **Assignment type**, select **Active**, and in the **Enter justification** box type **Global administrator**.
 
-10. Using the search box, search for **User administrator**.
+10. Select **Assign**.
 
-11. Select **User administrator**.
+11. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-12. In the **User administrator** pane, select **+ Add assignments**.
+12. Using the search box, search for **User administrator**.
 
-13. Under **Select members**, select **No member selected**, then search for and select **Edmund Reeve**.
+13. Select **User administrator**.
 
-14. Select **Add**.
+14. In the **User administrator** pane, select **+ Add assignments**.
 
-15. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
+15. Under **Select members**, select **No member selected**, then search for and select **Edmund Reeve**.
 
-16. Using the search box, search for **Helpdesk administrator**.
+16. Click **Select** and then **Next**.
 
-17. Select **Helpdesk administrator**.
+17. in the **A assignments | setting** page, under **Assignment type**, select **Active**, and in the **Enter justification** box type **User administrator**.
 
-18. In the **Helpdesk administrator** pane, select **+ Add assignments**
+18. Select **Assign**.
 
-19. Under **Select members**, select **No member selected**, then search for and select **Miranda Snider**.
+19. In the navigation breadcrumbs, select **Roles & administrators | All roles**.
 
-20. Select **Add**.
+20. Using the search box, search for **Helpdesk administrator**.
 
-21. In the navigation pane, select **Home**.
+21. Select **Helpdesk administrator**.
+
+22. In the **Helpdesk administrator** pane, select **+ Add assignments**
+
+23. Under **Select members**, select **No member selected**, then search for and select **Miranda Snider**.
+
+24. Click **Select** and then **Next**.
+
+25. in the **A assignments | setting** page, under **Assignment type**, select **Active**, and in the **Enter justification** box type **Helpdesk administrator**.
+
+26. Select **Assign**.
+
+27. In the navigation pane, select **Home**.
 
 **Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
 
@@ -277,7 +289,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 ### Task 1: Create groups by using the Microsoft Entra admin center
 
-1. On **SEA-SVR1**, in the Microsoft Entra admin center, in the navigation pane, select **Groups** > **All groups**.
+1. On **SEA-SVR1**, in the Microsoft Entra admin center, in the navigation pane,under **Entra ID**, select **Groups** > **All groups**.
 
 2. Select **New group**.
 
@@ -347,7 +359,7 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
    > Take note of the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-3. In the Microsoft Entra admin center, in the Navigation pane, select **User experiences** > **Company branding**.
+3. In the Microsoft Entra admin center, in the Navigation pane,under **Entra ID**, select **Custom branding**.
 
 4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
@@ -387,7 +399,7 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
 20. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
 
-21. Select **Assign**.
+21. Select **Assign Licenses**.
 
 22. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
 
@@ -399,7 +411,7 @@ Get-MgGroupMember -GroupId $group.Id | FL
 
 26. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
 
-27. Select **Assign**.
+27. Select **Assign Licenses**.
 
 28. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
 
