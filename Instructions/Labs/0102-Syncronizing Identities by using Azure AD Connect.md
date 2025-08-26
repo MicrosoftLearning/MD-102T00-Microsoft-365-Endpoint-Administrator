@@ -24,8 +24,6 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 7. Select **Accept terms & download**. 
 
-    >**Note**: The AzureAConnect.msi file will now download in the background. You **will not** see the download occur. 
-
     >**Note**: Azure AD Connect automatically downloads to the **Downloads** folder on SEA-SVR1.
 
 8. Select **Open downloads folder** and then in the **Downloads** window, double-click **AzureAdConnect.msi**.
@@ -84,11 +82,11 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 6. At the Stay signed in prompt, select **No**. The Entra admin center opens.
 
-7. In the Microsoft Entra admin center, in the navigation pane, select **Users** > **All users**.
+7. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
 
 8. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
 
-9. In the Navigation pane, under **Entra ID**, select **Groups** > **All groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
+9. In the Navigation pane, select **Groups**, then select **All Groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
 
 10. Select the **Managers** group.
 

@@ -103,7 +103,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 10. At the top-left corner, select the navigation button and then select **Apps**.
 
-   > Take note of the app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
+   > Take note of the Windows app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
 
 11. Select **Windows App**.
 
