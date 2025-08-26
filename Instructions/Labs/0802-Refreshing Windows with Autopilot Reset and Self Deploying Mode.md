@@ -49,7 +49,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 13. For **Convert all targeted devices to Autopilot** select **No**, and then select **Next**.
 
-14. On the **Out-of-box experience (OOBE)** tab, ensure that the **Deployment mode** is set to **Self-Deploying (preview)**.
+14. On the **Out-of-box experience (OOBE)** tab, ensure that the **Deployment mode** is set to **Self-Deploying**.
 
 15. Ensure that the following options are set:
 
@@ -76,11 +76,11 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 5. At the message prompt, select **Yes**.
 
-6. Switch to **SEA-WS3-GTL**.
+6. Switch to **SEA-WS3**.
 
-   > Note: SEA-WS3-GTL should still be running from the previous lab.
+   > Note: SEA-WS3 should still be running from the previous lab.
 
-7. Restart **SEA-WS3-GTL**.
+7. Restart **SEA-WS3**.
 
    > Note: This process can take 30-45 minutes and will reboot several times during the process. 
 
@@ -106,7 +106,7 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 10. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
-11. On **SEA-WS3-GTL**, close the **Settings** window.
+11. On **SEA-WS3**, close the **Settings** window.
 
     **Results**: After completing this exercise, you will have provisioned a Windows device with Autopilot Reset using Self-Deploying mode.
 

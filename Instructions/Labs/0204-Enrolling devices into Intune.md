@@ -52,9 +52,9 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 ### Task 2: Validate device enrollment into Entra ID and Intune
 
-1. On the **SEA-WS1** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**.
-    
-2. In the **Certificates** console, in the navigation pane, expand **Personal** and select the **Certificate** node. Verify that the following certificates are listed in the details pane:
+1. On the **SEA-WS1** taskbar, select **Start**, type **cert**, and select **Manage computer certificates**. At the **User Account Control**, select **Yes**.
+  
+2. In the **Certificates** console, in the navigation pane, expand **Personal** and select the **Certificates** node. Verify that the following certificates are listed in the details pane:
 
 -   Microsoft Intune MDM Device CA
 -   MS-Organization-Access
@@ -92,7 +92,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 3. At the **Use Windows Hello with your account** page, select **OK**.
 
-4. On the **More information required** page, select **Next**.
+4. On the **Let's keep your account secure** page, select **Next**.
 
 5. On the **Keep your account secure** page, select **I want to set up a different method**.
 
@@ -118,7 +118,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 3. In the navigation pane, select **Devices**.
 
-4. On the **Devices | Overview** blade under **Intune enrolled devices**, verify that **1** is displayed next to **Windows**. It may take a while to display.
+4. On the **Devices | Overview** blade under **Manage devices by platform**, verify that **1** is displayed next to **Windows**. It may take a while to display.
 
 5. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS1** is listed.
 
@@ -128,7 +128,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 7. Open a new tab in **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
-8. In the Microsoft Entra admin center, expand **Identity**.
+8. In the Microsoft Entra admin center, expand **Entra ID**.
 
 9. Select **Devices**, then select **All devices**. 
 

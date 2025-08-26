@@ -16,7 +16,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 3. In the address bar, enter `https://entra.microsoft.com`
 
-4. In the left navigation pane, select **Entra Connect**.
+4. In the left navigantion pane, under **Entra ID**, select **Entra Connect**.
 
 5. On the **Microsoft Entra Connect | Get started** pane, select the **Manage** tab.
 
@@ -24,7 +24,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 7. Select **Accept terms & download**. 
 
-    >**Note**: The AzureAConnect.msi file will now download in the background. You **will not** see the download occur. 
+    >**Note**: Azure AD Connect automatically downloads to the **Downloads** folder on SEA-SVR1.
 
 8. Select **Open downloads folder** and then in the **Downloads** window, double-click **AzureAdConnect.msi**.
 

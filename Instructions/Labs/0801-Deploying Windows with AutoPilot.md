@@ -47,7 +47,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
     ```cmd
     (device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))
     ```
-
+    
 14. Select **Save** to close **Dynamic membership rules**, and then select **Create** to create the group.
 
 ### Task 2: Generate a device-specific comma-separated value (CSV) file
@@ -108,7 +108,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 8. On the Windows enrollment blade, in the details pane, select **Deployment Profiles**.
 
-9. On the **Windows AutoPilot deployment profiles** blade, select **Create profile** and then select **Windows PC**.
+9. On the **Windows AutoPilot deployment profiles** blade, select **+ Create profile** and then select **Windows PC**.
 
 10. In the **Basics** tab, in the **Name** text box, type **Contoso profile1**.
 
@@ -189,7 +189,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 
 13. Switch to **SEA-SVR1**.
 
-14. In the Microsoft Entra admin center, expand **Identity**, expand **Devices** and then select **All devices**. 
+14. In the Microsoft Entra admin center, expand **Entra ID**, expand **Devices** and then select **All devices**. 
 
     > Note that the new device displays with an icon that indicates an Autopilot device. Also note that the Join Type is **Microsoft Entra joined** with Aaron Nicholls as the owner.
 

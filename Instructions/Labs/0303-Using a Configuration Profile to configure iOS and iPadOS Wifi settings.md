@@ -46,7 +46,7 @@ You have been asked to create a Configuration profile to be used to automaticall
 
 1. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
-2. On the **Devices | Overview** page, scroll down and select **Configuration**.
+2. On the **Devices** page, under **Manage devices** section, select **Configuration**.
 
 3. On the **Devices | Configuration** blade, in the details pane, select **+ Create**, and then select **+ New Policy**.
 

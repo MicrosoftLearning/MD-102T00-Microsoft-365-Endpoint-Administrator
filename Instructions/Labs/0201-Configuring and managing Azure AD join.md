@@ -44,7 +44,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 9. Under **Local administrator settings**, select **Manage Additional local administrators on all Entra joined devices**. The Device Administrators page opens.
 
-10. In the Device Administrators page, select **Add assignments**.
+10. In the Device Administrators page, select **+ Add assignments**.
 
 11. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
 
@@ -132,7 +132,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 2. At the **Use Windows Hello with your account** page, select **OK**.
 
-3. On the **More information required** page, select **Next**.
+3. On the **Let's keep your account secure** page, select **Next**.
 
 4. On the **Keep your account secure** page, select **I want to set up a different method**.
 

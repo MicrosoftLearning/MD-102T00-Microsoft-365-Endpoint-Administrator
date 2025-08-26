@@ -71,7 +71,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 5. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
-6. On the **Devices | Overview** page, select **Configuration**.
+6. On the **Devices** page, under the **Manage devices** section, select **Configuration**.
 
 7. On the **Devices | Configuration** blade, in the details pane, select **+ Create**, and then select **+ New policy**.
 
@@ -155,7 +155,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
 
-2. On the **Devices | Overview** blade, select **Configuration**.
+2. On the **Devices** blade, under **Manage devices** section, select **Configuration**.
 
 3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer – standard** profile.
 
@@ -179,7 +179,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 4. In the **Access work or school** section, select the **Connected to Contoso's Azure AD** link and then select **Info**.
 
-5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. **Wait** for the synchronization to complete. 
+5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
 
 6. Once the sync has completed, close the **Settings** app.
 
@@ -215,7 +215,7 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and then select **Configuration**. 
+2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and under the **Manage devices** section, select **Configuration**. 
 
 3. On the **Devices | Configuration** blade, in the details pane select **Contoso Developer -  standard**.
 

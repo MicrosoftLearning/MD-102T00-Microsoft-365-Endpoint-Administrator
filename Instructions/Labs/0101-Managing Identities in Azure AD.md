@@ -131,27 +131,45 @@ You've also been told that several more employees will be hired over the next co
 
 ### Task 2: Create users by using PowerShell
 
-1. On **SEA-SVR1**, click into the **Windows Search** bar and then type **PWSH**. Right click on **PowerShell 7** and then select **Run as Administrator**.
+# Steps to install PowerShell 7.5.2 on SEA-SVR1
 
-2. In the **PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
+1. On **SEA-SVR1**, open **Microsoft Edge**.  
+
+2. In the address bar, enter **https://github.com/PowerShell/powershell/releases/download/v7.5.2/PowerShell-7.5.2-win-x64.msi**  
+
+3. On the taskbar, select **File Explorer**, then navigate to your **Downloads** folder.  
+
+4. Double-click **PowerShell-7.5.2-win-x64.msi** to launch the setup wizard.  
+
+   - Select **Next**  
+   - Leave the **Destination Folder** as is, then select **Next**  
+   - Leave the **Optional Actions** as is, then select **Next**  
+   - Leave the checkboxes blank under *Use Microsoft Update to help keep your computer secure and up to date*, then select **Next**  
+   - Select **Install**  
+
+5. On the **Installation completed successfully** window, check **Launch PowerShell**, then select **Finish**.  
+
+   > **Note:** If the installer closed without launching PowerShell, click the **Windows Search** bar, type **pwsh**, right-click **PowerShell 7**, and select **Run as administrator**.  
+
+6. In the **PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
 
     ```powershell
     Install-Module Microsoft.Graph -Scope CurrentUser
     ```
 
-3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
+7. In the **PowerShell 7** window, type the following command, and then press **Enter**:
 
     ```powershell
     Connect-MgGraph -scopes "user.readwrite.all, group.readwrite.all"
     ```
 
-4. A new tab in **Microsoft Edge** will appear prompting you to sign in. In the **Sign in to your account** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant password, and then select **Sign in**.
+8. A new tab in **Microsoft Edge** will appear prompting you to sign in. In the **Sign in to your account** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant password, and then select **Sign in**.
 
-5. On the **Permissions Requested** prompt that appears, check **Consent on behalf of your organization** and then select **Accept**.
+9. On the **Permissions Requested** prompt that appears, check **Consent on behalf of your organization** and then select **Accept**.
 
-6. Close out of the **Authentication complete** tab and then minimize **Microsoft Edge**
+10. Close out of the **Authentication complete** tab and then minimize **Microsoft Edge**
 
-7. Back In the **PowerShell 7** window, type the following code to create a new profile object, and then press **enter**. Replace **Pa55w.rd** with a complex password of your choice:
+11. Back In the **PowerShell 7** window, type the following code to create a new profile object, and then press **enter**. Replace **Pa55w.rd** with a complex password of your choice:
 
     ```powershell
     $PWProfile = @{
@@ -159,8 +177,8 @@ You've also been told that several more employees will be hired over the next co
         ForceChangePasswordNextSignIn = $false
     }
     ```
-
-8. Next, type the following code to create a new user, and then press **Enter**. Ensure "yourtenant" matches your assigned tenant name:
+    
+12. Next, type the following code to create a new user, and then press **Enter**. Ensure "yourtenant" matches your assigned tenant name:
 
     ```powershell
     New-MgUser `
@@ -173,7 +191,7 @@ You've also been told that several more employees will be hired over the next co
         -Department "Sales" -JobTitle "Sales Rep"
     ```
 
-9. To confirm that the user **Cody Godinez** was created, In the **PowerShell 7** window, type the following command and then press **Enter**:
+13. To confirm that the user **Cody Godinez** was created, In the **PowerShell 7** window, type the following command and then press **Enter**:
 
     ```powershell
     Get-MgUser
@@ -202,6 +220,7 @@ You have been provided a list of users should have administrative roles assigned
 1. On SEA-SVR1, switch to Microsoft Edge.
 
 2. In the Microsoft Entra admin center, in the Navigation pane, select **Roles & admins**.
+
     > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
 
 3. Using the search box, search for **Global administrator**.
@@ -328,7 +347,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
    > Take note of the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5**.
 
-3. In the Microsoft Entra admin center, in the Navigation pane, select **Custom branding**.
+3. In the Microsoft Entra admin center, in the Navigation pane,under **Entra ID**, select **Custom branding**.
 
 4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
@@ -368,7 +387,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 20. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
 
-21. Select **Assign**.
+21. Select **Assign Licenses**.
 
 22. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
 
@@ -380,7 +399,7 @@ You also been asked to modify the Company branding for the sign-in page.
 
 26. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
 
-27. Select **Assign**.
+27. Select **Assign Licenses**.
 
 28. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
 
