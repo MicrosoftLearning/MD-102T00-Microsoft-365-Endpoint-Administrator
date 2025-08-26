@@ -28,7 +28,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Entra ID**.
 
 5. Select **Devices** > **All devices**.
 
@@ -46,7 +46,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 10. Under **Local administrator settings**, select **Manage Additional local administrators on all Entra joined devices**. The Device Administrators page opens.
 
-11. In the Device Administrators page, select **Add assignments**.
+11. In the Device Administrators page, select **+ Add assignments**.
 
 12. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
 
@@ -56,7 +56,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 14. On the Device settings page, select **Save**.
 
-15. In the Microsoft Entra admin center, in the navigation pane, expand **Protection**.
+15. In the Microsoft Entra admin center, in the navigation pane, expand **Entra ID**.
 
 16. Select **Authentication methods**.
 
@@ -120,7 +120,7 @@ dsregcmd /status
 
 9. Switch to **SEA-SVR1**.
 
-10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
+10. In Microsoft Edge, in the Microsoft Entra admin center, expand **Entra ID**.
 
 11. Select **Devices**, and then select **All devices**. 
 
@@ -138,7 +138,7 @@ dsregcmd /status
 
 2. At the **Use Windows Hello with your account** page, select **OK**.
 
-3. On the **More information required** page, select **Next**.
+3. On the **Let's keep your account secure** page, select **Next**.
 
 4. On the **Keep your account secure** page, select **I want to set up a different method**.
 
@@ -290,7 +290,7 @@ dsregcmd /status
 
 8. Switch to **SEA-SVR1** and switch to the Microsoft Entra admin center.
 
-9. Expand **Identity**, and then select **Devices** > **All devices**. 
+9. Expand **Entra ID**, and then select **Devices** > **All devices**. 
 
 10. Verify that **SEA-CL2** has **Microsoft Entra hybrid joined** as value for the row **Join Type**. If necessary, select the **Refresh** button if SEA-CL2 is not listed.
 

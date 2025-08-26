@@ -38,7 +38,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 6. On the **Apps** page, in the navigation pane, select **All apps**.
 
-7. In the details pane, select **Create**.
+7. In the details pane, select **+ Create**.
 
 8. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
 
@@ -58,7 +58,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Task 2: Assign a Group to the App
 
-1. In the Microsoft Remote Desktop page, select **Properties**.
+1. In the **Windows App** page, under **Manage**,  select **Properties**.
 
 2. In the details pane, scroll down to the **Assignments** section and then select **Edit**.
 
@@ -93,7 +93,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 6. Sign in as **Aaron Nicholls**.
 
-7. On the Contoso web portal, select **Devices**.
+7. On the Contoso web portal, select **View Devices**.
 
 8. On the Devices page, select **Tap here to tell us which device you're using or add a new device**.
 
@@ -103,11 +103,11 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 10. At the top-left corner, select the navigation button and then select **Apps**.
 
-   > Take note of the Microsoft Remote Desktop app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
+   > Take note of the app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
 
 11. Select **Windows App**.
 
-12. On the Microsoft Remote Desktop page, select **Install**.
+12. On the Windows App page, select **Install**.
 
 13. If prompted, on the **Install Windows App** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
 
@@ -129,7 +129,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 1. On **SEA-WS1**, on the taskbar, select **Start** and then select the **Settings** app.
 
-2. In the **Settings** app, select **Apps** and on the **Apps & features** page.
+2. In the **Settings** app, select **Apps**, and then select **Apps & features**.
 
    > Verify that **Microsoft 365 Apps for enterprise - en-us** is not listed.
 
@@ -203,7 +203,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 5. Close the **Settings** app and select the **Start** button.
 
-6. In the app list, scroll down to **W** and select **Word** and verify that the app opens.
+6. Select all apps, scroll down to **W** and select **Word** and verify that the app opens.
 
    > _Note: Recall in a previous lab, you removed recently added apps from the Start Menu._
 

@@ -20,7 +20,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, expand **Identity**.
+4. In the Microsoft Entra admin center, in the navigation pane, expand **Entra ID**.
 
 5. Select **Devices** > **All devices**. 
 
@@ -68,7 +68,7 @@ dsregcmd /status
 
 5. Switch to **SEA-SVR1**.
 
-6. In Microsoft Edge, in the Microsoft Entra admin center, expand **Identity**.
+6. In Microsoft Edge, in the Microsoft Entra admin center, expand **Entra ID**.
 
 7. Select **Devices**, then select **All devices**. In the Devices pane, notice that SEA-WS1 is listed. 
 

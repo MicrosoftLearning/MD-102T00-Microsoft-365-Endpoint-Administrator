@@ -81,7 +81,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
    > Notice that there is a Default device type restriction that is assigned to **All Users**. This default restriction allows all device types.
 
-5. In the details pane, select the **Android restrictions** tab, and then select **Create restriction**.
+5. In the details pane, select the **Android restrictions** tab, and then select **+ Create restriction**.
 
 6. On the Create restriction page, in the Name box enter **Android Personal Device Restriction**. Select **Next**.
 
@@ -98,7 +98,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 11. Search for and Select **Sales** and then click **Select** and then click **Next**.
 
-12. On the Review + create page, select **Create**.
+12. On the **Review + create** page, select **Create**.
 
     > Notice the Android Personal Device Restriction assigned with a priority of 1.
 
@@ -106,7 +106,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
     > Notice that there is a Default device limit restriction that is assigned to **All Users**. This default restriction sets a device enrollment limit to 5 devices per user.
 
-14. In the details pane, select **Create restriction**.
+14. In the details pane, select **+ Create restriction**.
 
 15. On the Create restriction page, in the Name box enter **Sales Device Enrollment Limit**. Select **Next**.
 
@@ -118,7 +118,7 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 19. Search for and Select **Sales** and then click **Select** and then click **Next**.
 
-20. On the Review + create page, select **Create**.
+20. On the **Review + create** page, select **Create**.
 
     > Notice the Sales Device Enrollment Limit, configured with a Device limit of 10 and assigned with a priority of 1.
 
