@@ -132,7 +132,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 4. Ensure that you get the message that the user name or password is incorrect.
 
-5. Sign in to **SEA-CL1** as **Contoso\\Aaron** with the password **Pa55w.rd1234!**. 
+5. Sign in to **SEA-CL1** as **Contoso\\Aaron** with the password **Pa55w.rd1234!**
 
    > You should be able to sign in. This confirms that the password you changed in the MyAccount portal is written back to the local Active Directory Domain Services (AD DS) account.
 
