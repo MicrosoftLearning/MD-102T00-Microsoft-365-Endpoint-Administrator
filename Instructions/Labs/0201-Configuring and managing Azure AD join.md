@@ -54,11 +54,11 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 13. On the Device settings page, select **Save**.
 
-14. Select **Authentication methods**.
+14. In the Entra admin center, in the navigation pane, select **Authentication methods**.
 
-15. Select **SMS**.
+15. In the **Authentication methods** page, select **SMS**.
 
-16. Select **Enable**.
+16. In the **SMS settings** page, select **Enable** (to make SMS available as an authenticatiom method).
 
 17. At the bottom of the page, select **Save**.
 

@@ -68,7 +68,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 12. Select **Registration**.
 
-13. In the **Registration** page, ensure the checkbox for **Require users to register when signing in?** is unchecked \(empty\) and then select **Save**.
+13. In the **Registration** page, ensure the **Require users to register when signing in?** option is set to **No**** and then select **Save**.
 
 14. In the navigation pane, select **On-premises integration**.
 
