@@ -60,7 +60,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 -   MS-Organization-Access
 -   MS-Organization-P2P-Access \[2025\]
 
-    This indicates that the device is enrolled in Entra and Intune.
+    This indicates that the device is Entra joined and Intune enrolled.
 
 3. Close the Certificates window.
 

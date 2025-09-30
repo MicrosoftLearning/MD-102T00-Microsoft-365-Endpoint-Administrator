@@ -150,7 +150,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 5: Remove a Windows device from Entra
 
-1. On SEA-WS1, signed in as **azuread\jonisherman**, select **Start** and then select **Settings**.
+1. On SEA-WS1, whilst still signed in as **Joni Sherman**, select **Start** and then select **Settings**.
 
 2. In the **Settings** window, select **Accounts**.
 
