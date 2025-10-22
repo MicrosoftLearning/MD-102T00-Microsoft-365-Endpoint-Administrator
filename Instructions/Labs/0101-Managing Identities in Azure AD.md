@@ -337,7 +337,13 @@ You also been asked to modify the Company branding for the sign-in page.
 
 9. Verify that you see **Cody Godinez** as value in **AdditionalProperties**.
 
-10. Close PowerShell 7.
+10. In the **PowerShell 7** window, type the following code, and then press **Enter**:
+
+    ```powershell
+    Disconnect-MgGraph
+    ```
+
+11. Close PowerShell 7.
 
 ### Task 3: Review licenses and modify company branding
 
