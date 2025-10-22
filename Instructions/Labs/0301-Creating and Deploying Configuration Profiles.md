@@ -86,15 +86,15 @@ You need to use Entra and Intune to manage members of the Developers department 
 - Name: **Contoso Developer - standard**
 - Description: **Basic restrictions and configuration for Contoso Developers.**
 
-10. On the **Configurations settings** tab, expand **Control Panel and Settings**. 
+10. On the **Configurations settings** tab, expand the **Control Panel and Settings** section. 
 
 11. Select **Block** next to the **Gaming** and **Privacy** options.
 
-12. On the **Device restrictions** tab, expand **Start**. 
+12. On the same page, expand the  **Start** section. 
 
 13. Scroll down and select **Block** next to **Most used apps**, **Recently added apps** and **Recently opened items in Jump Lists**.
 
-14. On the **Device restrictions** tab, scroll down and expand **Microsoft Defender Antivirus**. 
+14. On the same page, scroll down and expand the **Microsoft Defender Antivirus** section. 
 
 15. Under **Microsoft Defender Antivirus,** scroll down and expand **Microsoft Defender Antivirus Exclusions**.
 
@@ -140,12 +140,12 @@ You need to use Entra and Intune to manage members of the Developers department 
 3. Under the **Dynamic Device Members** section, select **Add dynamic query**. 
 
 4. On the **Dynamic membership rules** blade, in the **Rule syntax** section, select **Edit**. 
-    
+
 5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
-```powershell
-(device.deviceOSType -contains "Windows")
-```
+   ```powershell
+   (device.deviceOSType -contains "Windows")
+   ```
 
 6. On the **Dynamic membership rules** blade, select **Save**.
 

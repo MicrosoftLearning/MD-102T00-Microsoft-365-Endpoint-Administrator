@@ -60,7 +60,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 -   MS-Organization-Access
 -   MS-Organization-P2P-Access \[2025\]
 
-    This indicates that the device is enrolled in Entra and Intune.
+    This indicates that the device is Entra joined and Intune enrolled.
 
 3. Close the Certificates window.
 
@@ -118,7 +118,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 3. In the navigation pane, select **Devices**.
 
-4. On the **Devices | Overview** blade under **Manage devices by platform**, verify that **1** is displayed next to **Windows**. It may take a while to display.
+4. On the **Devices | Overview** blade under **Manage devices by platform**, verify that **1** is displayed under **Windows**. It may take a while to display.
 
 5. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS1** is listed.
 
@@ -128,13 +128,11 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 7. Open a new tab in **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
-8. In the Microsoft Entra admin center, expand **Entra ID**.
-
-9. Select **Devices**, then select **All devices**. 
+8. In the Microsoft Entra admin center, in the navigation pane, select **Devices**, then select **All devices**. 
 
    > Take note of SEA-WS1. Notice that the Join Type column displays **Microsoft Entra joined** and the MDM column displays **Microsoft Intune**.
 
-10. Close all open Windows.
+9. Close all open Windows.
 
 **Results**: After completing this exercise, you will have successfully joined a Windows client to Entra ID and verified that the device has automatically enrolled in to Microsoft Intune.
 

@@ -16,7 +16,7 @@ To following lab(s) must be completed before this lab:
 
 ### Scenario
 
-You need to prepare for device management using Microsoft Intune. First of all, you need to ensure that users are assigned appropriate licenses for device management. As a verification test, you will assign Aaron Nicholls the required licenses. You also need to ensure that any Windows device that is joined or registered to Entra ID will automatically be enrolled into Intune. You have also been asked to ensure that members of the Sales group are restricted from enrolling personal Android and iOS devices into Intune and that the Enrollment Device Limit is increased to 10 devices. Finally, you need to configure Allan Deyoung as a Device enrollment manager to allow him to enroll 1000 devices.
+You need to prepare for device management using Microsoft Intune. First of all, you need to ensure that users are assigned appropriate licenses for device management. As a verification test, you will assign Aaron Nicholls the required licenses. You also need to ensure that any Windows device that is joined or registered to Entra ID will automatically be enrolled into Intune. You have also been asked to ensure that members of the Sales group are restricted from enrolling personal Android devices into Intune and that the Enrollment Device Limit is increased to 10 devices. Finally, you need to configure Allan Deyoung as a Device enrollment manager to allow him to enroll 1000 devices.
 
 ### Task 1: Review and assign licenses for device management
 
@@ -28,27 +28,19 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
    > The Microsoft 365 admin center opens.
 
-4. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Your products**.
+4. In the Microsoft 365 admin center navigation pane, select **Users** > **Active users**.
 
-5. On the **Your products** page, take note of the licenses that are available in the tenant. 
+5. Select **Aaron Nicholls** (select the name, not the checkbox).
 
-6. Select **Enterprise Mobility + Security E5 Demo Trial**. 
-  
-7. Scroll down the page, and select the **View apps and services included with this subscription** link. Take note of the services included in the Enterprise Mobility + Security E5 license. Microsoft Intune is one of the supported services for this license.
+6. Select the **Licenses and apps** tab.
 
-8. In the Microsoft 365 admin center navigation pane, select **Users** > **Active users**.
+7. If the **Select location** field is not populated, select the a location from the drop-down list.
 
-9. Select **Aaron Nicholls** (select the name, not the checkbox).
+8. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
 
-10. Select the **Licenses and apps** tab.
+9. Select **Save Changes**.
 
-11. If the **Select location** field is not populated, select the a location from the drop-down list.
-
-12. Select the check boxes next to **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
-
-13. Select **Save Changes**.
-
-14. Once the changes have been saved, close the **Microsoft 365 admin center** tab in Edge. 
+10. Once the changes have been saved, close the **Microsoft 365 admin center** tab in Edge. 
 
 
 ### Task 2: Enable Windows Automatic Enrollment into Microsoft Intune
