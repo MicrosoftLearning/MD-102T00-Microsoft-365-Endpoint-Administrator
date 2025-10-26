@@ -45,7 +45,7 @@ Contoso IT is planning to roll out a deployment of new Windows 11 devices using 
 13. In the Edit rule syntax text box, add the following simple membership rule and select **OK**.
 
     ```cmd
-    (device.devicePhysicalIDs -any (_ -contains "[ZTDId]"))
+    (device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))
     ```
     
 14. Select **Save** to close **Dynamic membership rules**, and then select **Create** to create the group.
