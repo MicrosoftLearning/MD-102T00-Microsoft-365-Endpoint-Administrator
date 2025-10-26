@@ -8,7 +8,7 @@ In this lab you will learn how perform a remote Autopilot reset.
 
 To following lab(s) must be completed before this lab:
 
-- 0101-Managing Identities in Azure AD
+- 0101-Managing Identities in Entra ID
 
 - 0102-Synchronizing identities by using Entra Connect
 
@@ -100,9 +100,9 @@ SEA-WS4 has been deployed by using Windows Autopilot. You need to test out anoth
 
 7. Select **Start** and select **Settings**. 
 
-8. Select **Accounts**, and then select **Access work or school**. Verify the device is connected to Contoso's Azure AD.
+8. Select **Accounts**, and then select **Access work or school**. Verify the device is connected to Contoso's Entra ID.
 
-9. Select **Connected to Contoso's Azure AD** and select **Info**.
+9. Select **Connected to Contoso's ENTRA ID** and select **Info**.
 
 10. On the **Managed by Contoso** page, scroll down and then select **Sync**.
 
