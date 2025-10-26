@@ -20,7 +20,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 1. Sign in to **SEA-SVR1** as **Contoso\\Administrator** with the password **Pa55w.rd** and close **Server Manager**.
 
-2. On the desktop, double-click **Azure AD Connect**.
+2. On the desktop, double-click **Entra ID Connect**.
 
 3. On the **Welcome to Microsoft Entra Connect Sync** page, select **Configure**.
 
