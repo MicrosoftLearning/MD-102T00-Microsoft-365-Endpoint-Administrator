@@ -78,7 +78,7 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 
 3. In the **Settings** app, select **Accounts** and then select **Access work or school**.
 
-4. In the **Access work or school** section, select the **Connected to Contoso's Azure AD** link and then select **Info**. Select **Sync**.
+4. In the **Access work or school** section, select the **Connected to Contoso's Entra ID** link and then select **Info**. Select **Sync**.
 
 5. Select the **Encryption needed** notification.
 
