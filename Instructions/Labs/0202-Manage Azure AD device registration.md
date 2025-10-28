@@ -20,7 +20,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, select **Devices**, and then select **All devices**. 
+4. In the Microsoft Entra admin center, in the navigation pane, select **View Devices**, and then select **All devices**. 
 
 5. On the **Devices | All devices** page, select **Device settings**.
 
