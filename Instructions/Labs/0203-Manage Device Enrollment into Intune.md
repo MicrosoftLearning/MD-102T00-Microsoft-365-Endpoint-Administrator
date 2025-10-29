@@ -77,40 +77,35 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
 6. On the Create restriction page, in the Name box enter **Android Personal Device Restriction**. Select **Next**.
 
-7. On the Platform settings page, under **Personally owned**, select **Block** for the following device types:
+7. On the Device limit page, select **Next**.
 
-   - Android Enterprise (work profile)
-   - Android device administrator
+8. On the Scope tags page, select **Next**.
 
-8. On the Platform settings page, select **Next**.
+9. On the Assignments page, under Included groups, select **Add groups**.
 
-9. On the Scope tags page, select **Next**.
+10. Search for and Select **Sales** and then click **Select** and then click **Next**.
 
-10. On the Assignments page, under Included groups, select **Add groups**.
-
-11. Search for and Select **Sales** and then click **Select** and then click **Next**.
-
-12. On the **Review + create** page, select **Create**.
+11. On the **Review + create** page, select **Create**.
 
     > Notice the Android Personal Device Restriction assigned with a priority of 1.
 
-13. On the **Enrollment** pane, select **Device limit restrictions**. 
+12. On the **Enrollment** pane, select **Device limit restrictions**. 
 
     > Notice that there is a Default device limit restriction that is assigned to **All Users**. This default restriction sets a device enrollment limit to 5 devices per user.
 
-14. In the details pane, select **+ Create restriction**.
+13. In the details pane, select **+ Create restriction**.
 
-15. On the Create restriction page, in the Name box enter **Sales Device Enrollment Limit**. Select **Next**.
+14. On the Create restriction page, in the Name box enter **Sales Device Enrollment Limit**. Select **Next**.
 
-16. On the Device limit page, select **10** and then select **Next**.
+15. On the Device limit page, select **10** and then select **Next**.
 
-17. On the Scope tags page, select **Next**.
+16. On the Scope tags page, select **Next**.
 
-18. On the Assignments page, under Included groups, select **Add groups**.
+17. On the Assignments page, under Included groups, select **Add groups**.
 
-19. Search for and Select **Sales** and then click **Select** and then click **Next**.
+18. Search for and Select **Sales** and then click **Select** and then click **Next**.
 
-20. On the **Review + create** page, select **Create**.
+19. On the **Review + create** page, select **Create**.
 
     > Notice the Sales Device Enrollment Limit, configured with a Device limit of 10 and assigned with a priority of 1.
 
