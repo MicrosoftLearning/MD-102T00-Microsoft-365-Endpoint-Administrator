@@ -50,7 +50,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
     > Allan Deyoung will now be added as a Device Administrator on all Entra joined devices.
 
-12. Scroll back to or select the **Devices | Device settings** navigation link at the top of the page.
+12. In the navigation breadcrumbs, select the **Devices | Device settings** link at the top of the page.
 
 13. On the Device settings page, select **Save**.
 
@@ -74,11 +74,11 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 5. In the **Access work or school** page, select **Connect**.
 
-6. In the **Microsoft account** window, select **Join this device to Entra ID**.
+6. In the **Microsoft account** window, select **Join this device to Microsoft Entra ID**.
 
 7. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
 
-8. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
+8. On the **Enter password** page, enter the user password (from the Resources tab) and then select **Sign in**.
 
 9. On the **Make sure this is your organization** dialog box, select **Join**.
 
@@ -90,7 +90,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 3: Validate Entra Join
 
-1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
+1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal**.
 
 2. In the PowerShell console, type the following and press **Enter**:
 
@@ -126,23 +126,21 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 4: Sign in to Windows as an Entra User
 
-1. Switch to **SEA-WS1** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the Tenant password as provided by your instructor. 
-
-   > Wait for the profile to be created.
+1. Switch to **SEA-WS1** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the user password you used in the previous task. 
 
 2. At the **Use Windows Hello with your account** page, select **OK**.
 
 3. On the **Let's keep your account secure** page, select **Next**.
 
-4. On the **Keep your account secure** page, select **I want to set up a different method**.
+4. On the **Install Microsoft Authenticator** page, select **Set up a different way to sign in**. **Note** Ensure you select the correct link.
 
-5. In the **Choose a different method** dialog box, select **Phone** and then select **Confirm**.
+5. On the **Add a sign-in method** dialog box, select **Phone**.
 
-6. On the **Phone** page, in the **Enter phone number** field, enter your mobile phone number which is able to receive text messages. Select **Next**.
+6. On the **Add your phone number** page, select your **Country code** and in the **Phone number** field, enter your mobile phone number which is able to receive text messages, then select **Next**.
 
-7. When you receive the verification code, enter the code on the Phone page and then select **Next**.
+7. When you receive the verification code, enter the code on the **Verify your phone number** page and then select **Next**.
 
-8. On the verification page, select **Next** and then select **Done**.
+8. On the **Phone number added** page, select **Done**.
 
 9. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **`102938`** and then select **OK**.
 

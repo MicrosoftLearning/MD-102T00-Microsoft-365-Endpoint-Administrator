@@ -1,8 +1,8 @@
-# Practice Lab 0301: Creating and Deploying Configuration Profiles
+# Practice Lab 0301: Creating and Deploying Configuration Policies
 
 ## Summary
 
-In this lab, you will use Microsoft Intune to create and apply a Configuration profile for a Windows 11 device.
+In this lab, you will use Microsoft Intune to create and apply a Configuration policy for a Windows 11 device.
 
 ### Prerequisites
 
@@ -18,7 +18,7 @@ To following lab(s) must be completed before this lab:
 
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
-## Exercise 1: Create and apply a Configuration profile
+## Exercise 1: Create and apply a Configuration policy
 
 ### Scenario
 
@@ -59,7 +59,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 13. Close the **Settings** window.
 
-### Task 2: Create a Configuration profile based on scenario requirements
+### Task 2: Create a Configuration policy based on scenario requirements
 
 1. Switch to **SEA-SVR1**.
 
@@ -103,7 +103,9 @@ You need to use Entra and Intune to manage members of the Developers department 
     **C:\\DevProjects**.
 
 17. In the **Processes** box, type the following:
+
     **DevBuild.exe**. 
+
 18. Select **Next** three times until you reach the **Review + create** blade. Select **Create**.
 
 ### Task 3: Create the Contoso Developer device group
@@ -151,7 +153,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. On the **New Group** page, select **Create**.
 
-### Task 5: Assign a Configuration profile to Windows devices
+### Task 5: Assign a Configuration policy to Windows devices
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
 
@@ -169,7 +171,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 8. In the Microsoft Intune admin center, select **Devices** in the breadcrumb navigation menu.
 
-### Task 6: Verify that the Configuration profile is applied
+### Task 6: Verify that the Configuration policy is applied
 
 1. Switch to **SEA-WS1**.
 
@@ -203,15 +205,15 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 16. Close the **Windows Security** page and then close the **Settings** app.
 
-**Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile for a Windows 11 device.
+**Results**: After completing this exercise, you will have successfully created and assigned a Configuration policy for a Windows 11 device.
 
-## Exercise 2: Modify an assigned Configuration profile policy  
+## Exercise 2: Modify an assigned Configuration policy  
 
 ### Scenario
 
 There was an exception to Contoso's policy that specifies that members of the Developer department should not have the Privacy options blocked in Settings on their devices. This change should be implemented and tested.
 
-### Task 1: Change settings in an assigned Configuration profile
+### Task 1: Change settings in an assigned Configuration policy
 
 1. Switch to **SEA-SVR1**.
 
@@ -227,7 +229,7 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 7. Select **Review + save**, and then select **Save**.
 
-### Task 2: Force device synchronization from Intune Manager admin center
+### Task 2: Force device synchronization from the Intune admin center
 
 1. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** in the navigation pane and then select **All devices**.
     
@@ -249,6 +251,6 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 4. Close all open windows and sign out of **SEA-WS1**.
 
-**Results**: After completing this exercise, you will have successfully modified an assigned a Configuration profile, modified a Configuration profile, and verified the changes.
+**Results**: After completing this exercise, you will have successfully modified an assigned a Configuration policy, and verified the changes.
 
 **END OF LAB**

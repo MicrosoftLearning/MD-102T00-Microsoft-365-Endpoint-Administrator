@@ -68,7 +68,7 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 12. Select **Registration**.
 
-13. In the **Registration** page, ensure the **Require users to register when signing in?** option is set to **No**** and then select **Save**.
+13. In the **Registration** page, ensure the **Require users to register when signing in?** option is set to **No** and then select **Save**.
 
 14. In the navigation pane, select **On-premises integration**.
 
@@ -94,18 +94,27 @@ The Help Desk has indicated that a large number of support tickets are related t
 
 7. On the **Enter password** page, enter **Pa55w.rd** and then select **Sign in**. If the Microsoft Edge prompts to save the password, select **Save**.
 
-8. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
+8. On the **My Account** page, in the navigation pane, select **Change Password**.
 
-9. On the **My Account** page, in the navigation pane, select **Change Password**.
+9. On the **Verify your identity** page, select **Next**.
 
-10. On the **Change password** page, enter the following information and then select **submit**:
+10. On the **Enter code** page, enter the verification you recieved in an SMS.
+
+11. If you are presented with a **Protect your account** dialog, select **Skip for now (*x* times left)**.
+
+12. If prompted to **Stay signed in?**, select **No**.
+
+13. On the **Change password** page, enter the following information and then select **Submit**:
+
      - Old password: **Pa55w.rd**
-     - Create new password: **Pa55w.rd1234!**
+     - New password: **Pa55w.rd1234!**
      - Confirm new password: **Pa55w.rd1234!**
 
-11. If Microsoft Edge prompts to save the password, select **Save**.
+14. If Microsoft Edge prompts to save the password, select **Save**.
 
-12. Close Microsoft Edge and sign out of SEA-WS3.
+15. On the **Success, password changed** dialog, select **Done**.
+
+16. Close Microsoft Edge and sign out of SEA-WS3.
 
 ### Task 4: Run AD Sync
 

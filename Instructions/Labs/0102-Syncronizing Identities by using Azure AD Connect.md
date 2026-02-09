@@ -16,7 +16,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 3. In the address bar, enter `https://entra.microsoft.com`
 
-4. In the left navigantion pane, under **Entra ID**, select **Entra Connect**.
+4. In the left navigation pane, under **Entra ID**, select **Entra Connect**.
 
 5. On the **Microsoft Entra Connect | Get started** pane, select the **Manage** tab.
 
@@ -24,7 +24,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 7. Select **Accept terms & download**. 
 
-    >**Note**: Azure AD Connect automatically downloads to the **Downloads** folder on SEA-SVR1.
+    >**Note**: Entra Connect Sync automatically downloads to the **Downloads** folder on SEA-SVR1.
 
 8. Select **Open downloads folder** and then in the **Downloads** window, double-click **AzureAdConnect.msi**.
 
@@ -68,33 +68,19 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 #### Task 2: Verify synchronization in Entra ID
 
-1. On the taskbar, select **Microsoft Edge**.
+1. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
 
-2. In the address bar, enter **https://entra.microsoft.com**.
+2. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
 
-3. At the Sign-in prompt, enter **admin@yourtenant.onmicrosoft.com** and then select **Next**.
+3. In the Navigation pane, select **Groups**, then select **All Groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column (you will need to use the horiztonal scroll bar and scroll to the right to be able to see the **Source** column).
 
-4. At the Enter password page, enter the password for the Admin account and then select **Sign in**. 
+4. Select the **Managers** group.
 
-   > Note: Check with your instructor on the password to use for signing in with the Admin account.
-
-5. At the Save password prompt, select **Save**.
-
-6. At the Stay signed in prompt, select **No**. The Entra admin center opens.
-
-7. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
-
-8. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
-
-9. In the Navigation pane, select **Groups**, then select **All Groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column.
-
-10. Select the **Managers** group.
-
-11. On the **Managers** group page, select **Members** and then ensure that you see users. 
+5. On the **Managers** group page, select **Members** and then ensure that you see users. 
 
     > Note that you cannot add to or remove members from this group, as it is sourced from the local AD DS. 
 
-12. Close Microsoft Edge.
+6. Close Microsoft Edge.
 
 **Results**: After completing this exercise, you will have successfully configured Azure AD Connect to synchronize identity from Active Directory Domain Services to Entra ID.
 

@@ -1,14 +1,14 @@
-# Practice Lab 0303: Using a Configuration Profile to configure iOS and iPadOS Wi-Fi settings
+# Practice Lab 0303: Using a Configuration policy to configure iOS and iPadOS Wi-Fi settings
 
 ## Summary
 
-In this lab, you use Microsoft Intune to create and apply a Configuration profile to run configure Wi-Fi settings for iOS and iPadOS devices.
+In this lab, you use Microsoft Intune to create and apply a Configuration policy to run configure Wi-Fi settings for iOS and iPadOS devices.
 
-## Exercise 1: Creating a Configuration profile
+## Exercise 1: Creating a Configuration policy
 
 ### Scenario
 
-You have been asked to create a Configuration profile to be used to automatically configure Wi-Fi settings for enrolled iOS and iPadOS devices. You need to ensure that the Wi-Fi settings are configured as follows:
+You have been asked to create a Configuration policy to be used to automatically configure Wi-Fi settings for enrolled iOS and iPadOS devices. You need to ensure that the Wi-Fi settings are configured as follows:
 
 - Network name: **Contoso Wi-Fi**
 - SSID: **MainOffice**
@@ -42,7 +42,7 @@ You have been asked to create a Configuration profile to be used to automaticall
 
 9. On the **Groups | All groups** blade, verify that the **iOS_iPadOS Devices** group is displayed. You may need to select the Refresh button for the new group to become visible.
 
-### Task 2: Create a Configuration profile based on scenario requirements
+### Task 2: Create a Configuration policy based on scenario requirements
 
 1. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
@@ -84,6 +84,6 @@ You have been asked to create a Configuration profile to be used to automaticall
 
 13. Close the Edge browser.
 
-**Results**: After completing this exercise, you will have successfully created and assigned a Configuration profile to configure Wi-Fi settings for iOS and iPadOS devices.
+**Results**: After completing this exercise, you will have successfully created and assigned a Configuration policy to configure Wi-Fi settings for iOS and iPadOS devices.
 
 **END OF LAB**

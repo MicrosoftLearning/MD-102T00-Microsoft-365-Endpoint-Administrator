@@ -42,7 +42,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 6. In the **Microsoft account** window, in the Email address box, enter **`JoniS@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-7. On the **Enter password** page, enter the tenant password provided by your instructor and then select **Sign in**.
+7. On the **Enter password** page, enter the user password you used in earlier tasks and then select **Sign in**.
 
 8. On the **You're all set!** page, select **Done**.
 
@@ -72,7 +72,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 8. Verify that the **Join Type** is listed as **Microsoft Entra registered** and that the owner is **Joni Sherman**. 
 
-   > Notice that the device is Microsoft Entra registered, NOT Microsoft Entra joined. Entra registered devices are typically devices that cannot be Entra joined, or devices that are personally owned by the user. Registering a device will provide access to Cloud based resources.
+   > Notice that the device is Microsoft Entra registered, NOT Microsoft Entra joined. Entra registered devices are typically devices that cannot be Entra joined, or devices that are personally owned by the user. Registering a device will provide access to cloud-based resources.
 
 9. Close Microsoft Edge.
 
@@ -92,7 +92,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 7. Next to Disconnect this account, select **Disconnect** and then select **Yes**.
 
-   > Notice that you do not have to restart to disconnect a registered device from Azure AD.
+   > Notice that you do not have to restart to disconnect a registered device from Entra ID.
 
 8. To prepare for the next lab, select **Start**, then select the **Power** icon, and then select **Restart**.
 

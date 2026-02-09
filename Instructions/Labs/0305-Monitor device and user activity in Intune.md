@@ -16,13 +16,13 @@ To following lab(s) must be completed before this lab:
 
 - 0204-Enrolling devices into Intune
 
-- 0301-Creating and Deploying Configuration Profiles
+- 0301-Creating and Deploying Configuration Policies
 
   > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ### Scenario
 
-You need to review Aaron Nicholls sign-in activity and general information provided by the Audit logs.  You also need to verify the hardware on SEA-WS1 and confirm the configuration profile assigned to this device is successfully applied.
+You need to review Aaron Nicholls sign-in activity and general information provided by the Audit logs.  You also need to verify the hardware on SEA-WS1 and confirm the configuration policy assigned to this device is successfully applied.
 
 ### Task 1: Monitor user activity
 
@@ -58,11 +58,11 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 5. In the SEA-WS1 navigation pane, select **Discovered apps** and examine the app inventory.
 
-6. In the SEA-WS1 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration profiles assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
+6. In the SEA-WS1 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration policies assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
 
 7. In the details pane, select **Contoso Developer – standard**.
 
-8. On the **Contoso Developer – standard** blade, take note of each setting you configured in the profile.
+8. On the **Contoso Developer – standard** blade, take note of each setting you configured in the policy.
 
    > The **State** should display **Succeeded** next to all of them.
 

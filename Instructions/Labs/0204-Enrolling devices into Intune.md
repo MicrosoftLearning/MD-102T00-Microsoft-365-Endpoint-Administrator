@@ -58,13 +58,13 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 -   Microsoft Intune MDM Device CA
 -   MS-Organization-Access
--   MS-Organization-P2P-Access \[2025\]
+-   MS-Organization-P2P-Access \[2026\]
 
     This indicates that the device is Entra joined and Intune enrolled.
 
 3. Close the Certificates window.
 
-4. Right-click **Start**, and then select **Windows Terminal (Admin)**. When prompted select **Yes**.
+4. Right-click **Start**, and then select **Windows Terminal**.
 
 5. In the PowerShell console, type the following and press **Enter**: 
 
@@ -88,27 +88,27 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 1. Sign out of **SEA-WS1**.
 
-2. Select **Other user**, and sign in as **`Aaron@yourtenant.onmicrosoft.com`** with the password **Pa55w.rd**. Wait for the profile to be created.
+2. Select **Other user**, and sign in as **`Aaron@yourtenant.onmicrosoft.com`** with the password **Pa55w.rd**.
 
-3. At the **Use Windows Hello with your account** page, select **OK**.
+2. At the **Use Windows Hello with your account** page, select **OK**.
 
-4. On the **Let's keep your account secure** page, select **Next**.
+3. On the **Let's keep your account secure** page, select **Next**.
 
-5. On the **Keep your account secure** page, select **I want to set up a different method**.
+4. On the **Install Microsoft Authenticator** page, select **Set up a different way to sign in**. **Note** Ensure you select the correct link.
 
-6. In the **Choose a different method** dialog box, select **Phone** and then select **Confirm**.
+5. On the **Add a sign-in method** dialog box, select **Phone**.
 
-7. On the **Phone** page, in the **Enter phone number** field, enter your mobile phone number which is able to receive text messages. Select **Next**.
+6. On the **Add your phone number** page, select your **Country code** and in the **Phone number** field, enter your mobile phone number which is able to receive text messages, then select **Next**.
 
-8. When you receive the verification code, enter the code on the Phone page and then select **Next**.
+7. When you receive the verification code, enter the code on the **Verify your phone number** page and then select **Next**.
 
-9. On the verification page, select **Next** and then select **Done**.
+8. On the **Phone number added** page, select **Done**.
 
-10. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **102938** and then select **OK**.
+9. On the **Set up a PIN** page, in the **New PIN** and **Confirm PIN** boxes, type **102938** and then select **OK**.
 
-11. On the **All set!** page, select **OK**.
+10. On the **All set!** page, select **OK**.
 
-12. Sign out of **SEA-WS1**.
+11. Sign out of **SEA-WS1**.
 
 ### Task 4: Verifying device enrollment in the Intune console
 

@@ -24,7 +24,7 @@ To provide additional security for user sign on events, you need to configure an
 
 4. At the **Sign in** page, enter **`AlexW@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-5. On the **Enter password** page, enter the tenant password provided by your instructor and select **Sign in**. At the Edge Save password prompt, select **Save & Turn on**.
+5. On the **Enter password** page, enter the user password (the same one you used for Joni Sherman in earlier labs) and select **Sign in**. At the Edge Save password prompt, select **Save**.
 
 6. At the **Stay signed in** prompt, select **No**.
 
@@ -68,8 +68,6 @@ To provide additional security for user sign on events, you need to configure an
 
 14. Once Enabled, refresh the page. Take note that the **Status** for Alex Wilber is now **Enabled**.
 
-15. Close Microsoft Edge.
-
 ### Task 3: Register and Validate MFA
 
 1. Switch to **SEA-WS3**. 
@@ -80,21 +78,19 @@ To provide additional security for user sign on events, you need to configure an
 
 4. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
 
-5. On the **Enter password** page, enter the tenant password and select **Sign in**.
+5. On the **Enter password** page, if required, enter the user password and select **Sign in**.
 
-6. At the **Let's keep your account secure** page, select **Next**. The Keep your account secure page opens.
+6. On the **Let's keep your account secure** page, select **Next**.
 
-   > Typically, you will want to use the Microsoft Authenticator app to manage multi-factor authentication. However for this lab scenario, you will use text messages.
+7. On the **Install Microsoft Authenticator** page, select **Set up a different way to sign in**. **Note** Ensure you select the correct link.
 
-7. On the **Keep your account secure** page, select **I want to set up a different method**. Choose **Phone** the list of available choices.
+8. On the **Add a sign-in method** dialog box, select **Phone**.
 
-8. Enter your mobile phone number which you can receive text messages, and then select **Next**.
+9. On the **Add your phone number** page, select your **Country code** and in the **Phone number** field, enter your mobile phone number which is able to receive text messages, then select **Next**.
 
-9. After you receive the verification code as a text message, enter the code where indicated on the **Keep your account secure** page and then select **Next**.
+10. When you receive the verification code, enter the code on the **Verify your phone number** page and then select **Next**.
 
-10. On the **Keep your account secure** page, you will receive a message "Verification complete. Your phone has been registered". Select **Next**.
-
-11. On the **Keep your account secure** page, you will receive a message "Great job! You have successfully set up your security info". Select **Done**.
+11. On the **Phone number added** page, select **Done**.
 
 12. At the Stay signed in message, select **No**. 
 
@@ -176,11 +172,11 @@ To provide additional security for user sign on events, you need to configure an
 
 6. On the **New Conditional access policy** page, in the **Name** box, enter **Contoso MFA Policy**.
 
-7. Under **Assignments**, select **0 users and groups selected**.
+7. Under **Assignments**, select **0 users or agents (Preview) selected**.
 
 8. In the Users and groups pane, select the option next to **Select users and groups** and then select the check box next to **Users and groups**.
 
-9. On the **Select users and groups** page, select **Alex Wilber** and then select **Select**. 
+9. On the **Select users and groups** page, select **Alex Wilber** and then choose **Select**. 
 
     > Note that typically you would specify a group, however for this exercise we will just test the setting on Alex Wilber.
 
@@ -188,9 +184,9 @@ To provide additional security for user sign on events, you need to configure an
 
     > Note the Control access based on client app setting. This setting allows you to specify the client app that is used to access the resource. For example, you can specify that only the Outlook app can be used to access Exchange Online. 
 
-11. On the **Select** section of the page, click **None**.
+11. Under **Select specific resources**, select **None**.
 
-12. On the **Select** page, select the check box next to **Office 365** and then click **Select**.
+12. On the **Resources** page that opens, select the check box next to **Office 365** and then click **Select**.
 
 13. Under **Access controls**, in the **Grant** section, select **0 controls selected**.
 
@@ -212,7 +208,7 @@ To provide additional security for user sign on events, you need to configure an
 
 4. On the **Pick an account** page, select **`AlexW@yourtenant.onmicrosoft.com`**.
 
-5. On the **Enter password** page, enter the tenant password and select **Sign in**. 
+5. On the **Enter password** page, if required, enter the user password and select **Sign in**. 
 
 6. At the Verify your identity prompt, select your phone number.
 
