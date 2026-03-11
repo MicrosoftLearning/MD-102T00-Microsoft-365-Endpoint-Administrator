@@ -1,3 +1,14 @@
+---
+lab:
+  title: 'Practice Lab 0202: Manage Entra ID device registration'
+  description: In this lab, you will perform Entra registration using a Windows device.
+  duration: 90 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Windows
+---
+
 # Practice Lab 0202: Manage Entra ID device registration
 
 ## Summary
