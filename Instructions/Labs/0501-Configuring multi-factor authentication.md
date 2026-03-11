@@ -1,3 +1,12 @@
+---
+lab:
+  title: 'Practice Lab 0501: Configuring Multi-factor Authentication'
+  description: In this lab, you will configure per-user multi-factor authentication (MFA) and apply MFA using a conditional access policy .
+  duration: 158 minutes
+  level: 200
+  islab: true
+---
+
 # Practice Lab 0501: Configuring Multi-factor Authentication
 
 ## Summary
