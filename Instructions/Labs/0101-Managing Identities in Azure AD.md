@@ -1,3 +1,14 @@
+---
+lab:
+  title: 'Practice Lab 0101: Managing Identities in Entra ID'
+  description: If you are being provided with a tenant as a part of an instructor-led
+    training delivery, please note that the tenant is made available for the purpose
+    of supporting the hands-on labs in the instructor-led training.
+  duration: 5 minutes
+  level: 200
+  islab: true
+---
+
 # Practice Lab 0101: Managing Identities in Entra ID
 
 ## WWL Tenants - Terms of Use
