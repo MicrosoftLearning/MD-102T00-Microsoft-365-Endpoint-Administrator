@@ -1,3 +1,17 @@
+---
+lab:
+  title: 'Practice Lab 0203: Manage Device Enrollment into Intune'
+  description: In this lab, you prepare for device management using Microsoft Intune
+    by reviewing and assigning licenses, configuring Windows automatic enrollment,
+    and configuring enrollment restrictions.
+  duration: 110 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Microsoft Intune
+  - Windows
+---
+
 # Practice Lab 0203: Manage Device Enrollment into Intune
 
 ## Summary
