@@ -1,3 +1,15 @@
+---
+lab:
+  title: 'Practice Lab: Refreshing Windows with Autopilot Reset and Self-Deploying
+    mode'
+  description: In this lab you will learn how perform a remote Autopilot reset.
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Windows
+---
+
 # Practice Lab: Refreshing Windows with Autopilot Reset and Self-Deploying mode
 
 ## Summary
