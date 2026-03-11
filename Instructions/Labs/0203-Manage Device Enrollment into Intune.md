@@ -1,3 +1,15 @@
+---
+lab:
+  title: 'Practice Lab 0203: Manage Device Enrollment into Intune'
+  description: You need to prepare for device management using Microsoft Intune. First of all, you need to ensure that users are assigned appropriate licenses for device management. As a verification test, you will assign Aaron Nicholls the required licenses. You also need to ensure that any Windows device that is joined or registered to Entra ID will automatically be enrolled into Intune. You have also been asked to ensure that members of the Sales group are restricted from enrolling personal Android devices into Intune and that the Enrollment Device Limit is increased to 10 devices. Finally, you need to configure Allan Deyoung as a Device enrollment manager to allow him to enroll 1000 devices.
+  duration: 110 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Intune
+    - Windows
+---
+
 # Practice Lab 0203: Manage Device Enrollment into Intune
 
 ## Summary
