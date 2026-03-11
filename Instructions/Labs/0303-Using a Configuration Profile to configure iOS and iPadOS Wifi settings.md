@@ -1,3 +1,16 @@
+---
+lab:
+  title: 'Practice Lab 0303: Using a Configuration policy to configure iOS and iPadOS
+    Wi-Fi settings'
+  description: In this lab, you use Microsoft Intune to create and apply a Configuration
+    policy to run configure Wi-Fi settings for iOS and iPadOS devices.
+  duration: 64 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Microsoft Intune
+---
+
 # Practice Lab 0303: Using a Configuration policy to configure iOS and iPadOS Wi-Fi settings
 
 ## Summary
