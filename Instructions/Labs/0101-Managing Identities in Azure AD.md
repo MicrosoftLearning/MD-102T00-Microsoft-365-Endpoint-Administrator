@@ -1,3 +1,12 @@
+---
+lab:
+  title: 'Practice Lab 0101: Managing Identities in Entra ID'
+  description: In this lab, you will use the Entra admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Entra ID.
+  duration: 5 minutes
+  level: 200
+  islab: true
+---
+
 # Practice Lab 0101: Managing Identities in Entra ID
 
 ## WWL Tenants - Terms of Use
