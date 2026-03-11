@@ -1,3 +1,15 @@
+---
+lab:
+  title: 'Practice Lab 0304: Using Group Policy Analytics to validate GPO support in Intune'
+  description: In this lab, you use Group Policy Analytics to import an Active Directory Group Policy Object (GPO) and identify settings that support equivalent Microsoft Intune MDM policy.
+  duration: 80 minutes
+  level: 100
+  islab: true
+  primarytopics:
+    - Microsoft Intune
+    - Active Directory
+---
+
 # Practice Lab 0304: Using Group Policy Analytics to validate GPO support in Intune
 
 ## Summary
