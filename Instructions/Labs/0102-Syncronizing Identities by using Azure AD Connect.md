@@ -1,3 +1,16 @@
+---
+lab:
+  title: 'Practice Lab 0102: Synchronizing Identities by using Microsoft Entra Connect'
+  description: In this lab, you will configure synchronization from Active Directory
+    Domain Services to Entra ID.
+  duration: 5 minutes
+  level: 100
+  islab: true
+  primarytopics:
+  - Microsoft Entra
+  - Active Directory
+---
+
 # Practice Lab 0102: Synchronizing Identities by using Microsoft Entra Connect 
 
 ## Summary
