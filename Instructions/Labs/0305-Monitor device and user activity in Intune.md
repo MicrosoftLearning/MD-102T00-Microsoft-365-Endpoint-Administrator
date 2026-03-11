@@ -1,3 +1,13 @@
+---
+lab:
+  title: 'Practice Lab 0305: Monitor device and user activity in Intune'
+  description: In this lab, you will monitor user Sign-in activity, Audit logs, and
+    device information.
+  duration: 60 minutes
+  level: 300
+  islab: true
+---
+
 # Practice Lab 0305: Monitor device and user activity in Intune
 
 ## Summary
