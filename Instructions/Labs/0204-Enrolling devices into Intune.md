@@ -1,3 +1,15 @@
+---
+lab:
+  title: 'Practice Lab 0204: Enrolling devices into Microsoft Intune'
+  description: In this lab, you will join a Windows client to Entra ID and verify that the device has automatically enrolled in to Microsoft Intune.
+  duration: 108 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Intune
+    - Windows
+---
+
 # Practice Lab 0204: Enrolling devices into Microsoft Intune
 
 ## Summary
