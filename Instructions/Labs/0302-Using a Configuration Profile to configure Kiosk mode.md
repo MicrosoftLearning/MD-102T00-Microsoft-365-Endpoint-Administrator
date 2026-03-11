@@ -1,3 +1,16 @@
+---
+lab:
+  title: 'Practice Lab 0302: Using a Configuration Policy to configure Kiosk mode'
+  description: In this lab, you use Microsoft Intune to create and apply a Configuration policy to run single-app Kiosk mode on a Windows 11 device.
+  duration: 10 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Intune
+    - Windows
+    - Windows 11
+---
+
 # Practice Lab 0302: Using a Configuration Policy to configure Kiosk mode
 
 ## Summary
