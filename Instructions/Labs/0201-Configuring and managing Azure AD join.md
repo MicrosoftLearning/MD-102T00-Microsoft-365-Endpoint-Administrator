@@ -1,3 +1,14 @@
+---
+lab:
+  title: 'Practice Lab 0201: Configuring and managing Entra Join'
+  description: In this lab, you will configure Entra ID Join settings and perform both standard and Entra hybrid join scenarios for Windows devices.
+  duration: 160 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Windows
+---
+
 # Practice Lab 0201: Configuring and managing Entra Join
 
 ## Summary
