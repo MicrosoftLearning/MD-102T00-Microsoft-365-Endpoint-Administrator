@@ -1,3 +1,16 @@
+---
+lab:
+  title: 'Practice Lab 0301: Creating and Deploying Configuration Policies'
+  description: In this lab, you will use Microsoft Intune to create and apply a Configuration policy for a Windows 11 device.
+  duration: 100 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft Intune
+    - Windows
+    
+---
+
 # Practice Lab 0301: Creating and Deploying Configuration Policies
 
 ## Summary
