@@ -2,7 +2,7 @@
 lab:
   title: 'Practice Lab 0503: Configuring and validating device compliance'
   description: In this lab, you validate device compliance by configuring a compliance policy and associated conditional access rule used to determine the status of a managed device.
-  duration: 140 minutes
+  duration: 60 minutes
   level: 200
   islab: true
 ---
