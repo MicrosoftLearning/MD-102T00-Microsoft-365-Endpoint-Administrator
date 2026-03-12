@@ -2,7 +2,7 @@
 lab:
   title: 'Practice Lab 0701: Deploying Windows 11 using Microsoft Deployment Toolkit'
   description: In this lab, you will use the Microsoft Deployment Toolkit to create and deploy a Windows 11 operating system image.
-  duration: 20 minutes
+  duration: 100 minutes
   level: 200
   islab: true
   primarytopics:
