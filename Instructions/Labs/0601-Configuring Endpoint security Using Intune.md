@@ -2,7 +2,7 @@
 lab:
   title: 'Practice Lab 0601: Configuring Endpoint security using Intune'
   description: In this lab, you will create a policy to configure Microsoft Defender for managed devices in Intune.
-  duration: 5 minutes
+  duration: 30 minutes
   level: 200
   islab: true
   primarytopics:
