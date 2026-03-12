@@ -3,7 +3,7 @@ lab:
   title: 'Practice Lab 0602: Configuring Disk Encryption Using Intune'
   description: In this lab, you will configure BitLocker disk encryption using Intune.
   duration: 90 minutes
-  level: 300
+  level: 200
   islab: true
 ---
 
