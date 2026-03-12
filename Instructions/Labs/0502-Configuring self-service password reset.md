@@ -2,8 +2,8 @@
 lab:
   title: 'Practice Lab 0502: Configuring Self-service password reset for user accounts in Entra ID'
   description: In this lab, you will configure and validate self-service password reset (SSPR) for user accounts in Entra ID.
-  duration: 5 minutes
-  level: 300
+  duration: 30 minutes
+  level: 200
   islab: true
 ---
 
