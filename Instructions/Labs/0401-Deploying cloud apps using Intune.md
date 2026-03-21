@@ -48,7 +48,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
     - Name: **Windows App**
     - Publisher: **Microsoft Corp.**
     - Category: **Business**
-    - Show this as a featured app in the Company Portal: **Yes**
+    - Show this as a featured app: **Yes**
 
 11. Select **Next** twice and then select **Create**.
 

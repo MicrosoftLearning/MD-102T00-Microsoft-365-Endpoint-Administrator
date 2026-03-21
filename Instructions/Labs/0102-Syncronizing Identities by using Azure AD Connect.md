@@ -30,7 +30,9 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 9. In the **Microsoft Entra Connect Sync** wizard, on the **Welcome to Microsoft Entra Connect Sync** page, select the **I agree to the license terms and privacy notice** check box, and then select **Continue**.
 
-10. On the **Express Settings** page, select **Customize**.
+10. On the **Express Settings** page, select **Customize**
+    
+    >**Note**: Do not click the Use Express Settings button.
 
 11. On the **Install required components** page, select **Install**.
 
@@ -72,7 +74,7 @@ Contoso Corporation is currently managing users in both AD DS and Entra ID as se
 
 2. Verify that you see users from your local AD DS. Ensure that these users have the value **Yes** in the **On-premises sync enabled** column. 
 
-3. In the Navigation pane, select **Groups**, then select **All Groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column (you will need to use the horiztonal scroll bar and scroll to the right to be able to see the **Source** column).
+3. In the Navigation pane, select **Groups**, then select **All Groups**. Verify that you see groups from your local AD DS. Ensure that these groups have the value **Windows Server AD** in the **Source** column (you will need to use the horizontal scroll bar and scroll to the right to be able to see the **Source** column).
 
 4. Select the **Managers** group.
 

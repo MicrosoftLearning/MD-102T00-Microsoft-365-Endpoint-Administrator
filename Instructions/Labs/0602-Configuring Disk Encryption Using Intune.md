@@ -41,6 +41,8 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
     -   Platform: **Windows**
     -   Profile: **BitLocker**
 
+8a. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
 9. On the **Basics** page, enter the following information, and then select **Next**:
 
     -   Name: **Contoso BitLocker**

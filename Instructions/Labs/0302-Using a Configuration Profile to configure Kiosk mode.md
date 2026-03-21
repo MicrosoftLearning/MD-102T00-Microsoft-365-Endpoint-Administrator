@@ -38,7 +38,7 @@ You have been asked to configure SEA-WS2 as a Windows 11 kiosk to allow Contoso 
 
 7. On the **Sign in** page, type **`AllanD@yourtenant.onmicrosoft.com`** and then select **Next**.
 
-8. On the **Enter password** page, enter the Tenant password and then select **Sign in**.
+8. On the **Enter password** page, enter the user password and then select **Sign in**.
 
 9. On the **Make sure this is your organization** dialog box, select **Join**.
 
