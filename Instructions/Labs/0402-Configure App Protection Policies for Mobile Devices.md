@@ -1,3 +1,12 @@
+---
+lab:
+  title: 'Practice Lab 0402: Configure App Protection Policies for Mobile Devices'
+  description: In this lab, you will configure an App protection policy for a mobile device.
+  duration: 50 minutes
+  level: 200
+  islab: true
+---
+
 # Practice Lab 0402: Configure App Protection Policies for Mobile Devices
 
 ## Summary

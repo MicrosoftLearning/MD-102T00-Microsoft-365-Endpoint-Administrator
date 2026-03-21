@@ -1,3 +1,15 @@
+---
+lab:
+  title: 'Practice Lab 0801: Deploying Windows with Autopilot'
+  description: In this lab you will learn how provision a Windows 11 device with Autopilot using User-driven mode.
+  duration: 30 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Windows
+    - Windows 11
+---
+
 # Practice Lab 0801: Deploying Windows with Autopilot
 
 ## Summary

@@ -1,3 +1,12 @@
+---
+lab:
+  title: 'Practice Lab 0401: Deploying cloud apps using Intune'
+  description: In this lab, you create and deploy cloud-based apps using Intune and the Company Portal Website.
+  duration: 5 minutes
+  level: 200
+  islab: true
+---
+
 # Practice Lab 0401: Deploying cloud apps using Intune
 
 ## Summary

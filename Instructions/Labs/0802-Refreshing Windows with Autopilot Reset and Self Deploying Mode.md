@@ -1,3 +1,14 @@
+---
+lab:
+  title: 'Practice Lab: Refreshing Windows with Autopilot Reset and Self-Deploying mode'
+  description: SEA-WS4 has been deployed by using Windows Autopilot. You need to test out another provisioning scenario that involves Autopilot Reset. You will create a new deployment profile configured with the Windows Autopilot Self-Deploying mode.
+  duration: 45 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Windows
+---
+
 # Practice Lab: Refreshing Windows with Autopilot Reset and Self-Deploying mode
 
 ## Summary
