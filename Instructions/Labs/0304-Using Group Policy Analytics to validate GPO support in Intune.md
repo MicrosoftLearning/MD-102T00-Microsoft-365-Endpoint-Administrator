@@ -70,7 +70,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
 11. On the **Devices | Group Policy analytics** blade, review the information next to **Windows Client Policy**.
 
-    > Notice that 89% of the settings have MDM support.
+    > Notice that 86% of the settings have MDM support.
 
 12. Under MDM Support, select **89%**. 
 
