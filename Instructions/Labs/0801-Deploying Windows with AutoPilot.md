@@ -18,7 +18,7 @@ In this lab you will learn how provision a Windows 11 device with Autopilot usin
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 

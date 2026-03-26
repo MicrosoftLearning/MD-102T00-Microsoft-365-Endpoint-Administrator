@@ -15,7 +15,7 @@ In this lab, you will configure BitLocker disk encryption using Intune.
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0203-Manage Device Enrollment into Intune
 
@@ -50,8 +50,6 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
     -   Platform: **Windows**
     -   Profile: **BitLocker**
 
-8a. XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
 9. On the **Basics** page, enter the following information, and then select **Next**:
 
     -   Name: **Contoso BitLocker**
@@ -60,6 +58,8 @@ It's been determined that all the information on SEA-WS1 should be encrypted. Yo
 10. On the **Configurations settings** tab, expand **BitLocker** and then configure the following option:
 
      - Require Device Encryption: **Enabled**
+
+  >**Note**: Please ensure you have expanded the **BitLocker** section and enabled the option before moving on to the next step. Your policy will be ineffective unless this option is configured.
 
 11. On the **Configurations settings** tab, scroll down to **Operating System Drives** and then configure the following options, leaving all other options to their defaults:
 

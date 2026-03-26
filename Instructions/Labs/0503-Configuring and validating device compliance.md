@@ -15,7 +15,7 @@ In this lab, you validate device compliance by configuring a compliance policy a
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 

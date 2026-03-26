@@ -19,7 +19,7 @@ In this lab, you use Microsoft Intune to create and apply a Configuration policy
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0203-Manage Device Enrollment into Intune
 

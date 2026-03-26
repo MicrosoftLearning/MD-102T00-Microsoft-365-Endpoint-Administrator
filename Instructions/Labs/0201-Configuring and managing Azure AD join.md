@@ -17,7 +17,7 @@ In this lab, you will configure Entra ID Join settings and perform both standard
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0102-Synchronizing Identities by using Microsoft Entra Connect
 

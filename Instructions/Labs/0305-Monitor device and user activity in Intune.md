@@ -15,7 +15,7 @@ In this lab, you will monitor user Sign-in activity, Audit logs, and device info
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 
