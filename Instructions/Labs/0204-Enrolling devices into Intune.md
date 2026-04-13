@@ -18,7 +18,7 @@ In this lab, you will join a Windows client to Entra ID and verify that the devi
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 

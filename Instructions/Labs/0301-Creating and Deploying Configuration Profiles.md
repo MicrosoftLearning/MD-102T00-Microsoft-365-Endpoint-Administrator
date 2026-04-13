@@ -19,7 +19,7 @@ In this lab, you will use Microsoft Intune to create and apply a Configuration p
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 

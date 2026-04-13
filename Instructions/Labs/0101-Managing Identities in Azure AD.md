@@ -184,7 +184,7 @@ You've also been told that several more employees will be hired over the next co
 
 8. When prompted in the **Let's get you signed in** window, select **Work or School account** and then select **Continue**.
 
-9. In the **Sign in** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant password, and then select **Sign in**.
+9. In the **Sign in** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the administrative password, and then select **Sign in**.
 
 10. On the **Permissions Requested** prompt that appears, check **Consent on behalf of your organization** and then select **Accept**.
 

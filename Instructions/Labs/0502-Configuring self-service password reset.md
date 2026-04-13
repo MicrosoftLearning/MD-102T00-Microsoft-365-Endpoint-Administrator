@@ -15,7 +15,7 @@ In this lab, you will configure and validate self-service password reset (SSPR) 
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0102-Synchronizing identities by using Entra Connect
 - 0203-Manage Device Enrollment into Intune

@@ -14,11 +14,11 @@ lab:
 
 ## Summary
 
-In this lab you will learn how provision a Windows 11 device with Autopilot using User-driven mode.
+In this lab you will learn how to provision a Windows 11 device with Autopilot using a User-driven deployment profile.
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 
@@ -26,7 +26,7 @@ To following lab(s) must be completed before this lab:
 
 ### Scenario
 
-Contoso IT is planning to roll out a deployment of new Windows 11 devices using Autopilot. The devices have a default installation of Windows 11. Users should be able to connect the device, turn it on, and answer minimal questions during the OOBE, using their Entra ID credentials to sign in. The process should automatically enroll and join the Entra ID domain. You have been asked to configure and test the experience.
+Contoso IT is planning to roll out a deployment of new Windows 11 devices using Autopilot. The devices have a default installation of Windows 11. Users should be able to connect the device, turn it on, and answer minimal questions during the OOBE, using their Entra ID credentials to sign in. The process should automatically join the device to Entra ID and enroll the device into Intune. You have been asked to configure and test the experience.
 
 ### Task 1: Create group in Entra ID
 

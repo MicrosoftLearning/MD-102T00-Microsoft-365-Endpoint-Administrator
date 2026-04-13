@@ -17,7 +17,7 @@ In this lab, you will create a policy to configure Microsoft Defender for manage
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0203-Manage Device Enrollment into Intune
 
@@ -30,7 +30,7 @@ To following lab(s) must be completed before this lab:
 ### Scenario
 
 You've been asked to ensure that the Contoso Developers Group have Microsoft Defender correctly configured. It's been requested that:
-* Tamper protection be prevented
+* Tamper protection be enabled
 * Hide the Account protection, App and browser control, Device security, Device performance and health, and Family options areas in the Windows Security app
 * Company name and phone number must be added. 
 * Real-time protection, Remediation, and scan settings are also to be configured.

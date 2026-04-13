@@ -15,7 +15,7 @@ In this lab, you create and deploy cloud-based apps using Intune and the Company
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 

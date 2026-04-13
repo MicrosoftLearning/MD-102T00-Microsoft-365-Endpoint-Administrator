@@ -18,7 +18,7 @@ In this lab, you prepare for device management using Microsoft Intune by reviewi
 
 ### Prerequisites
 
-To following lab(s) must be completed before this lab:
+The following lab(s) must be completed before this lab:
 
 - 0101-Managing Identities in Entra ID
 
@@ -106,23 +106,25 @@ You need to prepare for device management using Microsoft Intune. First of all, 
 
     > Notice the Android Personal Device Restriction assigned with a priority of 1.
 
-13. On the **Enrollment** pane, select **Device limit restrictions**. 
+13. In the navigation breadcrumbs, select **Devices | Enrollment**.
+
+14. In the **Enrollment options** section, select **Device limit restriction**. 
 
     > Notice that there is a Default device limit restriction that is assigned to **All Users**. This default restriction sets a device enrollment limit to 5 devices per user.
 
-14. In the details pane, select **+ Create restriction**.
+15. In the details pane, select **+ Create restriction**.
 
-15. On the Create restriction page, in the Name box enter **Sales Device Enrollment Limit**. Select **Next**.
+16. On the Create restriction page, in the Name box enter **Sales Device Enrollment Limit**. Select **Next**.
 
-16. On the Device limit page, select **10** and then select **Next**.
+17. On the Device limit page, select **10** and then select **Next**.
 
-17. On the Scope tags page, select **Next**.
+18. On the Scope tags page, select **Next**.
 
-18. On the Assignments page, under Included groups, select **Add groups**.
+19. On the Assignments page, under Included groups, select **Add groups**.
 
-19. Search for and Select **Sales** and then click **Select** and then click **Next**.
+20. Search for and Select **Sales** and then click **Select** and then click **Next**.
 
-20. On the **Review + create** page, select **Create**.
+21. On the **Review + create** page, select **Create**.
 
     > Notice the Sales Device Enrollment Limit, configured with a Device limit of 10 and assigned with a priority of 1.
 
