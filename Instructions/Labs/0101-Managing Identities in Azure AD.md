@@ -49,7 +49,7 @@ You've also been told that several more employees will be hired over the next co
 
 5. At the Sign-in prompt, enter **admin@yourtenant.onmicrosoft.com** and then select **Next**.
 
-6. At the Enter password page, enter the password for the Admin account and then select **Sign in**.
+6. At the **Enter password** page, enter the password for the Admin account and then select **Sign in**.
 
    > Note: Check with your instructor on the password to use for signing in with the Admin account.
 
