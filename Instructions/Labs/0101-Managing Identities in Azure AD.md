@@ -19,13 +19,13 @@ Tenants must not be converted to a paid subscription. Tenants obtained as a part
 
 ## Summary
 
-In this lab, you will use the Entra admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Entra ID.
+In this lab, you use the Entra admin center to create and modify users, assign administrative roles, create and modify groups, and manage license assignments in Entra ID.
 
 ## Exercise 1: Creating users in Entra ID
 
 ### Scenario
 
-You need to create user accounts in Azure AD for new employees that will start next week. New users are listed in the following table:
+You need to create user accounts in Microsoft Entra ID for new employees starting next week. The new users are listed in the following table:
 
 | Name           | User Name                             | Password   | Job title        | Department |
 | -------------- | ------------------------------------- | ---------- | ---------------- | ---------- |
@@ -51,23 +51,24 @@ You've also been told that several more employees will be hired over the next co
 
 6. At the **Enter password** page, enter the password for the Admin account and then select **Sign in**.
 
-   > Note: Check with your instructor on the password to use for signing in with the Admin account.
+   > [!NOTE]
+   > Check with your instructor on the password to use for signing in with the Admin account.
 
-7. At the Edge Save password prompt, select **Save & Turn on**.
+7. At the **Edge Save password** prompt, select **Save & Turn on**.
 
-8. At the Stay signed in prompt, select **Yes**.
+8. At the **Stay signed in** prompt, select **Yes**.
 
 9. On the **Let's keep your account secure** dialog, select **Next**.
 
 10. On the **Install Microsoft Authenticator** dialog, select **Next**.
 
-11. On the **set up your account in app** page, select **Next**.
+11. On the **Set up your account in app** page, select **Next**.
 
 12. Using the Authenticator app on your mobile device, scan the QR code and then select **Next**.
 
-13. On the **Let's try it out** dialog, take note of the code, enter that in to your Authenticator app.
+13. On the **Let's try it out** dialog, note the code and enter it into your Authenticator app.
 
-14. On the **Authenticator Added** dialog, select **Done**. 
+14. On the **Authenticator Added** dialog, select **Done**.
 
 15. In the Microsoft Entra admin center, in the navigation pane, select **Users**.
 
@@ -84,7 +85,8 @@ You've also been told that several more employees will be hired over the next co
 
 19. Next to **Password**, enter **Pa55-w.rd!**.
 
-    > Note: If you receive an error message stating that this password in weak or commonly used, enter the student password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
+    > [!NOTE]
+    > If you receive an error message stating that this password in weak or commonly used, enter the student password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
 
 20. Select **Next: Properties** located at the bottom of the page.
 
@@ -124,7 +126,8 @@ You've also been told that several more employees will be hired over the next co
 
 34. Next to **Password**, enter **Pa55-w.rd!**.
 
-    > Note: If you receive an error message stating that this password in weak or commonly used, enter the student password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
+    > [!NOTE]
+    > If you receive an error message stating that this password in weak or commonly used, enter the student password found under the **Resources** tab of this lab profile. Alternatively, you can enter a complex password of your choice.
 
 35. Select **Next: Properties** located at the bottom of the page.
 
@@ -158,7 +161,7 @@ You've also been told that several more employees will be hired over the next co
 
 3. On the taskbar, select **File Explorer**, then navigate to your **Downloads** folder.  
 
-4. Double-click **PowerShell-7.5.4-win-x64.msi** to launch the setup wizard.  
+4. Open **PowerShell-7.5.4-win-x64.msi** to launch the setup wizard.  
 
    - Select **Next**  
    - Leave the **Destination Folder** as is, then select **Next**  
@@ -166,9 +169,10 @@ You've also been told that several more employees will be hired over the next co
    - Leave the checkboxes blank under *Use Microsoft Update to help keep your computer secure and up to date*, then select **Next**  
    - Select **Install**  
 
-5. On the **Installation completed successfully** window, check **Launch PowerShell**, then select **Finish**.  
+5. On the **Installation completed successfully** window, select **Launch PowerShell**, then select **Finish**.  
 
-   > **Note:** If the installer closed without launching PowerShell, click the **Windows Search** bar, type **pwsh**, right-click **PowerShell 7**, and select **Run as administrator**.  
+   > [!NOTE]
+   > If the installer closed without launching PowerShell, select the **Windows Search** bar, enter `pwsh`, right-click **PowerShell 7**, and select **Run as administrator**.  
 
 6. In the **PowerShell 7** window, type the following command, and then press **Enter**. If prompted, enter **Y** at the NuGet and repository messages:
 
@@ -186,11 +190,11 @@ You've also been told that several more employees will be hired over the next co
 
 9. In the **Sign in** dialog box, sign in as **`admin@yourtenant.onmicrosoft.com`** with the administrative password, and then select **Sign in**.
 
-10. On the **Permissions Requested** prompt that appears, check **Consent on behalf of your organization** and then select **Accept**.
+10. On the **Permissions Requested** prompt, select **Consent on behalf of your organization** and then select **Accept**.
 
-11. On the **Sign in to all apps, websites, and services on this device?** select, **No, this app only**.
+11. On the **Sign in to all apps, websites, and services on this device?** prompt, select **No, this app only**.
 
-12. In the **PowerShell 7** window, type the following code to create a new profile object, and then press **enter**. Replace **Pa55w.rd** with a complex password of your choice:
+12. In the **PowerShell 7** window, enter the following code to create a new profile object, and then press **Enter**. Replace `Pa55w.rd` with a complex password of your choice:
 
     ```powershell
     $PWProfile = @{
@@ -199,7 +203,7 @@ You've also been told that several more employees will be hired over the next co
     }
     ```
     
-14. Next, type the following code to create a new user, and then press **Enter**. Ensure "yourtenant" matches your assigned tenant name:
+13. In the **PowerShell 7** window, enter the following code to create a new user, and then press **Enter**. Ensure `yourtenant` matches your assigned tenant name:
 
     ```powershell
     New-MgUser `
@@ -212,13 +216,14 @@ You've also been told that several more employees will be hired over the next co
         -Department "Sales" -JobTitle "Sales Rep"
     ```
 
-15. To confirm that the user **Cody Godinez** was created, In the **PowerShell 7** window, type the following command and then press **Enter**:
+14. To confirm that the user **Cody Godinez** was created, in the **PowerShell 7** window, enter the following command and then press **Enter**:
 
     ```powershell
     Get-MgUser
     ```
 
-> Verify that the list of users from your tenant is displayed. 
+    > [!NOTE]
+    > Verify that the list of users from your tenant is displayed.
 
 **Results**: After completing this exercise, you will have successfully created new user accounts in Entra ID.
 
@@ -228,7 +233,7 @@ You've also been told that several more employees will be hired over the next co
 
 You need to review and modify the current administrative roles for your tenant.
 
-You have been provided a list of users should have administrative roles assigned as indicated in the following table.  
+You have been provided a list of users that should have administrative roles assigned as indicated in the following table.
 
 | Name           | Must be able to:                         | Administrative Role needed: |
 | -------------- | ---------------------------------------- | --------------------------- |
@@ -240,9 +245,10 @@ You have been provided a list of users should have administrative roles assigned
 
 1. On SEA-SVR1, switch to Microsoft Edge.
 
-2. In the Microsoft Entra admin center, in the Navigation pane, select **Roles & admins**.
+2. In the **Microsoft Entra admin center**, in the navigation pane, select **Roles & admins**.
 
-    > Note that you can scroll down the list or use the search box to find the **Role** you are looking for.
+    > [!NOTE]
+    > You can scroll down the list or use the search box to find the role you are looking for.
 
 3. Using the search box, search for **Global administrator**.
 
@@ -272,7 +278,7 @@ You have been provided a list of users should have administrative roles assigned
 
 16. Select **Helpdesk administrator** (select the name, not the checkbox).
 
-17. In the **Helpdesk administrator** pane, select **+ Add assignments**
+17. In the **Helpdesk administrator** pane, select **+ Add assignments**.
 
 18. Under **Select members**, select **No member selected**, then search for and select **Miranda Snider**.
 
@@ -280,7 +286,7 @@ You have been provided a list of users should have administrative roles assigned
 
 20. In the navigation pane, select **Home**.
 
-**Results**: After completing this exercise, you should have successfully assigned administrative roles to users.
+**Results**: After completing this exercise, you have successfully assigned administrative roles to users.
 
 ## Exercise 3: Creating and managing groups and validating license assignment
 
@@ -294,11 +300,11 @@ You need to add the three new users to a Security group and assign licenses as i
 | Miranda Snider | Contoso_Managers | Office 365 E5, Enterprise Mobility + Security E5 via group membership |
 | Cody Godinez   | Contoso_Sales    | Office 365 E5, Enterprise Mobility + Security E5 via group membership direct assignment |
 
-You also been asked to modify the Company branding for the sign-in page.
+You have also been asked to modify the Company branding for the sign-in page.
 
 ### Task 1: Create groups by using the Microsoft Entra admin center
 
-1. On **SEA-SVR1**, in the Microsoft Entra admin center, in the navigation pane, select **Groups**.
+1. On **SEA-SVR1**, in the **Microsoft Entra admin center**, in the navigation pane, select **Groups**.
 
 2. Select **New group**.
 
@@ -308,9 +314,9 @@ You also been asked to modify the Company branding for the sign-in page.
     - Group name: **Contoso_Managers**
     - Membership type: **Assigned**
 
-4. Under Members, select **No members selected**.
+4. Under **Members**, select **No members selected**.
 
-5. In the Add members page add **Edmund Reeve**, **Miranda Snider**, and then click **Select**.
+5. On the **Add members** page, select **Edmund Reeve** and **Miranda Snider**, and then select **Select**.
 
 6. Select **Create**.
 
@@ -318,39 +324,39 @@ You also been asked to modify the Company branding for the sign-in page.
 
 1. On SEA-SVR1, switch to PowerShell 7.
 
-2. In the **PowerShell 7** window, type the following code to create a new group, and then press **Enter**:
+2. In the **PowerShell 7** window, enter the following code to create a new group, and then press **Enter**:
 
     ```powershell
     New-MgGroup -DisplayName "Contoso_Sales" -Description "Contoso Sales team users" -MailEnabled:$false -Mailnickname "Contoso_Sales" -SecurityEnabled
     ```
 
-3. In the **PowerShell 7** window, type the following command, and then press **Enter**:
+3. In the **PowerShell 7** window, enter the following command, and then press **Enter**:
 
     ```powershell
     Get-MgGroup
     ```
 
-4. Verify that you get the list of groups in your tenant, including the Contoso_Sales group you just created.
+4. Verify that you get the list of groups in your tenant, including the Contoso_Sales group you created.
 
-5. In the **PowerShell 7** window, type the following code to define a variable as the Contoso_Sales group, and then press **Enter**:
+5. In the **PowerShell 7** window, enter the following code to define a variable as the Contoso_Sales group, and then press **Enter**:
 
     ```powershell
     $group = Get-MgGroup | Where-Object {$_.DisplayName -eq "Contoso_Sales"}
     ```
 
-6. In the **PowerShell 7** window, type the following code to define another variable as the user, and then press **Enter**:
+6. In the **PowerShell 7** window, enter the following code to define another variable as the user, and then press **Enter**:
 
     ```powershell
     $user = Get-MgUser | Where-Object {$_.DisplayName -eq "Cody Godinez"}
     ```
 
-7. In the **PowerShell 7** window, type the following code to add Cody to Contoso_Sales using set variables, and then press **Enter**:
+7. In the **PowerShell 7** window, enter the following code to add Cody to Contoso_Sales using the set variables, and then press **Enter**:
 
     ```powershell
     New-MgGroupMember -GroupId $group.Id -DirectoryObjectId $user.Id
     ```
 
-8. In the **PowerShell 7** window, type the following code, and then press **Enter**:
+8. In the **PowerShell 7** window, enter the following code, and then press **Enter**:
 
     ```powershell
     Get-MgGroupMember -GroupId $group.Id | FL
@@ -362,29 +368,31 @@ You also been asked to modify the Company branding for the sign-in page.
 
 ### Task 3: Review licenses and modify company branding
 
-1. In the Microsoft Entra admin center, in the navigation pane, select **Billing** > **Licenses**.
+1. In the **Microsoft Entra admin center**, in the navigation pane, select **Billing** > **Licenses**.
 
 2. On the **Licenses** page, in the center navigation pane, under **Manage**, select **All products**.
 
-   > Take note of the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5**.
+   > [!NOTE]
+   > Review the current licenses available and assigned for **Enterprise Mobility + Security E5** and **Office 365 E5 (no Teams)**.
 
-3. In the Microsoft Entra admin center, in the Navigation pane,under **Entra ID**, select **Custom branding**.
+3. In the **Microsoft Entra admin center**, in the navigation pane, under **Entra ID**, select **Custom branding**.
 
 4. On the **Company Branding** page, under **Default sign-in experience**, select **Customize**.
 
-5. On the **Customize default sign-in experience** page, navigate to the **Sign-in form** tab and configure the following settings:
+5. On the **Customize default sign-in experience** page, select the **Sign-in form** tab and configure the following settings:
 
    - Sign-in page text: **Contoso Corp. Sign-in Page**
 
 6. Select **Review + Create**, review the settings and then select **Create**.
 
-7. In the Microsoft Entra admin center, in the Navigation pane, select **Users**.
+7. In the **Microsoft Entra admin center**, in the navigation pane, select **Users**.
 
 8. In the user list, select **Cody Godinez** (select the name, not the checkbox).
 
-9. In the Cody Godinez Profile page, in the center navigation menu, select **Licenses**.
+9. On the **Cody Godinez** profile page, in the **Manage** section, select **Licenses**.
 
-   > Notice that Cody does not have any current license assignments. And that licensing must now be performed in the 365 Admin center.
+   > [!NOTE]
+   > Cody does not have any current license assignments. Licensing must now be performed in the Microsoft 365 admin center.
 
 10. Open a new tab in **Microsoft Edge**, in the address bar, enter **https://admin.microsoft.com**.
 
@@ -398,15 +406,15 @@ You also been asked to modify the Company branding for the sign-in page.
 
 15. Select **Save changes**.
 
-16. Once the changes have been saved, select the **X** in the upper-right corner to close the **Cody Godinez** pane. 
+16. After the changes save, select the **X** in the upper-right corner to close the **Cody Godinez** pane.
 
-17. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
+17. In the Microsoft 365 admin center, in the navigation pane, select **Billing** > **Licenses**.
 
 18. In the **Subscriptions** list, select **Enterprise Mobility + Security E5**.
 
-19. Select the **Groups** tab, and then select **+ Assign licenses**.
+19. Select **Assign licenses**.
 
-20. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
+20. In the **Enter a group name** textbox, select the **Contoso_Managers** group.
 
 21. Select **Assign Licenses**.
 
@@ -416,22 +424,23 @@ You also been asked to modify the Company branding for the sign-in page.
 
 24. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
 
-25. Select the **Groups** tab, and then select **+ Assign licenses**.
+25. Select **Assign licenses**.
 
-26. Navigate into the **Enter a group name** textbox, and select the **Contoso_Managers** group.
+26. In the **Enter a group name** textbox, select the **Contoso_Managers** group.
 
 27. Select **Assign Licenses**.
 
 28. On the **You assigned licenses to Contoso_Managers** pane, select the **X** in the upper-right corner to close it.
 
-29. In the Microsoft 365 admin center, in the Navigation pane, select **Billing** > **Licenses**.
+29. In the **Microsoft 365 admin center**, in the navigation pane, select **Billing** > **Licenses**.
 
 30. In the **Subscriptions** list, select **Office 365 E5 (no Teams)**.
 
-   > Take note of the users that are assigned the Office 365 E5 license. Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. You can select the **Groups** tab see if the licenses assigned correctly. It may take 3-5 minutes for the licenses to reprocess.
+   > [!NOTE]
+   > Edmund and Miranda both receive their license assignment from their membership in the Contoso_Managers group. Verify that **Contoso_Managers** appears in the list with a **Type** of **Group**. It may take 3–5 minutes for the licenses to reprocess.
 
 31. Close Microsoft Edge.
 
-**Results**: After completing this exercise, you should have successfully created and managed groups, modified company branding, and assigned licenses.
+**Results**: After completing this exercise, you have successfully created and managed groups, modified company branding, and assigned licenses.
 
 **END OF LAB**
