@@ -21,7 +21,8 @@ The following lab(s) must be completed before this lab:
 
 - 0102-Synchronizing Identities by using Microsoft Entra Connect
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
+> [!NOTE]
+> You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
 
 ## Exercise 1: Configuring Entra Join
 
@@ -33,7 +34,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close Server Manager.
 
-2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+2. On the taskbar, select **Microsoft Edge**, in the address bar enter `https://entra.microsoft.com`, and then press **Enter**.
 
 3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
 
@@ -45,7 +46,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 5. On the **Devices | All devices** page, select **Device settings**.
 
-6. On the **Devices|Device settings** page, in the details pane, under **Users may join devices to Microsoft Entra**, verify that **All** is selected. 
+6. On the **Devices | Device settings** page, in the details pane, under **Users may join devices to Microsoft Entra**, verify that **All** is selected. 
 
    > This indicates that all Entra users are permitted to join Windows 10 or newer devices to Microsoft Entra. Note that this setting does not apply to Entra hybrid  joined devices, or devices joined by using Windows Autopilot self-deployment mode.
 
@@ -55,7 +56,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 9. Under **Local administrator settings**, select **Manage Additional local administrators on all Entra joined devices**. The Device Administrators page opens.
 
-10. In the Device Administrators page, select **+ Add assignments**.
+10. In the **Device Administrators page**, select **+ Add assignments**.
 
 11. In the Search box, enter **Allan Deyoung**, select the **Allan Deyoung** user object, and then select **Add**. 
 
@@ -65,11 +66,11 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 13. On the Device settings page, select **Save**.
 
-14. In the Entra admin center, in the navigation pane, select **Authentication methods**.
+14. In the **Entra admin center**, in the navigation pane, select **Authentication methods**.
 
 15. In the **Authentication methods** page, select **SMS**.
 
-16. In the **SMS settings** page, select **Enable** (to make SMS available as an authenticatiom method).
+16. In the **SMS settings** page, select **Enable** (to make SMS available as an authentication method).
 
 17. At the bottom of the page, select **Save**.
 
@@ -81,13 +82,13 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 3. In the **Settings** window, select **Accounts**.
 
-4. On the Accounts page, select **Access work or school**.
+4. On the **Accounts** page, select **Access work or school**.
 
 5. In the **Access work or school** page, select **Connect**.
 
 6. In the **Microsoft account** window, select **Join this device to Microsoft Entra ID**.
 
-7. On the **Sign in** page, type **JoniS@yourtenant.onmicrosoft.com** and then select **Next**.
+7. On the **Sign in** page, enter `JoniS@yourtenant.onmicrosoft.com` and then select **Next**.
 
 8. On the **Enter password** page, enter the user password (from the Resources tab) and then select **Sign in**.
 
@@ -117,9 +118,9 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 5. Right-click **Start** and then select **Computer Management**.
 
-6. In Computer Management, expand **Local Users and Groups**, and then select **Groups**.
+6. In **Computer Management**, expand **Local Users and Groups**, and then select **Groups**.
 
-7. Double-click the **Administrators** group.
+7. Double-select the **Administrators** group.
 
    > Notice that Joni Sherman has been added as a local Administrator on SEA-WS1. Also notice two security principals represented by their security identifiers (SID). These two SIDs represent the Entra ID global administrator role, and the Entra joined device administrator role. 
 
@@ -127,7 +128,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 9. Switch to **SEA-SVR1**.
 
-10. In Microsoft Edge, in the Microsoft Entra admin center, select **Devices**, and then select **All devices**. 
+10. In Microsoft Edge, in the **Microsoft Entra admin center**, select **Devices**, and then select **All devices**. 
 
     > In the Devices pane, notice that SEA-WS1 is listed. 
 
@@ -137,18 +138,25 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 ### Task 4: Sign in to Windows as an Entra User
 
-1. Switch to **SEA-WS1** and then sign in as **`JoniS@yourtenant.onmicrosoft.com`** with the user password you used in the previous task. 
+1. Switch to **SEA-WS1** and then sign in as `JoniS@yourtenant.onmicrosoft.com` with the user password you used in the previous task. 
 
 2. At the **Use Windows Hello with your account** page, select **OK**.
 
 3. On the **Let's keep your account secure** page, select **Next**.
 
-4. On the **Install Microsoft Authenticator** page, select **Set up a different way to sign in**. **Note** Ensure you select the correct link.
+4. On the **Install Microsoft Authenticator** page, select **Set up a different way to sign in**.
+
+   > [!NOTE]
+   > Ensure you select the correct link.
 
 5. On the **Add a sign-in method** dialog box, select **Phone**.
 
 6. On the **Add your phone number** page, select your **Country code** and in the **Phone number** field, enter your mobile phone number which is able to receive text messages, then select **Next**.
 
+   > [!NOTE]
+   > This lab environment does not support SMS delivery to non-US phone numbers.
+   > If you do not have a US phone number, select **Set up a different way to sign in**
+   > and choose **Microsoft Authenticator** to complete MFA registration.
 7. When you receive the verification code, enter the code on the **Verify your phone number** page and then select **Next**.
 
 8. On the **Phone number added** page, select **Done**.
@@ -213,7 +221,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 5. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-6. On the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
+6. On the **Sign in to your account** window, select the tenant admin account, enter the tenant password, and then select **Sign in**.
 
 7. On the **Device options** page, select **Configure Hybrid Microsoft Entra ID join**, and then select **Next**.
 
@@ -247,7 +255,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 4. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-5. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
+5. On the **Sign in to your account** window, select the tenant admin account, enter the tenant password, and then select **Sign in**.
 
 6. On the **Connect your directories** page, select **Next**.
 
@@ -269,10 +277,11 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 2. Right-click **Start**, select **Shut down or sign out**, and then select **Restart**.
 
-    _Note: The reboot will trigger the Entra hybrid join on SEA-CL2._
-   
+   > [!NOTE]
+   > The reboot will trigger the Entra hybrid join on **SEA-CL2**.
+
 3. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
-    
+
 4. On the taskbar, right-click **Start** and select **Windows Terminal (Admin)**.
 
 5. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
@@ -283,19 +292,20 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** and **DomainJoined : YES** are displayed.
 
-   > **Note**: If the device is not yet joined to Entra ID, switch back to **SEA-SRV1** and run the command below. Once completed, switch back to SEA-CL2 and restart the computer once more.
-   
+   > [!NOTE]
+   > If the device is not yet joined to Entra ID, switch back to **SEA-SVR1** and run the command below. Once completed, switch back to **SEA-CL2** and restart the computer once more.
+
    ```powershell
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
 
-7. Close all windows on SEA-CL2 and sign out.
+7. Close all windows on **SEA-CL2** and sign out.
 
-8. Switch to **SEA-SVR1** and switch to the Microsoft Entra admin center.
+8. Switch to **SEA-SVR1** and switch to the **Microsoft Entra admin center**.
 
-9. Select **Devices** > **All devices**. 
+9. Select **Devices** > **All devices**.
 
-10. Verify that **SEA-CL2** has **Microsoft Entra hybrid joined** as value for the row **Join Type**. If necessary, select the **Refresh** button if SEA-CL2 is not listed.
+10. Verify that **SEA-CL2** has **Microsoft Entra hybrid joined** as the value for the **Join Type** column. If **SEA-CL2** is not listed, select **Refresh**.
 
 11. Close all windows on **SEA-SVR1**.
 
