@@ -82,7 +82,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 3. In the **Settings** window, select **Accounts**.
 
-4. On the Accounts page, select **Access work or school**.
+4. On the **Accounts** page, select **Access work or school**.
 
 5. In the **Access work or school** page, select **Connect**.
 
@@ -118,7 +118,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 5. Right-click **Start** and then select **Computer Management**.
 
-6. In Computer Management, expand **Local Users and Groups**, and then select **Groups**.
+6. In **Computer Management**, expand **Local Users and Groups**, and then select **Groups**.
 
 7. Double-select the **Administrators** group.
 
@@ -128,7 +128,7 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 9. Switch to **SEA-SVR1**.
 
-10. In Microsoft Edge, in the Microsoft Entra admin center, select **Devices**, and then select **All devices**. 
+10. In Microsoft Edge, in the **Microsoft Entra admin center**, select **Devices**, and then select **All devices**. 
 
     > In the Devices pane, notice that SEA-WS1 is listed. 
 
