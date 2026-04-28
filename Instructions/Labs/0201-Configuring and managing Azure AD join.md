@@ -277,10 +277,11 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 2. Right-click **Start**, select **Shut down or sign out**, and then select **Restart**.
 
-    _Note: The reboot will trigger the Entra hybrid join on SEA-CL2._
-   
+   > [!NOTE]
+   > The reboot will trigger the Entra hybrid join on **SEA-CL2**.
+
 3. After **SEA-CL2** has restarted, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd**.
-    
+
 4. On the taskbar, right-click **Start** and select **Windows Terminal (Admin)**.
 
 5. In the **Windows PowerShell** window, type the following command, and then press **Enter**:
@@ -298,7 +299,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
 
-7. Close all windows on SEA-CL2 and sign out.
+7. Close all windows on **SEA-CL2** and sign out.
 
 8. Switch to **SEA-SVR1** and switch to the **Microsoft Entra admin center**.
 
