@@ -303,7 +303,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 8. Switch to **SEA-SVR1** and switch to the **Microsoft Entra admin center**.
 
-9. Select **Devices** > **All devices**. 
+9. Select **Devices** > **All devices**.
 
 10. Verify that **SEA-CL2** has **Microsoft Entra hybrid joined** as the value for the **Join Type** column. If **SEA-CL2** is not listed, select **Refresh**.
 
