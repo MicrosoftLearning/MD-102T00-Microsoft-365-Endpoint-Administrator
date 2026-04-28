@@ -144,12 +144,19 @@ You need to configure Entra ID device settings to ensure that all users are allo
 
 3. On the **Let's keep your account secure** page, select **Next**.
 
-4. On the **Install Microsoft Authenticator** page, select **Set up a different way to sign in**. **Note** Ensure you select the correct link.
+4. On the **Install Microsoft Authenticator** page, select **Set up a different way to sign in**.
+
+   > [!NOTE]
+   > Ensure you select the correct link.
 
 5. On the **Add a sign-in method** dialog box, select **Phone**.
 
 6. On the **Add your phone number** page, select your **Country code** and in the **Phone number** field, enter your mobile phone number which is able to receive text messages, then select **Next**.
 
+   > [!NOTE]
+   > This lab environment does not support SMS delivery to non-US phone numbers.
+   > If you do not have a US phone number, select **Set up a different way to sign in**
+   > and choose **Microsoft Authenticator** to complete MFA registration.
 7. When you receive the verification code, enter the code on the **Verify your phone number** page and then select **Next**.
 
 8. On the **Phone number added** page, select **Done**.
