@@ -221,7 +221,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 5. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-6. On the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
+6. On the **Sign in to your account** window, select the tenant admin account, enter the tenant password, and then select **Sign in**.
 
 7. On the **Device options** page, select **Configure Hybrid Microsoft Entra ID join**, and then select **Next**.
 
@@ -255,7 +255,7 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 4. On the **Connect to Microsoft Entra ID** page, select **Next**.
 
-5. One the **Sign in to your account** window, select the tenant admin account, and then enter the tenant password and select **Sign in**.
+5. On the **Sign in to your account** window, select the tenant admin account, enter the tenant password, and then select **Sign in**.
 
 6. On the **Connect your directories** page, select **Next**.
 
@@ -299,11 +299,11 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 7. Close all windows on SEA-CL2 and sign out.
 
-8. Switch to **SEA-SVR1** and switch to the Microsoft Entra admin center.
+8. Switch to **SEA-SVR1** and switch to the **Microsoft Entra admin center**.
 
 9. Select **Devices** > **All devices**. 
 
-10. Verify that **SEA-CL2** has **Microsoft Entra hybrid joined** as value for the row **Join Type**. If necessary, select the **Refresh** button if SEA-CL2 is not listed.
+10. Verify that **SEA-CL2** has **Microsoft Entra hybrid joined** as the value for the **Join Type** column. If **SEA-CL2** is not listed, select **Refresh**.
 
 11. Close all windows on **SEA-SVR1**.
 
