@@ -291,8 +291,9 @@ Some Contoso Windows devices are currently joined to the local Active Directory 
 
 6. In the output under **Device State**, verify that **AzureAdJoined : YES** and **DomainJoined : YES** are displayed.
 
-   > **Note**: If the device is not yet joined to Entra ID, switch back to **SEA-SRV1** and run the command below. Once completed, switch back to SEA-CL2 and restart the computer once more.
-   
+   > [!NOTE]
+   > If the device is not yet joined to Entra ID, switch back to **SEA-SVR1** and run the command below. Once completed, switch back to **SEA-CL2** and restart the computer once more.
+
    ```powershell
    Start-ADSyncSyncCycle -PolicyType Delta
    ```
