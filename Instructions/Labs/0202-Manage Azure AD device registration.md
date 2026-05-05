@@ -25,19 +25,19 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 1. On **SEA-SVR1**, if necessary, sign in as **Contoso\\Administrator** with the password of **Pa55w.rd** and close **Server Manager**.
 
-2. On the taskbar select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
+2. On the taskbar, select **Microsoft Edge**, in the address bar type **https://entra.microsoft.com**, and then press **Enter**.
 
-3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**. 
+3. Sign in as user `Admin@yourtenant.onmicrosoft.com`, and use the tenant Admin password. If the **Stay signed in?** prompt appears, select **No**.
 
    > The Microsoft Entra admin center opens.
 
-4. In the Microsoft Entra admin center, in the navigation pane, select **Devices**, and then select **All devices**. 
+4. In the Microsoft Entra admin center, in the navigation pane, select **Devices**, and then select **All devices**.
 
 5. On the **Devices | All devices** page, select **Device settings**.
 
 6. On the **Devices|Device settings** page, in the details pane, verify that **Users may register their devices with Microsoft Entra** is set to **All** and is greyed out.
 
-   > This option is greyed out and set to **All** by default when Microsoft Intune is enable in the tenant. This ensures that all users are able to register Windows 10 or newer personal, iOS, Android, and macOS devices with Entra.
+   > This option is greyed out and set to **All** by default when Microsoft Intune is enabled in the tenant. This ensures that all users are able to register Windows 10 or newer personal, iOS, Android, and macOS devices with Microsoft Entra ID.
 
 ### Task 2: Perform Entra registration
 
@@ -49,13 +49,13 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 4. On the Accounts page, select **Access work or school**.
 
-5. In the **Access work or school** page, select **Connect**.
+5. On the **Access work or school** page, select **Connect**.
 
 6. In the **Microsoft account** window, in the Email address box, enter **`JoniS@yourtenant.onmicrosoft.com`** and then select **Next**.
 
 7. On the **Enter password** page, enter the user password you used in earlier tasks and then select **Sign in**.
 
-8. On the **You're all set!** page, select **Done**.
+8. On the **Account added to this device** page, select **Done**.
 
 9. On the **Access work or school** page, verify that Joni's Work or school account is displayed.
 
