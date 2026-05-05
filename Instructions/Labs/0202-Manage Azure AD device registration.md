@@ -63,7 +63,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 ### Task 3: Validate Entra registration
 
-1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal (Admin)**. At the User Account Control, select **Yes**.
+1. On SEA-WS1, right-click **Start**, and then select **Windows Terminal (Admin)**. At the **User Account Control** dialog, select **Yes**.
 
 2. In the PowerShell console, type the following and press **Enter**: 
 
@@ -77,13 +77,13 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 5. Switch to **SEA-SVR1**.
 
-6. In Microsoft Edge, in the Microsoft Entra admin center, expand **Entra ID**.
+6. In Microsoft Edge, in the **Microsoft Entra admin center**, expand **Entra ID**.
 
 7. Select **Devices**, then select **All devices**. In the Devices pane, notice that SEA-WS1 is listed. 
 
 8. Verify that the **Join Type** is listed as **Microsoft Entra registered** and that the owner is **Joni Sherman**. 
 
-   > Notice that the device is Microsoft Entra registered, NOT Microsoft Entra joined. Entra registered devices are typically devices that cannot be Entra joined, or devices that are personally owned by the user. Registering a device will provide access to cloud-based resources.
+   > Notice that the device is Microsoft Entra registered, not Microsoft Entra joined. Microsoft Entra registered devices are typically devices that cannot be Microsoft Entra joined, or devices that are personally owned by the user. Registering a device provides access to cloud-based resources.
 
 9. Close Microsoft Edge.
 
