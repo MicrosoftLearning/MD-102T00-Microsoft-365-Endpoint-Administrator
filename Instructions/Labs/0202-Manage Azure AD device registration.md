@@ -89,9 +89,9 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
 ### Task 4: Sign in to Windows and disconnect from the organization
 
-1. Switch to **SEA-WS1** and notice that unlike Entra Joined or Entra Hybrid Joined devices, an Entra registered device only allows local accounts to be selected. 
+1. Switch to **SEA-WS1** and notice that unlike Entra Joined or Entra Hybrid Joined devices, an Entra registered device only allows local accounts to be selected.
 
-2. On SEA-WS1, sign in as **Admin** with the password of **Pa55w.rd**. 
+2. On SEA-WS1, sign in as **Admin** with the password of **Pa55w.rd**.
 
 3. Select **Start** and then select **Settings**.
 
@@ -105,7 +105,7 @@ Several users have asked to use their personal iOS, Android, and Windows devices
 
    > Notice that you do not have to restart to disconnect a registered device from Entra ID.
 
-8. To prepare for the next lab, select **Start**, then select the **Power** icon, and then select **Restart**.
+8. To prepare for the next lab, select **Start**, select the **Power** icon, and then select **Restart**.
 
 **Results**: After completing this exercise, you will have configured Entra device registration.
 
