@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'Practice Lab 0204: Enrolling devices into Microsoft Intune'
-  description: In this lab, you will join a Windows client to Entra ID and verify that the device has automatically enrolled in to Microsoft Intune.
+  description: In this lab, you will join a Windows client to Entra ID and verify that the device has automatically enrolled into Microsoft Intune.
   duration: 108 minutes
   level: 200
   islab: true
@@ -27,7 +27,7 @@ The following lab(s) must be completed before this lab:
 - 0203-Manage Device Enrollment into Intune
 
 > [!NOTE]
-> You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Microsoft Entra ID.
+> You will also need a mobile phone that can receive text messages used to secure Windows Hello sign-in authentication to Microsoft Entra ID.
 
 ### Scenario
 
@@ -134,7 +134,7 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 ### Task 4: Verifying device enrollment in the Intune console
 
-1. Switch to **SEA-SVR1** as **Contoso\Administrator** with the password of **Pa55w.rd**. 
+1. Switch to **SEA-SVR1** as **Contoso\Administrator** with the password of **Pa55w.rd**.
 
 2. In Microsoft Edge, type `https://intune.microsoft.com` in the address bar, and then press **Enter**.
 
@@ -146,16 +146,16 @@ You have assigned Aaron Nicholls appropriate licenses and will now test the proc
 
 6. On the **Devices | Overview** blade, select **All devices** and verify that **SEA-WS1** is listed.
 
-7. Note that for SEA-WS1, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**.
+7. Note that for **SEA-WS1**, the **Managed by** column displays **Intune** and the **Ownership** column displays **Corporate**.
 
-> [!NOTE]
-> This view lists devices that are enrolled to Intune. Remember that you configured automatic enrollment between Microsoft Entra ID and Intune, and because of that, any device that is joined or registered to Microsoft Entra ID is automatically enrolled to Intune. Any devices joined prior to setting up enrollment are only joined or registered to Microsoft Entra ID, but not enrolled in Intune.
+   > [!NOTE]
+   > This view lists devices that are enrolled to Intune. Remember that you configured automatic enrollment between Microsoft Entra ID and Intune, and because of that, any device that is joined or registered to Microsoft Entra ID is automatically enrolled to Intune. Any devices joined prior to setting up enrollment are only joined or registered to Microsoft Entra ID, but not enrolled in Intune.
 
 8. Open a new tab in **Microsoft Edge**, in the address bar type `https://entra.microsoft.com`, and then press **Enter**.
 
 9. In the Microsoft Entra admin center, in the navigation pane, select **Devices**, then select **All devices**.
 
-   > Take note of SEA-WS1. Notice that the **Join Type** column displays **Microsoft Entra joined** and the **MDM** column displays **Microsoft Intune**.
+   > Take note of **SEA-WS1**. Notice that the **Join Type** column displays **Microsoft Entra joined** and the **MDM** column displays **Microsoft Intune**.
 
 10. Close all open windows.
 
