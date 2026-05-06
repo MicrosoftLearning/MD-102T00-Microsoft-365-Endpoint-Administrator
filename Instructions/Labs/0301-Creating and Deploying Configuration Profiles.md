@@ -21,21 +21,22 @@ In this lab, you will use Microsoft Intune to create and apply a Configuration p
 
 The following lab(s) must be completed before this lab:
 
-- 0101-Managing Identities in Entra ID
+- 0101-Managing Identities in Microsoft Entra ID
 
-- 0102-Synchronizing identities by using Entra Connect
+- 0102-Synchronizing identities by using Microsoft Entra Connect
 
 - 0203-Manage Device Enrollment into Intune
 
 - 0204-Enrolling devices into Intune
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
+> [!NOTE]
+> You will also need a mobile phone that can receive text messages used to secure Windows Hello sign-in authentication to Microsoft Entra ID.
 
 ## Exercise 1: Create and apply a Configuration policy
 
 ### Scenario
 
-You need to use Entra and Intune to manage members of the Developers department at Contoso . You have been asked to evaluate the solutions that would enable the users to work effectively and securely on Windows 11 devices. Aaron Nicholls has volunteered to help you test and evaluate the solution and provide feedback. He has also given you some initial requirements that must be included and applied to the developer's Windows devices:
+You need to use Microsoft Entra and Intune to manage members of the Developers department at Contoso. You have been asked to evaluate the solutions that would enable the users to work effectively and securely on Windows 11 devices. Aaron Nicholls has volunteered to help you test and evaluate the solution and provide feedback. He has also given you some initial requirements that must be included and applied to the developer's Windows devices:
 
 - The Gaming section in Settings should not be visible.
 - The Privacy section in Settings should be restricted as much as possible.
@@ -43,16 +44,15 @@ You need to use Entra and Intune to manage members of the Developers department 
 - The process devbuild.exe must be excluded from Windows Defender.
 - Most used apps and Recently added apps should not be displayed on the Start menu.
 
-
 ### Task 1: Verify device settings
 
-1. Sign in to **SEA-WS1** as **Aaron Nicholls** with the PIN **102938**.
+1. Sign in to **SEA-WS1** as **Aaron Nicholls** with the PIN `102938`.
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
 3. On the **Settings** navigation list, verify that you can see the **Gaming** setting.
 
-4. Select the **Personalization** setting and then on the Personalization page, select **Start**. Ensure that **Show recently added apps** and **Show most used apps** are both set to **On**.
+4. Select the **Personalization** setting and then on the **Personalization** page, select **Start**. Ensure that **Show recently added apps** and **Show most used apps** are both set to **On**.
 
 5. In the **Settings** app, select **Privacy & security**.
 
@@ -62,9 +62,9 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 8. On the **Windows Security** page, select **Virus & threat protection**.
 
-9. On the **Virus & threat protection** page, under **Virus & threat protection settings**, select **Manage settings** . 
+9. On the **Virus & threat protection** page, under **Virus & threat protection settings**, select **Manage settings**.
 
-10. Scroll down to **Exclusions** and select **Add or remove exclusions**. At the User Account Control, select **Yes**.
+10. Scroll down to **Exclusions** and select **Add or remove exclusions**. At the **User Account Control** dialog, select **Yes**.
 
 11. On the **Exclusions** page, verify that no exclusions have been configured.
 
@@ -80,7 +80,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
 
-4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
+4. Sign in as `admin@yourtenant.onmicrosoft.com` with the tenant Admin password.
 
 5. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
@@ -111,13 +111,13 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 15. Under **Microsoft Defender Antivirus,** scroll down and expand **Microsoft Defender Antivirus Exclusions**.
 
-16. Under **Microsoft Defender Antivirus Exclusions** in the **Files and folders** box, type the following:
+16. Under **Microsoft Defender Antivirus Exclusions**, in the **Files and folders** box, type the following:
 
-    **C:\\DevProjects**.
+    `C:\DevProjects`
 
 17. In the **Processes** box, type the following:
 
-    **DevBuild.exe**. 
+    `DevBuild.exe`
 
 18. Select **Next** three times until you reach the **Review + create** blade. Select **Create**.
 
@@ -142,7 +142,7 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 7. On the **Groups | All groups** blade, verify that the **Contoso developer devices** group is displayed.
 
-### Task 4: Create a dynamic Entra ID device group
+### Task 4: Create a dynamic Microsoft Entra ID device group
 
 1. On the **Groups | All Groups** blade, on the details pane, select **New group**.
 
@@ -212,13 +212,13 @@ You need to use Entra and Intune to manage members of the Developers department 
 
 13. On the **Virus & threat protection** page, select **Manage settings** under **Virus & threat protection settings**. 
 
-14. Scroll down to **Exclusions** and select **Add or remove exclusions**. Select **Yes** at the User Account Control message.
+14. Scroll down to **Exclusions** and select **Add or remove exclusions**. At the **User Account Control** dialog, select **Yes**.
 
-15. On the **Exclusions** page, verify that **C:\\DevProjects** and **DevBuild.exe** are displayed.
+15. On the **Exclusions** page, verify that `C:\DevProjects` and `DevBuild.exe` are displayed.
 
 16. Close the **Windows Security** page and then close the **Settings** app.
 
-**Results**: After completing this exercise, you will have successfully created and assigned a Configuration policy for a Windows 11 device.
+**Results**: After completing this exercise, you have successfully created and assigned a Configuration policy for a Windows 11 device.
 
 ## Exercise 2: Modify an assigned Configuration policy  
 
@@ -248,9 +248,10 @@ There was an exception to Contoso's policy that specifies that members of the De
     
 2. In the details pane, select **SEA-WS1**. 
     
-3. On the **SEA-WS1** blade, select **Sync** and when prompted select **Yes**. 
+3. On the **SEA-WS1** blade, select **Sync** and when prompted select **Yes**.
 
-   _Note: Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes._
+   > [!NOTE]
+   > Intune contacts the device and tells it to synchronize all policies. This may take up to 5 minutes.
 
 4. Close Microsoft Edge.
 
@@ -264,6 +265,6 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 4. Close all open windows and sign out of **SEA-WS1**.
 
-**Results**: After completing this exercise, you will have successfully modified an assigned a Configuration policy, and verified the changes.
+**Results**: After completing this exercise, you have successfully modified an assigned Configuration policy and verified the changes.
 
 **END OF LAB**
