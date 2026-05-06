@@ -125,22 +125,26 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 1. In the Microsoft Intune admin center, in the navigation pane, select **Groups**.
 
-2. On the **Groups | All groups** blade, select **New group**.
+2. Select **All groups**.
 
-3. On the **New Group** blade, enter the following information:
+3. On the **Groups | All groups** blade, select **New group**.
+
+4. On the **New Group** blade, enter and select the following information:
 
    - Group type: **Security**
    - Group name: `Contoso Developer devices`
    - Group description: `All Windows devices in Contoso Developer department`
    - Membership type: **Assigned**
 
-4. Under **Members**, select **No members selected**.
+5. Under **Members**, select **No members selected**.
 
-5. On the **Add members** blade, in the **Search** box type **Sea**. Select **SEA-WS1** and then choose **Select**.
+6. On the **Add members** blade, in the **Search** box, type `Sea`.
 
-6. On the **New Group** blade, select **Create**. 
+7. Select **SEA-WS1**, and then select **Select**.
 
-7. On the **Groups | All groups** blade, verify that the **Contoso developer devices** group is displayed.
+8. On the **New Group** blade, select **Create**.
+
+9. On the **Groups | All groups** blade, verify that the **Contoso developer devices** group is displayed. If necessary, select **Refresh**.
 
 ### Task 4: Create a dynamic Microsoft Entra ID device group
 
