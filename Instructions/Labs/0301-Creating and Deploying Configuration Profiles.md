@@ -15,7 +15,7 @@ lab:
 
 ## Summary
 
-In this lab, you will use Microsoft Intune to create and apply a Configuration policy for a Windows 11 device.
+In this lab, you use Microsoft Intune to create and apply a Configuration policy for a Windows 11 device.
 
 ### Prerequisites
 
@@ -78,7 +78,7 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 2. On **SEA-SVR1**, on the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
+3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
 
 4. Sign in as `admin@yourtenant.onmicrosoft.com` with the tenant Admin password.
 
@@ -86,7 +86,7 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 6. On the **Devices** page, under the **Manage devices** section, select **Configuration**.
 
-7. On the **Devices | Configuration** blade, in the details pane, select **+ Create**, and then select **+ New policy**.
+7. On the **Devices | Configuration** blade, in the **Policies** tab, select **+ Create**, and then select **+ New policy**.
 
 8. In the **Create a profile** blade, select the following options, and then select **Create**:
 
@@ -96,18 +96,18 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 9. In the **Basics** tab, enter the following information, and then select **Next**:
 
-- Name: **Contoso Developer - standard**
-- Description: **Basic restrictions and configuration for Contoso Developers.**
+    - Name: `Contoso Developer - standard`
+    - Description: `Basic restrictions and configuration for Contoso Developers.`
 
-10. On the **Configurations settings** tab, expand the **Control Panel and Settings** section. 
+10. On the **Configurations settings** tab, expand the **Control Panel and Settings** section.
 
 11. Select **Block** next to the **Gaming** and **Privacy** options.
 
-12. On the same page, expand the  **Start** section. 
+12. On the same page, expand the  **Start** section.
 
 13. Scroll down and select **Block** next to **Most used apps**, **Recently added apps** and **Recently opened items in Jump Lists**.
 
-14. On the same page, scroll down and expand the **Microsoft Defender Antivirus** section. 
+14. On the same page, scroll down and expand the **Microsoft Defender Antivirus** section.
 
 15. Under **Microsoft Defender Antivirus,** scroll down and expand **Microsoft Defender Antivirus Exclusions**.
 
@@ -129,12 +129,12 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 3. On the **New Group** blade, enter the following information:
 
-- Group type: **Security**
-- Group name: **Contoso Developer devices**
-- Group description: **All Windows devices in Contoso Developer department**
-- Membership type: **Assigned**
+   - Group type: **Security**
+   - Group name: `Contoso Developer devices`
+   - Group description: `All Windows devices in Contoso Developer department`
+   - Membership type: **Assigned**
 
-4. Under **Members**, select **No members selected**. 
+4. Under **Members**, select **No members selected**.
 
 5. On the **Add members** blade, in the **Search** box type **Sea**. Select **SEA-WS1** and then choose **Select**.
 
@@ -149,7 +149,7 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 2. On the **Group** blade, provide the following values:
 
    - Group type: **Security**
-   - Group name: **Windows Devices**
+   - Group name: `Windows Devices`
    - Membership type: **Dynamic Device**
 
 3. Under the **Dynamic Device Members** section, select **Add dynamic query**. 
@@ -172,9 +172,9 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 2. On the **Devices** blade, under **Manage devices** section, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer – standard** profile.
+3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer - standard** profile.
 
-4. On the **Contoso Developer – standard** blade, scroll down to the **Assignments** section, and select **Edit**.
+4. On the **Contoso Developer - standard** blade, scroll down to the **Assignments** section, and select **Edit**.
 
 5. On the Assignments page, under **Included groups** select **Add groups**.
 
@@ -200,13 +200,13 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 7. On **SEA-WS1**, select **Start** and then select **Settings**. Verify that the **Gaming** setting has been removed.
 
-8. Select **Privacy & security** and notice that many of the privacy settings are now hidden. 
+8. Select **Privacy & security** and notice that many of the privacy settings are now hidden.
 
-9. Select the **Personalization** setting and then select **Start**. Verify that **Show recently added apps** and **Show most used apps** are set to **Off**. 
+9. Select the **Personalization** setting and then select **Start**. Verify that **Show recently added apps** and **Show most used apps** are set to **Off**.
 
-10. In the **Settings** app, select **Privacy and Security**.
+10. In the **Settings** app, select **Privacy & security**.
 
-11. On the **Privacy & Security** page, select **Windows Security** and then select **Open Windows Security**.
+11. On the **Privacy & security** page, select **Windows Security** and then select **Open Windows Security**.
 
 12. On the **Windows Security** page, select **Virus & threat protection**.
 
@@ -232,7 +232,7 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and under the **Manage devices** section, select **Configuration**. 
 
-3. On the **Devices | Configuration** blade, in the details pane select **Contoso Developer -  standard**.
+3. On the **Devices | Configuration** blade, in the details pane, select **Contoso Developer - standard**.
 
 4. On the **Contoso Developer - standard** blade, scroll down to the **Configuration settings** section, and then select **Edit**.
 
