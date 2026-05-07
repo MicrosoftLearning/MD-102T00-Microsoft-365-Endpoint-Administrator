@@ -50,7 +50,7 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 2. On the taskbar, select **Start** and then select **Settings**.
 
-3. On the **Settings** navigation list, verify that you can see the **Gaming** setting.
+3. In the **Settings** navigation list, verify that you can see the **Gaming** setting.
 
 4. Select the **Personalization** setting and then on the **Personalization** page, select **Start**. Ensure that **Show recently added apps** and **Show most used apps** are both set to **On**.
 
@@ -103,9 +103,9 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 11. Select **Block** next to the **Gaming** and **Privacy** options.
 
-12. On the same page, expand the  **Start** section.
+12. On the same page, expand the **Start** section.
 
-13. Scroll down and select **Block** next to **Most used apps**, **Recently added apps** and **Recently opened items in Jump Lists**.
+13. Scroll down and select **Block** next to **Most used apps**, **Recently added apps**, and **Recently opened items in Jump Lists**.
 
 14. On the same page, scroll down and expand the **Microsoft Defender Antivirus** section.
 
@@ -156,9 +156,9 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
    - Group name: `Windows Devices`
    - Membership type: **Dynamic Device**
 
-3. Under the **Dynamic Device Members** section, select **Add dynamic query**. 
+3. Under the **Dynamic Device Members** section, select **Add dynamic query**.
 
-4. On the **Dynamic membership rules** blade, in the **Rule syntax** section, select **Edit**. 
+4. On the **Dynamic membership rules** blade, in the **Rule syntax** section, select **Edit**.
 
 5. In the **Edit rule syntax** text box, add the following simple membership rule and select **OK**.
 
@@ -172,9 +172,9 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 ### Task 5: Assign a Configuration policy to Windows devices
 
-1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**. 
+1. In the Microsoft Intune admin center, in the navigation pane, select **Devices**.
 
-2. On the **Devices** blade, under **Manage devices** section, select **Configuration**.
+2. On the **Devices** blade, under the **Manage devices** section, select **Configuration**.
 
 3. On the **Devices | Configuration** blade, in the details pane, select the **Contoso Developer - standard** profile.
 
@@ -263,7 +263,7 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 1. Switch to **SEA-WS1**.
 
-2. On **SEA-WS1** and on the taskbar, select **Start** and then select the **Settings** app.
+2. On **SEA-WS1**, on the taskbar, select **Start** and then select the **Settings** app.
 
 3. In the **Settings** app, select **Privacy & security** and verify that all of the customization options are back.
 
