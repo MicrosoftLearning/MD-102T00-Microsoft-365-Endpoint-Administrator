@@ -34,7 +34,7 @@ You have been asked to create a Configuration policy to be used to automatically
 
 2. On **SEA-SVR1**, on the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
+3. In **Microsoft Edge**, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
@@ -42,16 +42,18 @@ You have been asked to create a Configuration policy to be used to automatically
 
 6. On the **Groups | All groups** blade, select **New group**.
 
-7. On the **New Group** blade, enter the following information:
+7. On the **New Group** blade, enter and select the following information:
 
     - Group type: **Security**
     - Group name: **iOS_iPadOS Devices**
     - Group description: **All iOS and iPadOS devices**
     - Membership type: **Assigned**
 
-8. On the **New Group** blade, select **Create**. 
+8. On the **New Group** blade, select **Create**.
 
-9. On the **Groups | All groups** blade, verify that the **iOS_iPadOS Devices** group is displayed. You may need to select the Refresh button for the new group to become visible.
+9. Select **All groups**.
+
+10. On the **Groups | All groups** blade, verify that the **iOS_iPadOS Devices** group is displayed. You may need to select the **Refresh** button for the new group to become visible.
 
 ### Task 2: Create a Configuration policy based on scenario requirements
 
