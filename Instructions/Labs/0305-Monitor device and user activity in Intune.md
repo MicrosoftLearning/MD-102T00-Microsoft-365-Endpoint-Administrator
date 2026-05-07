@@ -27,11 +27,12 @@ The following lab(s) must be completed before this lab:
 
 - 0301-Creating and Deploying Configuration Policies
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
+  > [!NOTE]
+  > You will also need a mobile phone that can receive text messages used to secure Windows Hello sign-in authentication to Microsoft Entra ID.
 
 ### Scenario
 
-You need to review Aaron Nicholls sign-in activity and general information provided by the Audit logs.  You also need to verify the hardware on SEA-WS1 and confirm the configuration policy assigned to this device is successfully applied.
+You need to review Aaron Nicholls' sign-in activity and general information provided by the Audit logs. You also need to verify the hardware on SEA-WS1 and confirm the configuration policy assigned to this device is successfully applied.
 
 ### Task 1: Monitor user activity
 
@@ -41,44 +42,42 @@ You need to review Aaron Nicholls sign-in activity and general information provi
 
 3. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-4. On the **Microsoft Intune admin center** page, select **Users**.
+4. In the Microsoft Intune admin center, select **Users**.
 
-5. On the **Users|All users** pane, select **Sign-in logs**.
+5. In the **Users** navigation pane, select **Sign-in logs**.
 
-6. In the Details pane, user sign-in activity is listed. Select the first entry where the **User** column displays **Aaron Nicholls**.
+6. In the **Users | Sign-in logs** page, where **User sign-ins (interactive)** activity is listed, select the first entry where the **User** column displays **Aaron Nicholls**.
 
-7. In the **Details** pane, Aaron Nicholls' sign-in details are displayed.
+7. In the **Activity Details: Sign-ins** pane, Aaron Nicholls' sign-in details are displayed.
 
-8. Select each of the main pages, including **Basic info**, **Location**, **Device info**, **Authentication Details**, and **Conditional Access**. Scroll to examine information on each page and then select **X** in the top right hand corner to close out of the **Activity Details** page.
+8. Select each of the main tabs, including **Basic info**, **Location**, **Device info**, **Authentication Details**, and **Conditional Access**. Scroll to examine information on each tab and then select **X** in the top-right corner to close the **Activity Details** pane.
 
-9. In the Users navigation pane, select **Audit logs**.
+9. In the **Users** navigation pane, select **Audit logs**.
 
-10. In the details pane, audit information is displayed about administrative changes to users. Examine the information by selecting the various entries.
+10. In the **Users | Audit logs** page, audit information is displayed about administrative changes to users. Examine the information by selecting the various entries.
 
 ### Task 2: Monitor device information
 
 1. In the Microsoft Intune admin center, from the navigation pane, select **Devices**.
 
-2. In the Devices navigation pane, select **Overview**.
+2. Select **All devices**, and in the details pane, select **SEA-WS1**. Information about the device such as name, primary user, and operating system is displayed.
 
-3. Select **All devices**, and in the details pane, select **SEA-WS1**. Information about the device such as name, Primary user, and operating system is displayed.
+3. In the **SEA-WS1** navigation pane, select **Hardware** and examine the hardware inventory.
 
-4. In the SEA-WS1 navigation pane, select **Hardware** and examine the hardware inventory.
+4. In the **SEA-WS1** navigation pane, select **Discovered apps** and examine the app inventory.
 
-5. In the SEA-WS1 navigation pane, select **Discovered apps** and examine the app inventory.
+5. In the **SEA-WS1** navigation pane, select **Device configuration**. In the details pane, take note of the device configuration policies assigned to the device. The **State** column should display **Succeeded**, which means that the profiles are applied successfully to the device.
 
-6. In the SEA-WS1 navigation pane, select **Device configuration** and in the details pane take note of the Device configuration policies assigned to the device. The **State** column should display **Succeeded**, which means that the profiles were applied successfully to the device.
+6. In the details pane, select **Contoso Developer - standard**.
 
-7. In the details pane, select **Contoso Developer – standard**.
+7. On the **SEA-WS1 - Profile Settings** page, take note of each setting you configured in the policy.
 
-8. On the **Contoso Developer – standard** blade, take note of each setting you configured in the policy.
+   > The **Setting status** column should display **Succeeded** for all settings.
 
-   > The **State** should display **Succeeded** next to all of them.
+8. In the Microsoft Intune admin center, from the navigation pane, select **Home**.
 
-9. In the Microsoft Intune admin center, from the navigation pane, select **Home**.
+9. Close Microsoft Edge.
 
-10. Close Microsoft Edge.
-
-**Results**: After completing this exercise, you will have successfully monitored user Sign-in activity, Audit logs, and device information.
+**Results**: After completing this exercise, you have successfully monitored user sign-in activity, audit logs, and device information.
 
 **END OF LAB**
