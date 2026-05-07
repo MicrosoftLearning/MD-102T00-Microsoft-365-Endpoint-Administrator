@@ -25,7 +25,8 @@ The following lab(s) must be completed before this lab:
 
 - 0204-Enrolling devices into Intune
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
+  > [!NOTE]
+  > You will also need a mobile phone that can receive text messages used to secure Windows Hello sign-in authentication to Microsoft Entra ID.
 
 ## Exercise 1: Add a Microsoft Store App to Intune
 
@@ -39,19 +40,19 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
+3. In **Microsoft Edge**, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-5. On the **Microsoft Intune admin center** page, select **Apps**.
+5. In the Microsoft Intune admin center, select **Apps**.
 
 6. On the **Apps** page, in the navigation pane, select **All apps**.
 
-7. In the details pane, select **+ Create**.
+7. In the **Apps | All apps** page, select **+ Create**.
 
-8. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
+8. On the **Select app type** pane, in the **Platform** drop-down menu, select **Windows**. For **App type**, select **Microsoft Store app (new)** and then select **Select**.
 
-9. On the **Add App** page, click **Seach the  Microsoft Store app (new)**, search for and select **Windows App**. Click **Select**.
+9. On the **Add App** page, select **Search the Microsoft Store app (new)**, search for and select **Windows App**. Select **Select**.
 
 10. On the **App information** page, verify the following information and then select **Next**:
     - Name: **Windows App**
@@ -61,7 +62,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 11. Select **Next** twice and then select **Create**.
 
-12. The Windows App page opens.
+12. The **Windows App** page opens.
 
     > Take note of the Properties, Device install status, and User install status nodes.
 
