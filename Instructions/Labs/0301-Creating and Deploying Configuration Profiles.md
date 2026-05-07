@@ -234,24 +234,24 @@ There was an exception to Contoso's policy that specifies that members of the De
 
 1. Switch to **SEA-SVR1**.
 
-2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and under the **Manage devices** section, select **Configuration**. 
+2. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** and under the **Manage devices** section, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the details pane, select **Contoso Developer - standard**.
+3. On the **Devices | Configuration** blade, in the **Policies** tab, select **Contoso Developer - standard**.
 
 4. On the **Contoso Developer - standard** blade, scroll down to the **Configuration settings** section, and then select **Edit**.
 
-5. On the **Device restrictions** page, expand **Control Panel and Settings**. 
+5. On the **Device restrictions** page, expand **Control Panel and Settings**.
 
-6. Next to **Privacy**, select **Not configured**. 
+6. Next to **Privacy**, select **Not configured**.
 
 7. Select **Review + save**, and then select **Save**.
 
 ### Task 2: Force device synchronization from the Intune admin center
 
 1. On **SEA-SVR1**, in the Microsoft Intune admin center, select **Devices** in the navigation pane and then select **All devices**.
-    
-2. In the details pane, select **SEA-WS1**. 
-    
+
+2. In the details pane, select **SEA-WS1**.
+
 3. On the **SEA-WS1** blade, select **Sync** and when prompted select **Yes**.
 
    > [!NOTE]
