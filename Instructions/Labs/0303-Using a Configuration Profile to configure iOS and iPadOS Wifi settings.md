@@ -61,7 +61,7 @@ You have been asked to create a Configuration policy to be used to automatically
 
 2. On the **Devices** page, under **Manage devices** section, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the details pane, select **+ Create**, and then select **+ New Policy**.
+3. On the **Devices | Configuration** blade, in the **Policies** tab, select **+ Create**, and then select **+ New Policy**.
 
 4. In the **Create a profile** blade, select the following options, and then select **Create**:
 
