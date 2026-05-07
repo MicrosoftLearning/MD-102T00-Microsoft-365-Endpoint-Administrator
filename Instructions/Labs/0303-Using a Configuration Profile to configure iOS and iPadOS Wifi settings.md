@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'Practice Lab 0303: Using a Configuration policy to configure iOS and iPadOS Wi-Fi settings'
-  description: In this lab, you use Microsoft Intune to create and apply a Configuration policy to run configure Wi-Fi settings for iOS and iPadOS devices.
+  description: In this lab, you use Microsoft Intune to create and apply a Configuration policy to configure Wi-Fi settings for iOS and iPadOS devices.
   duration: 30 minutes
   level: 200
   islab: true
@@ -13,7 +13,7 @@ lab:
 
 ## Summary
 
-In this lab, you use Microsoft Intune to create and apply a Configuration policy to run configure Wi-Fi settings for iOS and iPadOS devices.
+In this lab, you use Microsoft Intune to create and apply a Configuration policy to configure Wi-Fi settings for iOS and iPadOS devices.
 
 ## Exercise 1: Creating a Configuration policy
 
@@ -34,7 +34,7 @@ You have been asked to create a Configuration policy to be used to automatically
 
 2. On **SEA-SVR1**, on the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**. 
+3. In **Microsoft Edge**, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
@@ -42,24 +42,26 @@ You have been asked to create a Configuration policy to be used to automatically
 
 6. On the **Groups | All groups** blade, select **New group**.
 
-7. On the **New Group** blade, enter the following information:
+7. On the **New Group** blade, enter and select the following information:
 
     - Group type: **Security**
     - Group name: **iOS_iPadOS Devices**
     - Group description: **All iOS and iPadOS devices**
     - Membership type: **Assigned**
 
-8. On the **New Group** blade, select **Create**. 
+8. On the **New Group** blade, select **Create**.
 
-9. On the **Groups | All groups** blade, verify that the **iOS_iPadOS Devices** group is displayed. You may need to select the Refresh button for the new group to become visible.
+9. Select **All groups**.
+
+10. On the **Groups | All groups** blade, verify that the **iOS_iPadOS Devices** group is displayed. You may need to select the **Refresh** button for the new group to become visible.
 
 ### Task 2: Create a Configuration policy based on scenario requirements
 
 1. In the Microsoft Intune admin center, select **Devices** from the navigation bar.
 
-2. On the **Devices** page, under **Manage devices** section, select **Configuration**.
+2. On the **Devices** page, under the **Manage devices** section, select **Configuration**.
 
-3. On the **Devices | Configuration** blade, in the details pane, select **+ Create**, and then select **+ New Policy**.
+3. On the **Devices | Configuration** blade, in the **Policies** tab, select **+ Create**, and then select **+ New Policy**.
 
 4. In the **Create a profile** blade, select the following options, and then select **Create**:
 
@@ -73,11 +75,11 @@ You have been asked to create a Configuration policy to be used to automatically
     - Name: **iOS/iPadOS Wi-Fi Policy**
     - Description: **Wi-Fi settings for iOS/iPadOS Devices.**
 
-7. On the **Configuration settings** blade, next to **Wi-Fi type**, select **Basic**. 
+7. On the **Configuration settings** blade, next to **Wi-Fi type**, select **Basic**.
 
    > Additional options display based upon the type selected.
 
-8. On the **Configuration settings** blade, select the following options, and then select **Next**:
+8. On the **Configuration settings** blade, enter and select the following options, and then select **Next**:
 
     - Network name: **Contoso Wi-Fi**
     - SSID: **MainOffice**
@@ -87,14 +89,14 @@ You have been asked to create a Configuration policy to be used to automatically
 
 9. On the **Assignments** blade, under **Included groups**, select **Add groups**.
 
-10. In the **Select groups to include** window, select **iOS_iPadOS Devices**, and then click **Select**.
+10. In the **Select groups to include** window, select **iOS_iPadOS Devices**, and then select **Select**.
 
 11. Select **Next** until you reach the **Review + create** blade. Select **Create**.
 
-12. Refresh the **Devices | Configuration** blade, and verify that the **iOS/iPadOS Wi-Fi Policy** is listed. 
+12. Refresh the **Devices | Configuration** blade, and verify that the **iOS/iPadOS Wi-Fi Policy** is listed.
 
-13. Close the Edge browser.
+13. Close **Microsoft Edge**.
 
-**Results**: After completing this exercise, you will have successfully created and assigned a Configuration policy to configure Wi-Fi settings for iOS and iPadOS devices.
+**Results**: After completing this exercise, you have successfully created and assigned a Configuration policy to configure Wi-Fi settings for iOS and iPadOS devices.
 
 **END OF LAB**
