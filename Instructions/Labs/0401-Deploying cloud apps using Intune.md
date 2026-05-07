@@ -68,13 +68,13 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Task 2: Assign a Group to the App
 
-1. In the **Windows App** page, under **Manage**,  select **Properties**.
+1. In the **Windows App** page, under **Manage**, select **Properties**.
 
-2. In the details pane, scroll down to the **Assignments** section and then select **Edit**.
+2. In the **Windows App | Properties** page, scroll down to the **Assignments** section and then select **Edit**.
 
 3. On the **Assignments** page, select **Add group** in the **Available for enrolled devices**.
 
-4. On the **Select groups** page, search and select the **Research** group and then click **Select**.
+4. On the **Select groups** pane, search for and select the **Research** group and then select **Select**.
 
 5. Select **Review + save** and then select **Save**.
 
