@@ -198,7 +198,7 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 4. In the **Access work or school** section, select the **Connected to Contoso's Azure AD** link and then select **Info**.
 
-5. In the **Managed by Contoso** page, scroll down and then under Device sync status, select **Sync**. Wait for the synchronization to complete. 
+5. In the **Managed by Contoso** page, scroll down and then under **Device sync status**, select **Sync**. Wait for the synchronization to complete.
 
 6. Once the sync has completed, close the **Settings** app.
 
@@ -212,9 +212,9 @@ You need to use Microsoft Entra and Intune to manage members of the Developers d
 
 11. On the **Privacy & security** page, select **Windows Security** and then select **Open Windows Security**.
 
-12. On the **Windows Security** page, select **Virus & threat protection**.
+12. On the **Windows Security** page, in the **Security at a glance** section, select **Virus & threat protection**.
 
-13. On the **Virus & threat protection** page, select **Manage settings** under **Virus & threat protection settings**. 
+13. On the **Virus & threat protection** page, select **Manage settings** under **Virus & threat protection settings**.
 
 14. Scroll down to **Exclusions** and select **Add or remove exclusions**. At the **User Account Control** dialog, select **Yes**.
 
