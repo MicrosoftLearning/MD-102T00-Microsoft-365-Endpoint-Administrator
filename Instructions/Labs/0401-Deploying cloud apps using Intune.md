@@ -151,7 +151,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 2. In the **Apps | Overview** blade, select **All Apps**. In the details pane, select **Create**.
 
-3. In the **Select app type** blade, under **Microsoft 365 Apps**, select **Windows 10 and later** , and then click **Select**.
+3. In the **Select app type** pane, in the **Platform** drop-down menu, select **Windows**. For **App type**, under **Microsoft 365 Apps**, select **Microsoft 365 Apps Windows 10 and later** and then select **Select**.
 
 4. On the **Add Microsoft 365 Apps** blade, configure the following options and select **Next**:
 
@@ -180,7 +180,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 7. On the **Properties** section, configure the following options and select **Next**:
 
      - Accept the Microsoft Software License Terms on behalf of users: **Yes**
-     
+
 8. On the **Assignments** tab, in the **Required** section, select **Add group**.
 
 9. On the **Select groups** blade, select **Research**, and then choose **Select**.
@@ -213,9 +213,10 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 5. Close the **Settings** app and select the **Start** button.
 
-6. Select all apps, scroll down to **W** and select **Word** and verify that the app opens.
+6. Select **All apps**, scroll down to **W** and select **Word** and verify that the app opens.
 
-   > _Note: Recall in a previous lab, you removed recently added apps from the Start Menu._
+   > [!NOTE]
+   > In a previous lab, you removed recently added apps from the Start menu.
 
 7. Close all open windows.
 
@@ -229,17 +230,21 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 3. On the **Apps | Overview** blade, select **Monitor** and then select **App install status**.
 
-4. In the details pane, select **Microsoft 365 Apps \(Research\)**.
+4. In the **App install status** page, select **Microsoft 365 Apps \(Research\)**.
 
-5. In the details pane, under **Monitor** and under **User install status**, verify that **1** is displayed under Installed.
+5. In the navigation pane, under **Monitor**, select **User install status**. Verify that **1** is displayed under the **Installs** column.
 
-   _Note: It may take some time for the information to display._
-   
-   _Note: This indicates that the app is installed on one device and for one user._
+   > [!NOTE]
+   > It may take some time for the information to display.
+   >
+   > [!NOTE]
+   > This indicates that the app is installed on one device and for one user.
 
 6. Select **Device install status**.
 
-   > In the details pane, you can see the devices that the app is installed on, and also the name of the user. The **Device Name** column should list **SEA-WS1** and the **Status** column should say **Installed**. This means that the app is installed on SEA-WS1.
+   > In the details pane, you can see the devices that the app is installed on
+   > and the name of the user. The **Device Name** column should list
+   > **SEA-WS1** and the **Status** column should display **Installed**.
 
 7. In the **Microsoft Intune admin center**, select **Devices**.
 
@@ -249,7 +254,10 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 10. On the **SEA-WS1 | Managed Apps** blade, in the details pane, select **Microsoft 365 Apps (Research)**.
 
-   > On the **Microsoft 365 Apps (Research) - Installation details** window, you can see the entire lifecycle of the application, that is - when it was created, assigned, installation time and status and the last time the device checked in (synced with Intune).
+   > On the **Microsoft 365 Apps (Research) - Installation details**
+   > window, you can see the entire lifecycle of the application:
+   > when it was created, assigned, installation time and status,
+   > and the last time the device checked in (synced with Intune).
 
 11. Close all open windows.
 
