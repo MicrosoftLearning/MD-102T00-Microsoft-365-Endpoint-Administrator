@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'Practice Lab 0401: Deploying cloud apps using Intune'
-  description: In this lab, you create and deploy cloud-based apps using Intune and the Company Portal Website.
+  description: In this lab, you create and deploy cloud-based apps using Intune and the Company Portal website.
   duration: 5 minutes
   level: 200
   islab: true
@@ -11,7 +11,7 @@ lab:
 
 ## Summary
 
-In this lab, you create and deploy cloud-based apps using Intune and the Company Portal Website.
+In this lab, you create and deploy cloud-based apps using Intune and the Company Portal website.
 
 ### Prerequisites
 
@@ -25,7 +25,8 @@ The following lab(s) must be completed before this lab:
 
 - 0204-Enrolling devices into Intune
 
-  > Note: You will also need a mobile phone that can receive text messages used to secure Windows Hello sign in authentication to Entra ID.
+  > [!NOTE]
+  > You will also need a mobile phone that can receive text messages used to secure Windows Hello sign-in authentication to Microsoft Entra ID.
 
 ## Exercise 1: Add a Microsoft Store App to Intune
 
@@ -39,19 +40,19 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In Microsoft Edge, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
+3. In **Microsoft Edge**, type `https://intune.microsoft.com` in the address bar, and then press **Enter**.
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
-5. On the **Microsoft Intune admin center** page, select **Apps**.
+5. In the Microsoft Intune admin center, select **Apps**.
 
 6. On the **Apps** page, in the navigation pane, select **All apps**.
 
-7. In the details pane, select **+ Create**.
+7. In the **Apps | All apps** page, select **+ Create**.
 
-8. On the **Select app type** page, click the drop-down menu and then Choose **Microsoft store app (new)**. Click **Select**.
+8. On the **Select app type** pane, in the **Platform** drop-down menu, select **Windows**. For **App type**, select **Microsoft Store app (new)** and then select **Select**.
 
-9. On the **Add App** page, click **Seach the  Microsoft Store app (new)**, search for and select **Windows App**. Click **Select**.
+9. On the **Add App** page, select **Search the Microsoft Store app (new)**, search for and select **Windows App**. Select **Select**.
 
 10. On the **App information** page, verify the following information and then select **Next**:
     - Name: **Windows App**
@@ -61,19 +62,19 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 11. Select **Next** twice and then select **Create**.
 
-12. The Windows App page opens.
+12. The **Windows App** page opens.
 
     > Take note of the Properties, Device install status, and User install status nodes.
 
 ### Task 2: Assign a Group to the App
 
-1. In the **Windows App** page, under **Manage**,  select **Properties**.
+1. In the **Windows App** page, under **Manage**, select **Properties**.
 
-2. In the details pane, scroll down to the **Assignments** section and then select **Edit**.
+2. In the **Windows App | Properties** page, scroll down to the **Assignments** section and then select **Edit**.
 
 3. On the **Assignments** page, select **Add group** in the **Available for enrolled devices**.
 
-4. On the **Select groups** page, search and select the **Research** group and then click **Select**.
+4. On the **Select groups** pane, search for and select the **Research** group and then select **Select**.
 
 5. Select **Review + save** and then select **Save**.
 
@@ -87,8 +88,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
    > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
 
-
-### Task 4: Install an app from the Company Portal Website
+### Task 4: Install an app from the Company Portal website
 
 1. Switch to **SEA-WS1**.
 
@@ -96,23 +96,23 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. If necessary, at the **Welcome to Microsoft Edge** page, select **Confirm and continue**. Close the Welcome page.
+4. If necessary, at the **Welcome to Microsoft Edge** page, select **Confirm and continue**, select **Continue without Google data**, and then close the **Welcome** page.
 
-5. In the address bar browse to **https://portal.manage.microsoft.com** and then press **Enter**.
+5. In the address bar, browse to `https://portal.manage.microsoft.com` and then press **Enter**.
 
 6. Sign in as **Aaron Nicholls**.
 
 7. On the Contoso web portal, select **View Devices**.
 
-8. On the Devices page, select **Tap here to tell us which device you're using or add a new device**.
+8. On the **Devices** page, select **Tap here to tell us which device you're using or add a new device**.
 
 9. On the **Which device are you using** dialog box, select the option next to **SEA-WS1**, and then select **Select**.
 
-   > Notice that the message now changes to Apps will be installed onto: SEA-WS1
+    > Notice that the message now changes to Apps will be installed onto: SEA-WS1
 
-10. At the top-left corner, select the navigation button and then select **Apps**.
+10. At the top-left corner, select the menu icon **(≡)** and then select **Apps**.
 
-   > Take note of the Windows app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
+    > It might take a few minutes for the app to appear.
 
 11. Select **Windows App**.
 
@@ -120,19 +120,20 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 13. If prompted, on the **Install Windows App** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
 
-   >It may take a few minutes for the app to install.
+    > [!NOTE]
+    > It may take a few minutes for the app to install.
 
-14. After the app is installed close all open windows.
+14. After the app is installed, close all open windows.
 
 15. Select **Start** and verify that **Windows App** is displayed on the Start menu.
 
-**Results**: After completing this exercise, you will have successfully added and installed a Microsoft Store App from Intune.
+**Results**: After completing this exercise, you have successfully added and installed a Microsoft Store App from Intune.
 
 ## Exercise 2: Configure and deploy Microsoft 365 Apps from Intune
 
 ### Scenario
 
-All the users of the Research department at Contoso require Microsoft 365 Apps. You've been asked to deploy the 64-bit versions of Microsoft Excel, Outlook, PowerPoint and Word to their Windows devices. You also need to ensure they are configured for the Current Channel for updates.
+All the users of the Research department at Contoso require Microsoft 365 Apps. You've been asked to deploy the 64-bit versions of Microsoft Excel, Outlook, PowerPoint, and Word to their Windows devices. You also need to ensure they are configured for the Current Channel for updates.
 
 ### Task 1: Verify installed apps on SEA-WS1
 
@@ -150,7 +151,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 2. In the **Apps | Overview** blade, select **All Apps**. In the details pane, select **Create**.
 
-3. In the **Select app type** blade, under **Microsoft 365 Apps**, select **Windows 10 and later** , and then click **Select**.
+3. In the **Select app type** pane, in the **Platform** drop-down menu, select **Windows**. For **App type**, under **Microsoft 365 Apps**, select **Microsoft 365 Apps Windows 10 and later** and then select **Select**.
 
 4. On the **Add Microsoft 365 Apps** blade, configure the following options and select **Next**:
 
@@ -179,7 +180,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 7. On the **Properties** section, configure the following options and select **Next**:
 
      - Accept the Microsoft Software License Terms on behalf of users: **Yes**
-     
+
 8. On the **Assignments** tab, in the **Required** section, select **Add group**.
 
 9. On the **Select groups** blade, select **Research**, and then choose **Select**.
@@ -188,7 +189,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 11. On the **Microsoft 365 Apps (Research)** page, select **Properties**.
 
-12. In the details pane verify that **Research** is listed under **Required** in the **Assignments** section.
+12. In the details pane, verify that **Research** is listed under **Required** in the **Assignments** section.
 
 ### Task 3: Request policy synchronization from the Intune console
 
@@ -212,9 +213,10 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 5. Close the **Settings** app and select the **Start** button.
 
-6. Select all apps, scroll down to **W** and select **Word** and verify that the app opens.
+6. Select **All apps**, scroll down to **W**, and select **Word**. Verify that the app opens.
 
-   > _Note: Recall in a previous lab, you removed recently added apps from the Start Menu._
+   > [!NOTE]
+   > In a previous lab, you removed recently added apps from the Start menu.
 
 7. Close all open windows.
 
@@ -228,17 +230,21 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 3. On the **Apps | Overview** blade, select **Monitor** and then select **App install status**.
 
-4. In the details pane, select **Microsoft 365 Apps \(Research\)**.
+4. In the **App install status** page, select **Microsoft 365 Apps \(Research\)**.
 
-5. In the details pane, under **Monitor** and under **User install status**, verify that **1** is displayed under Installed.
+5. In the navigation pane, under **Monitor**, select **User install status**. Verify that **1** is displayed under the **Installs** column.
 
-   _Note: It may take some time for the information to display._
-   
-   _Note: This indicates that the app is installed on one device and for one user._
+   > [!NOTE]
+   > It may take some time for the information to display.
+   >
+   > [!NOTE]
+   > This indicates that the app is installed on one device and for one user.
 
 6. Select **Device install status**.
 
-   > In the details pane, you can see the devices that the app is installed on, and also the name of the user. The **Device Name** column should list **SEA-WS1** and the **Status** column should say **Installed**. This means that the app is installed on SEA-WS1.
+   > In the details pane, you can see the devices that the app is installed on
+   > and the name of the user. The **Device Name** column should list
+   > **SEA-WS1** and the **Status** column should display **Installed**.
 
 7. In the **Microsoft Intune admin center**, select **Devices**.
 
@@ -248,10 +254,13 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 10. On the **SEA-WS1 | Managed Apps** blade, in the details pane, select **Microsoft 365 Apps (Research)**.
 
-   > On the **Microsoft 365 Apps (Research) - Installation details** window, you can see the entire lifecycle of the application, that is - when it was created, assigned, installation time and status and the last time the device checked in (synced with Intune).
+   > On the **Microsoft 365 Apps (Research) - Installation details**
+   > window, you can see the entire lifecycle of the application:
+   > when it was created, assigned, installation time and status,
+   > and the last time the device checked in (synced with Intune).
 
 11. Close all open windows.
 
-**Results**: After completing this exercise, you will have successfully configured and deployed Microsoft 365 Apps from Intune.
+**Results**: After completing this exercise, you have successfully configured and deployed Microsoft 365 Apps from Intune.
 
 **END OF LAB**
