@@ -88,7 +88,6 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
    > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
 
-
 ### Task 4: Install an app from the Company Portal Website
 
 1. Switch to **SEA-WS1**.
@@ -97,23 +96,23 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 3. On the taskbar, select **Microsoft Edge**.
 
-4. If necessary, at the **Welcome to Microsoft Edge** page, select **Confirm and continue**. Close the Welcome page.
+4. If necessary, at the **Welcome to Microsoft Edge** page, select **Confirm and continue**, select **Continue without Google data**, and then close the **Welcome** page.
 
-5. In the address bar browse to **https://portal.manage.microsoft.com** and then press **Enter**.
+5. In the address bar, browse to `https://portal.manage.microsoft.com` and then press **Enter**.
 
 6. Sign in as **Aaron Nicholls**.
 
 7. On the Contoso web portal, select **View Devices**.
 
-8. On the Devices page, select **Tap here to tell us which device you're using or add a new device**.
+8. On the **Devices** page, select **Tap here to tell us which device you're using or add a new device**.
 
 9. On the **Which device are you using** dialog box, select the option next to **SEA-WS1**, and then select **Select**.
 
-   > Notice that the message now changes to Apps will be installed onto: SEA-WS1
+    > Notice that the message now changes to Apps will be installed onto: SEA-WS1
 
-10. At the top-left corner, select the navigation button and then select **Apps**.
+10. At the top-left corner, select the menu icon **(≡)** and then select **Apps**.
 
-   > Take note of the Windows app listed on the Apps page. **Note** It might take a few minutes for the app to appear.
+    > It might take a few minutes for the app to appear.
 
 11. Select **Windows App**.
 
@@ -121,13 +120,14 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 13. If prompted, on the **Install Windows App** dialog box, select **Always allow portal.manage.microsoft.com to open links of this type in the associated app** and then select **Open**.
 
-   >It may take a few minutes for the app to install.
+    > [!NOTE]
+    > It may take a few minutes for the app to install.
 
-14. After the app is installed close all open windows.
+14. After the app is installed, close all open windows.
 
 15. Select **Start** and verify that **Windows App** is displayed on the Start menu.
 
-**Results**: After completing this exercise, you will have successfully added and installed a Microsoft Store App from Intune.
+**Results**: After completing this exercise, you have successfully added and installed a Microsoft Store App from Intune.
 
 ## Exercise 2: Configure and deploy Microsoft 365 Apps from Intune
 
