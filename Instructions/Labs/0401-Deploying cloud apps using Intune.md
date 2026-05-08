@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'Practice Lab 0401: Deploying cloud apps using Intune'
-  description: In this lab, you create and deploy cloud-based apps using Intune and the Company Portal Website.
+  description: In this lab, you create and deploy cloud-based apps using Intune and the Company Portal website.
   duration: 5 minutes
   level: 200
   islab: true
@@ -11,7 +11,7 @@ lab:
 
 ## Summary
 
-In this lab, you create and deploy cloud-based apps using Intune and the Company Portal Website.
+In this lab, you create and deploy cloud-based apps using Intune and the Company Portal website.
 
 ### Prerequisites
 
@@ -40,7 +40,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 2. On the taskbar, select **Microsoft Edge**.
 
-3. In **Microsoft Edge**, type **https://intune.microsoft.com** in the address bar, and then press **Enter**.
+3. In **Microsoft Edge**, type `https://intune.microsoft.com` in the address bar, and then press **Enter**.
 
 4. Sign in as **`admin@yourtenant.onmicrosoft.com`** with the tenant Admin password.
 
@@ -88,7 +88,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
    > Intune will contact the device and tell it to synchronize all policies. This may take up to 5 minutes.
 
-### Task 4: Install an app from the Company Portal Website
+### Task 4: Install an app from the Company Portal website
 
 1. Switch to **SEA-WS1**.
 
@@ -133,7 +133,7 @@ You use Microsoft Intune to manage desktops and apps for Contoso Corporation. Th
 
 ### Scenario
 
-All the users of the Research department at Contoso require Microsoft 365 Apps. You've been asked to deploy the 64-bit versions of Microsoft Excel, Outlook, PowerPoint and Word to their Windows devices. You also need to ensure they are configured for the Current Channel for updates.
+All the users of the Research department at Contoso require Microsoft 365 Apps. You've been asked to deploy the 64-bit versions of Microsoft Excel, Outlook, PowerPoint, and Word to their Windows devices. You also need to ensure they are configured for the Current Channel for updates.
 
 ### Task 1: Verify installed apps on SEA-WS1
 
@@ -189,7 +189,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 11. On the **Microsoft 365 Apps (Research)** page, select **Properties**.
 
-12. In the details pane verify that **Research** is listed under **Required** in the **Assignments** section.
+12. In the details pane, verify that **Research** is listed under **Required** in the **Assignments** section.
 
 ### Task 3: Request policy synchronization from the Intune console
 
@@ -213,7 +213,7 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 5. Close the **Settings** app and select the **Start** button.
 
-6. Select **All apps**, scroll down to **W** and select **Word** and verify that the app opens.
+6. Select **All apps**, scroll down to **W**, and select **Word**. Verify that the app opens.
 
    > [!NOTE]
    > In a previous lab, you removed recently added apps from the Start menu.
@@ -261,6 +261,6 @@ All the users of the Research department at Contoso require Microsoft 365 Apps. 
 
 11. Close all open windows.
 
-**Results**: After completing this exercise, you will have successfully configured and deployed Microsoft 365 Apps from Intune.
+**Results**: After completing this exercise, you have successfully configured and deployed Microsoft 365 Apps from Intune.
 
 **END OF LAB**
