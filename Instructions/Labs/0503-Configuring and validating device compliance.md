@@ -169,7 +169,7 @@ When a user uses a device that is marked as non-compliant, they should not be ab
 
 ### Task 3: Disable the conditional access policy
 
-1. Switch to **SEA-SVR1** and enter the password **Pa55w.rd**.
+1. Switch to **SEA-SVR1** and sign in as **Admin** with the password of **Pa55w.rd**.
 
 2. On the taskbar, select **Microsoft Edge**.
 
