@@ -36,7 +36,7 @@ You need to deploy a new Windows 11 virtual machine named SEA-WS4. You decide to
 
    > The **New Deployment Share Wizard** opens.
 
-7. On the **Path** page, under **Deployment share path**, change the value to **E:\DeploymentShare** and then select **Next**.
+7. On the **Path** page, under **Deployment share path**, change the value to **E:\\DeploymentShare** and then select **Next**.
 
 8. On the **Share** page, take note of the **Share name**, but do not change it. Select **Next**.
 
@@ -259,7 +259,7 @@ You need to deploy a new Windows 11 virtual machine named SEA-WS4. You decide to
 
 33. Select **Monitoring** and then in the details pane, double-click **SEA-WS4**.
 
-    > Review the monitoring status during the deployment.
+    > Review the monitoring status during the deployment. Select **Refresh** to update the screen.
 
 34. Switch to **SEA-WS4**.
 

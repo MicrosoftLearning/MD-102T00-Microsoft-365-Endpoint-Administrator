@@ -72,7 +72,7 @@ Contoso has traditionally used Active Directory GPOs to deploy computer and user
 
     > Notice that 86% of the settings have MDM support.
 
-12. Under MDM Support, select **89%**. 
+12. Under MDM Support, select **86%**. 
 
     > Notice each **Setting Name**, **MDM Support**, **CSP Name**, and the **CSP Mapping** for each supported setting. Take note of which settings do not have an equivalent CSP mapping.
 
