@@ -621,7 +621,7 @@ Create a **Server configuration** first. The Site wizard requires one, and if th
    - **Name:** `Contoso Tunnel Server Config`
    - **IP address range:** `169.254.0.0/16`
    - **Server port:** `443`
-   - **DNS servers:** Required. Enter `192.168.1.1`.
+   - **DNS servers:** Required. Enter `192.168.1.1`
    - Leave other settings at default for this lab.
 
 1. Select **Create**.
@@ -633,6 +633,8 @@ Create a **Server configuration** first. The Site wizard requires one, and if th
 1. On the **Create a site** page, under the **Basics** tab, enter:
    - **Name:** `Contoso HQ Tunnel`
    - **Description:** `Microsoft Tunnel Gateway for mobile device VPN access`
+
+1. Select **Next**.
 
 1. On the **Settings** tab, configure:
    - **Public IP address or FQDN:** `192.168.1.100`
@@ -717,7 +719,7 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 
      ![Screenshot of the LIN-SRV1 terminal showing the device code used to authenticate the Microsoft Tunnel Gateway agent at microsoft.com/devicelogin.](media/tunnel-setup-device-code.png)
 
-1. Wait for the installation to complete (typically 5–10 minutes).
+1. Return to **LIN-SRV1** and wait for the installation to complete (typically 5–10 minutes).
 
    ![Screenshot of the LIN-SRV1 terminal showing the Microsoft Tunnel installation completing successfully with the server and agent running.](media/tunnel-setup-installation-successful.png)
 
@@ -742,7 +744,7 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 
    ![Screenshot of the Microsoft Tunnel Gateway Health status page in the Intune admin center showing LIN-SRV1 with a Healthy status.](media/tunnel-gateway-health-status.png)
 
-1. Verify LIN-SRV1 appears in the **Servers** list with status **Online**.
+1. Verify **LIN-SRV1** appears in the Servers list with status **Healthy**.
 
 1. If status is **Unhealthy**, on LIN-SRV1 run:
 
@@ -754,7 +756,7 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
    ```
 
 > [!TIP]
-> **Online** is the verifiable success criterion for this exercise. It confirms outbound registration worked, the install completed, and Intune is talking to your gateway — everything the gateway-deployment skill is meant to teach.
+> **Healthy** is the verifiable success criterion for this exercise. It confirms outbound registration worked, the install completed, and Intune is talking to your gateway — everything the gateway-deployment skill is meant to teach.
 
 **You have successfully registered the Microsoft Tunnel Gateway in Intune.**
 
@@ -784,14 +786,15 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 1. On the **Configuration settings** tab, you must choose a **Connection type** before any other fields appear.
 
    From the **Connection type** dropdown, scroll down past the third-party clients (Cisco, F5, Palo Alto, IKEv2, and so on) and select **Microsoft Tunnel**.
+
 1. After you select **Microsoft Tunnel**, expand **Base VPN**. This section holds the only settings you need for the lab:
    - **Connection name:** `Contoso VPN` (this is the name users see on the device).
-   - **Microsoft Tunnel site:** Select **Select a site**, then choose `Contoso HQ Tunnel` — the site you created in Task 2.
+   - **Microsoft Tunnel site:** Select **Select a site**, then choose `Contoso HQ Tunnel` — the site you created in Task 2. Select **OK**.
 
 1. Leave the remaining sections at their defaults — none are required for this lab:
    - **Per-app VPN:** Leave **Not configured**, and leave **Safari URLs**, **Associated Domains**, and **Excluded Domains** blank.
    - **On-Demand VPN Rules:** Don't add any rules, and leave **Block users from disabling automatic VPN** at **Not configured**.
-   - **Proxy:** Leave **Use proxy server** off and the **Address**/**Port** fields blank.
+   - **Proxy:** Leave **Use proxy server** off and the **Automatic configuration script**, **Address**, and **Port number** fields blank.
    - **Custom settings:** Leave empty.
 
    > [!TIP]
@@ -801,7 +804,7 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 
 1. On the **Scope tags** tab, select **Next**.
 
-1. On the **Assignments** tab, under Included groups, select **Add all users**.
+1. On the **Assignments** tab, under **Included groups**, select **Add all users**.
 
 1. Select **Next** → **Create**.
 
