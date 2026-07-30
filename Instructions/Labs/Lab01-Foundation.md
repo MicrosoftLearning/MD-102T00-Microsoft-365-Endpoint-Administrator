@@ -1031,7 +1031,7 @@ The Autopilot hardware hash uniquely identifies a device and is required for Aut
    - **Username:** `Admin`
    - **Password:** (provided by your lab environment)
 
-1. Right-click the **Start** button and select **Windows PowerShell (Admin)**.
+1. Right-click the **Start** button and select **Terminal (Admin)**. On Windows 11, the Power User menu lists Windows Terminal, which opens a PowerShell tab by default.
 
 1. In the **Do you want to allow this app to make changes to your device?** dialog, select **Yes**.
 

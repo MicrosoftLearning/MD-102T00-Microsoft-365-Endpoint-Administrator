@@ -473,7 +473,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
    > [!NOTE]
    > BitLocker encryption can take 1–3 hours to complete depending on drive size and system performance. For lab purposes, you'll verify the policy was applied and encryption started.
 
-1. On **SEA-DEV1**, open **Windows PowerShell (Admin)**.
+1. On **SEA-DEV1**, open **Terminal (Admin)** (right-click Start → Terminal (Admin); Windows Terminal opens a PowerShell tab by default).
 
 1. On the **Do you want to allow this app to make changes to your device?** prompt, select **Yes**.
 
@@ -1016,7 +1016,7 @@ SCEP (Simple Certificate Enrollment Protocol) profiles allow devices to request 
 
 1. On **SEA-DEV1**, wait 10–15 minutes for the SCEP profile to apply and the certificate to be issued.
 
-1. Open **Windows PowerShell (Admin)** and run:
+1. Open **Terminal (Admin)** (Windows Terminal opens a PowerShell tab by default) and run:
 
    ```powershell
    Get-ChildItem -Path Cert:\LocalMachine\My |

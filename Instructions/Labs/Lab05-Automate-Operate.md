@@ -44,7 +44,7 @@ Microsoft Graph is a REST API that provides programmatic access to Microsoft 365
 
 ### Task 1: Install the Microsoft Graph PowerShell SDK
 
-1. On **SEA-DEV1**, open **Windows PowerShell (Admin)**.
+1. On **SEA-DEV1**, open **Terminal (Admin)** (right-click Start → Terminal (Admin); Windows Terminal opens a PowerShell tab by default).
 
 1. On the **Do you want to allow this app to make changes to your device?** prompt, select **Yes**.
 

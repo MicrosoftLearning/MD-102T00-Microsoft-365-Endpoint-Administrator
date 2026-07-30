@@ -245,6 +245,9 @@ Support-approved elevation rules require a help desk agent to approve elevation 
 
 1. Wait 10–15 minutes for policies to apply.
 
+   > [!NOTE]
+   > On Windows 11, right-clicking shows the compact context menu. **Run with elevated access** (added by the EPM agent) normally appears there directly. If you don't see it, select **Show more options** (or press **Shift+F10**) to open the full menu. If it's still missing, the elevation settings policy hasn't finished applying to the device yet — sync the device and wait a few minutes before retrying.
+
 1. Test **automatic elevation** (Registry Editor):
    - Open the **Start menu** and search for `regedit`
    - Select **Open file location**

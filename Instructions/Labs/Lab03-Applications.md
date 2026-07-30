@@ -148,7 +148,7 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
    > [!NOTE]
    > This lab uses `7z-portable.exe` as the example payload. If you use a different installer (for example, Notepad++ `npp.8.9.7.Installer.x64.exe`), substitute the **filename**, **app name/publisher**, **install/uninstall commands**, and **detection path** consistently throughout Exercises 2, 5, and 7.
 
-1. Open **Windows PowerShell (Admin)** (right-click Start → Windows PowerShell (Admin)).
+1. Open **Terminal (Admin)** (right-click Start → Terminal (Admin)). On Windows 11, this opens Windows Terminal with a PowerShell tab.
 
 1. On the **Do you want to allow this app to make changes to your device?** prompt, select **Yes**.
 

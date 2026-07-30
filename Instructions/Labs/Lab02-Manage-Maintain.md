@@ -557,10 +557,21 @@ Contoso has existing Group Policy Objects (GPOs) from an on-premises Active Dire
 
 ### Task 1: Import a Group Policy backup
 
-1. On **SEA-DEV1**, ensure the GPO backup XML files are accessible (provided in lab assets at `C:\LabAssets\GPO-Backups\`).
+1. On **SEA-DEV1**, download the GPO backup file from the course's GitHub lab repository into `C:\LabAssets\GPO-Backups\`.
+
+   Open an elevated **Terminal (Admin)** window (right-click Start → Terminal (Admin); Windows Terminal opens a PowerShell tab by default) and run:
+
+   ```powershell
+   $dest = "C:\LabAssets\GPO-Backups"
+   New-Item -Path $dest -ItemType Directory -Force | Out-Null
+   $url = "https://raw.githubusercontent.com/MicrosoftLearning/MD-102T00-Microsoft-365-Endpoint-Administrator/master/Instructions/Labs/Assets/GPO_Desktop_Settings.xml"
+   Invoke-WebRequest -Uri $url -OutFile "$dest\GPO_Desktop_Settings.xml"
+   ```
+
+   Alternatively, download it in the browser: open [Instructions/Labs/Assets/GPO_Desktop_Settings.xml](https://github.com/MicrosoftLearning/MD-102T00-Microsoft-365-Endpoint-Administrator/blob/master/Instructions/Labs/Assets/GPO_Desktop_Settings.xml) on GitHub, select **Download raw file**, and save it to `C:\LabAssets\GPO-Backups\`.
 
    > [!NOTE]
-   > If the files are not present, ask your lab instructor or copy them from the lab hosting platform's file share.
+   > If your lab environment already provides the GPO backup file at `C:\LabAssets\GPO-Backups\`, you can skip the download and use the provided copy.
 
 1. In the **Microsoft Intune admin center**, select **Devices**, then under **Manage devices** select **Group Policy analytics**.
 
