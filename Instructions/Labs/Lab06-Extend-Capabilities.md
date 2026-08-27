@@ -1,3 +1,18 @@
+---
+lab:
+   title: 'Lab 06: Extend capabilities'
+   description: 'In this lab, you configure Endpoint Privilege Management, deploy Remote Help, review Advanced Analytics, and explore Windows 365 Cloud PC and Azure Virtual Desktop scenarios.'
+   duration: 90 minutes
+   level: 200
+   islab: true
+   primarytopics:
+      - Microsoft Intune
+      - Endpoint Privilege Management
+      - Remote Help
+      - Windows 365
+      - Azure Virtual Desktop
+---
+
 # Lab 06: Extend capabilities
 
 ## Lab scenario

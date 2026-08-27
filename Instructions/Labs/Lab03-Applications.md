@@ -1,3 +1,17 @@
+---
+lab:
+   title: 'Lab 03: Manage applications'
+   description: 'In this lab, you deploy Microsoft Store apps, package and deploy Win32 applications, configure Microsoft 365 Apps, use the Enterprise App Catalog, configure app supersedence, and apply app protection policies.'
+   duration: 100 minutes
+   level: 200
+   islab: true
+   primarytopics:
+      - Microsoft Intune
+      - Windows
+      - Microsoft Store
+      - Enterprise App Catalog
+---
+
 # Lab 03: Manage applications
 
 ## Lab scenario
@@ -422,7 +436,7 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
    - **VLC Media Player**
    - **Notepad++**
 
-1. Search for or select **Google Chrome for Business** from the list.
+1. Search for or select **Google Chrome** from the list.
 
 1. Select **Next**.
 
@@ -448,7 +462,7 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
 
 1. Select **Next**.
 
-1. On the **Configuration** tab, select the package **Chrome for Business 64-bit**.
+1. On the **Configuration** tab, select the package **Google Chrome**.
 
 1. Select **Next**.
 
@@ -461,7 +475,7 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
 ### Task 2: Configure and assign the app
 
 1. On the **App information** page, review the pre-populated details:
-   - **Name:** Google Chrome for Business
+   - **Name:** Google Chrome
    - **Description:** (auto-populated)
    - **Publisher:** Google
    - **Installation command:** (pre-configured, from the Configuration/Updates steps you just completed)
@@ -526,7 +540,7 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
 
 1. Navigate to the **Apps** section.
 
-1. Verify **Chrome for Business 64-bit** appears in the available apps list.
+1. Verify **Google Chrome** appears in the available apps list.
 
 1. Select **Install** to install the app.
 
@@ -558,11 +572,9 @@ For this task, you'll simulate a new version by creating a second Win32 app entr
 1. Walk through the wizard exactly as you did in **Exercise 2 Task 2** (**Program**, **Requirements**, **Detection rules**, **Dependencies**, **Assignments**), with these differences:
 
    - **App information:** select **Select app package file** and upload the same `<filename>.intunewin` package from `C:\LabAssets\Win32-App\Output\`, then set **Name** to `7-Zip v2.0` and **Description** to `Updated version of 7-Zip` (**Publisher** stays **Igor Pavlov**, auto-populated).
-   - **Supersedence:** instead of skipping this page, select **Add** under **Supersedence relationships**, search for and select **7-Zip** (the original app), set **Supersedence type** to **Replace**, and select **OK**.
+   - **Supersedence:** select **Uninstall previous version** and select **Next**. This removes the original **7-Zip** app before installing **7-Zip v2.0**.
 
      > [!NOTE]
-     > "Replace" uninstalls the old app before installing the new one. "Update" installs the new app and leaves the old app installed (useful for side-by-side versions).
-
    - **Scope tags:** add **Pharmacy** (same as the original app) — keeps Pharmacy delegation consistent across both versions.
    - **Assignments:** assign **Required** to **sg-Intune-Pilot-Users** (same as the original app).
 

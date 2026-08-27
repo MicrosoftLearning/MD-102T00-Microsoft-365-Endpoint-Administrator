@@ -1,3 +1,18 @@
+---
+lab:
+   title: 'Lab 04: Protect devices'
+   description: 'In this lab, you integrate Microsoft Defender for Endpoint, deploy endpoint security policies, configure BitLocker encryption, deploy Microsoft Tunnel Gateway, and implement Microsoft Cloud PKI.'
+   duration: 110 minutes
+   level: 200
+   islab: true
+   primarytopics:
+      - Microsoft Intune
+      - Microsoft Defender for Endpoint
+      - Microsoft Tunnel
+      - Microsoft Cloud PKI
+      - Windows
+---
+
 # Lab 04: Protect devices
 
 ## Lab scenario
@@ -249,7 +264,7 @@ Antivirus policies configure Microsoft Defender Antivirus settings, including re
    - **Cloud Extended Timeout:** 50 seconds
    - **Scan Parameter:** Quick scan
    - **Schedule Scan Day:** Every day
-   - **Schedule Scan Time:** 2:00 AM
+   - **Schedule Scan Time:** 120 (minutes after midnight, which is 2:00 AM)
    - **Submit Samples Consent:** Send all samples automatically
    - **Allow On Access Protection:** Allowed
 
@@ -430,7 +445,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 
 1. On the **Configuration settings** tab, expand **BitLocker** and configure:
    - **Require Device Encryption:** Enabled
-   - **Allow Warning for Other Disk Encryption:** Yes
+   - **Allow Warning for Other Disk Encryption:** Enabled
 
 1. Expand **Fixed Data Drives** and configure:
    - **Enforce drive encryption type on fixed data drives:** Enable

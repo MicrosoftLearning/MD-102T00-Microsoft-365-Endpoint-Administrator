@@ -1,3 +1,17 @@
+---
+lab:
+   title: 'Lab 05: Automate and operate'
+   description: 'In this lab, you use Microsoft Graph PowerShell for device management, deploy proactive remediations, configure role-based access control with scope tags, review audit logs, and use built-in Intune reports.'
+   duration: 100 minutes
+   level: 200
+   islab: true
+   primarytopics:
+      - Microsoft Intune
+      - Microsoft Graph
+      - Microsoft Entra ID
+      - Windows
+---
+
 # Lab 05: Automate and operate
 
 ## Lab scenario
@@ -111,6 +125,7 @@ For interactive automation, you can use delegated permissions (user signs in). F
 
 1. Search for and select the following permissions:
    - **DeviceManagementManagedDevices.Read.All** (read device information)
+   - **DeviceManagementRBAC.Read.All** (read Intune role-based access control data)
    - **DeviceManagementConfiguration.ReadWrite.All** (read/write configuration policies)
    - **DeviceManagementApps.ReadWrite.All** (read/write applications)
    - **Group.Read.All** (read directory groups — required by `Get-MgGroup` in Task 8)
@@ -337,7 +352,6 @@ You'll create a Windows compliance policy using the Graph API (instead of the In
    {
      "assignments": [
        {
-         "@odata.type": "#microsoft.graph.deviceCompliancePolicyAssignment",
          "target": {
            "@odata.type": "#microsoft.graph.groupAssignmentTarget",
            "groupId": "$groupId"
@@ -711,8 +725,9 @@ Diagnostic settings route Intune logs to Azure Monitor Log Analytics for long-te
 
 1. Review the available log categories:
    - **AuditLogs:** Administrative actions in Intune
-   - **OperationalLogs:** Device sync events, policy application, enrollment events
-   - **DeviceComplianceOrg:** Compliance policy evaluation results
+
+   > [!NOTE]
+   > The current Intune portal exposes **AuditLogs** in this tenant. Other log categories can vary by service and tenant; don't expect **OperationalLogs** or **DeviceComplianceOrg** to appear in every portal experience.
 
 1. Understand the configuration workflow (do not create):
    - Create a Log Analytics workspace in Azure
@@ -812,7 +827,6 @@ Intune provides built-in reports for devices, compliance, configuration, applica
    - **Tenant details:** total enrolled devices, licensed users, and Intune licenses
    - **Service health and message center:** Shows active incidents or advisories affecting Intune
    - **Connector status:** Shows health of connectors (Defender for Endpoint, Microsoft Tunnel, etc.)
-   - **Intune news:** Product updates and feature announcements
 
 1. Locate **Service health** to view detailed incident information.
 

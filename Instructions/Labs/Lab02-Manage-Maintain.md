@@ -445,15 +445,6 @@ The **Send email to end user** noncompliance action needs a message template to 
    >
    > If no Default message template is available, navigate to the **Notifications** tab on the **Compliance** page first and select **+ Create notification** to create one before configuring this action.
 
-1. Select **Add** to add another action.
-
-1. Configure:
-   - **Action:** Mark device non-compliant
-   - **Schedule (days after noncompliance):** 7
-
-   > [!NOTE]
-   > This provides a 7-day grace period before the device is officially marked non-compliant in Microsoft Entra ID (triggering Conditional Access blocks).
-
 1. Select **Next** and on the **Scope tags** tab, add **Pharmacy** and select **Next**.
 
 1. On the **Assignments** page, under **Included groups**, select **Add groups**.
@@ -959,6 +950,8 @@ Proactive remediations run PowerShell scripts on devices to detect and fix issue
      }
      '@ | Set-Content -Path "C:\LabAssets\Remediations\Detect-TempFiles.ps1" -Encoding UTF8
      ```
+
+    The closing `'@` must begin in column one. Do not indent the here-string terminator.
 
    - **Remediation script file:** Select **Select a file**, then browse and navigate to `C:\LabAssets\Remediations\Remediate-TempFiles.ps1`.
 
