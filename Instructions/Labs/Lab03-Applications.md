@@ -145,11 +145,6 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 > [!IMPORTANT]
 > **Download the real installer yourself — don't use a pre-packaged app asset.** Embedding a compiled `.exe`/`.msi` in training content is a supply-chain risk: its provenance can't be verified, and it's the kind of artifact a security review would (rightly) flag. This task has you download the **official** 7-Zip installer directly from the vendor, not a repackaged "portable" build from a third-party site.
 
-1. On **SEA-DEV1**, verify the Win32 Content Prep Tool is available at `C:\Program Files\IntuneWinAppUtil\IntuneWinAppUtil.exe`.
-
-   > [!NOTE]
-   > If the tool is not present, download it from https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool/releases and extract to the specified path.
-
 1. Open **Microsoft Edge** and navigate to **https://www.7-zip.org/download.html** — the official 7-Zip download page (published by Igor Pavlov, the actual author).
 
 1. Download the current **64-bit Windows x64 .msi** package (not the .exe installer, and not any "portable" edition from a third-party mirror).
@@ -157,6 +152,16 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 1. Open **Terminal (Admin)** (right-click Start → Terminal (Admin)). On Windows 11, this opens Windows Terminal with a PowerShell tab.
 
 1. On the **Do you want to allow this app to make changes to your device?** prompt, select **Yes**.
+
+1. Download the Microsoft Win32 Content Prep Tool from its official Microsoft GitHub repo:
+
+   ```powershell
+   New-Item -ItemType Directory -Path "C:\Program Files\IntuneWinAppUtil" -Force
+   Invoke-WebRequest -Uri "https://raw.githubusercontent.com/microsoft/Microsoft-Win32-Content-Prep-Tool/master/IntuneWinAppUtil.exe" -OutFile "C:\Program Files\IntuneWinAppUtil\IntuneWinAppUtil.exe"
+   Test-Path "C:\Program Files\IntuneWinAppUtil\IntuneWinAppUtil.exe"
+   ```
+
+   The output should return **True**.
 
 1. Create the source folder and move the downloaded MSI into it:
 
@@ -166,10 +171,10 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
    Get-ChildItem "C:\LabAssets\Win32-App\Source\7z*.msi"
    ```
 
-1. Note the exact downloaded filename (it changes with each 7-Zip release, e.g. `7z2408-x64.msi`) — you'll need it for the next command.
+1. Note the exact downloaded MSI filename (for example, `7z<version>-x64.msi`). You'll need it for the next command.
 
    > [!NOTE]
-   > This lab uses `7z-*.exe` as the example payload. If you use a different installer (for example, Notepad++ `npp.8.9.7.Installer.x64.exe`), substitute the **filename**, **app name/publisher**, **install/uninstall commands**, and **detection path** consistently throughout Exercises 2, 5, and 7.
+   > This lab uses the downloaded 7-Zip `.msi` file as the example payload. If you use a different installer, substitute the **filename**, **app name/publisher**, **install/uninstall commands**, and **detection path** consistently throughout Exercises 2, 5, and 7.
 
 1. Navigate to the Win32 Content Prep Tool directory:
 
@@ -177,10 +182,10 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
    cd "C:\Program Files\IntuneWinAppUtil"
    ```
 
-1. Run the content prep tool to package the app (replace `<filename>` with the actual .msi filename from the previous step):
+1. Run the content prep tool to package the app (replace `<MSI filename>` with the exact downloaded MSI filename):
 
    ```powershell
-   .\IntuneWinAppUtil.exe -c "C:\LabAssets\Win32-App\Source" -s "<filename>.msi" -o "C:\LabAssets\Win32-App\Output"
+   .\IntuneWinAppUtil.exe -c "C:\LabAssets\Win32-App\Source" -s "<MSI filename>" -o "C:\LabAssets\Win32-App\Output"
    ```
 
    - `-c`: Source folder containing the app files
@@ -194,13 +199,13 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 
 1. Wait for the packaging to complete (typically 10–30 seconds).
 
-1. Verify the .intunewin file was created (replace `<filename>` with the same filename):
+1. Verify the .intunewin file was created:
 
    ```powershell
-   Test-Path "C:\LabAssets\Win32-App\Output\<filename>.intunewin"
+   Get-ChildItem "C:\LabAssets\Win32-App\Output\*.intunewin"
    ```
 
-   The output should return **True**.
+   The output should show the generated `.intunewin` file.
 
 **You have successfully packaged a Win32 app using the Intune Win32 Content Prep Tool.**
 
@@ -221,11 +226,11 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 1. Select the `.intunewin` file you created in Task 1 and select **OK**.
 
    > [!NOTE]
-   > Because the source was an MSI, Intune reads the **Name**, **Description**, **Publisher**, and **Version** fields directly from the package metadata and pre-fills them on the next page. Review them for accuracy rather than typing them from scratch.
+   > Because the source was an MSI, Intune reads the **Name**, **Description**, and **App version** fields from the package metadata and pre-fills them on the next page. **Publisher** is blank for this package and must be entered manually.
 
-1. On the **App information** page, confirm the auto-populated fields look correct 
+1. On the **App information** page, confirm the auto-populated fields look correct.
 
-1. **Publisher** will need to be set to **`Igor Pavlov`**, and adjust the **Description** if you want:
+1. Set **Publisher** to `Igor Pavlov`, and adjust the **Description** if you want:
    - **Description:** `7-Zip file archiver for Windows`
 
 1. Select **Next**.
@@ -421,10 +426,10 @@ Microsoft 365 Apps (formerly Office 365 ProPlus) provide Word, Excel, PowerPoint
 
 ### Scenario
 
-The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated library of third-party applications with pre-configured installers, detection rules, and icons. You'll add an app from the catalog and deploy it to devices.
+The Enterprise App Catalog (part of Microsoft Intune Enterprise Application Management) provides a curated library of third-party applications with pre-configured installers, detection rules, and icons. You'll add an app from the catalog and deploy it to devices.
 
 > [!NOTE]
-> The **Enterprise App Catalog** is part of **Microsoft Intune Enterprise Application Management**, a Microsoft Intune Suite capability. The Suite trial was activated in **Lab 01** prerequisites, so this exercise is fully hands-on. The **Enterprise App Catalog** is also included in Microsoft 365 E5 licenses.
+> The **Enterprise App Catalog** is part of **Microsoft Intune Enterprise Application Management**. This capability is included with the Microsoft Intune Suite and eligible Microsoft 365 E5 licenses. The Suite trial was activated in **Lab 01** prerequisites.
 
 ### Task 1: Browse the Enterprise App Catalog
 
@@ -435,7 +440,7 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
 1. In the **Select app type** pane, set **Platform** to **Windows** and **App type** to **Enterprise App Catalog app**. Select **Select**.
 
    > [!NOTE]
-   > Enterprise App Catalog app is now generally available (the "(preview)" suffix that appeared earlier has been dropped). If this option doesn't appear, the Suite trial may not have fully provisioned yet. Wait 5–10 minutes after activation and refresh — capability tiles can take a few minutes to surface after the trial flips to **Active**.
+   > Enterprise App Catalog app is now generally available (the "(preview)" suffix that appeared earlier has been dropped). If this option doesn't appear, Enterprise Application Management may not have fully provisioned yet. Wait 5–10 minutes after activation and refresh — capability tiles can take a few minutes to surface after the license flips to **Active**.
 
 1. On the **Select app** page, select **Search the Enterprise App Catalog** to browse the available apps in the catalog.
 
@@ -451,8 +456,8 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
 
 1. Select **Next**.
 
-1. On the **Configuration** tab, use **Search for a branch** if you want a different release, or ensure the default row is selected. Confirm the row shows:
-   - **Package name:** `Google chrome (x64) (msi)`
+1. On the **Configuration** tab, use **Search for a branch** if you want a different release, or select the default row. Confirm the row shows:
+   - **Package name:** `Google Chrome (x64) (msi)`
    - **Language:** en-US
    - **Architecture:** x64
    - **Version:** (current release, e.g. `150.0.7871.129`)
@@ -469,7 +474,7 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
    > [!NOTE]
    > **Automatically update** keeps the app current directly from the catalog but resets and blocks custom install/uninstall scripts. **Update with supersedence** lets you keep custom settings and push new versions through a guided supersedence relationship instead — consistent with how you'll manage the `7-Zip` app in **Exercise 5**.
 
-1. Review the read-only **App information** (App name, Package name, Version, Publisher, Architecture, Application size, Privacy URL, App store URL) and **App commands** (**Install command**, pre-built as `"%SystemRoot%\System32\msiexec.exe" /i "googlechromestandaloneenterprise64.msi" /qn`) — none of this needs editing.
+1. Review the read-only **App information** (App name, Package name, Version, Publisher, Architecture, Application size, Privacy URL, App store URL) and **App commands** that appear after you select **Update with supersedence** (**Install command**, pre-built as `"%SystemRoot%\System32\msiexec.exe" /i "googlechromestandaloneenterprise64.msi" /qn`) — none of this needs editing.
 
 1. Select **Select**.
 
@@ -480,19 +485,18 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
 ### Task 2: Configure and assign the app
 
 1. On the **App information** page, review the pre-populated details:
-   - **Name:** Google Chrome
+   - **Name:** Google Chrome (x64) (msi)
    - **Description:** (auto-populated)
-   - **Publisher:** Google
-   - **Installation command:** (pre-configured, from the Configuration/Updates steps you just completed)
-   - **Detection rule:** (pre-configured)
+   - **Publisher:** Google LLC
+   - **Developer:** Google LLC
 
 1. Select **Next**.
 
 1. On the **Program** page, review the auto-populated fields — none need editing:
    - **Installer type:** Command line
-   - **Install command:** `"%SystemRoot%\System32\msiexec.exe" /i "googlechromestandaloneenterprise64.msi"` (matches the Install command you reviewed on the **Updates** tab in Task 1)
+   - **Install command:** `"%SystemRoot%\System32\msiexec.exe" /i "googlechromestandaloneenterprise64.msi" /qn` (matches the Install command you reviewed on the **Updates** tab in Task 1)
    - **Uninstaller type:** Command line
-   - **Uninstall command:** `"%SystemRoot%\System32\msiexec.exe" /X {<product-code-GUID>}`
+   - **Uninstall command:** `"%SystemRoot%\System32\msiexec.exe" /x {<product-code-GUID>}`
    - **Installation time required (mins):** 60
    - **Allow available uninstall:** Yes
    - **Install behavior:** grayed out/non-editable for this app — leave as is
@@ -503,12 +507,10 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
 1. On the **Requirements** page, review the pre-configured requirements and select **Next**.
 
 1. On the **Detection rules** tab, review the pre-configured detection rule:
-   - **Rule type:** File or registry-based detection
-   - **Path/Code:** Checks for Chrome installation path
+   - **Rule type:** Registry
+   - **Key path:** `HKLM\...\CurrentVersion\Uninstall\{<product-code-GUID>}`
 
 1. Select **Next**.
-
-1. On the **Scope tags** page, select **Next** (no scope tag needed for this app).
 
 1. On the **Supersedence** page, select **Next** (no supersedence relationship needed — this is the first version of this app).
 
@@ -536,7 +538,7 @@ The Enterprise App Catalog (part of Microsoft Intune Suite) provides a curated l
 1. Launch the **Company Portal** app.
 
    > [!NOTE]
-   > If the **Company Portal** app isn't available on the device, open **Microsoft Edge** and navigate to **https://apps.microsoft.com/detail/9wzdncrfj3pz?hl=en-US&gl=PT** to install the Company Portal app from the Microsoft Store.
+   > If the **Company Portal** app isn't available on the device, open **Microsoft Edge** and navigate to **https://apps.microsoft.com/detail/9wzdncrfj3pz?hl=en-US&gl=US** to install the Company Portal app from the Microsoft Store.
 
 1. Sign in as **MeganB@<TenantPrefix>.OnMicrosoft.com** (if not already signed in).
 
@@ -574,15 +576,15 @@ For this task, you'll simulate a new version by creating a second Win32 app entr
 1. Walk through the wizard exactly as you did in **Exercise 2 Task 2** (**Program**, **Requirements**, **Detection rules**, **Dependencies**, **Assignments**), with these differences:
 
    - **App information:** select **Select app package file** and upload the same `<filename>.intunewin` package from `C:\LabAssets\Win32-App\Output\`
-   - **Name** to `7-Zip v2.0` 
+   - **Name** to `7-Zip v2.0`
    - **Description** to `Updated version of 7-Zip`
-   - **Publisher** will need to be `Igor Pavlov`.
+   - Set **Publisher** to `Igor Pavlov`.
    - On the **Supersedence** tab, select **+ Add**.
       - In the **Add apps** pane, select the existing instance of **7-Zip** and then select **Select**.
-      - Below **Uninstall previous version**, select **Yes**, then then select **Next**.
+      - Below **Uninstall previous version**, select **Yes**, and then select **Next**.
 
      > [!NOTE]
-      This will run the uninstall command for the old version before running the install command for this version. 
+     > This will run the uninstall command for the old version before running the install command for this version.
 
    - **Scope tags:** add **Pharmacy** (same as the original app) — keeps Pharmacy delegation consistent across both versions.
    - **Assignments:** assign **Required** to **sg-Intune-Pilot-Users** (same as the original app).
@@ -799,13 +801,13 @@ App Protection Policies are enforced at the application level, not the device le
 
 You'll use the Intune admin center to monitor app deployment across all devices, identify failed installations, and troubleshoot common issues.
 
-### Task 1: Review the App overview dashboard
+### Task 1: Review app monitoring reports
 
-1. In the **Microsoft Intune admin center**, navigate to **Apps** → **Monitor**.
+1. In the **Microsoft Intune admin center**, navigate to **Apps** → **Monitor** → **App protection status**.
 
-1. Review the **App protection status** report, it will show many columns for each user, app, and platform combination. 
+1. Review the **App protection status** report. It shows columns for each user, app, and platform combination.
 
-1. In the breadcrumbs, select **Apps | Monitor** to return to the list of reports. 
+1. In the breadcrumbs, select **Apps | Monitor** to return to the list of reports.
 
 1. Select **App install status** to open the report. The report lists the install status for apps, including those with failures, and includes these columns:
    - **App name**
@@ -824,7 +826,7 @@ You'll use the Intune admin center to monitor app deployment across all devices,
    - **Pending:** The installation is in progress or awaiting the next device sync.
    - **Not installed:** The app is not installed on the device.
 
-**You have successfully reviewed some App monitor reports.**
+**You have successfully reviewed app monitoring reports.**
 
 ---
 
@@ -942,7 +944,7 @@ In this lab, you accomplished the following:
 - Monitored the large app deployment process
 
 **Exercise 4: Use the Enterprise App Catalog**
-- Browsed the Enterprise App Catalog (Intune Suite feature)
+- Browsed the Enterprise App Catalog (Intune Suite or Microsoft 365 E5 feature)
 - Added Google Chrome with pre-configured settings and detection rules
 - Deployed the app as Available in the Company Portal
 
@@ -957,7 +959,7 @@ In this lab, you accomplished the following:
 - Understood how APP enforces data protection without device enrollment
 
 **Exercise 7: Monitor app deployment and troubleshoot failures**
-- Reviewed the App overview dashboard
+- Reviewed app monitoring reports
 - Investigated failed app installations and interpreted error codes
 - Exported app install status data to CSV for reporting
 - Diagnosed and resolved an intentional Required vs. Uninstall app-assignment conflict
@@ -966,7 +968,7 @@ In this lab, you accomplished the following:
 - Microsoft Store apps provide modern, lightweight application deployment
 - Win32 apps require packaging with the Content Prep Tool and custom detection rules
 - Microsoft 365 Apps deployment includes update channel configuration for phased rollouts
-- Enterprise App Catalog (Intune Suite or E5) simplifies third-party app deployment with pre-configured installers
+- Enterprise App Catalog (Intune Suite or Microsoft 365 E5) simplifies third-party app deployment with pre-configured installers
 - App supersedence automates application upgrades without manual uninstall/reinstall
 - App Protection Policies secure corporate data on mobile/BYOD devices without full enrollment
 - Scope tags carry through the app surface just like configuration and compliance — tag clinical/regulated apps at create time so delegated admins (Pharmacy Helpdesk, Lab 05) can manage them
