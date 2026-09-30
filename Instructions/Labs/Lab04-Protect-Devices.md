@@ -552,7 +552,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 Microsoft Tunnel is a VPN gateway solution that provides secure access to on-premises and cloud resources for mobile devices. You'll deploy the Tunnel Gateway on an Ubuntu server (LIN-SRV1), register it with Intune, and author the VPN profile mobile devices would consume.
 
 > [!IMPORTANT]
-> **Scope.** This exercise covers gateway deployment, Intune registration, and VPN profile authoring. The lab environment doesn't include a mobile device, so **live client VPN connectivity through the gateway is out of scope** — similar to how Lab 01 scopes out the live Autopilot OOBE. The lab is complete when the LIN-SRV1 server appears as **Online** in **Tenant administration** → **Microsoft Tunnel Gateway** → **Servers** (Task 4), and the VPN profile is authored and assigned (Task 5).
+> **Scope.** This exercise covers gateway deployment, Intune registration, and VPN profile authoring. The lab environment doesn't include a mobile device, so **live client VPN connectivity through the gateway is out of scope** — similar to how Lab 01 scopes out the live Autopilot OOBE. The lab is complete when the LIN-SRV1 server shows as **Healthy** in **Tenant administration** → **Microsoft Tunnel Gateway** → **Health status** (Task 4), and the VPN profile is authored and assigned (Task 5).
 >
 > Microsoft Tunnel Gateway is included with **Intune Plan 1** (no Suite required). If LIN-SRV1 isn't available in your lab environment, review the steps conceptually or skip to Exercise 5.
 
@@ -581,7 +581,33 @@ Unlike the other VMs in this course, **LIN-SRV1** runs **Ubuntu Linux** with no 
 | `clear` | Clear the terminal screen. |
 
 > [!TIP]
-> If copy/paste or type-text isn't working reliably in the lab console, you can type the commands manually — they're short. Commands and file paths in Linux are **case-sensitive**, so type them exactly as shown.
+> If copy/paste or type-text isn't working reliably in the lab console, connect to LIN-SRV1 from SEA-DEV1 over SSH instead (see the next section). Commands and file paths in Linux are **case-sensitive**, so type them exactly as shown.
+
+### Recommended: connect to LIN-SRV1 from SEA-DEV1 over SSH
+
+Typing or pasting long commands into the LIN-SRV1 console can drop or change characters. Instead, you can open an SSH session from **SEA-DEV1**. Copy and paste work normally in the SEA-DEV1 terminal, and the Tunnel sign-in code appears on the same computer as your browser.
+
+1. On **LIN-SRV1**, sign in as **`labuser`** and display the server's IP address:
+
+   ```bash
+   hostname -I
+   ```
+
+   Record the first IP address shown (for example, `192.168.1.100`).
+
+1. Switch to **SEA-DEV1**, right-click **Start**, and select **Terminal**.
+
+1. Connect to LIN-SRV1 by using the IP address you recorded. SEA-DEV1 can't resolve the name `LIN-SRV1`, so use the IP address:
+
+   ```powershell
+   ssh labuser@192.168.1.100
+   ```
+
+1. The first time you connect, you're asked whether you want to continue connecting. Enter **`yes`**.
+
+1. Enter the LIN-SRV1 password. Nothing appears on screen as you type. When the prompt changes to **`labuser@lin-srv1:~$`**, you're connected.
+
+Run the LIN-SRV1 commands in the rest of this exercise in this SSH window. When a step says to switch to **LIN-SRV1**, use this window instead. Paste one code block at a time, and wait for the prompt to return before you paste the next one.
 
 ### Task 1: Prepare the LIN-SRV1 server
 
@@ -616,7 +642,7 @@ Unlike the other VMs in this course, **LIN-SRV1** runs **Ubuntu Linux** with no 
    hostname -f
    ```
 
-   Record the internal IP/hostname (e.g., `192.168.1.100` or `LIN-SRV1.lab.local`). You'll reuse this endpoint value when you create the Tunnel Site (Task 2). The gateway only needs **outbound** access to Microsoft Intune endpoints to register — no inbound ports, no public FQDN, and no publicly-trusted certificate are required for this lab.
+   Record the internal IP address (for example, `192.168.1.100`). You'll reuse this endpoint value when you create the Tunnel Site (Task 2). The gateway only needs **outbound** access to Microsoft Intune endpoints to register — no inbound ports, no public FQDN, and no publicly-trusted certificate are required for this lab.
 
 **You have successfully prepared the LIN-SRV1 server for Microsoft Tunnel installation.**
 
@@ -652,7 +678,7 @@ Create a **Server configuration** first. The Site wizard requires one, and if th
 1. Select **Next**.
 
 1. On the **Settings** tab, configure:
-   - **Public IP address or FQDN:** Enter the IP address or hostname you recorded in Task 1.
+   - **Public IP address or FQDN:** Enter the IP address you recorded in Task 1.
    - **Server configuration:** Select `Contoso Tunnel Server Config`.
 
    > [!NOTE]
@@ -721,12 +747,12 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 
 1. Follow the installation prompts:
    - Accept the license terms 
-       - Press **Space** to scroll through the license agreement and enter **`yes`** at the prompt to accept.
+       - Press **Space** to scroll through the license agreement. When the end of the agreement shows **(q to exit)**, press **`q`**, and then enter **`yes`** at the prompt to accept.
    - When prompted for additional Admin Tasks and certificate verification, enter **`yes`** (the certificate files are already staged from the previous step).
      
       ![Screenshot of the LIN-SRV1 terminal displaying the Microsoft Tunnel setup Admin Tasks prompt for installing the TLS certificate.](media/tunnel-setup-admin-tasks.png)
    
-   - The setup process will ask you to complete a device login. Record the **Device Code** displayed in the terminal and switch back to SEA-DEV1 and open a browser to https://microsoft.com/devicelogin. Enter the **Device Code** you saved earlier and authenticate with the admin account.
+   - The setup process will ask you to complete a device login. Record the **Device Code** displayed in the terminal and switch back to SEA-DEV1 and open a browser to https://microsoft.com/devicelogin. Enter the **Device Code** you saved earlier and authenticate with the admin account. If you're connected over SSH, you can copy the code directly from the terminal window on SEA-DEV1.
 
      ![Screenshot of the LIN-SRV1 terminal showing the device code used to authenticate the Microsoft Tunnel Gateway agent at microsoft.com/devicelogin.](media/tunnel-setup-device-code.png)
 
@@ -760,7 +786,7 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 
 1. Verify **LIN-SRV1** appears in the Servers list with status **Healthy**.
 
-1. If status is **Unhealthy**, on LIN-SRV1 run:
+1. The first check-in after setup can show **Unhealthy** while the server container is still starting. Wait about 5 minutes, and then select **Refresh**. If the status is still **Unhealthy**, on LIN-SRV1 run:
 
    ```bash
    sudo mst-cli server status
