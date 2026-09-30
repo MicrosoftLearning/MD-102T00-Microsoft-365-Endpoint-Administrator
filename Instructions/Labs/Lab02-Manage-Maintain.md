@@ -1,7 +1,7 @@
 ---
 lab:
   title: 'Lab 02: Manage and maintain devices'
-  description: 'In this lab, you create device configuration profiles, compliance policies, and Windows Update rings, analyze Group Policy Objects for migration, and enable Endpoint analytics and Remediations.'
+  description: 'In this lab, you create device configuration profiles, compliance policies, and Windows Update rings, analyze Group Policy Objects for migration, and enable Endpoint analytics and remediations.'
   duration: 100 minutes
   level: 200
   islab: true
@@ -436,7 +436,7 @@ The **Send email to end user** noncompliance action needs a message template to 
 1. On the **Actions for noncompliance** tab, configure the default action:
    - **Mark device noncompliant:** 7 days
 
-1. On the row below the Mark device noncompliant, configure another action:
+1. In the next action row, configure another action:
    - **Action:** Send email to end user
    - **Schedule (days after noncompliance):** 1
    - **Message template:** Select **Default**
@@ -483,13 +483,13 @@ The **Send email to end user** noncompliance action needs a message template to 
 1. Select **SEA-DEV1** from the device list.
 
 1. In the **Essentials** section, below the device name **SEA-DEV1** review the following:
-   - **Compliance:** May show "Not evaluated," "Compliant,", "In grace period", or "Not compliant"
+   - **Compliance:** May show "Not evaluated," "Compliant", "In grace period", or "Not compliant"
    - **Last check-in:** Timestamp of last sync with Intune
 
    > [!NOTE]
    > Compliance evaluation can take 5–10 minutes after policy assignment. If the status shows "Not evaluated," select **Sync** from the top toolbar to force a policy refresh, then wait a few minutes and refresh the page.
 
-1. If the device shows non-compliant, select **Device compliance** to view which settings failed.
+1. If the device shows non-compliant, in the device blade's left navigation, under **Monitor**, select **Device compliance** to view which settings failed.
 
 **You have successfully monitored compliance policy results.**
 
@@ -639,18 +639,28 @@ Contoso has existing Group Policy Objects (GPOs) from an on-premises Active Dire
 
 ### Task 3: Export the analysis results
 
-1. On the **Group Policy analytics** list page, select the **GPO_Desktop_Settings** row, then select **Export** from the top toolbar.
+1. On the **Group Policy analytics** list page, select the **25%** link in the **MDM support** column for **GPO_Desktop_Settings**.
 
-1. The download starts immediately as a CSV file. Save it to `C:\LabAssets\GPO-Analysis-Results.csv`.
+1. Select **Export** from the top toolbar.
+
+1. In the confirmation pane, select **Yes**.
+
+1. The CSV file downloads automatically to the **Downloads** folder with a timestamped file name.
 
 1. Open the CSV file in **Excel** or **Notepad** to review the exported data.
 
    The CSV contains:
    - Setting name
-   - Setting category
-   - Configured value
-   - Migration readiness status
-   - Intune equivalent (if available)
+   - Group policy setting category
+   - MDM support
+   - Value
+   - Scope
+   - Minimum OS version
+   - CSP name
+   - CSP mapping
+
+   > [!NOTE]
+   > If you export from the **Group Policy analytics** list page instead, the CSV contains only summary columns: **Group policy name**, **Active directory target**, **MDM support**, **Unknown settings**, **Targeted in AD**, and **Last imported**.
 
 **You have successfully exported Group Policy analysis results.**
 
@@ -739,7 +749,7 @@ You'll use Windows Update for Business policies (Update rings) to control when d
 
 1. Select **Next**.
 
-1. On the **Scope tags** tab, select  **Next**.
+1. On the **Scope tags** tab, select **Next**.
 
 1. On the **Assignments** tab, under **Included groups**, select **Add groups**.
 
@@ -747,11 +757,7 @@ You'll use Windows Update for Business policies (Update rings) to control when d
 
 1. Select **Select**.
 
-1. Under **Excluded groups**, select **Add groups**.
-
-1. Search for and select **sg-Intune-Pilot-Users** (to exclude pilot users who already have the Pilot ring assigned).
-
-1. Select **Select**.
+1. Don't add an excluded group for this lab. The included group is a device group, and Intune doesn't support excluding a user group from a device-group assignment.
 
 1. Select **Next**.
 
@@ -795,7 +801,7 @@ The pilot cohort (`sg-Intune-Pilot-Users`, created in **Lab 01 Exercise 1**) is 
 
 ### Task 4: Create a Feature update profile
 
-Update rings control *when* updates install. **Feature update profiles** control *which version* of Windows devices are pinned to — a separate axis. You'll create a Feature update profile that pins the broader fleet to Windows 11 25H2 while the pilot cohort runs ahead via the Pilot update ring.
+Update rings control *when* updates install. **Feature update profiles** control *which version* of Windows devices are pinned to — a separate axis. You'll create a Feature update profile that pins the broader fleet to Windows 11 25H2.
 
 1. In the **Microsoft Intune admin center**, select **Devices**, under **By platform** select **Windows**, then on the Windows blade select **Windows updates**, then select **Feature updates** tab.
 
@@ -814,7 +820,7 @@ Update rings control *when* updates install. **Feature update profiles** control
 
 1. On the **Scope tags** tab, leave the **Default** scope tag (this profile is tenant-wide). Select **Next**.
 
-1. On the **Assignments** tab, assign to **dyn-Windows-Devices**. Under **Exclude groups**, add **sg-Intune-Pilot-Users** (the pilot cohort runs ahead via the Pilot update ring, so excluding them here prevents the Feature update profile from holding them back).
+1. On the **Assignments** tab, assign to **dyn-Windows-Devices**. Don't add an excluded group for this lab. The included group is a device group, and Intune doesn't support excluding a user group from a device-group assignment.
 
 1. Select **Next**.
 
@@ -855,7 +861,7 @@ Update rings control *when* updates install. **Feature update profiles** control
 
 ---
 
-## Exercise 5: Enable Endpoint analytics and Remediations
+## Exercise 5: Enable Endpoint analytics and remediations
 
 ### Scenario
 
@@ -1007,7 +1013,7 @@ Remediations run PowerShell scripts on devices to detect and fix issues automati
    > [!NOTE]
    > Remediations run on a schedule (default: once per day). After initial policy deployment, wait 1–2 hours for the first execution, then check the results.
 
-**You have successfully monitored proactive remediation execution.**
+**You have successfully monitored remediation execution.**
 
 ---
 
@@ -1031,7 +1037,7 @@ The Troubleshooting blade provides a consolidated view of a user's devices, poli
 
 1. Select that device from the list to open its device blade.
 
-1. Below the **Essentials** section, select the **Device details** tab, and then review:
+1. On the device's **Overview** page, in the **Essentials** section, review:
    - **Enrolled by**
    - **Last check-in time**
    - **Compliance**
@@ -1051,7 +1057,7 @@ In **Exercise 1 Task 5** you intentionally created two configuration profiles �
 
 1. You should still be on the device blade you opened at the end of **Task 1**. If not, navigate to **Devices** → **All devices** and reselect that same pilot-cohort device (**SEA-DEV1** or **SEA-DEV2**).
 
-1. In the device blade's left navigation, under **Reports**, select **Device configuration**.
+1. In the device blade's left navigation, under **Monitor**, select **Device configuration**.
 
 1. Review the **State** column. This report lists every policy assigned to the device (**Policy**, **Logged in user**, **Policy type**, **State**) with a real per-policy status — this is a cleaner, more direct view than the Troubleshoot blade's **Policy** tab, which doesn't show status at all.
 
@@ -1074,7 +1080,7 @@ In **Exercise 1 Task 5** you intentionally created two configuration profiles �
 
 1. Trigger a device sync (**Devices** → **All devices** → select the same device → **Sync**) and monitor the **Sync status** pane until the sync has completed.
 
-1. Return to the device's **Monitor** → **Device configuration** report and confirm `WIN - Camera - Disabled (Pilot)` now shows **State: Succeeded** (no longer **Conflict**), with the **Disabled** value applied.
+1. Return to the device's **Monitor** > **Device configuration** report and confirm `WIN - Camera - Disabled (Pilot)` now shows **State: Succeeded** (no longer **Conflict**), with the **Disabled** value applied.
 
    > [!NOTE]
    > It may require another sync of the device, and then a couple of minutes for Graph to return the correct state for the policy.
