@@ -53,7 +53,7 @@ This lab requires:
 - **LIN-SRV1** (Ubuntu 22.04 server for Microsoft Tunnel Gateway)
 
 > [!IMPORTANT]
-> **Start this lab early.** The first-time Microsoft Defender for Endpoint tenant onboarding (Exercise 1) can take **several hours** to fully provision — device inventory, onboarding status, and security signals don't appear in the Defender portal immediately after you flip the connector on. Don't wait until Exercise 1 to check status and expect it to be fast: enable the connector and onboard your devices as soon as you start the lab, then continue with the remaining exercises while Defender finishes provisioning in the background. If you come back to verify onboarding status later and devices still show **Pending**, that's expected — give it more time before troubleshooting.
+> **Start this lab early.** The first-time Microsoft Defender for Endpoint tenant onboarding (Exercise 1) can take **several hours** to fully provision. The first Defender portal visit might stay on **Hang on! We're preparing new spaces for your data** for more than 2 hours. Open Defender and start the connector setup as soon as you begin the lab, then continue with the remaining exercises while Defender finishes provisioning in the background. If you come back later and the connector or device status still shows **Pending** or **Unavailable**, give it more time before troubleshooting.
 
 ---
 
@@ -73,18 +73,16 @@ The Intune ↔ Defender for Endpoint connector is a **two-portal** setup: you fl
 
 1. Sign in as **admin@<TenantPrefix>.onmicrosoft.com**.
 
-1. In the **Microsoft Defender** portal, in the left navigation, expand **Assets** and select **Devices**.
+1. In the **Microsoft Defender** portal, select **Settings**.
 
-1. On the **Device inventory** page, select **Onboard**.
-
-1. Under **General**, select **Optional features**.
+1. Select **Endpoints**, and then select **Advanced features**.
 
 1. Locate the **Microsoft Intune connection** toggle and set it to **On**.
 
 1. Select **Save preferences** at the bottom of the page.
 
    > [!NOTE]
-   > Saving here is what establishes the bidirectional connector. Without this step, the Intune admin center's Defender for Endpoint page is read-only.
+   > The account that connects Microsoft Defender for Endpoint to Intune needs the **Endpoint Security Manager** role or **Mobile Threat Defense** Read and Modify permissions. If the toggle is unavailable or grayed out, Defender tenant provisioning is still in progress. Wait, refresh the page, and try again later.
 
 #### Part B — Configure the connector from the Intune admin center
 
@@ -215,10 +213,10 @@ Security baselines are pre-configured collections of recommended settings based 
    > - Firewall
    > - Microsoft Edge
 
-1. Scroll through the categories and note the pre-configured values. You can customize individual settings, but for this lab, we will accept most of the defaults.
+1. Scroll through the categories and note the pre-configured values. You can customize individual settings, but for this lab, accept most of the defaults.
 
-1. In order to prevent a conflict with a later task in this lab, expand **Bitlocker** and configure:
-   -- **Allow Warning For Other Disk Encryption**: Disabled
+1. To prevent a conflict with a later task in this lab, expand **BitLocker** and configure:
+   - **Allow Warning For Other Disk Encryption:** Disabled
 
 1. Select **Next**.
 
@@ -430,7 +428,7 @@ Attack Surface Reduction rules block behaviors commonly used by malware, such as
 
 ### Scenario
 
-BitLocker encrypts the entire OS drive, protecting data at rest. You'll configure a BitLocker policy that requires TPM+PIN protection and escrows recovery keys to Microsoft Entra ID.
+BitLocker encrypts the entire OS drive, protecting data at rest. You'll configure a BitLocker policy that enables silent encryption and escrows recovery keys to Microsoft Entra ID.
 
 ### Task 1: Create a BitLocker policy
 
@@ -446,31 +444,29 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 
 1. On the **Basics** tab, enter:
    - **Name:** `BitLocker - Full Disk Encryption`
-   - **Description:** `Requires BitLocker encryption with TPM and PIN, recovery keys escrowed to Entra ID`
+   - **Description:** `Enables silent BitLocker encryption with recovery keys escrowed to Entra ID`
 
 1. Select **Next**.
 
 1. On the **Configuration settings** tab, expand **BitLocker** and configure:
    - **Require Device Encryption:** Enabled
    - **Allow Warning for Other Disk Encryption:** Disabled
+   - **Allow Standard User Encryption:** Enabled
 
 1. Expand **Fixed Data Drives** and configure:
    - **Enforce drive encryption type on fixed data drives:** Enable
    - **Choose how BitLocker-protected fixed drives can be recovered:** Enabled
-   - **Save BitLocker recovery information to AD DS for operating system drives:** True
+   - **Save BitLocker recovery information to AD DS for fixed data drives:** True
    - **Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives:** True
 
 1. Expand **Operating System Drives** and configure:
    - **Enforce drive encryption type on operating system drives:** Enable
-   - **Require additional authentication at startup:** Enabled
-   - **Configure minimum PIN length for startup:** Enabled
-   - **Minimum characters:** 6
    - **Choose how BitLocker-protected operating system drives can be recovered:** Enabled
    - **Save BitLocker recovery information to AD DS for operating system drives:** True
    - **Do not enable BitLocker until recovery information is stored in AD DS for operating system drives:** True
 
    > [!NOTE]
-   > Requiring TPM+PIN provides two-factor protection: something you have (TPM chip) + something you know (PIN). Recovery keys escrowed to Entra ID allow IT admins to retrieve keys when users forget their PIN.
+   > Startup PIN or startup key settings block silent encryption. Recovery keys escrowed to Entra ID allow IT admins to retrieve keys when a device enters BitLocker recovery.
 
 1. Select **Next**.
 
@@ -486,10 +482,10 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 
 ### Task 2: Monitor BitLocker encryption status
 
-1. On **SEA-DEV1**, wait 10–15 minutes for the BitLocker policy to apply. You can force a sync from Intune to speed this up. 
+1. On **SEA-DEV1**, wait 10–15 minutes for the BitLocker policy to apply. You can force a sync from Intune to speed this up.
 
    > [!NOTE]
-   > BitLocker encryption can take 1–3 hours to complete depending on drive size and system performance. For lab purposes, you'll verify the policy was applied and encryption started. In our lab environment, it will take approximately 5-10 minutes. 
+   > BitLocker encryption can take 1–3 hours to complete depending on drive size and system performance. For lab purposes, you'll verify the policy was applied and encryption started. In our lab environment, it takes approximately 5–10 minutes.
 
 1. On **SEA-DEV1**, open **Terminal (Admin)** (right-click Start → Terminal (Admin); Windows Terminal opens a PowerShell tab by default).
 
@@ -510,15 +506,15 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 
 1. In the **Microsoft Intune admin center**, navigate to **Devices** → **All devices** → **SEA-DEV1**.
 
-1. Select **Bitlocker recovery keys** from the left navigation.
+1. Select **Recovery keys** from the left navigation.
 
 1. Verify the BitLocker recovery key for the C: drive is escrowed to Microsoft Entra ID.
 
    > [!NOTE]
-   > Recovery keys are stored in Entra ID and can be retrieved by Global Administrators or Helpdesk Administrators if a user forgets their BitLocker PIN.
+   > Recovery keys are stored in Entra ID and can be retrieved by Global Administrators or Helpdesk Administrators if a device enters BitLocker recovery.
 
    > [!NOTE]
-   > **No BitLocker recovery key found for this device** message is expected at first. The key isn't escrowed until encryption starts (**Protection On**) *and* the device syncs afterward — with TPM+PIN this can lag 10–30 minutes.
+   > **No BitLocker recovery key found for this device** message is expected at first. The key isn't escrowed until encryption starts (**Protection On**) *and* the device syncs afterward. This can lag 10–30 minutes.
 
 **You have successfully monitored BitLocker encryption status and verified recovery key escrow.**
 
@@ -527,7 +523,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 ### Task 3: Retrieve a BitLocker recovery key
 
 > [!NOTE]
-> If no recovery key is shown yet, skip this task and return to it later. The key only appears here once BitLocker has started encrypting (**Protection On**) and the device has escrowed the key to Microsoft Entra ID — which can take some time. Continue with **Exercise 4** and revisit **Task 3** once the key populates on the **Recovery keys** blade.
+> If no recovery key is shown yet, skip this task and return to it later. The key only appears here once BitLocker has started encrypting (**Protection On**) and the device has escrowed the key to Microsoft Entra ID. This can take some time. Continue with **Exercise 4** and revisit **Task 3** once the key populates on the **Recovery keys** blade.
 
 1. In the **Microsoft Intune admin center**, navigate to **Devices** → **All devices** → **SEA-DEV1**.
 
@@ -543,7 +539,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
    ```
 
    > [!NOTE]
-   > This key can be used to unlock the drive if the TPM fails or the user forgets their PIN. In a production environment, only authorized help desk staff should have access to recovery keys.
+   > This key can be used to unlock the drive if the device enters BitLocker recovery. In a production environment, only authorized help desk staff should have access to recovery keys.
 
 **You have successfully retrieved a BitLocker recovery key from Microsoft Entra ID.**
 
@@ -656,7 +652,7 @@ Create a **Server configuration** first. The Site wizard requires one, and if th
 1. Select **Next**.
 
 1. On the **Settings** tab, configure:
-   - **Public IP address or FQDN:** `Recorded IP address from Task 1, Step 5`
+   - **Public IP address or FQDN:** Enter the IP address or hostname you recorded in Task 1.
    - **Server configuration:** Select `Contoso Tunnel Server Config`.
 
    > [!NOTE]
@@ -664,11 +660,7 @@ Create a **Server configuration** first. The Site wizard requires one, and if th
    >
    > For this lab workflow, this field is used to satisfy Site configuration and certificate name matching. It does not validate real internet-reachable client ingress unless you explicitly test end-user tunnel connectivity from outside the lab network.
    >
-   > Observed values from this lab run:
-   > - Certificate SAN includes `DNS:lin-srv1` and `Recorded IP address from Task 1, Step 5`.
-   > - Site entry tested in the portal included `LIN-SRV1.lab.local`.
-   >
-   > To avoid SAN mismatch, keep the Site endpoint as `Recorded IP address from Task 1, Step 5` unless you regenerate the cert to include `LIN-SRV1.lab.local`.
+   > To avoid a subject alternative name (SAN) mismatch, use the same endpoint value you recorded in Task 1 unless you regenerate the certificate to include a different endpoint.
 
 1. Select **Next** until you reach the **Review + create** tab, and then select **Create**.
 
@@ -1012,7 +1004,7 @@ SCEP (Simple Certificate Enrollment Protocol) profiles allow devices to request 
 
 1. On the **Configuration settings** tab, configure:
    - **Certificate type:** Device
-   - **Subject name format:** Common name
+   - **Subject name format:** CN={{AAD_Device_ID}}
    - **Subject alternative name:** DNS = `{{DeviceName}}.contoso.com`
    - **Certificate validity period:** 1 year
    - **Key storage provider (KSP):** Enroll to Trusted Platform Module (TPM) KSP if present, otherwise Software KSP
@@ -1022,7 +1014,7 @@ SCEP (Simple Certificate Enrollment Protocol) profiles allow devices to request 
    - **Root Certificate:** Select **+ Root Certificate** and then select **Trusted Cert - Contoso Root CA**
    - **Extended key usage:** Enter `Client Authentication` for **Name** and select **Client Authentication (1.3.6.1.5.5.7.3.2)** for **Predefined values**.
    - **Renewal threshold (%):** 20
-   - **SCEP Server URLs:** Paste the **SCEP URI** you recorded in Task 3
+   - **SCEP Server URLs:** Paste the **SCEP URI** you recorded in Task 3.
 
 1. Select **Next**.
 
@@ -1180,7 +1172,7 @@ In this lab, you accomplished the following:
 - Observed endpoint security policy precedence and conflict surfacing
 
 **Exercise 3: Configure BitLocker encryption**
-- Created a BitLocker policy requiring TPM and allowing PIN protection (tagged `Pharmacy`)
+- Created a BitLocker policy for silent encryption (tagged `Pharmacy`)
 - Configured recovery key escrow to Microsoft Entra ID
 - Verified encryption status and retrieved recovery keys
 
