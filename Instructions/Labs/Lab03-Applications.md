@@ -110,7 +110,7 @@ Microsoft Store apps are modern Windows applications distributed through the Mic
 1. On **SEA-DEV1**, wait 5–10 minutes for the app to install automatically.
 
    > [!NOTE]
-   > Intune will notify the device that a sync is required. You can force this sync to speed up installation.
+   > Assigning an app as **Required** triggers Intune to notify the device to sync. The notification can arrive within minutes or take a few hours, so you can force a sync to speed up installation. Adding an app as **Available** doesn't trigger an immediate notification.
 
 1. To force a device sync, open **Settings** (press `Windows + I`).
 
@@ -127,7 +127,7 @@ Microsoft Store apps are modern Windows applications distributed through the Mic
 1. Verify the app appears in the search results and can be launched.
 
    > [!NOTE]
-   > You can also initiate the sync from the **SEA-DEV1** blade and monitor the **Sync status** pane, looking for the **Applications** to indicate "1 offered".
+   > You can also sync from the Intune admin center. Go to **Devices** → **Windows**, select **SEA-DEV1**, select **Sync**, and then select **Yes**. To check the installation, select **Monitor** → **All apps** on the device page, and review the **Installation status** column for **Microsoft To Do**.
 
 
 **You have successfully verified Microsoft Store app installation.**
