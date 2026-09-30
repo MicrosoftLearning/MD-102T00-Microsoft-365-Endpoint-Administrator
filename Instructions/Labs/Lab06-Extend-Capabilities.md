@@ -256,7 +256,7 @@ Support-approved elevation rules require a help desk agent to approve elevation 
 
 1. When prompted, sign in with **MeganB@<TenantPrefix>.OnMicrosoft.com**.
 
-1. Select **Join** and **Done** to complete enrollment. 
+1. Select **Join** and **Done** to complete the Microsoft Entra join.
 
 1. Sign out and sign back in as **AlexW@<TenantPrefix>.OnMicrosoft.com** (who will be a standard user, not a local administrator). If prompted to set up a PIN, do so.
 
@@ -268,14 +268,13 @@ Support-approved elevation rules require a help desk agent to approve elevation 
 1. Test **automatic elevation** (Registry Editor):
    - Open the **Start menu** and search for `regedit`
    - Select **Open file location**
-   - Select **Registry Editor**, right click and select **Run with elevated access** to launch **Registry Editor**
-   - Enter a business justification (e.g., `Testing automatic elevation`) and select **Continue** to approve
+   - Select **Registry Editor**, right-click and select **Run with elevated access** to launch **Registry Editor**
    - **Expected behavior:** The app launches elevated without prompting (automatic elevation rule applied)
 
 1. Test **user-confirmed elevation** (MSConfig):
    - Open the **Start menu** and search for `msconfig`
    - Select **Open file location**
-   - Select **System Configuration**, right click and select **Run with elevated access** to launch **System Configuration**
+   - Select **System Configuration**, right-click and select **Run with elevated access** to launch **System Configuration**
    - **Expected behavior:** A prompt appears asking the user to confirm elevation and provide business justification
    - Enter a justification (e.g., `Troubleshooting startup issues`) and select **Continue** to approve
 
@@ -299,11 +298,15 @@ Support-approved elevation rules require a help desk agent to approve elevation 
 
 1. On **SEA-DEV1**, in the **Microsoft Intune admin center**, navigate to **Endpoint security** → **Endpoint Privilege Management** → **Reports**.
 
-1. Review the available reports by select their tile.
+1. Review the available reports by selecting each tile.
+   - **Elevation report:** Review all elevation activity
+   - **Managed elevations report:** Review elevations managed by policy
    - **Elevation report by applications:** See all elevations grouped by application
    - **Elevation report by publisher:** See all elevations for the same signed publisher
    - **Elevation report by user:** See all elevations by each user
-   - **Denied elevation report:** See all denied elevations by each user
+
+   > [!NOTE]
+   > EPM report data can be delayed because the data is processed once every 24 hours.
 
 
 **You have successfully monitored EPM elevation reports.**
@@ -371,7 +374,7 @@ Remote Help requires Microsoft Intune Suite licensing.
 1. Move the downloaded installer into the LabAssets folder created in Lab 03:
 
    ```powershell
-   Move-Item "$env:USERPROFILE\Downloads\remotehelp*.exe" "C:\LabAssets\Win32-App\Source\remotehelp.exe"
+   Move-Item "$env:USERPROFILE\Downloads\remotehelp*.exe" "C:\LabAssets\Win32-App\Source\remotehelpinstaller.exe"
    Get-ChildItem "C:\LabAssets\Win32-App\Source\remotehelpinstaller.exe"
    ```
 
@@ -392,8 +395,6 @@ Remote Help requires Microsoft Intune Suite licensing.
 1. Select **+ Create** from the top toolbar.
 
 1. In the **Select app type** pane, set **Platform** to **Windows** and **App type** to **Windows app (Win32)**. Select **Select**.
-
-
 
 1. On the **App information** page, select **Select app package file**.
 
@@ -510,7 +511,7 @@ Remote Help requires Microsoft Intune Suite licensing.
 
 ### Task 6: Demonstrate Pharmacy Helpdesk Remote Help scope
 
-The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** grants Read + remote-task permissions (including **Sync devices**, **Restart now**, **Collect diagnostics**) scoped to objects tagged **Pharmacy**. Remote Help inherits the same scope: Lee Gu can initiate a Remote Help session against Pharmacy-tagged devices, but not against devices outside his scope. This is the upper-intermediate "delegated remote-assistance" pattern.
+The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** grants Read, **Remote Help app**, **Remote assistance connectors: Read**, and remote-task permissions (including **Offer remote assistance**, **Sync devices**, **Restart now**, and **Collect diagnostics**) scoped to objects tagged **Pharmacy**. Remote Help inherits the same scope: Lee Gu can initiate a Remote Help session against Pharmacy-tagged devices, but not against devices outside his scope. This is the upper-intermediate "delegated remote-assistance" pattern.
 
 1. Open a new **InPrivate** or **Incognito** browser window. Navigate to **https://intune.microsoft.com**.
 
@@ -523,13 +524,13 @@ The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** gra
 
 1. Select a Pharmacy-tagged device (e.g., **SEA-DEV1** tagged with **Pharmacy**).
 
-1. In the device blade, select **Remote actions**, and then select **Begin a remote assistance session** option.
+1. In the device blade, select **Remote actions**, and then select **Begin a remote assistance session**.
 
 1. Confirm Lee Gu can initiate the Remote Help session. The session opens in the Remote Help client — same flow as Task 4 above.
 
 1. End the session.
 
-1. Now try to select a device that's not Pharmacy-tagged (Lee Gu won't see one in his list, so this is a thought experiment): if such a device existed in his view, she would lack the **New remote assistance session** option because the role's scope tag intersection excludes it.
+1. Now try to select a device that's not Pharmacy-tagged (Lee Gu won't see one in his list, so this is a thought experiment): if such a device existed in his view, he would lack the **Begin a remote assistance session** option because the role's scope tag intersection excludes it.
 
    > [!NOTE]
    > **The takeaway.** Scope tags on a custom role aren't just for the Configuration / Compliance / Apps surfaces — they apply to **remote-task operations** like Sync, Restart, and Remote Help. That's what makes scope-tag-based delegation actually safe: the Pharmacy Helpdesk physically cannot help (or accidentally disrupt) devices outside his domain.
@@ -544,18 +545,18 @@ The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** gra
 
 ### Scenario
 
-**Advanced Analytics** (part of the Intune Suite and included in Microsoft 365 E3 and EMS E3) provides ML-powered insights into device performance, anomaly detection, and resource utilization. **Device Query** uses Kusto Query Language (KQL) to run ad-hoc queries against Windows device telemetry — either against a single device (live) or across many devices. This is the upper-intermediate replacement for "please run remote desktop and check" — a delegated admin can answer real support questions without ever touching a user's device.
+**Advanced Analytics** (part of Intune Suite and other eligible Intune advanced capability licenses) provides ML-powered insights into device performance, anomaly detection, and resource utilization. **Device Query** uses Kusto Query Language (KQL) to run ad-hoc queries against Windows device telemetry — either against a single device (live) or across many devices. This is the upper-intermediate replacement for "please run remote desktop and check" — a delegated admin can answer real support questions without ever touching a user's device.
 
-The Intune Suite trial (activated in **Lab 01** prerequisites) and tenant licenses include Advanced Analytics, so this exercise is fully hands-on.
+The Intune Suite trial activated in **Lab 01** includes Advanced Analytics, so this exercise is fully hands-on.
 
 > [!IMPORTANT]
-> **Device prerequisite for Device Query.** A device must be **enrolled in Endpoint Analytics** before it shows up in Device Query results. Endpoint Analytics enrollment is enabled tenant-wide via **Reports** → **Endpoint analytics** → **Settings**. If you completed **Lab 02 Exercise 5 Task 1** (Enable Endpoint analytics), your devices are already enrolled and ready.
+> **License and device prerequisites for Device Query.** Single-device and multi-device Device Query require an active Intune Suite trial or another license that includes Intune Advanced Analytics. The device must also be enrolled in Endpoint Analytics. In this lab series, the Intune Suite trial is activated in **Lab 01**, and Endpoint Analytics is started in **Lab 02 Exercise 5 Task 1**.
 
 > [!NOTE]
-> **Empty results are normal on a fresh tenant.** Until at least one Windows device has actually checked in to Endpoint Analytics, every multi-device Device Query in Task 3 will return **0 items**. The Get started → Prerequisites pane on the Device Query page repeats this: *"For a device to appear in device queries, it must be enrolled in Endpoint Analytics."* If your SEA-DEV1/SEA-DEV2 haven't checked in yet, run a single-device query against the device blade (Task 2) instead — those run live and don't depend on the Endpoint Analytics catalog.
+> **Empty results are normal on a fresh tenant.** Until at least one Windows device has checked in to Endpoint Analytics and returned the required inventory, multi-device Device Query in Task 3 may return **0 items**. The Device Query prerequisites pane repeats that the license must include Intune Advanced Analytics and the device must be enrolled in Endpoint Analytics.
 
 > [!NOTE]
-> **Telemetry latency.** Advanced Analytics dashboards (anomaly detection, resource performance, battery health) need approximately **24 hours of device telemetry** to populate meaningfully. Device Query, by contrast, runs against the device's **live state** and returns results within seconds. If your SEA-DEV1/SEA-DEV2 devices were enrolled less than 24 hours ago, the dashboards in Task 1 may show "Insufficient data" — Tasks 2 and 3 (Device Query) will still work.
+> **Telemetry latency.** Advanced Analytics dashboards (anomaly detection, resource performance, battery health) need approximately **24 hours of device telemetry** to populate meaningfully. If your SEA-DEV1/SEA-DEV2 devices were enrolled less than 24 hours ago, the dashboards in Task 1 may show "Insufficient data".
 
 ### Task 1: Review Advanced Analytics dashboards
 
@@ -588,7 +589,7 @@ Single-device Device Query runs a KQL query against one Windows device's live st
 
 1. In the **Microsoft Intune admin center**, navigate to **Devices** → **Windows** → select **SEA-DEV1**.
 
-1. Under the **Tools** section, select **Device query**.
+1. Under the **Monitor** section, select **Device query**.
 
 1. In the query editor, enter and run the following query to list the CPU information for SEA-DEV1:
 
@@ -631,9 +632,24 @@ Multi-device Device Query runs one KQL query across every Windows device in your
 1. In the **Microsoft Intune admin center**, navigate to **Devices** → **Device query**.
 
    > [!NOTE]
-   > This is the **multi-device** Device Query surface (Devices → Device query at the top of the **Manage devices** group is not present — it's a top-level item under **Devices**). It's distinct from the single-device Device Query you used in Task 2 (Devices → Windows → *device* → Tools → Device query).
+   > This is the **multi-device** Device Query surface. It's distinct from the single-device Device Query you used in Task 2 (Devices → Windows → *device* → **Monitor** → **Device query**).
 
 1. Below the empty query window, select **Get started** and then scroll down to the **Example queries** section and browse the pre-built samples. Microsoft maintains this list — it's the fastest way to learn the supported tables and operators.
+
+1. If you haven't already deployed the required properties catalog policy, navigate to **Devices** → **Manage devices** → **Configuration** → **Create** → **New Policy**. Set **Platform** to **Windows 10 and later**, set **Profile type** to **Properties catalog**, and then select **Create**.
+
+1. On the **Basics** page, enter:
+   - **Name:** `Device Query Properties Catalog`
+   - **Description:** `Collects properties required for Device Query labs`
+
+1. Select **Next**. On the **Configuration properties** page, select **Add properties**. In the **Properties picker**, add **CPU**, **Encryptable Volume**, **Logical Drive**, and **OS Version**.
+
+1. Select **Next**. On the **Scope tags** page, select **Next**.
+
+1. On the **Assignments** page, add the **All devices** group. Select **Next**, and then on the **Review + create** page, select **Create**.
+
+   > [!NOTE]
+   > Initial inventory collection can take up to 24 hours. If the query returns no data, wait for the properties catalog profile to apply and for devices to check in.
 
 1. Enter and run this query to find every Windows device that is **not** BitLocker-encrypted — the canonical "these devices need attention now" query:
 
@@ -641,6 +657,7 @@ Multi-device Device Query runs one KQL query across every Windows device in your
    EncryptableVolume
    | where ProtectionStatus != "PROTECTED"
    | join LogicalDrive on Device
+   | distinct Device
    ```
 
 1. Select **Run**. The Results tab returns one row per affected device.
@@ -654,12 +671,12 @@ Multi-device Device Query runs one KQL query across every Windows device in your
 
    ```kusto
    OsVersion
-   | where OsBuildNumber < 26100
-   | project Device, OsVersion, OsBuildNumber
-   | order by OsBuildNumber asc
+   | where toint(BuildVersion) < 26100
+   | project Device, OsVersion, BuildVersion
+   | order by BuildVersion asc
    ```
 
-1. Select **Run**. This is your "hasn't taken the feature update yet" working list — useful for chasing devices that fall behind the Feature update profile you created in **Lab 02 Exercise 4**.
+1. Select **Run**. This is your "hasn't taken the feature update yet" working list — useful for chasing devices that fall behind the Feature update profile you created in **Lab 02 Exercise 4**. An empty result means all queried devices are at or above the target build.
 
 1. Run a third query to summarize the fleet by processor architecture (a quick "who has ARM64 devices" inventory):
 
@@ -670,7 +687,7 @@ Multi-device Device Query runs one KQL query across every Windows device in your
 
 1. Select **Run**. The Results tab shows a summary row per architecture.
 
-1. Select **Export** to save the result set as CSV — useful for handing a hardware inventory to procurement or for ticketing-system import.
+1. Select **Export** to save the result set as CSV — useful for handing a hardware inventory to procurement or for ticketing-system import. Because this query returns aggregate rows, **Add all items to a group** isn't shown.
 
    > [!NOTE]
    > Multi-device Device Query results respect **scope tags**. When Lee Gu (the **Pharmacy Helpdesk** delegated admin assigned in **Lab 05 Exercise 3**) runs these same queries, the results are automatically filtered to only the Pharmacy-tagged devices in his scope. Delegated admins can answer support questions about their own devices without ever seeing the rest of the tenant.
