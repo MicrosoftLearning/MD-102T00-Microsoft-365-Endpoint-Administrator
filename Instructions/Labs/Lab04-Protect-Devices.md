@@ -556,95 +556,51 @@ Microsoft Tunnel is a VPN gateway solution that provides secure access to on-pre
 >
 > Microsoft Tunnel Gateway is included with **Intune Plan 1** (no Suite required). If LIN-SRV1 isn't available in your lab environment, review the steps conceptually or skip to Exercise 5.
 
-### Before you begin: working with the Linux terminal
+### Before you begin: working with LIN-SRV1
 
-Unlike the other VMs in this course, **LIN-SRV1** runs **Ubuntu Linux** with no graphical desktop. You interact with it entirely through a text **terminal** by typing commands and pressing **Enter**.
+**LIN-SRV1** runs Ubuntu Linux with no graphical desktop. You sign in to it once to get its IP address, and then you run every Linux command from **SEA-DEV1** over an SSH connection. This lets you copy and paste commands reliably and keeps the browser and terminal on the same computer.
 
-**Signing in.** When prompted, sign in with:
+Some commands start with `sudo`, which runs the command as an administrator (like **Run as administrator** on Windows). When prompted, enter the `labuser` password. Nothing appears on screen as you type the password. That's normal.
 
-- **Username:** `labuser`
-- **Password:** the password provided for LIN-SRV1 in the Skillable lab **Resources** panel (the same place you find credentials for the other VMs).
+### Task 1: Connect to LIN-SRV1 and install Docker
 
-**Running commands as administrator (`sudo`).** Many setup steps start with `sudo` ("superuser do"), which runs that one command with administrator rights — the Linux equivalent of "Run as administrator" on Windows. The first time you use `sudo` in a session, you may be prompted for the `labuser` password again. As you type the password, **nothing appears on screen** (no dots or asterisks) — that's normal. Type it and press **Enter**.
+1. Switch to **LIN-SRV1** and sign in as **`labuser`** with the password provided for LIN-SRV1 in the Skillable **Resources** panel.
 
-**Common commands** you'll use to move around and inspect files:
-
-| Command | What it does |
-| --- | --- |
-| `pwd` | Print the current directory ("where am I?"). |
-| `ls` | List the files and folders in the current directory. |
-| `ls -l` | List with details (permissions, size, date). |
-| `cd foldername` | Change into a folder. |
-| `cd ..` | Move up one folder level. |
-| `cd ~` | Return to your home directory. |
-| `cat filename` | Print the contents of a file to the screen. |
-| `clear` | Clear the terminal screen. |
-
-> [!TIP]
-> If copy/paste or type-text isn't working reliably in the lab console, connect to LIN-SRV1 from SEA-DEV1 over SSH instead (see the next section). Commands and file paths in Linux are **case-sensitive**, so type them exactly as shown.
-
-### Recommended: connect to LIN-SRV1 from SEA-DEV1 over SSH
-
-Typing or pasting long commands into the LIN-SRV1 console can drop or change characters. Instead, you can open an SSH session from **SEA-DEV1**. Copy and paste work normally in the SEA-DEV1 terminal, and the Tunnel sign-in code appears on the same computer as your browser.
-
-1. On **LIN-SRV1**, sign in as **`labuser`** and display the server's IP address:
+1. Display the server's IP address:
 
    ```bash
    hostname -I
    ```
 
-   Record the first IP address shown (for example, `192.168.1.100`).
+   Record the first IP address shown (for example, `192.168.1.100`). You'll use it to connect from SEA-DEV1 and again when you create the Tunnel Site in Task 2.
 
 1. Switch to **SEA-DEV1**, right-click **Start**, and select **Terminal**.
 
-1. Connect to LIN-SRV1 by using the IP address you recorded. SEA-DEV1 can't resolve the name `LIN-SRV1`, so use the IP address:
+1. Connect to LIN-SRV1. Replace `192.168.1.100` with the IP address you recorded:
 
    ```powershell
    ssh labuser@192.168.1.100
    ```
 
-1. The first time you connect, you're asked whether you want to continue connecting. Enter **`yes`**.
+1. When asked whether you want to continue connecting, enter **`yes`**. Then enter the `labuser` password. When the prompt changes to **`labuser@lin-srv1:~$`**, you're connected.
 
-1. Enter the LIN-SRV1 password. Nothing appears on screen as you type. When the prompt changes to **`labuser@lin-srv1:~$`**, you're connected.
+   > [!NOTE]
+   > Use this SSH window for all LIN-SRV1 commands in this exercise. Paste one code block at a time, and wait for the prompt to return before you paste the next one.
 
-Run the LIN-SRV1 commands in the rest of this exercise in this SSH window. When a step says to switch to **LIN-SRV1**, use this window instead. Paste one code block at a time, and wait for the prompt to return before you paste the next one.
-
-### Task 1: Prepare the LIN-SRV1 server
-
-1. Switch to **LIN-SRV1** (Ubuntu 22.04 server).
-
-1. Sign in as **`labuser`** using the password provided for LIN-SRV1 in the Skillable **Resources** panel.
-
-1. Verify Docker is installed:
-
-   ```bash
-   docker --version
-   ```
-
-   If Docker is not installed, install it:
+1. Update the package list. Enter the `labuser` password when prompted:
 
    ```bash
    sudo apt update
+   ```
+
+1. Install and start Docker, which Microsoft Tunnel uses to run its services:
+
+   ```bash
    sudo apt install docker.io -y
    sudo systemctl start docker
    ```
 
-1. Verify internet connectivity:
-
-   ```bash
-   ping -c 4 8.8.8.8
-   ```
-
-1. Verify the server has an internal IP address and hostname:
-
-   ```bash
-   ip addr show
-   hostname -f
-   ```
-
-   Record the internal IP address (for example, `192.168.1.100`). You'll reuse this endpoint value when you create the Tunnel Site (Task 2). The gateway only needs **outbound** access to Microsoft Intune endpoints to register — no inbound ports, no public FQDN, and no publicly-trusted certificate are required for this lab.
-
-**You have successfully prepared the LIN-SRV1 server for Microsoft Tunnel installation.**
+**You have successfully connected to LIN-SRV1 and prepared it for Microsoft Tunnel installation.**
 
 ---
 
@@ -698,24 +654,24 @@ Create a **Server configuration** first. The Site wizard requires one, and if th
 
 With the Server configuration and Site in place, install the Tunnel Gateway on the Ubuntu server. The setup script enrolls the server, joins it to the Site, and imports the TLS certificate you stage.
 
-1. Switch to **LIN-SRV1**.
+1. Return to the SSH window on **SEA-DEV1**.
 
-1. On **LIN-SRV1**, download the Microsoft Tunnel installation script:
+1. Download the Microsoft Tunnel installation script:
 
    ```bash
    wget https://aka.ms/microsofttunneldownload -O mstunnel-setup
    chmod +x mstunnel-setup
    ```
 
-1. Stage the TLS certificate files **before** you run setup. You may need to type these commands manually if copy/paste or text-to-type is not working correctly.
-
-   For this lab, use a self-signed certificate so setup can complete in a single CLI flow:
+1. Create the folders for the TLS certificate. Enter the `labuser` password if prompted:
 
    ```bash
-   # Create required paths
    sudo mkdir -p /etc/mstunnel/certs /etc/mstunnel/private
+   ```
 
-   # Create a lab-only self-signed cert and key
+1. Create a lab-only, self-signed TLS certificate and key for the server:
+
+   ```bash
    FQDN=$(hostname -f)
    IP=$(hostname -I | awk '{print $1}')
    sudo openssl req -x509 -newkey rsa:2048 -sha256 -nodes -days 365 \
@@ -731,14 +687,6 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 
    ![Screenshot of the LIN-SRV1 Linux terminal showing the openssl command generating the self-signed TLS certificate and private key for Microsoft Tunnel.](media/tunnel-cert-generation.png)
 
-   > [!NOTE]
-   > Tunnel expects one of these certificate formats:
-   > - PEM chain at `/etc/mstunnel/certs/site.crt` and key at `/etc/mstunnel/private/site.key`
-   > - or PFX at `/etc/mstunnel/private/site.pfx`
-   >
-   > The certificate SAN must match the server FQDN or IP used as the Tunnel endpoint.
-
-
 1. Run the installation script:
 
    ```bash
@@ -746,31 +694,27 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
    ```
 
 1. Follow the installation prompts:
-   - Accept the license terms 
-       - Press **Space** to scroll through the license agreement. When the end of the agreement shows **(q to exit)**, press **`q`**, and then enter **`yes`** at the prompt to accept.
-   - When prompted for additional Admin Tasks and certificate verification, enter **`yes`** (the certificate files are already staged from the previous step).
-     
+   - **License terms:** Press **Space** to scroll through the license. When the end shows **(q to exit)**, press **`q`**, and then enter **`yes`** to accept.
+   - **Admin Tasks:** When asked to continue with the TLS certificate, enter **`yes`**. The certificate files are already in place from the previous step.
+
       ![Screenshot of the LIN-SRV1 terminal displaying the Microsoft Tunnel setup Admin Tasks prompt for installing the TLS certificate.](media/tunnel-setup-admin-tasks.png)
-   
-   - The setup process will ask you to complete a device login. Record the **Device Code** displayed in the terminal and switch back to SEA-DEV1 and open a browser to https://microsoft.com/devicelogin. Enter the **Device Code** you saved earlier and authenticate with the admin account. If you're connected over SSH, you can copy the code directly from the terminal window on SEA-DEV1.
+
+   - **Device sign-in:** Setup displays a web address and a code. Copy the code, open a new Microsoft Edge tab, and go to the web address shown. Enter the code, select the admin account, and select **Continue** to sign in to **Microsoft Tunnel Gateway Agent**.
 
      ![Screenshot of the LIN-SRV1 terminal showing the device code used to authenticate the Microsoft Tunnel Gateway agent at microsoft.com/devicelogin.](media/tunnel-setup-device-code.png)
 
-1. Return to **LIN-SRV1** and wait for the installation to complete (typically 5–10 minutes).
+1. Return to the SSH window and wait until setup shows **Installation Successful**. This typically takes 5–10 minutes.
 
    ![Screenshot of the LIN-SRV1 terminal showing the Microsoft Tunnel installation completing successfully with the server and agent running.](media/tunnel-setup-installation-successful.png)
 
-1. Verify the Tunnel Gateway service is running:
+1. Verify that the Tunnel server and agent are running:
 
    ```bash
-    sudo mst-cli server status
-    sudo mst-cli agent status
+   sudo mst-cli server status
+   sudo mst-cli agent status
    ```
 
-    Wait until the output shows the server and agent as **running** and **healthy**. 
-
-> [!TIP]
-> You can use the UP ARROW key to re-run the commands to check server and agent status.
+   Both should show **State: running** and **Health: healthy**.
 
 **You have successfully installed Microsoft Tunnel Gateway on LIN-SRV1.**
 
@@ -786,7 +730,7 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
 
 1. Verify **LIN-SRV1** appears in the Servers list with status **Healthy**.
 
-1. The first check-in after setup can show **Unhealthy** while the server container is still starting. Wait about 5 minutes, and then select **Refresh**. If the status is still **Unhealthy**, on LIN-SRV1 run:
+1. The first check-in after setup can show **Unhealthy** while the server container is still starting. Wait about 5 minutes, and then select **Refresh**. If the status is still **Unhealthy**, run these commands in the SSH window:
 
    ```bash
    sudo mst-cli server status
