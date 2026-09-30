@@ -22,7 +22,7 @@ By the end of this lab, you'll have:
 - Configured users and dynamic groups (including a compound-rule dynamic group) for organizational targeting
 - Delegated administrative access using Microsoft Entra ID roles, administrative units, and a custom Intune RBAC role with a scope tag
 - Set device registration policies and enabled Microsoft Entra Local Administrator Password Solution (LAPS)
-- Verified automatic Intune enrollment and configured Enrollment Status Page profiles
+- Configured automatic MDM enrollment and Enrollment Status Page profiles
 - Blocked personally owned Android device enrollment
 - Enrolled two Windows 11 devices via Microsoft Entra join
 - Registered a device for Windows Autopilot with a deployment profile
@@ -48,7 +48,7 @@ This lab requires:
 **Important:** This is the foundational lab for the MD-102 lab series. All subsequent labs assume the configuration completed in this lab (enrolled devices, users, groups, and policies).
 
 > [!IMPORTANT]
-> **Complete multifactor authentication (MFA) enrollment before starting Exercise 2.** Some Contoso lab tenants have a Conditional Access policy that enforces the `p1` (MFA) authentication context for the Azure management API. This blocks access to **entra.microsoft.com** and **intune.microsoft.com** until your admin account is enrolled in MFA. The Microsoft 365 admin center (**admin.cloud.microsoft**) is exempt and works without MFA. If you're prompted to set up additional security verification on first sign-in, complete the Microsoft Authenticator setup before continuing.
+> **Complete multifactor authentication (MFA) enrollment before starting Exercise 2.** MFA is mandatory for admin portals, including the Microsoft Entra admin center, Microsoft Intune admin center, and Microsoft 365 admin center. If you're prompted to set up additional security verification on first sign-in, complete the Microsoft Authenticator setup before continuing.
 >
 > The Microsoft 365 admin center may open in **Simplified view** by default. Switch to **Dashboard view** from the toggle in the top-right corner to match the screenshots in this lab.
 
@@ -61,20 +61,20 @@ This lab requires:
 >
 > 1. In the **Microsoft Intune admin center** (`intune.microsoft.com`), select **Tenant administration**, and then select **Intune add-ons**.
 > 2. Ensure you are on the **All add-ons** tab.
-> 3. In the row for **Microsoft Intune Suite**, under the **Try or Buy** column, select **View details**.
+> 3. In the row for **Microsoft Intune Suite**, under the **Try or Buy** column, select **View details**. If the **Try or Buy** column isn't visible, scroll horizontally.
 > 4. In the details pane, select **To try or buy, go to Microsoft 365 admin center**. A new tab opens to the Microsoft 365 admin center product page.
 > 5. On the **Microsoft Intune Suite** offer page, select **Start free trial**.
 > 6. On the **Checkout** page, confirm: **Microsoft Intune Suite Trial**, 90-day term, 250 licenses, **USD 0.00**, no payment method required.
 > 7. Select **Edit**, fill the organization profile form with the following information, then select **Save**:
 > - **First name**: MOD
-> - **Last name**: Administrator1
+> - **Last name**: Administrator1 (the form rejects `Administrator`)
 > - **Address line 1**: 1 Microsoft Way
 > - **City**: Redmond
 > - **State**: Washington
 > - **ZIP**: 98052
 > - **Phone**: 425-555-1234
 > - **Email address**: admin@<TenantPrefix>.onmicrosoft.com
-> 8. Select **Try Now** to activate the trial.
+> 8. After the organization profile is saved, select **Try now** to activate the trial.
 > 9. Return to the Intune admin center. Refresh the **Tenant administration → Intune add-ons** page in your browser. Select the **Your add-ons** tab — within a few minutes you should see **Microsoft Intune Suite Trial** listed with a **Purchased quantity** of **250**. The Suite includes: **Intune Plan 2**, **Remote Help**, **Endpoint Privilege Management**, **Enterprise App Management**, **Advanced Analytics**, and **Cloud PKI**.
 >
 > **Don't be misled by the All add-ons tab.** The **Microsoft Intune Suite** row will show **"~90 days left in trial"** in the Subscription status column, but the individual capability rows (Intune Plan 2, Endpoint Privilege Management, Remote Help, Enterprise App Management, Advanced Analytics, Cloud PKI) will continue to show **"Available for trial or purchase"**. That's expected — those are the *standalone* add-on SKUs; the Suite trial bundles all of them at the Suite level. Confirm that the Microsoft Intune Suite trial is active by verifying that the Subscription status column displays approximately 89–90 days left in trial.
@@ -227,7 +227,7 @@ You'll create an assigned (static membership) security group for Intune policy t
 
 ### Task 4: Create a dynamic user group with a compound rule
 
-Dynamic groups automatically update membership based on user attributes. For the Pharmacy clinical workload, you'll create a dynamic group that uses a **compound rule** — combining two conditions with `-and` — to target users in the Pharmacy department who are also located in the US. Compound rules are the canonical pattern for regulatory and per-region scoping (for example, Contoso Healthcare applies stricter compliance to US clinical workloads).
+Dynamic groups automatically update membership based on user attributes. You'll create a dynamic group that uses a **compound rule** — combining two conditions with `-and` — to target Engineering users whose usage location is the US. Compound rules are the canonical pattern for department and region scoping.
 
 1. In the browser, navigate to **https://entra.microsoft.com**.
 
@@ -237,8 +237,8 @@ Dynamic groups automatically update membership based on user attributes. For the
 
 1. In the **New Group** pane, configure the following:
    - **Group type:** Security
-   - **Group name:** `dyn-Pharmacy-Users`
-   - **Group description:** `Dynamic group for Pharmacy department users located in the US`
+   - **Group name:** `dyn-Engineering-US-Users`
+   - **Group description:** `Dynamic group for Engineering users with US usage location`
    - **Microsoft Entra roles can be assigned to the group:** No
    - **Membership type:** Dynamic User
 
@@ -249,7 +249,7 @@ Dynamic groups automatically update membership based on user attributes. For the
 1. In the **Edit rule syntax** editor, enter the following compound rule exactly:
 
    ```text
-   (user.department -eq "Pharmacy") -and (user.country -eq "US")
+   (user.department -eq "Engineering") -and (user.usageLocation -eq "US")
    ```
 
    > [!NOTE]
@@ -261,12 +261,12 @@ Dynamic groups automatically update membership based on user attributes. For the
 
 1. Select **Refresh** from the top toolbar.
 
-1. Select **dyn-Pharmacy-Users** from the groups list.
+1. Select **dyn-Engineering-US-Users** from the groups list.
 
 1. On the group's **Overview** page, in the **Feed** section, locate the **Dynamic rules processing status** card and verify it shows **Succeeded**.
 
    > [!NOTE]
-   > Dynamic group membership evaluation can take 5–15 minutes. Once complete, the group will contain only users whose `department` attribute equals `Pharmacy` **and** whose `country` attribute equals `US`. If no Contoso sample users currently match both attributes, the group will be empty — **that's expected for this lab tenant and doesn't affect later exercises**.
+   > Dynamic group membership evaluation can take 5–15 minutes. Once complete, the group will contain users whose `department` attribute equals `Engineering` **and** whose `usageLocation` attribute equals `US`. In the Contoso sample tenant, expect four members, such as Johanna Lorenz and Lidia Holloway. Lab User2 doesn't appear unless you set their usage location to **US**.
 
 1. Select the **Members** tab to view group members.
 
@@ -276,7 +276,7 @@ Dynamic groups automatically update membership based on user attributes. For the
 
 ### Task 5: Create a dynamic device group
 
-You'll create a dynamic group that automatically includes all Windows devices present in Entra.
+You'll create a dynamic group that automatically includes Windows device objects present in Microsoft Entra ID.
 
 1. In the **Microsoft Entra admin center**, on the **All groups** page, select **New group**.
 
@@ -300,7 +300,7 @@ You'll create a dynamic group that automatically includes all Windows devices pr
 1. Back in the **New Group** page, select **Create**.
 
    > [!NOTE]
-   > This group will automatically populate with Windows devices after they become present in the directory, and the rules are processed.
+   > This group automatically populates with Windows device objects after they're present in Microsoft Entra ID and the rules are processed.
 
 **You have successfully created a dynamic device group for Windows devices.**
 
@@ -329,7 +329,7 @@ You'll create a second dynamic device group, this one for Windows Autopilot regi
 1. Select **Save**, then back in the **New Group** page, select **Create**.
 
    > [!NOTE]
-   > `[ZTDId]` (Zero Touch Deployment ID) is set on a device's directory object as soon as its hardware hash is registered with Windows Autopilot — well before the device goes through OOBE. This dynamic device group will only include Autopilot registered devices that must be assigned an Autopilot deployment profile for  Windows Autopilot to run during the OOBE configuration pass.
+   > `[ZTDid]` (Zero Touch Deployment ID) is set on a device's directory object as soon as its hardware hash is registered with Windows Autopilot — well before the device goes through OOBE. This dynamic device group includes only Autopilot-registered devices that must be assigned an Autopilot deployment profile for Windows Autopilot to run during OOBE.
 
 **You have successfully created a dynamic device group for Windows Autopilot.**
 
@@ -357,6 +357,9 @@ You need to delegate administrative access to team members who will manage diffe
 1. In the **Add assignments** page, on the **Directory roles** pane, search for and select **Intune Administrator**, and then select **Add**.
 
    > [!NOTE]
+   > If your tenant doesn't show **Membership** or **Setting** tabs, this is the non-PIM experience. Select the role, and then select **Add**. If those tabs appear, select **Active**, keep the permanent assignment settings, enter a justification if required, and select **Assign**.
+
+   > [!NOTE]
    > The Intune Administrator role grants permissions to manage all aspects of Microsoft Intune, including device configuration, compliance policies, applications, and enrollment settings. This is a less privileged role than Global Administrator.
 
    > [!NOTE]
@@ -374,7 +377,7 @@ You need to delegate administrative access to team members who will manage diffe
 
 1. Select **Add assignments**.
 
-1. In the **Add assignments** page, on the **Directory roles** pane, search for and select **Cloud Device Administrator**, amd then select **Add**.
+1. In the **Add assignments** page, on the **Directory roles** pane, search for and select **Cloud Device Administrator**, and then select **Add**.
 
 
    > [!NOTE]
@@ -447,6 +450,9 @@ You'll assign a Helpdesk Administrator role scoped to only the IT Department adm
 1. On the role's assignment page, select **Add assignments**.
 
 1. In the **Add assignments** page, search for and select **Lab User1** (created in Exercise 1), and then select **Add**.
+
+   > [!NOTE]
+   > If your tenant doesn't show **Membership** or **Setting** tabs, this is the non-PIM experience. Select the role, and then select **Add**. If those tabs appear, select **Active**, keep the permanent assignment settings, enter a justification if required, and select **Assign**.
 
    > [!NOTE]
    > Lab User1 now has Helpdesk Administrator permissions, but only for users and devices within the IT Department administrative unit. This demonstrates role-based access control (RBAC) scoping at the Microsoft Entra layer.
@@ -552,8 +558,9 @@ Before devices can enroll in Intune, you need to configure device registration s
    - **Maximum number of devices per user:** `50`
 
    > [!NOTE]
-   > **"Users may register their devices" is greyed out and set to All** - this is expected, not a bug. Because the default MDM Authority for new tenants is set to Intune, registration is required for MDM enrollment and Entra locks the toggle. There is nothing to configure here.
-   >   > You'll see a yellow recommendation banner advising you to require MFA via Conditional Access rather than this toggle. For this lab, leave the MFA toggle set to **No** — Conditional Access enforcement is covered in Lab 04. In a production environment, you would restrict device registration to specific groups and require MFA. For lab purposes, we're allowing all users to register devices without MFA to simplify enrollment.
+   > **"Users may register their devices" is greyed out and set to All**. This is expected, not a bug. Because the default MDM Authority for new tenants is set to Intune, registration is required for MDM enrollment and Entra locks the toggle. There is nothing to configure here.
+   >
+   > You'll see a yellow recommendation banner advising you to require MFA via Conditional Access rather than this toggle. For this lab, leave the MFA toggle set to **No** — Conditional Access enforcement is covered in Lab 04. In a production environment, you would restrict device registration to specific groups and require MFA. For lab purposes, we're allowing all users to register devices without MFA to simplify enrollment.
 
 1. Select **Save** at the top of the page if you made any changes.
 
@@ -660,15 +667,15 @@ In Exercise 5 your colleagues will sign in to **SEA-DEV1** and **SEA-DEV2** and 
 
 In this exercise you'll:
 
-- Verify that automatic Intune enrollment is configured correctly for new tenants
+- Set **MDM user scope** to **All** so automatic Intune enrollment works
 - Configure the **Enrollment Status Page (ESP)** so devices block until apps and policies are applied — the same gate that makes Autopilot deployments feel polished
 - Create a targeted, stricter ESP profile for the pilot group
 - Review the default platform restriction policy and create a device limit restriction policy
 
 > [!NOTE]
-> **Why automatic MDM enrollment isn't the focus anymore.** In modern, cloud-only Microsoft 365 tenants, **automatic Intune enrollment is on by default** for the All-users scope. The classic "configure MDM user scope" step is now most relevant in **hybrid identity** and **Configuration Manager co-management** scenarios where you need to scope which on-premises-synced users are auto-enrolled. You'll verify the setting in Task 1, then move on to the policies that actually shape the user's first-run experience.
+> Automatic Intune enrollment depends on **MDM user scope**. Fresh lab tenants can show **None**, which disables automatic MDM enrollment. In Task 1, set **MDM user scope** to **All** before you enroll Windows devices.
 
-### Task 1: Verify automatic MDM enrollment
+### Task 1: Configure automatic MDM enrollment
 
 1. In the browser, navigate to **https://intune.microsoft.com**.
 
@@ -681,24 +688,24 @@ In this exercise you'll:
 
 1. On the **Windows** tab, under **Enrollment options**, select **Automatic Enrollment**.
 
-1. Confirm that **MDM user scope** is set to **All**.
+1. Set **MDM user scope** to **All**.
 
    > [!NOTE]
-   > In a brand-new cloud-only tenant, this setting is already configured. If it shows **None**, change it to **All** and select **Save**.
+   > **None** disables automatic MDM enrollment. **All** enables automatic enrollment for users who join Windows devices to Microsoft Entra ID.
 
 1. Note that **Windows Information Protection (WIP) user scope** is set to **None** and shows the banner: *"Creating new WIP without enrollment policies (WIP-ME) is no longer supported..."* Leave this set to **None** — Windows Information Protection is deprecated. You'll use App Protection Policies (MAM) for mobile data protection in Lab 03.
 
 1. Leave the **MDM terms of use URL**, **MDM discovery URL**, and **MDM compliance URL** at their auto-populated defaults.
 
-1. If you made any change, select **Save**. Otherwise, close the **Automatic Enrollment** pane.
+1. Select **Save**.
 
-**You have verified that automatic MDM enrollment is configured for your tenant.**
+**You have configured automatic MDM enrollment for your tenant.**
 
 ---
 
 ### Task 2: Configure the Default Enrollment Status Page
 
-The **Enrollment Status Page (ESP)** shows the provisioning status to people enrolling Windows devices and signing in for the first time. It can block device use until configured apps and policies are applied, so users don't attempt to use a half-provisioned device. The **Default** ESP profile targets all users and all devices and ships disabled — you'll enable it to set a baseline for Contoso.
+The **Enrollment Status Page (ESP)** shows the provisioning status to people enrolling Windows devices and signing in for the first time. It can block device use until configured apps and policies are applied, so users don't attempt to use a half-provisioned device. The **Default** ESP profile applies to all users and devices when no other ESP profile is assigned. You'll configure it to show installation progress for Contoso.
 
 1. In the **Microsoft Intune admin center**, on the **Enrollment** page, make sure you are on the **Windows** tab. Under **Windows Autopilot**, select **Enrollment Status Page**.
 
@@ -707,7 +714,7 @@ The **Enrollment Status Page (ESP)** shows the provisioning status to people enr
 1. On the **All users and all devices** page, select **Manage > Properties** in the left navigation, then select **Edit** next to **Settings**.
 
 1. Configure the following settings:
-   - **Show app and profile configuration progress:** Yes
+   - **Show app and profile installation progress:** Yes
    - **Show an error when installation takes longer than specified number of minutes:** `60`
    - **Show custom message when time limit or error occurs:** Yes
      - **Custom message:** `Contoso device setup is taking longer than expected. Contact the Service Desk at x4040 if this persists.`
@@ -737,7 +744,7 @@ Pilot users at Contoso Healthcare receive corporate laptops pre-staged for clini
 1. Select **Next**.
 
 1. On the **Settings** page, configure:
-   - **Show app and profile configuration progress:** Yes
+   - **Show app and profile installation progress:** Yes
    - **Show an error when installation takes longer than specified number of minutes:** `60`
    - **Show custom message when time limit or error occurs:** Yes
      - **Custom message:** `Contoso pilot device setup is in progress. Contact the Service Desk at x4040 if this persists.`
@@ -923,23 +930,22 @@ You'll now enroll two Windows 11 devices (SEA-DEV1 and SEA-DEV2) into Intune by 
    - **Ownership:** Corporate
    - **Compliance:** Compliant (may show "Not evaluated" initially)
 
+1. At the top of the device list, turn off **Preview new device view** if it's on. This lab uses the classic device view.
+
 1. Select **SEA-DEV1** from the list to view device details.
 
-1. Below the **Essentials** section, select the **Device details** tab and review the following information:
-   - Device name, operating system, compliance status, and last check-in time.
-   - Serial number, TPM version, total storage space
+1. In the left menu of the **SEA-DEV1** page, review the following:
+   - **Overview:** Device name, operating system, compliance status, and last check-in time.
+   - **Monitor** > **Hardware:** Serial number, TPM version, and total storage space.
+   - **Monitor** > **Discovered apps:** Discovered apps populate over time as app inventory syncs.
 
-1. On the **SEA-DEV1** page, in the left menu, under **Reports** select **All apps** to review discovered apps (will populate over time as app inventory syncs)
+1. Tag this device as a Pharmacy clinical device so the delegated **Pharmacy Helpdesk** admin can see and act on it in later labs. On the **SEA-DEV1** device page, under **Manage**, select **Properties**.
 
-1. Tag this device as a Pharmacy clinical device so the delegated **Pharmacy Helpdesk** admin can see and act on it in later labs. On the **SEA-DEV1** device page, select **Overview**, then below the **Essentials**, select the **Properties** tab.
+1. Next to **Scope tags**, select **Open** to open the **Select tags** pane.
 
-1. Next to **Scope tags**, select **Edit** to open the **Edit properties** pane.
+1. In the **Select tags** pane, select **Pharmacy** (the scope tag you created in **Exercise 2 Task 6**), then select **Select**.
 
-1. In the **Edit properties** pane, select **+ Add scope tags**.
-
-1. In the **Scoping** pane, select **Pharmacy** (the scope tag you created in **Exercise 2 Task 6**), then select **Select**.
-
-1. Select **Next**, and then select **Save**.
+1. Select **Save**.
 
 **You have successfully verified SEA-DEV1 enrollment in Intune.**
 
@@ -973,7 +979,7 @@ You'll now enroll two Windows 11 devices (SEA-DEV1 and SEA-DEV2) into Intune by 
 
 1. Restart **SEA-DEV2**.
 
-1. After restart, sign out and sign in as:
+1. After the restart, sign in as:
    - **User:** `JoniS@<TenantPrefix>.OnMicrosoft.com`
    - **Password:** (Joni Sherman's password) (use the pre-provided `<UserPassword>`)
 
@@ -994,7 +1000,7 @@ You'll now enroll two Windows 11 devices (SEA-DEV1 and SEA-DEV2) into Intune by 
    - In the **Microsoft Entra admin center**, navigate to **Groups** → **All groups**.
    - Select **dyn-Windows-Devices**.
    - Select the **Members** tab.
-   - Verify **SEA-DEV1** and **SEA-DEV2** are listed (It may take 5–10 minutes for dynamic group membership to update).
+   - Verify **SEA-DEV1** and **SEA-DEV2** are listed. This update can take 5–10 minutes.
 
 **You have successfully verified both devices are enrolled and automatically added to the dynamic device group.**
 
@@ -1216,7 +1222,7 @@ In this lab, you accomplished the following:
 - Enabled Microsoft Entra LAPS for local administrator password management
 
 **Exercise 4: Configure Windows enrollment policies**
-- Verified automatic Intune enrollment for the tenant
+- Configured automatic Intune enrollment for the tenant
 - Configured the Default Enrollment Status Page to gate the first-run experience
 - Created a stricter, blocking Enrollment Status Page profile for the pilot group
 - Reviewed default enrollment restrictions
@@ -1239,7 +1245,7 @@ In this lab, you accomplished the following:
 - Dynamic groups automate policy targeting based on user or device attributes; compound rules using `-and`/`-or` are the canonical pattern for regulatory or per-region scoping
 - Microsoft Entra ID roles + administrative units delegate Entra-level permissions; Intune has a **separate** RBAC system with **custom roles + scope tags** for delegating policy and device administration
 - Scope tags created on day one (Pharmacy) thread through every Intune object you create later — apply them at policy creation time to keep the delegated admin model intact
-- In modern cloud-only tenants, automatic Intune enrollment is on by default; explicit MDM-scope configuration is primarily a hybrid identity and co-management concern
+- Automatic Intune enrollment requires **MDM user scope** to be set to **All**
 - The Enrollment Status Page is what shapes the user's first-run experience—use targeted, prioritized profiles to give pilot users a stricter, blocking experience and standard users a faster sign-in
 - Device platform restrictions are the safety net against unauthorized platforms or ownership types (e.g., personal Android blocked, corporate Android Enterprise allowed)
 - Windows Autopilot streamlines device provisioning by pre-registering devices and applying deployment profiles during OOBE
