@@ -274,7 +274,7 @@ Dynamic groups automatically update membership based on user attributes. For the
 
 ### Task 5: Create a dynamic device group
 
-You'll create a dynamic group that automatically includes all Windows devices enrolled in Intune.
+You'll create a dynamic group that automatically includes all Windows devices present in Entra.
 
 1. In the **Microsoft Entra admin center**, on the **All groups** page, select **New group**.
 
@@ -296,7 +296,7 @@ You'll create a dynamic group that automatically includes all Windows devices en
 1. Back in the **New Group** page, select **Create**.
 
    > [!NOTE]
-   > This group will automatically populate with Windows devices after they are enrolled in Intune (Exercise 5).
+   > This group will automatically populate with Windows devices after they become present in the directory, and the rules are processed.
 
 **You have successfully created a dynamic device group for Windows devices.**
 
@@ -325,7 +325,7 @@ You'll create a second dynamic device group, this one for Windows Autopilot regi
 1. Select **Save**, then back in the **New Group** page, select **Create**.
 
    > [!NOTE]
-   > `[ZTDId]` (Zero Touch Deployment ID) is set on a device's directory object as soon as its hardware hash is registered with Windows Autopilot — well before the device goes through OOBE. Unlike `dyn-Windows-Devices` (which only matches devices that have already enrolled), this rule lets you target a device the moment it's registered, which is exactly what an Autopilot deployment profile assignment needs.
+   > `[ZTDId]` (Zero Touch Deployment ID) is set on a device's directory object as soon as its hardware hash is registered with Windows Autopilot — well before the device goes through OOBE. This dynamic device group will only include Autopilot registered devices that must be assigned an Autopilot deployment profile for  Windows Autopilot to run during the OOBE configuration pass.
 
 **You have successfully created a dynamic device group for Windows Autopilot.**
 
