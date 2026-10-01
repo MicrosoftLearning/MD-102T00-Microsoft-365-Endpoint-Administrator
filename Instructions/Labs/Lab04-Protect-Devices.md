@@ -29,7 +29,7 @@ By the end of this lab, you'll have:
 - Created VPN profiles for Microsoft Tunnel connectivity
 - Implemented Microsoft Cloud PKI with root and issuing CAs
 - Created and deployed SCEP certificate profiles for device authentication
-- Switched the Conditional Access policy from **Report-only** to **On** after verifying its impact
+- Rehearsed enforcing the Conditional Access policy with **What If**, leaving it in **Report-only**
 
 ---
 
@@ -400,7 +400,10 @@ Attack Surface Reduction rules block behaviors commonly used by malware, such as
 
 1. On the **Scope tags** tab, leave the **Default** scope tag (this is fleet-wide). Select **Next**.
 
-1. On the **Assignments** tab, search and select **dyn-Windows-Devices**. Add **sg-Intune-Pilot-Users** (so pilot members only get the Block policy, not both) and set its **Target type** to **Exclude**.
+1. On the **Assignments** tab, search and select **dyn-Windows-Devices**. On that group's row, in the **Filter** column, select **Add assignment filter**, select **Exclude**, and then select **Next**. Choose **Filter - SEA-DEV1 Exclude** (from **Lab 02 Exercise 1 Task 3**), and then select **Next**.
+
+   > [!NOTE]
+   > SEA-DEV1 is the pilot device, so the filter keeps it from getting both the Block and Audit policies, which would show as a conflict. Use a filter rather than excluding `sg-Intune-Pilot-Users`; Intune doesn't support excluding a user group from a device-group assignment.
 
 1. Select **Next** → **Create**.
 
@@ -438,13 +441,13 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
    - **Allow Standard User Encryption:** Enabled
 
 1. Expand **Fixed Data Drives** and configure:
-   - **Enforce drive encryption type on fixed data drives:** Enable
+   - **Enforce drive encryption type on fixed data drives:** Enabled
    - **Choose how BitLocker-protected fixed drives can be recovered:** Enabled
    - **Save BitLocker recovery information to AD DS for fixed data drives:** True
    - **Do not enable BitLocker until recovery information is stored to AD DS for fixed data drives:** True
 
 1. Expand **Operating System Drives** and configure:
-   - **Enforce drive encryption type on operating system drives:** Enable
+   - **Enforce drive encryption type on operating system drives:** Enabled
    - **Choose how BitLocker-protected operating system drives can be recovered:** Enabled
    - **Save BitLocker recovery information to AD DS for operating system drives:** True
    - **Do not enable BitLocker until recovery information is stored in AD DS for operating system drives:** True
@@ -1032,16 +1035,13 @@ You'll use the Microsoft Defender portal and Intune admin center to monitor devi
 
 ---
 
-### Task 3: Switch the Conditional Access policy from Report-only to On
+### Task 3: Rehearse enforcing the Conditional Access policy
 
-In **Lab 02 Exercise 2 Task 4** you created the Conditional Access policy `CA - Require compliant device (Pharmacy pilot)` in **Report-only** mode. In **Lab 02 Exercise 6 Task 4** you inspected its impact via Sign-in logs. The endpoint security policies you deployed in Exercises 1–3 of this lab (Defender baseline, Antivirus, Firewall, ASR, BitLocker) should now have more pilot devices passing compliance evaluation. It's time to switch the CA policy from Report-only to **On**.
-
-> [!WARNING]
-> Before you enable the policy, **verify the break-glass exclusion is still in place**. If your Global Admin account isn't in the **Exclude** list, fix that first.
+In **Lab 02 Exercise 2 Task 4** you created the Conditional Access policy `CA - Require compliant device (Pharmacy pilot)` in **Report-only** mode. In **Lab 02 Exercise 6 Task 4** you inspected its impact via Sign-in logs. Before switching a policy like this to **On** in production, you verify its scope and rehearse it with **What If**. You'll do that rehearsal now, but leave the policy in **Report-only** so later labs aren't blocked by a noncompliant lab device.
 
 1. Open a new browser tab to **https://entra.microsoft.com** and sign in as **admin@<TenantPrefix>.onmicrosoft.com**.
 
-1. Navigate to **Identity Secure Score** → **Conditional Access** → **Policies**.
+1. Navigate to **Entra ID** → **Conditional Access** → **Policies**.
 
 1. Select `CA - Require compliant device (Pharmacy pilot)`.
 
@@ -1051,7 +1051,7 @@ In **Lab 02 Exercise 2 Task 4** you created the Conditional Access policy `CA - 
    - **Target resources:** All resources (formerly "All cloud apps")
    - **Grant:** Require device to be marked as compliant
 
-1. Before flipping the switch, run a **What If** analysis:
+1. Run a **What If** analysis:
    - From the **Conditional Access | Policies** page, select **What If** from the top toolbar.
    - Under **Identity**, set **Select identity type** to **Users**, select **Edit user**, and choose a pilot-cohort user (e.g., Megan Bowen).
    - Under **Target resource**, set **Select target type** to **Cloud apps**, then under **Cloud apps** select **Select cloud app** and choose the app to test (e.g., Office 365 Configure).
@@ -1062,20 +1062,14 @@ In **Lab 02 Exercise 2 Task 4** you created the Conditional Access policy `CA - 
 1. Review the results. The bottom panel shows **Policies that would apply** and **Policies that won't apply**. Confirm `CA - Require compliant device (Pharmacy pilot)` appears under **Policies that will apply** with the grant controls **Require compliant device**.
 
    > [!NOTE]
-   > If a non-pilot user appears under **Policies that will apply**, stop and fix the assignment scope before you enable the policy.
+   > If a non-pilot user appears under **Policies that will apply**, the assignment scope is wrong. Fix it before any production rollout.
 
-1. Return to the **CA - Require compliant device (Pharmacy pilot)** policy details view and scroll to **Enable policy**.
-
-1. Change **Enable policy** from **Report-only** to **On**.
-
-1. Select **Save**.
+1. Leave **Enable policy** set to **Report-only**.
 
    > [!IMPORTANT]
-   > The policy is now **enforced**. Non-compliant pilot users are blocked at their next cloud app sign-in.
+   > In production, the next step is to set **Enable policy** to **On**. Don't do that in this lab: the lab devices aren't fully compliant, so enforcing the policy can block Megan and Joni from signing in during Labs 05 and 06.
 
-1. Switch back to **Identity Secure Score** → **Conditional Access** → **Sign-in logs**. Filter to a pilot-cohort user. Open a recent sign-in entry and confirm the **Conditional Access** tab now shows the policy with a status of **Success** or **Failure** (not **Report-only: ...**).
-
-**You have successfully enabled the Conditional Access policy, completing the compliance → CA enforcement story that started in Lab 02.**
+**You have successfully rehearsed enforcing the Conditional Access policy.**
 
 ---
 
@@ -1115,7 +1109,7 @@ In this lab, you accomplished the following:
 **Exercise 6: Monitor security posture and compliance**
 - Reviewed the Microsoft Defender Secure Score and improvement actions
 - Reviewed threat detections and alerts in the Microsoft Defender portal
-- Switched the `CA - Require compliant device (Pharmacy pilot)` policy from **Report-only** to **On** after a What If rehearsal
+- Rehearsed enforcing the `CA - Require compliant device (Pharmacy pilot)` policy with **What If**, leaving it in **Report-only**
 
 **Key Takeaways:**
 - Microsoft Defender for Endpoint provides EDR, threat protection, and automated investigation for enrolled devices
@@ -1126,7 +1120,7 @@ In this lab, you accomplished the following:
 - Microsoft Tunnel provides secure VPN access for mobile devices without traditional VPN infrastructure
 - Microsoft Cloud PKI eliminates the need for on-premises PKI infrastructure while providing certificate-based authentication
 - The Microsoft Defender portal consolidates security monitoring, scoring, and incident response
-- Flipping a Conditional Access policy from **Report-only** to **On** is a deliberate two-step process: rehearse with **What If**, verify the break-glass exclusion, then switch
+- Moving a Conditional Access policy from **Report-only** to **On** is deliberate: verify the break-glass exclusion, rehearse with **What If**, then switch
 
 **Next Steps:**
 In Lab 05, you'll automate endpoint management using Microsoft Graph PowerShell, deploy remediations, configure RBAC with scope tags, and use reporting and monitoring tools.
