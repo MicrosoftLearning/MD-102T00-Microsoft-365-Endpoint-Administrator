@@ -1053,7 +1053,7 @@ The Troubleshooting blade provides a consolidated view of a user's devices, poli
 In **Exercise 1 Task 5** you intentionally created two configuration profiles — `WIN - Camera - Enabled (Pilot)` and `WIN - Camera - Disabled (Pilot)` — that conflict on the **Allow Camera** setting for the `sg-Intune-Pilot-Users` group. Now you'll find that conflict in the portal and resolve it.
 
 > [!IMPORTANT]
-> **Device prerequisite.** The **Conflict** state only appears after a Windows device has actually checked in with the conflicting policies applied. A pilot-cohort device (**SEA-DEV1** or **SEA-DEV2**) must be online and have synced at least once with the two camera profiles assigned. If you don't see **Conflict** in the steps below — only **Pending** or **Not evaluated** — go to **Devices** → select the device → **Sync** and wait 5–10 minutes.
+> **Device prerequisite.** The **Conflict** state only appears after a Windows device has actually checked in with the conflicting policies applied. Because both camera profiles are assigned to a *user* group, a member of `sg-Intune-Pilot-Users` must be signed in to the pilot-cohort device (**SEA-DEV1** or **SEA-DEV2**) when it syncs. If you don't see the camera profiles or **Conflict** in the steps below, sign in to the device as that user, open **Settings** → **Accounts** → **Access work or school**, select the work account, select **Info**, and then select **Sync**. Wait 5–10 minutes, and then select **Refresh** on the report.
 
 1. You should still be on the device blade you opened at the end of **Task 1**. If not, navigate to **Devices** → **All devices** and reselect that same pilot-cohort device (**SEA-DEV1** or **SEA-DEV2**).
 
@@ -1078,7 +1078,7 @@ In **Exercise 1 Task 5** you intentionally created two configuration profiles �
    - Select **WIN - Camera - Enabled (Pilot)**.
    - From the toolbar, select **Delete**, then select **OK** to confirm.
 
-1. Trigger a device sync (**Devices** → **All devices** → select the same device → **Sync**) and monitor the **Sync status** pane until the sync has completed.
+1. Trigger a device sync (**Devices** → **All devices** → select the same device → **Sync** → **Yes**). Wait a few minutes for the device to check in.
 
 1. Return to the device's **Monitor** > **Device configuration** report and confirm `WIN - Camera - Disabled (Pilot)` now shows **State: Succeeded** (no longer **Conflict**), with the **Disabled** value applied.
 
@@ -1098,7 +1098,7 @@ In **Exercise 1 Task 5** you intentionally created two configuration profiles �
 
 1. Select **Sync** from the device actions toolbar, then select **Yes**.
 
-1. Wait for the **Sync status** pane to indicate the sync is complete (typically 1–2 minutes).
+1. Wait a few minutes for the device to check in. The sync request isn't instant; the device has to receive it and report back.
 
 1. Refresh the page and verify the **Last check-in** timestamp updated.
 
