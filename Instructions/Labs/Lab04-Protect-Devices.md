@@ -53,7 +53,7 @@ This lab requires:
 - **LIN-SRV1** (Ubuntu 22.04 server for Microsoft Tunnel Gateway)
 
 > [!IMPORTANT]
-> **Start this lab early.** The first-time Microsoft Defender for Endpoint tenant onboarding (Exercise 1) can take **several hours** to fully provision. The first Defender portal visit might stay on **Hang on! We're preparing new spaces for your data** for more than 2 hours. Open Defender and start the connector setup as soon as you begin the lab, then continue with the remaining exercises while Defender finishes provisioning in the background. If you come back later and the connector or device status still shows **Pending** or **Unavailable**, give it more time before troubleshooting.
+> **Open the Microsoft Defender portal now.** First-time Defender workspace provisioning can take several hours and took more than 4 hours in live testing. If you see **Hang on! We're preparing new spaces for your data**, continue with the lab and return later.
 
 ---
 
@@ -81,8 +81,8 @@ The Intune ↔ Defender for Endpoint connector is a **two-portal** setup: you fl
 
 1. Select **Save preferences** at the bottom of the page.
 
-   > [!NOTE]
-   > The account that connects Microsoft Defender for Endpoint to Intune needs the **Endpoint Security Manager** role or **Mobile Threat Defense** Read and Modify permissions. If the toggle is unavailable or grayed out, Defender tenant provisioning is still in progress. Wait, refresh the page, and try again later.
+   > [!IMPORTANT]
+   > You need the **Endpoint Security Manager** role or **Mobile Threat Defense** Read and Modify permissions. If the toggle is unavailable or grayed out, wait for Defender provisioning, refresh the page, and try again later.
 
 #### Part B — Configure the connector from the Intune admin center
 
@@ -98,9 +98,6 @@ The Intune ↔ Defender for Endpoint connector is a **two-portal** setup: you fl
    - **Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations:** On
 - **Compliance policy evaluation:**
    - **Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endpoint:** On
-
-   > [!NOTE]
-   > Enabling the connector allows Intune to send device data to Defender for Endpoint and receive threat intelligence. The second setting allows Defender to enforce security configurations even on devices that aren't yet fully managed by Intune.
 
 1. Select **Save** at the top of the page.
 
@@ -160,7 +157,7 @@ Endpoint Detection and Response policies onboard devices to Defender for Endpoin
 1. Wait 10–15 minutes for SEA-DEV1 and SEA-DEV2 to onboard to Defender for Endpoint.
 
    > [!NOTE]
-   > Device onboarding can take 10–30 minutes after the EDR policy is applied. You can force a device sync in Intune to accelerate the process.
+   > Device onboarding can take 10–30 minutes after the EDR policy applies. To speed it up, force a device sync in Intune.
 
 1. After devices appear, select **SEA-DEV1** from the device list.
 
@@ -171,7 +168,7 @@ Endpoint Detection and Response policies onboard devices to Defender for Endpoin
    - **Onboarding status:** Onboarded
 
    > [!NOTE]
-   > After the devices have been onboarded, there will be a delay until the Risk and Exposure populate, this could be 30-60 minutes. 
+   > Risk and exposure values can take 30–60 minutes to populate after onboarding.
 
 **You have successfully verified device onboarding to Microsoft Defender for Endpoint.**
 
@@ -202,16 +199,6 @@ Security baselines are pre-configured collections of recommended settings based 
 1. Select **Next**.
 
 1. On the **Configuration settings** tab, review the default settings.
-
-   > [!NOTE]
-   > The baseline includes settings for:
-   > - Administrative Templates
-   > - BitLocker
-   > - Defender
-   > - Device Guard
-   > - Dma Guard
-   > - Firewall
-   > - Microsoft Edge
 
 1. Scroll through the categories and note the pre-configured values. You can customize individual settings, but for this lab, accept most of the defaults.
 
@@ -274,7 +261,7 @@ Antivirus policies configure Microsoft Defender Antivirus settings, including re
    - **Allow On Access Protection:** Allowed
 
    > [!NOTE]
-   > All of these live under the single **Defender** category on this page — there's no separate "Scans" section to expand. The category has dozens of other settings (archive/CPU/network-parsing options, threat severity remediation actions, and more); leave everything not listed above at its default **Not configured**. You only need to touch the fields above for this lab.
+   > These settings are under the **Defender** category. Leave every setting not listed above at its default **Not configured**.
 
 1. Select **Next**.
 
@@ -285,7 +272,7 @@ Antivirus policies configure Microsoft Defender Antivirus settings, including re
 1. Select **Next** → **Create**.
 
 > [!IMPORTANT]
-> **Endpoint security policy precedence.** You just deployed the Defender security baseline (Task 1) AND a standalone Antivirus policy (Task 2). Both touch some of the same Defender Antivirus settings (real-time monitoring, cloud protection). Intune resolves overlapping endpoint-security settings using policy **priority** — the more recently created or higher-priority policy wins per setting, and any unresolvable conflict surfaces in **Endpoint security** → **All devices** with a **Conflict** state. In production, choose one source of truth per setting category: either let the baseline own it, or strip the setting out of the baseline and use a standalone policy.
+> If overlapping Defender Antivirus settings show a **Conflict** state in **Endpoint security** → **All devices**, the newest or higher-priority policy wins per setting.
 
 **You have successfully created an Antivirus policy.**
 
@@ -333,7 +320,7 @@ Firewall policies configure Windows Defender Firewall rules and behavior.
    - **Enable Log Dropped Packets:** Enable Logging Of Dropped Packets
 
    > [!NOTE]
-   > **Enable Log Success Connections** and **Enable Log Dropped Packets** return **three rows** each (one per profile) when searched — that's why each profile above lists them separately, even though the field name is identical across rows.
+   > **Enable Log Success Connections** and **Enable Log Dropped Packets** each return three rows when searched, one per profile.
 
 1. Select **Next**.
 
@@ -417,9 +404,6 @@ Attack Surface Reduction rules block behaviors commonly used by malware, such as
 
 1. Select **Next** → **Create**.
 
-> [!NOTE]
-> The split-mode pattern (Block on pilot, Audit on everyone else) is the canonical ASR rollout. Watch **Reports** → **Endpoint security** → **Attack surface reduction rules** for a week or two; when the Audit log shows the rules would have fired only on legitimate threats (no false positives in the broader fleet), flip the Audit policy to Block.
-
 **You have successfully created split-assignment ASR policies for pilot Block and fleet Audit.**
 
 ---
@@ -465,9 +449,6 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
    - **Save BitLocker recovery information to AD DS for operating system drives:** True
    - **Do not enable BitLocker until recovery information is stored in AD DS for operating system drives:** True
 
-   > [!NOTE]
-   > Startup PIN or startup key settings block silent encryption. Recovery keys escrowed to Entra ID allow IT admins to retrieve keys when a device enters BitLocker recovery.
-
 1. Select **Next**.
 
 1. On the **Scope tags** tab, search and select **Pharmacy**, then select **Next**. BitLocker on Pharmacy clinical workstations is a HIPAA control — keeping the policy under the `Pharmacy` scope tag means the Pharmacy Helpdesk (assigned in **Lab 05 Exercise 3**) can see and audit it.
@@ -485,7 +466,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 1. On **SEA-DEV1**, wait 10–15 minutes for the BitLocker policy to apply. You can force a sync from Intune to speed this up.
 
    > [!NOTE]
-   > BitLocker encryption can take 1–3 hours to complete depending on drive size and system performance. For lab purposes, you'll verify the policy was applied and encryption started. In our lab environment, it takes approximately 5–10 minutes.
+   > BitLocker can take 1–3 hours. In this lab, encryption usually starts in 5–10 minutes.
 
 1. On **SEA-DEV1**, open **Terminal (Admin)** (right-click Start → Terminal (Admin); Windows Terminal opens a PowerShell tab by default).
 
@@ -511,10 +492,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 1. Verify the BitLocker recovery key for the C: drive is escrowed to Microsoft Entra ID.
 
    > [!NOTE]
-   > Recovery keys are stored in Entra ID and can be retrieved by Global Administrators or Helpdesk Administrators if a device enters BitLocker recovery.
-
-   > [!NOTE]
-   > **No BitLocker recovery key found for this device** message is expected at first. The key isn't escrowed until encryption starts (**Protection On**) *and* the device syncs afterward. This can lag 10–30 minutes.
+   > **No BitLocker recovery key found for this device** is expected at first. The key can lag 10–30 minutes after encryption starts and the device syncs.
 
 **You have successfully monitored BitLocker encryption status and verified recovery key escrow.**
 
@@ -523,7 +501,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 ### Task 3: Retrieve a BitLocker recovery key
 
 > [!NOTE]
-> If no recovery key is shown yet, skip this task and return to it later. The key only appears here once BitLocker has started encrypting (**Protection On**) and the device has escrowed the key to Microsoft Entra ID. This can take some time. Continue with **Exercise 4** and revisit **Task 3** once the key populates on the **Recovery keys** blade.
+> If no recovery key appears, skip this task and continue with **Exercise 4**. Return after BitLocker starts encrypting and the key appears on the **Recovery keys** blade.
 
 1. In the **Microsoft Intune admin center**, navigate to **Devices** → **All devices** → **SEA-DEV1**.
 
@@ -538,9 +516,6 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
    123456-789012-345678-901234-567890-123456-789012-345678
    ```
 
-   > [!NOTE]
-   > This key can be used to unlock the drive if the device enters BitLocker recovery. In a production environment, only authorized help desk staff should have access to recovery keys.
-
 **You have successfully retrieved a BitLocker recovery key from Microsoft Entra ID.**
 
 ---
@@ -552,9 +527,7 @@ BitLocker encrypts the entire OS drive, protecting data at rest. You'll configur
 Microsoft Tunnel is a VPN gateway solution that provides secure access to on-premises and cloud resources for mobile devices. You'll deploy the Tunnel Gateway on an Ubuntu server (LIN-SRV1), register it with Intune, and author the VPN profile mobile devices would consume.
 
 > [!IMPORTANT]
-> **Scope.** This exercise covers gateway deployment, Intune registration, and VPN profile authoring. The lab environment doesn't include a mobile device, so **live client VPN connectivity through the gateway is out of scope** — similar to how Lab 01 scopes out the live Autopilot OOBE. The lab is complete when the LIN-SRV1 server shows as **Healthy** in **Tenant administration** → **Microsoft Tunnel Gateway** → **Health status** (Task 4), and the VPN profile is authored and assigned (Task 5).
->
-> Microsoft Tunnel Gateway is included with **Intune Plan 1** (no Suite required). If LIN-SRV1 isn't available in your lab environment, review the steps conceptually or skip to Exercise 5.
+> Exercise 4 is complete when LIN-SRV1 shows **Healthy** and the VPN profile is authored and assigned. The lab doesn't include a mobile device, so live client VPN connectivity is out of scope.
 
 ### Before you begin: working with LIN-SRV1
 
@@ -585,7 +558,7 @@ Some commands start with `sudo`, which runs the command as an administrator (lik
 1. When asked whether you want to continue connecting, enter **`yes`**. Then enter the `labuser` password. When the prompt changes to **`labuser@lin-srv1:~$`**, you're connected.
 
    > [!NOTE]
-   > Use this SSH window for all LIN-SRV1 commands in this exercise. Paste one code block at a time, and wait for the prompt to return before you paste the next one.
+   > Use this SSH window for all LIN-SRV1 commands in this exercise. Paste one code block at a time, and wait for the prompt to return.
 
 1. Update the package list. Enter the `labuser` password when prompted:
 
@@ -638,11 +611,7 @@ Create a **Server configuration** first. The Site wizard requires one, and if th
    - **Server configuration:** Select `Contoso Tunnel Server Config`.
 
    > [!NOTE]
-   > In this hosted Skillable lab, LIN-SRV1 is behind provider-managed NAT/infrastructure and does not expose a learner-controlled public inbound endpoint.
-   >
-   > For this lab workflow, this field is used to satisfy Site configuration and certificate name matching. It does not validate real internet-reachable client ingress unless you explicitly test end-user tunnel connectivity from outside the lab network.
-   >
-   > To avoid a subject alternative name (SAN) mismatch, use the same endpoint value you recorded in Task 1 unless you regenerate the certificate to include a different endpoint.
+   > Use the same endpoint value you recorded in Task 1 to avoid a SAN mismatch. In this hosted lab, LIN-SRV1 doesn't expose learner-controlled public inbound access.
 
 1. Select **Next** until you reach the **Review + create** tab, and then select **Create**.
 
@@ -739,17 +708,11 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
    sudo journalctl -t ocserv -n 200 --no-pager
    ```
 
-> [!TIP]
-> **Healthy** is the verifiable success criterion for this exercise. It confirms outbound registration worked, the install completed, and Intune is talking to your gateway — everything the gateway-deployment skill is meant to teach.
-
 **You have successfully registered the Microsoft Tunnel Gateway in Intune.**
 
 ---
 
 ### Task 5: Create a VPN profile for Microsoft Tunnel
-
-> [!NOTE]
-> You'll author the VPN profile end-to-end and assign it to a group — the same workflow you'd use in production. In this lab environment no mobile device is enrolled to consume it, so the profile is authored and assigned but **client connection through the tunnel is out of scope** (see the scope callout at the top of Exercise 4).
 
 1. In the **Microsoft Intune admin center**, navigate to **Devices** → **Manage Devices > Configuration**.
 
@@ -781,9 +744,6 @@ With the Server configuration and Site in place, install the Tunnel Gateway on t
    - **Proxy:** Leave **Use proxy server** off and the **Automatic configuration script**, **Address**, and **Port number** fields blank.
    - **Custom settings:** Leave empty.
 
-   > [!TIP]
-   > In production you'd use these optional sections to fine-tune behavior — for example, **On-Demand VPN Rules** to auto-connect for specific domains, **Per-app VPN** to scope the tunnel to chosen apps, or a **Proxy** for outbound filtering. For this lab, the two **Base VPN** values above are all you need.
-
 1. Select **Next**.
 
 1. On the **Scope tags** tab, select **Next**.
@@ -811,7 +771,7 @@ The root CA is the trust anchor for your Cloud PKI hierarchy. You must create at
 1. Select **+ Create** from the top toolbar.
 
    > [!NOTE]
-   > **+ Create** opens the **Create certification authority** wizard directly. There's no dropdown menu choice between "Root CA" and "Issuing CA" — you pick the **CA type** on the **Configuration settings** tab inside the wizard.
+   > **+ Create** opens the wizard directly. Choose **CA type** on the **Configuration settings** tab.
 
 1. On the **Basics** tab, enter:
    - **Name:** `Contoso Root CA`
@@ -826,7 +786,7 @@ The root CA is the trust anchor for your Cloud PKI hierarchy. You must create at
 1. Under **Extended Key Usages**, choose how the CA can be used. For this lab, leave **Client Auth (1.3.6.1.5.5.7.3.2)** and **Server Authentication (1.3.6.1.5.5.7.3.1)** selected (the common defaults for SCEP-issued device certificates).
 
    > [!IMPORTANT]
-   > Root CA EKU constraints are a **superset** of the issuing CA. Any EKU you want on a downstream issuing CA must be defined here on the root first. The **Any Purpose (2.5.29.37.0)** EKU is intentionally absent — it's overly permissive and a security risk.
+   > Define on the root CA every EKU you need on the issuing CA. Don't use **Any Purpose (2.5.29.37.0)**.
 
 1. Under **Subject attributes**, enter:
    - **Common name (CN):** `Contoso Root Certificate Authority`
@@ -867,8 +827,6 @@ Issuing CAs are subordinate to a root CA and they're what your devices actually 
    - **Root CA:** Select **Contoso Root CA** (the root you created in Task 1)
    - **Validity period:** 10 years (allowed: 2, 4, 6, 8, or 10 — must be less than or equal to the root CA's remaining lifetime)
 
-
-
 1. Under **Extended Key Usages**, the picker is constrained to EKUs you defined on the root in Task 1. Confirm **Client Auth** and **Server Auth** are selected.
 
 1. Under **Subject attributes**, enter:
@@ -899,9 +857,6 @@ Issuing CAs are subordinate to a root CA and they're what your devices actually 
 1. Under **Properties**, record the value for **SCEP URI**, you will use this in Task 5.
 
 1. Under **Properties**, select **Download certificate** and save the file as `ContosoIssuingCA.cer`.
-
-   > [!NOTE]
-   > These certificates will be deployed to devices as trusted roots, allowing them to trust certificates issued by the Cloud PKI infrastructure.
 
 **You have successfully downloaded the root and issuing CA certificates.**
 
@@ -1071,7 +1026,7 @@ You'll use the Microsoft Defender portal and Intune admin center to monitor devi
    - **Recommended actions:** Steps to remediate the threat
 
    > [!NOTE]
-   > In a new lab environment with no active threats, you may see no alerts. Review the dashboard structure to understand how alerts are presented.
+   > A new lab environment might show no alerts. That's expected.
 
 **You have successfully reviewed threat detections and alerts in the Microsoft Defender portal.**
 
@@ -1082,7 +1037,7 @@ You'll use the Microsoft Defender portal and Intune admin center to monitor devi
 In **Lab 02 Exercise 2 Task 4** you created the Conditional Access policy `CA - Require compliant device (Pharmacy pilot)` in **Report-only** mode. In **Lab 02 Exercise 6 Task 4** you inspected its impact via Sign-in logs. The endpoint security policies you deployed in Exercises 1–3 of this lab (Defender baseline, Antivirus, Firewall, ASR, BitLocker) should now have more pilot devices passing compliance evaluation. It's time to switch the CA policy from Report-only to **On**.
 
 > [!WARNING]
-> Before you enable the policy, **verify the break-glass exclusion is still in place**. If your Global Admin account is no longer in the **Exclude** list, fix that first or you risk locking yourself out of the tenant.
+> Before you enable the policy, **verify the break-glass exclusion is still in place**. If your Global Admin account isn't in the **Exclude** list, fix that first.
 
 1. Open a new browser tab to **https://entra.microsoft.com** and sign in as **admin@<TenantPrefix>.onmicrosoft.com**.
 
@@ -1107,7 +1062,7 @@ In **Lab 02 Exercise 2 Task 4** you created the Conditional Access policy `CA - 
 1. Review the results. The bottom panel shows **Policies that would apply** and **Policies that won't apply**. Confirm `CA - Require compliant device (Pharmacy pilot)` appears under **Policies that will apply** with the grant controls **Require compliant device**.
 
    > [!NOTE]
-   > **What If** is the production-safe rehearsal for enabling any CA policy. It runs the full evaluation engine against a simulated sign-in without affecting real users. If a non-pilot user accidentally lands under "would apply" — stop and fix the assignment scope before flipping the switch.
+   > If a non-pilot user appears under **Policies that will apply**, stop and fix the assignment scope before you enable the policy.
 
 1. Return to the **CA - Require compliant device (Pharmacy pilot)** policy details view and scroll to **Enable policy**.
 
@@ -1116,7 +1071,7 @@ In **Lab 02 Exercise 2 Task 4** you created the Conditional Access policy `CA - 
 1. Select **Save**.
 
    > [!IMPORTANT]
-   > The policy is now **enforced**. The next time a pilot-cohort user signs in to any cloud app on a non-compliant device, the sign-in will be blocked with the message "Your device is not compliant with the policies set by your IT department." The user can self-remediate by addressing the failing compliance setting (e.g., enable BitLocker, install missing security updates).
+   > The policy is now **enforced**. Non-compliant pilot users are blocked at their next cloud app sign-in.
 
 1. Switch back to **Identity Secure Score** → **Conditional Access** → **Sign-in logs**. Filter to a pilot-cohort user. Open a recent sign-in entry and confirm the **Conditional Access** tab now shows the policy with a status of **Success** or **Failure** (not **Report-only: ...**).
 
