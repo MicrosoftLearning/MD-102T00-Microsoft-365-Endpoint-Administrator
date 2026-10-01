@@ -70,9 +70,6 @@ Microsoft Store apps are modern Windows applications distributed through the Mic
 
 1. In the **Select app type** pane, set **Platform** to **Windows**, then set **App type** to **Microsoft Store app (new)**. Select **Select**.
 
-   > [!NOTE]
-   > The portal flow is a two-step picker: choose Platform first (Windows / iOS/iPadOS / macOS / Android), then the App type list filters to that platform. The "new" Microsoft Store app type uses the Microsoft Store for Business backend and provides better reliability than the legacy connector.
-
 1. On the **App information** tab, select **Search the Microsoft Store app (new)**.
 
 1. In the **Search the Microsoft Store app (new)** pane, search for `Microsoft To Do`.
@@ -94,9 +91,6 @@ Microsoft Store apps are modern Windows applications distributed through the Mic
 
 1. Select **Select**.
 
-   > [!NOTE]
-   > Assigning as "Required" means the app will install automatically on all devices in the group. "Available" would make it visible in the Company Portal for user-initiated installation.
-
 1. Select **Next**.
 
 1. On the **Review + create** tab, select **Create**.
@@ -110,7 +104,7 @@ Microsoft Store apps are modern Windows applications distributed through the Mic
 1. On **SEA-DEV1**, wait 5–10 minutes for the app to install automatically.
 
    > [!NOTE]
-   > Assigning an app as **Required** triggers Intune to notify the device to sync. The notification can arrive within minutes or take a few hours, so you can force a sync to speed up installation. Adding an app as **Available** doesn't trigger an immediate notification.
+   > Installation can start within minutes or take a few hours. Force a sync to speed it up.
 
 1. To force a device sync, open **Settings** (press `Windows + I`).
 
@@ -127,8 +121,7 @@ Microsoft Store apps are modern Windows applications distributed through the Mic
 1. Verify the app appears in the search results and can be launched.
 
    > [!NOTE]
-   > You can also sync from the Intune admin center. Go to **Devices** → **Windows**, select **SEA-DEV1**, select **Sync**, and then select **Yes**. To check the installation, select **Monitor** → **All apps** on the device page, and review the **Installation status** column for **Microsoft To Do**.
-
+   > You can also sync from **Devices** → **Windows** → **SEA-DEV1** → **Sync** → **Yes**. To check installation, open **Monitor** → **All apps** on the device page and review **Installation status** for **Microsoft To Do**.
 
 **You have successfully verified Microsoft Store app installation.**
 
@@ -143,7 +136,7 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 ### Task 1: Prepare the Win32 app package
 
 > [!IMPORTANT]
-> **Download the real installer yourself — don't use a pre-packaged app asset.** Embedding a compiled `.exe`/`.msi` in training content is a supply-chain risk: its provenance can't be verified, and it's the kind of artifact a security review would (rightly) flag. This task has you download the **official** 7-Zip installer directly from the vendor, not a repackaged "portable" build from a third-party site.
+> Download the official 7-Zip MSI directly from 7-zip.org. Don't use a pre-packaged app asset, portable build, or third-party mirror.
 
 1. Open **Microsoft Edge** and navigate to **https://www.7-zip.org/download.html** — the official 7-Zip download page (published by Igor Pavlov, the actual author).
 
@@ -174,7 +167,7 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 1. Note the exact downloaded MSI filename (for example, `7z<version>-x64.msi`). You'll need it for the next command.
 
    > [!NOTE]
-   > This lab uses the downloaded 7-Zip `.msi` file as the example payload. If you use a different installer, substitute the **filename**, **app name/publisher**, **install/uninstall commands**, and **detection path** consistently throughout Exercises 2, 5, and 7.
+   > Use the downloaded 7-Zip `.msi` file as the example payload. If you use a different installer, update the filename, app name and publisher, install and uninstall commands, and detection path throughout Exercises 2, 5, and 7.
 
 1. Navigate to the Win32 Content Prep Tool directory:
 
@@ -191,9 +184,6 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
    - `-c`: Source folder containing the app files
    - `-s`: Setup file (the MSI installer)
    - `-o`: Output folder for the .intunewin package
-
-   > [!NOTE]
-   > Because the setup file is an MSI, the Content Prep Tool automatically reads the MSI's product code, version, and other metadata and embeds it in the .intunewin package — this is what enables MSI-based automatic detection in Task 2, instead of a manual file-path check.
 
 1. When prompted **Do you want to create it (Y/N)?** for the output folder, enter **Y**.
 
@@ -226,7 +216,7 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 1. Select the `.intunewin` file you created in Task 1 and select **OK**.
 
    > [!NOTE]
-   > Because the source was an MSI, Intune reads the **Name**, **Description**, and **App version** fields from the package metadata and pre-fills them on the next page. **Publisher** is blank for this package and must be entered manually.
+   > Intune pre-fills **Name**, **Description**, and **App version** from the package. **Publisher** is blank and must be entered manually.
 
 1. On the **App information** page, confirm the auto-populated fields look correct.
 
@@ -239,15 +229,12 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
    - **Install command:** `msiexec /i "<filename>.msi" /qn`
    - **Uninstall command:** `msiexec /x "{<product-code-GUID>}" /qn`
 
-   > [!NOTE]
-   > `/qn` performs a silent MSI installation (no user prompts). The uninstall command references the MSI's **product code** (a GUID), not the original filename — Windows Installer can uninstall an MSI-based app by product code alone, even if the original installer file is gone from the device.
-
 1. Confirm **Install behavior** is set to **System** (already the default for this package).
 
 1. Change **Device restart behavior** from the pre-selected default (**App install may force a device restart**) to **Determine behavior based on return codes**.
 
    > [!NOTE]
-   > Leave **Installer type** / **Uninstaller type** (both **Command line**), **Installation time required (mins)**, **Allow available uninstall**, and the **Return codes** table (0 and 1707 = Success, 3010 = Soft reboot, 1641 = Hard reboot) as their pre-populated defaults — these come from Intune's built-in MSI handling, not from anything you need to configure.
+   > Leave **Installer type**, **Uninstaller type**, **Installation time required (mins)**, **Allow available uninstall**, and the **Return codes** table at their pre-populated defaults.
 
 1. Select **Next**.
 
@@ -257,7 +244,7 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
    - **Minimum operating system:** Windows 10 1607
 
    > [!NOTE]
-   > Leave **Disk space required**, **Physical memory required**, **Minimum number of logical processors required**, and **Minimum CPU speed required** blank — none apply to this app. **Configure additional requirement rules** stays empty too.
+   > Leave **Disk space required**, **Physical memory required**, **Minimum number of logical processors required**, **Minimum CPU speed required**, and **Configure additional requirement rules** blank.
 
 1. Select **Next**.
 
@@ -270,9 +257,6 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
    - **Rule type:** MSI
    - **MSI product code:** Leave as auto-populated (Intune reads this from the .intunewin package's embedded MSI metadata)
 
-   > [!NOTE]
-   > This is the whole point of packaging an MSI instead of a portable/manual installer: Intune already knows the product code from the package, so detection is a reliable version check against the real Windows Installer registration — not a fragile "does this file exist" guess.
-
 1. Select **OK**.
 
 1. Select **Next**.
@@ -282,9 +266,6 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 1. On the **Supersedence** tab, select **Next** (will configure supersedence in a later task).
 
 1. On the **Scope tags** tab, select **+ Select scope tags**, add **Pharmacy** (created in **Lab 01 Exercise 2 Task 6**), select **Select**, then select **Next**.
-
-   > [!NOTE]
-   > 7-Zip is the canonical archive tool for the Contoso clinical document workflow (research-data exports, anonymized DICOM bundles). Tagging the deployment with `Pharmacy` keeps it visible to the Pharmacy Helpdesk role (assigned in **Lab 05 Exercise 3**).
 
 1. On the **Assignments** tab, under **Required**, select **+Add group**.
 
@@ -308,7 +289,7 @@ Win32 apps are traditional Windows desktop applications (.exe, .msi installers).
 1. Wait 10–15 minutes for the app to install.
 
    > [!NOTE]
-   > Win32 app installation can take longer than Store apps because Intune must download the package, run the installer, and verify the detection rule.
+   > Win32 app installation can take longer than Store apps because Intune downloads the package, runs the installer, and verifies detection.
 
 1. In the **Microsoft Intune admin center**, navigate to **Apps** → **All apps** → **7-Zip**.
 
@@ -356,7 +337,7 @@ Microsoft 365 Apps (formerly Office 365 ProPlus) provide Word, Excel, PowerPoint
    - **Word**
 
    > [!NOTE]
-   > There's no standalone "OneDrive" entry in this list — Excel, Outlook, OneNote, PowerPoint, Access, Publisher, Skype for Business, Teams, and Word are the only options. Leave **Select other Office apps (license required)** at **0 selected** — that dropdown is for apps like Project and Visio that need their own license, not part of this deployment.
+   > Don't look for a standalone **OneDrive** option. Leave **Select other Office apps (license required)** at **0 selected**.
 
 1. Under **App suite information**, configure:
    - **Architecture:** **64-bit** (toggle, already selected by default)
@@ -371,9 +352,6 @@ Microsoft 365 Apps (formerly Office 365 ProPlus) provide Word, Excel, PowerPoint
    - **Install background service for Microsoft Search in Bing:** No
 
 1. Scroll down and, under **Languages**, select **English**.
-
-   > [!NOTE]
-   > Current Channel receives new features as soon as they're released. Monthly Enterprise Channel provides monthly updates with a longer lead time for testing.
 
 1. Select **Next**.
 
@@ -400,7 +378,7 @@ Microsoft 365 Apps (formerly Office 365 ProPlus) provide Word, Excel, PowerPoint
 1. Wait 15–30 minutes for Microsoft 365 Apps to download and install.
 
    > [!NOTE]
-   > Microsoft 365 Apps is a large download (~3 GB) and installation can take 20–40 minutes depending on network speed and device performance. For lab purposes, you can proceed to the next exercise and check installation status later.
+   > Microsoft 365 Apps is about 3 GB and can take 20–40 minutes to install. You can continue to the next exercise and check status later.
 
 1. In the **Microsoft Intune admin center**, navigate to **Apps** → **All apps** → **Microsoft 365 Apps (Current Channel)**.
 
@@ -428,9 +406,6 @@ Microsoft 365 Apps (formerly Office 365 ProPlus) provide Word, Excel, PowerPoint
 
 The Enterprise App Catalog (part of Microsoft Intune Enterprise Application Management) provides a curated library of third-party applications with pre-configured installers, detection rules, and icons. You'll add an app from the catalog and deploy it to devices.
 
-> [!NOTE]
-> The **Enterprise App Catalog** is part of **Microsoft Intune Enterprise Application Management**. This capability is included with the Microsoft Intune Suite and eligible Microsoft 365 E5 licenses. The Suite trial was activated in **Lab 01** prerequisites.
-
 ### Task 1: Browse the Enterprise App Catalog
 
 1. In the **Microsoft Intune admin center**, navigate to **Apps** → **All apps**.
@@ -440,7 +415,7 @@ The Enterprise App Catalog (part of Microsoft Intune Enterprise Application Mana
 1. In the **Select app type** pane, set **Platform** to **Windows** and **App type** to **Enterprise App Catalog app**. Select **Select**.
 
    > [!NOTE]
-   > Enterprise App Catalog app is now generally available (the "(preview)" suffix that appeared earlier has been dropped). If this option doesn't appear, Enterprise Application Management may not have fully provisioned yet. Wait 5–10 minutes after activation and refresh — capability tiles can take a few minutes to surface after the license flips to **Active**.
+   > If **Enterprise App Catalog app** doesn't appear, wait 5–10 minutes after activation and refresh.
 
 1. On the **Select app** page, select **Search the Enterprise App Catalog** to browse the available apps in the catalog.
 
@@ -462,17 +437,11 @@ The Enterprise App Catalog (part of Microsoft Intune Enterprise Application Mana
    - **Architecture:** x64
    - **Version:** (current release, e.g. `150.0.7871.129`)
 
-   > [!NOTE]
-   > The Enterprise App Catalog packages the same official installer Google publishes — this tab just lets you pick which branch/architecture/language build to deploy.
-
 1. Select **Next**.
 
 1. On the **Updates** tab, note the banner: *"This selection is a one-time choice for this app. You will need to create a new app to make a different selection."*
 
 1. Under **Update method**, select **Update with supersedence**.
-
-   > [!NOTE]
-   > **Automatically update** keeps the app current directly from the catalog but resets and blocks custom install/uninstall scripts. **Update with supersedence** lets you keep custom settings and push new versions through a guided supersedence relationship instead — consistent with how you'll manage the `7-Zip` app in **Exercise 5**.
 
 1. Review the read-only **App information** (App name, Package name, Version, Publisher, Architecture, Application size, Privacy URL, App store URL) and **App commands** that appear after you select **Update with supersedence** (**Install command**, pre-built as `"%SystemRoot%\System32\msiexec.exe" /i "googlechromestandaloneenterprise64.msi" /qn`) — none of this needs editing.
 
@@ -520,9 +489,6 @@ The Enterprise App Catalog (part of Microsoft Intune Enterprise Application Mana
 
 1. Select **Select**.
 
-   > [!NOTE]
-   > Assigning as "Available" makes the app visible in the Company Portal app, allowing users to install it on-demand. This is useful for optional software.
-
 1. Select **Next**.
 
 1. On the **Review + create** tab, select **Add app**.
@@ -538,7 +504,7 @@ The Enterprise App Catalog (part of Microsoft Intune Enterprise Application Mana
 1. Launch the **Company Portal** app.
 
    > [!NOTE]
-   > If the **Company Portal** app isn't available on the device, open **Microsoft Edge** and navigate to **https://apps.microsoft.com/detail/9wzdncrfj3pz?hl=en-US&gl=US** to install the Company Portal app from the Microsoft Store.
+   > If **Company Portal** isn't available, install it from the Microsoft Store at `https://apps.microsoft.com/detail/9wzdncrfj3pz?hl=en-US&gl=US`.
 
 1. Sign in as **MeganB@<TenantPrefix>.OnMicrosoft.com** (if not already signed in).
 
@@ -567,7 +533,7 @@ App supersedence allows you to automatically upgrade or replace applications. Wh
 For this task, you'll simulate a new version by creating a second Win32 app entry from the same package.
 
 > [!NOTE]
-> In production, "v2.0" would be a genuinely newer installer with a different MSI product code. For lab purposes, you're reusing the **same** `.intunewin` package you built in **Exercise 2 Task 1** under a new app name — this is enough to demonstrate the supersedence *mechanic* (Intune uninstalling one app object and installing another) without needing to source two real 7-Zip releases.
+> For this lab, reuse the same `.intunewin` package from **Exercise 2 Task 1** under the new app name.
 
 1. In the **Microsoft Intune admin center**, navigate to **Apps** → **All apps** → **+ Create**.
 
@@ -582,9 +548,6 @@ For this task, you'll simulate a new version by creating a second Win32 app entr
    - On the **Supersedence** tab, select **+ Add**.
       - In the **Add apps** pane, select the existing instance of **7-Zip** and then select **Select**.
       - Below **Uninstall previous version**, select **Yes**, and then select **Next**.
-
-     > [!NOTE]
-     > This will run the uninstall command for the old version before running the install command for this version.
 
    - **Scope tags:** add **Pharmacy** (same as the original app) — keeps Pharmacy delegation consistent across both versions.
    - **Assignments:** assign **Required** to **sg-Intune-Pilot-Users** (same as the original app).
@@ -681,7 +644,7 @@ App Protection Policies (APP) secure corporate data on mobile devices and BYOD (
      - **Jailbroken/rooted devices:** (Action: Block access)
 
    > [!NOTE]
-   > These four rows are pre-populated defaults — you don't need to add anything. The **Select one** dropdowns at the bottom of each table (App conditions / Device conditions) are there if you want to add more conditions (e.g., a minimum OS version), but that's optional and not required for this lab.
+   > These four rows are pre-populated defaults. You don't need to add conditions.
 
 1. Select **Next** and skip **Scope tags**.
 
@@ -692,7 +655,7 @@ App Protection Policies (APP) secure corporate data on mobile devices and BYOD (
 1. Select **Select**.
 
    > [!NOTE]
-   > There's no built-in "All users" or "All devices" virtual assignment on this page — **Included groups** and **Excluded groups** both only offer **Add groups**. This lab scopes the policy to the same pilot cohort you've used throughout Lab 03 rather than a blanket assignment; in production you'd typically create a group dedicated to App Protection Policy targeting.
+   > This page doesn't include built-in **All users** or **All devices** assignments. Use **Add groups** under **Included groups** or **Excluded groups**.
 
 1. Select **Next**.
 
@@ -735,7 +698,7 @@ App Protection Policies (APP) secure corporate data on mobile devices and BYOD (
       - **Restrict web content transfer with other apps:** change from the default **Any app** to **Microsoft Edge**
 
    > [!NOTE]
-   > Leave **Org data notifications** (**Allow**) and **Start Microsoft Tunnel connection on app-launch** (**No**) at their defaults — this lab isn't using Microsoft Tunnel.
+   > Leave **Org data notifications** (**Allow**) and **Start Microsoft Tunnel connection on app-launch** (**No**) at their defaults.
 
 1. Select **Next**.
 
@@ -788,9 +751,6 @@ App Protection Policies are enforced at the application level, not the device le
 
 1. **Conditional Access integration** (optional): If combined with a Conditional Access policy, non-compliant users are blocked from signing in.
 
-> [!NOTE]
-> App Protection Policies do not require device enrollment. They protect corporate data on BYOD devices without giving IT full control of the device.
-
 **You now understand how App Protection Policies enforce data protection on mobile devices.**
 
 ---
@@ -833,8 +793,7 @@ You'll use the Intune admin center to monitor app deployment across all devices,
 ### Task 2: Investigate a failed app installation
 
 > [!NOTE]
-> You may not have any apps with install failures, therefore these steps are provided for reference.
-
+> If you don't have apps with install failures, use these steps for reference.
 
 1. In the **Microsoft Intune admin center**, navigate to **Apps** → **All apps**.
 
@@ -898,14 +857,14 @@ App assignment intents can collide just like configuration profiles can. The cla
 1. Select **Review + save** → **Save**.
 
    > [!IMPORTANT]
-   > You've now told Intune: "Uninstall **7-Zip** from pilot users" AND (via the v2.0 supersedence relationship) "Install **7-Zip v2.0** on pilot users, replacing v1." These two intents partially overlap and produce a conflict.
+   > The **Uninstall** assignment for **7-Zip** and the **Required** assignment for **7-Zip v2.0** overlap. This intentionally creates a conflict.
 
 1. Trigger a sync on **SEA-DEV1** (Settings → Accounts → Access work or school → Sync). Wait 5–10 minutes for Intune to evaluate.
 
 1. In **Apps** → **All apps** → **7-Zip**, select **Device install status**. Locate SEA-DEV1 (or any pilot device) and observe the status — you should see **Conflict** or an explicit failure with an error message indicating multiple intents.
 
    > [!NOTE]
-   > Intune surfaces app conflicts as either **Conflict** in the device install status column, or as a specific error in the per-device drill-in. **App install status** is the single most useful surface for diagnosing app assignment fights, the same way **Per-setting status** is for configuration profile conflicts (Lab 02 Exercise 6).
+   > You might see **Conflict** in the status column or a specific error in the per-device drill-in.
 
 1. Resolve the conflict. The supersedence path is the correct one (v1 → v2.0 is automatic), so remove the redundant Uninstall assignment on v1:
    - On **7-Zip** → **Properties** → **Assignments** → **Edit**.
@@ -913,9 +872,6 @@ App assignment intents can collide just like configuration profiles can. The cla
    - Select **Review + save** → **Save**.
 
 1. Trigger another sync on SEA-DEV1, wait 5–10 minutes, and re-check **Device install status** on **7-Zip v2.0**. Confirm SEA-DEV1 shows **Installed** with no remaining conflict on the v1 app.
-
-   > [!NOTE]
-   > In production, the upper-intermediate move is to set up **assignment audits** — review the **Audit logs** for app-assignment edits when you find a conflict to see who added the conflicting intent and when. You'll inspect audit logs in **Lab 05 Exercise 4**.
 
 **You have successfully diagnosed and resolved an app-assignment conflict.**
 
