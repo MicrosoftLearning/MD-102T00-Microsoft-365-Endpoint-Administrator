@@ -75,11 +75,11 @@ The Intune ↔ Defender for Endpoint connector is a **two-portal** setup: you fl
 
 1. In the **Microsoft Defender** portal, select **Settings**.
 
-1. Select **Endpoints**, and then select **Advanced features**.
+1. Select **Endpoints**, and then under **General**, select **Optional features**.
 
 1. Locate the **Microsoft Intune connection** toggle and set it to **On**.
 
-1. Select **Save preferences** at the bottom of the page.
+1. Select **Save preferences** at the bottom of the page. The connection isn't established until you save.
 
    > [!IMPORTANT]
    > You need the **Endpoint Security Manager** role or **Mobile Threat Defense** Read and Modify permissions. If the toggle is unavailable or grayed out, wait for Defender provisioning, refresh the page, and try again later.
@@ -99,7 +99,7 @@ The Intune ↔ Defender for Endpoint connector is a **two-portal** setup: you fl
 - **Compliance policy evaluation:**
    - **Connect Windows devices version 10.0.15063 and above to Microsoft Defender for Endpoint:** On
 
-1. Select **Save** at the top of the page.
+1. Select **Save** at the top of the page. **Connection status** changes to **Enabled**.
 
 **You have successfully enabled the Microsoft Defender for Endpoint connector.**
 
