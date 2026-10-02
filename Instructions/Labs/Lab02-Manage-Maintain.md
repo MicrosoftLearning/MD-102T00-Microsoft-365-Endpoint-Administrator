@@ -23,7 +23,7 @@ By the end of this lab, you'll have:
 - Built compound assignment filters using both include and exclude modes
 - Intentionally created conflicting configuration profiles and resolved the conflict with **Per-setting status**
 - Configured compliance policies with grace-period actions for noncompliance
-- Created a Conditional Access policy that requires compliant devices (**Report-only** mode — you switch it **On** in Lab 04)
+- Created a Conditional Access policy that requires compliant devices (**Report-only** mode)
 - Analyzed Group Policy Objects for migration readiness using Group Policy analytics
 - Configured update rings, a Feature update profile, and an Expedited Quality update policy
 - Enabled Endpoint analytics and reviewed device performance insights
@@ -467,7 +467,7 @@ The **Send email to end user** noncompliance action needs a message template to 
 
 ### Task 4: Create a Conditional Access policy that requires device compliance (Report-only)
 
-A compliance policy on its own doesn't block anything — it just marks devices as compliant or noncompliant. The teeth come from a **Conditional Access (CA)** policy that requires the **Marked as compliant** state for access to corporate resources. You'll create that CA policy now, but you'll start it in **Report-only** mode so you can observe its impact in this lab and **Lab 04 Exercise 6** before flipping it to **On**.
+A compliance policy on its own doesn't block anything — it just marks devices as compliant or noncompliant. The teeth come from a **Conditional Access (CA)** policy that requires the **Marked as compliant** state for access to corporate resources. You'll create that CA policy now in **Report-only** mode, which logs what the policy *would* do without enforcing it. You'll observe its impact in this lab and rehearse enforcement in **Lab 04 Exercise 6**.
 
 1. Open a new browser tab and navigate to **https://entra.microsoft.com** (Microsoft Entra admin center). Sign in as **admin@<TenantPrefix>.onmicrosoft.com** if prompted.
 
@@ -478,7 +478,7 @@ A compliance policy on its own doesn't block anything — it just marks devices 
 1. On the **New** policy page, configure:
    - **Name:** `CA - Require compliant device (Pharmacy pilot)`
 
-1. Under **Assignments** → **Users**, select **0 users or agents selected**:
+1. Under **Assignments** → **Users**, select **0 users and groups selected**:
    - On the **Include** tab, select **Select users and groups** → check **Users and groups** → select **sg-Intune-Pilot-Users** → **Select**.
    - On the **Exclude** tab, select **Users and groups** → select **admin@<TenantPrefix>.onmicrosoft.com** (or whichever account you signed in with) → **Select**.
 
@@ -490,7 +490,7 @@ A compliance policy on its own doesn't block anything — it just marks devices 
    - **Include:** All resources (formerly "All cloud apps")
    - Acknowledge the warning about including all apps.
 
-1. Under **Assignments** → **Conditions**, select **0 conditions selected** → **Client apps** → **Not configured** → **Configure: Yes** → check both **Browser** and **Mobile apps and desktop clients** → **Done**.
+1. Under **Assignments** → **Conditions**, select **0 conditions selected** → **Client apps** → **Not configured** → **Configure: Yes** → leave all client app types selected → **Done**.
 
 1. Under **Access controls** → **Grant**, select **0 controls selected**:
    - Select **Grant access**.
@@ -499,6 +499,8 @@ A compliance policy on its own doesn't block anything — it just marks devices 
    - Select **Select**.
 
 1. Under **Enable policy**, select **Report-only**.
+
+1. If you're prompted about device platforms, keep the default **Exclude device platforms macOS, iOS, Android, and Linux from this policy** option. This lab targets Windows devices only.
 
 1. Select **Create**.
 
@@ -1040,7 +1042,7 @@ In **Exercise 1 Task 5** you intentionally created two configuration profiles �
 
 ### Task 4: Investigate compliance state and Conditional Access (Report-only) impact
 
-The `CA - Require compliant device (Pharmacy pilot)` Conditional Access policy you created in **Exercise 2 Task 4** is running in **Report-only** mode — it doesn't enforce, but it does log what *would* have happened on every sign-in. You'll inspect those logs now to see the policy's impact before flipping it to **On** in **Lab 04 Exercise 6**.
+The `CA - Require compliant device (Pharmacy pilot)` Conditional Access policy you created in **Exercise 2 Task 4** is running in **Report-only** mode — it doesn't enforce, but it does log what *would* have happened on every sign-in. You'll inspect those logs now to see the policy's impact. You'll rehearse enforcing it in **Lab 04 Exercise 6**.
 
 1. On the **Troubleshooting + support | Troubleshoot** page, with a pilot-cohort user selected (Megan Bowen or another `sg-Intune-Pilot-Users` member), observe the **Compliance** section.
 
@@ -1083,7 +1085,7 @@ In this lab, you accomplished the following:
 **Exercise 2: Configure compliance policies**
 - Created a Windows compliance policy with device health and security requirements (tagged with `Pharmacy`)
 - Configured grace periods and notification actions for noncompliance
-- Created a Conditional Access policy (`CA - Require compliant device (Pharmacy pilot)`) in **Report-only** mode — switched to **On** in Lab 04 Exercise 6
+- Created a Conditional Access policy (`CA - Require compliant device (Pharmacy pilot)`) in **Report-only** mode
 - Monitored compliance policy results for enrolled devices
 
 **Exercise 3: Analyze Group Policy Objects**
@@ -1094,7 +1096,7 @@ In this lab, you accomplished the following:
 **Exercise 4: Configure Windows Update management**
 - Created a pilot update ring with no deferrals for early adopters (tagged with `Pharmacy`)
 - Created a standard update ring with 7-day quality and 14-day feature update deferrals
-- Created a Feature update profile pinning the fleet to Windows 11 25H2 (with the pilot cohort excluded so they run ahead)
+- Created a Feature update profile pinning the fleet to Windows 11 25H2
 - Created an Expedited Quality update policy for out-of-band security patches
 - Monitored Windows Update deployment status across devices
 

@@ -492,7 +492,7 @@ Once the pilot device status (Task 3) shows the detection script running cleanly
 
 1. Select **Properties** from the left navigation, then in the **Assignments** section select **Edit**.
 
-1. Add a second assignment under **Assign to** → **+ Select groups to include**, and select **dyn-Windows-Devices**. Remove the **sg-Intune-Pilot-Users** group from the included groups. Under **Exclude groups**, select **+ Select groups to exclude** and add **sg-Intune-Pilot-Users** (Pilot already has it; no need to assign twice).
+1. Under **Assign to** → **+ Select groups to include**, add **dyn-Windows-Devices**. Leave **sg-Intune-Pilot-Users** in place and don't add an excluded group: Intune doesn't support excluding a user group from a device-group assignment.
 
 1. Select **Review + save** → **Save**.
 
@@ -741,9 +741,9 @@ Audit logs are how you reconstruct "who changed what, when, and why" — the bed
    - **Service:** Conditional Access
    - **Date:** Last 7 days
 
-1. Locate the entry where you **switched** `CA - Require compliant device (Pharmacy pilot)` from **Report-only** to **On** from **Lab 04 Exercise 6 Task 3**. The **Category** will be **Policy**, the **Activity** will be **Update conditional access policy**.
+1. Locate the entry where you **created** `CA - Require compliant device (Pharmacy pilot)` in **Lab 02 Exercise 2 Task 4**. The **Category** will be **Policy**, the **Activity** will be **Add Conditional Access policy**.
 
-1. In the **Audit Log Details** pane, select the **Modified Properties** tab, and then select **Click here to view changes to the Conditional Access policy (Preview)** for an easier-to-read visualization of the differences in the underlying JSON.
+1. In the **Audit Log Details** pane, select the **Modified Properties** tab to review the policy JSON as it was saved. The `state` value `enabledForReportingButNotEnforced` is **Report-only**.
 
    > [!NOTE]
    > Use the Intune audit log for Intune actions. Use the Entra audit log for Conditional Access and directory operations.

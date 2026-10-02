@@ -591,7 +591,7 @@ Single-device Device Query runs a KQL query against one Windows device's live st
    | project OsVersion, BuildVersion, Architecture
    ```
 
-1. Select **Run**. Confirm SEA-DEV1 is running the Windows 11 24H2 build you pinned via the Feature update profile in **Lab 02 Exercise 4**.
+1. Select **Run**. Note the build SEA-DEV1 is running. You'll compare it to the Windows 11 25H2 target from the Feature update profile in **Lab 02 Exercise 4** in the next task.
 
 **You have successfully run live Device Query against a single device.**
 
@@ -633,11 +633,11 @@ Multi-device Device Query runs one KQL query across every Windows device in your
 
 1. With results on screen, select **Add all items to a group** from the top of the Results tab. In the dialog, name the new group `sg-Devices-Unencrypted` (description: *Devices identified by Device Query as not BitLocker-encrypted*). Select **Create group**.
 
-1. Run a second query to find devices running an OS build older than your fleet target (Windows 11 24H2 — build number `26100`):
+1. Run a second query to find devices running an OS build older than your fleet target (Windows 11 25H2 — build number `26200`):
 
    ```kusto
    OsVersion
-   | where toint(BuildVersion) < 26100
+   | where toint(BuildVersion) < 26200
    | project Device, OsVersion, BuildVersion
    | order by BuildVersion asc
    ```
@@ -806,7 +806,7 @@ In this lab, you accomplished the following:
 **Exercise 3: Use Advanced Analytics and Device Query**
 - Reviewed Advanced Analytics dashboards for anomaly detection, resource performance, and battery health
 - Ran live single-device KQL queries via Device Query (CPU info, BitLocker status verification, OS version)
-- Ran multi-device KQL queries to find unencrypted devices and devices below the 24H2 feature-update target
+- Ran multi-device KQL queries to find unencrypted devices and devices below the 25H2 feature-update target
 - Built a Microsoft Entra security group (`sg-Devices-Unencrypted`) directly from a Device Query result set
 
 **Exercise 4: Explore Windows 365 Cloud PC provisioning**
