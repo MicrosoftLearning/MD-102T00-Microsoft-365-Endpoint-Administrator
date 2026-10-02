@@ -72,8 +72,8 @@ Endpoint Privilege Management allows standard users to run specific applications
    - **Reusable settings** (shared certificate groups for use across rules)
    - **Elevation requests** (live and historical support-approved elevation requests)
 
-   > [!NOTE]
-   > If the EPM blade shows a banner indicating the capability isn't licensed, return to **Lab 01 prerequisites** and complete the Microsoft Intune Suite trial activation before continuing. EPM requires either an active trial or purchased Microsoft Intune Suite licenses.
+   > [!IMPORTANT]
+   > If the EPM blade shows a licensing banner, return to **Lab 01 prerequisites** and complete the Microsoft Intune Suite trial activation before continuing.
 
 **You have successfully verified Endpoint Privilege Management is available.**
 
@@ -107,7 +107,7 @@ Elevation settings policies define the default elevation behavior for devices �
       - **Reporting scope:** Diagnostic data and managed elevations only (enables the **Elevation report** under the **Reports** tab to populate)
 
    > [!NOTE]
-   > The four elevation responses are **Not Configured**, **Deny all requests**, **Require support approval**, and **Require user confirmation**. "Not Configured" behaves the same as "Deny all requests". Pick `Require user confirmation` for this lab so you can see the EPM prompt later in Task 6 — in production, the security-stronger choice for unknown files is `Deny all requests` paired with explicit elevation rules.
+   > Select `Require user confirmation` for this lab so you can see the EPM prompt later in Task 6. "Not Configured" behaves the same as "Deny all requests".
 
 1. Select **Next**.
 
@@ -137,7 +137,7 @@ Automatic elevation rules allow specific applications to always run elevated wit
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, expand **Privilege Management** and select **Add** to add a new elevation rule.
+1. On the **Configuration settings** tab, expand **Privilege Management**.
 
 1. Select **+ Edit instance**, then in the **Rule properties** pane, configure:
    - **Rule name:** `Elevate Registry Editor`
@@ -152,10 +152,7 @@ Automatic elevation rules allow specific applications to always run elevated wit
      Get-FileHash -Path "C:\Windows\regedit.exe" -Algorithm SHA256
      ```
 
-   > [!NOTE]
-   > File-based rules target specific executables by path. You can also create rules based on file hash, publisher certificate, or product name for more precise targeting.
-
-1. Select **Save** to add the rule.
+1. Select **Save** to add the rule, and then select **Next**.
 
 1. On the **Scope tags** tab, select **Next**.
 
@@ -179,9 +176,9 @@ User-confirmed elevation rules prompt the user to approve elevation (with option
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, expand **Privilege Management** and select **Add** to add a new elevation rule.
+1. On the **Configuration settings** tab, expand **Privilege Management**.
 
-1. In the **Rule properties** pane, configure:
+1. Select **+ Edit instance**, then in the **Rule properties** pane, configure:
    - **Rule name:** `Elevate MSConfig with User Confirmation`
    - **Elevation type:** User confirmed
    - **Validation:** Business justification (require the user to enter a reason)
@@ -189,13 +186,12 @@ User-confirmed elevation rules prompt the user to approve elevation (with option
    - **File path:** `C:\Windows\System32\msconfig.exe`
    - **Signature source:** Not configured
 
-
 1. On **SEA-DEV1**, open an elevated PowerShell window and run the following command to obtain the SHA256 hash for `msconfig.exe`, then copy the hash value into the **File hash** field in the rule properties pane:
      ```powershell
      Get-FileHash -Path "C:\Windows\System32\msconfig.exe" -Algorithm SHA256
      ```
 
-1. Select **Save** → **Next**.
+1. Select **Save**, and then select **Next**.
 
 1. On the **Scope tags** tab, select **Next**.
 
@@ -219,9 +215,9 @@ Support-approved elevation rules require a help desk agent to approve elevation 
 
 1. Select **Next**.
 
-1. On the **Configuration settings** tab, expand **Privilege Management** and select **Add** to add a new elevation rule.
+1. On the **Configuration settings** tab, expand **Privilege Management**.
 
-1. In the **Rule properties** pane, configure:
+1. Select **+ Edit instance**, then in the **Rule properties** pane, configure:
    - **Rule name:** `Elevate Command Prompt with Support Approval`
    - **Elevation type:** Support approved
    - **File name:** `cmd.exe`
@@ -233,14 +229,11 @@ Support-approved elevation rules require a help desk agent to approve elevation 
      Get-FileHash -Path "C:\Windows\System32\cmd.exe" -Algorithm SHA256
      ```   
 
-1. Select **Save** → **Next**
+1. Select **Save**, and then select **Next**
 
 1. On the **Scope tags** tab, select **Next**.
 
 1. On the **Assignments** tab, under **Included groups**, select **Add groups**, search and select `sg-Intune-Pilot-Users` (pilot-first rollout for EPM — same cohort as the blocking ESP, pilot update ring, and Block-mode ASR rules from earlier labs), then select **Next** → **Create**.
-
-> [!NOTE]
-> **Pilot-first EPM rollout.** All three elevation policies target the pilot cohort initially. Watch the **Endpoint privilege management** → **Reports** → **Elevation summary** for a week. Confirm the automatic rule isn't being abused (legitimate registry edits only), the user-confirmed rule's business-justifications look reasonable, and the support-approved rule's request volume is manageable. Then expand each policy's assignment to `dyn-Windows-Devices` (with `sg-Intune-Pilot-Users` excluded). Same pattern as the ASR rollout in Lab 04 Exercise 2.
 
 **You have successfully created a support-approved elevation rule scoped to the pilot cohort.**
 
@@ -248,46 +241,45 @@ Support-approved elevation rules require a help desk agent to approve elevation 
 
 ### Task 6: Test EPM elevation on SEA-DEV3
 
-1. Switch to **SEA-DEV3** (this device should be enrolled with a standard user account, e.g., Alex Wilber). 
+1. Switch to **SEA-DEV3** (this device needs to be Entra joined with a standard user account, e.g. Alex Wilber). 
 
-   > [!NOTE]
-   > If the user is not enrolled yet, sign in with the **Admin** account, select **Settings** → **Accounts** → **Access work or school** → **Connect** → **Join this device to Microsoft Entra ID** and sign in with **AlexW@<TenantPrefix>.OnMicrosoft.com**. Select **Join** and **Done** to complete enrollment. Then sign out and sign back in as **AlexW@<TenantPrefix>.OnMicrosoft.com**. If prompted to set up a PIN, do so.
+1. Sign in with the **Admin** account. 
 
-1. Sign in as **AlexW@<TenantPrefix>.OnMicrosoft.com** (standard user, not a local administrator).
+1. Open **Settings** → **Accounts** → **Access work or school** → **Connect** → **Join this device to Microsoft Entra ID**
 
-1. Force a device sync to apply the EPM policies:
-   - **Settings** → **Accounts** → **Access work or school** → **Connected to Contoso** → **Info** → **Sync**
+1. When prompted, sign in with **MeganB@<TenantPrefix>.OnMicrosoft.com**.
+
+1. Select **Join** and **Done** to complete the Microsoft Entra join.
+
+1. Sign out and sign back in as **AlexW@<TenantPrefix>.OnMicrosoft.com** (who will be a standard user, not a local administrator). If prompted to set up a PIN, do so.
 
 1. Wait 10–15 minutes for policies to apply.
 
    > [!NOTE]
-   > On Windows 11, right-clicking shows the compact context menu. **Run with elevated access** (added by the EPM agent) normally appears there directly. If you don't see it, select **Show more options** (or press **Shift+F10**) to open the full menu. If it's still missing, the elevation settings policy hasn't finished applying to the device yet — sync the device and wait a few minutes before retrying.
+   > If **Run with elevated access** doesn't appear, select **Show more options** or press **Shift+F10**. If it's still missing, sync the device and wait a few minutes before retrying.
 
 1. Test **automatic elevation** (Registry Editor):
    - Open the **Start menu** and search for `regedit`
    - Select **Open file location**
-   - Select **Registry Editor**, right click and select **Run with elevated access** to launch **Registry Editor**
-   - Enter a business justification (e.g., "Testing automatic elevation") and select **Continue** to approve
+   - Select **Registry Editor**, right-click and select **Run with elevated access** to launch **Registry Editor**
    - **Expected behavior:** The app launches elevated without prompting (automatic elevation rule applied)
 
 1. Test **user-confirmed elevation** (MSConfig):
    - Open the **Start menu** and search for `msconfig`
    - Select **Open file location**
-   - Select **System Configuration**, right click and select **Run with elevated access** to launch **System Configuration**
+   - Select **System Configuration**, right-click and select **Run with elevated access** to launch **System Configuration**
    - **Expected behavior:** A prompt appears asking the user to confirm elevation and provide business justification
-   - Enter a justification (e.g., "Troubleshooting startup issues") and select **Continue** to approve
+   - Enter a justification (e.g., `Troubleshooting startup issues`) and select **Continue** to approve
 
 1. Test **support-approved elevation** (Command Prompt):
    - Open the **Start menu** and search for `cmd`
    - Select **Open file location**
    - Right-click **Command Prompt** and select **Run with elevated access**
-   - Enter a business justification (e.g., "Need elevated command prompt for script execution") and select **Continue**
+   - Enter a business justification (e.g., `Need elevated command prompt for script execution`) and select **Continue**
    - **Expected behavior:** A prompt appears indicating the request is pending help desk approval.
 
    > [!NOTE]
-   > In a production environment, a help desk agent would see the elevation request in the **Endpoint privilege management** dashboard and approve or deny it remotely.
-   >
-   > If Command Prompt opens elevated instead of prompting for approval, the support-approved rule hasn't reached the device yet. Confirm the **EPM Rules - Support Approved Elevation** policy shows a **Success** check-in for SEA-DEV3 (**Policies** → select the policy → **View report**), sync the device, and test again. If it still doesn't work after a few minutes, continue to the next task.
+   > If Command Prompt opens elevated instead of prompting for approval, confirm the **EPM Rules - Support Approved Elevation** policy shows a **Success** check-in for SEA-DEV3 (**Policies** → select the policy → **View report**), sync the device, and test again. If it still doesn't work after a few minutes, continue to the next task.
 
 **You have successfully tested EPM elevation scenarios.**
 
@@ -297,22 +289,15 @@ Support-approved elevation rules require a help desk agent to approve elevation 
 
 1. On **SEA-DEV1**, in the **Microsoft Intune admin center**, navigate to **Endpoint security** → **Endpoint Privilege Management** → **Reports**.
 
-1. Select **Elevation report** tile.
+1. Review the available reports by selecting each tile.
+   - **Elevation report:** Review all elevation activity
+   - **Managed elevations report:** Review elevations managed by policy
+   - **Elevation report by applications:** See all elevations grouped by application
+   - **Elevation report by publisher:** See all elevations for the same signed publisher
+   - **Elevation report by user:** See all elevations by each user
 
-1. Review the report data:
-   - **Total elevations:** Count of all elevation requests
-   - **Automatic elevations:** Count of automatic approvals
-   - **User-confirmed elevations:** Count of user-approved requests
-   - **Support-approved elevations:** Count of help desk-approved requests
-   - **Denied elevations:** Count of blocked requests
-
-1. Select **Elevation details** to view individual elevation events:
-   - **Device name**
-   - **User name**
-   - **Application name**
-   - **Elevation type**
-   - **Timestamp**
-   - **Business justification** (if provided)
+   > [!NOTE]
+   > EPM report data can be delayed because the data is processed once every 24 hours.
 
 **You have successfully monitored EPM elevation reports.**
 
@@ -345,7 +330,7 @@ Remote Help provides secure, audited remote assistance for enrolled devices. IT 
 
 Remote Help requires Microsoft Intune Suite licensing.
 
-1. In **Microsoft Edge**, navigate to **https://admin.cloud.microsoft.com**.
+1. In **Microsoft Edge**, navigate to **`https://admin.cloud.microsoft`**.
 
 1. Sign in as **admin@<TenantPrefix>.onmicrosoft.com**.
 
@@ -359,14 +344,35 @@ Remote Help requires Microsoft Intune Suite licensing.
 
 1. Repeat for **Joni Sherman** (sharer role—end user receiving help) and for **Lee Gu** (Pharmacy Helpdesk role).
 
-   > [!NOTE]
-   > Both the helper (IT admin) and sharer (end user) require Remote Help licensing.
-
 **You have successfully assigned Remote Help licenses.**
 
 ---
 
 ### Task 3: Deploy the Remote Help app
+
+   > [!IMPORTANT]
+   > If your lab host provided the required .intunewin file, skip to step 5.
+
+1. In **Microsoft Edge**, open a new tab and navigate to **`https://aka.ms/downloadremotehelp`**.
+
+1. Move the downloaded installer into the LabAssets folder created in Lab 03:
+
+   ```powershell
+   Move-Item "$env:USERPROFILE\Downloads\remotehelp*.exe" "C:\LabAssets\Win32-App\Source\remotehelpinstaller.exe"
+   Get-ChildItem "C:\LabAssets\Win32-App\Source\remotehelpinstaller.exe"
+   ```
+
+1. Navigate to the Win32 Content Prep Tool directory:
+
+   ```powershell
+   cd "C:\Program Files\IntuneWinAppUtil"
+   ```
+
+1. Run the content prep tool to package the app:
+
+   ```powershell
+   .\IntuneWinAppUtil.exe -c "C:\LabAssets\Win32-App\Source" -s "remotehelpinstaller.exe" -o "C:\LabAssets\Win32-App\Output"
+   ```
 
 1. In the **Microsoft Intune admin center**, navigate to **Apps** → **All apps**.
 
@@ -374,21 +380,16 @@ Remote Help requires Microsoft Intune Suite licensing.
 
 1. In the **Select app type** pane, set **Platform** to **Windows** and **App type** to **Windows app (Win32)**. Select **Select**.
 
-   > [!NOTE]
-   > Remote Help can also be deployed as a Microsoft Store app or pre-installed via OEM/image. For lab purposes, we'll deploy as a Win32 app.
-
 1. On the **App information** page, select **Select app package file**.
 
-1. On the **App package file** pane, select the folder icon and locate the Remote Help installer (provided by your lab environment or download from **https://aka.ms/downloadremotehelp**).
-
-1. Upload the `.intunewin` package (if pre-packaged) or the `.msi` installer.
+1. On the **App package file** pane, select the folder icon and upload the `.intunewin` file.
 
 1. Select **OK**.
 
 1. On the **App information** tab, enter:
    - **Name:** `Remote Help`
    - **Description:** `Secure remote assistance app for enrolled devices`
-   - **Publisher:** Microsoft Corporation
+   - **Publisher:** `Microsoft Corporation`
 
 1. Select **Next**.
 
@@ -423,7 +424,7 @@ Remote Help requires Microsoft Intune Suite licensing.
 ### Task 4: Initiate a Remote Help session
 
 > [!NOTE]
-> If the **Remote Help** sign-in prompt shows **"Device must comply with your organization's compliance requirements":** on TPM-less lab VMs, the **Require encryption of data storage on device** compliance setting fails and marks the device noncompliant. Set it to **Not configured** in **both** the **Graph API - Windows Compliance Policy** and the **Compliance - Windows Security Baseline** (**Devices** → **Compliance** → **Graph API - Windows Compliance Policy** → **Properties** → **Compliance settings** → **System Security** → set **Require encryption of data storage on device** to **Not configured** → **Review + save**.), then **Sync** each device and confirm it shows **Compliant**.
+> If the **Remote Help** sign-in prompt shows **"Device must comply with your organization's compliance requirements"**, set **Require encryption of data storage on device** to **Not configured** in both the **Graph API - Windows Compliance Policy** and the **Compliance - Windows Security Baseline**. Then **Sync** each device and confirm it shows **Compliant**.
 
 1. On **SEA-DEV1** (helper device—Megan Bowen), wait for Remote Help to install.
 
@@ -435,7 +436,7 @@ Remote Help requires Microsoft Intune Suite licensing.
 
 1. In the Remote Help app, under **Give help**, select **Get a security code**.
 
-1. A 6-digit help code is displayed (e.g., `123-456`).
+1. A 6-digit security code is displayed (e.g., `123ABC`).
 
 1. Switch to **SEA-DEV2** (sharer device—Joni Sherman) and sign in as **JoniS@<TenantPrefix>.OnMicrosoft.com**.
 
@@ -453,9 +454,6 @@ Remote Help requires Microsoft Intune Suite licensing.
 
 1. On **SEA-DEV2**, select **Allow**. Megan can now view Joni's desktop.
 
-   > [!NOTE]
-   > By default, Remote Help provides view-only access. Megan can request full control by selecting **Request control** in the Remote Help toolbar. Joni must approve the full control request.
-
 1. Switch back to **SEA-DEV1** and test the remote actions:
    - Megan can use chat to communicate with Joni
    - Megan can request control to interact with applications
@@ -471,9 +469,6 @@ Remote Help requires Microsoft Intune Suite licensing.
 
 1. In the **Microsoft Intune admin center**, navigate to **Tenant administration** → **Remote Help**.
 
-   > [!NOTE]
-   > The page opens on the **Monitor** tab by default. The three tabs are **Monitor** (current sessions, average session time, total sessions), **Settings** (where you enabled Remote Help in Task 1), and **Remote Help sessions** (per-session audit log).
-
 1. Select the **Remote Help sessions** tab.
 
 1. Review the session log columns:
@@ -485,16 +480,13 @@ Remote Help requires Microsoft Intune Suite licensing.
    - **Session start**
    - **Session end**
 
-   > [!NOTE]
-   > Session logs provide an audit trail for compliance and security reviews. All actions during the session are logged.
-
 **You have successfully reviewed Remote Help session logs.**
 
 ---
 
 ### Task 6: Demonstrate Pharmacy Helpdesk Remote Help scope
 
-The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** grants Read + remote-task permissions (including **Sync devices**, **Restart now**, **Collect diagnostics**) scoped to objects tagged **Pharmacy**. Remote Help inherits the same scope: Lee Gu can initiate a Remote Help session against Pharmacy-tagged devices, but not against devices outside her scope. This is the upper-intermediate "delegated remote-assistance" pattern.
+The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** grants Read, **Remote Help app**, **Remote assistance connectors: Read**, and remote-task permissions (including **Offer remote assistance**, **Sync devices**, **Restart now**, and **Collect diagnostics**) scoped to objects tagged **Pharmacy**. Remote Help inherits the same scope: Lee Gu can initiate a Remote Help session against Pharmacy-tagged devices, but not against devices outside his scope. This is the upper-intermediate "delegated remote-assistance" pattern.
 
 1. Open a new **InPrivate** or **Incognito** browser window. Navigate to **https://intune.microsoft.com**.
 
@@ -503,20 +495,17 @@ The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** gra
 1. In the Intune admin center as Lee Gu, navigate to **Devices** → **All devices**.
 
    > [!NOTE]
-   > Lee Gu sees only devices that are in `dyn-Windows-Devices` and are tagged with the Pharmacy scope tag (per the role assignment configured in Lab 05 Exercise 3 Task 3). Depending on which devices you tagged with Pharmacy when you created them, this list may be smaller than what your Global Admin sees.
+   > Lee Gu sees only devices in `dyn-Windows-Devices` that have the Pharmacy scope tag. This list may be smaller than what your Global Admin sees.
 
 1. Select a Pharmacy-tagged device (e.g., **SEA-DEV1** tagged with **Pharmacy**).
 
-1. In the device blade, locate the **New remote assistance session** option (toolbar or device actions menu).
+1. In the device blade, select **Remote actions**, and then select **Begin a remote assistance session**.
 
 1. Confirm Lee Gu can initiate the Remote Help session. The session opens in the Remote Help client — same flow as Task 4 above.
 
 1. End the session.
 
-1. Now try to select a device that's not Pharmacy-tagged (Lee Gu won't see one in her list, so this is a thought experiment): if such a device existed in her view, she would lack the **New remote assistance session** option because the role's scope tag intersection excludes it.
-
-   > [!NOTE]
-   > **The takeaway.** Scope tags on a custom role aren't just for the Configuration / Compliance / Apps surfaces — they apply to **remote-task operations** like Sync, Restart, and Remote Help. That's what makes scope-tag-based delegation actually safe: the Pharmacy Helpdesk physically cannot help (or accidentally disrupt) devices outside her domain.
+1. Now try to select a device that's not Pharmacy-tagged (Lee Gu won't see one in his list, so this is a thought experiment): if such a device existed in his view, he would lack the **Begin a remote assistance session** option because the role's scope tag intersection excludes it.
 
 1. Sign out of the InPrivate window.
 
@@ -528,43 +517,41 @@ The `Pharmacy Helpdesk` role assigned to **Lee Gu** in **Lab 05 Exercise 3** gra
 
 ### Scenario
 
-**Advanced Analytics** (part of the Intune Suite) provides ML-powered insights into device performance, anomaly detection, and resource utilization. **Device Query** uses Kusto Query Language (KQL) to run ad-hoc queries against Windows device telemetry — either against a single device (live) or across many devices. This is the upper-intermediate replacement for "please run remote desktop and check" — a delegated admin can answer real support questions without ever touching a user's device.
+**Advanced Analytics** (part of Intune Suite and other eligible Intune advanced capability licenses) provides ML-powered insights into device performance, anomaly detection, and resource utilization. **Device Query** uses Kusto Query Language (KQL) to run ad-hoc queries against Windows device telemetry — either against a single device (live) or across many devices. This is the upper-intermediate replacement for "please run remote desktop and check" — a delegated admin can answer real support questions without ever touching a user's device.
 
-The Intune Suite trial (activated in **Lab 01** prerequisites) includes Advanced Analytics, so this exercise is fully hands-on.
+The Intune Suite trial activated in **Lab 01** includes Advanced Analytics, so this exercise is fully hands-on.
 
 > [!IMPORTANT]
-> **Device prerequisite for Device Query.** A device must be **enrolled in Endpoint Analytics** before it shows up in Device Query results. Endpoint Analytics enrollment is enabled tenant-wide via **Reports** → **Endpoint analytics** → **Settings**. If you completed **Lab 02 Exercise 5 Task 1** (Enable Endpoint analytics), your devices are already enrolled and ready.
+> Device Query requires an active Intune Suite trial or another license that includes Intune Advanced Analytics. The device must also be enrolled in Endpoint Analytics.
 
 > [!NOTE]
-> **Empty results are normal on a fresh tenant.** Until at least one Windows device has actually checked in to Endpoint Analytics, every multi-device Device Query in Task 3 will return **0 items**. The Get started → Prerequisites pane on the Device Query page repeats this: *"For a device to appear in device queries, it must be enrolled in Endpoint Analytics."* If your SEA-DEV1/SEA-DEV2 haven't checked in yet, run a single-device query against the device blade (Task 2) instead — those run live and don't depend on the Endpoint Analytics catalog.
+> Empty results are normal on a fresh tenant until a Windows device checks in to Endpoint Analytics and returns the required inventory.
 
 > [!NOTE]
-> **Telemetry latency.** Advanced Analytics dashboards (anomaly detection, resource performance, battery health) need approximately **24 hours of device telemetry** to populate meaningfully. Device Query, by contrast, runs against the device's **live state** and returns results within seconds. If your SEA-DEV1/SEA-DEV2 devices were enrolled less than 24 hours ago, the dashboards in Task 1 may show "Insufficient data" — Tasks 2 and 3 (Device Query) will still work.
+> Advanced Analytics dashboards need approximately **24 hours of device telemetry** to populate. If SEA-DEV1 or SEA-DEV2 was enrolled less than 24 hours ago, Task 1 may show "Insufficient data".
 
 ### Task 1: Review Advanced Analytics dashboards
 
 1. In the **Microsoft Intune admin center**, navigate to **Reports** → **Analytics** → **Endpoint analytics**.
 
-1. Select **Start** to open the **Advanced Analytics**.
-
-1. Review the **Anomalies** dashboard:
+1. Select the **Anomalies** tab and review the dashboard:
    - **Device anomalies:** Devices exhibiting unusual behavior (high CPU, frequent crashes, app hangs)
    - **User anomalies:** Users experiencing degraded experience scores
    - **Application anomalies:** Apps with high crash rates or slow start times
 
    > [!NOTE]
-   > Anomaly detection uses ML to identify outliers from each device's own historical baseline (not a fleet-wide threshold). On a new lab device with limited history you may see empty panels or a status banner; that's expected.
+   > On a new lab device with limited history, you may see empty panels or a status banner. That's expected.
 
-1. Review the **Resource performance** dashboard:
+1. Under **Reports**, select **Resource performance** and review the dashboard:
    - **CPU performance:** Devices with sustained high CPU utilization
    - **Memory performance:** Devices with memory pressure (page faults, working-set pressure)
    - **Disk performance:** Devices with slow disk I/O
 
-1. Review the **Battery health** dashboard (if mobile devices are enrolled):
+1. Under **Reports**, select **Battery health** and review the dashboard (if mobile devices are enrolled):
    - **Battery capacity degradation:** Devices with reduced battery health vs. designed capacity
    - **Charging behavior:** Frequent charging cycles
 
-**You have successfully reviewed the Advanced Analytics dashboards.**
+**You have successfully reviewed the Advanced Analytics reports.**
 
 ---
 
@@ -586,14 +573,13 @@ Single-device Device Query runs a KQL query against one Windows device's live st
 1. Select **Run**. Results appear in the **Results** tab within a few seconds.
 
    > [!NOTE]
-   > Single-device Device Query has a **15 queries / minute** rate limit per admin and a **2048-character** query input limit. The result set is capped at 128 KB.
+   > Single-device Device Query has a **15 queries / minute** rate limit per admin, a **2048-character** query input limit, and a 128 KB result limit.
 
 1. Replace the query with this one to check BitLocker encryption status on SEA-DEV1's drives:
 
    ```kusto
    EncryptableVolume
-   | project Device, DriveLetter, ProtectionStatus, ConversionStatus, EncryptionMethod
-   | join LogicalDrive on Device
+   | project VolumeId, WindowsDriveLetter, ProtectionStatus, EncryptionMethod
    ```
 
 1. Select **Run**. Confirm SEA-DEV1's OS drive shows **PROTECTED** — this verifies the BitLocker policy from **Lab 04 Exercise 3** is actively encrypting the drive (rather than just "assigned" in the Intune portal).
@@ -602,7 +588,7 @@ Single-device Device Query runs a KQL query against one Windows device's live st
 
    ```kusto
    OsVersion
-   | project Device, OsVersion, OsBuildNumber, OsArchitecture
+   | project OsVersion, BuildVersion, Architecture
    ```
 
 1. Select **Run**. Confirm SEA-DEV1 is running the Windows 11 24H2 build you pinned via the Feature update profile in **Lab 02 Exercise 4**.
@@ -617,10 +603,22 @@ Multi-device Device Query runs one KQL query across every Windows device in your
 
 1. In the **Microsoft Intune admin center**, navigate to **Devices** → **Device query**.
 
-   > [!NOTE]
-   > This is the **multi-device** Device Query surface (Devices → Device query at the top of the **Manage devices** group is not present — it's a top-level item under **Devices**). It's distinct from the single-device Device Query you used in Task 2 (Devices → Windows → *device* → Monitor → Device query).
+1. Below the empty query window, select **Get started** and then scroll down to the **Example queries** section and browse the pre-built samples. Microsoft maintains this list — it's the fastest way to learn the supported tables and operators.
 
-1. Expand the **example queries** section under **Getting started** on the left, and browse the pre-built samples. Microsoft maintains this list — it's the fastest way to learn the supported tables and operators.
+1. If you haven't already deployed the required properties catalog policy, navigate to **Devices** → **Manage devices** → **Configuration** → **Create** → **New Policy**. Set **Platform** to **Windows 10 and later**, set **Profile type** to **Properties catalog**, and then select **Create**.
+
+1. On the **Basics** page, enter:
+   - **Name:** `Device Query Properties Catalog`
+   - **Description:** `Collects properties required for Device Query labs`
+
+1. Select **Next**. On the **Configuration properties** page, select **Add properties**. In the **Properties picker**, add **CPU**, **Encryptable Volume**, **Logical Drive**, and **OS Version**.
+
+1. Select **Next**. On the **Scope tags** page, select **Next**.
+
+1. On the **Assignments** page, add the **All devices** group. Select **Next**, and then on the **Review + create** page, select **Create**.
+
+   > [!NOTE]
+   > Initial inventory collection can take up to 24 hours. If the query returns no data, wait for the properties catalog profile to apply and for devices to check in.
 
 1. Enter and run this query to find every Windows device that is **not** BitLocker-encrypted — the canonical "these devices need attention now" query:
 
@@ -628,25 +626,23 @@ Multi-device Device Query runs one KQL query across every Windows device in your
    EncryptableVolume
    | where ProtectionStatus != "PROTECTED"
    | join LogicalDrive on Device
+   | distinct Device
    ```
 
 1. Select **Run**. The Results tab returns one row per affected device.
 
 1. With results on screen, select **Add all items to a group** from the top of the Results tab. In the dialog, name the new group `sg-Devices-Unencrypted` (description: *Devices identified by Device Query as not BitLocker-encrypted*). Select **Create group**.
 
-   > [!NOTE]
-   > **This is the upper-intermediate move.** Instead of building a dynamic device group based on a rough attribute (e.g., "deviceCategory eq 'Laptop'"), you can query the actual on-device state and turn the result into a real, addressable Microsoft Entra security group. Use it to target a remediation script, a stricter compliance policy, or a Conditional Access "block until compliant" enforcement.
-
 1. Run a second query to find devices running an OS build older than your fleet target (Windows 11 24H2 — build number `26100`):
 
    ```kusto
    OsVersion
-   | where OsBuildNumber < 26100
-   | project Device, OsVersion, OsBuildNumber
-   | order by OsBuildNumber asc
+   | where toint(BuildVersion) < 26100
+   | project Device, OsVersion, BuildVersion
+   | order by BuildVersion asc
    ```
 
-1. Select **Run**. This is your "hasn't taken the feature update yet" working list — useful for chasing devices that fall behind the Feature update profile you created in **Lab 02 Exercise 4**.
+1. Select **Run**. This is your "hasn't taken the feature update yet" working list — useful for chasing devices that fall behind the Feature update profile you created in **Lab 02 Exercise 4**. An empty result means all queried devices are at or above the target build.
 
 1. Run a third query to summarize the fleet by processor architecture (a quick "who has ARM64 devices" inventory):
 
@@ -657,10 +653,7 @@ Multi-device Device Query runs one KQL query across every Windows device in your
 
 1. Select **Run**. The Results tab shows a summary row per architecture.
 
-1. Select **Export** to save the result set as CSV — useful for handing a hardware inventory to procurement or for ticketing-system import.
-
-   > [!NOTE]
-   > Multi-device Device Query results respect **scope tags**. When Lee Gu (the **Pharmacy Helpdesk** delegated admin assigned in **Lab 05 Exercise 3**) runs these same queries, the results are automatically filtered to only the Pharmacy-tagged devices in her scope. Delegated admins can answer support questions about their own devices without ever seeing the rest of the tenant.
+1. Select **Export** to save the result set as CSV — useful for handing a hardware inventory to procurement or for ticketing-system import. Because this query returns aggregate rows, **Add all items to a group** isn't shown.
 
 **You have successfully run multi-device Device Query and converted a query result into a Microsoft Entra security group.**
 
@@ -673,11 +666,11 @@ Multi-device Device Query runs one KQL query across every Windows device in your
 Windows 365 provides cloud-hosted Windows desktops (Cloud PCs) that users access via browser or Remote Desktop client. You'll review the provisioning process and understand how Cloud PCs integrate with Intune.
 
 > [!NOTE]
-> Windows 365 provisioning requires an Azure subscription and additional licensing. This exercise is a **guided demonstration** of the provisioning workflow.
+> Windows 365 provisioning requires an Azure subscription and additional licensing. This exercise is a guided demonstration.
 
 ### Task 1: Review Windows 365 provisioning policy (demonstration)
 
-1. In the **Microsoft Intune admin center**, navigate to **Devices** → **Windows** → **Windows 365** → **Provisioning policies**.
+1. In the **Microsoft Intune admin center**, navigate to **Devices** → **Manage Windows 365 Cloud PCs** → **Provisioning Cloud PCs**.
 
    > [!NOTE]
    > If Windows 365 is not available in your tenant, review the following steps conceptually.
@@ -743,7 +736,7 @@ Windows 365 provides cloud-hosted Windows desktops (Cloud PCs) that users access
 Azure Virtual Desktop (AVD) provides multi-session Windows desktops for virtual desktop infrastructure (VDI) scenarios. You'll review how AVD session hosts can be enrolled in Intune for policy management.
 
 > [!NOTE]
-> AVD session host enrollment requires an Azure subscription and AVD deployment. This exercise is a **guided demonstration**.
+> AVD session host enrollment requires an Azure subscription and AVD deployment. This exercise is a guided demonstration.
 
 ### Task 1: Understand AVD session host enrollment (demonstration)
 
