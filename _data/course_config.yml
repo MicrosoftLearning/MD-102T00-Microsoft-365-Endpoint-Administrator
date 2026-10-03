@@ -11,7 +11,7 @@ sections:
     glob: Instructions/Labs/Lab*.md
     front_matter_key: lab
     groups:
-      - title: "MD-102: Manage and secure Microsoft 365 endpoints by using Intune"
+      - title: MD-102 labs
         default: true
         learn_url: https://learn.microsoft.com/training/courses/md-102t00
         learn_title: Course MD-102

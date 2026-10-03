@@ -5,7 +5,7 @@ sections:
   title: Labs
   item_label: Lab
   groups:
-  - title: 'MD-102: Manage and secure Microsoft 365 endpoints by using Intune'
+  - title: MD-102 labs
     learn_url: https://learn.microsoft.com/training/courses/md-102t00
     minutes: 590
     items:
