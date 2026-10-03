@@ -1,0 +1,126 @@
+---
+layout: default
+---
+{%- comment -%}
+Course layout for lab guides and the getting-started page. It keeps the theme's
+navigation bar, footer, "On this page" list, and code copy buttons (theme script.js),
+and adds a course rail: lab details, files for the lab, all labs, and previous/next links.
+Navigation data comes from _data/course.yml, which tools/check_labs.py generates.
+{%- endcomment -%}
+{%- assign course = site.data.course -%}
+{%- assign current = nil -%}
+{%- assign current_group = nil -%}
+{%- assign prev_item = nil -%}
+{%- assign next_item = nil -%}
+{%- assign first_item = nil -%}
+{%- for section in course.sections -%}
+  {%- assign last_item = nil -%}
+  {%- assign found = false -%}
+  {%- for group in section.groups -%}
+    {%- for item in group.items -%}
+      {%- if first_item == nil -%}{%- assign first_item = item -%}{%- endif -%}
+      {%- if found and next_item == nil -%}{%- assign next_item = item -%}{%- endif -%}
+      {%- if item.file == page.path -%}
+        {%- assign current = item -%}
+        {%- assign current_group = group -%}
+        {%- assign prev_item = last_item -%}
+        {%- assign found = true -%}
+      {%- endif -%}
+      {%- assign last_item = item -%}
+    {%- endfor -%}
+  {%- endfor -%}
+  {%- if found -%}{%- break -%}{%- endif -%}
+{%- endfor -%}
+{%- assign is_start = false -%}
+{%- if course.getting_started != "" and page.path == course.getting_started -%}
+  {%- assign is_start = true -%}{%- assign next_item = first_item -%}
+{%- endif -%}
+{%- assign start_url = course.getting_started | replace: '.md', '.html' | prepend: '/' -%}
+<body data-spy="scroll" data-target="#linksMenu" class="course-site">
+    <link rel="stylesheet" href="{{ '/assets/course/course.css' | relative_url }}?v={{ site.github.build_revision }}">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-gray d-print-none">
+        <div class="container d-flex justify-content-between">
+            <span class="my-1 title text-black">{{ site.title }}</span>
+            <a href="{{ '/' | relative_url }}" class="course-home-link">All labs</a>
+        </div>
+    </nav>
+    <div class="container course-container">
+        <main class="row">
+            <aside class="col-lg-3 course-rail d-print-none" aria-label="Course navigation">
+                <div class="rail-sticky">
+                    {%- if current %}
+                    <section class="rail-card" aria-label="About this lab">
+                        <div class="rail-eyebrow">{{ current_group.title }}</div>
+                        <div class="rail-title">{{ current.label }}</div>
+                        <div class="rail-badges">
+                            {%- if current.minutes %}<span class="course-badge course-badge-time">{{ current.minutes }} minutes</span>{% endif %}
+                            {%- if current.level %}<span class="course-badge">Level {{ current.level }}</span>{% endif %}
+                        </div>
+                        {%- if current.files.size > 0 %}
+                        <div class="rail-heading">Files for this lab</div>
+                        <ul class="rail-files">
+                            {%- for f in current.files %}
+                            <li><span class="rail-file-name">{{ f | split: '/' | last }}</span><span class="rail-file-path">{{ f }}</span><a href="{{ '/' | append: f | relative_url }}" download>Download</a></li>
+                            {%- endfor %}
+                        </ul>
+                        {%- endif %}
+                    </section>
+                    {%- endif %}
+                    <nav id="linksMenu" class="toc rail-toc" aria-label="On this page">
+                        <div class="rail-heading">On this page</div>
+                        <ul class="nav navbar-nav flex-column"></ul>
+                    </nav>
+                    <details class="rail-labs"{% if current == nil %} open{% endif %}>
+                        <summary>All labs</summary>
+                        {%- if course.getting_started != "" %}
+                        <a class="rail-lab{% if is_start %} is-current{% endif %}" href="{{ start_url | relative_url }}"{% if is_start %} aria-current="page"{% endif %}>Get started</a>
+                        {%- endif %}
+                        {%- for section in course.sections %}
+                        {%- for group in section.groups %}
+                        <div class="rail-lp">{{ group.title }}</div>
+                        {%- for item in group.items %}
+                        <a class="rail-lab{% if item.file == page.path %} is-current{% endif %}" href="{{ item.url | relative_url }}"{% if item.file == page.path %} aria-current="page"{% endif %}>{{ item.title }}</a>
+                        {%- endfor %}
+                        {%- endfor %}
+                        {%- endfor %}
+                    </details>
+                </div>
+            </aside>
+            <article class="col-lg-9 mb-5 course-article">
+                {{ content }}
+                {%- if current or is_start %}
+                <nav class="course-pager d-print-none" aria-label="Previous and next lab">
+                    {%- if prev_item %}
+                    <a class="pager-link pager-prev" href="{{ prev_item.url | relative_url }}"><span>Previous lab</span>{{ prev_item.title }}</a>
+                    {%- elsif current and course.getting_started != "" %}
+                    <a class="pager-link pager-prev" href="{{ start_url | relative_url }}"><span>Previous</span>Get started</a>
+                    {%- else %}<span></span>{%- endif %}
+                    {%- if next_item %}
+                    <a class="pager-link pager-next" href="{{ next_item.url | relative_url }}"><span>Next lab</span>{{ next_item.title }}</a>
+                    {%- endif %}
+                </nav>
+                {%- endif %}
+            </article>
+        </main>
+    </div>
+    <footer class="fixed-bottom d-print-none">
+        <nav class="navbar navbar-light bg-light d-flex justify-content-around">
+            <span class="navbar-text">
+                &copy; {{ site.time | date: '%Y' }} Microsoft &nbsp;|&nbsp;
+                <a href="https://go.microsoft.com/fwlink/?LinkId=521839">Privacy</a>&nbsp;|&nbsp;
+                <a href="https://go.microsoft.com/fwlink/?LinkId=2259814">Consumer Health Privacy</a>&nbsp;|&nbsp;
+                <a href="https://go.microsoft.com/fwlink/?LinkID=206977">Terms of Use</a>&nbsp;|&nbsp;
+                <a href="https://www.microsoft.com/trademarks">Trademarks</a>&nbsp;|&nbsp;
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <a href="{{ site.github.repository_url }}" target="_blank" class="ml-2">Source</a>
+            </span>
+        </nav>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="{{ '/assets/course/course.js' | relative_url }}?v={{ site.github.build_revision }}"></script>
+    <script src="{{ '/assets/js/script.js?v=' | append: site.github.build_revision | relative_url }}"></script>
+</body>

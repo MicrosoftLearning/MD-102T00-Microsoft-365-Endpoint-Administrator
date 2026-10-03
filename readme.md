@@ -33,3 +33,9 @@
 ### Classroom Materials
 
 It is strongly recommended that MCTs and Partners access these materials and in turn, provide them separately to students.  Pointing students directly to GitHub to access Lab steps as part of an ongoing class will require them to access yet another UI as part of the course, contributing to a confusing experience for the student. An explanation to the student regarding why they are receiving separate Lab instructions can highlight the nature of an always-changing cloud-based interface and platform. Microsoft Learning support for accessing files on GitHub and support for navigation of the GitHub site is limited to MCTs teaching this course only.
+
+## Lab site and content checks
+
+The lab site is published with GitHub Pages from this repo. It uses a course layout in `_layouts/lab.html` and `assets/course`, and its navigation in `_data/course.yml` is generated from the lab files.
+
+After you add or change a lab, run `python tools/check_labs.py --write` (requires Python and PyYAML). It updates the site navigation and checks front matter, links, and lab files. Course settings, such as groups and Microsoft Learn links, are in `_data/course_config.yml`. The same checks and a site build run in GitHub Actions on every pull request.

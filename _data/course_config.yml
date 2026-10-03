@@ -1,0 +1,17 @@
+github_repo: MicrosoftLearning/MD-102T00-Microsoft-365-Endpoint-Administrator
+default_branch: main
+getting_started: Instructions/Labs/00-getting-started.md
+intro: These hands-on labs give you practice managing and securing Microsoft 365 endpoints with Microsoft Intune, from identity and enrollment through apps, protection, automation, and Intune Suite capabilities. They complement course MD-102 on Microsoft Learn.
+start_prompt: Read about the lab VMs, the AllFiles (F:) drive, and how the labs build on each other.
+totals_note: Complete Lab 01 first. Later labs build on its configuration.
+sections:
+  - id: labs
+    title: Labs
+    item_label: Lab
+    glob: Instructions/Labs/Lab*.md
+    front_matter_key: lab
+    groups:
+      - title: MD-102 labs
+        default: true
+        learn_url: https://learn.microsoft.com/training/courses/md-102t00
+        learn_title: Course MD-102

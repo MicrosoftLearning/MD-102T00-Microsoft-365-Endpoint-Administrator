@@ -1,7 +1,9 @@
 remote_theme: MicrosoftLearning/Jekyll-Theme
+title: 'MD-102: Microsoft 365 Endpoint Administrator'
 exclude:
   - readme.md
   - .github/
+  - tools/
 header_pages:
   - index.html
 author: Microsoft Learning
@@ -13,5 +15,12 @@ plugins:
   - jemoji
 markdown: kramdown
 kramdown:
-   syntax_highlighter_opts:
-      disable : true
+  input: GFM
+  syntax_highlighter_opts:
+    disable: true
+# Lab guides and the getting-started page use the course layout.
+defaults:
+  - scope:
+      path: "Instructions/Labs"
+    values:
+      layout: lab
