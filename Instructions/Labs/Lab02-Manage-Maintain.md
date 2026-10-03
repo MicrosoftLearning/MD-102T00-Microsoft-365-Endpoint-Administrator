@@ -516,21 +516,16 @@ Contoso has existing Group Policy Objects (GPOs) from an on-premises Active Dire
 
 ### Task 1: Import a Group Policy backup
 
-1. On **SEA-DEV1**, download the GPO backup file from the course's GitHub lab repository into `C:\LabAssets\GPO-Backups\`.
-
-   Open an elevated **Terminal (Admin)** window (right-click Start → Terminal (Admin); Windows Terminal opens a PowerShell tab by default) and run:
+1. On **SEA-DEV1**, open an elevated **Terminal (Admin)** window (right-click Start → Terminal (Admin); Windows Terminal opens a PowerShell tab by default), and copy the GPO backup file from the **AllFiles (F:)** drive into `C:\LabAssets\GPO-Backups\`:
 
    ```powershell
    $dest = "C:\LabAssets\GPO-Backups"
    New-Item -Path $dest -ItemType Directory -Force | Out-Null
-   $url = "https://raw.githubusercontent.com/MicrosoftLearning/MD-102T00-Microsoft-365-Endpoint-Administrator/master/Instructions/Labs/Assets/GPO_Desktop_Settings.xml"
-   Invoke-WebRequest -Uri $url -OutFile "$dest\GPO_Desktop_Settings.xml"
+   Copy-Item -Path "F:\GPO_Desktop_Settings.xml" -Destination $dest
    ```
 
-   Alternatively, download it in the browser: open [Instructions/Labs/Assets/GPO_Desktop_Settings.xml](https://github.com/MicrosoftLearning/MD-102T00-Microsoft-365-Endpoint-Administrator/blob/master/Instructions/Labs/Assets/GPO_Desktop_Settings.xml) on GitHub, select **Download raw file**, and save it to `C:\LabAssets\GPO-Backups\`.
-
    > [!NOTE]
-   > If the GPO backup file already exists in `C:\LabAssets\GPO-Backups\`, skip the download and use that copy.
+   > If you aren't using the hosted lab environment, download [GPO_Desktop_Settings.xml](../../Allfiles/GPO_Desktop_Settings.xml) and save it to `C:\LabAssets\GPO-Backups\`.
 
 1. In the **Microsoft Intune admin center**, select **Devices**, then under **Manage devices** select **Group Policy analytics**.
 
@@ -872,49 +867,11 @@ Remediations run PowerShell scripts on devices to detect and fix issues automati
 1. Select **Next**.
 
 1. On the **Settings** page, configure:
-   - **Detection script file:** Select **Select a file**, then browse and navigate to `C:\LabAssets\Remediations\Detect-TempFiles.ps1` (provided in lab assets).
+   - **Detection script file:** Select **Select a file**, go to the **AllFiles (F:)** drive, and select **Detect-TempFiles.ps1**.
+   - **Remediation script file:** Select **Select a file**, go to the **AllFiles (F:)** drive, and select **Remediate-TempFiles.ps1**.
 
      > [!NOTE]
-     > If the script isn't present, create it inline using the example below:
-     
-     Example detection script:
-     ```powershell
-     # Create the folder if it doesn't exist
-     New-Item -Path "C:\LabAssets\Remediations" -ItemType Directory -Force
-
-     # Detection script
-     @'
-     $tempPath = "$env:TEMP"
-     $oldFiles = Get-ChildItem -Path $tempPath -Recurse -File | Where-Object { $_.LastWriteTime -lt (Get-Date).AddDays(-30) }
-     if ($oldFiles.Count -gt 0) {
-         Write-Output "Found $($oldFiles.Count) old temp files"
-         exit 1  # Issue detected
-     } else {
-         Write-Output "No old temp files found"
-         exit 0  # Compliant
-     }
-     '@ | Set-Content -Path "C:\LabAssets\Remediations\Detect-TempFiles.ps1" -Encoding UTF8
-     ```
-
-    The closing `'@` must begin in column one. Do not indent the here-string terminator.
-
-   - **Remediation script file:** Select **Select a file**, then browse and navigate to `C:\LabAssets\Remediations\Remediate-TempFiles.ps1`.
-
-     Example remediation script:
-     ```powershell
-     # Remediation script
-     @'
-     $tempPath = "$env:TEMP"
-     try {
-         Get-ChildItem -Path $tempPath -Recurse -File | Where-Object { $_.LastWriteTime -lt (Get-Date).AddDays(-30) } | Remove-Item -Force
-         Write-Output "Cleared old temp files"
-         exit 0  # Success
-     } catch {
-         Write-Error "Failed to clear temp files: $_"
-         exit 1  # Failure
-     }
-     '@ | Set-Content -Path "C:\LabAssets\Remediations\Remediate-TempFiles.ps1" -Encoding UTF8
-     ```
+     > If you aren't using the hosted lab environment, download [Detect-TempFiles.ps1](../../Allfiles/Detect-TempFiles.ps1) and [Remediate-TempFiles.ps1](../../Allfiles/Remediate-TempFiles.ps1), and then select them from your **Downloads** folder.
 
    - **Run this script using the logged-on credentials:** No (run as SYSTEM)
    - **Enforce script signature check:** No
