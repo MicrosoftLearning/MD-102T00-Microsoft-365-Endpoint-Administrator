@@ -626,7 +626,7 @@ Multi-device Device Query runs one KQL query across every Windows device in your
    EncryptableVolume
    | where ProtectionStatus != "PROTECTED"
    | join LogicalDrive on Device
-   | distinct Device
+   | distinct Device.DeviceName
    ```
 
 1. Select **Run**. The Results tab returns one row per affected device.
