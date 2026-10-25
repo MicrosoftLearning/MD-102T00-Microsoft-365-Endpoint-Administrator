@@ -830,6 +830,9 @@ Issuing CAs are subordinate to a root CA and they're what your devices actually 
    - **Root CA:** Select **Contoso Root CA** (the root you created in Task 1)
    - **Validity period:** 10 years (allowed: 2, 4, 6, 8, or 10 — must be less than or equal to the root CA's remaining lifetime)
 
+   > [!NOTE]
+   > If the **Root CA** you created in Task 1 does not appear in the list, refresh the browser page and repeat the above step again.
+
 1. Under **Extended Key Usages**, the picker is constrained to EKUs you defined on the root in Task 1. Confirm **Client Auth** and **Server Auth** are selected.
 
 1. Under **Subject attributes**, enter:
@@ -1054,7 +1057,7 @@ In **Lab 02 Exercise 2 Task 4** you created the Conditional Access policy `CA - 
 1. Run a **What If** analysis:
    - From the **Conditional Access | Policies** page, select **What If** from the top toolbar.
    - Under **Identity**, set **Select identity type** to **Users**, select **Edit user**, and choose a pilot-cohort user (e.g., Megan Bowen).
-   - Under **Target resource**, set **Select target type** to **Cloud apps**, then under **Cloud apps** select **Select cloud app** and choose the app to test (e.g., Office 365 Configure).
+   - Under **Target resource**, set **Select target type** to **Cloud apps**, then under **Cloud apps** select **+ Select cloud app** and choose the app to test (e.g., Office 365 Configure).
    - For **Device platform**, select **Windows**
    - For **Client app** select **Mobile apps and desktop clients - Modern authentication**
    - Select **What If**.

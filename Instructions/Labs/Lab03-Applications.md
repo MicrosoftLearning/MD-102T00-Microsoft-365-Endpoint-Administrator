@@ -473,7 +473,7 @@ The Enterprise App Catalog (part of Microsoft Intune Enterprise Application Mana
 
 1. Select **Next**.
 
-1. On the **Requirements** page, review the pre-configured requirements and select **Next**.
+1. On the **Requirements** tab, review the pre-configured requirements and select **Next**.
 
 1. On the **Detection rules** tab, review the pre-configured detection rule:
    - **Rule type:** Registry
@@ -481,9 +481,11 @@ The Enterprise App Catalog (part of Microsoft Intune Enterprise Application Mana
 
 1. Select **Next**.
 
-1. On the **Supersedence** page, select **Next** (no supersedence relationship needed — this is the first version of this app).
+1. On the **Supersedence** tab, select **Next** (no supersedence relationship needed — this is the first version of this app).
 
-1. On the **Assignments** page, under **Available for enrolled devices**, select **Add group**.
+1. On the **Scope tags** tab, select **Next**.
+
+1. On the **Assignments** tab, under **Available for enrolled devices**, select **Add group**.
 
 1. Search for and select **sg-Intune-Pilot-Users**.
 
@@ -603,7 +605,7 @@ App Protection Policies (APP) secure corporate data on mobile devices and BYOD (
    - **Microsoft Excel**
    - **Microsoft PowerPoint**
    - **Microsoft OneDrive**
-   - **Microsoft 365 Copilot**
+   - **Microsoft Copilot**
 
 1. Select **Select**.
 
@@ -677,7 +679,7 @@ App Protection Policies (APP) secure corporate data on mobile devices and BYOD (
 
 1. On the **Apps** tab, select **+ Select public apps**.
 
-1. Search for and select the same Microsoft apps as the iOS policy (Outlook, Teams, Word, Excel, PowerPoint, OneDrive).
+1. Search for and select the same Microsoft apps as the iOS policy (Outlook, Teams, Word, Excel, PowerPoint, OneDrive, Copilot).
 
 1. Select **Select** and then select **Next**.
 

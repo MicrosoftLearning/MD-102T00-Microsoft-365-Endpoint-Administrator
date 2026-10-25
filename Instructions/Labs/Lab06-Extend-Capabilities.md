@@ -144,7 +144,7 @@ Automatic elevation rules allow specific applications to always run elevated wit
    - **Description:** `Automatically elevates regedit.exe without user prompt`
    - **Elevation type:** Automatic
    - **File name:** `regedit.exe`
-   - **File path:** `C:\Windows\regedit.exe`
+   - **File path:** `C:\Windows`
    - **Signature source:** Not configured
 
 1. On **SEA-DEV1**, open an elevated PowerShell window and run the following command to obtain the SHA256 hash for `regedit.exe`, then copy the hash value into the **File hash** field in the rule properties pane:
@@ -183,7 +183,7 @@ User-confirmed elevation rules prompt the user to approve elevation (with option
    - **Elevation type:** User confirmed
    - **Validation:** Business justification (require the user to enter a reason)
    - **File name:** `msconfig.exe`
-   - **File path:** `C:\Windows\System32\msconfig.exe`
+   - **File path:** `C:\Windows\System32`
    - **Signature source:** Not configured
 
 1. On **SEA-DEV1**, open an elevated PowerShell window and run the following command to obtain the SHA256 hash for `msconfig.exe`, then copy the hash value into the **File hash** field in the rule properties pane:
@@ -221,7 +221,7 @@ Support-approved elevation rules require a help desk agent to approve elevation 
    - **Rule name:** `Elevate Command Prompt with Support Approval`
    - **Elevation type:** Support approved
    - **File name:** `cmd.exe`
-   - **File path:** `C:\Windows\System32\cmd.exe`
+   - **File path:** `C:\Windows\System32`
    - **Signature source:** Not configured
 
 1. On **SEA-DEV1**, open an elevated PowerShell window and run the following command to obtain the SHA256 hash for `cmd.exe`, then copy the hash value into the **File hash** field in the rule properties pane:
@@ -628,6 +628,8 @@ Multi-device Device Query runs one KQL query across every Windows device in your
    | join LogicalDrive on Device
    | distinct Device
    ```
+   > [!NOTE]
+   > You may not see any results, this is merely an indication that all your devices **do** have BitLocker enabled.
 
 1. Select **Run**. The Results tab returns one row per affected device.
 
