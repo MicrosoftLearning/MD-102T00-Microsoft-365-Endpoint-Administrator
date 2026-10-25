@@ -21,7 +21,7 @@ You are **Jordan Chen**, Modern Endpoint Administrator at Contoso Healthcare. Co
 By the end of this lab, you'll have:
 - Configured users and dynamic groups (including a compound-rule dynamic group) for organizational targeting
 - Delegated administrative access using Microsoft Entra ID roles, administrative units, and a custom Intune RBAC role with a scope tag
-- Set device registration policies and enabled Microsoft Entra Local Administrator Password Solution (LAPS)
+- Set device registration policies and enabled Windows Local Administrator Password Solution (LAPS)
 - Configured automatic MDM enrollment and Enrollment Status Page profiles
 - Blocked personally owned Android device enrollment
 - Enrolled two Windows 11 devices via Microsoft Entra join
@@ -57,7 +57,7 @@ This lab requires:
 > [!IMPORTANT]
 > **Activate the Microsoft Intune Suite 90-day trial now.** Labs 03, 04, and 06 require Intune Suite features. The trial is free and doesn't require a payment method. You can start it only once per tenant. If it's already active, skip these steps.
 >
-> 1. In the **Microsoft Intune admin center** (`intune.microsoft.com`), select **Tenant administration**, and then select **Intune add-ons**.
+> 1. In the **Microsoft Intune admin center** (`https://intune.microsoft.com`), select **Tenant administration**, and then select **Intune add-ons**.
 > 2. Ensure you are on the **All add-ons** tab.
 > 3. In the row for **Microsoft Intune Suite**, under the **Try or Buy** column, select **View details**. If the **Try or Buy** column isn't visible, scroll horizontally.
 > 4. In the details pane, select **To try or buy, go to Microsoft 365 admin center**. A new tab opens to the Microsoft 365 admin center product page.
@@ -65,12 +65,12 @@ This lab requires:
 > 6. On the **Checkout** page, confirm: **Microsoft Intune Suite Trial**, 90-day term, 250 licenses, **USD 0.00**, no payment method required.
 > 7. Select **Edit**, fill the organization profile form with the following information, then select **Save**:
 > - **First name**: MOD
-> - **Last name**: Administrator1 (the form rejects `Administrator`)
-> - **Address line 1**: 1 Microsoft Way
-> - **City**: Redmond
+> - **Last name**: `Administrator1` (the form rejects `Administrator`)
+> - **Address line 1**: `1 Microsoft Way`
+> - **City**: `Redmond`
 > - **State**: Washington
-> - **ZIP**: 98052
-> - **Phone**: 425-555-1234
+> - **ZIP**: `98052`
+> - **Phone**: `425-555-1234`
 > - **Email address**: admin@<TenantPrefix>.onmicrosoft.com
 > 8. After the organization profile is saved, select **Try now** to activate the trial.
 > 9. Return to the Intune admin center and refresh the **Intune add-ons** page. On the **Your add-ons** tab, confirm that **Microsoft Intune Suite Trial** appears with a **Purchased quantity** of **250**. This can take a few minutes.
@@ -89,7 +89,7 @@ Contoso has 33 existing users across multiple departments (Marketing, Legal, IT,
 
 1. On **SEA-DEV1**, open **Microsoft Edge**.
 
-1. Navigate to **https://admin.cloud.microsoft**.
+1. Navigate to **`https://admin.cloud.microsoft`**.
 
 1. If necessary, sign in with the **Global Administrator** account:
    - **Username:** `admin@<TenantPrefix>.onmicrosoft.com`
@@ -263,6 +263,9 @@ Dynamic groups automatically update membership based on user attributes. You'll 
 
    > [!NOTE]
    > Membership evaluation can take 5–15 minutes. Expect four members, such as Johanna Lorenz and Lidia Holloway. Lab User2 isn't included because it has no usage location set.
+
+   > [!NOTE]
+   > The processing status card will not update asynchronously, either refresh the page or select **Members** and then select **Overview** to cause the card to be updated.
 
 1. Select the **Members** tab to view group members.
 
@@ -484,7 +487,7 @@ Microsoft Entra ID roles (Task 1–5) delegate Entra-level permissions. Intune i
       - Create, Update, Delete, and Assign = **No**
    - **Managed devices:** 
       - Update, Set primary user, Read = **Yes**
-      - Delete and Wipe = **No**
+      - Delete = **No**
    - **Organization:**
       - Read = **Yes**
    - **Roles:**
@@ -517,7 +520,7 @@ Microsoft Entra ID roles (Task 1–5) delegate Entra-level permissions. Intune i
 
 ### Scenario
 
-Before devices can enroll in Intune, you need to configure device registration settings in Microsoft Entra ID, including who can register devices, device limits, and additional local administrator accounts. You'll also enable Microsoft Entra LAPS for local administrator password management.
+Before devices can enroll in Intune, you need to configure device registration settings in Microsoft Entra ID, including who can register devices, device limits, and additional local administrator accounts. You'll also enable Windows LAPS for local administrator password management.
 
 ### Task 1: Configure device join settings
 
@@ -534,7 +537,7 @@ Before devices can enroll in Intune, you need to configure device registration s
    > [!NOTE]
    > **Users may register their devices with Microsoft Entra** is unavailable and set to **All**. That's expected. Ignore the banner that recommends Conditional Access for MFA.
 
-1. Select **Save** at the top of the page if you made any changes.
+1. Select **Save** at the top of the page **if you made any changes**.
 
 **You have successfully configured device join settings.**
 
@@ -561,9 +564,9 @@ By default, the user who performs a Microsoft Entra join becomes a local adminis
 
 ---
 
-### Task 3: Enable Microsoft Entra Local Administrator Password Solution (LAPS)
+### Task 3: Enable Windows Local Administrator Password Solution (LAPS)
 
-Microsoft Entra LAPS automatically manages and rotates local administrator passwords on Microsoft Entra joined devices.
+Windows LAPS automatically manages and rotates local administrator passwords on Microsoft Entra joined devices.
 
 > [!NOTE]
 > The Entra setting only turns on LAPS for the tenant. You configure the password policy in Intune in Part B.
@@ -618,7 +621,7 @@ Microsoft Entra LAPS automatically manages and rotates local administrator passw
 
 1. On the **Review + create** tab, review the settings and select **Create**.
 
-**You have successfully enabled Microsoft Entra LAPS and configured the password policy in Intune.**
+**You have successfully enabled Windows LAPS and configured the password policy in Intune.**
 
 ---
 
@@ -864,22 +867,20 @@ You'll now enroll two Windows 11 devices (SEA-DEV1 and SEA-DEV2) into Intune by 
    - **Ownership:** Corporate
    - **Compliance:** Compliant (may show "Not evaluated" initially)
 
-1. At the top of the device list, turn off **Preview new device view** if it's on. This lab uses the classic device view.
-
 1. Select **SEA-DEV1** from the list to view device details.
 
-1. In the left menu of the **SEA-DEV1** page, review the following:
-   - **Overview:** Device name, operating system, compliance status, and last check-in time.
-   - **Monitor** > **Hardware:** Serial number, TPM version, and total storage space.
-   - **Monitor** > **Discovered apps:** Discovered apps populate over time as app inventory syncs.
+1. In the **SEA-DEV1** page, review the following:
+   - **Essentials** Device name, OS, compliance status, and last check-in time.
+   - **Device details** Serial number, TPM version, and total storage space.
+   - **Reports** > **Discovered apps:** Discovered apps populate over time as app inventory syncs.
 
-1. Tag this device as a Pharmacy clinical device so the delegated **Pharmacy Helpdesk** admin can see and act on it in later labs. On the **SEA-DEV1** device page, under **Manage**, select **Properties**.
+1. Tag this device as a Pharmacy clinical device so the delegated **Pharmacy Helpdesk** admin can see and act on it in later labs. On the **SEA-DEV1** device page, in the **Essentials** section, hover over the **Scope tags** label `Default` and then select the pencil icon to **Edit scope tags**.
 
-1. Next to **Scope tags**, select **Open** to open the **Select tags** pane.
+1. In the **Edit properties** page, select **+ Add scope tags**.
 
-1. In the **Select tags** pane, select **Pharmacy** (the scope tag you created in **Exercise 2 Task 6**), then select **Select**.
+1. In the **Scoping** pane, select the checkbox to the left of **Pharmacy** (the scope tag you created in **Exercise 2 Task 6**), then select **Select**.
 
-1. Select **Save**.
+1. Select **Next**, and then select **Save**.
 
 **You have successfully verified SEA-DEV1 enrollment in Intune.**
 
@@ -1141,7 +1142,7 @@ In this lab, you accomplished the following:
 **Exercise 3: Configure device registration and settings**
 - Configured device join settings in Microsoft Entra ID
 - Added additional local administrators for Microsoft Entra joined devices
-- Enabled Microsoft Entra LAPS for local administrator password management
+- Enabled Windows LAPS for local administrator password management
 
 **Exercise 4: Configure Windows enrollment policies**
 - Configured automatic Intune enrollment for the tenant

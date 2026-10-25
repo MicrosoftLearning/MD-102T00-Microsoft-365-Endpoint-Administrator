@@ -524,7 +524,7 @@ This is the culmination of Thread A across the whole lab series. By the end of t
       - Create, Update, Delete, and Assign = **No**
    - **Managed devices:**
       - Update, Set primary user, Read = **Yes**
-      - Delete and Wipe = **No**
+      - Delete = **No**
    - **Organization:** Read = **Yes**
    - **Roles:** Read = **Yes**
    - **Remote Help app**:
@@ -743,7 +743,7 @@ Audit logs are how you reconstruct "who changed what, when, and why" — the bed
 
 1. Locate the entry where you **created** `CA - Require compliant device (Pharmacy pilot)` in **Lab 02 Exercise 2 Task 4**. The **Category** will be **Policy**, the **Activity** will be **Add Conditional Access policy**.
 
-1. In the **Audit Log Details** pane, select the **Modified Properties** tab to review the policy JSON as it was saved. The `state` value `enabledForReportingButNotEnforced` is **Report-only**.
+1. In the **Audit Log Details** pane, select the **Modified Properties** tab to review the policy JSON as it was saved. The `state` value `enabledForReportingButNotEnforced` correlates to the **Report-only** setting.
 
    > [!NOTE]
    > Use the Intune audit log for Intune actions. Use the Entra audit log for Conditional Access and directory operations.
